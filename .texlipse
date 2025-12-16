@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Tue Dec 16 13:48:14 CET 2025
+outputDir=
+markDer=true
+mainTexFile=eng_cv_eduardo_revA.tex
+bibrefDir=
+builderNum=2
+outputFile=eng_cv_eduardo_revA.pdf
+makeIndSty=
+srcDir=
+markTmpDer=true
+tempDir=tmp
+outputFormat=pdf
+langSpell=en

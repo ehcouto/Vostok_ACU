@@ -1,0 +1,957 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:02
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/Category/Common/all/BoardDebugging/BoardDebugging.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\BoardDebugging.lst -o
+#        obj\BoardDebugging.obj
+#        source/Category/Common/all/BoardDebugging/BoardDebugging.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\BoardDebugging.lst
+#    Object file  =  obj\BoardDebugging.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Common\all\BoardDebugging\BoardDebugging.c
+      1          /**
+      2           *  @file       BoardDebugging.c
+      3           *
+      4           *  @brief      Debugging features
+      5           *
+      6           *  @details
+      7           *
+      8           *  @section
+      9           *
+     10           *  @copyright  Copyright 2013-$Date: 2016/01/11 12:30:13CET $. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     11           */
+     12          //---------------------------------------------------------------------------------------------------------------------
+     13          //---------------------------------------------------------------------------------------------------------------------
+     14          
+     15          //-------------------------------------- Include Files ----------------------------------------------------------------
+     16          
+     17          #include "BoardDebugging.h"
+     18          #include "BoardDebugging_prv.h"
+     19          #include "mci.h"
+     20          
+     21          #ifndef BD_RESET
+     22              #define BD_RESET                 DISABLED
+     23          #endif
+     24          
+     25          #ifndef BD_MCI_CMD
+     26              #define BD_MCI_CMD               DISABLED
+     27          #endif
+     28          
+     29          #ifndef BD_ADC_NOISE_ASSESSMENT
+     30              #define BD_ADC_NOISE_ASSESSMENT  DISABLED
+     31          #endif
+     32          
+     33          #ifndef BD_PWM_ACCESS
+     34              #define BD_PWM_ACCESS            DISABLED
+     35          #endif
+     36          
+     37          #ifndef BD_ADC_SYNCH_ADJUST
+     38              #define BD_ADC_SYNCH_ADJUST      DISABLED
+     39          #endif
+     40          
+     41          #ifndef DEBUG_MASTERCOMMANDER
+     42              #define DEBUG_MASTERCOMMANDER    DISABLED
+     43          #endif
+     44          
+     45          #ifndef BD_LED
+     46              #define BD_LED                   DISABLED
+     47          #endif
+     48          
+     49          #ifndef BD_INTERRUPT_ANALYSIS
+     50              #define BD_INTERRUPT_ANALYSIS    DISABLED
+     51          #endif
+     52          
+     53          #if (BD_LED == ENABLED)
+     54              #define LED_INIT_COUNTER         (uint16)(LED_INIT_COUNTER_MS / 25)
+     55              #define LED_TIMER                (uint16)(LED_TIMER_MS / 25)
+     56          #endif
+     57          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     58          #if (DEBUG_MASTERCOMMANDER == ENABLED)
+     59              #include "MasterCommander.h"
+     60          #endif
+     61          
+     62          
+     63          #if (BD_MCI_CMD == ENABLED)
+     64              typedef enum
+     65              {
+     66                  SELECT_STOP,
+     67                  SELECT_SPEED,
+     68                  SELECT_MANUAL,
+     69                  SELECT_PWM,
+     70                  SELECT_DISABLED,
+     71                  SELECT_PLTSPECIFIC,
+     72              } SELECT_SPD_MANUAL_TYPE;
+     73          
+     74              static sint8 BD_Update_Cmd;
+     75          
+     76              static SELECT_SPD_MANUAL_TYPE BD_Select_Method;
+     77          
+     78              static MOTOR_ENUM_TYPE BD_Motor;
+     79          
+     80              static sint16 BD_Target_Speed;
+     81              static sint16 BD_Target_Accel;
+     82              static sint16 BD_Target_Stop;
+     83              static MCI_INJECTION_TYPE BD_Manual_Method;
+     84              static sint32 BD_Level_x32;
+     85              static sint32 BD_Level_Rate_x32;
+     86              static sint32 BD_Param_x32;
+     87              static sint32 BD_Param_Rate_x32;
+     88          
+     89              #ifdef BD_PLT_SPECIFIC
+     90              static uint8 BD_Plt_Specific_Buffer_Size;
+     91              static uint8 BD_Plt_Specific_Buffer[10];
+     92              #endif
+     93              #ifndef BD_CUSTOM_CMD
+     94                  // define here macros for standard MCI commands
+     95                  #define BD_RUN(motor_index, target_speed, target_accel)                                              Mci__Run(motor_index, target_speed, target_accel)
+     96                  #define BD_MANUAL_INJ(motor_index, method, level_x32, level_rate_x32, param_x32, param_rate_x32)     Mci__Manual_Injection(motor_index, method, level_x32, level_rate_x32, param_x32, param_rate_x32)
+     97                  #define BD_STOP(motor_index, target_stop)                                                            Mci__Stop(motor_index, target_stop)
+     98                  // otherwise macros definition will be in prv file (for instance for Dishwasher application)
+     99          
+    100              #endif
+    101          #endif
+    102          
+    103          #if (BD_RESET == ENABLED)
+    104              #include "Micro.h"
+    105              static uint8   BD_Reset = 255;  //  force reset from Board Debugging
+    106          #endif
+    107          
+    108              /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    109              ///////////////////////////////////////////// --- ADC NOISE ASSESMENT --/////////////////////////////////////////
+    110          #if (BD_ADC_NOISE_ASSESSMENT == ENABLED)
+    111              #include "MotorSafetyMgr.h"
+    112              #include "MathCalc.h"
+    113              #include "Mcl.h"
+    114          
+    115          // structure declaration
+    116              typedef struct{
+    117                  sint16 Signal_K_1;
+    118                  sint16 Signal_K_2;
+    119                  uint16 Noise_Cnt;
+    120                  uint16 Noise_Ampl_Max;
+    121              } NOISE_SIGNAL_TYPE;
+    122          
+    123              static NOISE_SIGNAL_TYPE Current_A;
+    124              static NOISE_SIGNAL_TYPE Current_B;
+    125              static NOISE_SIGNAL_TYPE Current_C;
+    126              static NOISE_SIGNAL_TYPE DcBus;
+    127          
+    128              static uint16 Current_Noise_Thr;
+    129              static uint16 DcBus_Noise_Thr;
+    130              static uint16 Noise_Measure_Window;
+    131              static uint16 Noise_Measure_Window_Cnt;
+    132          
+    133          #endif
+    134              /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    135              /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    136          
+    137          
+    138              /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    139              ///////////////////////////////////////////// --- PWM SIGNALS DEBUG ---//////////////////////////////////////////
+    140          
+    141          
+    142          #if (BD_PWM_ACCESS == ENABLED)
+    143              #include "MclBasicTypes.h"
+    144              #include "MotorSafetyMgr.h"
+    145              #include "Mcl.h"
+    146              static uint8 Pwm_Turn_On_Flag;
+    147              static ABC_COOR_SYST_TYPE Pwm_Duty_Hw_Dbg;
+    148          
+    149              extern MCI_CONTROL_STATE_TYPE Mci_Control_State;           //!< Define the states used in this controller
+    150          
+    151          #endif
+    152          
+    153          
+    154          #if (BD_ADC_SYNCH_ADJUST == ENABLED)
+    155              static uint8  Adc_Conv_Synch_Adjust;
+    156              static volatile sint16 Adc_Conv_Synch_Value;
+    157          #endif
+    158          
+    159          #if (BD_LED == ENABLED)
+    160          	#include "Gpio.h"
+    161              static BOOL_TYPE Is_Led_Blinking;
+    162              static uint16 Led_Counter;
+    163          #endif
+    164          
+    165          
+    166          #if (BD_INTERRUPT_ANALYSIS == ENABLED)
+    167              // CPU processing time and overload
+    168              static volatile float32 BD_Fast_Isr_Ovl_Perc;
+    169              static volatile uint16  BD_Fast_Isr_Max_us;
+    170              static volatile uint16  BD_Fast_Isr_Duration_us;
+    171              static volatile float32 BD_Pwm_Isr_Ovl_Perc;
+    172              static volatile float32 BD_Pwm_Isr_Max_us;
+    173              static volatile float32 BD_Pwm_Isr_Duration_us;
+    174          #endif
+    175          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+    176          
+    177          
+    178          
+    179          
+    180          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    181          
+    182          #if (BD_ADC_NOISE_ASSESSMENT == ENABLED)
+    183          static void AdcNoiseInit();
+    184          static void AdcNoiseHandler();
+    185          static void AdcNoiseMeasure(sint16 signal, NOISE_SIGNAL_TYPE* noise_signal, uint16 noise_thr);
+    186          #endif
+    187          
+    188          
+    189          
+    190          //=====================================================================================================================
+    191          //-------------------------------------- Public Functions -------------------------------------------------------------
+    192          //=====================================================================================================================
+    193          
+    194          
+    195          
+    196          
+    197          
+    198          //---------------------------------------------------------------------------------------------------------------------
+    199          /**
+    200           *  @brief      It Initializes the module BoardDebugging and its variables
+    201           *
+    202           *  @details    The selected debugging features are initialized
+    203           *
+    204           */
+
+   \                                 In section .text, align 2, keep-with-next
+    205          void BoardDebugging__Initialize(void)
+    206          {
+   \                     BoardDebugging__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    207          
+    208          #if (DEBUG_MASTERCOMMANDER == ENABLED)
+    209              MasterCommander__Initialize();
+   \   00000002   0x.... 0x....      BL       MasterCommander__Initialize
+    210          #endif
+    211          
+    212          #if (BD_ADC_NOISE_ASSESSMENT == ENABLED)
+    213              AdcNoiseInit();
+    214          #endif
+    215          
+    216          #if (BD_RESET == ENABLED)
+    217              BD_Reset = 255;
+    218          #endif
+    219          
+    220          #if (BD_MCI_CMD == ENABLED)
+    221          
+    222              BD_Select_Method = SELECT_SPEED;
+    223              BD_Update_Cmd = 0;
+    224          
+    225              BD_Motor = BD_MOTOR_INIT;
+    226          
+    227              BD_Target_Speed = BD_SPEED_INIT;
+    228              BD_Target_Accel = BD_ACCEL_INIT;
+    229              BD_Target_Stop  = BD_STOP_INIT;
+    230          
+    231              BD_Manual_Method  = BD_MANUAL_METHOD_INIT;
+    232              BD_Level_x32      = (sint32)(BD_LEVEL_INIT      * 32.0f);
+    233              BD_Level_Rate_x32 = (sint32)(BD_LEVEL_RATE_INIT * 32.0f);
+    234              BD_Param_x32      = (sint32)(BD_PARAM_INIT      * 32.0f);
+    235              BD_Param_Rate_x32 = (sint32)(BD_PARAM_RATE_INIT * 32.0f);
+    236          
+    237          #endif
+    238          
+    239          #if (BD_PWM_ACCESS == ENABLED)
+    240              Pwm_Duty_Hw_Dbg.A = 16384;
+    241              Pwm_Duty_Hw_Dbg.B = 16384;
+    242              Pwm_Duty_Hw_Dbg.C = 16384;
+    243          #endif
+    244          
+    245          #if (BD_LED == ENABLED)
+    246              Is_Led_Blinking = FALSE;
+    247              Led_Counter = LED_INIT_COUNTER;
+    248              Gpio__PinConfig(LED_PORT,LED_PIN,OUTPUT_PUSHPULL);
+    249              GPIO__PIN_SET(LED_PORT,LED_PIN);
+    250          #endif
+    251          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    252          
+    253          
+    254          //---------------------------------------------------------------------------------------------------------------------
+    255          /**
+    256           *  @brief      Pwm handler for MasterCommander. Rate: every 62.5 us
+    257           *
+    258           */
+    259          
+    260          
+
+   \                                 In section .text, align 2, keep-with-next
+    261          void BoardDebugging__PwmHandler(void)
+    262          {
+   \                     BoardDebugging__PwmHandler: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    263          #if (BD_ADC_NOISE_ASSESSMENT == ENABLED)
+    264              // Adc noise calculation
+    265              // make sure this is executed after offset calculation
+    266              if (MotorSafetyMgr__IsInIdle() || (Mci__GetAnalog(MOTOR0, MCI_AI_INTERNAL_MCI_STATE) >= 3)) // >= MCI_IDLE
+    267              {
+    268                  AdcNoiseHandler();
+    269              }
+    270          #endif
+    271          
+    272          
+    273          #if (BD_PWM_ACCESS == ENABLED)
+    274              if(Pwm_Turn_On_Flag && (MotorSafetyMgr__DoesClassAHaveAccessToPwm() == TRUE))
+    275              {
+    276                  if (BD_Update_Cmd != 0)
+    277                  {
+    278                      // Apply the PWM
+    279                      MotorSafetyMgr__UpdatePwm(Pwm_Duty_Hw_Dbg.A, Pwm_Duty_Hw_Dbg.B, Pwm_Duty_Hw_Dbg.C);
+    280          
+    281                      BD_Update_Cmd = 0;
+    282                  }
+    283              }
+    284          #endif
+    285          
+    286          
+    287          #if (BD_ADC_SYNCH_ADJUST == ENABLED)
+    288              if (Adc_Conv_Synch_Adjust != 0)
+    289              {
+    290                  SRMCAtod__SetSyncDelay(Adc_Conv_Synch_Value);
+    291                  Adc_Conv_Synch_Adjust  = 0;
+    292              }
+    293          #endif
+    294          
+    295          #if (DEBUG_MASTERCOMMANDER == ENABLED)
+    296              MasterCommander__PwmHandler();
+   \   00000002   0x.... 0x....      BL       MasterCommander__PwmHandler
+    297          #endif
+    298          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    299          
+    300          //---------------------------------------------------------------------------------------------------------------------
+    301          /**
+    302           *  @brief      Board Debugging handler for 250 us
+    303           *
+    304           */
+
+   \                                 In section .text, align 2, keep-with-next
+    305          void BoardDebugging__250usHandler(void)
+    306          {
+   \                     BoardDebugging__250usHandler: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    307          #if (DEBUG_MASTERCOMMANDER == ENABLED)
+    308              MasterCommander__FastHandler();
+   \   00000002   0x.... 0x....      BL       MasterCommander__FastHandler
+    309          #endif
+    310          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    311          
+    312          
+    313          //---------------------------------------------------------------------------------------------------------------------
+    314          /**
+    315           *  @brief      Board Debugging handler for 25 ms
+    316           *
+    317           */
+    318          #pragma optimize = none
+
+   \                                 In section .text, align 2, keep-with-next
+    319          void BoardDebugging__25msHandler(void)
+    320          {
+    321          #if (BD_RESET == ENABLED)
+    322              if (BD_Reset != 255)
+    323              {
+    324                  Micro__ForceReset((MICRO_RESET_MODE_TYPE)BD_Reset);
+    325              }
+    326          #endif
+    327          
+    328          #if (BD_PWM_ACCESS == ENABLED)
+    329              if ((BD_Select_Method == SELECT_PWM) && (BD_Update_Cmd != 0))
+    330              {
+    331                  if (Pwm_Turn_On_Flag == 0)
+    332                  {
+    333                      Pwm_Turn_On_Flag = 1;
+    334                      MotorSafetyMgr__Prepare2StartMotor();
+    335                      // put MCI in debug state
+    336                      Mci_Control_State = MCI_DEBUGGING;
+    337                      Mcl__SetDigital(MCL_WRITE_INJECTION_DC_VOLTAGE);
+    338                  }
+    339              }
+    340              if((BD_Select_Method == SELECT_STOP) && Pwm_Turn_On_Flag == 1)
+    341              {
+    342                  Pwm_Turn_On_Flag = 0;
+    343                  MotorSafetyMgr__Prepare2StopMotor();
+    344                  BD_Select_Method = SELECT_DISABLED;
+    345                  Mci_Control_State = MCI_IDLE;
+    346              }
+    347          #endif
+    348          
+    349          #if (BD_MCI_CMD == ENABLED)
+    350              if((BD_Select_Method == SELECT_SPEED) && (BD_Update_Cmd != 0))
+    351              {
+    352                  if(BD_Target_Speed != 0)
+    353                  {
+    354                      BD_Update_Cmd = BD_RUN(BD_Motor, BD_Target_Speed, BD_Target_Accel);
+    355                  }
+    356                  else
+    357                  {
+    358                      BD_Update_Cmd = BD_STOP(BD_Motor, BD_Target_Accel);
+    359                  }
+    360              }
+    361              else if((BD_Select_Method == SELECT_MANUAL) && (BD_Update_Cmd != 0))
+    362              {
+    363                  BD_Update_Cmd = BD_MANUAL_INJ(BD_Motor, BD_Manual_Method, BD_Level_x32, BD_Level_Rate_x32, BD_Param_x32, BD_Param_Rate_x32);
+    364              }
+    365              else if(BD_Select_Method == SELECT_STOP)
+    366              {
+    367                  BD_STOP(BD_Motor, BD_Target_Stop);
+    368                  BD_Select_Method = SELECT_DISABLED;
+    369              }
+    370              else if(BD_Select_Method == SELECT_DISABLED)
+    371              {
+    372                  BD_Update_Cmd = 0;
+    373              }
+    374          #ifdef BD_PLT_SPECIFIC
+    375              else if ((BD_Select_Method == SELECT_PLTSPECIFIC) && (BD_Update_Cmd != 0))
+    376              {
+    377                  BD_Update_Cmd = 0;
+    378                  BD_PLT_SPECIFIC(BD_Motor, BD_Plt_Specific_Buffer);
+    379              }
+    380          #endif
+    381          
+    382              if (BD_Update_Cmd > 0)
+    383              {
+    384                  BD_Update_Cmd = 0;
+    385              }
+    386          #endif
+    387          
+    388          
+    389          #if (BD_ADC_NOISE_ASSESSMENT == ENABLED)
+    390              Noise_Measure_Window_Cnt++;
+    391              if(Noise_Measure_Window_Cnt == Noise_Measure_Window)
+    392              {
+    393                  Noise_Measure_Window_Cnt = 0;
+    394                  Current_A.Noise_Cnt = 0;
+    395                  Current_B.Noise_Cnt = 0;
+    396                  Current_C.Noise_Cnt = 0;
+    397                  DcBus.Noise_Cnt     = 0;
+    398              }
+    399          #endif
+    400          
+    401          #if (BD_LED == ENABLED)
+    402              if(Is_Led_Blinking == FALSE)
+    403              {
+    404                  GPIO__PIN_SET(LED_PORT,LED_PIN);
+    405                  Led_Counter--;
+    406                  if(!Led_Counter)
+    407                  {
+    408                      Led_Counter = LED_TIMER;
+    409                      Is_Led_Blinking = TRUE;
+    410                  }
+    411              }
+    412              else
+    413              {
+    414                  Led_Counter--;
+    415                  if(!Led_Counter)
+    416                  {
+    417                      GPIO__PIN_TOGGLE(LED_PORT,LED_PIN);
+    418                      Led_Counter = LED_TIMER;
+    419                      Is_Led_Blinking = TRUE;
+    420                  }
+    421              }
+    422          #endif
+    423          }
+   \                     BoardDebugging__25msHandler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    424          
+    425          #if (BD_INTERRUPT_ANALYSIS == ENABLED)
+    426          /*
+    427           *   BD_Get_Fast_Duration_us(), BD_Fast_Overload(), BD_Get_PWM_Duration_us(), BD_PWM_Overload() are
+    428           *   private functions. Implementation is micro specific, so they are placed in the BoardDebugging_prv.h file
+    429           *   with the pragma inline
+    430           */
+    431          
+    432          void BoardDebugging__FastIsrAnalysis(void)
+    433          {
+    434              uint16 temp;
+    435              temp = BD_Get_Fast_Duration_us();
+    436              BD_Fast_Isr_Duration_us = temp;
+    437          
+    438              if (temp > BD_Fast_Isr_Max_us)
+    439              {   // update the max counter
+    440                  BD_Fast_Isr_Max_us = BD_Fast_Isr_Duration_us;
+    441              }
+    442              // CPU overload
+    443              BD_Fast_Overload(BD_Fast_Isr_Ovl_Perc);
+    444          }
+    445          
+    446          void BoardDebugging__PwmIsrAnalysis(void)
+    447          {
+    448              float32 temp;
+    449              temp = BD_Get_PWM_Duration_us();
+    450              BD_Pwm_Isr_Duration_us = temp;
+    451              if (temp > BD_Pwm_Isr_Max_us)
+    452              {   // update the max counter
+    453                  BD_Pwm_Isr_Max_us = BD_Pwm_Isr_Duration_us;
+    454              }
+    455          
+    456              // CPU overload
+    457              BD_PWM_Overload(BD_Pwm_Isr_Ovl_Perc);
+    458          }
+    459          #endif
+    460          
+    461          
+    462          
+    463          //=====================================================================================================================
+    464          //-------------------------------------- Private Functions ------------------------------------------------------------
+    465          //=====================================================================================================================
+    466          
+    467          #if (BD_ADC_NOISE_ASSESSMENT == ENABLED)
+    468          static void AdcNoiseInit()
+    469          {
+    470              //Adc Noise counters initialization
+    471              Current_A.Signal_K_1     = 0;
+    472              Current_B.Signal_K_1     = 0;
+    473              Current_C.Signal_K_1     = 0;
+    474              DcBus.Signal_K_1         = 0;
+    475          
+    476              Current_A.Signal_K_2     = 0;
+    477              Current_B.Signal_K_2     = 0;
+    478              Current_C.Signal_K_2     = 0;
+    479              DcBus.Signal_K_2         = 0;
+    480          
+    481          
+    482              Current_A.Noise_Ampl_Max = 0;
+    483              Current_B.Noise_Ampl_Max = 0;
+    484              Current_C.Noise_Ampl_Max = 0;
+    485              DcBus.Noise_Ampl_Max     = 0;
+    486          
+    487              Current_A.Noise_Cnt      = 0;
+    488              Current_B.Noise_Cnt      = 0;
+    489              Current_C.Noise_Cnt      = 0;
+    490              DcBus.Noise_Cnt          = 0;
+    491          
+    492              Current_Noise_Thr = BD_CURRENT_NOISE_THR;
+    493              DcBus_Noise_Thr = BD_DC_BUS_NOISE_THR;
+    494          
+    495              Noise_Measure_Window = BD_NOISE_WINDOW;
+    496              Noise_Measure_Window_Cnt = 0;
+    497          
+    498          }
+    499          
+    500          static void AdcNoiseHandler()
+    501          {
+    502              sint16 current_a;
+    503              sint16 current_b;
+    504              sint16 current_c;
+    505              sint16 dc_bus;
+    506          
+    507              // convert floating point mcl currents and DCbus voltage back to 1.15 notation
+    508              // (to be used, for instance, in case of third current reconstruction)
+    509              current_a = (sint16) BD_CURRENT(Mcl_IO.Is_ABC.A);
+    510              current_b = (sint16) BD_CURRENT(Mcl_IO.Is_ABC.B);
+    511              current_c = (sint16) BD_CURRENT(Mcl_IO.Is_ABC.C);
+    512              dc_bus    = (sint16) BD_VOLTAGE(Mcl_IO.Vdc);
+    513          
+    514          
+    515              //--------------- Motor Current Adc Noise measurement -----------------------
+    516              AdcNoiseMeasure(current_a, &Current_A, Current_Noise_Thr);
+    517              AdcNoiseMeasure(current_b, &Current_B, Current_Noise_Thr);
+    518              AdcNoiseMeasure(current_c, &Current_C, Current_Noise_Thr);
+    519          
+    520              //--------------- Dc Bus  Noise measurement -------------------------
+    521              AdcNoiseMeasure(dc_bus, &DcBus, DcBus_Noise_Thr);
+    522          
+    523          }
+    524          
+    525          
+    526          static void AdcNoiseMeasure(sint16 signal, NOISE_SIGNAL_TYPE* noise_signal, uint16 noise_thr)
+    527          {
+    528              sint16 signal_mean;
+    529              sint16 signal_delta;
+    530          
+    531          
+    532              signal_mean = (signal>>1) + (noise_signal->Signal_K_2 >>1);
+    533          
+    534              signal_delta = MATHCALC__ABS(noise_signal->Signal_K_1 - signal_mean);
+    535          
+    536              if(signal_delta > noise_thr)
+    537              {
+    538                  if(noise_signal->Noise_Ampl_Max < signal_delta)
+    539                  {
+    540                      noise_signal->Noise_Ampl_Max = signal_delta;
+    541                  }
+    542          
+    543                  noise_signal->Noise_Cnt++;
+    544              }
+    545          
+    546              noise_signal->Signal_K_2 = noise_signal->Signal_K_1;
+    547              noise_signal->Signal_K_1 = signal;
+    548          
+    549          }
+    550          
+    551          
+    552          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   BoardDebugging__250usHandler
+         8   -> MasterCommander__FastHandler
+       0   BoardDebugging__25msHandler
+       8   BoardDebugging__Initialize
+         8   -> MasterCommander__Initialize
+       8   BoardDebugging__PwmHandler
+         8   -> MasterCommander__PwmHandler
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       8  BoardDebugging__250usHandler
+       2  BoardDebugging__25msHandler
+       8  BoardDebugging__Initialize
+       8  BoardDebugging__PwmHandler
+
+ 
+ 26 bytes in section .text
+ 
+ 26 bytes of CODE memory
+
+Errors: none
+Warnings: none

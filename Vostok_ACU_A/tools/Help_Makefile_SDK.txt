@@ -1,0 +1,40 @@
+Usage: make [target]
+
+Generate a make target
+
+Common targets:
+  help              Show this help message and exit (default build target)
+  clean             Erase most generated build files
+  debug             Regenerate and build the project for use without IAP
+  release           Regenerate and build the project for use with IAP
+  all               Equivalent to debug then release targets
+  lint              Run PC-Lint on the project files
+  [MODULE]          Compile and PC-Lint a single module
+                      (e.g. 'make Supervisor' for Supervisor module)
+
+Other targets:
+  regenerate        Regenerate the pre-build configuration files
+                      Scans the project's source and header files
+                      Creates makefiles for objects, paths, and sources
+                      Creates list of files the linker must link
+                      Creates list of include paths for compiler and PC-Lint
+                      Updates Class B Signature file if required
+                      Updates log module parameter files if required
+  objects           Compile all source files
+  merge-release     Combine release S19 with specified FVT setting file and
+                      combine release S19 with both the specified FVT setting
+                      file and the specified IAP S19 file
+  [MICRO]           Update project_config.mk with the specified MICRO
+                      (use 'make list-micros' to see options)
+  [PROJ_TYPE]       Update project_config.mk with the specified PROJ_TYPE
+                      (use 'make list-proj-types' to see options)
+  list-micros       List valid values for the MICRO config parameter
+  list-proj-types   List valid values for the PROJ_TYPE config parameter
+  list-tool-versions
+                    List valid values for the IAR_ARM_VERSION, IAR_RX_VERSION,
+                      EMBOS_ARM_VERSION, and EMBOS_RX_VERSION config parameters
+  list-definitions  List the terms defined in the makefile
+                      (for makefile debugging purposes)
+
+Refer to the files in the config folder to review project customization options
+  for the build environment.

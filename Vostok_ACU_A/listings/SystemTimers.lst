@@ -1,0 +1,2305 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:51
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Common/all/Common/SystemTimers/SystemTimers.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SystemTimers.lst -o
+#        obj\SystemTimers.obj
+#        source/XCategory/Common/all/Common/SystemTimers/SystemTimers.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SystemTimers.lst
+#    Object file  =  obj\SystemTimers.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\Common\SystemTimers\SystemTimers.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      SystemTimers implements a Up and Down counter timers based on 1ms System Tick.
+      5           *
+      6           *  @details    This module manages timers by taking snapshots of time when a timer is started, then comparing the
+      7           *              snapshot time to a free running timer to know when a timer has expired.
+      8           *              The number of timers is configurable and defined in SystemTimers_prv.h. The module allocates memory to
+      9           *              handle that many concurrent timers. The purpose of the "handle" is used to identify one of those timers.
+     10           *              All the management of the timer is done in this module. Application modules only need to store the
+     11           *              "handle" to reference their timer. This module also allows for allocation and de-allocation of timer.
+     12           *              The SystemTimers__GetHandle() function is the allocation of a timer and it provides the unique
+     13           *              "handle", which identifies the timer. The SystemTimers__ReleaseHandle() function is the de-allocation
+     14           *              of the timer, which will free up a timer to be used by another module.
+     15           *              Added NVTimers which allow Non Volatile Timers in the system
+     16           *
+     17           *  @copyright  Copyright 2015-2017. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     18           */
+     19          //---------------------------------------------------------------------------------------------------------------------
+     20          //---------------------------------------------------------------------------------------------------------------------
+     21          
+     22          //-------------------------------------- Include Files ----------------------------------------------------------------
+     23          
+     24          #include "SystemConfig.h"
+     25          
+     26          #if (SYSTEM_TIMERS_FEATURE == ENABLED)
+     27          #include "SystemTimers.h"
+     28          #include "SystemTimers_prv.h"
+     29          
+     30          #include "Log.h"
+     31          #include <string.h>
+     32          #include "Micro.h"
+     33          
+     34          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     35          
+     36          //! list of module Log messages
+     37          typedef enum
+     38          {
+     39              INVALID_HANDLE = 1
+     40          } MODULE_SYSTEMTIMERS_LOG_MESSAGE_ID_TYPE;
+     41          #define MODULE_NAME MODULE_SYSTEMTIMERS
+     42          
+     43          
+     44          //! Definition of data related to an instance of a timer
+     45          PACKED typedef struct
+     46          {
+     47              uint32 compare;
+     48              uint8  handle;
+     49              SYSTEMTIMERS_STATE_TYPE  state;
+     50              SYSTEMTIMERS_TYPE_TYPE  type;
+     51              BOOL_TYPE  event;
+     52          }SYSTEMTIMERS_TYPE;
+     53          
+     54          //! Check to ensure there is a limit on the maximum number of timers that can be allocated for the module
+     55          CT_ASSERT(SYSTEMTIMER_NUM_INSTANCES < 200);
+     56          
+
+   \                                 In section .bss, align 4
+     57          static SYSTEMTIMERS_TYPE All_Timers[SYSTEMTIMER_NUM_INSTANCES];
+   \                     All_Timers:
+   \   00000000                      DS8 320
+
+   \                                 In section .bss, align 4
+     58          static uint8 Handle_Reference;
+   \                     Handle_Reference:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 3
+   \   00000004                      DS8 4
+     59          static uint32 Handle_Counter;
+     60          
+     61          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     62          static void EvalTimer(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer);
+     63          //====================================================================================================================
+     64          //-------------------------------------- Public Functions -------------------------------------------------------------
+     65          //=====================================================================================================================
+     66          
+     67          //---------------------------------------------------------------------------------------------------------------------
+     68          /**
+     69           * @brief  It Initializes the module Timers and its variables
+     70           * @details The Initialization must be reset type aware
+     71           */
+
+   \                                 In section .text, align 2, keep-with-next
+     72          void SystemTimers__Initialize(void)
+     73          {
+   \                     SystemTimers__Initialize: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+     74              uint8 index;
+     75              Handle_Reference = 1;
+   \   00000002   0x....             LDR      R5,??DataTable9
+   \   00000004   0x2001             MOVS     R0,#+1
+   \   00000006   0x7028             STRB     R0,[R5, #+0]
+     76          
+     77              // Initialize only if Cold Reset and the data is not restored from NVData
+     78              if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+   \   00000008   0x2400             MOVS     R4,#+0
+   \   0000000A   0x.... 0x....      BL       Micro__GetResetMode
+   \   0000000E   0x2800             CMP      R0,#+0
+   \   00000010   0xD100             BNE      ??SystemTimers__Initialize_0
+     79              {
+     80              	Handle_Counter = 0;
+   \   00000012   0x606C             STR      R4,[R5, #+4]
+     81              }
+     82          
+     83          
+     84              for (index =0; index < SYSTEMTIMER_NUM_INSTANCES; index++)
+   \                     ??SystemTimers__Initialize_0: (+1)
+   \   00000014   0x0020             MOVS     R0,R4
+   \   00000016   0xE008             B        ??SystemTimers__Initialize_1
+     85              {
+     86                  All_Timers[index].handle = 0;
+   \                     ??SystemTimers__Initialize_2: (+1)
+   \   00000018   0x....             LDR      R1,??DataTable9_1
+   \   0000001A   0x00C2             LSLS     R2,R0,#+3
+   \   0000001C   0x1889             ADDS     R1,R1,R2
+   \   0000001E   0x0022             MOVS     R2,R4
+   \   00000020   0x710A             STRB     R2,[R1, #+4]
+     87                  All_Timers[index].compare = 0;
+   \   00000022   0x600C             STR      R4,[R1, #+0]
+     88                  All_Timers[index].state = SYSTEMTIMERS_STATE_INVALID;
+   \   00000024   0x2204             MOVS     R2,#+4
+   \   00000026   0x714A             STRB     R2,[R1, #+5]
+     89              }
+   \   00000028   0x1C40             ADDS     R0,R0,#+1
+   \                     ??SystemTimers__Initialize_1: (+1)
+   \   0000002A   0x2828             CMP      R0,#+40
+   \   0000002C   0xDBF4             BLT      ??SystemTimers__Initialize_2
+     90          }
+   \   0000002E   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+     91          
+     92          //---------------------------------------------------------------------------------------------------------------------
+     93          /**
+     94           * @brief   Updates the free running counter and determines if any of the counters has expired.
+     95           *          This function must be called every 1m out of the interruptions.
+     96           */
+
+   \                                 In section .text, align 2, keep-with-next
+     97          void SystemTimers__Handler1ms(void)
+     98          {
+   \                     SystemTimers__Handler1ms: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+     99              uint8 index;
+    100              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    101          
+    102              Handle_Reference++;
+   \   00000002   0x....             LDR      R0,??DataTable9
+   \   00000004   0x7801             LDRB     R1,[R0, #+0]
+   \   00000006   0x1C49             ADDS     R1,R1,#+1
+   \   00000008   0x7001             STRB     R1,[R0, #+0]
+    103              if (Handle_Reference == 0)
+   \   0000000A   0x0609             LSLS     R1,R1,#+24
+   \   0000000C   0xD101             BNE      ??SystemTimers__Handler1ms_0
+    104              {
+    105                  Handle_Reference++;
+   \   0000000E   0x2101             MOVS     R1,#+1
+   \   00000010   0x7001             STRB     R1,[R0, #+0]
+    106              }
+    107          
+    108              Handle_Counter++;   // Intentionally not handling overflow
+   \                     ??SystemTimers__Handler1ms_0: (+1)
+   \   00000012   0x6841             LDR      R1,[R0, #+4]
+   \   00000014   0x1C49             ADDS     R1,R1,#+1
+   \   00000016   0x6041             STR      R1,[R0, #+4]
+    109          
+    110              for (index =0; index < SYSTEMTIMER_NUM_INSTANCES; index++)
+   \   00000018   0x2100             MOVS     R1,#+0
+   \   0000001A   0xE013             B        ??SystemTimers__Handler1ms_1
+    111              {
+    112                  if (All_Timers[index].state == SYSTEMTIMERS_STATE_RUNNING)
+   \                     ??SystemTimers__Handler1ms_2: (+1)
+   \   0000001C   0x....             LDR      R2,??DataTable9_1
+   \   0000001E   0x00CB             LSLS     R3,R1,#+3
+   \   00000020   0x18D2             ADDS     R2,R2,R3
+   \   00000022   0x7953             LDRB     R3,[R2, #+5]
+   \   00000024   0x2B01             CMP      R3,#+1
+   \   00000026   0xD10C             BNE      ??SystemTimers__Handler1ms_3
+    113                  {
+    114                  	if (Handle_Counter == All_Timers[index].compare)
+   \   00000028   0x6843             LDR      R3,[R0, #+4]
+   \   0000002A   0x6814             LDR      R4,[R2, #+0]
+   \   0000002C   0x42A3             CMP      R3,R4
+   \   0000002E   0xD108             BNE      ??SystemTimers__Handler1ms_3
+    115          			{
+    116          				MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \   00000030   0xF3EF 0x8310      MRS      R3,PRIMASK
+   \   00000034   0xB672             CPSID    I
+    117          				All_Timers[index].event = TRUE;
+   \   00000036   0x2401             MOVS     R4,#+1
+   \   00000038   0x71D4             STRB     R4,[R2, #+7]
+    118          				All_Timers[index].state = SYSTEMTIMERS_STATE_DONE;
+   \   0000003A   0x2402             MOVS     R4,#+2
+   \   0000003C   0x7154             STRB     R4,[R2, #+5]
+    119          				MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \   0000003E   0xF383 0x8810      MSR      PRIMASK,R3
+    120          			}
+    121                  }
+    122              }
+   \                     ??SystemTimers__Handler1ms_3: (+1)
+   \   00000042   0x1C49             ADDS     R1,R1,#+1
+   \                     ??SystemTimers__Handler1ms_1: (+1)
+   \   00000044   0x2928             CMP      R1,#+40
+   \   00000046   0xDBE9             BLT      ??SystemTimers__Handler1ms_2
+    123          }
+   \   00000048   0xBC10             POP      {R4}
+   \   0000004A   0x4770             BX       LR               ;; return
+    124          
+    125          //---------------------------------------------------------------------------------------------------------------------
+    126          /**
+    127           * @brief   Returns the current value of the free running counter
+    128           */
+
+   \                                 In section .text, align 2, keep-with-next
+    129          uint32 SystemTimers__GetFreeRunningCounter(void)
+    130          {
+    131              return (Handle_Counter);
+   \                     SystemTimers__GetFreeRunningCounter: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable9
+   \   00000002   0x6840             LDR      R0,[R0, #+4]
+   \   00000004   0x4770             BX       LR               ;; return
+    132          }
+    133          
+    134          //---------------------------------------------------------------------------------------------------------------------
+    135          /**
+    136           * @brief   Request a Timer Handle
+    137           * @return  Timer handle, if TIMERS_FAIL(0xFFFF) means not possible to allocate it.
+    138           */
+
+   \                                 In section .text, align 2, keep-with-next
+    139          uint16 SystemTimers__GetHandle(SYSTEMTIMERS_TYPE_TYPE type)
+    140          {
+   \                     SystemTimers__GetHandle: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+    141              uint8 index;
+    142              uint8 first_free;
+    143              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    144          
+    145              first_free = 255;
+   \   00000002   0x21FF             MOVS     R1,#+255
+    146              MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \   00000004   0xF3EF 0x8210      MRS      R2,PRIMASK
+   \   00000008   0xB672             CPSID    I
+    147              for (index =0; index < SYSTEMTIMER_NUM_INSTANCES; index++)
+   \   0000000A   0x2300             MOVS     R3,#+0
+   \   0000000C   0x001C             MOVS     R4,R3
+   \   0000000E   0x....             LDR      R5,??DataTable9_1
+   \   00000010   0xE000             B        ??SystemTimers__GetHandle_0
+   \                     ??SystemTimers__GetHandle_1: (+1)
+   \   00000012   0x1C64             ADDS     R4,R4,#+1
+   \                     ??SystemTimers__GetHandle_0: (+1)
+   \   00000014   0xB2E4             UXTB     R4,R4
+   \   00000016   0x0026             MOVS     R6,R4
+   \   00000018   0x2E28             CMP      R6,#+40
+   \   0000001A   0xDA0C             BGE      ??SystemTimers__GetHandle_2
+    148              {
+    149                  if ((first_free == 255) &&
+    150                      (All_Timers[index].handle == 0))
+   \   0000001C   0x00F6             LSLS     R6,R6,#+3
+   \   0000001E   0x19AE             ADDS     R6,R5,R6
+   \   00000020   0x7936             LDRB     R6,[R6, #+4]
+   \   00000022   0x2E00             CMP      R6,#+0
+   \   00000024   0xD1F5             BNE      ??SystemTimers__GetHandle_1
+    151                  {
+    152                      first_free = index;
+   \   00000026   0x0021             MOVS     R1,R4
+    153                      All_Timers[first_free].state = SYSTEMTIMERS_STATE_STOPPED;
+   \   00000028   0x00CC             LSLS     R4,R1,#+3
+   \   0000002A   0x192C             ADDS     R4,R5,R4
+   \   0000002C   0x7163             STRB     R3,[R4, #+5]
+    154                      All_Timers[first_free].type = type;
+   \   0000002E   0x71A0             STRB     R0,[R4, #+6]
+    155                      All_Timers[first_free].handle = Handle_Reference;
+   \   00000030   0x....             LDR      R0,??DataTable9
+   \   00000032   0x7800             LDRB     R0,[R0, #+0]
+   \   00000034   0x7120             STRB     R0,[R4, #+4]
+    156                      break;
+    157                  }
+    158              }
+    159              MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \                     ??SystemTimers__GetHandle_2: (+1)
+   \   00000036   0xF382 0x8810      MSR      PRIMASK,R2
+    160          
+    161          
+    162              if (first_free < SYSTEMTIMER_NUM_INSTANCES)
+   \   0000003A   0x2928             CMP      R1,#+40
+   \   0000003C   0xDA07             BGE      ??SystemTimers__GetHandle_3
+    163              {
+    164                  return ((((uint16)All_Timers[first_free].handle) << 8) + ((uint16 )first_free));
+   \   0000003E   0x4628             MOV      R0,R5
+   \   00000040   0x00CA             LSLS     R2,R1,#+3
+   \   00000042   0x1880             ADDS     R0,R0,R2
+   \   00000044   0x7900             LDRB     R0,[R0, #+4]
+   \   00000046   0x0200             LSLS     R0,R0,#+8
+   \   00000048   0x1840             ADDS     R0,R0,R1
+   \   0000004A   0xB280             UXTH     R0,R0
+   \   0000004C   0xBD70             POP      {R4-R6,PC}
+    165              }
+    166              else
+    167              {
+    168                  LOG_ADD_EXCEPTION(INVALID_HANDLE, 0);
+   \                     ??SystemTimers__GetHandle_3: (+1)
+   \   0000004E   0x2201             MOVS     R2,#+1
+   \   00000050   0x4611             MOV      R1,R2
+   \   00000052   0x205B             MOVS     R0,#+91
+   \   00000054   0x.... 0x....      BL       Log__AddMessage
+    169                  CANNOT_ALLOCATE_SYSTEM_TIMER_HANDLE();
+    170                  return (SYSTEMTIMERS_FAIL);
+   \   00000058   0x....             LDR      R0,??DataTable12  ;; 0xffff
+   \   0000005A   0xBD70             POP      {R4-R6,PC}       ;; return
+    171              }
+    172          }
+    173          
+    174          //---------------------------------------------------------------------------------------------------------------------
+    175          /**
+    176           * @brief   Releases a timer handle
+    177           * @param   handle: unique identifier for a timer
+    178           * @return  PASS if the timer handle was valid, else FAIL
+    179           */
+
+   \                                 In section .text, align 2, keep-with-next
+    180          PASS_FAIL_TYPE SystemTimers__ReleaseHandle(uint16 handle)
+    181          {
+   \                     SystemTimers__ReleaseHandle: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    182              PASS_FAIL_TYPE retval;
+    183              uint8 index;
+    184              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    185          
+    186              retval = FAIL;
+   \   00000002   0x2200             MOVS     R2,#+0
+   \   00000004   0x0010             MOVS     R0,R2
+    187          
+    188              index = handle & 0x00FF;
+   \   00000006   0x000B             MOVS     R3,R1
+   \   00000008   0xB2DB             UXTB     R3,R3
+    189              if (index < SYSTEMTIMER_NUM_INSTANCES)
+   \   0000000A   0x2B28             CMP      R3,#+40
+   \   0000000C   0xDB00             BLT      ??SystemTimers__ReleaseHandle_0
+   \   0000000E   0x4770             BX       LR
+    190              {
+    191                  if (All_Timers[index].handle == ((uint8)(handle >> 8) ))
+   \                     ??SystemTimers__ReleaseHandle_0: (+1)
+   \   00000010   0xB410             PUSH     {R4}
+   \   00000012   0x....             LDR      R4,??DataTable11
+   \   00000014   0x00DB             LSLS     R3,R3,#+3
+   \   00000016   0x18E3             ADDS     R3,R4,R3
+   \   00000018   0x791C             LDRB     R4,[R3, #+4]
+   \   0000001A   0x0A09             LSRS     R1,R1,#+8
+   \   0000001C   0x428C             CMP      R4,R1
+   \   0000001E   0xD108             BNE      ??SystemTimers__ReleaseHandle_1
+    192                  {
+    193                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \   00000020   0xF3EF 0x8110      MRS      R1,PRIMASK
+   \   00000024   0xB672             CPSID    I
+    194                      All_Timers[index].handle = 0;
+   \   00000026   0x711A             STRB     R2,[R3, #+4]
+    195                      All_Timers[index].state =  SYSTEMTIMERS_STATE_INVALID;
+   \   00000028   0x2004             MOVS     R0,#+4
+   \   0000002A   0x7158             STRB     R0,[R3, #+5]
+    196          
+    197                      retval = PASS;
+   \   0000002C   0x2001             MOVS     R0,#+1
+    198                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \   0000002E   0xF381 0x8810      MSR      PRIMASK,R1
+    199                  }
+    200              }
+    201              return (retval);
+   \                     ??SystemTimers__ReleaseHandle_1: (+1)
+   \   00000032   0xBC10             POP      {R4}
+   \   00000034   0x4770             BX       LR               ;; return
+    202          }
+    203          
+    204          //---------------------------------------------------------------------------------------------------------------------
+    205          /**
+    206           * @brief   This method sets a timer in milliseconds
+    207           * @param   handle: unique identifier for a timer
+    208           * @param   reference_ms: number of milliseconds for the timer
+    209           * @return  PASS if the timer handle was valid, else FAIL
+    210           */
+
+   \                                 In section .text, align 2, keep-with-next
+    211          PASS_FAIL_TYPE SystemTimers__SetMs(uint16 handle, uint32 reference_ms)
+    212          {
+   \                     SystemTimers__SetMs: (+1)
+   \   00000000   0xB4F0             PUSH     {R4-R7}
+   \   00000002   0x0002             MOVS     R2,R0
+    213              PASS_FAIL_TYPE retval;
+    214              uint8 index;
+    215              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    216          
+    217              retval = FAIL;
+   \   00000004   0x2300             MOVS     R3,#+0
+   \   00000006   0x0018             MOVS     R0,R3
+    218          
+    219              index = handle & 0x00FF;
+   \   00000008   0x0014             MOVS     R4,R2
+   \   0000000A   0xB2E4             UXTB     R4,R4
+    220              if (index < SYSTEMTIMER_NUM_INSTANCES)
+   \   0000000C   0x2C28             CMP      R4,#+40
+   \   0000000E   0xDA1F             BGE      ??SystemTimers__SetMs_0
+    221              {
+    222                  if (All_Timers[index].handle == ((uint8)(handle >> 8) ))
+   \   00000010   0x....             LDR      R5,??DataTable9_1
+   \   00000012   0x00E4             LSLS     R4,R4,#+3
+   \   00000014   0x192C             ADDS     R4,R5,R4
+   \   00000016   0x7925             LDRB     R5,[R4, #+4]
+   \   00000018   0x0A12             LSRS     R2,R2,#+8
+   \   0000001A   0x4295             CMP      R5,R2
+   \   0000001C   0xD118             BNE      ??SystemTimers__SetMs_0
+    223                  {
+    224                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \   0000001E   0xF3EF 0x8210      MRS      R2,PRIMASK
+   \   00000022   0xB672             CPSID    I
+    225                      retval = PASS;
+   \   00000024   0x2501             MOVS     R5,#+1
+   \   00000026   0x0028             MOVS     R0,R5
+    226          
+    227                      //As Handle_Counter is pre counted so this check is required otherwise it will cause overloop
+    228                      if (reference_ms != 0)
+   \   00000028   0x2900             CMP      R1,#+0
+   \   0000002A   0xD00C             BEQ      ??SystemTimers__SetMs_1
+   \   0000002C   0x....             LDR      R6,??DataTable9
+   \   0000002E   0x6876             LDR      R6,[R6, #+4]
+   \   00000030   0x79A7             LDRB     R7,[R4, #+6]
+   \   00000032   0x2F00             CMP      R7,#+0
+   \   00000034   0xD102             BNE      ??SystemTimers__SetMs_2
+    229                      {
+    230                          if (All_Timers[index].type == SYSTEMTIMERS_TYPE_DOWN_COUNTER)
+    231                          {
+    232                              All_Timers[index].compare = Handle_Counter + reference_ms;
+   \   00000036   0x1871             ADDS     R1,R6,R1
+   \   00000038   0x6021             STR      R1,[R4, #+0]
+   \   0000003A   0xE001             B        ??SystemTimers__SetMs_3
+    233                          }
+    234                          else
+    235                          {
+    236                              All_Timers[index].compare = Handle_Counter - reference_ms;
+   \                     ??SystemTimers__SetMs_2: (+1)
+   \   0000003C   0x1A71             SUBS     R1,R6,R1
+   \   0000003E   0x6021             STR      R1,[R4, #+0]
+    237                          }
+    238          
+    239                          All_Timers[index].state = SYSTEMTIMERS_STATE_RUNNING;
+   \                     ??SystemTimers__SetMs_3: (+1)
+   \   00000040   0x7165             STRB     R5,[R4, #+5]
+    240                          All_Timers[index].event = FALSE;
+   \   00000042   0x71E3             STRB     R3,[R4, #+7]
+   \   00000044   0xE002             B        ??SystemTimers__SetMs_4
+    241                      }
+    242                      else
+    243                      {
+    244                          All_Timers[index].state = SYSTEMTIMERS_STATE_DONE;
+   \                     ??SystemTimers__SetMs_1: (+1)
+   \   00000046   0x2102             MOVS     R1,#+2
+   \   00000048   0x7161             STRB     R1,[R4, #+5]
+    245                          All_Timers[index].event = TRUE;
+   \   0000004A   0x71E5             STRB     R5,[R4, #+7]
+    246                      }
+    247          
+    248                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \                     ??SystemTimers__SetMs_4: (+1)
+   \   0000004C   0xF382 0x8810      MSR      PRIMASK,R2
+    249                  }
+    250              }
+    251              return (retval);
+   \                     ??SystemTimers__SetMs_0: (+1)
+   \   00000050   0xBCF0             POP      {R4-R7}
+   \   00000052   0x4770             BX       LR               ;; return
+    252          }
+    253          
+    254          //---------------------------------------------------------------------------------------------------------------------
+    255          /**
+    256           * @brief   This method sets a timer in hours, minutes and seconds
+    257           * @param   handle: unique identifier for a timer
+    258           * @param   time: amount of time for the timer (see SYSTEMTIMER_HMS_TYPE)
+    259           * @return  PASS if the timer handle was valid, else FAIL
+    260           */
+
+   \                                 In section .text, align 2, keep-with-next
+    261          PASS_FAIL_TYPE SystemTimers__SetHMS(uint16 handle, SYSTEMTIMER_HMS_TYPE * time)
+    262          {
+   \                     SystemTimers__SetHMS: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    263              uint32 value;
+    264          
+    265              value = ((((uint32)time->hours * 60) + (uint32)time->minutes) * 60) + (uint32)time->seconds;
+   \   00000002   0x788A             LDRB     R2,[R1, #+2]
+   \   00000004   0x0113             LSLS     R3,R2,#+4
+   \   00000006   0x1A9A             SUBS     R2,R3,R2
+   \   00000008   0x0092             LSLS     R2,R2,#+2
+   \   0000000A   0x78CB             LDRB     R3,[R1, #+3]
+   \   0000000C   0x18D2             ADDS     R2,R2,R3
+   \   0000000E   0x0113             LSLS     R3,R2,#+4
+   \   00000010   0x1A9A             SUBS     R2,R3,R2
+   \   00000012   0x0092             LSLS     R2,R2,#+2
+   \   00000014   0x790B             LDRB     R3,[R1, #+4]
+   \   00000016   0x18D2             ADDS     R2,R2,R3
+    266          	value *= 1000;
+    267          	value += (uint32)time->milliseconds;
+   \   00000018   0x780B             LDRB     R3,[R1, #+0]
+   \   0000001A   0x784C             LDRB     R4,[R1, #+1]
+   \   0000001C   0x0624             LSLS     R4,R4,#+24
+   \   0000001E   0x0C24             LSRS     R4,R4,#+16
+   \   00000020   0x4323             ORRS     R3,R3,R4
+   \   00000022   0x21FA             MOVS     R1,#+250
+   \   00000024   0x0089             LSLS     R1,R1,#+2        ;; #+1000
+   \   00000026   0x434A             MULS     R2,R1,R2
+   \   00000028   0x18D1             ADDS     R1,R2,R3
+    268          
+    269              return (SystemTimers__SetMs(handle,value));
+   \   0000002A   0x.... 0x....      BL       SystemTimers__SetMs
+   \   0000002E   0xBD10             POP      {R4,PC}          ;; return
+    270          }
+    271          
+    272          //---------------------------------------------------------------------------------------------------------------------
+    273          /**
+    274           * @brief   This method resets a timer
+    275           * @param   handle: unique identifier for a timer
+    276           * @return  PASS if the timer handle was valid, else FAIL
+    277           */
+
+   \                                 In section .text, align 2, keep-with-next
+    278          PASS_FAIL_TYPE SystemTimers__Reset(uint16 handle)
+    279          {
+   \                     SystemTimers__Reset: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    280              PASS_FAIL_TYPE retval;
+    281              uint8 index;
+    282              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    283          
+    284              retval = FAIL;
+   \   00000002   0x2200             MOVS     R2,#+0
+   \   00000004   0x0010             MOVS     R0,R2
+    285          
+    286              index = handle & 0x00FF;
+   \   00000006   0x000B             MOVS     R3,R1
+   \   00000008   0xB2DB             UXTB     R3,R3
+    287              if (index < SYSTEMTIMER_NUM_INSTANCES)
+   \   0000000A   0x2B28             CMP      R3,#+40
+   \   0000000C   0xDB00             BLT      ??SystemTimers__Reset_0
+   \   0000000E   0x4770             BX       LR
+    288              {
+    289                 if (All_Timers[index].handle == ((uint8)(handle >> 8) ))
+   \                     ??SystemTimers__Reset_0: (+1)
+   \   00000010   0xB410             PUSH     {R4}
+   \   00000012   0x....             LDR      R4,??DataTable11
+   \   00000014   0x00DB             LSLS     R3,R3,#+3
+   \   00000016   0x18E3             ADDS     R3,R4,R3
+   \   00000018   0x791C             LDRB     R4,[R3, #+4]
+   \   0000001A   0x0A09             LSRS     R1,R1,#+8
+   \   0000001C   0x428C             CMP      R4,R1
+   \   0000001E   0xD107             BNE      ??SystemTimers__Reset_1
+    290                 {
+    291                     MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \   00000020   0xF3EF 0x8110      MRS      R1,PRIMASK
+   \   00000024   0xB672             CPSID    I
+    292                     All_Timers[index].state = SYSTEMTIMERS_STATE_STOPPED;
+   \   00000026   0x715A             STRB     R2,[R3, #+5]
+    293                     All_Timers[index].event = FALSE;
+   \   00000028   0x71DA             STRB     R2,[R3, #+7]
+    294                     retval = PASS;
+   \   0000002A   0x2001             MOVS     R0,#+1
+    295                     MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \   0000002C   0xF381 0x8810      MSR      PRIMASK,R1
+    296                 }
+    297              }
+    298              return (retval);
+   \                     ??SystemTimers__Reset_1: (+1)
+   \   00000030   0xBC10             POP      {R4}
+   \   00000032   0x4770             BX       LR               ;; return
+    299          }
+    300          
+    301          //---------------------------------------------------------------------------------------------------------------------
+    302          /**
+    303           * @brief   This method pauses a Timer if it is RUNNING State.
+    304           * @details It stores the remaining time in the second_compare data field.
+    305           * @param   handle: unique identifier for a timer
+    306           * @return  PASS if the timer handle was valid and in the RUNNING state, else FAIL
+    307           */
+
+   \                                 In section .text, align 2, keep-with-next
+    308          PASS_FAIL_TYPE SystemTimers__Pause(uint16 handle)
+    309          {
+   \                     SystemTimers__Pause: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+   \   00000002   0x0001             MOVS     R1,R0
+    310              PASS_FAIL_TYPE retval;
+    311              uint8 index;
+    312              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    313              MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \   00000004   0xF3EF 0x8210      MRS      R2,PRIMASK
+   \   00000008   0xB672             CPSID    I
+    314          
+    315              retval = FAIL;
+   \   0000000A   0x2000             MOVS     R0,#+0
+    316              index = handle & 0x00FF;
+   \   0000000C   0x000B             MOVS     R3,R1
+   \   0000000E   0xB2DB             UXTB     R3,R3
+    317          
+    318              if (index < SYSTEMTIMER_NUM_INSTANCES)
+   \   00000010   0x2B28             CMP      R3,#+40
+   \   00000012   0xDA17             BGE      ??SystemTimers__Pause_0
+    319              {
+    320                  if (All_Timers[index].handle == ((uint8)(handle >> 8) ))
+   \   00000014   0x....             LDR      R4,??DataTable9_1
+   \   00000016   0x00DB             LSLS     R3,R3,#+3
+   \   00000018   0x18E3             ADDS     R3,R4,R3
+   \   0000001A   0x791C             LDRB     R4,[R3, #+4]
+   \   0000001C   0x0A09             LSRS     R1,R1,#+8
+   \   0000001E   0x428C             CMP      R4,R1
+   \   00000020   0xD110             BNE      ??SystemTimers__Pause_0
+    321                  {
+    322                      if (All_Timers[index].state ==  SYSTEMTIMERS_STATE_RUNNING)
+   \   00000022   0x7959             LDRB     R1,[R3, #+5]
+   \   00000024   0x2901             CMP      R1,#+1
+   \   00000026   0xD10D             BNE      ??SystemTimers__Pause_0
+   \   00000028   0x....             LDR      R0,??DataTable9
+   \   0000002A   0x6840             LDR      R0,[R0, #+4]
+   \   0000002C   0x7999             LDRB     R1,[R3, #+6]
+   \   0000002E   0x2900             CMP      R1,#+0
+   \   00000030   0x6819             LDR      R1,[R3, #+0]
+   \   00000032   0xD102             BNE      ??SystemTimers__Pause_1
+    323                      {
+    324                      	if (All_Timers[index].type == SYSTEMTIMERS_TYPE_DOWN_COUNTER)
+    325                      	{
+    326                      		All_Timers[index].compare = All_Timers[index].compare - Handle_Counter;
+   \   00000034   0x1A08             SUBS     R0,R1,R0
+   \   00000036   0x6018             STR      R0,[R3, #+0]
+   \   00000038   0xE001             B        ??SystemTimers__Pause_2
+    327                      	}
+    328                      	else
+    329                      	{
+    330                      		All_Timers[index].compare = Handle_Counter - All_Timers[index].compare;
+   \                     ??SystemTimers__Pause_1: (+1)
+   \   0000003A   0x1A40             SUBS     R0,R0,R1
+   \   0000003C   0x6018             STR      R0,[R3, #+0]
+    331                      	}
+    332                          All_Timers[index].state = SYSTEMTIMERS_STATE_PAUSED;
+   \                     ??SystemTimers__Pause_2: (+1)
+   \   0000003E   0x2003             MOVS     R0,#+3
+   \   00000040   0x7158             STRB     R0,[R3, #+5]
+    333                          retval = PASS;
+   \   00000042   0x2001             MOVS     R0,#+1
+    334                      }
+    335                  }
+    336              }
+    337          
+    338              MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \                     ??SystemTimers__Pause_0: (+1)
+   \   00000044   0xF382 0x8810      MSR      PRIMASK,R2
+    339              return (retval);
+   \   00000048   0xBC10             POP      {R4}
+   \   0000004A   0x4770             BX       LR               ;; return
+    340          }
+    341          
+    342          //---------------------------------------------------------------------------------------------------------------------
+    343          /**
+    344           * @brief   This method resumes a Timer is it is in PAUSE state.
+    345           * @details It resumes the timer using the value stored in the second_compare data field.
+    346           * @param   handle: unique identifier for a timer
+    347           * @return  PASS if the timer handle was valid and in the PAUSED state, else FAIL
+    348           */
+
+   \                                 In section .text, align 2, keep-with-next
+    349          PASS_FAIL_TYPE SystemTimers__Resume(uint16 handle)
+    350          {
+    351              PASS_FAIL_TYPE retval;
+    352              uint8 index;
+    353          
+    354              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    355              MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \                     SystemTimers__Resume: (+1)
+   \   00000000   0xF3EF 0x8110      MRS      R1,PRIMASK
+   \   00000004   0xB672             CPSID    I
+    356          
+    357              retval = FAIL;
+    358              index = handle & 0x00FF;
+   \   00000006   0x0002             MOVS     R2,R0
+   \   00000008   0xB2D2             UXTB     R2,R2
+    359              if (index < SYSTEMTIMER_NUM_INSTANCES)
+   \   0000000A   0x2A28             CMP      R2,#+40
+   \   0000000C   0xDA16             BGE      ??SystemTimers__Resume_0
+    360              {
+    361                  if (All_Timers[index].handle == ((uint8)(handle >> 8) ))
+   \   0000000E   0x....             LDR      R3,??DataTable9_1
+   \   00000010   0x00D2             LSLS     R2,R2,#+3
+   \   00000012   0x189A             ADDS     R2,R3,R2
+   \   00000014   0x7913             LDRB     R3,[R2, #+4]
+   \   00000016   0x0A00             LSRS     R0,R0,#+8
+   \   00000018   0x4283             CMP      R3,R0
+   \   0000001A   0xD10F             BNE      ??SystemTimers__Resume_0
+    362                  {
+    363                      if (All_Timers[index].state ==  SYSTEMTIMERS_STATE_PAUSED)
+   \   0000001C   0x7950             LDRB     R0,[R2, #+5]
+   \   0000001E   0x2803             CMP      R0,#+3
+   \   00000020   0xD10C             BNE      ??SystemTimers__Resume_0
+   \   00000022   0x....             LDR      R0,??DataTable9
+   \   00000024   0x6840             LDR      R0,[R0, #+4]
+   \   00000026   0x7993             LDRB     R3,[R2, #+6]
+   \   00000028   0x2B00             CMP      R3,#+0
+   \   0000002A   0x6813             LDR      R3,[R2, #+0]
+   \   0000002C   0xD102             BNE      ??SystemTimers__Resume_1
+    364                      {
+    365                          //All_Timers[index].stored_counter
+    366                      	if (All_Timers[index].type == SYSTEMTIMERS_TYPE_DOWN_COUNTER)
+    367          				{
+    368          					All_Timers[index].compare = Handle_Counter + All_Timers[index].compare;
+   \   0000002E   0x1818             ADDS     R0,R3,R0
+   \   00000030   0x6010             STR      R0,[R2, #+0]
+   \   00000032   0xE001             B        ??SystemTimers__Resume_2
+    369          				}
+    370          				else
+    371          				{
+    372          					All_Timers[index].compare = Handle_Counter - All_Timers[index].compare;
+   \                     ??SystemTimers__Resume_1: (+1)
+   \   00000034   0x1AC0             SUBS     R0,R0,R3
+   \   00000036   0x6010             STR      R0,[R2, #+0]
+    373          				}
+    374          
+    375                      	All_Timers[index].state = SYSTEMTIMERS_STATE_RUNNING;
+   \                     ??SystemTimers__Resume_2: (+1)
+   \   00000038   0x2001             MOVS     R0,#+1
+   \   0000003A   0x7150             STRB     R0,[R2, #+5]
+    376                      }
+    377                  }
+    378              }
+    379          
+    380              MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \                     ??SystemTimers__Resume_0: (+1)
+   \   0000003C   0xF381 0x8810      MSR      PRIMASK,R1
+    381              return (retval);
+   \   00000040   0x2000             MOVS     R0,#+0
+   \   00000042   0x4770             BX       LR               ;; return
+    382          }
+    383          
+    384          //---------------------------------------------------------------------------------------------------------------------
+    385          /**
+    386           * @brief   Request the current value of a counter in milliseconds
+    387           * @param   handle: unique identifier for a timer
+    388           * @return  Remaining time in milliseconds
+    389           */
+
+   \                                 In section .text, align 2, keep-with-next
+    390          uint32 SystemTimers__GetMs(uint16 handle)
+    391          {
+   \                     SystemTimers__GetMs: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    392              uint8 index;
+    393              uint32 retval;
+    394              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    395          
+    396              retval = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+    397          
+    398              index = handle & 0x00FF;
+   \   00000004   0x000A             MOVS     R2,R1
+   \   00000006   0xB2D2             UXTB     R2,R2
+    399              if (index < SYSTEMTIMER_NUM_INSTANCES)
+   \   00000008   0x2A28             CMP      R2,#+40
+   \   0000000A   0xDA26             BGE      ??SystemTimers__GetMs_0
+    400              {
+    401                  if (All_Timers[index].handle == ((uint8)(handle >> 8) ))
+   \   0000000C   0x....             LDR      R3,??DataTable9_1
+   \   0000000E   0x00D2             LSLS     R2,R2,#+3
+   \   00000010   0x189A             ADDS     R2,R3,R2
+   \   00000012   0x7913             LDRB     R3,[R2, #+4]
+   \   00000014   0x0A09             LSRS     R1,R1,#+8
+   \   00000016   0x428B             CMP      R3,R1
+   \   00000018   0xD11F             BNE      ??SystemTimers__GetMs_0
+    402                  {
+    403                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \   0000001A   0xF3EF 0x8110      MRS      R1,PRIMASK
+   \   0000001E   0xB672             CPSID    I
+    404          
+    405                      switch (All_Timers[index].state)
+   \   00000020   0x7953             LDRB     R3,[R2, #+5]
+   \   00000022   0x2B01             CMP      R3,#+1
+   \   00000024   0xD004             BEQ      ??SystemTimers__GetMs_1
+   \   00000026   0xD316             BCC      ??SystemTimers__GetMs_2
+   \   00000028   0x2B03             CMP      R3,#+3
+   \   0000002A   0xD00B             BEQ      ??SystemTimers__GetMs_3
+   \   0000002C   0xD30C             BCC      ??SystemTimers__GetMs_4
+   \   0000002E   0xE012             B        ??SystemTimers__GetMs_2
+   \                     ??SystemTimers__GetMs_1: (+1)
+   \   00000030   0x....             LDR      R0,??DataTable9
+   \   00000032   0x6840             LDR      R0,[R0, #+4]
+   \   00000034   0x7993             LDRB     R3,[R2, #+6]
+   \   00000036   0x2B00             CMP      R3,#+0
+   \   00000038   0x6812             LDR      R2,[R2, #+0]
+   \   0000003A   0xD101             BNE      ??SystemTimers__GetMs_5
+    406                      {
+    407                          case SYSTEMTIMERS_STATE_RUNNING:
+    408                          	if (All_Timers[index].type == SYSTEMTIMERS_TYPE_DOWN_COUNTER)
+    409                          	{
+    410                          		retval = (All_Timers[index].compare - Handle_Counter);
+   \   0000003C   0x1A10             SUBS     R0,R2,R0
+   \   0000003E   0xE00A             B        ??SystemTimers__GetMs_2
+    411                          	}
+    412                          	else
+    413                          	{
+    414                          		//All_Timers[index].compare = Handle_Counter - reference_ms;
+    415                          		retval = Handle_Counter - All_Timers[index].compare;
+   \                     ??SystemTimers__GetMs_5: (+1)
+   \   00000040   0x1A80             SUBS     R0,R0,R2
+   \   00000042   0xE008             B        ??SystemTimers__GetMs_2
+    416                          	}
+    417                              break;
+    418                          case SYSTEMTIMERS_STATE_PAUSED:
+    419                              retval = All_Timers[index].compare;
+   \                     ??SystemTimers__GetMs_3: (+1)
+   \   00000044   0x6810             LDR      R0,[R2, #+0]
+    420                              break;
+   \   00000046   0xE006             B        ??SystemTimers__GetMs_2
+    421                          case SYSTEMTIMERS_STATE_DONE:
+    422                          	if (All_Timers[index].type == SYSTEMTIMERS_TYPE_DOWN_COUNTER)
+   \                     ??SystemTimers__GetMs_4: (+1)
+   \   00000048   0x7993             LDRB     R3,[R2, #+6]
+   \   0000004A   0x2B00             CMP      R3,#+0
+   \   0000004C   0xD003             BEQ      ??SystemTimers__GetMs_2
+    423          					{
+    424                          		retval = 0;
+    425          					}
+    426          					else
+    427          					{
+    428          						retval = (All_Timers[index].compare + Handle_Counter);
+   \   0000004E   0x6810             LDR      R0,[R2, #+0]
+   \   00000050   0x....             LDR      R2,??DataTable9
+   \   00000052   0x6852             LDR      R2,[R2, #+4]
+   \   00000054   0x1880             ADDS     R0,R0,R2
+    429          					}
+    430                              break;
+    431                          default:
+    432                              //SYSTEMTIMERS_STATE_STOPPED
+    433                              break;
+    434                      }
+    435          
+    436                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \                     ??SystemTimers__GetMs_2: (+1)
+   \   00000056   0xF381 0x8810      MSR      PRIMASK,R1
+    437                  }
+    438              }
+    439          
+    440              return (retval);
+   \                     ??SystemTimers__GetMs_0: (+1)
+   \   0000005A   0x4770             BX       LR               ;; return
+    441          }
+    442          
+    443          //---------------------------------------------------------------------------------------------------------------------
+    444          /**
+    445           * @brief   This method request the current value of a timer in HMS
+    446           * @param   handle: unique identifier for a timer
+    447           * @param   time: see SYSTEMTIMER_HMS_TYPE
+    448           * @return  PASS if the timer handle was valid, else FAIL
+    449           */
+
+   \                                 In section .text, align 2, keep-with-next
+    450          PASS_FAIL_TYPE SystemTimers__GetHMS(uint16 handle, SYSTEMTIMER_HMS_TYPE * time)
+    451          {
+   \                     SystemTimers__GetHMS: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x000C             MOVS     R4,R1
+    452              uint32 value;
+    453              value = SystemTimers__GetMs(handle);
+   \   00000004   0x.... 0x....      BL       SystemTimers__GetMs
+   \   00000008   0x0005             MOVS     R5,R0
+    454          
+    455              time->milliseconds = (uint16)(value % 1000);
+   \   0000000A   0x26FA             MOVS     R6,#+250
+   \   0000000C   0x00B6             LSLS     R6,R6,#+2        ;; #+1000
+   \   0000000E   0x0031             MOVS     R1,R6
+   \   00000010   0x.... 0x....      BL       __aeabi_uidivmod
+   \   00000014   0x7021             STRB     R1,[R4, #+0]
+   \   00000016   0x0A09             LSRS     R1,R1,#+8
+   \   00000018   0x7061             STRB     R1,[R4, #+1]
+    456              value /= 1000;
+   \   0000001A   0x0028             MOVS     R0,R5
+   \   0000001C   0x0031             MOVS     R1,R6
+   \   0000001E   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000022   0x0005             MOVS     R5,R0
+    457              time->seconds = (uint8)(value % 60);
+   \   00000024   0x263C             MOVS     R6,#+60
+   \   00000026   0x0031             MOVS     R1,R6
+   \   00000028   0x.... 0x....      BL       __aeabi_uidivmod
+   \   0000002C   0x7121             STRB     R1,[R4, #+4]
+    458              value /= 60;
+   \   0000002E   0x0028             MOVS     R0,R5
+   \   00000030   0x0031             MOVS     R1,R6
+   \   00000032   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000036   0x0005             MOVS     R5,R0
+    459              time->minutes = (uint8)(value % 60);
+   \   00000038   0x0031             MOVS     R1,R6
+   \   0000003A   0x.... 0x....      BL       __aeabi_uidivmod
+   \   0000003E   0x70E1             STRB     R1,[R4, #+3]
+    460              value /= 60;
+    461              time->hours = (uint8)value;
+   \   00000040   0x0028             MOVS     R0,R5
+   \   00000042   0x0031             MOVS     R1,R6
+   \   00000044   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000048   0x70A0             STRB     R0,[R4, #+2]
+    462          
+    463              return (PASS);
+   \   0000004A   0x2001             MOVS     R0,#+1
+   \   0000004C   0xBD70             POP      {R4-R6,PC}       ;; return
+    464          }
+    465          
+    466          //---------------------------------------------------------------------------------------------------------------------
+    467          /**
+    468           * @brief   This method gets the current state of a timer
+    469           * @param   handle: unique identifier for a timer
+    470           * @return  SYSTEMTIMERS_STATE_INVALID if the timer is invalid, else the current state of the timer (See SYSTEMTIMERS_STATE_TYPE)
+    471           */
+
+   \                                 In section .text, align 2, keep-with-next
+    472          SYSTEMTIMERS_STATE_TYPE SystemTimers__GetState(uint16 handle)
+    473          {
+   \                     SystemTimers__GetState: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+   \   00000002   0x0001             MOVS     R1,R0
+    474              SYSTEMTIMERS_STATE_TYPE retval;
+    475              uint8 index;
+    476          
+    477              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    478              MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \   00000004   0xF3EF 0x8210      MRS      R2,PRIMASK
+   \   00000008   0xB672             CPSID    I
+    479          
+    480              retval = SYSTEMTIMERS_STATE_INVALID;
+   \   0000000A   0x2004             MOVS     R0,#+4
+    481              index = handle & 0x00FF;
+   \   0000000C   0x000B             MOVS     R3,R1
+   \   0000000E   0xB2DB             UXTB     R3,R3
+    482          
+    483              if (index < SYSTEMTIMER_NUM_INSTANCES)
+   \   00000010   0x2B28             CMP      R3,#+40
+   \   00000012   0xDA07             BGE      ??SystemTimers__GetState_0
+    484              {
+    485                  if (All_Timers[index].handle == ((uint8)(handle >> 8) ))
+   \   00000014   0x....             LDR      R4,??DataTable11
+   \   00000016   0x00DB             LSLS     R3,R3,#+3
+   \   00000018   0x18E3             ADDS     R3,R4,R3
+   \   0000001A   0x791C             LDRB     R4,[R3, #+4]
+   \   0000001C   0x0A09             LSRS     R1,R1,#+8
+   \   0000001E   0x428C             CMP      R4,R1
+   \   00000020   0xD100             BNE      ??SystemTimers__GetState_0
+    486                  {
+    487                      retval = All_Timers[index].state;
+   \   00000022   0x7958             LDRB     R0,[R3, #+5]
+    488                  }
+    489              }
+    490              MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \                     ??SystemTimers__GetState_0: (+1)
+   \   00000024   0xF382 0x8810      MSR      PRIMASK,R2
+    491          
+    492              return (retval);
+   \   00000028   0xBC10             POP      {R4}
+   \   0000002A   0x4770             BX       LR               ;; return
+    493          }
+    494          
+    495          //---------------------------------------------------------------------------------------------------------------------
+    496          /**
+    497           * @brief   This method gets the status of the timer, expired or not.
+    498           * @param   handle: unique identifier for a timer
+    499           * @return  TRUE if the timer has expired, else FALSE.
+    500           */
+
+   \                                 In section .text, align 2, keep-with-next
+    501          BOOL_TYPE SystemTimers__GetEvent(uint16 handle)
+    502          {
+   \                     SystemTimers__GetEvent: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    503              BOOL_TYPE retval;
+    504              uint8 index;
+    505          
+    506              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    507          
+    508              retval = FALSE;
+   \   00000002   0x2200             MOVS     R2,#+0
+   \   00000004   0x0010             MOVS     R0,R2
+    509              index = handle & 0x00FF;
+   \   00000006   0x000B             MOVS     R3,R1
+   \   00000008   0xB2DB             UXTB     R3,R3
+    510          
+    511              if (index < SYSTEMTIMER_NUM_INSTANCES)
+   \   0000000A   0x2B28             CMP      R3,#+40
+   \   0000000C   0xDB00             BLT      ??SystemTimers__GetEvent_0
+   \   0000000E   0x4770             BX       LR
+    512              {
+    513                  if (All_Timers[index].handle == ((uint8)(handle >> 8) ))
+   \                     ??SystemTimers__GetEvent_0: (+1)
+   \   00000010   0xB410             PUSH     {R4}
+   \   00000012   0x....             LDR      R4,??DataTable11
+   \   00000014   0x00DB             LSLS     R3,R3,#+3
+   \   00000016   0x18E3             ADDS     R3,R4,R3
+   \   00000018   0x791C             LDRB     R4,[R3, #+4]
+   \   0000001A   0x0A09             LSRS     R1,R1,#+8
+   \   0000001C   0x428C             CMP      R4,R1
+   \   0000001E   0xD106             BNE      ??SystemTimers__GetEvent_1
+    514                  {
+    515                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \   00000020   0xF3EF 0x8110      MRS      R1,PRIMASK
+   \   00000024   0xB672             CPSID    I
+    516                      retval = All_Timers[index].event;
+   \   00000026   0x79D8             LDRB     R0,[R3, #+7]
+    517                      All_Timers[index].event = FALSE;
+   \   00000028   0x71DA             STRB     R2,[R3, #+7]
+    518                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \   0000002A   0xF381 0x8810      MSR      PRIMASK,R1
+    519                  }
+    520              }
+    521              return (retval);
+   \                     ??SystemTimers__GetEvent_1: (+1)
+   \   0000002E   0xBC10             POP      {R4}
+   \   00000030   0x4770             BX       LR               ;; return
+    522          }
+    523          
+    524          
+    525          //---------------------------------------------------------------------------------------------------------------------
+    526          /**
+    527           * @brief This method initializes a NVTimer Struct.
+    528           * @param nv_timer
+    529           */
+
+   \                                 In section .text, align 2, keep-with-next
+    530          void SystemTimers__NVResetTimer(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer)
+    531          {
+   \                     SystemTimers__NVResetTimer: (+1)
+   \   00000000   0xB500             PUSH     {LR}
+    532          	nv_timer->state = SYSTEMTIMERS_STATE_STOPPED;
+   \   00000002   0x2100             MOVS     R1,#+0
+   \   00000004   0x7401             STRB     R1,[R0, #+16]
+    533          	nv_timer->n_state = SYSTEMTIMERS_STATE_N_STOPPED;
+   \   00000006   0x21FF             MOVS     R1,#+255
+   \   00000008   0x7441             STRB     R1,[R0, #+17]
+    534          
+    535          	nv_timer->type = SYSTEMTIMERS_TYPE_UP_COUNTER;
+   \   0000000A   0x2101             MOVS     R1,#+1
+   \   0000000C   0x7481             STRB     R1,[R0, #+18]
+    536          	nv_timer->n_type = SYSTEMTIMERS_TYPE_N_UP_COUNTER;
+   \   0000000E   0x21FE             MOVS     R1,#+254
+   \   00000010   0x74C1             STRB     R1,[R0, #+19]
+    537          
+    538          	nv_timer->last_handle_counter = Handle_Counter;
+   \   00000012   0x0001             MOVS     R1,R0
+   \   00000014   0x310C             ADDS     R1,R1,#+12
+   \   00000016   0x....             LDR      R0,??DataTable18
+   \   00000018   0x6840             LDR      R0,[R0, #+4]
+   \   0000001A   0x.... 0x....      BL       __aeabi_uwrite4
+    539          }
+   \   0000001E   0xBD00             POP      {PC}             ;; return
+    540          
+    541          //---------------------------------------------------------------------------------------------------------------------
+    542          /**
+    543           * @brief This method  Adjust the structure of a NVTimer based on the stored value.
+    544           * @param nv_timer
+    545           */
+
+   \                                 In section .text, align 2, keep-with-next
+    546          void SystemTimers__NVRestore(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer)
+    547          {
+   \                     SystemTimers__NVRestore: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    548          	uint32 diff_timer;
+    549          
+    550          	if (nv_timer->last_handle_counter >= Handle_Counter)
+   \   00000004   0x300C             ADDS     R0,R0,#+12
+   \   00000006   0x.... 0x....      BL       __aeabi_uread4
+   \   0000000A   0x....             LDR      R5,??DataTable18
+   \   0000000C   0x686E             LDR      R6,[R5, #+4]
+   \   0000000E   0x42B0             CMP      R0,R6
+   \   00000010   0xD325             BCC      ??SystemTimers__NVRestore_0
+    551          	{
+    552          		// for instance:
+    553          		// Last time the last_handle_counter was 3000 and all values related to that..
+    554          		// Now the Handle_Counter is 2000
+    555          		// diff_timer  will be 1000
+    556          		// and the timers was ahead of the current timer
+    557          		// All values should be decremented by the difference
+    558          		diff_timer = nv_timer->last_handle_counter - Handle_Counter;
+   \   00000012   0x0020             MOVS     R0,R4
+   \   00000014   0x300C             ADDS     R0,R0,#+12
+   \   00000016   0x.... 0x....      BL       __aeabi_uread4
+   \   0000001A   0x1B86             SUBS     R6,R0,R6
+    559          		nv_timer->reference -= diff_timer;
+   \   0000001C   0x0020             MOVS     R0,R4
+   \   0000001E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000022   0x0021             MOVS     R1,R4
+   \   00000024   0x1B80             SUBS     R0,R0,R6
+   \   00000026   0x.... 0x....      BL       __aeabi_uwrite4
+    560          		nv_timer->pause_value -= diff_timer;
+   \   0000002A   0x1D20             ADDS     R0,R4,#+4
+   \   0000002C   0x.... 0x....      BL       __aeabi_uread4
+   \   00000030   0x1D21             ADDS     R1,R4,#+4
+   \   00000032   0x1B80             SUBS     R0,R0,R6
+   \   00000034   0x.... 0x....      BL       __aeabi_uwrite4
+    561          		nv_timer->compare -= diff_timer;
+   \   00000038   0x0020             MOVS     R0,R4
+   \   0000003A   0x3008             ADDS     R0,R0,#+8
+   \   0000003C   0x.... 0x....      BL       __aeabi_uread4
+   \   00000040   0x0021             MOVS     R1,R4
+   \   00000042   0x3108             ADDS     R1,R1,#+8
+   \   00000044   0x1B80             SUBS     R0,R0,R6
+   \   00000046   0x.... 0x....      BL       __aeabi_uwrite4
+    562          		nv_timer->last_handle_counter -= diff_timer;
+   \   0000004A   0x0020             MOVS     R0,R4
+   \   0000004C   0x300C             ADDS     R0,R0,#+12
+   \   0000004E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000052   0x0021             MOVS     R1,R4
+   \   00000054   0x310C             ADDS     R1,R1,#+12
+   \   00000056   0x1B80             SUBS     R0,R0,R6
+   \   00000058   0x.... 0x....      BL       __aeabi_uwrite4
+   \   0000005C   0xE024             B        ??SystemTimers__NVRestore_1
+    563          	}
+    564          	else
+    565          	{
+    566          		// for instance:
+    567          		// Last time the last_handle_counter was 3000 and all values related to that..
+    568          		// Now the Handle_Counter is 4000
+    569          		// diff_timer  will be 1000
+    570          		// and the timers was behind of the current timer
+    571          		// All values should be incremented by the difference
+    572          		diff_timer = Handle_Counter - nv_timer->last_handle_counter;
+   \                     ??SystemTimers__NVRestore_0: (+1)
+   \   0000005E   0x0020             MOVS     R0,R4
+   \   00000060   0x300C             ADDS     R0,R0,#+12
+   \   00000062   0x.... 0x....      BL       __aeabi_uread4
+   \   00000066   0x1A36             SUBS     R6,R6,R0
+    573          		nv_timer->reference += diff_timer;
+   \   00000068   0x0020             MOVS     R0,R4
+   \   0000006A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000006E   0x0021             MOVS     R1,R4
+   \   00000070   0x1980             ADDS     R0,R0,R6
+   \   00000072   0x.... 0x....      BL       __aeabi_uwrite4
+    574          		nv_timer->pause_value += diff_timer;
+   \   00000076   0x1D20             ADDS     R0,R4,#+4
+   \   00000078   0x.... 0x....      BL       __aeabi_uread4
+   \   0000007C   0x1D21             ADDS     R1,R4,#+4
+   \   0000007E   0x1980             ADDS     R0,R0,R6
+   \   00000080   0x.... 0x....      BL       __aeabi_uwrite4
+    575          		nv_timer->compare += diff_timer;
+   \   00000084   0x0020             MOVS     R0,R4
+   \   00000086   0x3008             ADDS     R0,R0,#+8
+   \   00000088   0x.... 0x....      BL       __aeabi_uread4
+   \   0000008C   0x0021             MOVS     R1,R4
+   \   0000008E   0x3108             ADDS     R1,R1,#+8
+   \   00000090   0x1980             ADDS     R0,R0,R6
+   \   00000092   0x.... 0x....      BL       __aeabi_uwrite4
+    576          		nv_timer->last_handle_counter += diff_timer;
+   \   00000096   0x0020             MOVS     R0,R4
+   \   00000098   0x300C             ADDS     R0,R0,#+12
+   \   0000009A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000009E   0x0021             MOVS     R1,R4
+   \   000000A0   0x310C             ADDS     R1,R1,#+12
+   \   000000A2   0x1980             ADDS     R0,R0,R6
+   \   000000A4   0x.... 0x....      BL       __aeabi_uwrite4
+    577          	}
+    578          	nv_timer->last_handle_counter = Handle_Counter;
+   \                     ??SystemTimers__NVRestore_1: (+1)
+   \   000000A8   0x0021             MOVS     R1,R4
+   \   000000AA   0x310C             ADDS     R1,R1,#+12
+   \   000000AC   0x6868             LDR      R0,[R5, #+4]
+   \   000000AE   0x.... 0x....      BL       __aeabi_uwrite4
+    579          }
+   \   000000B2   0xBD70             POP      {R4-R6,PC}       ;; return
+    580          
+    581          
+    582          
+    583          //---------------------------------------------------------------------------------------------------------------------
+    584          /**
+    585           * @brief This method set a NVTimer using milliseconds
+    586           * @param nv_timer
+    587           * @param ms_duration
+    588           * @return
+    589           */
+
+   \                                 In section .text, align 2, keep-with-next
+    590          PASS_FAIL_TYPE SystemTimers__NVSetTimerMS(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer, uint32 ms_duration,SYSTEMTIMERS_TYPE_TYPE type)
+    591          {
+   \                     SystemTimers__NVSetTimerMS: (+1)
+   \   00000000   0xB5F0             PUSH     {R4-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+   \   00000006   0x0016             MOVS     R6,R2
+    592          	nv_timer->reference = Handle_Counter;
+   \   00000008   0x....             LDR      R7,??DataTable18
+   \   0000000A   0x0021             MOVS     R1,R4
+   \   0000000C   0x6878             LDR      R0,[R7, #+4]
+   \   0000000E   0x.... 0x....      BL       __aeabi_uwrite4
+    593          	nv_timer->compare = Handle_Counter + ms_duration;
+   \   00000012   0x0021             MOVS     R1,R4
+   \   00000014   0x3108             ADDS     R1,R1,#+8
+   \   00000016   0x6878             LDR      R0,[R7, #+4]
+   \   00000018   0x1940             ADDS     R0,R0,R5
+   \   0000001A   0x.... 0x....      BL       __aeabi_uwrite4
+    594          	nv_timer->type = type;
+   \   0000001E   0x74A6             STRB     R6,[R4, #+18]
+    595          	nv_timer->n_type = (SYSTEMTIMERS_TYPE_TYPE)(~type);
+   \   00000020   0x43F0             MVNS     R0,R6
+   \   00000022   0x74E0             STRB     R0,[R4, #+19]
+    596          	nv_timer->state = SYSTEMTIMERS_STATE_RUNNING;
+   \   00000024   0x2001             MOVS     R0,#+1
+   \   00000026   0x7420             STRB     R0,[R4, #+16]
+    597          	nv_timer->n_state = SYSTEMTIMERS_STATE_N_RUNNING;
+   \   00000028   0x20FE             MOVS     R0,#+254
+   \   0000002A   0x7460             STRB     R0,[R4, #+17]
+    598          	nv_timer->last_handle_counter = Handle_Counter;
+   \   0000002C   0x0021             MOVS     R1,R4
+   \   0000002E   0x310C             ADDS     R1,R1,#+12
+   \   00000030   0x6878             LDR      R0,[R7, #+4]
+   \   00000032   0x.... 0x....      BL       __aeabi_uwrite4
+    599          	return (PASS);
+   \   00000036   0x2001             MOVS     R0,#+1
+   \   00000038   0xBDF0             POP      {R4-R7,PC}       ;; return
+    600          }
+    601          
+    602          //---------------------------------------------------------------------------------------------------------------------
+    603          /**
+    604           * @brief This method Sets a NVtimer using HMS data
+    605           * @param nv_timer
+    606           * @param time
+    607           * @return
+    608           */
+
+   \                                 In section .text, align 2, keep-with-next
+    609          PASS_FAIL_TYPE SystemTimers__NVSetTimerHMS(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer, SYSTEMTIMER_HMS_TYPE * time,SYSTEMTIMERS_TYPE_TYPE type)
+    610          {
+   \                     SystemTimers__NVSetTimerHMS: (+1)
+   \   00000000   0xB5F0             PUSH     {R4-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x0015             MOVS     R5,R2
+    611          	uint32 value;
+    612          	value = ((((uint32)time->hours * 60) + (uint32)time->minutes) * 60) + (uint32)time->seconds;
+   \   00000006   0x7888             LDRB     R0,[R1, #+2]
+   \   00000008   0x0102             LSLS     R2,R0,#+4
+   \   0000000A   0x1A10             SUBS     R0,R2,R0
+   \   0000000C   0x0080             LSLS     R0,R0,#+2
+   \   0000000E   0x78CA             LDRB     R2,[R1, #+3]
+   \   00000010   0x1880             ADDS     R0,R0,R2
+   \   00000012   0x0102             LSLS     R2,R0,#+4
+   \   00000014   0x1A10             SUBS     R0,R2,R0
+   \   00000016   0x0080             LSLS     R0,R0,#+2
+   \   00000018   0x7909             LDRB     R1,[R1, #+4]
+   \   0000001A   0x1846             ADDS     R6,R0,R1
+    613          	value *= 1000;
+    614          	nv_timer->reference = Handle_Counter;
+   \   0000001C   0x....             LDR      R7,??DataTable18
+   \   0000001E   0x0021             MOVS     R1,R4
+   \   00000020   0x6878             LDR      R0,[R7, #+4]
+   \   00000022   0x.... 0x....      BL       __aeabi_uwrite4
+    615          	nv_timer->compare = Handle_Counter + value;
+   \   00000026   0x0021             MOVS     R1,R4
+   \   00000028   0x3108             ADDS     R1,R1,#+8
+   \   0000002A   0x6878             LDR      R0,[R7, #+4]
+   \   0000002C   0x22FA             MOVS     R2,#+250
+   \   0000002E   0x0092             LSLS     R2,R2,#+2        ;; #+1000
+   \   00000030   0x4356             MULS     R6,R2,R6
+   \   00000032   0x1980             ADDS     R0,R0,R6
+   \   00000034   0x.... 0x....      BL       __aeabi_uwrite4
+    616          	nv_timer->type = type;
+   \   00000038   0x74A5             STRB     R5,[R4, #+18]
+    617          	nv_timer->n_type = (SYSTEMTIMERS_TYPE_TYPE)(~type);
+   \   0000003A   0x43E8             MVNS     R0,R5
+   \   0000003C   0x74E0             STRB     R0,[R4, #+19]
+    618          	nv_timer->state = SYSTEMTIMERS_STATE_RUNNING;
+   \   0000003E   0x2001             MOVS     R0,#+1
+   \   00000040   0x7420             STRB     R0,[R4, #+16]
+    619          	nv_timer->n_state = SYSTEMTIMERS_STATE_N_RUNNING;
+   \   00000042   0x20FE             MOVS     R0,#+254
+   \   00000044   0x7460             STRB     R0,[R4, #+17]
+    620          	nv_timer->last_handle_counter = Handle_Counter;
+   \   00000046   0x0021             MOVS     R1,R4
+   \   00000048   0x310C             ADDS     R1,R1,#+12
+   \   0000004A   0x6878             LDR      R0,[R7, #+4]
+   \   0000004C   0x.... 0x....      BL       __aeabi_uwrite4
+    621          
+    622          	return (PASS);
+   \   00000050   0x2001             MOVS     R0,#+1
+   \   00000052   0xBDF0             POP      {R4-R7,PC}       ;; return
+    623          }
+    624          
+    625          //---------------------------------------------------------------------------------------------------------------------
+    626          /**
+    627           * @brief This method checks the state of a NVTimer
+    628           * @param nv_timer
+    629           * @return
+    630           */
+
+   \                                 In section .text, align 2, keep-with-next
+    631          SYSTEMTIMERS_STATE_TYPE SystemTimers__NVCheckTimer(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer)
+    632          {
+   \                     SystemTimers__NVCheckTimer: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    633          	EvalTimer (nv_timer);
+   \   00000004   0x.... 0x....      BL       EvalTimer
+    634          	return (nv_timer->state);
+   \   00000008   0x7C20             LDRB     R0,[R4, #+16]
+   \   0000000A   0xBD10             POP      {R4,PC}          ;; return
+    635          }
+    636          
+    637          //---------------------------------------------------------------------------------------------------------------------
+    638          /**
+    639           * @brief This method Pause a NVTimer
+    640           * @param nv_timer
+    641           * @return
+    642           */
+
+   \                                 In section .text, align 2, keep-with-next
+    643          PASS_FAIL_TYPE SystemTimers__NVPauseTimer(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer)
+    644          {
+   \                     SystemTimers__NVPauseTimer: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    645          	if (nv_timer->state == SYSTEMTIMERS_STATE_RUNNING)
+   \   00000004   0x7C20             LDRB     R0,[R4, #+16]
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD10F             BNE      ??SystemTimers__NVPauseTimer_0
+    646          	{
+    647          		nv_timer->pause_value = Handle_Counter;
+   \   0000000A   0x....             LDR      R5,??DataTable18
+   \   0000000C   0x1D21             ADDS     R1,R4,#+4
+   \   0000000E   0x6868             LDR      R0,[R5, #+4]
+   \   00000010   0x.... 0x....      BL       __aeabi_uwrite4
+    648          		nv_timer->state = SYSTEMTIMERS_STATE_PAUSED;
+   \   00000014   0x2003             MOVS     R0,#+3
+   \   00000016   0x7420             STRB     R0,[R4, #+16]
+    649          		nv_timer->n_state = SYSTEMTIMERS_STATE_N_PAUSED;
+   \   00000018   0x20FC             MOVS     R0,#+252
+   \   0000001A   0x7460             STRB     R0,[R4, #+17]
+    650          		nv_timer->last_handle_counter = Handle_Counter;
+   \   0000001C   0x0021             MOVS     R1,R4
+   \   0000001E   0x310C             ADDS     R1,R1,#+12
+   \   00000020   0x6868             LDR      R0,[R5, #+4]
+   \   00000022   0x.... 0x....      BL       __aeabi_uwrite4
+    651          		return (PASS);
+   \   00000026   0x2001             MOVS     R0,#+1
+   \   00000028   0xBD30             POP      {R4,R5,PC}
+    652          	}
+    653          	else
+    654          	{
+    655          		return (FAIL);
+   \                     ??SystemTimers__NVPauseTimer_0: (+1)
+   \   0000002A   0x2000             MOVS     R0,#+0
+   \   0000002C   0xBD30             POP      {R4,R5,PC}       ;; return
+    656          	}
+    657          }
+    658          
+    659          //---------------------------------------------------------------------------------------------------------------------
+    660          /**
+    661           * @brief This Method Resumes a NVTimer
+    662           * @param nv_timer
+    663           * @return
+    664           */
+
+   \                                 In section .text, align 2, keep-with-next
+    665          PASS_FAIL_TYPE SystemTimers__NVResumeTimer(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer)
+    666          {
+   \                     SystemTimers__NVResumeTimer: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    667          	if (nv_timer->state == SYSTEMTIMERS_STATE_PAUSED)
+   \   00000004   0x7C20             LDRB     R0,[R4, #+16]
+   \   00000006   0x2803             CMP      R0,#+3
+   \   00000008   0xD127             BNE      ??SystemTimers__NVResumeTimer_0
+    668          	{
+    669          		// reference ---  pause ----- compare
+    670          		// ---------------------------------------- handle
+    671          		uint32 delta = Handle_Counter - nv_timer->pause_value;
+   \   0000000A   0x1D20             ADDS     R0,R4,#+4
+   \   0000000C   0x.... 0x....      BL       __aeabi_uread4
+   \   00000010   0x....             LDR      R5,??DataTable18
+   \   00000012   0x6869             LDR      R1,[R5, #+4]
+   \   00000014   0x1A0E             SUBS     R6,R1,R0
+    672          		nv_timer->reference += delta;
+   \   00000016   0x0020             MOVS     R0,R4
+   \   00000018   0x.... 0x....      BL       __aeabi_uread4
+   \   0000001C   0x0021             MOVS     R1,R4
+   \   0000001E   0x1980             ADDS     R0,R0,R6
+   \   00000020   0x.... 0x....      BL       __aeabi_uwrite4
+    673          		nv_timer->compare += delta;
+   \   00000024   0x0020             MOVS     R0,R4
+   \   00000026   0x3008             ADDS     R0,R0,#+8
+   \   00000028   0x.... 0x....      BL       __aeabi_uread4
+   \   0000002C   0x0021             MOVS     R1,R4
+   \   0000002E   0x3108             ADDS     R1,R1,#+8
+   \   00000030   0x1980             ADDS     R0,R0,R6
+   \   00000032   0x.... 0x....      BL       __aeabi_uwrite4
+    674          		nv_timer->pause_value = nv_timer->compare;
+   \   00000036   0x0020             MOVS     R0,R4
+   \   00000038   0x3008             ADDS     R0,R0,#+8
+   \   0000003A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000003E   0x1D21             ADDS     R1,R4,#+4
+   \   00000040   0x.... 0x....      BL       __aeabi_uwrite4
+    675          		nv_timer->state = SYSTEMTIMERS_STATE_RUNNING;
+   \   00000044   0x2001             MOVS     R0,#+1
+   \   00000046   0x7420             STRB     R0,[R4, #+16]
+    676          		nv_timer->n_state = SYSTEMTIMERS_STATE_N_RUNNING;
+   \   00000048   0x20FE             MOVS     R0,#+254
+   \   0000004A   0x7460             STRB     R0,[R4, #+17]
+    677          		nv_timer->last_handle_counter = Handle_Counter;
+   \   0000004C   0x0021             MOVS     R1,R4
+   \   0000004E   0x310C             ADDS     R1,R1,#+12
+   \   00000050   0x6868             LDR      R0,[R5, #+4]
+   \   00000052   0x.... 0x....      BL       __aeabi_uwrite4
+    678          		return (PASS);
+   \   00000056   0x2001             MOVS     R0,#+1
+   \   00000058   0xBD70             POP      {R4-R6,PC}
+    679          	}
+    680          	else
+    681          	{
+    682          		return (FAIL);
+   \                     ??SystemTimers__NVResumeTimer_0: (+1)
+   \   0000005A   0x2000             MOVS     R0,#+0
+   \   0000005C   0xBD70             POP      {R4-R6,PC}       ;; return
+    683          	}
+    684          }
+    685          
+    686          //---------------------------------------------------------------------------------------------------------------------
+    687          /**
+    688           * @brief This method exposes a NV timer in milliseconds
+    689           * @param nv_timer
+    690           * @return
+    691           */
+
+   \                                 In section .text, align 2, keep-with-next
+    692          uint32 SystemTimers__NVGetTimerMs(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer)
+    693          {
+   \                     SystemTimers__NVGetTimerMs: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    694          	uint32 retval;
+    695          	retval = 0;
+   \   00000004   0x2500             MOVS     R5,#+0
+    696          	EvalTimer (nv_timer);
+   \   00000006   0x.... 0x....      BL       EvalTimer
+    697          	switch (nv_timer->state)
+   \   0000000A   0x7C20             LDRB     R0,[R4, #+16]
+   \   0000000C   0x2801             CMP      R0,#+1
+   \   0000000E   0xD005             BEQ      ??SystemTimers__NVGetTimerMs_0
+   \   00000010   0xD200             BCS      .+4
+   \   00000012   0xE08A             B        ??SystemTimers__NVGetTimerMs_1
+   \   00000014   0x2803             CMP      R0,#+3
+   \   00000016   0xD04B             BEQ      ??SystemTimers__NVGetTimerMs_2
+   \   00000018   0xD328             BCC      ??SystemTimers__NVGetTimerMs_3
+   \   0000001A   0xE086             B        ??SystemTimers__NVGetTimerMs_1
+   \                     ??SystemTimers__NVGetTimerMs_0: (+1)
+   \   0000001C   0x....             LDR      R0,??DataTable18
+   \   0000001E   0x6845             LDR      R5,[R0, #+4]
+   \   00000020   0x7CA0             LDRB     R0,[R4, #+18]
+   \   00000022   0x2800             CMP      R0,#+0
+   \   00000024   0xD112             BNE      ??SystemTimers__NVGetTimerMs_4
+    698          	{
+    699          		case SYSTEMTIMERS_STATE_RUNNING:
+    700          			// reference  ----- Handle_Counter -----  nv_timer->compare
+    701          			if (nv_timer->type == SYSTEMTIMERS_TYPE_DOWN_COUNTER)
+    702          			{
+    703          				if (nv_timer->compare >= Handle_Counter)
+   \   00000026   0x0020             MOVS     R0,R4
+   \   00000028   0x3008             ADDS     R0,R0,#+8
+   \   0000002A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000002E   0x42A8             CMP      R0,R5
+   \   00000030   0xD305             BCC      ??SystemTimers__NVGetTimerMs_5
+    704          				{
+    705          					retval = nv_timer->compare - Handle_Counter;
+   \   00000032   0x0020             MOVS     R0,R4
+   \   00000034   0x3008             ADDS     R0,R0,#+8
+   \   00000036   0x.... 0x....      BL       __aeabi_uread4
+   \   0000003A   0x1B45             SUBS     R5,R0,R5
+   \   0000003C   0xE075             B        ??SystemTimers__NVGetTimerMs_1
+    706          				}
+    707          				else
+    708          				{
+    709          					retval = nv_timer->compare + (0xFFFFFFFF - Handle_Counter);
+   \                     ??SystemTimers__NVGetTimerMs_5: (+1)
+   \   0000003E   0x0020             MOVS     R0,R4
+   \   00000040   0x3008             ADDS     R0,R0,#+8
+   \   00000042   0x.... 0x....      BL       __aeabi_uread4
+   \   00000046   0x1E40             SUBS     R0,R0,#+1
+   \   00000048   0x1B45             SUBS     R5,R0,R5
+   \   0000004A   0xE06E             B        ??SystemTimers__NVGetTimerMs_1
+    710          				}
+    711          			}
+    712          			else
+    713          			{
+    714          				if (Handle_Counter >= nv_timer->reference)
+   \                     ??SystemTimers__NVGetTimerMs_4: (+1)
+   \   0000004C   0x0020             MOVS     R0,R4
+   \   0000004E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000052   0x4285             CMP      R5,R0
+   \   00000054   0xD304             BCC      ??SystemTimers__NVGetTimerMs_6
+    715          				{
+    716          					retval = Handle_Counter - nv_timer->reference;
+   \   00000056   0x0020             MOVS     R0,R4
+   \   00000058   0x.... 0x....      BL       __aeabi_uread4
+   \   0000005C   0x1A2D             SUBS     R5,R5,R0
+   \   0000005E   0xE064             B        ??SystemTimers__NVGetTimerMs_1
+    717          				}
+    718          				else
+    719          				{
+    720          					// in this case the reference is bigger than the the counter which demosntrante overflow of the cunter or underflow of the reference
+    721          
+    722          					retval = Handle_Counter + (0xFFFFFFFF - nv_timer->reference);
+   \                     ??SystemTimers__NVGetTimerMs_6: (+1)
+   \   00000060   0x0020             MOVS     R0,R4
+   \   00000062   0x.... 0x....      BL       __aeabi_uread4
+   \   00000066   0x1E6D             SUBS     R5,R5,#+1
+   \   00000068   0x1A2D             SUBS     R5,R5,R0
+   \   0000006A   0xE05E             B        ??SystemTimers__NVGetTimerMs_1
+    723          				}
+    724          			}
+    725          			break;
+    726          		case SYSTEMTIMERS_STATE_DONE:
+    727          			if (nv_timer->type == SYSTEMTIMERS_TYPE_DOWN_COUNTER)
+   \                     ??SystemTimers__NVGetTimerMs_3: (+1)
+   \   0000006C   0x7CA0             LDRB     R0,[R4, #+18]
+   \   0000006E   0x2800             CMP      R0,#+0
+   \   00000070   0xD05B             BEQ      ??SystemTimers__NVGetTimerMs_1
+    728          			{
+    729          				retval = 0;
+    730          			}
+    731          			else
+    732          			{
+    733          				if (nv_timer->compare >= nv_timer->reference)
+   \   00000072   0x0020             MOVS     R0,R4
+   \   00000074   0x3008             ADDS     R0,R0,#+8
+   \   00000076   0x.... 0x....      BL       __aeabi_uread4
+   \   0000007A   0x0005             MOVS     R5,R0
+   \   0000007C   0x0020             MOVS     R0,R4
+   \   0000007E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000082   0x4285             CMP      R5,R0
+   \   00000084   0xD309             BCC      ??SystemTimers__NVGetTimerMs_7
+    734          				{
+    735          					retval = nv_timer->compare - nv_timer->reference;
+   \   00000086   0x0020             MOVS     R0,R4
+   \   00000088   0x3008             ADDS     R0,R0,#+8
+   \   0000008A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000008E   0x0005             MOVS     R5,R0
+   \   00000090   0x0020             MOVS     R0,R4
+   \   00000092   0x.... 0x....      BL       __aeabi_uread4
+   \   00000096   0x1A2D             SUBS     R5,R5,R0
+   \   00000098   0xE047             B        ??SystemTimers__NVGetTimerMs_1
+    736          				}
+    737          				else
+    738          				{
+    739          					retval = nv_timer->compare + ( 0xFFFFFFFF - nv_timer->reference);
+   \                     ??SystemTimers__NVGetTimerMs_7: (+1)
+   \   0000009A   0x0020             MOVS     R0,R4
+   \   0000009C   0x3008             ADDS     R0,R0,#+8
+   \   0000009E   0x.... 0x....      BL       __aeabi_uread4
+   \   000000A2   0x0005             MOVS     R5,R0
+   \   000000A4   0x0020             MOVS     R0,R4
+   \   000000A6   0x.... 0x....      BL       __aeabi_uread4
+   \   000000AA   0x1E6D             SUBS     R5,R5,#+1
+   \   000000AC   0x1A2D             SUBS     R5,R5,R0
+   \   000000AE   0xE03C             B        ??SystemTimers__NVGetTimerMs_1
+    740          
+    741          				}
+    742          			}
+    743          			break;
+    744          		case SYSTEMTIMERS_STATE_PAUSED:
+    745          			// reference  ----- pause -----  nv_timer->compare
+    746          			if (nv_timer->type == SYSTEMTIMERS_TYPE_DOWN_COUNTER)
+   \                     ??SystemTimers__NVGetTimerMs_2: (+1)
+   \   000000B0   0x7CA0             LDRB     R0,[R4, #+18]
+   \   000000B2   0x2800             CMP      R0,#+0
+   \   000000B4   0xD11E             BNE      ??SystemTimers__NVGetTimerMs_8
+    747          			{
+    748          				if (nv_timer->compare >= nv_timer->pause_value)
+   \   000000B6   0x0020             MOVS     R0,R4
+   \   000000B8   0x3008             ADDS     R0,R0,#+8
+   \   000000BA   0x.... 0x....      BL       __aeabi_uread4
+   \   000000BE   0x0005             MOVS     R5,R0
+   \   000000C0   0x1D20             ADDS     R0,R4,#+4
+   \   000000C2   0x.... 0x....      BL       __aeabi_uread4
+   \   000000C6   0x4285             CMP      R5,R0
+   \   000000C8   0xD309             BCC      ??SystemTimers__NVGetTimerMs_9
+    749          				{
+    750          					retval = nv_timer->compare - nv_timer->pause_value;
+   \   000000CA   0x0020             MOVS     R0,R4
+   \   000000CC   0x3008             ADDS     R0,R0,#+8
+   \   000000CE   0x.... 0x....      BL       __aeabi_uread4
+   \   000000D2   0x0005             MOVS     R5,R0
+   \   000000D4   0x1D20             ADDS     R0,R4,#+4
+   \   000000D6   0x.... 0x....      BL       __aeabi_uread4
+   \   000000DA   0x1A2D             SUBS     R5,R5,R0
+   \   000000DC   0xE025             B        ??SystemTimers__NVGetTimerMs_1
+    751          				}
+    752          				else
+    753          				{
+    754          					retval = nv_timer->compare +(0xFFFFFFFF - nv_timer->pause_value);
+   \                     ??SystemTimers__NVGetTimerMs_9: (+1)
+   \   000000DE   0x0020             MOVS     R0,R4
+   \   000000E0   0x3008             ADDS     R0,R0,#+8
+   \   000000E2   0x.... 0x....      BL       __aeabi_uread4
+   \   000000E6   0x0005             MOVS     R5,R0
+   \   000000E8   0x1D20             ADDS     R0,R4,#+4
+   \   000000EA   0x.... 0x....      BL       __aeabi_uread4
+   \   000000EE   0x1E6D             SUBS     R5,R5,#+1
+   \   000000F0   0x1A2D             SUBS     R5,R5,R0
+   \   000000F2   0xE01A             B        ??SystemTimers__NVGetTimerMs_1
+    755          				}
+    756          			}
+    757          			else
+    758          			{
+    759          				if (nv_timer->pause_value > nv_timer->reference)
+   \                     ??SystemTimers__NVGetTimerMs_8: (+1)
+   \   000000F4   0x0020             MOVS     R0,R4
+   \   000000F6   0x.... 0x....      BL       __aeabi_uread4
+   \   000000FA   0x0005             MOVS     R5,R0
+   \   000000FC   0x1D20             ADDS     R0,R4,#+4
+   \   000000FE   0x.... 0x....      BL       __aeabi_uread4
+   \   00000102   0x4285             CMP      R5,R0
+   \   00000104   0xD208             BCS      ??SystemTimers__NVGetTimerMs_10
+    760          				{
+    761          					retval = nv_timer->pause_value - nv_timer->reference;
+   \   00000106   0x1D20             ADDS     R0,R4,#+4
+   \   00000108   0x.... 0x....      BL       __aeabi_uread4
+   \   0000010C   0x0005             MOVS     R5,R0
+   \   0000010E   0x0020             MOVS     R0,R4
+   \   00000110   0x.... 0x....      BL       __aeabi_uread4
+   \   00000114   0x1A2D             SUBS     R5,R5,R0
+   \   00000116   0xE008             B        ??SystemTimers__NVGetTimerMs_1
+    762          				}
+    763          				else
+    764          				{
+    765          					retval = nv_timer->pause_value + (0xFFFFFFFF - nv_timer->reference);
+   \                     ??SystemTimers__NVGetTimerMs_10: (+1)
+   \   00000118   0x1D20             ADDS     R0,R4,#+4
+   \   0000011A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000011E   0x0005             MOVS     R5,R0
+   \   00000120   0x0020             MOVS     R0,R4
+   \   00000122   0x.... 0x....      BL       __aeabi_uread4
+   \   00000126   0x1E6D             SUBS     R5,R5,#+1
+   \   00000128   0x1A2D             SUBS     R5,R5,R0
+    766          				}
+    767          			}
+    768          			break;
+    769          		default:
+    770          //		case SYSTEMTIMERS_STATE_STOPPED:   // default , STOPPED and INVALID shall return 0
+    771          //		case SYSTEMTIMERS_STATE_INVALID:
+    772          			break;
+    773          	}
+    774          	return (retval);
+   \                     ??SystemTimers__NVGetTimerMs_1: (+1)
+   \   0000012A   0x0028             MOVS     R0,R5
+   \   0000012C   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    775          }
+    776          
+    777          //---------------------------------------------------------------------------------------------------------------------
+    778          /**
+    779           * @brief This method exposes a timer in HMS format
+    780           * @param nv_timer
+    781           * @param time
+    782           * @return
+    783           */
+
+   \                                 In section .text, align 2, keep-with-next
+    784          PASS_FAIL_TYPE SystemTimers__NVGetTimerHMS(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer, SYSTEMTIMER_HMS_TYPE * time)
+    785          {
+   \                     SystemTimers__NVGetTimerHMS: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x000C             MOVS     R4,R1
+    786          	uint32 value;
+    787          	value = SystemTimers__NVGetTimerMs(nv_timer);
+   \   00000004   0x.... 0x....      BL       SystemTimers__NVGetTimerMs
+   \   00000008   0x0005             MOVS     R5,R0
+    788          	time->milliseconds = (uint16)(value % 1000);
+   \   0000000A   0x26FA             MOVS     R6,#+250
+   \   0000000C   0x00B6             LSLS     R6,R6,#+2        ;; #+1000
+   \   0000000E   0x0031             MOVS     R1,R6
+   \   00000010   0x.... 0x....      BL       __aeabi_uidivmod
+   \   00000014   0x7021             STRB     R1,[R4, #+0]
+   \   00000016   0x0A09             LSRS     R1,R1,#+8
+   \   00000018   0x7061             STRB     R1,[R4, #+1]
+    789          	value /= 1000;
+   \   0000001A   0x0028             MOVS     R0,R5
+   \   0000001C   0x0031             MOVS     R1,R6
+   \   0000001E   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000022   0x0005             MOVS     R5,R0
+    790          	time->seconds = (uint8)(value % 60);
+   \   00000024   0x263C             MOVS     R6,#+60
+   \   00000026   0x0031             MOVS     R1,R6
+   \   00000028   0x.... 0x....      BL       __aeabi_uidivmod
+   \   0000002C   0x7121             STRB     R1,[R4, #+4]
+    791          	value /= 60;
+   \   0000002E   0x0028             MOVS     R0,R5
+   \   00000030   0x0031             MOVS     R1,R6
+   \   00000032   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000036   0x0005             MOVS     R5,R0
+    792          	time->minutes = (uint8)(value % 60);
+   \   00000038   0x0031             MOVS     R1,R6
+   \   0000003A   0x.... 0x....      BL       __aeabi_uidivmod
+   \   0000003E   0x70E1             STRB     R1,[R4, #+3]
+    793          	value /= 60;
+    794          	time->hours = (uint8)value;
+   \   00000040   0x0028             MOVS     R0,R5
+   \   00000042   0x0031             MOVS     R1,R6
+   \   00000044   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000048   0x70A0             STRB     R0,[R4, #+2]
+    795          
+    796          	return (PASS);
+   \   0000004A   0x2001             MOVS     R0,#+1
+   \   0000004C   0xBD70             POP      {R4-R6,PC}       ;; return
+    797          }
+    798          
+    799          //=====================================================================================================================
+    800          //-------------------------------------- Private Functions ------------------------------------------------------------
+    801          //=====================================================================================================================
+    802          
+    803          //---------------------------------------------------------------------------------------------------------------------
+    804          /**
+    805           * @brief Local method to evaluate a NVTimer
+    806           * @param nv_timer
+    807           */
+
+   \                                 In section .text, align 2, keep-with-next
+    808          static void EvalTimer(SYSTEMTIMER_NV_TIMER_TYPE * nv_timer)
+    809          {
+   \                     EvalTimer: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    810          	nv_timer->last_handle_counter = Handle_Counter;
+   \   00000004   0x....             LDR      R5,??DataTable19
+   \   00000006   0x0021             MOVS     R1,R4
+   \   00000008   0x310C             ADDS     R1,R1,#+12
+   \   0000000A   0x6868             LDR      R0,[R5, #+4]
+   \   0000000C   0x.... 0x....      BL       __aeabi_uwrite4
+    811          	if (nv_timer->state == SYSTEMTIMERS_STATE_RUNNING)
+   \   00000010   0x7C20             LDRB     R0,[R4, #+16]
+   \   00000012   0x2801             CMP      R0,#+1
+   \   00000014   0xD134             BNE      ??EvalTimer_0
+    812          	{
+    813          		//  |--reference  --------  compare ---|
+    814          		//  |----------------------------------|
+    815          
+    816          		uint32 current;
+    817          		uint32 compare;
+    818          
+    819          		if (Handle_Counter >= nv_timer->reference)
+   \   00000016   0x0020             MOVS     R0,R4
+   \   00000018   0x.... 0x....      BL       __aeabi_uread4
+   \   0000001C   0x686D             LDR      R5,[R5, #+4]
+   \   0000001E   0x4285             CMP      R5,R0
+   \   00000020   0xD304             BCC      ??EvalTimer_1
+    820          		{
+    821          			current = Handle_Counter - nv_timer->reference;
+   \   00000022   0x0020             MOVS     R0,R4
+   \   00000024   0x.... 0x....      BL       __aeabi_uread4
+   \   00000028   0x1A2D             SUBS     R5,R5,R0
+   \   0000002A   0xE004             B        ??EvalTimer_2
+    822          		}
+    823          		else
+    824          		{
+    825          			current = Handle_Counter +(0xFFFFFFFF - nv_timer->reference);
+   \                     ??EvalTimer_1: (+1)
+   \   0000002C   0x0020             MOVS     R0,R4
+   \   0000002E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000032   0x1E6D             SUBS     R5,R5,#+1
+   \   00000034   0x1A2D             SUBS     R5,R5,R0
+    826          		}
+    827          
+    828          		if (nv_timer->compare >= nv_timer->reference)
+   \                     ??EvalTimer_2: (+1)
+   \   00000036   0x0020             MOVS     R0,R4
+   \   00000038   0x3008             ADDS     R0,R0,#+8
+   \   0000003A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000003E   0x0006             MOVS     R6,R0
+   \   00000040   0x0020             MOVS     R0,R4
+   \   00000042   0x.... 0x....      BL       __aeabi_uread4
+   \   00000046   0x4286             CMP      R6,R0
+   \   00000048   0xD309             BCC      ??EvalTimer_3
+    829          		{
+    830          			compare = nv_timer->compare - nv_timer->reference;
+   \   0000004A   0x0020             MOVS     R0,R4
+   \   0000004C   0x3008             ADDS     R0,R0,#+8
+   \   0000004E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000052   0x0006             MOVS     R6,R0
+   \   00000054   0x0020             MOVS     R0,R4
+   \   00000056   0x.... 0x....      BL       __aeabi_uread4
+   \   0000005A   0x1A30             SUBS     R0,R6,R0
+   \   0000005C   0xE009             B        ??EvalTimer_4
+    831          		}
+    832          		else
+    833          		{
+    834          			compare = nv_timer->compare + (0xFFFFFFFF - nv_timer->reference);
+   \                     ??EvalTimer_3: (+1)
+   \   0000005E   0x0020             MOVS     R0,R4
+   \   00000060   0x3008             ADDS     R0,R0,#+8
+   \   00000062   0x.... 0x....      BL       __aeabi_uread4
+   \   00000066   0x0006             MOVS     R6,R0
+   \   00000068   0x0020             MOVS     R0,R4
+   \   0000006A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000006E   0x1E76             SUBS     R6,R6,#+1
+   \   00000070   0x1A30             SUBS     R0,R6,R0
+    835          		}
+    836          
+    837          		if (compare <= current)
+   \                     ??EvalTimer_4: (+1)
+   \   00000072   0x4285             CMP      R5,R0
+   \   00000074   0xD30A             BCC      ??EvalTimer_5
+    838          		{
+    839          			nv_timer->state = SYSTEMTIMERS_STATE_DONE;
+   \   00000076   0x2002             MOVS     R0,#+2
+   \   00000078   0x7420             STRB     R0,[R4, #+16]
+    840          			nv_timer->n_state = SYSTEMTIMERS_STATE_N_DONE;
+   \   0000007A   0x20FD             MOVS     R0,#+253
+   \   0000007C   0x7460             STRB     R0,[R4, #+17]
+   \   0000007E   0xBD70             POP      {R4-R6,PC}
+    841          		}
+    842          
+    843          	}
+    844          	else if (nv_timer->state > SYSTEMTIMERS_STATE_INVALID)
+   \                     ??EvalTimer_0: (+1)
+   \   00000080   0x2805             CMP      R0,#+5
+   \   00000082   0xDB03             BLT      ??EvalTimer_5
+    845          	{
+    846          		nv_timer->state = SYSTEMTIMERS_STATE_INVALID;
+   \   00000084   0x2004             MOVS     R0,#+4
+   \   00000086   0x7420             STRB     R0,[R4, #+16]
+    847          		nv_timer->n_state = SYSTEMTIMERS_STATE_N_INVALID;
+   \   00000088   0x20FB             MOVS     R0,#+251
+   \   0000008A   0x7460             STRB     R0,[R4, #+17]
+    848          	}
+    849          }
+   \                     ??EvalTimer_5: (+1)
+   \   0000008C   0xBD70             POP      {R4-R6,PC}       ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9:
+   \   00000000   0x........         DC32     Handle_Reference
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_1:
+   \   00000000   0x........         DC32     All_Timers
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11:
+   \   00000000   0x........         DC32     All_Timers
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12:
+   \   00000000   0x0000FFFF         DC32     0xffff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable18:
+   \   00000000   0x........         DC32     Handle_Reference
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19:
+   \   00000000   0x........         DC32     Handle_Reference
+    850          
+    851          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   EvalTimer
+        16 __aeabi_uread4
+        16 __aeabi_uwrite4
+       4   SystemTimers__GetEvent
+       0   SystemTimers__GetFreeRunningCounter
+      16   SystemTimers__GetHMS
+        16   -> SystemTimers__GetMs
+        16 __aeabi_uidiv
+        16 __aeabi_uidivmod
+      16   SystemTimers__GetHandle
+        16   -> Log__AddMessage
+       0   SystemTimers__GetMs
+       4   SystemTimers__GetState
+       4   SystemTimers__Handler1ms
+      16   SystemTimers__Initialize
+        16   -> Micro__GetResetMode
+       8   SystemTimers__NVCheckTimer
+         8   -> EvalTimer
+      16   SystemTimers__NVGetTimerHMS
+        16   -> SystemTimers__NVGetTimerMs
+        16 __aeabi_uidiv
+        16 __aeabi_uidivmod
+      16   SystemTimers__NVGetTimerMs
+        16   -> EvalTimer
+        16 __aeabi_uread4
+      12   SystemTimers__NVPauseTimer
+        12 __aeabi_uwrite4
+       4   SystemTimers__NVResetTimer
+         4 __aeabi_uwrite4
+      16   SystemTimers__NVRestore
+        16 __aeabi_uread4
+        16 __aeabi_uwrite4
+      16   SystemTimers__NVResumeTimer
+        16 __aeabi_uread4
+        16 __aeabi_uwrite4
+      20   SystemTimers__NVSetTimerHMS
+        20 __aeabi_uwrite4
+      20   SystemTimers__NVSetTimerMS
+        20 __aeabi_uwrite4
+       4   SystemTimers__Pause
+       4   SystemTimers__ReleaseHandle
+       4   SystemTimers__Reset
+       0   SystemTimers__Resume
+       8   SystemTimers__SetHMS
+         8   -> SystemTimers__SetMs
+      16   SystemTimers__SetMs
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable11
+       4  ??DataTable12
+       4  ??DataTable18
+       4  ??DataTable19
+       4  ??DataTable9
+       4  ??DataTable9_1
+     320  All_Timers
+     142  EvalTimer
+       8  Handle_Reference
+          Handle_Counter
+      50  SystemTimers__GetEvent
+       6  SystemTimers__GetFreeRunningCounter
+      78  SystemTimers__GetHMS
+      92  SystemTimers__GetHandle
+      92  SystemTimers__GetMs
+      44  SystemTimers__GetState
+      76  SystemTimers__Handler1ms
+      48  SystemTimers__Initialize
+      12  SystemTimers__NVCheckTimer
+      78  SystemTimers__NVGetTimerHMS
+     302  SystemTimers__NVGetTimerMs
+      46  SystemTimers__NVPauseTimer
+      32  SystemTimers__NVResetTimer
+     180  SystemTimers__NVRestore
+      94  SystemTimers__NVResumeTimer
+      84  SystemTimers__NVSetTimerHMS
+      58  SystemTimers__NVSetTimerMS
+      76  SystemTimers__Pause
+      54  SystemTimers__ReleaseHandle
+      52  SystemTimers__Reset
+      68  SystemTimers__Resume
+      48  SystemTimers__SetHMS
+      84  SystemTimers__SetMs
+
+ 
+   328 bytes in section .bss
+ 1 920 bytes in section .text
+ 
+ 1 920 bytes of CODE memory
+   328 bytes of DATA memory
+
+Errors: none
+Warnings: none

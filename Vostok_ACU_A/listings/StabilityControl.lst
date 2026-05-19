@@ -1,0 +1,2564 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:49
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Tasks/StabilityControl/StabilityControl.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\StabilityControl.lst
+#        -o obj\StabilityControl.obj
+#        source/Category/Application/acu/Tasks/StabilityControl/StabilityControl.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\StabilityControl.lst
+#    Object file  =  obj\StabilityControl.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Tasks\StabilityControl\StabilityControl.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Basic description of file contents
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8           *  @section    Applicable_Documents
+      9           *					List here all the applicable documents if needed. <tr>	
+     10           *
+     11           *  $Header: $
+     12           *
+     13           *  @copyright  Copyright 2017-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     14           */
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          //---------------------------------------------------------------------------------------------------------------------
+     17          
+     18          
+     19          //-------------------------------------- Include Files ----------------------------------------------------------------
+     20          #include "C_Extensions.h"
+     21          #include "StabilityControl.h"
+     22          
+     23          #include <limits.h>
+     24          
+     25          #include "AirlockMonitor.h"
+     26          #include "Fill.h"
+     27          #include "Fault.h"
+     28          #include "HeaterCalcificationDetectionMonitor.h"
+     29          #include "Interpreter.h"
+     30          #include "JumpIf.h" // CYCLE_PHASE_STATEMENT_TYPE
+     31          #include "Micro.h"
+     32          #include "NormalFill.h"
+     33          #include "NVData.h"
+     34          #include "PluggingMonitor.h"
+     35          #include "SettingFile.h"
+     36          #include "StabilityControlLoopMonitor.h"
+     37          #include "StatisticsDish.h"
+     38          #include "SubCycle.h"
+     39          #include "Variable.h"
+     40          #include "Vwi.h"
+     41          
+     42          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     43          #pragma location = "_appliance_segment"
+     44          //! Counters of the number of executions of the subcycles used as reactions
+
+   \                                 In section _appliance_segment, align 4
+     45          uint8 SC_Subcycle_Execution_Counters[SC_SUBC_EXEC_COUNTERS_NUM];
+   \                     SC_Subcycle_Execution_Counters:
+   \   00000000                      DS8 8
+   \   00000008                      DS8 8
+     46          
+     47          #pragma location = "_appliance_segment"
+     48          //! Bitmap to mark the triggered reactions
+     49          uint8 Stability_Control_Flags;
+   \                     Stability_Control_Flags:
+   \   00000010                      DS8 1
+   \   00000011                      DS8 1
+   \   00000012                      DS8 1
+   \   00000013                      DS8 1
+   \   00000014                      DS8 1
+   \   00000015                      DS8 1
+   \   00000016                      DS8 2
+   \   00000018                      DS8 4
+   \   0000001C                      DS8 4
+     50          
+     51          
+     52          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     53          //! The name of this module for use by the Log module.
+     54          #define MODULE_NAME MODULE_STABILITY_CONTROL
+     55          
+     56          //! A list of log message IDs that are generated by this module.
+     57          typedef enum MODULE_STABILITY_CONTROL_LOG_MESSAGE_ID_ENUM
+     58          {
+     59          	ERROR_LOADING_PARAMETERS       = 1,
+     60          } MODULE_STABILITY_CONTROL_LOG_MESSAGE_ID_TYPE;
+     61          
+     62          //! Time that instability condition must be detected continuously before reacting to Instability (macro to convert the setting file value to 100 ms units)
+     63          #define INSTABILITY_DETECTION_TIME_100MS 		(Common_Parameters_Ptr->Instability_Detection_Time_x2 * (uint16)5)
+     64          //! Time that no water condition must be detected continuously before reacting to No Water (macro to convert the setting file value to 100 ms units)
+     65          #define NO_WATER_DETECTION_TIME_100MS 			(Common_Parameters_Ptr->No_Water_Detection_Time_x2 * (uint16)5)
+     66          //! Time that no water condition must be detected to declare Very Low Water condition (macro to convert the setting file value to 100 ms units)
+     67          #define VERY_LOW_WATER_DETECTION_TIME_100MS 	(Common_Parameters_Ptr->Very_Low_Water_Detection_Time_x2 * (uint16)5)
+     68          //! If water is detected as present for this amount of time continuously, reset the timer monitoring for "Very Low Water" (macro to convert the setting file value to 100 ms units)
+     69          #define WATER_PRESENT_TIME_100MS 				(Common_Parameters_Ptr->Water_Present_Time_x2 * (uint16)5)
+     70          
+     71          //! Value used to indicate that there is no limit in the number of subcycle executions
+     72          #define INVALID_MAX_SUBCYCLE_CALLS			255
+     73          
+     74          //! Multiplier to get the actual speed from the setting file speed reduction minimum speed parameter
+     75          #define SETTING_FILE_SPEED_MULTIPLIER			25
+     76          
+     77          //! Setting file parameters structure for a single instance of the stability Control Task
+     78          typedef PACKED struct STABILITY_CONTROL_INSTANCE_PARAMS_STRUCT
+     79          {
+     80          	uint8 Reaction_To_Very_Low_Water		:4; //! The reaction to trigger if Very Low Water is detected
+     81          	uint8 Reaction_To_Instability			:4; //! The reaction to trigger if Instability is detected
+     82          
+     83          	uint8 Reaction_To_Air_Lock				:4; //! The reaction to trigger if Air Lock is detected
+     84          	uint8 Reaction_To_No_Water				:4; //! The reaction to trigger if No Water is detected
+     85          
+     86          	uint8 Reaction_After_Max_Phase_Repeats	:4; //! The reaction to trigger when one of the other events has caused the phase to repeat the maximum number of times
+     87          	uint8 Reaction_To_Plugged_Filter		:4; //! The reaction to trigger if Plugged Filter is detected
+     88          
+     89          	uint8 Phase_Where_To_Restart;			//! The phase of the current cycle where to jump if a Restart Phase reaction is triggered
+     90          	uint8 Phase_Where_To_Skip;				//! The phase of the current cycle where to jump if a Skip Phase reaction is triggered.
+     91          
+     92          	uint8 Loop_Detection_Secondary_Reaction	:4; //! The reaction to trigger when Loop Detection secondary reaction is requested
+     93          	uint8 Loop_Detection_Primary_Reaction	:4; //! The reaction to trigger when Loop Detection primary reaction is requested
+     94          
+     95          	uint8 Reaction_After_Max_Speed_Reduct	:4; //! The reaction to trigger when Loop Detection secondary reaction is requested
+     96          	uint8 Unused0							:4; //! Unused
+     97          
+     98          	uint8 Unused;							//! Just for alignment
+     99          } STABILITY_CONTROL_INSTANCE_PARAMS_TYPE;
+    100          
+    101          //! Setting file parameters structure for a speed reduction
+    102          typedef PACKED struct SPEED_REDUCTION_PARAMS_STRUCT
+    103          {
+    104          	uint8 Minimum_Speed; 				//! Minimum speed as result of speed reduction
+    105          	uint8 Fst_Reduction_Percentage; 	//! Percentage speed reduction the first time that Speed Reduction reaction is triggered
+    106          	uint8 Snd_Reduction_Percentage; 	//! Percentage speed reduction the second time that Speed Reduction reaction is triggered
+    107          	uint8 Unused;						//! Reserved for future expansions
+    108          } SPEED_REDUCTION_PARAMS_TYPE;
+    109          
+    110          //! Structure for the maximum number of subcycle calls
+    111          typedef struct STABILITY_CONTROL_MAX_SUBCYCLE_CALLS_STRUCT
+    112          {
+    113          	uint8 Add_Water;		//! Maximum number of SC Add Water Subcycle calls
+    114          	uint8 Motor_Restart;	//! Maximum number of SC Motor Restart calls
+    115          	uint8 Filter_Plugged;	//! Maximum number of SC Filter Plugged Subcycle calls
+    116          	uint8 Defoaming;		//! Maximum number of SC Defoaming Subcycle calls
+    117          	uint8 Filter_Plugged_2;	//! Maximum number of SC Filter Plugged #2 Subcycle calls
+    118          } STABILITY_CONTROL_MAX_SUBCYCLE_CALLS_TYPE;
+    119          
+    120          //! Instability events that can trigger a reaction by the Stability Control task
+    121          typedef enum INSTABILITY_EVENTS_ENUM
+    122          {
+    123          	SC_NO_INSTABILITY	= 0,
+    124          	SC_INSTABILITY,
+    125          	SC_VERY_LOW_WATER,
+    126          	SC_NO_WATER,
+    127          	SC_RIF_AIR_LOCK,
+    128          	SC_RIF_PLUGGED_FILTER,
+    129          	SC_SCL_PRIMARY_REACTION_REQ,
+    130          	SC_SCL_SECONDARY_REACTION_REQ
+    131          } INSTABILITY_EVENTS_TYPE;
+    132          
+    133          
+    134          #pragma location = "_appliance_segment"
+    135          //! Pointer to the setting file common parameters for the Stability Control task
+    136          static const STABILITY_CONTROL_COMMON_PARAMS_TYPE *Common_Parameters_Ptr;
+    137          
+    138          #pragma location = "_appliance_segment"
+    139          //! Setting file parameters for the maximum number of subcycle calls
+    140          static STABILITY_CONTROL_MAX_SUBCYCLE_CALLS_TYPE SC_Max_Subcycle_Calls;
+    141          
+    142          #pragma location = "_appliance_segment"
+    143          //! Pointer to the setting file parameters for the current instance of the Stability Control task
+    144          static const STABILITY_CONTROL_INSTANCE_PARAMS_TYPE *Instance_Parameters_Ptr;
+    145          
+    146          #pragma location = "_appliance_segment"
+    147          //! Reaction to be triggered if a Speed Reduction is requested more than twice.
+    148          static STABILITY_CONTROL_REACTIONS_TYPE Reaction_After_Max_Speed_Reduct;
+    149          
+    150          #pragma location = "_appliance_segment"
+    151          //! Maximum amount of water allowed in the tub
+    152          static uint16  Cliters_Max;
+    153          
+    154          #pragma location = "_appliance_segment"
+    155          //! Cycle running when the Stability Control task is activated
+    156          static uint8 Activation_Cycle;
+    157          
+    158          #pragma location = "_appliance_segment"
+    159          //! Speed reduction status
+    160          static SPEED_REDUCTION_STATUS_TYPE Speed_Reduction_Status;
+    161          
+    162          #pragma location = "_appliance_segment"
+    163          //! Status of the Stability Control task
+    164          static ACTIVE_TYPE Stability_Control_Status;
+    165          
+    166          //! The instability event currently detected by the Stability Control task
+
+   \                                 In section .bss, align 2
+    167          static INSTABILITY_EVENTS_TYPE Instability_Event;
+   \                     Instability_Event:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 1
+   \   00000002                      DS8 2
+   \   00000004                      DS8 2
+   \   00000006                      DS8 2
+   \   00000008                      DS8 2
+    168          //! Counter to debounce the INSTABILITY condition detection
+    169          static uint16 Instability_Counter;
+    170          //! Counter to debounce the NO WATER condition detection
+    171          static uint16 No_Water_Counter;
+    172          //! Counter to debounce the VERY LOW WATER condition detection
+    173          static uint16 Very_Low_Water_Counter;
+    174          //! Counter to reset the VERY LOW WATER condition detection
+    175          static uint16 Stable_Water_Counter;
+    176          //! Set to TRUE when the Stability Control algorithm is suspended (even if the task is still active)
+    177          static BOOL_TYPE Task_Suspended;
+    178          
+    179          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    180          static void ResetInstabilityEvent(void);
+    181          static void UpdateInstabilityEvent(void);
+    182          static void PartialReactionUpdate(STABILITY_CONTROL_REACTIONS_TYPE *current_reaction_ptr, sint32 liters_in_tub, sint32 phase_repetitions);
+    183          
+    184          
+    185          //=====================================================================================================================
+    186          //-------------------------------------- Public Functions -------------------------------------------------------------
+    187          //=====================================================================================================================
+    188          
+    189          //---------------------------------------------------------------------------------------------------------------------
+    190          /**
+    191           *  @brief      It Initializes the Stability Control Task module and its variables
+    192           *
+    193           */
+
+   \                                 In section .text, align 2, keep-with-next
+    194          ACTIVE_TYPE StabilityControl__Initialize(uint8 compartment, uint8 sf_index, uint8 displacement)
+    195          {
+   \                     StabilityControl__Initialize: (+1)
+   \   00000000   0xB5F4             PUSH     {R2,R4-R7,LR}
+   \   00000002   0xB084             SUB      SP,SP,#+16
+    196          	ACTIVE_TYPE ret_value;
+    197              SETTINGFILE_LOADER_TYPE loader;
+    198          	CYCLE_PHASE_STATEMENT_TYPE cps;
+    199          
+    200              ret_value = INACTIVE;
+   \   00000004   0x2500             MOVS     R5,#+0
+   \   00000006   0x002F             MOVS     R7,R5
+    201          
+    202              Common_Parameters_Ptr = NULL;
+   \   00000008   0x....             LDR      R4,??DataTable1
+   \   0000000A   0x61A5             STR      R5,[R4, #+24]
+    203          	Instance_Parameters_Ptr = NULL;
+   \   0000000C   0x61E5             STR      R5,[R4, #+28]
+    204          	Reaction_After_Max_Speed_Reduct = SC_REACTIONS_NUM;	// Default value for backward compatibility with old setting file
+   \   0000000E   0x200E             MOVS     R0,#+14
+   \   00000010   0x7460             STRB     R0,[R4, #+17]
+    205          	Cliters_Max = 0;
+   \   00000012   0x0028             MOVS     R0,R5
+   \   00000014   0x82E0             STRH     R0,[R4, #+22]
+    206          	memset(&SC_Max_Subcycle_Calls, INVALID_MAX_SUBCYCLE_CALLS, sizeof(SC_Max_Subcycle_Calls));
+   \   00000016   0x22FF             MOVS     R2,#+255
+   \   00000018   0x2105             MOVS     R1,#+5
+   \   0000001A   0x0020             MOVS     R0,R4
+   \   0000001C   0x3008             ADDS     R0,R0,#+8
+   \   0000001E   0x.... 0x....      BL       __aeabi_memset4
+    207          
+    208          	// Get Stability Control common parameters from setting file
+    209          	if (SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_STABILITY_CONTROL, &loader) == PASS)
+   \   00000022   0x466A             MOV      R2,SP
+   \   00000024   0x2106             MOVS     R1,#+6
+   \   00000026   0x2027             MOVS     R0,#+39
+   \   00000028   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   0000002C   0x2801             CMP      R0,#+1
+   \   0000002E   0xD160             BNE      ??StabilityControl__Initialize_0
+    210          	{
+    211          		Common_Parameters_Ptr = (const STABILITY_CONTROL_COMMON_PARAMS_TYPE *)(void *)loader.Data;
+   \   00000030   0x9800             LDR      R0,[SP, #+0]
+   \   00000032   0x61A0             STR      R0,[R4, #+24]
+    212          
+    213          		if (loader.Length >= (uint16)12)
+   \   00000034   0x466E             MOV      R6,SP
+   \   00000036   0x88B0             LDRH     R0,[R6, #+4]
+   \   00000038   0x280C             CMP      R0,#+12
+   \   0000003A   0xDB0C             BLT      ??StabilityControl__Initialize_1
+    214          		{
+    215          			SC_Max_Subcycle_Calls.Add_Water = Common_Parameters_Ptr->Max_Add_Water_Subcycle_Calls;
+   \   0000003C   0x69A1             LDR      R1,[R4, #+24]
+   \   0000003E   0x7A0A             LDRB     R2,[R1, #+8]
+   \   00000040   0x7222             STRB     R2,[R4, #+8]
+    216          			SC_Max_Subcycle_Calls.Motor_Restart = Common_Parameters_Ptr->Max_Motor_Restart_Subcycle_Calls;
+   \   00000042   0x7A4A             LDRB     R2,[R1, #+9]
+   \   00000044   0x7262             STRB     R2,[R4, #+9]
+    217          			SC_Max_Subcycle_Calls.Filter_Plugged = Common_Parameters_Ptr->Max_Filter_Plugged_Subcycle_Calls;
+   \   00000046   0x7A8A             LDRB     R2,[R1, #+10]
+   \   00000048   0x72A2             STRB     R2,[R4, #+10]
+    218          			if (loader.Length >= (uint16)16)
+   \   0000004A   0x2810             CMP      R0,#+16
+   \   0000004C   0xDB03             BLT      ??StabilityControl__Initialize_1
+    219          			{
+    220          				SC_Max_Subcycle_Calls.Defoaming = Common_Parameters_Ptr->Max_Defoaming_Subcycle_Calls;
+   \   0000004E   0x7B48             LDRB     R0,[R1, #+13]
+   \   00000050   0x72E0             STRB     R0,[R4, #+11]
+    221          				SC_Max_Subcycle_Calls.Filter_Plugged_2 = Common_Parameters_Ptr->Max_Filter_Plugged_2_Subcycle_Calls;
+   \   00000052   0x7B88             LDRB     R0,[R1, #+14]
+   \   00000054   0x7320             STRB     R0,[R4, #+12]
+    222          			}
+    223          			else
+    224          			{
+    225          				// Old setting files: the parameters are not present in setting file, the default value is kept
+    226          			}
+    227          		}
+    228          		else
+    229          		{
+    230          			// Old setting files: the parameters are not present in setting file, the default value is kept
+    231          		}
+    232          
+    233          		// Get the Fill parameters from setting file.
+    234          		if (SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_CLASS_A_FILL, &loader) == PASS)
+   \                     ??StabilityControl__Initialize_1: (+1)
+   \   00000056   0x466A             MOV      R2,SP
+   \   00000058   0x211A             MOVS     R1,#+26
+   \   0000005A   0x2027             MOVS     R0,#+39
+   \   0000005C   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000060   0x2801             CMP      R0,#+1
+   \   00000062   0xD105             BNE      ??StabilityControl__Initialize_2
+    235          		{
+    236          			// Class A Fill project
+    237          
+    238          			// Convert Liters_Max in cl
+    239          			Cliters_Max = (((CLASS_A_FILL_PARAMETER_TYPE *)(void *)loader.Data)->Liters_In_Tub_Max) * (uint16)5;
+   \   00000064   0x9800             LDR      R0,[SP, #+0]
+   \   00000066   0x7840             LDRB     R0,[R0, #+1]
+   \   00000068   0x0081             LSLS     R1,R0,#+2
+   \   0000006A   0x1808             ADDS     R0,R1,R0
+   \   0000006C   0x82E0             STRH     R0,[R4, #+22]
+   \   0000006E   0xE00D             B        ??StabilityControl__Initialize_3
+    240          		}
+    241          		else if (SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_FILL, &loader) == PASS)
+   \                     ??StabilityControl__Initialize_2: (+1)
+   \   00000070   0x466A             MOV      R2,SP
+   \   00000072   0x2101             MOVS     R1,#+1
+   \   00000074   0x2027             MOVS     R0,#+39
+   \   00000076   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   0000007A   0x2801             CMP      R0,#+1
+   \   0000007C   0xD105             BNE      ??StabilityControl__Initialize_4
+    242          		{
+    243          			// Non-Class A Fill project
+    244          
+    245          			// Convert Liters_Max in cl
+    246          			Cliters_Max = ((const FILL_PARAMETER_TYPE *)(void *)loader.Data)->Liters_Max * (uint16)5;
+   \   0000007E   0x9800             LDR      R0,[SP, #+0]
+   \   00000080   0x7840             LDRB     R0,[R0, #+1]
+   \   00000082   0x0081             LSLS     R1,R0,#+2
+   \   00000084   0x1808             ADDS     R0,R1,R0
+   \   00000086   0x82E0             STRH     R0,[R4, #+22]
+   \   00000088   0xE000             B        ??StabilityControl__Initialize_3
+    247          		}
+    248          		else
+    249          		{
+    250          			// Fill data not present in setting file;
+    251          			loader.Data = NULL;
+   \                     ??StabilityControl__Initialize_4: (+1)
+   \   0000008A   0x9500             STR      R5,[SP, #+0]
+    252          		}
+    253          
+    254          		if (loader.Data != NULL)
+   \                     ??StabilityControl__Initialize_3: (+1)
+   \   0000008C   0x9800             LDR      R0,[SP, #+0]
+   \   0000008E   0x2800             CMP      R0,#+0
+   \   00000090   0xD028             BEQ      ??StabilityControl__Initialize_5
+    255          		{
+    256          			// Get Stability Control instance specific parameters from setting file
+    257          			if (SettingFile__BasicLoader(SF_PTR_ACU_STABILITY_CONTROL_DATA, displacement, &loader) == PASS)
+   \   00000092   0x466A             MOV      R2,SP
+   \   00000094   0x4668             MOV      R0,SP
+   \   00000096   0x7C01             LDRB     R1,[R0, #+16]
+   \   00000098   0x2029             MOVS     R0,#+41
+   \   0000009A   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   0000009E   0x2801             CMP      R0,#+1
+   \   000000A0   0xD119             BNE      ??StabilityControl__Initialize_6
+    258          			{
+    259          				Instance_Parameters_Ptr = (const STABILITY_CONTROL_INSTANCE_PARAMS_TYPE *)(void *)loader.Data;
+   \   000000A2   0x9800             LDR      R0,[SP, #+0]
+   \   000000A4   0x61E0             STR      R0,[R4, #+28]
+    260          				if (loader.Length >= (uint16)8)
+   \   000000A6   0x88B0             LDRH     R0,[R6, #+4]
+   \   000000A8   0x2808             CMP      R0,#+8
+   \   000000AA   0xDB04             BLT      ??StabilityControl__Initialize_7
+    261          				{
+    262          					Reaction_After_Max_Speed_Reduct = (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Reaction_After_Max_Speed_Reduct;
+   \   000000AC   0x69E0             LDR      R0,[R4, #+28]
+   \   000000AE   0x7980             LDRB     R0,[R0, #+6]
+   \   000000B0   0x0700             LSLS     R0,R0,#+28
+   \   000000B2   0x0F00             LSRS     R0,R0,#+28
+   \   000000B4   0x7460             STRB     R0,[R4, #+17]
+    263          				}
+    264          
+    265          				Stability_Control_Status = ACTIVE;
+   \                     ??StabilityControl__Initialize_7: (+1)
+   \   000000B6   0x2701             MOVS     R7,#+1
+   \   000000B8   0x0038             MOVS     R0,R7
+   \   000000BA   0x7520             STRB     R0,[R4, #+20]
+    266          				ret_value = ACTIVE;
+    267          
+    268          				// Enable and initialize Airlock and Plugging algorithms
+    269          				AirlockMonitor__Reset();
+   \   000000BC   0x.... 0x....      BL       AirlockMonitor__Reset
+    270          				AirlockMonitor__Start();
+   \   000000C0   0x.... 0x....      BL       AirlockMonitor__Start
+    271          
+    272          				PluggingMonitor__Start();
+   \   000000C4   0x.... 0x....      BL       PluggingMonitor__Start
+    273          				PluggingMonitor__Reset();
+   \   000000C8   0x.... 0x....      BL       PluggingMonitor__Reset
+    274          
+    275          				HeaterCalcificationDetectionMonitor__Reset();
+   \   000000CC   0x.... 0x....      BL       HeaterCalcificationDetectionMonitor__Reset
+    276          				HeaterCalcificationDetectionMonitor__Start();
+   \   000000D0   0x.... 0x....      BL       HeaterCalcificationDetectionMonitor__Start
+   \   000000D4   0xE013             B        ??StabilityControl__Initialize_8
+    277          			}
+    278          			else
+    279          			{
+    280          				LOG_ADD_EXCEPTION(ERROR_LOADING_PARAMETERS, (uint16)SF_PTR_ACU_STABILITY_CONTROL_DATA);
+   \                     ??StabilityControl__Initialize_6: (+1)
+   \   000000D6   0x2329             MOVS     R3,#+41
+   \   000000D8   0x2201             MOVS     R2,#+1
+   \   000000DA   0x4611             MOV      R1,R2
+   \   000000DC   0x2055             MOVS     R0,#+85
+   \   000000DE   0x.... 0x....      BL       Log__AddMessage
+   \   000000E2   0xE00C             B        ??StabilityControl__Initialize_8
+    281          			}
+    282          		}
+    283          		else
+    284          		{
+    285          			LOG_ADD_EXCEPTION(ERROR_LOADING_PARAMETERS, (uint16)DISPL_FILL);
+   \                     ??StabilityControl__Initialize_5: (+1)
+   \   000000E4   0x2301             MOVS     R3,#+1
+   \   000000E6   0x461A             MOV      R2,R3
+   \   000000E8   0x4611             MOV      R1,R2
+   \   000000EA   0x2055             MOVS     R0,#+85
+   \   000000EC   0x.... 0x....      BL       Log__AddMessage
+   \   000000F0   0xE005             B        ??StabilityControl__Initialize_8
+    286          		}
+    287          
+    288          	}
+    289          	else
+    290          	{
+    291          		LOG_ADD_EXCEPTION(ERROR_LOADING_PARAMETERS, (uint16)DISPL_STABILITY_CONTROL);
+   \                     ??StabilityControl__Initialize_0: (+1)
+   \   000000F2   0x2306             MOVS     R3,#+6
+   \   000000F4   0x2201             MOVS     R2,#+1
+   \   000000F6   0x4611             MOV      R1,R2
+   \   000000F8   0x2055             MOVS     R0,#+85
+   \   000000FA   0x.... 0x....      BL       Log__AddMessage
+    292          	}
+    293          
+    294          	Fault__ConditionRemoved(FAULT_ID_VERY_LOW_WATER_OR_SUDS);
+   \                     ??StabilityControl__Initialize_8: (+1)
+   \   000000FE   0x2006             MOVS     R0,#+6
+   \   00000100   0x.... 0x....      BL       Fault__ConditionRemoved
+    295          
+    296          	ResetInstabilityEvent();
+   \   00000104   0x.... 0x....      BL       ResetInstabilityEvent
+    297          
+    298          	cps = Interpreter__GetCurrentStatement(COMPARTMENT_DEFAULT);
+   \   00000108   0x4628             MOV      R0,R5
+   \   0000010A   0x.... 0x....      BL       Interpreter__GetCurrentStatement
+   \   0000010E   0x9002             STR      R0,[SP, #+8]
+    299          	Activation_Cycle = cps.Cycle;
+   \   00000110   0x4668             MOV      R0,SP
+   \   00000112   0x7A00             LDRB     R0,[R0, #+8]
+   \   00000114   0x74A0             STRB     R0,[R4, #+18]
+    300          
+    301          	Task_Suspended = FALSE;
+   \   00000116   0x....             LDR      R0,??DataTable5
+   \   00000118   0x7045             STRB     R5,[R0, #+1]
+    302          
+    303          	return (ret_value);
+   \   0000011A   0x0038             MOVS     R0,R7
+   \   0000011C   0xB005             ADD      SP,SP,#+20
+   \   0000011E   0xBDF0             POP      {R4-R7,PC}       ;; return
+    304          }
+    305          
+    306          /**
+    307           * @brief The function is called at the initialize of the task after NVdata restore
+    308           *        It Initializes the Stability Control module and its variables
+    309           *
+    310           * @param compartment that run the task (unused)
+    311           *
+    312           * @return  None
+    313           */
+
+   \                                 In section .text, align 2, keep-with-next
+    314          void StabilityControl__NVDataRestore(uint8 compartment)
+    315          {
+   \                     StabilityControl__NVDataRestore: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    316          	ResetInstabilityEvent();
+   \   00000002   0x.... 0x....      BL       ResetInstabilityEvent
+    317          	Task_Suspended = FALSE;
+   \   00000006   0x2000             MOVS     R0,#+0
+   \   00000008   0x....             LDR      R1,??DataTable5
+   \   0000000A   0x7048             STRB     R0,[R1, #+1]
+    318          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+    319          
+    320          /**
+    321           * The function called during the execution of the task
+    322           * @param compartment that run the task (inside)
+    323           * @return the status of the task (ACTIVE or INACTIVE)
+    324           */
+
+   \                                 In section .text, align 4, keep-with-next
+    325          ACTIVE_TYPE StabilityControl__Task(uint8 compartment)
+    326          {
+   \                     StabilityControl__Task: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+    327          	CYCLE_PHASE_STATEMENT_TYPE cps;
+    328          
+    329          	cps = Interpreter__GetCurrentStatement(COMPARTMENT_DEFAULT);
+   \   00000004   0x2000             MOVS     R0,#+0
+   \   00000006   0x.... 0x....      BL       Interpreter__GetCurrentStatement
+   \   0000000A   0x9001             STR      R0,[SP, #+4]
+    330          
+    331          	if ((cps.Cycle != Activation_Cycle) || ((uint8)Fault__IsObserverActive(FAULT_ID_VERY_LOW_WATER_OR_SUDS) == (uint8)TRUE))
+   \   0000000C   0x....             LDR      R4,??DataTable5_1
+   \   0000000E   0x4668             MOV      R0,SP
+   \   00000010   0x7900             LDRB     R0,[R0, #+4]
+   \   00000012   0x7CA1             LDRB     R1,[R4, #+18]
+   \   00000014   0x4288             CMP      R0,R1
+   \   00000016   0xD104             BNE      ??StabilityControl__Task_2
+   \   00000018   0x2006             MOVS     R0,#+6
+   \   0000001A   0x.... 0x....      BL       Fault__IsObserverActive
+   \   0000001E   0x2801             CMP      R0,#+1
+   \   00000020   0xD108             BNE      ??StabilityControl__Task_3
+    332          	{
+    333          		// PAUSE or Subcycle running (including reaction subcycle: Add water, Motor Restart, Filter Plugged), or
+    334          		// Fault Observer active with specific FAULT_ID_VERY_LOW_WATER_OR_SUDS fault ID: the task keeps running
+    335          		// but doesn't update inputs nor trigger any reaction.
+    336          
+    337          		if (Task_Suspended == FALSE)
+   \                     ??StabilityControl__Task_2: (+1)
+   \   00000022   0x....             LDR      R5,??DataTable5
+   \   00000024   0x7868             LDRB     R0,[R5, #+1]
+   \   00000026   0x2800             CMP      R0,#+0
+   \   00000028   0xD101             BNE      ??StabilityControl__Task_4
+    338          		{
+    339          			PluggingMonitor__Pause();
+   \   0000002A   0x.... 0x....      BL       PluggingMonitor__Pause
+    340          		}
+    341          
+    342          		Task_Suspended = TRUE;
+   \                     ??StabilityControl__Task_4: (+1)
+   \   0000002E   0x2001             MOVS     R0,#+1
+   \   00000030   0x7068             STRB     R0,[R5, #+1]
+   \   00000032   0xE112             B        ??StabilityControl__Task_5
+    343          	}
+    344          	else
+    345          	{
+    346          		STABILITY_CONTROL_REACTIONS_TYPE selected_reaction;
+    347          
+    348          		if ((uint8)Task_Suspended == (uint8)TRUE)
+   \                     ??StabilityControl__Task_3: (+1)
+   \   00000034   0x....             LDR      R5,??DataTable5
+   \   00000036   0x7868             LDRB     R0,[R5, #+1]
+   \   00000038   0x2801             CMP      R0,#+1
+   \   0000003A   0xD10D             BNE      ??StabilityControl__Task_6
+    349          		{
+    350          			AirlockMonitor__Reset();
+   \   0000003C   0x.... 0x....      BL       AirlockMonitor__Reset
+    351          
+    352          			if (Instability_Event == SC_RIF_PLUGGED_FILTER)
+   \   00000040   0x7828             LDRB     R0,[R5, #+0]
+   \   00000042   0x2805             CMP      R0,#+5
+   \   00000044   0xD102             BNE      ??StabilityControl__Task_7
+    353          			{
+    354          				// The suspension of the Stability Control was caused by a reaction to a  Plugging Event
+    355          				PluggingMonitor__Reset();
+   \   00000046   0x.... 0x....      BL       PluggingMonitor__Reset
+   \   0000004A   0xE001             B        ??StabilityControl__Task_8
+    356          			}
+    357          			else
+    358          			{
+    359          				// The suspension of the Stability Control wasn't caused by a reaction to a  Plugging Event
+    360          				PluggingMonitor__Resume();
+   \                     ??StabilityControl__Task_7: (+1)
+   \   0000004C   0x.... 0x....      BL       PluggingMonitor__Resume
+    361          			}
+    362          
+    363          			// Inputs reset when coming from suspended state
+    364          			ResetInstabilityEvent();
+   \                     ??StabilityControl__Task_8: (+1)
+   \   00000050   0x.... 0x....      BL       ResetInstabilityEvent
+    365          
+    366          			Task_Suspended = FALSE;
+   \   00000054   0x2000             MOVS     R0,#+0
+   \   00000056   0x7068             STRB     R0,[R5, #+1]
+    367          		}
+    368          
+    369          		UpdateInstabilityEvent();
+   \                     ??StabilityControl__Task_6: (+1)
+   \   00000058   0x.... 0x....      BL       UpdateInstabilityEvent
+    370          
+    371          		// Get requested reaction from setting file table depending on Instability_Event
+    372          		switch (Instability_Event)
+   \   0000005C   0x7828             LDRB     R0,[R5, #+0]
+   \   0000005E   0x1E40             SUBS     R0,R0,#+1
+   \   00000060   0x2806             CMP      R0,#+6
+   \   00000062   0xD834             BHI      ??StabilityControl__Task_9
+   \   00000064   0xA101             ADR      R1,??StabilityControl__Task_0
+   \   00000066   0x5C09             LDRB     R1,[R1, R0]
+   \   00000068   0x448F             ADD      PC,PC,R1
+   \   0000006A   0xBF00             Nop      
+   \                     ??StabilityControl__Task_0:
+   \   0000006C   0x08 0x14          DC8      0x8,0x14,0x22,0x2E
+   \              0x22 0x2E    
+   \   00000070   0x3C 0x48          DC8      0x3C,0x48,0x54,0x0
+   \              0x54 0x00    
+    373          		{
+    374          			case SC_INSTABILITY:
+    375          				selected_reaction = (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Reaction_To_Instability;
+   \                     ??StabilityControl__Task_10: (+1)
+   \   00000074   0x69E0             LDR      R0,[R4, #+28]
+   \   00000076   0x7800             LDRB     R0,[R0, #+0]
+   \   00000078   0x0900             LSRS     R0,R0,#+4
+   \   0000007A   0x4669             MOV      R1,SP
+   \   0000007C   0x7008             STRB     R0,[R1, #+0]
+    376          				break;
+   \   0000007E   0xE029             B        ??StabilityControl__Task_11
+    377          
+    378          			case SC_VERY_LOW_WATER:
+    379          				selected_reaction = (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Reaction_To_Very_Low_Water;
+   \                     ??StabilityControl__Task_12: (+1)
+   \   00000080   0x69E0             LDR      R0,[R4, #+28]
+   \   00000082   0x7800             LDRB     R0,[R0, #+0]
+   \   00000084   0x0700             LSLS     R0,R0,#+28
+   \   00000086   0x0F00             LSRS     R0,R0,#+28
+   \   00000088   0x4669             MOV      R1,SP
+   \   0000008A   0x7008             STRB     R0,[R1, #+0]
+    380          				break;
+   \   0000008C   0xE022             B        ??StabilityControl__Task_11
+    381          
+    382          			case SC_NO_WATER:
+    383          				selected_reaction = (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Reaction_To_No_Water;
+   \                     ??StabilityControl__Task_13: (+1)
+   \   0000008E   0x69E0             LDR      R0,[R4, #+28]
+   \   00000090   0x7840             LDRB     R0,[R0, #+1]
+   \   00000092   0x0900             LSRS     R0,R0,#+4
+   \   00000094   0x4669             MOV      R1,SP
+   \   00000096   0x7008             STRB     R0,[R1, #+0]
+    384          				break;
+   \   00000098   0xE01C             B        ??StabilityControl__Task_11
+    385          
+    386          			case SC_RIF_AIR_LOCK:
+    387          				selected_reaction = (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Reaction_To_Air_Lock;
+   \                     ??StabilityControl__Task_14: (+1)
+   \   0000009A   0x69E0             LDR      R0,[R4, #+28]
+   \   0000009C   0x7840             LDRB     R0,[R0, #+1]
+   \   0000009E   0x0700             LSLS     R0,R0,#+28
+   \   000000A0   0x0F00             LSRS     R0,R0,#+28
+   \   000000A2   0x4669             MOV      R1,SP
+   \   000000A4   0x7008             STRB     R0,[R1, #+0]
+    388          				break;
+   \   000000A6   0xE015             B        ??StabilityControl__Task_11
+    389          
+    390          			case SC_RIF_PLUGGED_FILTER:
+    391          				selected_reaction = (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Reaction_To_Plugged_Filter;
+   \                     ??StabilityControl__Task_15: (+1)
+   \   000000A8   0x69E0             LDR      R0,[R4, #+28]
+   \   000000AA   0x7880             LDRB     R0,[R0, #+2]
+   \   000000AC   0x0900             LSRS     R0,R0,#+4
+   \   000000AE   0x4669             MOV      R1,SP
+   \   000000B0   0x7008             STRB     R0,[R1, #+0]
+    392          				break;
+   \   000000B2   0xE00F             B        ??StabilityControl__Task_11
+    393          
+    394          			case SC_SCL_PRIMARY_REACTION_REQ:
+    395          				selected_reaction = (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Loop_Detection_Primary_Reaction;
+   \                     ??StabilityControl__Task_16: (+1)
+   \   000000B4   0x69E0             LDR      R0,[R4, #+28]
+   \   000000B6   0x7940             LDRB     R0,[R0, #+5]
+   \   000000B8   0x0900             LSRS     R0,R0,#+4
+   \   000000BA   0x4669             MOV      R1,SP
+   \   000000BC   0x7008             STRB     R0,[R1, #+0]
+    396          				break;
+   \   000000BE   0xE009             B        ??StabilityControl__Task_11
+    397          
+    398          			case SC_SCL_SECONDARY_REACTION_REQ:
+    399          				selected_reaction = (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Loop_Detection_Secondary_Reaction;
+   \                     ??StabilityControl__Task_17: (+1)
+   \   000000C0   0x69E0             LDR      R0,[R4, #+28]
+   \   000000C2   0x7940             LDRB     R0,[R0, #+5]
+   \   000000C4   0x0700             LSLS     R0,R0,#+28
+   \   000000C6   0x0F00             LSRS     R0,R0,#+28
+   \   000000C8   0x4669             MOV      R1,SP
+   \   000000CA   0x7008             STRB     R0,[R1, #+0]
+    400          				break;
+   \   000000CC   0xE002             B        ??StabilityControl__Task_11
+    401          
+    402          			default:
+    403          				selected_reaction = SC_REACTION_NONE;
+   \                     ??StabilityControl__Task_9: (+1)
+   \   000000CE   0x2000             MOVS     R0,#+0
+   \   000000D0   0x4669             MOV      R1,SP
+   \   000000D2   0x7008             STRB     R0,[R1, #+0]
+    404          				break;
+    405          		}
+    406          
+    407          		if (selected_reaction != SC_REACTION_NONE)
+   \                     ??StabilityControl__Task_11: (+1)
+   \   000000D4   0x4668             MOV      R0,SP
+   \   000000D6   0x7800             LDRB     R0,[R0, #+0]
+   \   000000D8   0x2800             CMP      R0,#+0
+   \   000000DA   0xD002             BEQ      ??StabilityControl__Task_18
+    408          		{
+    409          			// Apply modifications to requested reaction, according to requirements
+    410          			StabilityControl__UpdateReaction(&selected_reaction);
+   \   000000DC   0x4668             MOV      R0,SP
+   \   000000DE   0x.... 0x....      BL       StabilityControl__UpdateReaction
+    411          		}
+    412          
+    413          		if (selected_reaction != SC_REACTION_NONE)
+   \                     ??StabilityControl__Task_18: (+1)
+   \   000000E2   0x4668             MOV      R0,SP
+   \   000000E4   0x7800             LDRB     R0,[R0, #+0]
+   \   000000E6   0x2800             CMP      R0,#+0
+   \   000000E8   0xD001             BEQ      ??StabilityControl__Task_19
+    414          		{
+    415          			// Reset Stability Control Loop counters if any reaction is triggered for any reason.
+    416          			StabilityControlLoopMonitor__ResetCounters();
+   \   000000EA   0x.... 0x....      BL       StabilityControlLoopMonitor__ResetCounters
+    417          		}
+    418          
+    419          		// Trigger requested reaction
+    420          		switch (selected_reaction)
+   \                     ??StabilityControl__Task_19: (+1)
+   \   000000EE   0x4668             MOV      R0,SP
+   \   000000F0   0x7800             LDRB     R0,[R0, #+0]
+   \   000000F2   0x1E40             SUBS     R0,R0,#+1
+   \   000000F4   0x280C             CMP      R0,#+12
+   \   000000F6   0xD900             BLS      .+4
+   \   000000F8   0xE0AF             B        ??StabilityControl__Task_5
+   \   000000FA   0xA102             ADR      R1,??StabilityControl__Task_1
+   \   000000FC   0x5C09             LDRB     R1,[R1, R0]
+   \   000000FE   0x0049             LSLS     R1,R1,#+1
+   \   00000100   0x448F             ADD      PC,PC,R1
+   \   00000102   0xBF00             Nop      
+   \                     ??StabilityControl__Task_1:
+   \   00000104   0x07 0x18          DC8      0x7,0x18,0x40,0x7
+   \              0x40 0x07    
+   \   00000108   0x07 0xAB          DC8      0x7,0xAB,0x55,0x60
+   \              0x55 0x60    
+   \   0000010C   0x6F 0x77          DC8      0x6F,0x77,0x7,0x92
+   \              0x07 0x92    
+   \   00000110   0x9D 0x00          DC8      0x9D,0x0
+    421          		{
+    422          			case SC_REACTION_ADD_WATER: case SC_REACTION_ADD_WATER_THEN_RESTART_PHASE: case SC_REACTION_ADD_WATER_THEN_SKIP_PHASE:
+    423          			case SC_REACTION_ADD_WATER_THEN_REDUCE_SPEED:
+    424          				if (SC_Subcycle_Execution_Counters[ADD_WATER_INDEX] < (uint8)__UNSIGNED_CHAR_MAX__)
+   \                     ??StabilityControl__Task_20: (+1)
+   \   00000112   0x7820             LDRB     R0,[R4, #+0]
+   \   00000114   0x28FF             CMP      R0,#+255
+   \   00000116   0xD001             BEQ      ??StabilityControl__Task_21
+    425          				{
+    426          					SC_Subcycle_Execution_Counters[ADD_WATER_INDEX] ++;
+   \   00000118   0x1C40             ADDS     R0,R0,#+1
+   \   0000011A   0x7020             STRB     R0,[R4, #+0]
+    427          				}
+    428          
+    429          				(void)SubCycle__RequestStart(COMPARTMENT_DEFAULT, Common_Parameters_Ptr->Add_Water_Subcycle_Priority);
+   \                     ??StabilityControl__Task_21: (+1)
+   \   0000011C   0x69A0             LDR      R0,[R4, #+24]
+   \   0000011E   0x7941             LDRB     R1,[R0, #+5]
+   \   00000120   0x2000             MOVS     R0,#+0
+   \   00000122   0x.... 0x....      BL       SubCycle__RequestStart
+    430          				// Note that in this case a subcycle is going to be executed, during this subcycle the Stability Control
+    431          				// will be "suspended", it means that it will not read any input nor trigger any reaction.
+    432          
+    433          				StatisticsDish__IncreaseWaterAddExecutions();
+   \   00000126   0x.... 0x....      BL       StatisticsDish__IncreaseWaterAddExecutions
+    434          				BIT_SET(Stability_Control_Flags, SC_WATER_ADDED);
+   \   0000012A   0x7C20             LDRB     R0,[R4, #+16]
+   \   0000012C   0x2101             MOVS     R1,#+1
+   \   0000012E   0x4301             ORRS     R1,R1,R0
+   \   00000130   0x7421             STRB     R1,[R4, #+16]
+    435          				break;
+   \   00000132   0xE092             B        ??StabilityControl__Task_5
+    436          
+    437          			case SC_REACTION_RESTART_PHASE:
+    438          				if (Interpreter__SetPhase(COMPARTMENT_DEFAULT, Instance_Parameters_Ptr->Phase_Where_To_Restart) == PHASE_STEP_RESULT_PASS)
+   \                     ??StabilityControl__Task_22: (+1)
+   \   00000134   0x69E0             LDR      R0,[R4, #+28]
+   \   00000136   0x78C1             LDRB     R1,[R0, #+3]
+   \   00000138   0x2000             MOVS     R0,#+0
+   \   0000013A   0x.... 0x....      BL       Interpreter__SetPhase
+   \   0000013E   0x2801             CMP      R0,#+1
+   \   00000140   0xD000             BEQ      .+4
+   \   00000142   0xE08A             B        ??StabilityControl__Task_5
+    439          				{
+    440          					sint32 phase_repetitions;
+    441          					if (Variable__GetValue(VARIABLE_PHASE_REPETITIONS, 0, &phase_repetitions) == FALSE)
+   \   00000144   0xAA01             ADD      R2,SP,#+4
+   \   00000146   0x2100             MOVS     R1,#+0
+   \   00000148   0x2034             MOVS     R0,#+52
+   \   0000014A   0x.... 0x....      BL       Variable__GetValue
+   \   0000014E   0x2800             CMP      R0,#+0
+   \   00000150   0xD101             BNE      ??StabilityControl__Task_23
+    442          					{
+    443          						phase_repetitions = 0;
+   \   00000152   0x2000             MOVS     R0,#+0
+   \   00000154   0x9001             STR      R0,[SP, #+4]
+    444          					}
+    445          
+    446          					if (phase_repetitions < UCHAR_MAX)
+   \                     ??StabilityControl__Task_23: (+1)
+   \   00000156   0x9801             LDR      R0,[SP, #+4]
+   \   00000158   0x28FF             CMP      R0,#+255
+   \   0000015A   0xDA05             BGE      ??StabilityControl__Task_24
+    447          					{
+    448          						(void)Variable__SetValue (VARIABLE_OPERATION_INCREMET, VARIABLE_PHASE_REPETITIONS, 0, 1);
+   \   0000015C   0x2301             MOVS     R3,#+1
+   \   0000015E   0x2200             MOVS     R2,#+0
+   \   00000160   0x2134             MOVS     R1,#+52
+   \   00000162   0x2003             MOVS     R0,#+3
+   \   00000164   0x.... 0x....      BL       Variable__SetValue
+    449          					}
+    450          
+    451          					if (Instability_Event != SC_RIF_AIR_LOCK)
+   \                     ??StabilityControl__Task_24: (+1)
+   \   00000168   0x7828             LDRB     R0,[R5, #+0]
+   \   0000016A   0x2804             CMP      R0,#+4
+   \   0000016C   0xD001             BEQ      ??StabilityControl__Task_25
+    452          					{
+    453          						AirlockMonitor__Reset();
+   \   0000016E   0x.... 0x....      BL       AirlockMonitor__Reset
+    454          					}
+    455          
+    456          					ResetInstabilityEvent();
+   \                     ??StabilityControl__Task_25: (+1)
+   \   00000172   0x.... 0x....      BL       ResetInstabilityEvent
+    457          
+    458          					StatisticsDish__IncreaseInterruptedPhasesNum();
+   \   00000176   0x.... 0x....      BL       StatisticsDish__IncreaseInterruptedPhasesNum
+    459          					BIT_SET(Stability_Control_Flags, SC_PHASE_RESTARTED);
+   \   0000017A   0x7C20             LDRB     R0,[R4, #+16]
+   \   0000017C   0x2102             MOVS     R1,#+2
+   \   0000017E   0x4301             ORRS     R1,R1,R0
+   \   00000180   0x7421             STRB     R1,[R4, #+16]
+   \   00000182   0xE06A             B        ??StabilityControl__Task_5
+    460          				}
+    461          				break;
+    462          
+    463          			case SC_REACTION_SKIP_PHASE:
+    464          				if (Interpreter__SetPhase(COMPARTMENT_DEFAULT, Instance_Parameters_Ptr->Phase_Where_To_Skip) == PHASE_STEP_RESULT_PASS)
+   \                     ??StabilityControl__Task_26: (+1)
+   \   00000184   0x69E0             LDR      R0,[R4, #+28]
+   \   00000186   0x7901             LDRB     R1,[R0, #+4]
+   \   00000188   0x2000             MOVS     R0,#+0
+   \   0000018A   0x.... 0x....      BL       Interpreter__SetPhase
+   \   0000018E   0x2801             CMP      R0,#+1
+   \   00000190   0xD163             BNE      ??StabilityControl__Task_5
+    465          				{
+    466          					if (Instability_Event != SC_RIF_AIR_LOCK)
+   \   00000192   0x7828             LDRB     R0,[R5, #+0]
+   \   00000194   0x2804             CMP      R0,#+4
+   \   00000196   0xD001             BEQ      ??StabilityControl__Task_27
+    467          					{
+    468          						AirlockMonitor__Reset();
+   \   00000198   0x.... 0x....      BL       AirlockMonitor__Reset
+    469          					}
+    470          
+    471          					ResetInstabilityEvent();
+   \                     ??StabilityControl__Task_27: (+1)
+   \   0000019C   0x.... 0x....      BL       ResetInstabilityEvent
+    472          
+    473          					StatisticsDish__IncreaseInterruptedPhasesNum();
+   \   000001A0   0x.... 0x....      BL       StatisticsDish__IncreaseInterruptedPhasesNum
+    474          					BIT_SET(Stability_Control_Flags, SC_PHASE_SKIPPED);
+   \   000001A4   0x7C20             LDRB     R0,[R4, #+16]
+   \   000001A6   0x2104             MOVS     R1,#+4
+   \   000001A8   0x4301             ORRS     R1,R1,R0
+   \   000001AA   0x7421             STRB     R1,[R4, #+16]
+   \   000001AC   0xE055             B        ??StabilityControl__Task_5
+    475          				}
+    476          				break;
+    477          
+    478          			case SC_REACTION_MOTOR_RESTART_SUBCYCLE:
+    479          				if (SC_Subcycle_Execution_Counters[MOTOR_RESTART_INDEX] < (uint8)__UNSIGNED_CHAR_MAX__)
+   \                     ??StabilityControl__Task_28: (+1)
+   \   000001AE   0x7860             LDRB     R0,[R4, #+1]
+   \   000001B0   0x28FF             CMP      R0,#+255
+   \   000001B2   0xD001             BEQ      ??StabilityControl__Task_29
+    480          				{
+    481          					SC_Subcycle_Execution_Counters[MOTOR_RESTART_INDEX] ++;
+   \   000001B4   0x1C40             ADDS     R0,R0,#+1
+   \   000001B6   0x7060             STRB     R0,[R4, #+1]
+    482          				}
+    483          
+    484          				(void)SubCycle__RequestStart(COMPARTMENT_DEFAULT, Common_Parameters_Ptr->Motor_Restart_Subcycle_Priority);
+   \                     ??StabilityControl__Task_29: (+1)
+   \   000001B8   0x69A0             LDR      R0,[R4, #+24]
+   \   000001BA   0x7981             LDRB     R1,[R0, #+6]
+   \   000001BC   0x2000             MOVS     R0,#+0
+   \   000001BE   0x.... 0x....      BL       SubCycle__RequestStart
+    485          				// Note that in this case a subcycle is going to be executed, during this subcycle the Stability Control
+    486          				// will be "suspended", it means that it will not read any input nor trigger any reaction.
+    487          				break;
+   \   000001C2   0xE04A             B        ??StabilityControl__Task_5
+    488          
+    489          			case SC_REACTION_FILTER_PLUGGED_SUBCYCLE:
+    490          				if (SC_Subcycle_Execution_Counters[FILTER_PLUGGED_INDEX] < (uint8)__UNSIGNED_CHAR_MAX__)
+   \                     ??StabilityControl__Task_30: (+1)
+   \   000001C4   0x78A0             LDRB     R0,[R4, #+2]
+   \   000001C6   0x28FF             CMP      R0,#+255
+   \   000001C8   0xD001             BEQ      ??StabilityControl__Task_31
+    491          				{
+    492          					SC_Subcycle_Execution_Counters[FILTER_PLUGGED_INDEX] ++;
+   \   000001CA   0x1C40             ADDS     R0,R0,#+1
+   \   000001CC   0x70A0             STRB     R0,[R4, #+2]
+    493          				}
+    494          
+    495          				(void)SubCycle__RequestStart(COMPARTMENT_DEFAULT, Common_Parameters_Ptr->Filter_Plugged_Subcycle_Priority);
+   \                     ??StabilityControl__Task_31: (+1)
+   \   000001CE   0x69A0             LDR      R0,[R4, #+24]
+   \   000001D0   0x79C1             LDRB     R1,[R0, #+7]
+   \   000001D2   0x2000             MOVS     R0,#+0
+   \   000001D4   0x.... 0x....      BL       SubCycle__RequestStart
+    496          				// Note that in this case a subcycle is going to be executed, during this subcycle the Stability Control
+    497          				// will be "suspended", it means that it will not read any input nor trigger any reaction.
+    498          
+    499          				BIT_SET(Stability_Control_Flags, SC_FILTER_CLEANED);
+   \   000001D8   0x7C20             LDRB     R0,[R4, #+16]
+   \   000001DA   0x2140             MOVS     R1,#+64
+   \   000001DC   0x4301             ORRS     R1,R1,R0
+   \   000001DE   0x7421             STRB     R1,[R4, #+16]
+    500          				break;
+   \   000001E0   0xE03B             B        ??StabilityControl__Task_5
+    501          
+    502          			case SC_REACTION_ERROR_DETECTED:
+    503          				Fault__ConditionDetected(FAULT_ID_VERY_LOW_WATER_OR_SUDS);
+   \                     ??StabilityControl__Task_32: (+1)
+   \   000001E2   0x2006             MOVS     R0,#+6
+   \   000001E4   0x.... 0x....      BL       Fault__ConditionDetected
+    504          
+    505          				BIT_SET(Stability_Control_Flags, SC_FAULT_DETECTED);
+   \   000001E8   0x7C20             LDRB     R0,[R4, #+16]
+   \   000001EA   0x2180             MOVS     R1,#+128
+   \   000001EC   0x4301             ORRS     R1,R1,R0
+   \   000001EE   0x7421             STRB     R1,[R4, #+16]
+    506          				break;
+   \   000001F0   0xE033             B        ??StabilityControl__Task_5
+    507          
+    508          			case SC_REACTION_REDUCE_MOTOR_SPEED:
+    509          				if (Speed_Reduction_Status == SC_NO_SPEED_REDUCTION)
+   \                     ??StabilityControl__Task_33: (+1)
+   \   000001F2   0x7CE0             LDRB     R0,[R4, #+19]
+   \   000001F4   0x0001             MOVS     R1,R0
+   \   000001F6   0xD10A             BNE      ??StabilityControl__Task_34
+    510          				{
+    511          					Speed_Reduction_Status = SC_1ST_SPEED_REDUCTION;
+   \   000001F8   0x2001             MOVS     R0,#+1
+   \   000001FA   0x74E0             STRB     R0,[R4, #+19]
+    512          					ResetInstabilityEvent();
+   \   000001FC   0x.... 0x....      BL       ResetInstabilityEvent
+    513          					StatisticsDish__IncreaseRPMReductions();
+   \   00000200   0x.... 0x....      BL       StatisticsDish__IncreaseRPMReductions
+    514          					BIT_SET(Stability_Control_Flags, SC_PUMP_RPM_REDUCED_ONCE);
+   \   00000204   0x7C20             LDRB     R0,[R4, #+16]
+   \   00000206   0x2108             MOVS     R1,#+8
+   \   00000208   0x4301             ORRS     R1,R1,R0
+   \   0000020A   0x7421             STRB     R1,[R4, #+16]
+   \   0000020C   0xE025             B        ??StabilityControl__Task_5
+    515          				}
+    516          				else if (Speed_Reduction_Status == SC_1ST_SPEED_REDUCTION)
+   \                     ??StabilityControl__Task_34: (+1)
+   \   0000020E   0x2801             CMP      R0,#+1
+   \   00000210   0xD123             BNE      ??StabilityControl__Task_5
+    517          				{
+    518          					Speed_Reduction_Status = SC_2ND_SPEED_REDUCTION;
+   \   00000212   0x2002             MOVS     R0,#+2
+   \   00000214   0x74E0             STRB     R0,[R4, #+19]
+    519          					ResetInstabilityEvent();
+   \   00000216   0x.... 0x....      BL       ResetInstabilityEvent
+    520          					StatisticsDish__IncreaseRPMReductions();
+   \   0000021A   0x.... 0x....      BL       StatisticsDish__IncreaseRPMReductions
+    521          					BIT_SET(Stability_Control_Flags, SC_PUMP_RPM_REDUCED_TWICE);
+   \   0000021E   0x7C20             LDRB     R0,[R4, #+16]
+   \   00000220   0x2110             MOVS     R1,#+16
+   \   00000222   0x4301             ORRS     R1,R1,R0
+   \   00000224   0x7421             STRB     R1,[R4, #+16]
+   \   00000226   0xE018             B        ??StabilityControl__Task_5
+    522          				}
+    523          				else
+    524          				{
+    525          					// Nothing to do
+    526          				}
+    527          
+    528          				break;
+    529          
+    530          			case SC_REACTION_DEFOAMING_SUBCYCLE:
+    531          				if (SC_Subcycle_Execution_Counters[DEFOAMING_INDEX] < (uint8)__UNSIGNED_CHAR_MAX__)
+   \                     ??StabilityControl__Task_35: (+1)
+   \   00000228   0x78E0             LDRB     R0,[R4, #+3]
+   \   0000022A   0x28FF             CMP      R0,#+255
+   \   0000022C   0xD001             BEQ      ??StabilityControl__Task_36
+    532          				{
+    533          					SC_Subcycle_Execution_Counters[DEFOAMING_INDEX] ++;
+   \   0000022E   0x1C40             ADDS     R0,R0,#+1
+   \   00000230   0x70E0             STRB     R0,[R4, #+3]
+    534          				}
+    535          
+    536          				(void)SubCycle__RequestStart(COMPARTMENT_DEFAULT, Common_Parameters_Ptr->Defoaming_Subcycle_Priority);
+   \                     ??StabilityControl__Task_36: (+1)
+   \   00000232   0x69A0             LDR      R0,[R4, #+24]
+   \   00000234   0x7AC1             LDRB     R1,[R0, #+11]
+   \   00000236   0x2000             MOVS     R0,#+0
+   \   00000238   0x.... 0x....      BL       SubCycle__RequestStart
+    537          				// Note that in this case a subcycle is going to be executed, during this subcycle the Stability Control
+    538          				// will be "suspended", it means that it will not read any input nor trigger any reaction.
+    539          				break;
+   \   0000023C   0xE00D             B        ??StabilityControl__Task_5
+    540          
+    541          			case SC_REACTION_FILTER_PLUGGED_2_SUBCYCLE:
+    542          				if (SC_Subcycle_Execution_Counters[FILTER_PLUGGED_2_INDEX] < (uint8)__UNSIGNED_CHAR_MAX__)
+   \                     ??StabilityControl__Task_37: (+1)
+   \   0000023E   0x7920             LDRB     R0,[R4, #+4]
+   \   00000240   0x28FF             CMP      R0,#+255
+   \   00000242   0xD001             BEQ      ??StabilityControl__Task_38
+    543          				{
+    544          					SC_Subcycle_Execution_Counters[FILTER_PLUGGED_2_INDEX] ++;
+   \   00000244   0x1C40             ADDS     R0,R0,#+1
+   \   00000246   0x7120             STRB     R0,[R4, #+4]
+    545          				}
+    546          
+    547          				(void)SubCycle__RequestStart(COMPARTMENT_DEFAULT, Common_Parameters_Ptr->Filter_Plugged_2_Subcycle_Priority);
+   \                     ??StabilityControl__Task_38: (+1)
+   \   00000248   0x69A0             LDR      R0,[R4, #+24]
+   \   0000024A   0x7B01             LDRB     R1,[R0, #+12]
+   \   0000024C   0x2000             MOVS     R0,#+0
+   \   0000024E   0x.... 0x....      BL       SubCycle__RequestStart
+    548          				// Note that in this case a subcycle is going to be executed, during this subcycle the Stability Control
+    549          				// will be "suspended", it means that it will not read any input nor trigger any reaction.
+    550          
+    551          				BIT_SET(Stability_Control_Flags, SC_FILTER_CLEANED);
+   \   00000252   0x7C20             LDRB     R0,[R4, #+16]
+   \   00000254   0x2140             MOVS     R1,#+64
+   \   00000256   0x4301             ORRS     R1,R1,R0
+   \   00000258   0x7421             STRB     R1,[R4, #+16]
+    552          				break;
+    553          
+    554          			default: // Includes SC_REACTION_NONE
+    555          				// Nothing to do
+    556          				break;
+    557          		}
+    558          
+    559          	}
+    560          
+    561              return(ACTIVE);
+   \                     ??StabilityControl__Task_5: (+1)
+   \   0000025A   0x2001             MOVS     R0,#+1
+   \   0000025C   0xBD3E             POP      {R1-R5,PC}       ;; return
+    562          }
+    563          
+    564          /**
+    565           * The function used when the task terminate.
+    566           * @param compartment the compartment that uses the task (unused)
+    567           *
+    568           * @return : None
+    569           */
+
+   \                                 In section .text, align 2, keep-with-next
+    570          void StabilityControl__Terminate(uint8 compartment)
+    571          {
+   \                     StabilityControl__Terminate: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    572          	Stability_Control_Status = INACTIVE;
+   \   00000002   0x2500             MOVS     R5,#+0
+   \   00000004   0x....             LDR      R4,??DataTable5_1
+   \   00000006   0x0028             MOVS     R0,R5
+   \   00000008   0x7520             STRB     R0,[R4, #+20]
+    573          	Fault__ConditionRemoved(FAULT_ID_VERY_LOW_WATER_OR_SUDS);
+   \   0000000A   0x2006             MOVS     R0,#+6
+   \   0000000C   0x.... 0x....      BL       Fault__ConditionRemoved
+    574          	ResetInstabilityEvent();
+   \   00000010   0x.... 0x....      BL       ResetInstabilityEvent
+    575          	Task_Suspended = FALSE;
+   \   00000014   0x0028             MOVS     R0,R5
+   \   00000016   0x....             LDR      R1,??DataTable5
+   \   00000018   0x7048             STRB     R0,[R1, #+1]
+    576          	Speed_Reduction_Status = SC_NO_SPEED_REDUCTION;
+   \   0000001A   0x74E5             STRB     R5,[R4, #+19]
+    577          
+    578          	// Disable Airlock, Plugging and Heater Calcification algorithms
+    579          	AirlockMonitor__Stop();
+   \   0000001C   0x.... 0x....      BL       AirlockMonitor__Stop
+    580          	PluggingMonitor__Stop();
+   \   00000020   0x.... 0x....      BL       PluggingMonitor__Stop
+    581          	HeaterCalcificationDetectionMonitor__Stop();
+   \   00000024   0x.... 0x....      BL       HeaterCalcificationDetectionMonitor__Stop
+    582          
+    583          	// Reset subcycle executions counters
+    584          	memset(&SC_Subcycle_Execution_Counters[0], 0, sizeof(SC_Subcycle_Execution_Counters));
+   \   00000028   0x462A             MOV      R2,R5
+   \   0000002A   0x2105             MOVS     R1,#+5
+   \   0000002C   0x0020             MOVS     R0,R4
+   \   0000002E   0x.... 0x....      BL       __aeabi_memset4
+    585          }
+   \   00000032   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    586          
+    587          
+    588          /**
+    589           * It is called after a reset. It initializes some Stability Control variables even when the task is not active.
+    590           *
+    591           * @return  None
+    592           */
+
+   \                                 In section .text, align 2, keep-with-next
+    593          void StabilityControl__VariablesInitialize(void)
+    594          {
+   \                     StabilityControl__VariablesInitialize: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    595          	if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+   \   00000002   0x.... 0x....      BL       Micro__GetResetMode
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD112             BNE      ??StabilityControl__VariablesInitialize_0
+    596          	{
+    597          		if (NVData__GetLastRestoreStatus()->Bit.Appliance_Data_Recovered != (NVDATA_RESTORE_TYPE)NVDATA_RESTORE_OKAY)
+   \   0000000A   0x.... 0x....      BL       NVData__GetLastRestoreStatus
+   \   0000000E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000010   0x0780             LSLS     R0,R0,#+30
+   \   00000012   0x0F80             LSRS     R0,R0,#+30
+   \   00000014   0x2801             CMP      R0,#+1
+   \   00000016   0xD00B             BEQ      ??StabilityControl__VariablesInitialize_0
+    598          		{
+    599          			Stability_Control_Status = INACTIVE;
+   \   00000018   0x....             LDR      R4,??DataTable5_1
+   \   0000001A   0x2500             MOVS     R5,#+0
+   \   0000001C   0x0028             MOVS     R0,R5
+   \   0000001E   0x7520             STRB     R0,[R4, #+20]
+    600          			memset(&SC_Subcycle_Execution_Counters[0], 0, sizeof(SC_Subcycle_Execution_Counters));
+   \   00000020   0x4602             MOV      R2,R0
+   \   00000022   0x2105             MOVS     R1,#+5
+   \   00000024   0x0020             MOVS     R0,R4
+   \   00000026   0x.... 0x....      BL       __aeabi_memset4
+    601          
+    602          			Speed_Reduction_Status = SC_NO_SPEED_REDUCTION;
+   \   0000002A   0x0028             MOVS     R0,R5
+   \   0000002C   0x74E0             STRB     R0,[R4, #+19]
+    603          
+    604          			Stability_Control_Flags = 0;
+   \   0000002E   0x7425             STRB     R5,[R4, #+16]
+    605          		}
+    606          	}
+    607          }
+   \                     ??StabilityControl__VariablesInitialize_0: (+1)
+   \   00000030   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    608          
+    609          
+    610          /**
+    611           * It returns the value of Speed_Reduction_Status.
+    612           *
+    613           * @return Speed_Reduction_Status (SC_NO_SPEED_REDUCTION/SC_1ST_SPEED_REDUCTION/SC_2ND_SPEED_REDUCTION)
+    614           */
+
+   \                                 In section .text, align 2, keep-with-next
+    615          SPEED_REDUCTION_STATUS_TYPE StabilityControl__GetSpeedReduction(void)
+    616          {
+    617          	return Speed_Reduction_Status;
+   \                     StabilityControl__GetSpeedReduction: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable5_1
+   \   00000002   0x7CC0             LDRB     R0,[R0, #+19]
+   \   00000004   0x4770             BX       LR               ;; return
+    618          }
+    619          
+    620          
+    621          /**
+    622           * It calculates the speed reduction, based on the current requested speed, on the diverter position and on the setting file speed
+    623           * reduction data table
+    624           *
+    625           * @param motor_speed 	pointer to the current requested speed
+    626           * @param diverter_position 	the diverter position to be considered to load the correct speed reduction data from setting file
+    627           *
+    628           * @return None
+    629           */
+
+   \                                 In section .text, align 2, keep-with-next
+    630          void StabilityControl__ReduceSpeed(uint16 *motor_speed, uint8 diverter_position)
+    631          {
+   \                     StabilityControl__ReduceSpeed: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+   \   00000004   0x0005             MOVS     R5,R0
+   \   00000006   0x000C             MOVS     R4,R1
+    632              SETTINGFILE_LOADER_TYPE loader;
+    633              uint8 num_items;
+    634              const SPEED_REDUCTION_PARAMS_TYPE *speed_reduction_params_ptr;
+    635              uint16 minimum_speed;
+    636          
+    637              if (SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_SPEED_REDUCTION, &loader) == PASS)
+   \   00000008   0x466A             MOV      R2,SP
+   \   0000000A   0x2111             MOVS     R1,#+17
+   \   0000000C   0x2027             MOVS     R0,#+39
+   \   0000000E   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000012   0x2801             CMP      R0,#+1
+   \   00000014   0xD12A             BNE      ??StabilityControl__ReduceSpeed_0
+    638              {
+    639          		num_items = (uint8)(loader.Length/sizeof(SPEED_REDUCTION_PARAMS_TYPE));
+    640          
+    641          		if (diverter_position < num_items)
+   \   00000016   0x0020             MOVS     R0,R4
+   \   00000018   0x4669             MOV      R1,SP
+   \   0000001A   0x8889             LDRH     R1,[R1, #+4]
+   \   0000001C   0x0889             LSRS     R1,R1,#+2
+   \   0000001E   0xB2C9             UXTB     R1,R1
+   \   00000020   0x4288             CMP      R0,R1
+   \   00000022   0xD223             BCS      ??StabilityControl__ReduceSpeed_0
+    642          		{
+    643          			speed_reduction_params_ptr = (const SPEED_REDUCTION_PARAMS_TYPE *)(void *)(loader.Data + (diverter_position * sizeof(SPEED_REDUCTION_PARAMS_TYPE)));
+   \   00000024   0x9800             LDR      R0,[SP, #+0]
+   \   00000026   0x00A1             LSLS     R1,R4,#+2
+   \   00000028   0x1841             ADDS     R1,R0,R1
+    644          
+    645          			minimum_speed = speed_reduction_params_ptr->Minimum_Speed * (uint16)SETTING_FILE_SPEED_MULTIPLIER;
+   \   0000002A   0x7808             LDRB     R0,[R1, #+0]
+   \   0000002C   0x2419             MOVS     R4,#+25
+   \   0000002E   0x4344             MULS     R4,R0,R4
+    646          
+    647          			if (*motor_speed >= minimum_speed)
+   \   00000030   0x8828             LDRH     R0,[R5, #+0]
+   \   00000032   0x0002             MOVS     R2,R0
+   \   00000034   0x0023             MOVS     R3,R4
+   \   00000036   0x429A             CMP      R2,R3
+   \   00000038   0xD318             BCC      ??StabilityControl__ReduceSpeed_0
+   \   0000003A   0x....             LDR      R2,??DataTable14
+   \   0000003C   0x7CD2             LDRB     R2,[R2, #+19]
+   \   0000003E   0x2A01             CMP      R2,#+1
+   \   00000040   0xD109             BNE      ??StabilityControl__ReduceSpeed_1
+    648          			{
+    649          				if (Speed_Reduction_Status == SC_1ST_SPEED_REDUCTION)
+    650          				{
+    651          					sint32 partial_result = (sint32)minimum_speed + ((((sint32)*motor_speed - (sint32)minimum_speed) * (sint32)speed_reduction_params_ptr->Fst_Reduction_Percentage)/100);
+    652          					*motor_speed = (uint16)partial_result;
+   \   00000042   0x0022             MOVS     R2,R4
+   \   00000044   0x1A80             SUBS     R0,R0,R2
+   \   00000046   0x7849             LDRB     R1,[R1, #+1]
+   \   00000048   0x4348             MULS     R0,R1,R0
+   \   0000004A   0x2164             MOVS     R1,#+100
+   \   0000004C   0x.... 0x....      BL       __aeabi_idiv
+   \   00000050   0x1820             ADDS     R0,R4,R0
+   \   00000052   0x8028             STRH     R0,[R5, #+0]
+   \   00000054   0xBD37             POP      {R0-R2,R4,R5,PC}
+    653          				}
+    654          				else if (Speed_Reduction_Status == SC_2ND_SPEED_REDUCTION)
+   \                     ??StabilityControl__ReduceSpeed_1: (+1)
+   \   00000056   0x2A02             CMP      R2,#+2
+   \   00000058   0xD108             BNE      ??StabilityControl__ReduceSpeed_0
+    655          				{
+    656          					sint32 partial_result = (sint32)minimum_speed + ((((sint32)*motor_speed - (sint32)minimum_speed) * (sint32)speed_reduction_params_ptr->Snd_Reduction_Percentage)/100);
+    657          					*motor_speed = (uint16)partial_result;
+   \   0000005A   0x0022             MOVS     R2,R4
+   \   0000005C   0x1A80             SUBS     R0,R0,R2
+   \   0000005E   0x7889             LDRB     R1,[R1, #+2]
+   \   00000060   0x4348             MULS     R0,R1,R0
+   \   00000062   0x2164             MOVS     R1,#+100
+   \   00000064   0x.... 0x....      BL       __aeabi_idiv
+   \   00000068   0x1820             ADDS     R0,R4,R0
+   \   0000006A   0x8028             STRH     R0,[R5, #+0]
+    658          				}
+    659          			}
+    660          			else
+    661          			{
+    662          				// Minimum speed is greater that the speed requested by setting file, do not apply any change.
+    663          			}
+    664          		}
+    665          		else
+    666          		{
+    667          			// Not enough items in the speed reduction table
+    668          		}
+    669          	}
+    670           	else
+    671           	{
+    672           		// Setting file data not present
+    673           	}
+    674          }
+   \                     ??StabilityControl__ReduceSpeed_0: (+1)
+   \   0000006C   0xBD37             POP      {R0-R2,R4,R5,PC}  ;; return
+    675          
+    676          
+    677          /**
+    678           * It returns the value of Speed_Reduction_Status.
+    679           *
+    680           * @return Stability_Control_Status (INACTIVE/ACTIVE)
+    681           */
+
+   \                                 In section .text, align 2, keep-with-next
+    682          ACTIVE_TYPE StabilityControl__GetStatus(void)
+    683          {
+    684          	return Stability_Control_Status;
+   \                     StabilityControl__GetStatus: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable14
+   \   00000002   0x7D00             LDRB     R0,[R0, #+20]
+   \   00000004   0x4770             BX       LR               ;; return
+    685          }
+    686          
+    687          
+    688          /**
+    689           * It returns the value of Loop_Detection_Primary_Reaction for the current instance of Stability Control task
+    690           *
+    691           * @return Instance_Parameters_Ptr->Loop_Detection_Primary_Reaction
+    692           */
+
+   \                                 In section .text, align 2, keep-with-next
+    693          STABILITY_CONTROL_REACTIONS_TYPE StabilityControl__GetLDPrimaryReaction(void)
+    694          {
+    695          	return (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Loop_Detection_Primary_Reaction;
+   \                     StabilityControl__GetLDPrimaryReaction: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable14
+   \   00000002   0x69C0             LDR      R0,[R0, #+28]
+   \   00000004   0x7940             LDRB     R0,[R0, #+5]
+   \   00000006   0x0900             LSRS     R0,R0,#+4
+   \   00000008   0x4770             BX       LR               ;; return
+    696          }
+    697          
+    698          
+    699          /**
+    700           * It returns the value of Loop_Detection_Secondary_Reaction for the current instance of Stability Control task
+    701           *
+    702           * @return Instance_Parameters_Ptr->Loop_Detection_Secondary_Reaction
+    703           */
+
+   \                                 In section .text, align 2, keep-with-next
+    704          STABILITY_CONTROL_REACTIONS_TYPE StabilityControl__GetLDSecondaryReaction(void)
+    705          {
+    706          	return (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Loop_Detection_Secondary_Reaction;
+   \                     StabilityControl__GetLDSecondaryReaction: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable14
+   \   00000002   0x69C0             LDR      R0,[R0, #+28]
+   \   00000004   0x7940             LDRB     R0,[R0, #+5]
+   \   00000006   0x0700             LSLS     R0,R0,#+28
+   \   00000008   0x0F00             LSRS     R0,R0,#+28
+   \   0000000A   0x4770             BX       LR               ;; return
+    707          }
+    708          
+    709          
+    710          /**
+    711           * It updates the value of the reaction that will be triggered by the Stability Control task, resulting from the requested reaction
+    712           * and from the cross checks on the max amount of water that can be added, on the max number of speed reductions, on the max number
+    713           * of phase repetitions. The resulting reaction may be different from the originally requested one.
+    714           *
+    715           * @param  reaction_ptr: pointer to the reaction
+    716           *
+    717           * @return none
+    718           */
+
+   \                                 In section .text, align 2, keep-with-next
+    719          void StabilityControl__UpdateReaction(STABILITY_CONTROL_REACTIONS_TYPE *reaction_ptr)
+    720          {
+   \                     StabilityControl__UpdateReaction: (+1)
+   \   00000000   0xB51C             PUSH     {R2-R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    721          	sint32 liters_in_tub;
+    722          	sint32 phase_repetitions;
+    723          
+    724          	if (Variable__GetValue(VARIABLE_LITERS_IN_TUB, 0, &liters_in_tub) == FALSE)
+   \   00000004   0xAA01             ADD      R2,SP,#+4
+   \   00000006   0x2100             MOVS     R1,#+0
+   \   00000008   0x2017             MOVS     R0,#+23
+   \   0000000A   0x.... 0x....      BL       Variable__GetValue
+   \   0000000E   0x2800             CMP      R0,#+0
+   \   00000010   0xD101             BNE      ??StabilityControl__UpdateReaction_0
+    725          	{
+    726          		liters_in_tub = 0;
+   \   00000012   0x2000             MOVS     R0,#+0
+   \   00000014   0x9001             STR      R0,[SP, #+4]
+    727          	}
+    728          
+    729          	if (Variable__GetValue(VARIABLE_PHASE_REPETITIONS, 0, &phase_repetitions) == FALSE)
+   \                     ??StabilityControl__UpdateReaction_0: (+1)
+   \   00000016   0x466A             MOV      R2,SP
+   \   00000018   0x2100             MOVS     R1,#+0
+   \   0000001A   0x2034             MOVS     R0,#+52
+   \   0000001C   0x.... 0x....      BL       Variable__GetValue
+   \   00000020   0x2800             CMP      R0,#+0
+   \   00000022   0xD101             BNE      ??StabilityControl__UpdateReaction_1
+    730          	{
+    731          		phase_repetitions = 0;
+   \   00000024   0x2000             MOVS     R0,#+0
+   \   00000026   0x9000             STR      R0,[SP, #+0]
+    732          	}
+    733          
+    734          	PartialReactionUpdate(reaction_ptr, liters_in_tub, phase_repetitions);
+   \                     ??StabilityControl__UpdateReaction_1: (+1)
+   \   00000028   0x9A00             LDR      R2,[SP, #+0]
+   \   0000002A   0x9901             LDR      R1,[SP, #+4]
+   \   0000002C   0x0020             MOVS     R0,R4
+   \   0000002E   0x.... 0x....      BL       PartialReactionUpdate
+    735          
+    736          	if ((*reaction_ptr == SC_REACTION_RESTART_PHASE) && (phase_repetitions >= (sint32)Common_Parameters_Ptr->Max_Phase_Repetitions))
+   \   00000032   0x7820             LDRB     R0,[R4, #+0]
+   \   00000034   0x2802             CMP      R0,#+2
+   \   00000036   0xD114             BNE      ??StabilityControl__UpdateReaction_2
+   \   00000038   0x....             LDR      R0,??DataTable14
+   \   0000003A   0x9900             LDR      R1,[SP, #+0]
+   \   0000003C   0x6982             LDR      R2,[R0, #+24]
+   \   0000003E   0x7912             LDRB     R2,[R2, #+4]
+   \   00000040   0x4291             CMP      R1,R2
+   \   00000042   0xDB0E             BLT      ??StabilityControl__UpdateReaction_2
+    737          	{
+    738          		*reaction_ptr = (STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Reaction_After_Max_Phase_Repeats; // Req 706787
+   \   00000044   0x69C0             LDR      R0,[R0, #+28]
+   \   00000046   0x7880             LDRB     R0,[R0, #+2]
+   \   00000048   0x0700             LSLS     R0,R0,#+28
+   \   0000004A   0x0F00             LSRS     R0,R0,#+28
+   \   0000004C   0x7020             STRB     R0,[R4, #+0]
+    739          
+    740          		// Repeat all previous checks, since reaction has been updated
+    741          		PartialReactionUpdate(reaction_ptr, liters_in_tub, phase_repetitions);
+   \   0000004E   0x9A00             LDR      R2,[SP, #+0]
+   \   00000050   0x9901             LDR      R1,[SP, #+4]
+   \   00000052   0x0020             MOVS     R0,R4
+   \   00000054   0x.... 0x....      BL       PartialReactionUpdate
+    742          
+    743          		if (*reaction_ptr == SC_REACTION_RESTART_PHASE)
+   \   00000058   0x7820             LDRB     R0,[R4, #+0]
+   \   0000005A   0x2802             CMP      R0,#+2
+   \   0000005C   0xD101             BNE      ??StabilityControl__UpdateReaction_2
+    744          		{
+    745          			*reaction_ptr = SC_REACTION_NONE; // No recursion allowed
+   \   0000005E   0x2000             MOVS     R0,#+0
+   \   00000060   0x7020             STRB     R0,[R4, #+0]
+    746          		}
+    747          	}
+    748          }
+   \                     ??StabilityControl__UpdateReaction_2: (+1)
+   \   00000062   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+    749          
+    750          
+    751          /**
+    752           * It sets the flags specified by set_mask in Stability_Control_Flags.
+    753           *
+    754           * @param  set_mask: the mask that specifies the flags to set (bit = 1 -> flag set, bit = 0 flag unchanged)
+    755           *
+    756           * @return none
+    757           */
+
+   \                                 In section .text, align 2, keep-with-next
+    758          void StabilityControl__SetFlagsMask(uint8 set_mask)
+    759          {
+    760          	Stability_Control_Flags |= set_mask;
+   \                     StabilityControl__SetFlagsMask: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable14
+   \   00000002   0x7C0A             LDRB     R2,[R1, #+16]
+   \   00000004   0x4310             ORRS     R0,R0,R2
+   \   00000006   0x7408             STRB     R0,[R1, #+16]
+    761          }
+   \   00000008   0x4770             BX       LR               ;; return
+    762          
+    763          
+    764          /**
+    765           * It resets the flags specified by reset_mask in Stability_Control_Flags.
+    766           *
+    767           * @param  reset_mask: the mask that specifies the flags to reset (bit = 1 -> flag reset, bit = 0 flag unchanged)
+    768           *
+    769           * @return none
+    770           */
+
+   \                                 In section .text, align 2, keep-with-next
+    771          void StabilityControl__ResetFlagsMask(uint8 reset_mask)
+    772          {
+    773          	Stability_Control_Flags &= (reset_mask ^ (uint8)0xFF);
+   \                     StabilityControl__ResetFlagsMask: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable14
+   \   00000002   0x7C0A             LDRB     R2,[R1, #+16]
+   \   00000004   0x23FF             MOVS     R3,#+255
+   \   00000006   0x4043             EORS     R3,R3,R0
+   \   00000008   0x4013             ANDS     R3,R3,R2
+   \   0000000A   0x740B             STRB     R3,[R1, #+16]
+    774          }
+   \   0000000C   0x4770             BX       LR               ;; return
+    775          
+    776          
+    777          //=====================================================================================================================
+    778          //-------------------------------------- Private Functions ------------------------------------------------------------
+    779          //=====================================================================================================================
+    780          
+    781          
+    782          /**
+    783           * The function
+    784           * @param
+    785           *
+    786           * @return :
+    787           */
+
+   \                                 In section .text, align 2, keep-with-next
+    788          static void ResetInstabilityEvent(void)
+    789          {
+    790          	Instability_Event = SC_NO_INSTABILITY;
+   \                     ResetInstabilityEvent: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR      R1,??DataTable15
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x700A             STRB     R2,[R1, #+0]
+    791          	Instability_Counter = 0;
+   \   00000008   0x8048             STRH     R0,[R1, #+2]
+    792          	No_Water_Counter = 0;
+   \   0000000A   0x8088             STRH     R0,[R1, #+4]
+    793          	Very_Low_Water_Counter = 0;
+   \   0000000C   0x80C8             STRH     R0,[R1, #+6]
+    794          	Stable_Water_Counter = 0;
+   \   0000000E   0x8108             STRH     R0,[R1, #+8]
+    795          }
+   \   00000010   0x4770             BX       LR               ;; return
+    796          
+    797          /**
+    798           * The function
+    799           * @param
+    800           *
+    801           * @return :
+    802           */
+
+   \                                 In section .text, align 2, keep-with-next
+    803          static void UpdateInstabilityEvent(void)
+    804          {
+   \                     UpdateInstabilityEvent: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+    805          	VWI_WATER_SENSE_TYPE vwi_status;
+    806          
+    807          	vwi_status = Vwi__GetWaterStatus();
+   \   00000002   0x.... 0x....      BL       Vwi__GetWaterStatus
+    808          
+    809          	// VWI Instability detection
+    810          	if ((vwi_status == WS_UNSTABLE_NO_WATER) || (vwi_status == WS_UNSTABLE_WATER))
+   \   00000006   0x....             LDR      R4,??DataTable14
+   \   00000008   0x69A1             LDR      R1,[R4, #+24]
+   \   0000000A   0x2500             MOVS     R5,#+0
+   \   0000000C   0x....             LDR      R6,??DataTable15
+   \   0000000E   0x2802             CMP      R0,#+2
+   \   00000010   0xD001             BEQ      ??UpdateInstabilityEvent_0
+   \   00000012   0x2803             CMP      R0,#+3
+   \   00000014   0xD10B             BNE      ??UpdateInstabilityEvent_1
+    811          	{
+    812          		if (Instability_Counter < INSTABILITY_DETECTION_TIME_100MS)
+   \                     ??UpdateInstabilityEvent_0: (+1)
+   \   00000016   0x8872             LDRH     R2,[R6, #+2]
+   \   00000018   0x788B             LDRB     R3,[R1, #+2]
+   \   0000001A   0x009F             LSLS     R7,R3,#+2
+   \   0000001C   0x18FB             ADDS     R3,R7,R3
+   \   0000001E   0x429A             CMP      R2,R3
+   \   00000020   0xDA02             BGE      ??UpdateInstabilityEvent_2
+    813          		{
+    814          			Instability_Counter ++;
+   \   00000022   0x1C52             ADDS     R2,R2,#+1
+   \   00000024   0x8072             STRH     R2,[R6, #+2]
+   \   00000026   0xE008             B        ??UpdateInstabilityEvent_3
+    815          		}
+    816          		else
+    817          		{
+    818          			Instability_Event = SC_INSTABILITY;
+   \                     ??UpdateInstabilityEvent_2: (+1)
+   \   00000028   0x2201             MOVS     R2,#+1
+   \   0000002A   0x7032             STRB     R2,[R6, #+0]
+   \   0000002C   0xE005             B        ??UpdateInstabilityEvent_3
+    819          		}
+    820          	}
+    821          	else
+    822          	{
+    823          		if (Instability_Event == SC_INSTABILITY)
+   \                     ??UpdateInstabilityEvent_1: (+1)
+   \   0000002E   0x7832             LDRB     R2,[R6, #+0]
+   \   00000030   0x2A01             CMP      R2,#+1
+   \   00000032   0xD101             BNE      ??UpdateInstabilityEvent_4
+    824          		{
+    825          			Instability_Event = SC_NO_INSTABILITY;
+   \   00000034   0x002A             MOVS     R2,R5
+   \   00000036   0x7032             STRB     R2,[R6, #+0]
+    826          		}
+    827          
+    828          		Instability_Counter = 0;
+   \                     ??UpdateInstabilityEvent_4: (+1)
+   \   00000038   0x8075             STRH     R5,[R6, #+2]
+    829          	}
+    830          
+    831          	// VWI No Water detection
+    832          	if ((vwi_status == WS_UNSTABLE_NO_WATER) || (vwi_status == WS_NO_WATER))
+   \                     ??UpdateInstabilityEvent_3: (+1)
+   \   0000003A   0x2802             CMP      R0,#+2
+   \   0000003C   0xD001             BEQ      ??UpdateInstabilityEvent_5
+   \   0000003E   0x2801             CMP      R0,#+1
+   \   00000040   0xD10B             BNE      ??UpdateInstabilityEvent_6
+    833          	{
+    834          		if (No_Water_Counter < NO_WATER_DETECTION_TIME_100MS)
+   \                     ??UpdateInstabilityEvent_5: (+1)
+   \   00000042   0x88B2             LDRH     R2,[R6, #+4]
+   \   00000044   0x780B             LDRB     R3,[R1, #+0]
+   \   00000046   0x009F             LSLS     R7,R3,#+2
+   \   00000048   0x18FB             ADDS     R3,R7,R3
+   \   0000004A   0x429A             CMP      R2,R3
+   \   0000004C   0xDA02             BGE      ??UpdateInstabilityEvent_7
+    835          		{
+    836          			No_Water_Counter ++;
+   \   0000004E   0x1C52             ADDS     R2,R2,#+1
+   \   00000050   0x80B2             STRH     R2,[R6, #+4]
+   \   00000052   0xE008             B        ??UpdateInstabilityEvent_8
+    837          		}
+    838          		else
+    839          		{
+    840          			Instability_Event = SC_NO_WATER;
+   \                     ??UpdateInstabilityEvent_7: (+1)
+   \   00000054   0x2203             MOVS     R2,#+3
+   \   00000056   0x7032             STRB     R2,[R6, #+0]
+   \   00000058   0xE005             B        ??UpdateInstabilityEvent_8
+    841          		}
+    842          	}
+    843          	else
+    844          	{
+    845          		if (Instability_Event == SC_NO_WATER)
+   \                     ??UpdateInstabilityEvent_6: (+1)
+   \   0000005A   0x7832             LDRB     R2,[R6, #+0]
+   \   0000005C   0x2A03             CMP      R2,#+3
+   \   0000005E   0xD101             BNE      ??UpdateInstabilityEvent_9
+    846          		{
+    847          			Instability_Event = SC_NO_INSTABILITY;
+   \   00000060   0x002A             MOVS     R2,R5
+   \   00000062   0x7032             STRB     R2,[R6, #+0]
+    848          		}
+    849          
+    850          		No_Water_Counter = 0;
+   \                     ??UpdateInstabilityEvent_9: (+1)
+   \   00000064   0x80B5             STRH     R5,[R6, #+4]
+    851          	}
+    852          
+    853          	// VWI Very Low Water detection
+    854          	if ((vwi_status == WS_UNSTABLE_NO_WATER) || (vwi_status == WS_NO_WATER))
+   \                     ??UpdateInstabilityEvent_8: (+1)
+   \   00000066   0x2802             CMP      R0,#+2
+   \   00000068   0xD001             BEQ      ??UpdateInstabilityEvent_10
+   \   0000006A   0x2801             CMP      R0,#+1
+   \   0000006C   0xD112             BNE      ??UpdateInstabilityEvent_11
+    855          	{
+    856          		if (Very_Low_Water_Counter < VERY_LOW_WATER_DETECTION_TIME_100MS)
+   \                     ??UpdateInstabilityEvent_10: (+1)
+   \   0000006E   0x88F0             LDRH     R0,[R6, #+6]
+   \   00000070   0x7849             LDRB     R1,[R1, #+1]
+   \   00000072   0x008A             LSLS     R2,R1,#+2
+   \   00000074   0x1851             ADDS     R1,R2,R1
+   \   00000076   0x4288             CMP      R0,R1
+   \   00000078   0xDA09             BGE      ??UpdateInstabilityEvent_12
+    857          		{
+    858          			Very_Low_Water_Counter ++;
+   \   0000007A   0x1C40             ADDS     R0,R0,#+1
+   \   0000007C   0x80F0             STRH     R0,[R6, #+6]
+    859          		}
+    860          		else
+    861          		{
+    862          			Instability_Event = SC_VERY_LOW_WATER;
+    863          		}
+    864          
+    865          		Stable_Water_Counter = 0;
+    866          	}
+    867          	else
+    868          	{
+    869          		if (vwi_status == WS_WATER)
+    870          		{
+    871          			if (Stable_Water_Counter < WATER_PRESENT_TIME_100MS)
+    872          			{
+    873          				Stable_Water_Counter ++;
+    874          			}
+    875          			else
+    876          			{
+    877          				if (Instability_Event == SC_VERY_LOW_WATER)
+    878          				{
+    879          					Instability_Event = SC_NO_INSTABILITY;
+    880          				}
+    881          
+    882          				Very_Low_Water_Counter = 0;
+    883          			}
+    884          		}
+    885          		else
+    886          		{
+    887          			Stable_Water_Counter = 0;
+   \                     ??UpdateInstabilityEvent_13: (+1)
+   \   0000007E   0x8135             STRH     R5,[R6, #+8]
+    888          		}
+    889          	}
+    890          
+    891          	// Airlock detection
+    892          	if (AirlockMonitor__GetStatus() == ALS_AIRLOCK)
+   \                     ??UpdateInstabilityEvent_14: (+1)
+   \   00000080   0x.... 0x....      BL       AirlockMonitor__GetStatus
+   \   00000084   0x2801             CMP      R0,#+1
+   \   00000086   0xD117             BNE      ??UpdateInstabilityEvent_15
+    893          	{
+    894          		Instability_Event = SC_RIF_AIR_LOCK;
+   \   00000088   0x2004             MOVS     R0,#+4
+   \   0000008A   0x7030             STRB     R0,[R6, #+0]
+   \   0000008C   0xE019             B        ??UpdateInstabilityEvent_16
+    895          	}
+   \                     ??UpdateInstabilityEvent_12: (+1)
+   \   0000008E   0x2002             MOVS     R0,#+2
+   \   00000090   0x7030             STRB     R0,[R6, #+0]
+   \   00000092   0xE7F4             B        ??UpdateInstabilityEvent_13
+   \                     ??UpdateInstabilityEvent_11: (+1)
+   \   00000094   0x2804             CMP      R0,#+4
+   \   00000096   0xD1F2             BNE      ??UpdateInstabilityEvent_13
+   \   00000098   0x8930             LDRH     R0,[R6, #+8]
+   \   0000009A   0x78C9             LDRB     R1,[R1, #+3]
+   \   0000009C   0x008A             LSLS     R2,R1,#+2
+   \   0000009E   0x1851             ADDS     R1,R2,R1
+   \   000000A0   0x4288             CMP      R0,R1
+   \   000000A2   0xDA02             BGE      ??UpdateInstabilityEvent_17
+   \   000000A4   0x1C40             ADDS     R0,R0,#+1
+   \   000000A6   0x8130             STRH     R0,[R6, #+8]
+   \   000000A8   0xE7EA             B        ??UpdateInstabilityEvent_14
+   \                     ??UpdateInstabilityEvent_17: (+1)
+   \   000000AA   0x7830             LDRB     R0,[R6, #+0]
+   \   000000AC   0x2802             CMP      R0,#+2
+   \   000000AE   0xD101             BNE      ??UpdateInstabilityEvent_18
+   \   000000B0   0x0028             MOVS     R0,R5
+   \   000000B2   0x7030             STRB     R0,[R6, #+0]
+   \                     ??UpdateInstabilityEvent_18: (+1)
+   \   000000B4   0x80F5             STRH     R5,[R6, #+6]
+   \   000000B6   0xE7E3             B        ??UpdateInstabilityEvent_14
+    896          	else
+    897          	{
+    898          		if (Instability_Event == SC_RIF_AIR_LOCK)
+   \                     ??UpdateInstabilityEvent_15: (+1)
+   \   000000B8   0x7830             LDRB     R0,[R6, #+0]
+   \   000000BA   0x2804             CMP      R0,#+4
+   \   000000BC   0xD101             BNE      ??UpdateInstabilityEvent_16
+    899          		{
+    900          			Instability_Event = SC_NO_INSTABILITY;
+   \   000000BE   0x0028             MOVS     R0,R5
+   \   000000C0   0x7030             STRB     R0,[R6, #+0]
+    901          		}
+    902          	}
+    903          
+    904          	// Plugging detection
+    905          	if (PluggingMonitor__GetStatus() == PL_PLUGGING)
+   \                     ??UpdateInstabilityEvent_16: (+1)
+   \   000000C2   0x.... 0x....      BL       PluggingMonitor__GetStatus
+   \   000000C6   0x2802             CMP      R0,#+2
+   \   000000C8   0xD109             BNE      ??UpdateInstabilityEvent_19
+    906          	{
+    907          		Instability_Event = SC_RIF_PLUGGED_FILTER;
+   \   000000CA   0x2005             MOVS     R0,#+5
+   \   000000CC   0x7030             STRB     R0,[R6, #+0]
+    908          
+    909          		if ((STABILITY_CONTROL_REACTIONS_TYPE)Instance_Parameters_Ptr->Reaction_To_Plugged_Filter != (STABILITY_CONTROL_REACTIONS_TYPE)SC_REACTION_NONE)
+   \   000000CE   0x69E0             LDR      R0,[R4, #+28]
+   \   000000D0   0x7880             LDRB     R0,[R0, #+2]
+   \   000000D2   0x0900             LSRS     R0,R0,#+4
+   \   000000D4   0xD008             BEQ      ??UpdateInstabilityEvent_20
+    910          		{
+    911          			Fault__ConditionDetected(FAULT_ID_RIF_FILTER_PLUGGED);
+   \   000000D6   0x203D             MOVS     R0,#+61
+   \   000000D8   0x.... 0x....      BL       Fault__ConditionDetected
+   \   000000DC   0xE004             B        ??UpdateInstabilityEvent_20
+    912          		}
+    913          	}
+    914          	else
+    915          	{
+    916          		if (Instability_Event == SC_RIF_PLUGGED_FILTER)
+   \                     ??UpdateInstabilityEvent_19: (+1)
+   \   000000DE   0x7830             LDRB     R0,[R6, #+0]
+   \   000000E0   0x2805             CMP      R0,#+5
+   \   000000E2   0xD101             BNE      ??UpdateInstabilityEvent_20
+    917          		{
+    918          			Instability_Event = SC_NO_INSTABILITY;
+   \   000000E4   0x0028             MOVS     R0,R5
+   \   000000E6   0x7030             STRB     R0,[R6, #+0]
+    919          		}
+    920          	}
+    921          
+    922          	// Stability Control Loop detection
+    923          	if (StabilityControlLoopMonitor__GetOutcome() == SCL_PRIMARY_REACTION_REQUESTED)
+   \                     ??UpdateInstabilityEvent_20: (+1)
+   \   000000E8   0x.... 0x....      BL       StabilityControlLoopMonitor__GetOutcome
+   \   000000EC   0x2801             CMP      R0,#+1
+   \   000000EE   0xD102             BNE      ??UpdateInstabilityEvent_21
+    924          	{
+    925          		Instability_Event = SC_SCL_PRIMARY_REACTION_REQ;
+   \   000000F0   0x2006             MOVS     R0,#+6
+   \   000000F2   0x7030             STRB     R0,[R6, #+0]
+   \   000000F4   0xBDF1             POP      {R0,R4-R7,PC}
+    926          	}
+    927          	else if (StabilityControlLoopMonitor__GetOutcome() == SCL_SECONDARY_REACTION_REQUESTED)
+   \                     ??UpdateInstabilityEvent_21: (+1)
+   \   000000F6   0x.... 0x....      BL       StabilityControlLoopMonitor__GetOutcome
+   \   000000FA   0x2802             CMP      R0,#+2
+   \   000000FC   0xD102             BNE      ??UpdateInstabilityEvent_22
+    928          	{
+    929          		Instability_Event = SC_SCL_SECONDARY_REACTION_REQ;
+   \   000000FE   0x2007             MOVS     R0,#+7
+   \   00000100   0x7030             STRB     R0,[R6, #+0]
+   \   00000102   0xBDF1             POP      {R0,R4-R7,PC}
+    930          	}
+   \                     ??UpdateInstabilityEvent_22: (+1)
+   \   00000104   0x7830             LDRB     R0,[R6, #+0]
+   \   00000106   0x2806             CMP      R0,#+6
+   \   00000108   0xD001             BEQ      ??UpdateInstabilityEvent_23
+   \   0000010A   0x2807             CMP      R0,#+7
+   \   0000010C   0xD100             BNE      ??UpdateInstabilityEvent_24
+    931          	else
+    932          	{
+    933          		if ((Instability_Event == SC_SCL_PRIMARY_REACTION_REQ) || (Instability_Event == SC_SCL_SECONDARY_REACTION_REQ))
+    934          		{
+    935          			Instability_Event = SC_NO_INSTABILITY;
+   \                     ??UpdateInstabilityEvent_23: (+1)
+   \   0000010E   0x7035             STRB     R5,[R6, #+0]
+    936          		}
+    937          	}
+    938          }
+   \                     ??UpdateInstabilityEvent_24: (+1)
+   \   00000110   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+    939          
+    940          
+    941          /**
+    942           * The function takes the currently selected reaction and check if it has to be modified according to the specific requirements
+    943           *
+    944           * @param current_reaction_ptr: pointer to the currently selected reaction
+    945           * @param liters_in_tub: the amount of water currently in the tub (used when the reaction requests to add water)
+    946           * @param phase_repetitions: the number of times that the Restart Phase reaction has already been triggered (used when the reaction requests to restart the phase)
+    947           *
+    948           * @return : none
+    949           */
+
+   \                                 In section .text, align 2, keep-with-next
+    950          static void PartialReactionUpdate(STABILITY_CONTROL_REACTIONS_TYPE *current_reaction_ptr, sint32 liters_in_tub, sint32 phase_repetitions)
+    951          {
+   \                     PartialReactionUpdate: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    952          	BOOL_TYPE check_subcycle;
+    953          	uint8 subcycle_priority;
+    954          	uint8 subcycle_execution_counter;
+    955          	uint8 subcycle_max_calls;
+    956          
+    957          	if ((*current_reaction_ptr == SC_REACTION_ADD_WATER_THEN_REDUCE_SPEED) && (liters_in_tub >= (sint32)Cliters_Max))
+   \   00000002   0x....             LDR      R3,??DataTable15_1
+   \   00000004   0x7804             LDRB     R4,[R0, #+0]
+   \   00000006   0x2C0B             CMP      R4,#+11
+   \   00000008   0xD104             BNE      ??PartialReactionUpdate_0
+   \   0000000A   0x8ADC             LDRH     R4,[R3, #+22]
+   \   0000000C   0x42A1             CMP      R1,R4
+   \   0000000E   0xDB01             BLT      ??PartialReactionUpdate_0
+    958          	{
+    959          		*current_reaction_ptr = SC_REACTION_REDUCE_MOTOR_SPEED;	// Req 1246164
+   \   00000010   0x240A             MOVS     R4,#+10
+   \   00000012   0x7004             STRB     R4,[R0, #+0]
+    960          	}
+    961          
+    962          	if ((*current_reaction_ptr == SC_REACTION_REDUCE_MOTOR_SPEED) && (Speed_Reduction_Status == SC_2ND_SPEED_REDUCTION))
+   \                     ??PartialReactionUpdate_0: (+1)
+   \   00000014   0x7804             LDRB     R4,[R0, #+0]
+   \   00000016   0x2C0A             CMP      R4,#+10
+   \   00000018   0xD10C             BNE      ??PartialReactionUpdate_1
+   \   0000001A   0x7CDC             LDRB     R4,[R3, #+19]
+   \   0000001C   0x2C02             CMP      R4,#+2
+   \   0000001E   0xD109             BNE      ??PartialReactionUpdate_1
+    963          	{
+    964          		*current_reaction_ptr = Reaction_After_Max_Speed_Reduct; // Req. 1243484
+   \   00000020   0x7C5C             LDRB     R4,[R3, #+17]
+   \   00000022   0x7004             STRB     R4,[R0, #+0]
+    965          
+    966          		if ((*current_reaction_ptr == SC_REACTION_REDUCE_MOTOR_SPEED) || (*current_reaction_ptr == SC_REACTION_ADD_WATER_THEN_REDUCE_SPEED)	// No recursion allowed
+    967          			|| (*current_reaction_ptr >= SC_REACTIONS_NUM))	// Default value for backward compatibility with old setting file
+   \   00000024   0x2C0A             CMP      R4,#+10
+   \   00000026   0xD003             BEQ      ??PartialReactionUpdate_2
+   \   00000028   0x2C0B             CMP      R4,#+11
+   \   0000002A   0xD001             BEQ      ??PartialReactionUpdate_2
+   \   0000002C   0x2C0E             CMP      R4,#+14
+   \   0000002E   0xDB01             BLT      ??PartialReactionUpdate_1
+    968          		{
+    969          			*current_reaction_ptr = SC_REACTION_NONE;
+   \                     ??PartialReactionUpdate_2: (+1)
+   \   00000030   0x2400             MOVS     R4,#+0
+   \   00000032   0x7004             STRB     R4,[R0, #+0]
+    970          		}
+    971          	}
+    972          
+    973          	if (liters_in_tub >= (sint32)Cliters_Max)
+   \                     ??PartialReactionUpdate_1: (+1)
+   \   00000034   0x8ADC             LDRH     R4,[R3, #+22]
+   \   00000036   0x42A1             CMP      R1,R4
+   \   00000038   0xDB0F             BLT      ??PartialReactionUpdate_3
+    974          	{
+    975          		switch (*current_reaction_ptr)
+   \   0000003A   0x7801             LDRB     R1,[R0, #+0]
+   \   0000003C   0x2901             CMP      R1,#+1
+   \   0000003E   0xD004             BEQ      ??PartialReactionUpdate_4
+   \   00000040   0x2904             CMP      R1,#+4
+   \   00000042   0xD005             BEQ      ??PartialReactionUpdate_5
+   \   00000044   0x2905             CMP      R1,#+5
+   \   00000046   0xD006             BEQ      ??PartialReactionUpdate_6
+   \   00000048   0xE007             B        ??PartialReactionUpdate_3
+    976          		{
+    977          			case SC_REACTION_ADD_WATER:
+    978          				*current_reaction_ptr = SC_REACTION_NONE; // Req 307052
+   \                     ??PartialReactionUpdate_4: (+1)
+   \   0000004A   0x2100             MOVS     R1,#+0
+   \   0000004C   0x7001             STRB     R1,[R0, #+0]
+    979          				break;
+   \   0000004E   0xE004             B        ??PartialReactionUpdate_3
+    980          
+    981          			case SC_REACTION_ADD_WATER_THEN_RESTART_PHASE:
+    982          				*current_reaction_ptr = SC_REACTION_RESTART_PHASE; // Req 308251
+   \                     ??PartialReactionUpdate_5: (+1)
+   \   00000050   0x2102             MOVS     R1,#+2
+   \   00000052   0x7001             STRB     R1,[R0, #+0]
+    983          				break;
+   \   00000054   0xE001             B        ??PartialReactionUpdate_3
+    984          
+    985          			case SC_REACTION_ADD_WATER_THEN_SKIP_PHASE:
+    986          				*current_reaction_ptr = SC_REACTION_SKIP_PHASE; // Req 308256
+   \                     ??PartialReactionUpdate_6: (+1)
+   \   00000056   0x2103             MOVS     R1,#+3
+   \   00000058   0x7001             STRB     R1,[R0, #+0]
+    987          				break;
+    988          
+    989          			default:
+    990          				// Nothing to do
+    991          				break;
+    992          		}
+    993          	}
+    994          
+    995          	if (*current_reaction_ptr == SC_REACTION_RESTART_PHASE_THEN_SKIP_PHASE)
+   \                     ??PartialReactionUpdate_3: (+1)
+   \   0000005A   0x7801             LDRB     R1,[R0, #+0]
+   \   0000005C   0x2906             CMP      R1,#+6
+   \   0000005E   0xD106             BNE      ??PartialReactionUpdate_7
+    996          	{
+    997          		if (phase_repetitions == 0)
+   \   00000060   0x2A00             CMP      R2,#+0
+   \   00000062   0xD102             BNE      ??PartialReactionUpdate_8
+    998          		{
+    999          			*current_reaction_ptr = SC_REACTION_RESTART_PHASE; // Req 308257
+   \   00000064   0x2102             MOVS     R1,#+2
+   \   00000066   0x7001             STRB     R1,[R0, #+0]
+   \   00000068   0xE001             B        ??PartialReactionUpdate_7
+   1000          		}
+   1001          		else
+   1002          		{
+   1003          			*current_reaction_ptr = SC_REACTION_SKIP_PHASE; // Req 308258
+   \                     ??PartialReactionUpdate_8: (+1)
+   \   0000006A   0x2103             MOVS     R1,#+3
+   \   0000006C   0x7001             STRB     R1,[R0, #+0]
+   1004          		}
+   1005          	}
+   1006          
+   1007          	// Check the max number of subcycle executions
+   1008          	check_subcycle = TRUE;
+   \                     ??PartialReactionUpdate_7: (+1)
+   \   0000006E   0x2101             MOVS     R1,#+1
+   1009          
+   1010          	switch (*current_reaction_ptr)
+   \   00000070   0x7802             LDRB     R2,[R0, #+0]
+   \   00000072   0x1E52             SUBS     R2,R2,#+1
+   \   00000074   0xD00D             BEQ      ??PartialReactionUpdate_9
+   \   00000076   0x1ED2             SUBS     R2,R2,#+3
+   \   00000078   0x2A01             CMP      R2,#+1
+   \   0000007A   0xD90A             BLS      ??PartialReactionUpdate_9
+   \   0000007C   0x1ED2             SUBS     R2,R2,#+3
+   \   0000007E   0xD00D             BEQ      ??PartialReactionUpdate_10
+   \   00000080   0x1E52             SUBS     R2,R2,#+1
+   \   00000082   0xD010             BEQ      ??PartialReactionUpdate_11
+   \   00000084   0x1ED2             SUBS     R2,R2,#+3
+   \   00000086   0xD004             BEQ      ??PartialReactionUpdate_9
+   \   00000088   0x1E52             SUBS     R2,R2,#+1
+   \   0000008A   0xD011             BEQ      ??PartialReactionUpdate_12
+   \   0000008C   0x1E52             SUBS     R2,R2,#+1
+   \   0000008E   0xD014             BEQ      ??PartialReactionUpdate_13
+   \   00000090   0xE018             B        ??PartialReactionUpdate_14
+   1011          	{
+   1012          		case SC_REACTION_ADD_WATER: case SC_REACTION_ADD_WATER_THEN_RESTART_PHASE: case SC_REACTION_ADD_WATER_THEN_SKIP_PHASE:
+   1013          		case SC_REACTION_ADD_WATER_THEN_REDUCE_SPEED:
+   1014          			subcycle_priority = Common_Parameters_Ptr->Add_Water_Subcycle_Priority;
+   \                     ??PartialReactionUpdate_9: (+1)
+   \   00000092   0x699A             LDR      R2,[R3, #+24]
+   \   00000094   0x7952             LDRB     R2,[R2, #+5]
+   1015          			subcycle_execution_counter = SC_Subcycle_Execution_Counters[ADD_WATER_INDEX];
+   \   00000096   0x781C             LDRB     R4,[R3, #+0]
+   1016          			subcycle_max_calls = SC_Max_Subcycle_Calls.Add_Water;
+   \   00000098   0x7A1B             LDRB     R3,[R3, #+8]
+   1017          			break;
+   \   0000009A   0xE017             B        ??PartialReactionUpdate_15
+   1018          
+   1019          		case SC_REACTION_MOTOR_RESTART_SUBCYCLE:
+   1020          			subcycle_priority = Common_Parameters_Ptr->Motor_Restart_Subcycle_Priority;
+   \                     ??PartialReactionUpdate_10: (+1)
+   \   0000009C   0x699A             LDR      R2,[R3, #+24]
+   \   0000009E   0x7992             LDRB     R2,[R2, #+6]
+   1021          			subcycle_execution_counter = SC_Subcycle_Execution_Counters[MOTOR_RESTART_INDEX];
+   \   000000A0   0x785C             LDRB     R4,[R3, #+1]
+   1022          			subcycle_max_calls = SC_Max_Subcycle_Calls.Motor_Restart;
+   \   000000A2   0x7A5B             LDRB     R3,[R3, #+9]
+   1023          			break;
+   \   000000A4   0xE012             B        ??PartialReactionUpdate_15
+   1024          
+   1025          		case SC_REACTION_FILTER_PLUGGED_SUBCYCLE:
+   1026          			subcycle_priority = Common_Parameters_Ptr->Filter_Plugged_Subcycle_Priority;
+   \                     ??PartialReactionUpdate_11: (+1)
+   \   000000A6   0x699A             LDR      R2,[R3, #+24]
+   \   000000A8   0x79D2             LDRB     R2,[R2, #+7]
+   1027          			subcycle_execution_counter = SC_Subcycle_Execution_Counters[FILTER_PLUGGED_INDEX];
+   \   000000AA   0x789C             LDRB     R4,[R3, #+2]
+   1028          			subcycle_max_calls = SC_Max_Subcycle_Calls.Filter_Plugged;
+   \   000000AC   0x7A9B             LDRB     R3,[R3, #+10]
+   1029          			break;
+   \   000000AE   0xE00D             B        ??PartialReactionUpdate_15
+   1030          
+   1031          		case SC_REACTION_DEFOAMING_SUBCYCLE:
+   1032          			subcycle_priority = Common_Parameters_Ptr->Defoaming_Subcycle_Priority;
+   \                     ??PartialReactionUpdate_12: (+1)
+   \   000000B0   0x699A             LDR      R2,[R3, #+24]
+   \   000000B2   0x7AD2             LDRB     R2,[R2, #+11]
+   1033          			subcycle_execution_counter = SC_Subcycle_Execution_Counters[DEFOAMING_INDEX];
+   \   000000B4   0x78DC             LDRB     R4,[R3, #+3]
+   1034          			subcycle_max_calls = SC_Max_Subcycle_Calls.Defoaming;
+   \   000000B6   0x7ADB             LDRB     R3,[R3, #+11]
+   1035          			break;
+   \   000000B8   0xE008             B        ??PartialReactionUpdate_15
+   1036          
+   1037          		case SC_REACTION_FILTER_PLUGGED_2_SUBCYCLE:
+   1038          			subcycle_priority = Common_Parameters_Ptr->Filter_Plugged_2_Subcycle_Priority;
+   \                     ??PartialReactionUpdate_13: (+1)
+   \   000000BA   0x699A             LDR      R2,[R3, #+24]
+   \   000000BC   0x7B12             LDRB     R2,[R2, #+12]
+   1039          			subcycle_execution_counter = SC_Subcycle_Execution_Counters[FILTER_PLUGGED_2_INDEX];
+   \   000000BE   0x791C             LDRB     R4,[R3, #+4]
+   1040          			subcycle_max_calls = SC_Max_Subcycle_Calls.Filter_Plugged_2;
+   \   000000C0   0x7B1B             LDRB     R3,[R3, #+12]
+   1041          			break;
+   \   000000C2   0xE003             B        ??PartialReactionUpdate_15
+   1042          
+   1043          		default:
+   1044          			check_subcycle = FALSE;
+   \                     ??PartialReactionUpdate_14: (+1)
+   \   000000C4   0x2300             MOVS     R3,#+0
+   \   000000C6   0x0019             MOVS     R1,R3
+   1045          			// The following initializations are only to silent Lint warning, values are not used since (check_subcycle == FALSE)
+   1046          			subcycle_priority = 0;
+   \   000000C8   0x001A             MOVS     R2,R3
+   1047          			subcycle_execution_counter = 0;
+   \   000000CA   0x001C             MOVS     R4,R3
+   1048          			subcycle_max_calls = 0;
+   1049          			break;
+   1050          	}
+   1051          
+   1052          	if ((uint8)check_subcycle == (uint8)TRUE)
+   \                     ??PartialReactionUpdate_15: (+1)
+   \   000000CC   0x2901             CMP      R1,#+1
+   \   000000CE   0xD107             BNE      ??PartialReactionUpdate_16
+   1053          	{
+   1054          		if ((subcycle_priority == (uint8)0) ||
+   1055          			((subcycle_max_calls != (uint8)INVALID_MAX_SUBCYCLE_CALLS) && (subcycle_execution_counter >= subcycle_max_calls)))
+   \   000000D0   0x2A00             CMP      R2,#+0
+   \   000000D2   0xD003             BEQ      ??PartialReactionUpdate_17
+   \   000000D4   0x2BFF             CMP      R3,#+255
+   \   000000D6   0xD003             BEQ      ??PartialReactionUpdate_16
+   \   000000D8   0x429C             CMP      R4,R3
+   \   000000DA   0xD301             BCC      ??PartialReactionUpdate_16
+   1056          		{
+   1057          			// The requested subcycle is not present in setting file OR the number of subcycle executions has reached its limit
+   1058          			*current_reaction_ptr = SC_REACTION_NONE;
+   \                     ??PartialReactionUpdate_17: (+1)
+   \   000000DC   0x2100             MOVS     R1,#+0
+   \   000000DE   0x7001             STRB     R1,[R0, #+0]
+   1059          		}
+   1060          	}
+   1061          
+   1062          }
+   \                     ??PartialReactionUpdate_16: (+1)
+   \   000000E0   0xBC10             POP      {R4}
+   \   000000E2   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     SC_Subcycle_Execution_Counters
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \   00000000   0x........         DC32     Instability_Event
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_1:
+   \   00000000   0x........         DC32     SC_Subcycle_Execution_Counters
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable14:
+   \   00000000   0x........         DC32     SC_Subcycle_Execution_Counters
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15:
+   \   00000000   0x........         DC32     Instability_Event
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_1:
+   \   00000000   0x........         DC32     SC_Subcycle_Execution_Counters
+   1063          
+   1064          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       4   PartialReactionUpdate
+       0   ResetInstabilityEvent
+       0   StabilityControl__GetLDPrimaryReaction
+       0   StabilityControl__GetLDSecondaryReaction
+       0   StabilityControl__GetSpeedReduction
+       0   StabilityControl__GetStatus
+      40   StabilityControl__Initialize
+        40   -> AirlockMonitor__Reset
+        40   -> AirlockMonitor__Start
+        40   -> Fault__ConditionRemoved
+        40   -> HeaterCalcificationDetectionMonitor__Reset
+        40   -> HeaterCalcificationDetectionMonitor__Start
+        40   -> Interpreter__GetCurrentStatement
+        40   -> Log__AddMessage
+        40   -> PluggingMonitor__Reset
+        40   -> PluggingMonitor__Start
+        40   -> ResetInstabilityEvent
+        40   -> SettingFile__BasicLoader
+        40   -> __aeabi_memset4
+       8   StabilityControl__NVDataRestore
+         8   -> ResetInstabilityEvent
+      24   StabilityControl__ReduceSpeed
+        24   -> SettingFile__BasicLoader
+        24 __aeabi_idiv
+       0   StabilityControl__ResetFlagsMask
+       0   StabilityControl__SetFlagsMask
+      24   StabilityControl__Task
+        24   -> AirlockMonitor__Reset
+        24   -> Fault__ConditionDetected
+        24   -> Fault__IsObserverActive
+        24   -> Interpreter__GetCurrentStatement
+        24   -> Interpreter__SetPhase
+        24   -> PluggingMonitor__Pause
+        24   -> PluggingMonitor__Reset
+        24   -> PluggingMonitor__Resume
+        24   -> ResetInstabilityEvent
+        24   -> StabilityControlLoopMonitor__ResetCounters
+        24   -> StabilityControl__UpdateReaction
+        24   -> StatisticsDish__IncreaseInterruptedPhasesNum
+        24   -> StatisticsDish__IncreaseRPMReductions
+        24   -> StatisticsDish__IncreaseWaterAddExecutions
+        24   -> SubCycle__RequestStart
+        24   -> UpdateInstabilityEvent
+        24   -> Variable__GetValue
+        24   -> Variable__SetValue
+      16   StabilityControl__Terminate
+        16   -> AirlockMonitor__Stop
+        16   -> Fault__ConditionRemoved
+        16   -> HeaterCalcificationDetectionMonitor__Stop
+        16   -> PluggingMonitor__Stop
+        16   -> ResetInstabilityEvent
+        16   -> __aeabi_memset4
+      16   StabilityControl__UpdateReaction
+        16   -> PartialReactionUpdate
+        16   -> Variable__GetValue
+      16   StabilityControl__VariablesInitialize
+        16   -> Micro__GetResetMode
+        16   -> NVData__GetLastRestoreStatus
+        16   -> __aeabi_memset4
+      24   UpdateInstabilityEvent
+        24   -> AirlockMonitor__GetStatus
+        24   -> Fault__ConditionDetected
+        24   -> PluggingMonitor__GetStatus
+        24   -> StabilityControlLoopMonitor__GetOutcome
+        24   -> Vwi__GetWaterStatus
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable14
+       4  ??DataTable15
+       4  ??DataTable15_1
+       4  ??DataTable5
+       4  ??DataTable5_1
+      10  Instability_Event
+          Task_Suspended
+          Instability_Counter
+          No_Water_Counter
+          Very_Low_Water_Counter
+          Stable_Water_Counter
+     228  PartialReactionUpdate
+      18  ResetInstabilityEvent
+      32  SC_Subcycle_Execution_Counters
+          SC_Max_Subcycle_Calls
+          Stability_Control_Flags
+          Reaction_After_Max_Speed_Reduct
+          Activation_Cycle
+          Speed_Reduction_Status
+          Stability_Control_Status
+          Cliters_Max
+          Common_Parameters_Ptr
+          Instance_Parameters_Ptr
+      10  StabilityControl__GetLDPrimaryReaction
+      12  StabilityControl__GetLDSecondaryReaction
+       6  StabilityControl__GetSpeedReduction
+       6  StabilityControl__GetStatus
+     288  StabilityControl__Initialize
+      14  StabilityControl__NVDataRestore
+     110  StabilityControl__ReduceSpeed
+      14  StabilityControl__ResetFlagsMask
+      10  StabilityControl__SetFlagsMask
+     606  StabilityControl__Task
+      52  StabilityControl__Terminate
+     100  StabilityControl__UpdateReaction
+      50  StabilityControl__VariablesInitialize
+     274  UpdateInstabilityEvent
+
+ 
+    10 bytes in section .bss
+ 1 822 bytes in section .text
+    32 bytes in section _appliance_segment
+ 
+ 1 822 bytes of CODE memory
+    42 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,1411 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:16:59
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline/AccelBaseline.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\AccelBaseline.lst -o
+#        obj\AccelBaseline.obj
+#        source/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline/AccelBaseline.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\AccelBaseline.lst
+#    Object file  =  obj\AccelBaseline.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\AccelerometerLLI\AccelBaseline\AccelBaseline.c
+      1          /**
+      2           * @file
+      3           * @brief
+      4           *
+      5           * @details
+      6           *
+      7           *  Accelerometer Setting File Data Structure:
+      8           *      Pointer = SF_PTR_MCU_MOTOR_APPLICATION_GENERIC_DATA, Displacement = Accelerometer Data (2)
+      9           *      |--------|---------------------------------------|---------------------------------------|
+     10           *      |        |  7 |  6 |  5 |  4 |  3 |  2 |  1 |  0 |  7 |  6 |  5 |  4 |  3 |  2 |  1 |  0 |
+     11           *      | +0000h |  0 |  0 |  0 |  0 |  BL Average Count |   BL Max Errors   |   BL Max Retries  |
+     12           *      | +0001h |Inv2|  0 |  Dest2  |Inv1|  0 |  Dest1  |   ST Max Errors   |Inv3|  0 |  Dest3  |
+     13           *      |        | 15 | 14 | 13 | 12 | 11 | 10 |  9 |  8 |  7 |  6 |  5 |  4 |  3 |  2 |  1 |  0 |
+     14           *      | +0002h |                                Average Samples                                |
+     15           *      | +0003h |                            Baseline Range Threshold                           |
+     16           *      | +0004h |                               Baseline Minimum X                              |
+     17           *      | +0005h |                               Baseline Minimum Y                              |
+     18           *      | +0006h |                               Baseline Minimum Z                              |
+     19           *      | +0007h |                               Baseline Maximum X                              |
+     20           *      | +0008h |                               Baseline Maximum Y                              |
+     21           *      | +0009h |                               Baseline Maximum Z                              |
+     22           *      |--------|-------------------------------------------------------------------------------|
+     23           *
+     24              @startuml{AccelBaseline_sm.png}
+     25                  title Accel Baseline State Machine
+     26          
+     27                  [*] --> Idle
+     28          
+     29                  Idle : entry / LISxDH__Disable()
+     30                  Idle : exit / StartTimer()
+     31                  Idle --> MeasureBaseline : evBaseline\n/ BaselineSetup()
+     32                  Idle --> SelfTestBaseline : evSelfTest
+     33          
+     34                  MeasureBaseline : entry / AverageSetup()
+     35                  MeasureBaseline : do / AverageMeasure()
+     36                  MeasureBaseline --> MeasureBaseline : evNextAverage
+     37                  MeasureBaseline --> Idle : evPassed
+     38                  MeasureBaseline --> WaitForRecoveredData : evFailed\n/ FailBaseline()
+     39          
+     40                  WaitForRecoveredData : do / WaitForAllAxesSet()
+     41                  WaitForRecoveredData --> Idle : evDataRecovered
+     42          
+     43                  SelfTestBaseline : entry / SelfTestBaselineSetup()
+     44                  SelfTestBaseline : do / SelfTestMeasure()
+     45                  SelfTestBaseline --> SelfTest0 : evPassed
+     46                  SelfTestBaseline --> Idle : evFailed\n/ FailSelfTest()
+     47          
+     48                  SelfTest0 : entry / SelfTest0Setup()
+     49                  SelfTest0 : do / SelfTestMeasure()
+     50                  SelfTest0 --> SelfTest1 : evPassed
+     51                  SelfTest0 --> Idle : evFailed\n/ FailSelfTest()
+     52          
+     53                  SelfTest1 : entry / SelfTest1Setup()
+     54                  SelfTest1 : do / SelfTestMeasure()
+     55                  SelfTest1 --> Idle : evPassed\n/ ClearSelfTestErrors()
+     56                  SelfTest1 --> Idle : evFailed\n/ FailSelfTest()
+     57              @enduml
+     58           *
+     59           * @copyright   Copyright 2017 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     60           */
+     61          
+     62          //  --- Include Files -------------------------------------------------------------------------------------------------
+     63          
+     64          // -- This Module --
+     65          #include "SystemConfig.h"
+     66          
+     67          #if (HBL_LLI_NUM_ACCELEROMETER > 0)
+     68          #include "AccelBaseline.h"
+     69          
+     70          // -- Other Modules --
+     71          #include "API018Diagnostic.h"
+     72          #include "LISxDH.h"
+     73          #include <limits.h>
+     74          #include "Log.h"
+     75          #include "Millis.h"
+     76          #include "SettingFile.h"
+     77          #include <stdlib.h>
+     78          #include <string.h>
+     79          
+     80          //=====================================================================================================================
+     81          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Accel Baseline State Machine
+     82          //=====================================================================================================================
+     83          // !! StateEngineCrank cannot update this code if you change the header !!
+     84          
+     85          
+     86          //! Unique names used to identify states of the Accel Baseline state machine.
+     87          typedef enum ACCEL_BASELINE_STATE_ENUM
+     88          {
+     89              STATE_ACCEL_BASELINE_NONE                    = 0,
+     90          
+     91              STATE_ACCEL_BASELINE_IDLE                    = 1, //!< (initial_state)
+     92              STATE_ACCEL_BASELINE_MEASURE_BASELINE        = 2,
+     93              STATE_ACCEL_BASELINE_SELF_TEST_BASELINE      = 3,
+     94              STATE_ACCEL_BASELINE_WAIT_FOR_RECOVERED_DATA = 4,
+     95              STATE_ACCEL_BASELINE_SELF_TEST0              = 5,
+     96              STATE_ACCEL_BASELINE_SELF_TEST1              = 6,
+     97          
+     98              STATE_ACCEL_BASELINE_END                     = 7
+     99          } ACCEL_BASELINE_STATE_TYPE;
+    100          
+    101          //! The state variable for the Accel Baseline state machine.
+    102          //! State machines with a history pseudostate may write to this variable during initialization.
+    103          //! Other state machines must only write to this variable through auto-generated functions.
+    104          static ACCEL_BASELINE_STATE_TYPE Accel_Baseline_State;
+    105          
+    106          // -- Private Function Prototypes used by the state machine for customization functions --
+    107          static void AverageMeasure(void);
+    108          static void AverageSetup(void);
+    109          static void BaselineSetup(void);
+    110          static void ClearSelfTestErrors(void);
+    111          static void FailBaseline(void);
+    112          static void FailSelfTest(void);
+    113          static void SelfTest0Setup(void);
+    114          static void SelfTest1Setup(void);
+    115          static void SelfTestBaselineSetup(void);
+    116          static void SelfTestMeasure(void);
+    117          static void StartTimer(void);
+    118          static void WaitForAllAxesSet(void);
+    119          
+    120          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+    121          static void AccelBaselineExecute(void);
+    122          static void AccelBaselineInitialize(void);
+    123          static void EventBaseline(void);
+    124          static void EventDataRecovered(void);
+    125          static void EventFailed(void);
+    126          static void EventNextAverage(void);
+    127          static void EventPassed(void);
+    128          static void EventSelfTest(void);
+    129          
+    130          // !! StateEngineCrank cannot update this code if you change the footer !!
+    131          // End of StateEngineCrank Auto-Generated Code.
+    132          
+    133          
+    134          //  --- Private Declarations ------------------------------------------------------------------------------------------
+    135          
+    136          
+    137          // -- Private Constant Declarations --
+    138          
+    139          //! The number of accelerometer samples that must be discarded when running the self-test.
+    140          #define ACCEL_SELF_TEST_DISCARD_COUNT 16
+    141          
+    142          //! The maximum deflection expected during the self-test.
+    143          #define ACCEL_SELF_TEST_MAX_DEFLECTION 360U
+    144          
+    145          //! The minimum deflection expected during the self-test.
+    146          #define ACCEL_SELF_TEST_MIN_DEFLECTION 17U
+    147          
+    148          //! The number of samples to use while running the self-test.
+    149          #define ACCEL_SELF_TEST_SAMPLES 200
+    150          
+    151          //! The value in Accel_Baseline.Axis_Baseline_Updated when X, Y, and Z axis baselines have been updated.
+    152          #define ALL_AXES_UPDATED 7U
+    153          
+    154          //! The maximum number of averages that can be used for calculating the baseline.
+    155          #define MAX_AVERAGE_COUNT 16
+    156          
+    157          //! The name of this module for use by the Log module.
+    158          #define MODULE_NAME MODULE_ACCEL_BASELINE
+    159          
+    160          //! The value used to represent one gravity (1G) of acceleration.
+    161          #define ONE_GRAVITY 256
+    162          
+    163          
+    164          // -- Private Enumerated Constant Declarations --
+    165          
+    166          //! A list of log message IDs that are generated by this module.
+    167          typedef enum MODULE_ACCEL_BASELINE_LOG_MESSAGE_ID_ENUM
+    168          {
+    169              INVALID_ACCELEROMETER_PARAMETERS = 1,//!< INVALID_ACCELEROMETER_PARAMETERS
+    170              COMMAND_TOOK_TOO_LONG,               //!< COMMAND_TOOK_TOO_LONG
+    171              SELF_TEST_NOT_AVAILABLE,             //!< SELF_TEST_NOT_AVAILABLE
+    172              VALIDATION_TEST_NOT_AVAILABLE,       //!< VALIDATION_TEST_NOT_AVAILABLE
+    173              BASELINE_MEASUREMENT_NOT_AVAILABLE,  //!< BASELINE_MEASUREMENT_NOT_AVAILABLE
+    174              VALIDATION_TEST_FAILED,              //!< VALIDATION_TEST_FAILED
+    175              SELF_TEST_FAILED                     //!< SELF_TEST_FAILED
+    176          } MODULE_ACCEL_BASELINE_LOG_MESSAGE_ID_TYPE;
+    177          
+    178          
+    179          // -- Private Structure Type Declarations --
+    180          
+    181          //! The setting file data structure used by the AccelBaseline module.
+    182          // NOTICE: This structure is different than what HA uses on the MCU (removed map parameters since the function to set the map was removed in the acceleromter module)
+    183          typedef PACKED struct SF_ACCEL_BASELINE_STRUCT
+    184          {
+    185              uint8 Baseline_Max_Retries      : 4;
+    186              uint8 Baseline_Average_Count    : 4;
+    187              uint8 Self_Test_Max_Errors      : 4;
+    188              uint8 Baseline_Max_Errors       : 4;
+    189              uint16 Average_Samples;
+    190              uint16 Baseline_Range_Threshold;
+    191              sint16 Baseline_Minimum[3];
+    192              sint16 Baseline_Maximum[3];
+    193          } SF_ACCEL_BASELINE_TYPE;
+    194          
+    195          //! A structure that holds the variables used by this module.
+    196          typedef struct ACCEL_BASELINE_VARS_STRUCT
+    197          {
+    198              //! A pointer to the setting file data for the accelerometer.
+    199              SF_ACCEL_BASELINE_TYPE* Sf;
+    200          
+    201              //! The sum of raw accelerometer points used to calculate an average measurement.
+    202              sint32 Sum[3];
+    203          
+    204              //! A variable used to count time and trigger time-outs.
+    205              uint32 Start_Time;
+    206          
+    207              //! The maximum amount of time that the active command should take.
+    208              uint32 Timeout_Milliseconds;
+    209          
+    210              //! The sequential XYZ points measured during the baseline measurement.
+    211              sint16 Point[MAX_AVERAGE_COUNT][3];
+    212          
+    213              //! The result from a successful baseline measurement attempt.
+    214              sint16 Baseline[3];
+    215          
+    216              //! The number of raw samples while calculating the average measurement.
+    217              sint16 Samples;
+    218          
+    219              //! The number of averages that have been calculated.
+    220              uint8 Average_Count;
+    221          
+    222              //! The 1nd index into the Point[][] array.
+    223              uint8 Average_Index;
+    224          
+    225              //! Bits that are set to 1 when a baseline has been recovered (from ACU nonvolatile memory).
+    226              uint8 Axis_Baseline_Recovered;
+    227          
+    228              //! Bits that are set to 1 when a baseline has been updated.
+    229              uint8 Axis_Baseline_Updated;
+    230          
+    231              //! The number of consecutive times that the self-test has failed.
+    232              uint8 Self_Test_Errors;
+    233          
+    234              //! The number of consecutive times that the baseline measurement has failed.
+    235              uint8 Baseline_Errors;
+    236          } ACCEL_BASELINE_VARS_TYPE;
+    237          
+    238          
+    239          //  --- Private Definitions -------------------------------------------------------------------------------------------
+    240          
+    241          
+    242          // -- Private Flash-Based Constant Definitions --
+    243          
+    244          //! Temporary definition of setting file data to use before setting file is updated.
+    245          static PACKED const SF_ACCEL_BASELINE_TYPE ACCEL_PARAMS =
+    246          {
+    247              4,                                              // uint8 Baseline_Max_Retries      : 4;
+    248              3,                                              // uint8 Baseline_Average_Count    : 4;
+    249              3,                                              // uint8 Self_Test_Max_Errors      : 4;
+    250              3,                                              // uint8 Baseline_Max_Errors       : 4;
+    251              3000,                                           // uint16 Average_Samples;
+    252              25,                                             // uint16 Baseline_Range_Threshold;
+    253              {  -25, -25, 231 },                             // sint16 Baseline_Minimum[3];
+    254              {   25,  25, 281 }                              // sint16 Baseline_Maximum[3];
+    255          };
+    256          
+    257          
+    258          // -- Private Variable Definitions --
+    259          
+    260          //! The variables used by this module.
+    261          static ACCEL_BASELINE_VARS_TYPE Accel_Baseline;
+    262          CT_ASSERT(ACCEL_BASELINE_SIZE == sizeof(Accel_Baseline.Baseline));
+    263          
+    264          
+    265          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    266          
+    267          
+    268          //=====================================================================================================================
+    269          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    270          //=====================================================================================================================
+    271          
+    272          
+    273          //---------------------------------------------------------------------------------------------------------------------
+    274          /**
+    275           * Initialize the AccelBaseline module variables.
+    276           * Read setting file parameters.
+    277           * Orient the Accelerometer axes coordinate system based on the configuration.
+    278           * Start the AccelBaseline state machine if parameters are successfully read.
+    279           */
+    280          void AccelBaseline__Initialize(void)
+    281          {
+    282              // Set all module variables to 0.
+    283              memset(&Accel_Baseline, 0, sizeof(Accel_Baseline));
+    284              Accel_Baseline.Baseline[2] = ONE_GRAVITY;
+    285              Accel_Baseline.Sf = (void*)&ACCEL_PARAMS;   // Implementation from HA used setting file pointer in MCU section only; The configuration will be done in this module until there is a reason to move it
+    286              AccelBaselineInitialize();
+    287          }
+    288          
+    289          //---------------------------------------------------------------------------------------------------------------------
+    290          /**
+    291           * Run the AccelBaseline module's state machine.
+    292           * Check for a command that is taking too long to run and re-initialize the module if necessary.
+    293           */
+    294          void AccelBaseline__Background5ms(void)
+    295          {
+    296              if (Accel_Baseline_State != STATE_ACCEL_BASELINE_NONE)
+    297              {
+    298                  AccelBaselineExecute();
+    299                  if (Accel_Baseline_State != STATE_ACCEL_BASELINE_IDLE)
+    300                  {
+    301                      uint32 elapsed_time = Millis__GetFreeRunningCounter() - Accel_Baseline.Start_Time;
+    302                      if (elapsed_time >= Accel_Baseline.Timeout_Milliseconds)
+    303                      {
+    304                          LOG_ADD_EXCEPTION(COMMAND_TOOK_TOO_LONG, Accel_Baseline_State);
+    305                          EventFailed();
+    306                      }
+    307                  }
+    308              }
+    309          }
+    310          
+    311          
+    312          //---------------------------------------------------------------------------------------------------------------------
+    313          /**
+    314           * Get the measured baseline.
+    315           * @param vector = Pointer to fill with the measured baseline data.
+    316           */
+    317          void AccelBaseline__GetBaseline(sint16* vector)
+    318          {
+    319              memcpy(vector, Accel_Baseline.Baseline, sizeof(Accel_Baseline.Baseline));
+    320          }
+    321          
+    322          
+    323          //---------------------------------------------------------------------------------------------------------------------
+    324          /**
+    325           * Get the address of the measured baseline.
+    326           * @return The address of the measured baseline.
+    327           */
+    328          uint8* AccelBaseline__GetBaselineAddress(void)
+    329          {
+    330              return (uint8*)(void*)Accel_Baseline.Baseline;
+    331          }
+    332          
+    333          
+    334          //---------------------------------------------------------------------------------------------------------------------
+    335          /**
+    336           * Get the number of times that the baseline measurement has failed sequentially.
+    337           * The error counter is reset to 0 after a reset.
+    338           * The error counter is reset to 0 each time the baseline measurement passes.
+    339           * The error counter is reset to 0 each time the baseline measurement generates a fault.
+    340           * @return The number of times that the baseline measurement has failed.
+    341           */
+    342          uint8 AccelBaseline__GetBaselineErrors(void)
+    343          {
+    344              return Accel_Baseline.Baseline_Errors;
+    345          }
+    346          
+    347          
+    348          //---------------------------------------------------------------------------------------------------------------------
+    349          /**
+    350           * Get the number of times that the self-test has failed sequentially.
+    351           * The error counter is reset to 0 after a reset.
+    352           * The error counter is reset to 0 each time the self-test passes.
+    353           * The error counter is reset to 0 each time the self-test generates a fault.
+    354           * @return The number of times that the self-test has failed.
+    355           */
+    356          uint8 AccelBaseline__GetSelfTestErrors(void)
+    357          {
+    358              return Accel_Baseline.Self_Test_Errors;
+    359          }
+    360          
+    361          
+    362          //---------------------------------------------------------------------------------------------------------------------
+    363          /**
+    364           * Get the status of the AccelBaseline module.
+    365           * @return The status of the AccelBaseline module.
+    366           */
+    367          ACCEL_BASELINE_STATUS_TYPE AccelBaseline__GetStatus(void)
+    368          {
+    369              ACCEL_BASELINE_STATUS_TYPE status;
+    370              switch (Accel_Baseline_State)
+    371              {
+    372                  case STATE_ACCEL_BASELINE_IDLE:
+    373                      status = ACCEL_IDLE;
+    374                      break;
+    375                  case STATE_ACCEL_BASELINE_MEASURE_BASELINE:
+    376                      status = ACCEL_MEASURING_BASELINE;
+    377                      break;
+    378                  case STATE_ACCEL_BASELINE_SELF_TEST_BASELINE:
+    379                  case STATE_ACCEL_BASELINE_SELF_TEST0:
+    380                  case STATE_ACCEL_BASELINE_SELF_TEST1:
+    381                      status = ACCEL_RUNNING_SELF_TEST;
+    382                      break;
+    383                  default:
+    384                      status = ACCEL_BASELINE_DISABLED;
+    385                      break;
+    386              }
+    387          
+    388              return(status);
+    389          }
+    390          
+    391          
+    392          //---------------------------------------------------------------------------------------------------------------------
+    393          /**
+    394           * Request that the module measure the baseline acceleration of the machine.
+    395           * @return TRUE if the baseline measurement has been scheduled; otherwise, FALSE.
+    396           */
+    397          BOOL_TYPE AccelBaseline__MeasureBaseline(void)
+    398          {
+    399              BOOL_TYPE is_measurement_started = FALSE;
+    400          
+    401              if ((Accel_Baseline_State == STATE_ACCEL_BASELINE_IDLE) &&
+    402                  (LISxDH__GetStatus() == ACCELEROMETER_DISABLED))
+    403              {
+    404                  EventBaseline();
+    405                  is_measurement_started = TRUE;
+    406              }
+    407              else
+    408              {
+    409                  LOG_ADD_EXCEPTION(BASELINE_MEASUREMENT_NOT_AVAILABLE, Accel_Baseline_State);
+    410                  is_measurement_started = FALSE;
+    411              }
+    412          
+    413              return(is_measurement_started);
+    414          }
+    415          
+    416          
+    417          //---------------------------------------------------------------------------------------------------------------------
+    418          /**
+    419           * Request that the module run the accelerometer self-test.
+    420           * It is recommended that the self-test only be run after the baseline measurement is completed.
+    421           * @return TRUE if the accelerometer self-test is scheduled; otherwise, FALSE.
+    422           */
+    423          BOOL_TYPE AccelBaseline__RunSelfTest(void)
+    424          {
+    425              BOOL_TYPE is_self_test_started = FALSE;
+    426          
+    427              if ((Accel_Baseline_State == STATE_ACCEL_BASELINE_IDLE) &&
+    428                  (LISxDH__GetStatus() == ACCELEROMETER_DISABLED))
+    429              {
+    430                  EventSelfTest();
+    431                  is_self_test_started = TRUE;
+    432              }
+    433              else
+    434              {
+    435                  LOG_ADD_EXCEPTION(SELF_TEST_NOT_AVAILABLE, Accel_Baseline_State);
+    436                  is_self_test_started = FALSE;
+    437              }
+    438          
+    439              return(is_self_test_started);
+    440          }
+    441          
+    442          
+    443          //---------------------------------------------------------------------------------------------------------------------
+    444          /**
+    445           * Get the address of the measured baseline.
+    446           * @return The address of the measured baseline.
+    447           */
+    448          void AccelBaseline__SetInitialBaseline(uint8* array, uint8 length)
+    449          {
+    450              sint16* nv_baseline = (sint16*)(void*)array;
+    451              for (uint8 axis = 0; axis < 3U; axis++)
+    452              {
+    453                  if (length >= sizeof(sint16))
+    454                  {
+    455                      if (BIT_TEST(Accel_Baseline.Axis_Baseline_Updated, axis) == 0)
+    456                      {
+    457                          Accel_Baseline.Baseline[axis] = nv_baseline[axis];
+    458                          BIT_SET(Accel_Baseline.Axis_Baseline_Recovered, axis);
+    459                      }
+    460                      length -= sizeof(sint16);
+    461                  }
+    462                  else
+    463                  {
+    464                      break;                              // Break out of the for() loop.
+    465                  }
+    466              }
+    467          }
+    468          
+    469          
+    470          //=====================================================================================================================
+    471          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    472          //=====================================================================================================================
+    473          
+    474          
+    475          //=====================================================================================================================
+    476          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    477          //=====================================================================================================================
+    478          
+    479          
+    480          //---------------------------------------------------------------------------------------------------------------------
+    481          /**
+    482           * Capture accelerometer points to calculate the baseline measurement.
+    483           */
+    484          static void AverageMeasure(void)
+    485          {
+    486              sint16 vector[3];
+    487              while ((Accel_Baseline.Samples <= Accel_Baseline.Sf->Average_Samples) &&
+    488                     (LISxDH__Read(vector)))
+    489              {
+    490                  // Add the new accelerometer XYZ point to the running sum of raw points.
+    491                  for (uint8 axis = 0; axis < 3U; axis++)
+    492                  {
+    493                      Accel_Baseline.Sum[axis] += vector[axis];
+    494                  }
+    495                  Accel_Baseline.Samples++;
+    496              }
+    497          
+    498              // Check if there is enough data for an average measurement.
+    499              if (Accel_Baseline.Samples >= Accel_Baseline.Sf->Average_Samples)
+    500              {
+    501                  // Calculate and save the average measurement data
+    502                  for (uint8 axis = 0; axis < 3U; axis++)
+    503                  {
+    504                      // Skip the axes whose baseline is already updated.
+    505                      if (BIT_TEST(Accel_Baseline.Axis_Baseline_Updated, axis) == 0)
+    506                      {
+    507                          vector[axis] = Accel_Baseline.Sum[axis] / Accel_Baseline.Samples;
+    508                          Accel_Baseline.Point[Accel_Baseline.Average_Index][axis] = vector[axis];
+    509                      }
+    510                  }
+    511          
+    512                  // Increment counters to indicate that there is a new average measurement.
+    513                  uint8 count = Accel_Baseline.Sf->Baseline_Average_Count;
+    514                  Accel_Baseline.Average_Count++;
+    515                  Accel_Baseline.Average_Index++;
+    516                  if (Accel_Baseline.Average_Index >= count)
+    517                  {
+    518                      Accel_Baseline.Average_Index = 0;
+    519                  }
+    520          
+    521                  // Determine if there are enough average measurements to calculate a baseline.
+    522                  if (Accel_Baseline.Average_Count >= count)
+    523                  {
+    524                      // Check if the average variation is low enough to update the baselines.
+    525                      for (uint8 axis = 0; axis < 3U; axis++)
+    526                      {
+    527                          // Skip the axes whose baseline is already updated.
+    528                          if (BIT_TEST(Accel_Baseline.Axis_Baseline_Updated, axis) == 0)
+    529                          {
+    530                              // Calculate the min and max for the last 'count' measurements.
+    531                              sint16 min = SHRT_MAX;
+    532                              sint16 max = SHRT_MIN;
+    533                              for (uint8 index = 0; index < count; index++)
+    534                              {
+    535                                  if (min > Accel_Baseline.Point[index][axis])
+    536                                  {
+    537                                      min = Accel_Baseline.Point[index][axis];
+    538                                  }
+    539                                  if (max < Accel_Baseline.Point[index][axis])
+    540                                  {
+    541                                      max = Accel_Baseline.Point[index][axis];
+    542                                  }
+    543                              }
+    544          
+    545                              // Check if the min/max range is within a small enough range.
+    546                              if ((max - min) < Accel_Baseline.Sf->Baseline_Range_Threshold)
+    547                              {
+    548                                  sint32 sum = 0;
+    549                                  for (uint8 index = 0; index < count; index++)
+    550                                  {
+    551                                      sum += Accel_Baseline.Point[index][axis];
+    552                                  }
+    553                                  vector[axis] = sum / count;
+    554          
+    555                                  // Validate the proposed baseline measurement value.
+    556                                  min = Accel_Baseline.Sf->Baseline_Minimum[axis];
+    557                                  max = Accel_Baseline.Sf->Baseline_Maximum[axis];
+    558                                  if ((min <= vector[axis]) && (vector[axis] <= max))
+    559                                  {
+    560                                      Accel_Baseline.Baseline[axis] = vector[axis];
+    561                                      BIT_SET(Accel_Baseline.Axis_Baseline_Updated, axis);
+    562                                  }
+    563                              }
+    564                          }
+    565                      }
+    566          
+    567                      // Check if all baselines have been updated.
+    568                      if (Accel_Baseline.Axis_Baseline_Updated == ALL_AXES_UPDATED)
+    569                      {
+    570                          Accel_Baseline.Baseline_Errors = 0;
+    571                          EventPassed();
+    572                      }
+    573                      // Check if the baseline measurement attempt failed.
+    574                      else if (Accel_Baseline.Average_Count >= (count + Accel_Baseline.Sf->Baseline_Max_Retries))
+    575                      {
+    576                          EventFailed();
+    577                      }
+    578                      else
+    579                      {
+    580                          // Need more average measurements for a baseline with a lower noise threshold.
+    581                          EventNextAverage();
+    582                      }
+    583                  }                                           // End baseline measurement calculation attempt.
+    584                  else
+    585                  {
+    586                      // Need more average measurements to ensure a stable signal.
+    587                      EventNextAverage();
+    588                  }
+    589              }                                               // End new average measurement.
+    590          }
+    591          
+    592          
+    593          //---------------------------------------------------------------------------------------------------------------------
+    594          /**
+    595           * Setup variables to make an average measurement.
+    596           */
+    597          static void AverageSetup(void)
+    598          {
+    599              // Reset the variables used to average the accelerometer data.
+    600              Accel_Baseline.Samples = 0;
+    601              memset(Accel_Baseline.Sum, 0, sizeof(Accel_Baseline.Sum));
+    602          }
+    603          
+    604          
+    605          //---------------------------------------------------------------------------------------------------------------------
+    606          /**
+    607           * Setup variables to make a baseline measurement.
+    608           */
+    609          static void BaselineSetup(void)
+    610          {
+    611              memset(Accel_Baseline.Point, 0, sizeof(Accel_Baseline.Point));
+    612              Accel_Baseline.Average_Count = 0;
+    613              Accel_Baseline.Average_Index = 0;
+    614              Accel_Baseline.Axis_Baseline_Updated = 0;
+    615          
+    616              // Setup the accelerometer for the baseline measurement.
+    617              LISxDH__Enable(LISXDH_MODE_NORMAL);
+    618          
+    619              // Set the baseline measurement timeout.
+    620              // For each average sampling: Accel_Baseline.Sf->Average_Samples
+    621              // Number of averages: Accel_Baseline.Sf->Baseline_Average_Count + Accel_Baseline.Sf->Baseline_Max_Retries
+    622              #define ACCEL_BASELINE_TOTAL_SAMPLES (Accel_Baseline.Sf->Average_Samples * (Accel_Baseline.Sf->Baseline_Average_Count + Accel_Baseline.Sf->Baseline_Max_Retries))
+    623              // Sample rate is based on LISXDH_MODE_400HZ.
+    624              #define ACCEL_BASELINE_MILLISECONDS_PER_SAMPLE (1000.0 / 400.0)
+    625              // Add 25% time for communication failure buffer.
+    626              Accel_Baseline.Timeout_Milliseconds = (uint32)(1.25 * ACCEL_BASELINE_MILLISECONDS_PER_SAMPLE * ACCEL_BASELINE_TOTAL_SAMPLES);
+    627          }
+    628          
+    629          
+    630          //---------------------------------------------------------------------------------------------------------------------
+    631          /**
+    632           * Reset the self-test error counter after running the test and passing.
+    633           */
+    634          static void ClearSelfTestErrors(void)
+    635          {
+    636              Accel_Baseline.Self_Test_Errors = 0;
+    637          }
+    638          
+    639          
+    640          //---------------------------------------------------------------------------------------------------------------------
+    641          /**
+    642           * The baseline measurement failed.
+    643           * Count the error. If too many errors, then generate a system fault.
+    644           */
+    645          static void FailBaseline(void)
+    646          {
+    647              if (Accel_Baseline.Baseline_Errors >= Accel_Baseline.Sf->Baseline_Max_Errors)
+    648              {
+    649                  Accel_Baseline.Baseline_Errors = 0;
+    650              }
+    651              Accel_Baseline.Baseline_Errors++;
+    652              if (Accel_Baseline.Baseline_Errors >= Accel_Baseline.Sf->Baseline_Max_Errors)
+    653              {
+    654                  (void)API018Diagnostic__GenerateFault(FAULT_KEY_ACCELEROMETER_ORIENTATION);
+    655              }
+    656          }
+    657          
+    658          
+    659          //---------------------------------------------------------------------------------------------------------------------
+    660          /**
+    661           * The self-test failed.
+    662           * Count the error. If too many errors, then generate a system fault.
+    663           */
+    664          static void FailSelfTest(void)
+    665          {
+    666              if (Accel_Baseline.Self_Test_Errors >= Accel_Baseline.Sf->Self_Test_Max_Errors)
+    667              {
+    668                  Accel_Baseline.Self_Test_Errors = 0;
+    669              }
+    670              Accel_Baseline.Self_Test_Errors++;
+    671              if (Accel_Baseline.Self_Test_Errors >= Accel_Baseline.Sf->Self_Test_Max_Errors)
+    672              {
+    673                  (void)API018Diagnostic__GenerateFault(FAULT_KEY_ACCELEROMETER_SELF_TEST);
+    674              }
+    675          }
+    676          
+    677          
+    678          //---------------------------------------------------------------------------------------------------------------------
+    679          /**
+    680           * Setup variables to do the first self-test.
+    681           * The first self-test applies a positive force to the accelerometer X, Y, and Z sensors.
+    682           */
+    683          static void SelfTest0Setup(void)
+    684          {
+    685              Accel_Baseline.Average_Index = 1;
+    686              Accel_Baseline.Samples = -ACCEL_SELF_TEST_DISCARD_COUNT;
+    687              memset(Accel_Baseline.Sum, 0, sizeof(Accel_Baseline.Sum));
+    688              LISxDH__Enable(LISXDH_MODE_ST_0);
+    689          }
+    690          
+    691          
+    692          //---------------------------------------------------------------------------------------------------------------------
+    693          /**
+    694           * Setup variables to do the second self-test.
+    695           * The second self-test applies a negative force to the accelerometer X, Y, and Z sensors.
+    696           */
+    697          static void SelfTest1Setup(void)
+    698          {
+    699              Accel_Baseline.Average_Index = 2;
+    700              Accel_Baseline.Samples = -ACCEL_SELF_TEST_DISCARD_COUNT;
+    701              memset(Accel_Baseline.Sum, 0, sizeof(Accel_Baseline.Sum));
+    702              LISxDH__Enable(LISXDH_MODE_ST_1);
+    703          }
+    704          
+    705          
+    706          //---------------------------------------------------------------------------------------------------------------------
+    707          /**
+    708           * Setup variables to do a quick baseline measurement for the self-test.
+    709           */
+    710          static void SelfTestBaselineSetup(void)
+    711          {
+    712              Accel_Baseline.Average_Index = 0;
+    713              Accel_Baseline.Samples = -ACCEL_SELF_TEST_DISCARD_COUNT;
+    714              memset(Accel_Baseline.Sum, 0, sizeof(Accel_Baseline.Sum));
+    715              LISxDH__Enable(LISXDH_MODE_ST_REF);
+    716          
+    717              // Set the self-test timeout.
+    718              // For baseline: ACCEL_SELF_TEST_DISCARD_COUNT + ACCEL_SELF_TEST_SAMPLES
+    719              // For positive force test: ACCEL_SELF_TEST_DISCARD_COUNT + ACCEL_SELF_TEST_SAMPLES
+    720              // For negative force test: ACCEL_SELF_TEST_DISCARD_COUNT + ACCEL_SELF_TEST_SAMPLES
+    721              #define ACCEL_SELF_TEST_TOTAL_SAMPLES (3.0 * (ACCEL_SELF_TEST_DISCARD_COUNT + ACCEL_SELF_TEST_SAMPLES))
+    722              // Sample rate is based on LISXDH_MODE_ST_REF, LISXDH_MODE_ST_0, and LISXDH_MODE_ST_1.
+    723              #define ACCEL_SELF_TEST_MILLISECONDS_PER_SAMPLE (1000.0 / 400.0)
+    724              // Add 25% time for communication failure buffer.
+    725              Accel_Baseline.Timeout_Milliseconds = (uint32)(1.25 * ACCEL_SELF_TEST_MILLISECONDS_PER_SAMPLE * ACCEL_SELF_TEST_TOTAL_SAMPLES);
+    726          }
+    727          
+    728          
+    729          //---------------------------------------------------------------------------------------------------------------------
+    730          /**
+    731           * Capture accelerometer points and perform the self-test.
+    732           */
+    733          static void SelfTestMeasure(void)
+    734          {
+    735              sint16 vector[3];
+    736              while ((Accel_Baseline.Samples < ACCEL_SELF_TEST_SAMPLES) &&
+    737                     (LISxDH__Read(vector)))
+    738              {
+    739                  Accel_Baseline.Samples++;
+    740                  if (0 < Accel_Baseline.Samples)             // Discard first samples while accelerometer stabilizes.
+    741                  {
+    742                      // Add the new accelerometer XYZ point to the running sum of raw points.
+    743                      for (uint8 axis = 0; axis < 3U; axis++)
+    744                      {
+    745                          Accel_Baseline.Sum[axis] += vector[axis];
+    746                      }
+    747                  }
+    748              }
+    749              if (Accel_Baseline.Samples >= ACCEL_SELF_TEST_SAMPLES)
+    750              {
+    751                  // Save the self-test point in one of the Point[][] positions.
+    752                  for (uint8 axis = 0; axis < 3U; axis++)
+    753                  {
+    754                      Accel_Baseline.Point[Accel_Baseline.Average_Index][axis] = Accel_Baseline.Sum[axis] / Accel_Baseline.Samples;
+    755                  }
+    756          
+    757                  BOOL_TYPE test_passed = TRUE;
+    758                  if (Accel_Baseline.Average_Index > 0U)       // If 0, then it is the baseline, so skip the test.
+    759                  {
+    760                      // Compare the new point to the baseline Point[0].
+    761                      for (uint8 axis = 0; axis < 3U; axis++)
+    762                      {
+    763                          // Check that the test's displacement is in the expected range.
+    764                          uint16 delta = abs(Accel_Baseline.Point[Accel_Baseline.Average_Index][axis] - Accel_Baseline.Point[0][axis]);
+    765                          if ((delta < ACCEL_SELF_TEST_MIN_DEFLECTION) || (ACCEL_SELF_TEST_MAX_DEFLECTION < delta))
+    766                          {
+    767                              test_passed = FALSE;
+    768                          }
+    769                      }
+    770                  }
+    771          
+    772                  // Manage test result.
+    773                  if (test_passed)
+    774                  {
+    775                      EventPassed();
+    776                  }
+    777                  else
+    778                  {
+    779                      EventFailed();
+    780                  }
+    781              }
+    782          }
+    783          
+    784          
+    785          //---------------------------------------------------------------------------------------------------------------------
+    786          /**
+    787           * Start a timer to time the activities of the current state.
+    788           */
+    789          static void StartTimer(void)
+    790          {
+    791              Accel_Baseline.Start_Time = Millis__GetFreeRunningCounter();
+    792          }
+    793          
+    794          
+    795          //---------------------------------------------------------------------------------------------------------------------
+    796          /**
+    797           * Verify for nonvolatile data to set the baseline axes whose measurements failed.
+    798           */
+    799          static void WaitForAllAxesSet(void)
+    800          {
+    801              if ((Accel_Baseline.Axis_Baseline_Updated | Accel_Baseline.Axis_Baseline_Recovered) == ALL_AXES_UPDATED)
+    802              {
+    803                  EventDataRecovered();
+    804              }
+    805          }
+    806          
+    807          
+    808          //=====================================================================================================================
+    809          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Accel Baseline State Machine
+    810          //=====================================================================================================================
+    811          // !! StateEngineCrank cannot update this code if you change the header !!
+    812          
+    813          
+    814          //---------------------------------------------------------------------------------------------------------------------
+    815          /**
+    816           * The main execution function for the Accel Baseline state machine.
+    817           * This function should be called periodically while the state machine is running.
+    818           *
+    819           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    820           *
+    821           * This function was auto-generated and must not be edited manually.
+    822           * Change the UML used to generate this function and regenerate the source code.
+    823           */
+    824          static void AccelBaselineExecute(void)
+    825          {
+    826              switch(Accel_Baseline_State)
+    827              {
+    828                  case STATE_ACCEL_BASELINE_MEASURE_BASELINE:
+    829                      AverageMeasure();                       // Do function.
+    830                      break;
+    831          
+    832                  case STATE_ACCEL_BASELINE_SELF_TEST_BASELINE:
+    833                  case STATE_ACCEL_BASELINE_SELF_TEST0:
+    834                  case STATE_ACCEL_BASELINE_SELF_TEST1:
+    835                      SelfTestMeasure();                      // Do function.
+    836                      break;
+    837          
+    838                  case STATE_ACCEL_BASELINE_WAIT_FOR_RECOVERED_DATA:
+    839                      WaitForAllAxesSet();                    // Do function.
+    840                      break;
+    841          
+    842                  default:
+    843                      // There is nothing to do for all other values of Accel_Baseline_State.
+    844                      break;
+    845              }
+    846          }
+    847          
+    848          
+    849          //---------------------------------------------------------------------------------------------------------------------
+    850          /**
+    851           * The initialization function for the Accel Baseline state machine.
+    852           * This function resets the state machine to the initial state and executes the initial state's
+    853           * entry function.
+    854           *
+    855           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    856           *
+    857           * This function was auto-generated and must not be edited manually.
+    858           * Change the UML used to generate this function and regenerate the source code.
+    859           */
+    860          static void AccelBaselineInitialize(void)
+    861          {
+    862              Accel_Baseline_State = STATE_ACCEL_BASELINE_IDLE;
+    863              LISxDH__Disable();                       // Entry Function.
+    864          }
+    865          
+    866          
+    867          //---------------------------------------------------------------------------------------------------------------------
+    868          /**
+    869           * Process the Baseline Event for the Accel Baseline state machine.
+    870           *
+    871           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    872           *
+    873           * This function was auto-generated and must not be edited manually.
+    874           * Change the UML used to generate this function and regenerate the source code.
+    875           */
+    876          static void EventBaseline(void)
+    877          {
+    878              switch (Accel_Baseline_State)
+    879              {
+    880                  case STATE_ACCEL_BASELINE_IDLE:
+    881                      StartTimer();                           // Exit function.
+    882                      BaselineSetup();                        // Transition action function.
+    883                      Accel_Baseline_State = STATE_ACCEL_BASELINE_MEASURE_BASELINE;
+    884                      AverageSetup();                         // Entry Function.
+    885                      break;
+    886          
+    887                  default:
+    888                      // Event is ignored for all other values of Accel_Baseline_State.
+    889                      break;
+    890              }
+    891          }
+    892          
+    893          
+    894          //---------------------------------------------------------------------------------------------------------------------
+    895          /**
+    896           * Process the Data Recovered Event for the Accel Baseline state machine.
+    897           *
+    898           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    899           *
+    900           * This function was auto-generated and must not be edited manually.
+    901           * Change the UML used to generate this function and regenerate the source code.
+    902           */
+    903          static void EventDataRecovered(void)
+    904          {
+    905              switch (Accel_Baseline_State)
+    906              {
+    907                  case STATE_ACCEL_BASELINE_WAIT_FOR_RECOVERED_DATA:
+    908                      Accel_Baseline_State = STATE_ACCEL_BASELINE_IDLE;
+    909                      LISxDH__Disable();               // Entry Function.
+    910                      break;
+    911          
+    912                  default:
+    913                      // Event is ignored for all other values of Accel_Baseline_State.
+    914                      break;
+    915              }
+    916          }
+    917          
+    918          
+    919          //---------------------------------------------------------------------------------------------------------------------
+    920          /**
+    921           * Process the Failed Event for the Accel Baseline state machine.
+    922           *
+    923           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    924           *
+    925           * This function was auto-generated and must not be edited manually.
+    926           * Change the UML used to generate this function and regenerate the source code.
+    927           */
+    928          static void EventFailed(void)
+    929          {
+    930              switch (Accel_Baseline_State)
+    931              {
+    932                  case STATE_ACCEL_BASELINE_MEASURE_BASELINE:
+    933                      FailBaseline();                         // Transition action function.
+    934                      Accel_Baseline_State = STATE_ACCEL_BASELINE_WAIT_FOR_RECOVERED_DATA;
+    935                      break;
+    936          
+    937                  case STATE_ACCEL_BASELINE_SELF_TEST_BASELINE:
+    938                  case STATE_ACCEL_BASELINE_SELF_TEST0:
+    939                  case STATE_ACCEL_BASELINE_SELF_TEST1:
+    940                      FailSelfTest();                         // Transition action function.
+    941                      Accel_Baseline_State = STATE_ACCEL_BASELINE_IDLE;
+    942                      LISxDH__Disable();               // Entry Function.
+    943                      break;
+    944          
+    945                  default:
+    946                      // Event is ignored for all other values of Accel_Baseline_State.
+    947                      break;
+    948              }
+    949          }
+    950          
+    951          
+    952          //---------------------------------------------------------------------------------------------------------------------
+    953          /**
+    954           * Process the Next Average Event for the Accel Baseline state machine.
+    955           *
+    956           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    957           *
+    958           * This function was auto-generated and must not be edited manually.
+    959           * Change the UML used to generate this function and regenerate the source code.
+    960           */
+    961          static void EventNextAverage(void)
+    962          {
+    963              switch (Accel_Baseline_State)
+    964              {
+    965                  case STATE_ACCEL_BASELINE_MEASURE_BASELINE:
+    966                      Accel_Baseline_State = STATE_ACCEL_BASELINE_MEASURE_BASELINE;
+    967                      AverageSetup();                         // Entry Function.
+    968                      break;
+    969          
+    970                  default:
+    971                      // Event is ignored for all other values of Accel_Baseline_State.
+    972                      break;
+    973              }
+    974          }
+    975          
+    976          
+    977          //---------------------------------------------------------------------------------------------------------------------
+    978          /**
+    979           * Process the Passed Event for the Accel Baseline state machine.
+    980           *
+    981           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    982           *
+    983           * This function was auto-generated and must not be edited manually.
+    984           * Change the UML used to generate this function and regenerate the source code.
+    985           */
+    986          static void EventPassed(void)
+    987          {
+    988              switch (Accel_Baseline_State)
+    989              {
+    990                  case STATE_ACCEL_BASELINE_MEASURE_BASELINE:
+    991                      Accel_Baseline_State = STATE_ACCEL_BASELINE_IDLE;
+    992                      LISxDH__Disable();               // Entry Function.
+    993                      break;
+    994          
+    995                  case STATE_ACCEL_BASELINE_SELF_TEST_BASELINE:
+    996                      Accel_Baseline_State = STATE_ACCEL_BASELINE_SELF_TEST0;
+    997                      SelfTest0Setup();                       // Entry Function.
+    998                      break;
+    999          
+   1000                  case STATE_ACCEL_BASELINE_SELF_TEST0:
+   1001                      Accel_Baseline_State = STATE_ACCEL_BASELINE_SELF_TEST1;
+   1002                      SelfTest1Setup();                       // Entry Function.
+   1003                      break;
+   1004          
+   1005                  case STATE_ACCEL_BASELINE_SELF_TEST1:
+   1006                      ClearSelfTestErrors();                  // Transition action function.
+   1007                      Accel_Baseline_State = STATE_ACCEL_BASELINE_IDLE;
+   1008                      LISxDH__Disable();               // Entry Function.
+   1009                      break;
+   1010          
+   1011                  default:
+   1012                      // Event is ignored for all other values of Accel_Baseline_State.
+   1013                      break;
+   1014              }
+   1015          }
+   1016          
+   1017          
+   1018          //---------------------------------------------------------------------------------------------------------------------
+   1019          /**
+   1020           * Process the Self Test Event for the Accel Baseline state machine.
+   1021           *
+   1022           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1023           *
+   1024           * This function was auto-generated and must not be edited manually.
+   1025           * Change the UML used to generate this function and regenerate the source code.
+   1026           */
+   1027          static void EventSelfTest(void)
+   1028          {
+   1029              switch (Accel_Baseline_State)
+   1030              {
+   1031                  case STATE_ACCEL_BASELINE_IDLE:
+   1032                      StartTimer();                           // Exit function.
+   1033                      Accel_Baseline_State = STATE_ACCEL_BASELINE_SELF_TEST_BASELINE;
+   1034                      SelfTestBaselineSetup();                // Entry Function.
+   1035                      break;
+   1036          
+   1037                  default:
+   1038                      // Event is ignored for all other values of Accel_Baseline_State.
+   1039                      break;
+   1040              }
+   1041          }
+   1042          
+   1043          
+   1044          // !! StateEngineCrank cannot update this code if you change the footer !!
+   1045          // End of StateEngineCrank Auto-Generated Code.
+   1046          
+   1047          
+   1048          #endif // (HBL_LLI_NUM_ACCELEROMETER > 0)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

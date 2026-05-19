@@ -1,0 +1,1747 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:47
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/Micros/STM32G0x/Driver/Spi/Spi.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Spi.lst -o
+#        obj\Spi.obj source/Micros/STM32G0x/Driver/Spi/Spi.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Spi.lst
+#    Object file  =  obj\Spi.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Micros\STM32G0x\Driver\Spi\Spi.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      Spi GDM module for STM32G0x implements the Spi Standard API (Application Programming Interface).
+      5           *
+      6           *  @details    This module provides the synchronous serial communication services to the application,
+      7           *              such as initialization of Spi module, transmission/reception of byte and multiple bytes
+      8           *              via Spi and status of Spi communication using Dma module
+      9           *
+     10           *  @section    Applicable_Documents
+     11           *                  List here all the applicable documents if needed. <tr>
+     12           *
+     13           *  $Header: $
+     14           *
+     15           *  @copyright  Copyright 2015-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     16           */
+     17          //-------------------------------------- Include Files ----------------------------------------------------------------
+     18          #include "C_Extensions.h"
+     19          #include "Spi.h"
+     20          #include "Micro.h"
+     21          #include "Gpio.h"
+     22          #include <string.h>
+     23          #include "Dma.h"
+     24          
+     25          
+     26          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     27          //=====================================================================================================================
+     28          //Compiler directive
+     29          //=====================================================================================================================
+     30          #ifndef SPI_1_TX_ONLY
+     31              #define SPI_1_TX_ONLY        DISABLED
+     32          #endif
+     33          
+     34          #ifndef SPI_2_TX_ONLY
+     35              #define SPI_2_TX_ONLY        DISABLED
+     36          #endif
+     37          
+     38          #ifndef SPI_3_TX_ONLY
+     39              #define SPI_3_TX_ONLY        DISABLED
+     40          #endif
+     41          
+     42          #if (SPI_BUFFER_SIZE == 0)
+     43              #error : " SPI_BUFFER_SIZE macro value must be non-zero in the Spi_prm.h file"
+     44          #endif
+     45          
+     46          #if (SPI_1_PRESCALER == 0)
+     47              #define SPI_1_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_2)
+     48          #elif (SPI_1_PRESCALER == 1)
+     49              #define SPI_1_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_4)
+     50          #elif (SPI_1_PRESCALER == 2)
+     51              #define SPI_1_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_8)
+     52          #elif (SPI_1_PRESCALER == 3)
+     53              #define SPI_1_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_16)
+     54          #elif (SPI_1_PRESCALER == 4)
+     55              #define SPI_1_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_32)
+     56          #elif (SPI_1_PRESCALER == 5)
+     57              #define SPI_1_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_64)
+     58          #elif (SPI_1_PRESCALER == 6)
+     59              #define SPI_1_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_128)
+     60          #elif (SPI_1_PRESCALER == 7)
+     61              #define SPI_1_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_256)
+     62          #else
+     63              #error : " SPI_1_PRESCALER macro value must be between 0 to 7 in the Spi_prm.h file"
+     64          #endif
+     65          
+     66          #if (SPI_2_PRESCALER == 0)
+     67              #define SPI_2_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_2)
+     68          #elif (SPI_2_PRESCALER == 1)
+     69              #define SPI_2_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_4)
+     70          #elif (SPI_2_PRESCALER == 2)
+     71              #define SPI_2_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_8)
+     72          #elif (SPI_2_PRESCALER == 3)
+     73              #define SPI_2_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_16)
+     74          #elif (SPI_2_PRESCALER == 4)
+     75              #define SPI_2_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_32)
+     76          #elif (SPI_2_PRESCALER == 5)
+     77              #define SPI_2_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_64)
+     78          #elif (SPI_2_PRESCALER == 6)
+     79              #define SPI_2_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_128)
+     80          #elif (SPI_2_PRESCALER == 7)
+     81              #define SPI_2_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_256)
+     82          #else
+     83              #error : " SPI_2_PRESCALER macro value must be between 0 to 7 in the Spi_prm.h file"
+     84          #endif
+     85          
+     86          #if (SPI_3_PRESCALER == 0)
+     87              #define SPI_3_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_2)
+     88          #elif (SPI_3_PRESCALER == 1)
+     89              #define SPI_3_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_4)
+     90          #elif (SPI_3_PRESCALER == 2)
+     91              #define SPI_3_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_8)
+     92          #elif (SPI_3_PRESCALER == 3)
+     93              #define SPI_3_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_16)
+     94          #elif (SPI_3_PRESCALER == 4)
+     95              #define SPI_3_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_32)
+     96          #elif (SPI_3_PRESCALER == 5)
+     97              #define SPI_3_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_64)
+     98          #elif (SPI_3_PRESCALER == 6)
+     99              #define SPI_3_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_128)
+    100          #elif (SPI_3_PRESCALER == 7)
+    101              #define SPI_3_CR1_BR         ((uint16)SPI_BAUDRATEPRESCALER_256)
+    102          #else
+    103              #error : " SPI_3_PRESCALER macro value must be between 0 to 7 in the Spi_prm.h file"
+    104          #endif
+    105          
+    106          #if (SPI_1_POL == 0)
+    107              #define SPI_1_CR1_CPOL       ((uint16)0x0000)
+    108          #elif (SPI_1_POL == 1)
+    109              #define SPI_1_CR1_CPOL       ((uint16)SPI_CR1_CPOL)
+    110          #else
+    111              #error : " SPI_1_POL macro value must be either 0 or 1 in the Spi_prm.h file"
+    112          #endif
+    113          
+    114          #if (SPI_2_POL == 0)
+    115              #define SPI_2_CR1_CPOL       ((uint16)0x0000)
+    116          #elif (SPI_2_POL == 1)
+    117              #define SPI_2_CR1_CPOL       ((uint16)SPI_CR1_CPOL)
+    118          #else
+    119              #error : " SPI_2_POL macro value must be either 0 or 1 in the Spi_prm.h file"
+    120          #endif
+    121          
+    122          #if (SPI_3_POL == 0)
+    123              #define SPI_3_CR1_CPOL       ((uint16)0x0000)
+    124          #elif (SPI_3_POL == 1)
+    125              #define SPI_3_CR1_CPOL       ((uint16)SPI_CR1_CPOL)
+    126          #else
+    127              #error : " SPI_3_POL macro value must be either 0 or 1 in the Spi_prm.h file"
+    128          #endif
+    129          
+    130          #if (SPI_1_CPHA_EDGE == 0)
+    131              #define SPI_1_CR1_CPHA       ((uint16)0x0000)
+    132          #elif (SPI_1_CPHA_EDGE == 1)
+    133              #define SPI_1_CR1_CPHA       ((uint16)SPI_CR1_CPHA)
+    134          #else
+    135              #error : " SPI_1_CPHA_EDGE macro value must be either 0 or 1 in the Spi_prm.h file"
+    136          #endif
+    137          
+    138          #if (SPI_2_CPHA_EDGE == 0)
+    139              #define SPI_2_CR1_CPHA       ((uint16)0x0000)
+    140          #elif (SPI_2_CPHA_EDGE == 1)
+    141              #define SPI_2_CR1_CPHA       ((uint16)SPI_CR1_CPHA)
+    142          #else
+    143              #error : " SPI_2_CPHA_EDGE macro value must be either 0 or 1 in the Spi_prm.h file"
+    144          #endif
+    145          
+    146          #if (SPI_3_CPHA_EDGE == 0)
+    147              #define SPI_3_CR1_CPHA       ((uint16)0x0000)
+    148          #elif (SPI_3_CPHA_EDGE == 1)
+    149              #define SPI_3_CR1_CPHA       ((uint16)SPI_CR1_CPHA)
+    150          #else
+    151              #error : " SPI_3_CPHA_EDGE macro value must be either 0 or 1 in the Spi_prm.h file"
+    152          #endif
+    153          
+    154          #if (SPI_1_LSBFIRST == 0)
+    155              #define SPI_1_CR1_LSBFIRST  ((uint16)0x0000)
+    156          #elif (SPI_1_LSBFIRST == 1)
+    157              #define SPI_1_CR1_LSBFIRST  ((uint16)SPI_CR1_LSBFIRST)
+    158          #else
+    159              #error : " SPI_1_LSBFIRST macro value must be either 0 or 1 in the Spi_prm.h file"
+    160          #endif
+    161          
+    162          #if (SPI_2_LSBFIRST == 0)
+    163              #define SPI_2_CR1_LSBFIRST  ((uint16)0x0000)
+    164          #elif (SPI_2_LSBFIRST == 1)
+    165              #define SPI_2_CR1_LSBFIRST  ((uint16)SPI_CR1_LSBFIRST)
+    166          #else
+    167              #error : " SPI_2_LSBFIRST macro value must be either 0 or 1 in the Spi_prm.h file"
+    168          #endif
+    169          
+    170          #if (SPI_3_LSBFIRST == 0)
+    171              #define SPI_3_CR1_LSBFIRST  ((uint16)0x0000)
+    172          #elif (SPI_3_LSBFIRST == 1)
+    173              #define SPI_3_CR1_LSBFIRST  ((uint16)SPI_CR1_LSBFIRST)
+    174          #else
+    175              #error : " SPI_3_LSBFIRST macro value must be either 0 or 1 in the Spi_prm.h file"
+    176          #endif
+    177          
+    178          //=====================================================================================================================
+    179          // Spi and Dma Configuration
+    180          //=====================================================================================================================
+    181          #define SPI_1_TX_DMA_ENGINE         DMA_ENGINE1
+    182          #define SPI_1_TX_DMA_CHANNEL        DMA_CH2
+    183          
+    184          #define SPI_1_RX_DMA_ENGINE         DMA_ENGINE1
+    185          #define SPI_1_RX_DMA_CHANNEL        DMA_CH3
+    186          
+    187          #define SPI_2_TX_DMA_ENGINE         DMA_ENGINE1
+    188          #define SPI_2_TX_DMA_CHANNEL        DMA_CH4
+    189          
+    190          #define SPI_2_RX_DMA_ENGINE         DMA_ENGINE1
+    191          #define SPI_2_RX_DMA_CHANNEL        DMA_CH5
+    192          
+    193          #define SPI_3_TX_DMA_ENGINE         DMA_ENGINE1
+    194          #define SPI_3_TX_DMA_CHANNEL        DMA_CH6
+    195          
+    196          #define SPI_3_RX_DMA_ENGINE         DMA_ENGINE1
+    197          #define SPI_3_RX_DMA_CHANNEL        DMA_CH7
+    198          
+    199          #ifndef SPI_1_DMA_PRIORITY
+    200              #define SPI_1_DMA_PRIORITY  DMA_PRIORITY_VERYHIGH
+    201          #endif
+    202          
+    203          #ifndef SPI_2_DMA_PRIORITY
+    204              #define SPI_2_DMA_PRIORITY  DMA_PRIORITY_VERYHIGH
+    205          #endif
+    206          
+    207          #ifndef SPI_3_DMA_PRIORITY
+    208              #define SPI_3_DMA_PRIORITY  DMA_PRIORITY_VERYHIGH
+    209          #endif
+    210          
+    211          //=====================================================================================================================
+    212          //Variable section
+    213          //=====================================================================================================================
+    214          typedef struct
+    215          {
+    216              #if (SPI_1_TX_BY_REFERENCE == DISABLED)
+    217                  uint8 Tx_Data[SPI_BUFFER_SIZE];
+    218              #endif
+    219          
+    220              #if (SPI_1_TX_ONLY == DISABLED)
+    221                  uint8 Rx_Data[SPI_BUFFER_SIZE];
+    222              #endif
+    223          
+    224              uint16 Write;
+    225          
+    226              #if (SPI_1_TX_ONLY == DISABLED)
+    227                  uint16 Read;
+    228              #endif
+    229          } SPI_1_FIFO_DEF;
+    230          
+    231          typedef struct
+    232          {
+    233              #if (SPI_2_TX_BY_REFERENCE == DISABLED)
+    234                  uint8 Tx_Data[SPI_BUFFER_SIZE];
+    235              #endif
+    236          
+    237              #if (SPI_2_TX_ONLY == DISABLED)
+    238                  uint8 Rx_Data[SPI_BUFFER_SIZE];
+    239              #endif
+    240          
+    241              uint16 Write;
+    242          
+    243              #if (SPI_2_TX_ONLY == DISABLED)
+    244                  uint16 Read;
+    245              #endif
+    246          } SPI_2_FIFO_DEF;
+    247          
+    248          typedef struct
+    249          {
+    250              #if (SPI_3_TX_BY_REFERENCE == DISABLED)
+    251                  uint8 Tx_Data[SPI_BUFFER_SIZE];
+    252              #endif
+    253          
+    254              #if (SPI_3_TX_ONLY == DISABLED)
+    255                  uint8 Rx_Data[SPI_BUFFER_SIZE];
+    256              #endif
+    257          
+    258              uint16 Write;
+    259          
+    260              #if (SPI_3_TX_ONLY == DISABLED)
+    261                  uint16 Read;
+    262              #endif
+    263          } SPI_3_FIFO_DEF;
+    264          
+    265          #if (SPI_1_FEATURE == ENABLED)
+    266              #pragma location = "RAM_NOTEST_AREA"
+    267              SPI_1_FIFO_DEF Spi1_Buffer;
+    268          
+    269              #if (SPI_1_TX_BY_REFERENCE == DISABLED)
+    270                  static const DMA_INIT_TYPE SPI_1_TX_DMA_CONFIG =
+    271              #else
+    272                  static DMA_INIT_TYPE SPI_1_TX_DMA_CONFIG =
+    273              #endif
+    274                                                                      {
+    275                                                                          (DMA_ADDRESS_TYPE)(&(SPI_1.DR)),
+    276                                                                          #if (SPI_1_TX_BY_REFERENCE == DISABLED)
+    277                                                                              (DMA_ADDRESS_TYPE)(Spi1_Buffer.Tx_Data),
+    278                                                                          #else
+    279                                                                              (DMA_ADDRESS_TYPE)(NULL),
+    280                                                                          #endif
+    281                                                                          DMA_DATA_DIRECTION_MEM_TO_PERIPH,
+    282                                                                          0,
+    283                                                                          DMA_ADDRESS_INCREMENT_FOR_MEM_ADDRESS,
+    284                                                                          DMA_DATA_WIDTH_BYTE,
+    285                                                                          DMA_DATA_WIDTH_BYTE,
+    286                                                                          DMA_MODE_NORMAL,
+    287                                                                          SPI_1_DMA_PRIORITY,
+    288                                                                          DMAMUX_REQ_SPI1_TX
+    289                                                                      };
+    290              #if (SPI_1_TX_ONLY == DISABLED)
+    291                  static const DMA_INIT_TYPE SPI_1_RX_DMA_CONFIG = {   (DMA_ADDRESS_TYPE)(&SPI_1.DR),
+    292                                                                          (DMA_ADDRESS_TYPE)(Spi1_Buffer.Rx_Data),
+    293                                                                          DMA_DATA_DIRECTION_PERIPH_TO_MEM,
+    294                                                                          0,
+    295                                                                          DMA_ADDRESS_INCREMENT_FOR_MEM_ADDRESS,
+    296                                                                          DMA_DATA_WIDTH_BYTE,
+    297                                                                          DMA_DATA_WIDTH_BYTE,
+    298                                                                          DMA_MODE_NORMAL,
+    299                                                                          SPI_1_DMA_PRIORITY,
+    300                                                                          DMAMUX_REQ_SPI1_RX
+    301                                                                      };
+    302              #endif
+    303          #endif
+    304          
+    305          #if (SPI_2_FEATURE == ENABLED)
+    306              #pragma location = "RAM_NOTEST_AREA"
+    307              SPI_2_FIFO_DEF Spi2_Buffer;
+    308          
+    309              #if (SPI_2_TX_BY_REFERENCE == DISABLED)
+    310                  static const DMA_INIT_TYPE SPI_2_TX_DMA_CONFIG =
+    311              #else
+    312                  static DMA_INIT_TYPE SPI_2_TX_DMA_CONFIG =
+    313              #endif
+    314                                                                      {
+    315                                                                          (DMA_ADDRESS_TYPE)(&(SPI_2.DR)),
+    316                                                                          #if (SPI_2_TX_BY_REFERENCE == DISABLED)
+    317                                                                              (DMA_ADDRESS_TYPE)(Spi2_Buffer.Tx_Data),
+    318                                                                          #else
+    319                                                                              (DMA_ADDRESS_TYPE)(NULL),
+    320                                                                          #endif
+    321                                                                          DMA_DATA_DIRECTION_MEM_TO_PERIPH,
+    322                                                                          0,
+    323                                                                          DMA_ADDRESS_INCREMENT_FOR_MEM_ADDRESS,
+    324                                                                          DMA_DATA_WIDTH_BYTE,
+    325                                                                          DMA_DATA_WIDTH_BYTE,
+    326                                                                          DMA_MODE_NORMAL,
+    327                                                                          SPI_2_DMA_PRIORITY,
+    328                                                                          DMAMUX_REQ_SPI2_TX
+    329                                                                      };
+    330              #if (SPI_2_TX_ONLY == DISABLED)
+    331                  static const DMA_INIT_TYPE SPI_2_RX_DMA_CONFIG = {   (DMA_ADDRESS_TYPE)(&SPI_2.DR),
+    332                                                                          (DMA_ADDRESS_TYPE)(Spi2_Buffer.Rx_Data),
+    333                                                                          DMA_DATA_DIRECTION_PERIPH_TO_MEM,
+    334                                                                          0,
+    335                                                                          DMA_ADDRESS_INCREMENT_FOR_MEM_ADDRESS,
+    336                                                                          DMA_DATA_WIDTH_BYTE,
+    337                                                                          DMA_DATA_WIDTH_BYTE,
+    338                                                                          DMA_MODE_NORMAL,
+    339                                                                          SPI_2_DMA_PRIORITY,
+    340                                                                          DMAMUX_REQ_SPI2_RX
+    341                                                                      };
+    342              #endif
+    343          #endif
+    344          
+    345          #if (SPI_3_FEATURE == ENABLED)
+    346              SPI_3_FIFO_DEF Spi3_Buffer;
+    347              #if (SPI_3_TX_BY_REFERENCE == DISABLED)
+    348                  static const DMA_INIT_TYPE SPI_3_TX_DMA_CONFIG =
+    349              #else
+    350                  static DMA_INIT_TYPE SPI_3_TX_DMA_CONFIG =
+    351              #endif
+    352                                                                      {   (DMA_ADDRESS_TYPE)(&SPI_3.DR),
+    353                                                                          #if (SPI_3_TX_BY_REFERENCE == DISABLED)
+    354                                                                              (DMA_ADDRESS_TYPE)(Spi3_Buffer.Tx_Data),
+    355                                                                          #else
+    356                                                                              (DMA_ADDRESS_TYPE)(NULL),
+    357                                                                          #endif
+    358                                                                          DMA_DATA_DIRECTION_MEM_TO_PERIPH,
+    359                                                                          0,
+    360                                                                          DMA_ADDRESS_INCREMENT_FOR_MEM_ADDRESS,
+    361                                                                          DMA_DATA_WIDTH_BYTE,
+    362                                                                          DMA_DATA_WIDTH_BYTE,
+    363                                                                          DMA_MODE_NORMAL,
+    364                                                                          SPI_3_DMA_PRIORITY,
+    365                                                                          DMAMUX_REQ_SPI3_TX
+    366                                                                      };
+    367              #if (SPI_3_TX_ONLY == DISABLED)
+    368                  static const DMA_INIT_TYPE SPI_3_RX_DMA_CONFIG = {   (DMA_ADDRESS_TYPE)(&SPI_3.DR),
+    369                                                                          (DMA_ADDRESS_TYPE)(Spi3_Buffer.Rx_Data),
+    370                                                                          DMA_DATA_DIRECTION_PERIPH_TO_MEM,
+    371                                                                          0,
+    372                                                                          DMA_ADDRESS_INCREMENT_FOR_MEM_ADDRESS,
+    373                                                                          DMA_DATA_WIDTH_BYTE,
+    374                                                                          DMA_DATA_WIDTH_BYTE,
+    375                                                                          DMA_MODE_NORMAL,
+    376                                                                          SPI_3_DMA_PRIORITY,
+    377                                                                          DMAMUX_REQ_SPI3_RX
+    378                                                                      };
+    379              #endif
+    380          #endif
+    381          
+    382          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    383          /**
+    384           * @brief  Configures the specified port-pin into the Alternate function.
+    385           */
+    386          #define GPIO__PIN_COFIG_AF(PORT, PORTBIT, AF)       {(*(volatile GPIO_DEF *)GPIO_PORT_LIST[PORT]).AFR[PORTBIT >> 0x03] = (*(volatile GPIO_DEF *)GPIO_PORT_LIST[PORT]).AFR[PORTBIT >> 0x03] | ((uint32)(AF) << ((uint32)((uint32)PORTBIT & (uint32)0x07) << 2));}
+    387          
+    388          //=====================================================================================================================
+    389          //-------------------------------------- Public Functions -------------------------------------------------------------
+    390          //=====================================================================================================================
+    391          //---------------------------------------------------------------------------------------------------------------------
+    392          //---------------------------------------------------------------------------------------------------------------------
+    393          /**
+    394           *    @brief    This method initializes a specific SPI module by reading the Spi Configuration parameters
+    395           *              defined in the Spi_prm.h file.
+    396           *    @details  Before using Spi module this method should be called to initialize specific Spi module.
+    397           *              To make use of this API the following configuration macros must be defined in the Spi_prm.h file-
+    398           *              "#define SPI_x_PRESCALER"\n
+    399           *              "#define SPI_x_LSBFIRST"\n
+    400           *              "#define SPI_x_POL"\n
+    401           *              "#define SPI_x_CPHA_EDGE"
+    402           *    @param    spi : specific SPI module
+    403           *    @image    html    Spi__Initialize.jpg
+    404           */
+
+   \                                 In section .text, align 2, keep-with-next
+    405          void Spi__Initialize(SPI_ENUM_DEF spi)
+    406          {
+    407              #if ((SPI_1_FEATURE == ENABLED) || (SPI_2_FEATURE == ENABLED) || (SPI_3_FEATURE == ENABLED))
+    408          
+    409                  //Initialize the DMA
+    410                  Dma__EngineInitialize();
+    411          
+    412                  //Clear the buffers
+    413                  Spi__Clear(spi);
+    414          
+    415                  #if (SPI_1_FEATURE == ENABLED)
+    416                      if (spi == SPI1)
+    417                      {
+    418                          //Enable the clock for Spi1 module
+    419                          RCC.APBENR2 |= RCC_APBENR2_SPI1EN;
+    420          
+    421                          //Reset the Spi1
+    422                          RCC.APBRSTR2 |= RCC_APBRSTR2_SPI1RST;
+    423                          RCC.APBRSTR2 &= (uint32)(~RCC_APBRSTR2_SPI1RST);
+    424          
+    425                          #if (SPI_1_TX_ONLY == DISABLED)
+    426                              // 8bits data format
+    427                              // RXNE event is generated if the FIFO level is greater than or equal to 1/4 (8-bit)
+    428                              SPI_1.CR2 = SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2 | SPI_CR2_FRXTH;
+    429          
+    430                              // 2-line unidirectional data mode selected
+    431                              // CRC Disable
+    432                              // Spi1 Baud rate, Polarity, Edge, DataFrame Format, Full Duplex, Software slave management
+    433                              // Master Mode Enable, Spi Enabled.
+    434                              SPI_1.CR1 = SPI_1_CR1_BR | SPI_1_CR1_CPOL | SPI_1_CR1_CPHA | SPI_1_CR1_LSBFIRST | SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR;
+    435          
+    436                          #else
+    437                              // 8bits data format
+    438                              SPI_1.CR2 = SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2;
+    439          
+    440                              // 1-line bidirectional data mode selected
+    441                              // Transmit only mode enabled
+    442                              // CRC Disable
+    443                              // Spi1 Baud rate, Polarity, Edge, DataFrame Format, Software slave management
+    444                              // Master Mode Enable, Spi Enabled.
+    445                              SPI_1.CR1 = SPI_1_CR1_BR | SPI_1_CR1_CPOL | SPI_1_CR1_CPHA | SPI_1_CR1_LSBFIRST | SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR | SPI_CR1_BIDIMODE | SPI_CR1_BIDIOE;
+    446                          #endif
+    447          
+    448                          #if (SPI_1_TX_ONLY == DISABLED)
+    449                              SPI_1.CR2 |= SPI_CR2_LDMARX;
+    450                          #endif
+    451                          SPI_1.CR2 |= SPI_CR2_LDMATX;
+    452                      }
+    453                  #endif
+    454          
+    455                  #if (SPI_2_FEATURE == ENABLED)
+    456                      if (spi == SPI2)
+    457                      {
+    458                          //Enable the clock for Spi1 module
+    459                          RCC.APBENR1 |= RCC_APBENR1_SPI2EN;
+    460          
+    461                          //Reset the Spi1
+    462                          RCC.APBRSTR1 |= RCC_APBRSTR1_SPI2RST;
+    463                          RCC.APBRSTR1 &= (uint32)(~RCC_APBRSTR1_SPI2RST);
+    464          
+    465                          #if (SPI_2_TX_ONLY == DISABLED)
+    466                              // 8bits data format
+    467                              // RXNE event is generated if the FIFO level is greater than or equal to 1/4 (8-bit)
+    468                              SPI_2.CR2 = SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2 | SPI_CR2_FRXTH;
+    469          
+    470                              // 2-line unidirectional data mode selected
+    471                              // CRC Disable
+    472                              // Spi1 Baud rate, Polarity, Edge, DataFrame Format, Full Duplex, Software slave management
+    473                              // Master Mode Enable, Spi Enabled.
+    474                              SPI_2.CR1 = SPI_2_CR1_BR | SPI_2_CR1_CPOL | SPI_2_CR1_CPHA | SPI_2_CR1_LSBFIRST | SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR;
+    475          
+    476                          #else
+    477                              // 8bits data format
+    478                              SPI_2.CR2 = SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2;
+    479          
+    480                              // 1-line bidirectional data mode selected
+    481                              // Transmit only mode enabled
+    482                              // CRC Disable
+    483                              // Spi1 Baud rate, Polarity, Edge, DataFrame Format, Software slave management
+    484                              // Master Mode Enable, Spi Enabled.
+    485                              SPI_2.CR1 = SPI_2_CR1_BR | SPI_2_CR1_CPOL | SPI_2_CR1_CPHA | SPI_2_CR1_LSBFIRST | SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR | SPI_CR1_BIDIMODE | SPI_CR1_BIDIOE;
+    486                          #endif
+    487          
+    488                          #if (SPI_2_TX_ONLY == DISABLED)
+    489                              SPI_2.CR2 |= SPI_CR2_LDMARX;
+    490                          #endif
+    491                          SPI_2.CR2 |= SPI_CR2_LDMATX;
+    492                      }
+    493                  #endif
+    494          
+    495                  #if (SPI_3_FEATURE == ENABLED)
+    496                      if (spi == SPI3)
+    497                      {
+    498                          //Enable the clock for Spi1 module
+    499                          RCC.APBENR1 |= RCC_APBENR1_SPI3EN;
+    500          
+    501                          //Reset the Spi1
+    502                          RCC.APBRSTR1 |= RCC_APBRSTR1_SPI3RST;
+    503                          RCC.APBRSTR1 &= (uint32)(~RCC_APBRSTR1_SPI3RST);
+    504          
+    505                          #if (SPI_3_TX_ONLY == DISABLED)
+    506                              // 8bits data format
+    507                              // RXNE event is generated if the FIFO level is greater than or equal to 1/4 (8-bit)
+    508                              SPI_3.CR2 = SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2 | SPI_CR2_FRXTH;
+    509          
+    510                              // 2-line unidirectional data mode selected
+    511                              // CRC Disable
+    512                              // Spi1 Baud rate, Polarity, Edge, DataFrame Format, Full Duplex, Software slave management
+    513                              // Master Mode Enable, Spi Enabled.
+    514                              SPI_3.CR1 = SPI_3_CR1_BR | SPI_3_CR1_CPOL | SPI_3_CR1_CPHA | SPI_3_CR1_LSBFIRST | SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR;
+    515                          #else
+    516                              // 8bits data format
+    517                              SPI_3.CR2 = SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2;
+    518          
+    519                              // 1-line bidirectional data mode selected
+    520                              // Transmit only mode enabled
+    521                              // CRC Disable
+    522                              // Spi1 Baud rate, Polarity, Edge, DataFrame Format, Software slave management
+    523                              // Master Mode Enable, Spi Enabled.
+    524                              SPI_3.CR1 = SPI_3_CR1_BR | SPI_3_CR1_CPOL | SPI_3_CR1_CPHA | SPI_3_CR1_LSBFIRST | SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR | SPI_CR1_BIDIMODE | SPI_CR1_BIDIOE;
+    525                          #endif
+    526          
+    527                          #if (SPI_3_TX_ONLY == DISABLED)
+    528                              SPI_3.CR2 |= SPI_CR2_LDMARX;
+    529                          #endif
+    530                          SPI_3.CR2 |= SPI_CR2_LDMATX;
+    531                      }
+    532                  #endif
+    533          
+    534                  Spi__Enable(spi);
+    535              #endif
+    536          }
+   \                     Spi__Initialize: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    537          
+    538          //---------------------------------------------------------------------------------------------------------------------
+    539          /**
+    540           *    @brief    It enables a specific Spi device.
+    541           *    @details  This method should be called after disabling the Spi module.
+    542           *    @param    spi : specific spi device
+    543           */
+
+   \                                 In section .text, align 2, keep-with-next
+    544          void Spi__Enable(SPI_ENUM_DEF spi)
+    545          {
+    546              #if ((SPI_1_FEATURE == ENABLED) || (SPI_2_FEATURE == ENABLED) || (SPI_3_FEATURE == ENABLED))
+    547                  #if (SPI_1_FEATURE == ENABLED)
+    548                      if (spi == SPI1)
+    549                      {
+    550                          GPIO__PIN_COFIG_AF(SPI_1_MOSI_PORT, SPI_1_MOSI_PORTBIT, SPI_1_MOSI_AF);
+    551                          Gpio__PinConfig(SPI_1_MOSI_PORT, SPI_1_MOSI_PORTBIT, SPECIAL_FUNCTION_PUSH_PULL);
+    552          
+    553                          GPIO__PIN_COFIG_AF(SPI_1_SCK_PORT, SPI_1_SCK_PORTBIT, SPI_1_SCK_AF);
+    554                          Gpio__PinConfig(SPI_1_SCK_PORT, SPI_1_SCK_PORTBIT, SPECIAL_FUNCTION_PUSH_PULL);
+    555          
+    556                          #if (SPI_1_TX_ONLY == DISABLED)
+    557                              GPIO__PIN_COFIG_AF(SPI_1_MISO_PORT, SPI_1_MISO_PORTBIT, SPI_1_MISO_AF);
+    558                              Gpio__PinConfig(SPI_1_MISO_PORT, SPI_1_MISO_PORTBIT, SPECIAL_FUNCTION_PUSH_PULL);
+    559                          #endif
+    560          
+    561                          SPI_1.CR1 |= SPI_CR1_SPE;    //Enable the Spi1
+    562                      }
+    563                  #endif
+    564          
+    565                  #if (SPI_2_FEATURE == ENABLED)
+    566                      if (spi == SPI2)
+    567                      {
+    568                          GPIO__PIN_COFIG_AF(SPI_2_MOSI_PORT, SPI_2_MOSI_PORTBIT, SPI_2_MOSI_AF);
+    569                          Gpio__PinConfig(SPI_2_MOSI_PORT, SPI_2_MOSI_PORTBIT, SPECIAL_FUNCTION_PUSH_PULL);
+    570          
+    571                          GPIO__PIN_COFIG_AF(SPI_2_SCK_PORT, SPI_2_SCK_PORTBIT, SPI_2_SCK_AF);
+    572                          Gpio__PinConfig(SPI_2_SCK_PORT, SPI_2_SCK_PORTBIT, SPECIAL_FUNCTION_PUSH_PULL);
+    573          
+    574                          #if (SPI_2_TX_ONLY == DISABLED)
+    575                              GPIO__PIN_COFIG_AF(SPI_2_MISO_PORT, SPI_2_MISO_PORTBIT, SPI_2_MISO_AF);
+    576                              Gpio__PinConfig(SPI_2_MISO_PORT, SPI_2_MISO_PORTBIT, SPECIAL_FUNCTION_PUSH_PULL);
+    577                          #endif
+    578          
+    579                          SPI_2.CR1 |= SPI_CR1_SPE;    //Enable the Spi2
+    580                      }
+    581                  #endif
+    582          
+    583                  #if (SPI_3_FEATURE == ENABLED)
+    584                      if (spi == SPI3)
+    585                      {
+    586                          GPIO__PIN_COFIG_AF(SPI_3_MOSI_PORT, SPI_3_MOSI_PORTBIT, SPI_3_MOSI_AF);
+    587                          Gpio__PinConfig(SPI_3_MOSI_PORT, SPI_3_MOSI_PORTBIT, SPECIAL_FUNCTION_PUSH_PULL);
+    588          
+    589                          GPIO__PIN_COFIG_AF(SPI_3_SCK_PORT, SPI_3_SCK_PORTBIT, SPI_3_SCK_AF);
+    590                          Gpio__PinConfig(SPI_3_SCK_PORT, SPI_3_SCK_PORTBIT, SPECIAL_FUNCTION_PUSH_PULL);
+    591          
+    592                          #if (SPI_3_TX_ONLY == DISABLED)
+    593                              GPIO__PIN_COFIG_AF(SPI_3_MISO_PORT, SPI_3_MISO_PORTBIT, SPI_3_MISO_AF);
+    594                              Gpio__PinConfig(SPI_3_MISO_PORT, SPI_3_MISO_PORTBIT, SPECIAL_FUNCTION_PUSH_PULL);
+    595                          #endif
+    596          
+    597                          SPI_3.CR1 |= SPI_CR1_SPE;    //Enable the Spi2
+    598                      }
+    599                  #endif
+    600              #endif
+    601          }
+   \                     Spi__Enable: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    602          
+    603          //---------------------------------------------------------------------------------------------------------------------
+    604          /**
+    605           *    @brief    It disables a specific Spi device.
+    606           *    @details  The Spi must be enabled by calling Spi_Enable() after disable before performing the Spi communication.
+    607           *    @param    spi : specific spi device
+    608           */
+
+   \                                 In section .text, align 2, keep-with-next
+    609          void Spi__Disable(SPI_ENUM_DEF spi)
+    610          {
+    611              #if ((SPI_1_FEATURE == ENABLED) || (SPI_2_FEATURE == ENABLED) || (SPI_3_FEATURE == ENABLED))
+    612                  #if (SPI_1_FEATURE == ENABLED)
+    613                      if (spi == SPI1)
+    614                      {
+    615                          SPI_1.CR1 &= (uint16)(~SPI_CR1_SPE);          //Disable the Spi1
+    616                      }
+    617                  #endif
+    618          
+    619                  #if (SPI_2_FEATURE == ENABLED)
+    620                      if (spi == SPI2)
+    621                      {
+    622                          SPI_2.CR1 &= (uint16)(~SPI_CR1_SPE);          //Disable the Spi1
+    623                      }
+    624                  #endif
+    625          
+    626                  #if (SPI_3_FEATURE == ENABLED)
+    627                      if (spi == SPI3)
+    628                      {
+    629                          SPI_3.CR1 &= (uint16)(~SPI_CR1_SPE);          //Disable the Spi1
+    630                      }
+    631                  #endif
+    632              #endif
+    633          }
+   \                     Spi__Disable: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    634          
+    635          //---------------------------------------------------------------------------------------------------------------------
+    636          /**
+    637           *    @brief    This method clears transmit and receive buffers of a specific Spi.
+    638           *    @param    spi : specific spi device
+    639           *    @image    html    Spi__Clear.jpg
+    640           */
+
+   \                                 In section .text, align 2, keep-with-next
+    641          void Spi__Clear(SPI_ENUM_DEF spi)
+    642          {
+    643              #if ((SPI_1_FEATURE == ENABLED) || (SPI_2_FEATURE == ENABLED) || (SPI_3_FEATURE == ENABLED))
+    644                  #if (SPI_1_FEATURE == ENABLED)
+    645                      if (spi == SPI1)
+    646                      {
+    647                          Dma__StopTransfer(SPI_1_TX_DMA_ENGINE, SPI_1_TX_DMA_CHANNEL);
+    648          
+    649                          #if (SPI_1_TX_ONLY == DISABLED)
+    650                              Dma__StopTransfer(SPI_1_RX_DMA_ENGINE, SPI_1_RX_DMA_CHANNEL);
+    651                          #endif
+    652          
+    653                          Spi1_Buffer.Write = 0;
+    654          
+    655                          #if (SPI_1_TX_ONLY == DISABLED)
+    656                              Spi1_Buffer.Read = 0;
+    657                          #endif
+    658                      }
+    659                  #endif
+    660          
+    661                  #if (SPI_2_FEATURE == ENABLED)
+    662                      if (spi == SPI2)
+    663                      {
+    664                          Dma__StopTransfer(SPI_2_TX_DMA_ENGINE, SPI_2_TX_DMA_CHANNEL);
+    665          
+    666                          #if (SPI_2_TX_ONLY == DISABLED)
+    667                              Dma__StopTransfer(SPI_2_RX_DMA_ENGINE, SPI_2_RX_DMA_CHANNEL);
+    668                          #endif
+    669          
+    670                          Spi2_Buffer.Write = 0;
+    671          
+    672                          #if (SPI_2_TX_ONLY == DISABLED)
+    673                              Spi2_Buffer.Read = 0;
+    674                          #endif
+    675                      }
+    676                  #endif
+    677          
+    678                  #if (SPI_3_FEATURE == ENABLED)
+    679                      if (spi == SPI3)
+    680                      {
+    681                          Dma__StopTransfer(SPI_3_TX_DMA_ENGINE, SPI_3_TX_DMA_CHANNEL);
+    682          
+    683                          #if (SPI_3_TX_ONLY == DISABLED)
+    684                              Dma__StopTransfer(SPI_3_RX_DMA_ENGINE, SPI_3_RX_DMA_CHANNEL);
+    685                          #endif
+    686          
+    687                          Spi3_Buffer.Write = 0;
+    688          
+    689                          #if (SPI_3_TX_ONLY == DISABLED)
+    690                              Spi3_Buffer.Read = 0;
+    691                          #endif
+    692                      }
+    693                  #endif
+    694              #endif
+    695          }
+   \                     Spi__Clear: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    696          
+    697          //---------------------------------------------------------------------------------------------------------------------
+    698          /**
+    699           *    @brief    This method writes data from "source" (buffer address mentioned by the Application)
+    700           *              to the "destination" (Transmitter FIFO) as per the size mentioned to the specific Spi and also
+    701           *              returns the response for the write operation.
+    702           *    @details  The data in the Transmitter FIFO is sent to other Spi node through the specified Spi COM port
+    703           *              whenever the Transmitter is free. Before writing into the Transmitter FIFO check for the
+    704           *              FIFO availability using Spi__GetStatus() API to avoid the over writing on the existing data.
+    705           *    @param    spi  : specific Spi device
+    706           *    @param    buf  : source buffer from where the data to be sent
+    707           *    @param    size : defines the amount of data to be sent
+    708           *      @return   BOOL_TYPE
+    709           *      @retval   TRUE(1)  : desired request is successfully executed
+    710           *                FALSE(0) : desired request is not successfully executed
+    711           *    @image    html    Spi__Write.jpg
+    712           */
+
+   \                                 In section .text, align 2, keep-with-next
+    713          BOOL_TYPE Spi__Write(SPI_ENUM_DEF spi, uint8 * buf, uint16 size)
+    714          {
+    715              #if ((SPI_1_FEATURE == ENABLED) || (SPI_2_FEATURE == ENABLED) || (SPI_3_FEATURE == ENABLED))
+    716                  MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    717                  BOOL_TYPE response;
+    718          
+    719                  response = FALSE;
+    720          
+    721                  if (size <= SPI_BUFFER_SIZE)
+    722                  {
+    723                      #if (SPI_1_FEATURE == ENABLED)
+    724                          if (spi == SPI1)
+    725                          {
+    726                              MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    727          
+    728                              //Wait till FTLVL == 0 and busy == 0
+    729                              if (((SPI_1.CR1 & SPI_CR1_SPE) != FALSE) &&
+    730                                  (Dma__GetFlagStatus(SPI_1_TX_DMA_ENGINE, SPI_1_TX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING) &&
+    731          
+    732                                  #if (SPI_1_TX_ONLY == DISABLED)
+    733                                      (Dma__GetFlagStatus(SPI_1_RX_DMA_ENGINE, SPI_1_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING) &&
+    734                                  #endif
+    735          
+    736                                  ((SPI_1.SR & SPI_SR_BSY) == FALSE))
+    737                              {
+    738                                  //Clear the Buffer index
+    739                                  Spi1_Buffer.Write = 0;
+    740          
+    741                                  //Clear the Dma Tx, Rx Bit
+    742                                  SPI_1.CR2 &= (uint16)(~( SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN));
+    743          
+    744                                  #if (SPI_1_TX_ONLY == DISABLED)
+    745                                      Spi1_Buffer.Read = 0;
+    746                                  #endif
+    747          
+    748                                  #if (SPI_1_TX_BY_REFERENCE == DISABLED)
+    749                                      memcpy((Spi1_Buffer.Tx_Data),buf, size);
+    750                                  #else
+    751                                      SPI_1_TX_DMA_CONFIG.DMA_MemBaseAddr = (DMA_ADDRESS_TYPE)buf;
+    752                                  #endif
+    753          
+    754                                  Dma__Initialize(SPI_1_TX_DMA_ENGINE, SPI_1_TX_DMA_CHANNEL, (DMA_INIT_TYPE*)(&SPI_1_TX_DMA_CONFIG));
+    755          
+    756                                  #if (SPI_1_TX_ONLY == DISABLED)
+    757                                      Dma__Initialize(SPI_1_RX_DMA_ENGINE, SPI_1_RX_DMA_CHANNEL, (DMA_INIT_TYPE*)(&SPI_1_RX_DMA_CONFIG));
+    758                                  #endif
+    759          
+    760                                  if (Dma__StartTransfer(SPI_1_TX_DMA_ENGINE, SPI_1_TX_DMA_CHANNEL, size) == TRUE)
+    761                                  {
+    762                                      #if (SPI_1_TX_ONLY == DISABLED)
+    763                                      if (Dma__StartTransfer(SPI_1_RX_DMA_ENGINE, SPI_1_RX_DMA_CHANNEL, size) == TRUE)
+    764                                      #endif
+    765                                      {
+    766                                          #if (SPI_1_TX_ONLY == DISABLED)
+    767                                              SPI_1.CR2 |= ( SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN);        //Initiate DMA transfer
+    768                                          #else
+    769                                              SPI_1.CR2 |= SPI_CR2_TXDMAEN;        //Initiate DMA transfer
+    770                                          #endif
+    771          
+    772                                          Spi1_Buffer.Write = size;
+    773          
+    774                                          response = TRUE;
+    775                                      }
+    776                                  }
+    777          
+    778                              }
+    779          
+    780                              MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    781                          }
+    782                      #endif
+    783          
+    784          
+    785                      #if (SPI_2_FEATURE == ENABLED)
+    786                          if (spi == SPI2)
+    787                          {
+    788                              MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    789          
+    790                              //Wait till FTLVL == 0 and busy == 0
+    791                              if (((SPI_2.CR1 & SPI_CR1_SPE) != FALSE) &&
+    792                                  (Dma__GetFlagStatus(SPI_2_TX_DMA_ENGINE, SPI_2_TX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING) &&
+    793          
+    794                                  #if (SPI_2_TX_ONLY == DISABLED)
+    795                                  (Dma__GetFlagStatus(SPI_2_RX_DMA_ENGINE, SPI_2_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING) &&
+    796                                  #endif
+    797          
+    798                                  ((SPI_2.SR & SPI_SR_BSY) == FALSE))
+    799                              {
+    800                                  //Clear the Buffer index
+    801                                  Spi2_Buffer.Write = 0;
+    802          
+    803                                  //Clear the Dma Tx, Rx Bit
+    804                                  SPI_2.CR2 &= (uint16)(~( SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN));
+    805          
+    806                                  #if (SPI_2_TX_ONLY == DISABLED)
+    807                                      Spi2_Buffer.Read = 0;
+    808                                  #endif
+    809          
+    810                                  #if (SPI_2_TX_BY_REFERENCE == DISABLED)
+    811                                      memcpy((Spi2_Buffer.Tx_Data),buf, size);
+    812                                  #else
+    813                                      SPI_2_TX_DMA_CONFIG.DMA_MemBaseAddr = (DMA_ADDRESS_TYPE)buf;
+    814                                  #endif
+    815          
+    816                                  Dma__Initialize(SPI_2_TX_DMA_ENGINE, SPI_2_TX_DMA_CHANNEL, (DMA_INIT_TYPE*)(&SPI_2_TX_DMA_CONFIG));
+    817          
+    818                                  #if (SPI_2_TX_ONLY == DISABLED)
+    819                                      Dma__Initialize(SPI_2_RX_DMA_ENGINE, SPI_2_RX_DMA_CHANNEL, (DMA_INIT_TYPE*)(&SPI_2_RX_DMA_CONFIG));
+    820                                  #endif
+    821          
+    822                                  if (Dma__StartTransfer(SPI_2_TX_DMA_ENGINE, SPI_2_TX_DMA_CHANNEL, size) == TRUE)
+    823                                  {
+    824                                      #if (SPI_2_TX_ONLY == DISABLED)
+    825                                      if (Dma__StartTransfer(SPI_2_RX_DMA_ENGINE, SPI_2_RX_DMA_CHANNEL, size) == TRUE)
+    826                                      #endif
+    827                                      {
+    828                                          #if (SPI_2_TX_ONLY == DISABLED)
+    829                                              SPI_2.CR2 |= ( SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN);        //Initiate DMA transfer
+    830                                          #else
+    831                                              SPI_2.CR2 |= SPI_CR2_TXDMAEN;        //Initiate DMA transfer
+    832                                          #endif
+    833                                          Spi2_Buffer.Write = size;
+    834          
+    835                                          response = TRUE;
+    836                                      }
+    837                                  }
+    838                                  MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    839                              }
+    840                          }
+    841                      #endif
+    842          
+    843                      #if (SPI_3_FEATURE == ENABLED)
+    844                          if (spi == SPI3)
+    845                          {
+    846                              MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    847          
+    848                              //Wait till FTLVL == 0 and busy == 0
+    849                              if (((SPI_3.CR1 & SPI_CR1_SPE) != FALSE) &&
+    850                                  (Dma__GetFlagStatus(SPI_3_TX_DMA_ENGINE, SPI_3_TX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING) &&
+    851          
+    852                                  #if (SPI_3_TX_ONLY == DISABLED)
+    853                                  (Dma__GetFlagStatus(SPI_3_RX_DMA_ENGINE, SPI_3_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING) &&
+    854                                  #endif
+    855          
+    856                                  ((SPI_3.SR & SPI_SR_BSY) == FALSE))
+    857                              {
+    858                                  //Clear the Buffer index
+    859                                  Spi3_Buffer.Write = 0;
+    860          
+    861                                  //Clear the Dma Tx, Rx Bit
+    862                                  SPI_1.CR2 &= (uint16)(~( SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN));
+    863          
+    864                                  #if (SPI_3_TX_ONLY == DISABLED)
+    865                                      Spi3_Buffer.Read = 0;
+    866                                  #endif
+    867          
+    868                                  #if (SPI_3_TX_BY_REFERENCE == DISABLED)
+    869                                      memcpy((Spi3_Buffer.Tx_Data),buf, size);
+    870                                  #else
+    871                                      SPI_3_TX_DMA_CONFIG.DMA_MemBaseAddr = (DMA_ADDRESS_TYPE)buf;
+    872                                  #endif
+    873          
+    874                                  Dma__Initialize(SPI_3_TX_DMA_ENGINE, SPI_3_TX_DMA_CHANNEL, (DMA_INIT_TYPE*)(&SPI_3_TX_DMA_CONFIG));
+    875          
+    876                                  #if (SPI_3_TX_ONLY == DISABLED)
+    877                                      Dma__Initialize(SPI_3_RX_DMA_ENGINE, SPI_3_RX_DMA_CHANNEL, (DMA_INIT_TYPE*)(&SPI_3_RX_DMA_CONFIG));
+    878                                  #endif
+    879          
+    880                                  if (Dma__StartTransfer(SPI_3_TX_DMA_ENGINE, SPI_3_TX_DMA_CHANNEL, size) == TRUE)
+    881                                  {
+    882                                      #if (SPI_3_TX_ONLY == DISABLED)
+    883                                      if (Dma__StartTransfer(SPI_3_RX_DMA_ENGINE, SPI_3_RX_DMA_CHANNEL, size) == TRUE)
+    884                                      #endif
+    885                                      {
+    886                                          #if (SPI_3_TX_ONLY == DISABLED)
+    887                                              SPI_3.CR2 |= ( SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN);        //Initiate DMA transfer
+    888                                          #else
+    889                                              SPI_3.CR2 |= SPI_CR2_TXDMAEN;        //Initiate DMA transfer
+    890                                          #endif
+    891                                          Spi3_Buffer.Write = size;
+    892          
+    893                                          response = TRUE;
+    894                                      }
+    895                                  }
+    896                              }
+    897          
+    898                              MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    899                          }
+    900                      #endif
+    901          
+    902                  }
+    903          
+    904              return (response);
+    905          
+    906              #else
+    907                  return(FALSE);
+   \                     Spi__Write: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    908              #endif
+    909          }
+    910          
+    911          //---------------------------------------------------------------------------------------------------------------------
+    912          /**
+    913           *    @brief    This method reads data from "receive FIFO" and copies to the "address of the buffer" mentioned by the
+    914           *              Application as per the size and also returns the response for the read operation.
+    915           *    @details  Before reading the Receiver FIFO check for the
+    916           *              data availability in the Receiver FIFO using Spi__GetStatus() API.
+    917           *    @param    spi : specific spi device
+    918           *    @param    buf : Indicates the buffer�s address where the read data is stored
+    919           *    @param    size : defines the amount of data to be read
+    920           *    @return   BOOL_TYPE
+    921           *      @retval TRUE(1)   : desired request is successfully executed
+    922           *      @retval FALSE(0)  : desired request is not successfully executed
+    923           *    @image    html    Spi__Read.jpg
+    924           */
+
+   \                                 In section .text, align 2, keep-with-next
+    925          BOOL_TYPE Spi__Read(SPI_ENUM_DEF spi, uint8 * buf, uint16 size)
+    926          {
+    927              #if ((SPI_1_FEATURE == ENABLED) || (SPI_2_FEATURE == ENABLED) || (SPI_3_FEATURE == ENABLED))
+    928                  BOOL_TYPE response;
+    929          
+    930                  response = FALSE;
+    931          
+    932                  #if (SPI_1_FEATURE == ENABLED)
+    933                      if (spi == SPI1)
+    934                      {
+    935                          #if (SPI_1_TX_ONLY == DISABLED)
+    936          
+    937                              if (Dma__GetFlagStatus(SPI_1_RX_DMA_ENGINE, SPI_1_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING)
+    938                              {
+    939                                  if (size <= (Spi1_Buffer.Write - Spi1_Buffer.Read))
+    940                                  {
+    941                                      memcpy(buf, (Spi1_Buffer.Rx_Data + Spi1_Buffer.Read), size);
+    942          
+    943                                      Spi1_Buffer.Read = Spi1_Buffer.Read + size;
+    944          
+    945                                      response = TRUE;
+    946                                  }
+    947                              }
+    948                          #endif
+    949                      }
+    950                  #endif
+    951          
+    952                  #if (SPI_2_FEATURE == ENABLED)
+    953                      if (spi == SPI2)
+    954                      {
+    955                          #if (SPI_2_TX_ONLY == DISABLED)
+    956                              if (Dma__GetFlagStatus(SPI_2_RX_DMA_ENGINE, SPI_2_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING)
+    957                              {
+    958                                  if (size <= (Spi2_Buffer.Write - Spi2_Buffer.Read))
+    959                                  {
+    960                                      memcpy(buf, (Spi2_Buffer.Rx_Data + Spi2_Buffer.Read), size);
+    961          
+    962                                      Spi2_Buffer.Read = Spi2_Buffer.Read + size;
+    963          
+    964                                      response = TRUE;
+    965                                  }
+    966                              }
+    967                          #endif
+    968                      }
+    969                  #endif
+    970          
+    971                  #if (SPI_3_FEATURE == ENABLED)
+    972                      if (spi == SPI3)
+    973                      {
+    974                          #if (SPI_3_TX_ONLY == DISABLED)
+    975                              if (Dma__GetFlagStatus(SPI_3_RX_DMA_ENGINE, SPI_3_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING)
+    976                              {
+    977                                  if (size <= (Spi3_Buffer.Write - Spi3_Buffer.Read))
+    978                                  {
+    979                                      memcpy(buf, (Spi3_Buffer.Rx_Data + Spi3_Buffer.Read), size);
+    980          
+    981                                      Spi3_Buffer.Read = Spi3_Buffer.Read + size;
+    982          
+    983                                      response = TRUE;
+    984                                  }
+    985                              }
+    986                          #endif
+    987                      }
+    988                  #endif
+    989          
+    990              return (response);
+    991          
+    992              #else
+    993                  return(FALSE);
+   \                     Spi__Read: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    994              #endif
+    995          }
+    996          
+    997          //---------------------------------------------------------------------------------------------------------------------
+    998          /**
+    999           *    @brief    This method gets the status of a specific SPI device.
+   1000           *    @details  This method is used to get status from specific SPI module.
+   1001           *    @param    spi : specific spi device
+   1002           *    @param    index : Index would be SPI_STATUS_STATE or SPI_STATUS_BUFFER_IN
+   1003           *    @return   For SPI_STATUS_STATE the return would be-
+   1004           *               SPI_STATE_BUSY � The Spi communication is going on
+   1005           *               SPI_STATE_IDLE � The Spi is ready to transfer the data
+   1006           *               SPI_STATE_ERROR � The Spi module encounter an error
+   1007           *               For SPI_STATUS_BUFFER_IN it returns the number of data bytes available to read
+   1008           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1009          uint16 Spi__GetStatus(SPI_ENUM_DEF spi, SPI_STATUS_DEF index)
+   1010          {
+   1011              #if ((SPI_1_FEATURE == ENABLED) || (SPI_2_FEATURE == ENABLED) || (SPI_3_FEATURE == ENABLED))
+   1012          
+   1013                  uint16 response;
+   1014          
+   1015                  // This variable is used to clear Over run and Under run error by reading the Data and Status register
+   1016                  uint16 aux;
+   1017          
+   1018                  response = FALSE;
+   1019          
+   1020                  #if (SPI_1_FEATURE == ENABLED)
+   1021                      if (spi == SPI1)
+   1022                      {
+   1023                          if (index == SPI_STATUS_STATE)
+   1024                          {
+   1025                              //Over run error, Under run error, Mode fault error
+   1026                              if (((SPI_1.SR & (SPI_SR_OVR | SPI_SR_UDR | SPI_SR_MODF) != FALSE) ||
+   1027                                  (SPI_1.CR1 & SPI_CR1_SPE == FALSE)) &&
+   1028                                  (Dma__GetFlagStatus(SPI_1_TX_DMA_ENGINE, SPI_1_TX_DMA_CHANNEL) == DMA_TRANSFER_ERROR))
+   1029                              {
+   1030                                  //Over run and Under run error clear sequence
+   1031                                  aux = SPI_1.DR;
+   1032                                  aux = SPI_1.SR;
+   1033          
+   1034                                  response = SPI_STATE_ERROR;
+   1035                              }
+   1036                              else
+   1037                              {
+   1038                                  #if (SPI_1_TX_ONLY == DISABLED)
+   1039                                      if (Dma__GetFlagStatus(SPI_1_RX_DMA_ENGINE, SPI_1_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING)
+   1040                                      {
+   1041                                          response = SPI_STATE_IDLE;
+   1042                                      }
+   1043                                      else
+   1044                                      {
+   1045                                          response = SPI_STATE_BUSY;
+   1046                                      }
+   1047                                  #else
+   1048                                      response = SPI_STATE_IDLE;
+   1049                                  #endif
+   1050                              }
+   1051                          }
+   1052                          else
+   1053                          {
+   1054                              #if (SPI_1_TX_ONLY == DISABLED)
+   1055                                  if (Dma__GetFlagStatus(SPI_1_RX_DMA_ENGINE, SPI_1_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING)
+   1056                                  {
+   1057                                      response = Spi1_Buffer.Write - Spi1_Buffer.Read;
+   1058                                  }
+   1059                              #endif
+   1060                          }
+   1061                      }
+   1062                  #endif
+   1063          
+   1064                  #if (SPI_2_FEATURE == ENABLED)
+   1065                      if (spi == SPI2)
+   1066                      {
+   1067                          if (index == SPI_STATUS_STATE)
+   1068                          {
+   1069                              //Over run error, Under run error, Mode fault error
+   1070                              if (((SPI_2.SR & (SPI_SR_OVR | SPI_SR_UDR | SPI_SR_MODF) != FALSE) ||
+   1071                                  (SPI_2.CR1 & SPI_CR1_SPE == FALSE)) &&
+   1072                                  (Dma__GetFlagStatus(SPI_2_TX_DMA_ENGINE, SPI_2_TX_DMA_CHANNEL) == DMA_TRANSFER_ERROR))
+   1073                              {
+   1074                                  //Over run and Under run error clear sequence
+   1075                                  aux = SPI_2.DR;
+   1076                                  aux = SPI_2.SR;
+   1077          
+   1078                                  response = SPI_STATE_ERROR;
+   1079                              }
+   1080                              else
+   1081                              {
+   1082                                  #if (SPI_2_TX_ONLY == DISABLED)
+   1083                                      if (Dma__GetFlagStatus(SPI_2_RX_DMA_ENGINE, SPI_2_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING)
+   1084                                      {
+   1085                                          response = SPI_STATE_IDLE;
+   1086                                      }
+   1087                                      else
+   1088                                      {
+   1089                                          response = SPI_STATE_BUSY;
+   1090                                      }
+   1091                                  #else
+   1092                                      response = SPI_STATE_IDLE;
+   1093                                  #endif
+   1094                              }
+   1095                          }
+   1096                          else
+   1097                          {
+   1098                              #if (SPI_2_TX_ONLY == DISABLED)
+   1099                                  if (Dma__GetFlagStatus(SPI_2_RX_DMA_ENGINE, SPI_2_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING)
+   1100                                  {
+   1101                                      response = Spi2_Buffer.Write - Spi2_Buffer.Read;
+   1102                                  }
+   1103                              #endif
+   1104                          }
+   1105                      }
+   1106                  #endif
+   1107          
+   1108                  #if (SPI_3_FEATURE == ENABLED)
+   1109                      if (spi == SPI3)
+   1110                      {
+   1111                          if (index == SPI_STATUS_STATE)
+   1112                          {
+   1113                              //Over run error, Under run error, Mode fault error
+   1114                              if (((SPI_3.SR & (SPI_SR_OVR | SPI_SR_UDR | SPI_SR_MODF) != FALSE) ||
+   1115                                  (SPI_3.CR1 & SPI_CR1_SPE == FALSE)) &&
+   1116                                  (Dma__GetFlagStatus(SPI_3_TX_DMA_ENGINE, SPI_3_TX_DMA_CHANNEL) == DMA_TRANSFER_ERROR))
+   1117                              {
+   1118                                  //Over run and Under run error clear sequence
+   1119                                  aux = SPI_3.DR;
+   1120                                  aux = SPI_3.SR;
+   1121          
+   1122                                  response = SPI_STATE_ERROR;
+   1123                              }
+   1124                              else
+   1125                              {
+   1126                                  #if (SPI_3_TX_ONLY == DISABLED)
+   1127                                      if (Dma__GetFlagStatus(SPI_3_RX_DMA_ENGINE, SPI_3_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING)
+   1128                                      {
+   1129                                          response = SPI_STATE_IDLE;
+   1130                                      }
+   1131                                      else
+   1132                                      {
+   1133                                          response = SPI_STATE_BUSY;
+   1134                                      }
+   1135                                  #else
+   1136                                      response = SPI_STATE_IDLE;
+   1137                                  #endif
+   1138                              }
+   1139                          }
+   1140                          else
+   1141                          {
+   1142                              #if (SPI_3_TX_ONLY == DISABLED)
+   1143                                  if (Dma__GetFlagStatus(SPI_3_RX_DMA_ENGINE, SPI_3_RX_DMA_CHANNEL) != DMA_TRANSFER_ONGOING)
+   1144                                  {
+   1145                                      response = Spi3_Buffer.Write - Spi3_Buffer.Read;
+   1146                                  }
+   1147                              #endif
+   1148                          }
+   1149                      }
+   1150                  #endif
+   1151          
+   1152              return (response);
+   1153          
+   1154              #else
+   1155                  return(FALSE);
+   \                     Spi__GetStatus: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+   1156              #endif
+   1157          }
+   1158          
+   1159          //---------------------------------------------------------------------------------------------------------------------
+   1160          /**
+   1161           *  @brief      Reconfigure a specific Spi for a customised setting
+   1162           *
+   1163           *  @details    This function changes the configureation of a specific SPI and must called after the Spi has being initialzie
+   1164           *              Every time that the Spi is initialized it starts with the default parameters
+   1165           *
+   1166           *  @param      spi the specific spi device
+   1167           *  @param      pol defines the polarity of SCK signal
+   1168           *  @param      edge defines the the edge of action for the SCK line
+   1169           *  @param      order defines if the MSB bit goes first or the LSB bit goes first
+   1170           *  @image    html    Spi__SetConfiguration.jpg
+   1171           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1172          void Spi__SetConfiguration(SPI_ENUM_DEF spi,SPI_POLARITY_TYPE pol,SPI_EDGE_TYPE edge,SPI_ORDER_TYPE order)
+   1173          {
+   1174              #if ((SPI_1_FEATURE == ENABLED) || (SPI_2_FEATURE == ENABLED) || (SPI_3_FEATURE == ENABLED))
+   1175          
+   1176                  #if (SPI_1_FEATURE == ENABLED)
+   1177                      if (spi == SPI1)
+   1178                      {
+   1179                          SPI_1.CR1 &= (uint16)((~SPI_CR1_SPE)&(~SPI_CR1_LSBFIRST)&(~SPI_CR1_CPOL)&(~SPI_CR1_CPHA));  //keep it disable until the end of the configuration
+   1180          
+   1181                          //Order, Polarity and Edge
+   1182                          SPI_1.CR1 |= (((order & 0x01 ) << SPI_CR1_LSBFIRST_POS ) | ((pol & 0x01 ) << SPI_CR1_CPOL_POS ) | (edge & 0x01 ));
+   1183                          SPI_1.CR1 |= SPI_CR1_SPE;
+   1184                      }
+   1185                  #endif
+   1186          
+   1187                  #if (SPI_2_FEATURE == ENABLED)
+   1188                      if (spi == SPI2)
+   1189                      {
+   1190                          SPI_2.CR1 &= (uint16)((~SPI_CR1_SPE)&(~SPI_CR1_LSBFIRST)&(~SPI_CR1_CPOL)&(~SPI_CR1_CPHA));  //keep it disable until the end of the configuration
+   1191          
+   1192                          //Order, Polarity and Edge
+   1193                          SPI_2.CR1 |= (((order & 0x01 ) << SPI_CR1_LSBFIRST_POS ) | ((pol & 0x01 ) << SPI_CR1_CPOL_POS ) | (edge & 0x01 ));
+   1194                          SPI_2.CR1 |= SPI_CR1_SPE;
+   1195                      }
+   1196                  #endif
+   1197          
+   1198                  #if (SPI_3_FEATURE == ENABLED)
+   1199                      if (spi == SPI3)
+   1200                      {
+   1201                          SPI_3.CR1 &= (uint16)((~SPI_CR1_SPE)&(~SPI_CR1_LSBFIRST)&(~SPI_CR1_CPOL)&(~SPI_CR1_CPHA));  //keep it disable until the end of the configuration
+   1202          
+   1203                          //Order, Polarity and Edge
+   1204                          SPI_3.CR1 |= (((order & 0x01 ) << SPI_CR1_LSBFIRST_POS ) | ((pol & 0x01 ) << SPI_CR1_CPOL_POS ) | (edge & 0x01 ));
+   1205                          SPI_3.CR1 |= SPI_CR1_SPE;
+   1206                      }
+   1207                  #endif
+   1208          
+   1209              #endif
+   1210          }
+   \                     Spi__SetConfiguration: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+   1211          
+   1212          //---------------------------------------------------------------------------------------------------------------------
+   1213          /**
+   1214           *    @brief    This method is used to change the speed of the SPI peripheral in running time.
+   1215           *    @param    spi
+   1216           *    @param    speed index to the speed : SPI_SPEED_1,SPI_SPEED_2,SPI_SPEED_3,SPI_SPEED_4 or SPI_SPEED_5
+   1217           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1218          void Spi__SetSpeed(SPI_ENUM_DEF spi, SPI_SPEED_TYPE speed)
+   1219          {
+   1220              #if ((SPI_1_FEATURE == ENABLED) || (SPI_2_FEATURE == ENABLED) || (SPI_3_FEATURE == ENABLED))
+   1221                  #if (SPI_1_FEATURE == ENABLED)
+   1222                      if (spi == SPI1)
+   1223                      {
+   1224                          //clear the baud bits
+   1225                          SPI_1.CR1 &= (~SPI_CR1_BR);
+   1226          
+   1227                          switch (speed)
+   1228                          {
+   1229                              case SPI_SPEED_1:
+   1230                                  SPI_1.CR1 |= (SPI_CR1_BR & (SPI_1_PRESCALER_SPEED1 << SPI_CR1_BR_POS));
+   1231                                  break;
+   1232                              case SPI_SPEED_2:
+   1233                                  SPI_1.CR1 |= (SPI_CR1_BR & (SPI_1_PRESCALER_SPEED2 << SPI_CR1_BR_POS));
+   1234                                  break;
+   1235                              case SPI_SPEED_3:
+   1236                                  SPI_1.CR1 |= (SPI_CR1_BR & (SPI_1_PRESCALER_SPEED3 << SPI_CR1_BR_POS));
+   1237                                  break;
+   1238                              case SPI_SPEED_4:
+   1239                                  SPI_1.CR1 |= (SPI_CR1_BR & (SPI_1_PRESCALER_SPEED4 << SPI_CR1_BR_POS));
+   1240                                  break;
+   1241                              case SPI_SPEED_5:
+   1242                                  SPI_1.CR1 |= (SPI_CR1_BR & (SPI_1_PRESCALER_SPEED5 << SPI_CR1_BR_POS));
+   1243                                  break;
+   1244                              default:
+   1245                                  //sets to the baud rate set in the Spi__Initialize() API
+   1246                                  SPI_1.CR1 |= (SPI_CR1_BR & SPI_1_CR1_BR);
+   1247                                  break;
+   1248                          }
+   1249                      }
+   1250                  #endif
+   1251          
+   1252                  #if (SPI_2_FEATURE == ENABLED)
+   1253                      if (spi == SPI2)
+   1254                      {
+   1255                          //clear the baud bits
+   1256                          SPI_2.CR1 &= (~SPI_CR1_BR);
+   1257          
+   1258                          switch (speed)
+   1259                          {
+   1260                              case SPI_SPEED_1:
+   1261                                  SPI_2.CR1 |= (SPI_CR1_BR & (SPI_2_PRESCALER_SPEED1 << SPI_CR1_BR_POS));
+   1262                                  break;
+   1263                              case SPI_SPEED_2:
+   1264                                  SPI_2.CR1 |= (SPI_CR1_BR & (SPI_2_PRESCALER_SPEED2 << SPI_CR1_BR_POS));
+   1265                                  break;
+   1266                              case SPI_SPEED_3:
+   1267                                  SPI_2.CR1 |= (SPI_CR1_BR & (SPI_2_PRESCALER_SPEED3 << SPI_CR1_BR_POS));
+   1268                                  break;
+   1269                              case SPI_SPEED_4:
+   1270                                  SPI_2.CR1 |= (SPI_CR1_BR & (SPI_2_PRESCALER_SPEED4 << SPI_CR1_BR_POS));
+   1271                                  break;
+   1272                              case SPI_SPEED_5:
+   1273                                  SPI_2.CR1 |= (SPI_CR1_BR & (SPI_2_PRESCALER_SPEED5 << SPI_CR1_BR_POS));
+   1274                                  break;
+   1275                              default:
+   1276                                  //sets to the baud rate set in the Spi__Initialize() API
+   1277                                  SPI_2.CR1 |= (SPI_CR1_BR & SPI_2_CR1_BR);
+   1278                                  break;
+   1279                          }
+   1280                      }
+   1281                  #endif
+   1282          
+   1283                  #if (SPI_3_FEATURE == ENABLED)
+   1284                      if (spi == SPI3)
+   1285                      {
+   1286                          //clear the baud bits
+   1287                          SPI_3.CR1 &= (~SPI_CR1_BR);
+   1288          
+   1289                          switch (speed)
+   1290                          {
+   1291                              case SPI_SPEED_1:
+   1292                                  SPI_3.CR1 |= (SPI_CR1_BR & (SPI_3_PRESCALER_SPEED1 << SPI_CR1_BR_POS));
+   1293                                  break;
+   1294                              case SPI_SPEED_2:
+   1295                                  SPI_3.CR1 |= (SPI_CR1_BR & (SPI_3_PRESCALER_SPEED2 << SPI_CR1_BR_POS));
+   1296                                  break;
+   1297                              case SPI_SPEED_3:
+   1298                                  SPI_3.CR1 |= (SPI_CR1_BR & (SPI_3_PRESCALER_SPEED3 << SPI_CR1_BR_POS));
+   1299                                  break;
+   1300                              case SPI_SPEED_4:
+   1301                                  SPI_3.CR1 |= (SPI_CR1_BR & (SPI_3_PRESCALER_SPEED4 << SPI_CR1_BR_POS));
+   1302                                  break;
+   1303                              case SPI_SPEED_5:
+   1304                                  SPI_3.CR1 |= (SPI_CR1_BR & (SPI_3_PRESCALER_SPEED5 << SPI_CR1_BR_POS));
+   1305                                  break;
+   1306                              default:
+   1307                                  //sets to the baud rate set in the Spi__Initialize() API
+   1308                                  SPI_3.CR1 |= (SPI_CR1_BR & SPI_3_CR1_BR);
+   1309                                  break;
+   1310                          }
+   1311                      }
+   1312                  #endif
+   1313              #endif
+   1314          }
+   \                     Spi__SetSpeed: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+   1315          
+   1316          //=====================================================================================================================
+   1317          //-------------------------------------- Private Functions ------------------------------------------------------------
+   1318          //=====================================================================================================================
+   1319          //---------------------------------------------------------------------------------------------------------------------
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   Spi__Clear
+       0   Spi__Disable
+       0   Spi__Enable
+       0   Spi__GetStatus
+       0   Spi__Initialize
+       0   Spi__Read
+       0   Spi__SetConfiguration
+       0   Spi__SetSpeed
+       0   Spi__Write
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       2  Spi__Clear
+       2  Spi__Disable
+       2  Spi__Enable
+       4  Spi__GetStatus
+       2  Spi__Initialize
+       4  Spi__Read
+       2  Spi__SetConfiguration
+       2  Spi__SetSpeed
+       4  Spi__Write
+
+ 
+ 24 bytes in section .text
+ 
+ 24 bytes of CODE memory
+
+Errors: none
+Warnings: none

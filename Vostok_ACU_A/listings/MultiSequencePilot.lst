@@ -1,0 +1,988 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:28
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot/MultiSequencePilot.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\MultiSequencePilot.lst -o obj\MultiSequencePilot.obj
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot/MultiSequencePilot.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\MultiSequencePilot.lst
+#    Object file  =  obj\MultiSequencePilot.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\acuexpacu\ACUPilotHandler\MultiSequencePilot\MultiSequencePilot.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      This is Damper ON/OFF type
+      5           *
+      6           *
+      7           *
+      8           *  @details    Detailed description of the file contents
+      9           *
+     10           *  @section    Applicable_Documents
+     11           *                  List here all the applicable documents if needed. <tr>
+     12           *
+     13           *  $Header: $
+     14           *
+     15           *  @copyright  Copyright 2015-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     16           */
+     17          //---------------------------------------------------------------------------------------------------------------------
+     18          //---------------------------------------------------------------------------------------------------------------------
+     19          
+     20          
+     21          //-------------------------------------- Include Files ----------------------------------------------------------------
+     22          #include "C_Extensions.h"
+     23          #include "MultiSequencePilot.h"
+     24          
+     25          #if (HBL_PILOT_NUM_MULTISEQUENCE > 0)
+     26          #include "string.h"
+     27          #include "Millis.h"
+     28          #include "SettingFile.h"
+     29          
+     30          #if (HBL_PILOT_NUM_DIGITALOUTPUT > 0)
+     31              #include "DigitalOutputPilot.h"
+     32          #endif
+     33          
+     34          #if (HBL_PILOT_NUM_TRIAC > 0)
+     35              #include "TriacPilot.h"
+     36          #endif
+     37          
+     38          #if (HBL_PILOT_NUM_ZCRELAY > 0)
+     39              #include "ZCRelayPilot.h"
+     40          #endif
+     41          
+     42          #if (HBL_PILOT_NUM_STEADYPWMPROFILE > 0)
+     43              #include "SteadyPwmProfilePilot.h"
+     44          #endif
+     45          
+     46          #if (HBL_PILOT_NUM_EXPANSION > 0)
+     47              #include "ExpansionPilot.h"
+     48          #endif
+     49          
+     50          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     51          
+     52          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     53          #if (HBL_PILOT_NUM_DIGITALOUTPUT > 0)
+     54              #define MULTISEQUENCE_REGISTERED_PILOT_DIGITAL        1
+     55          #else
+     56              #define MULTISEQUENCE_REGISTERED_PILOT_DIGITAL        0
+     57          #endif
+     58          
+     59          #if (HBL_PILOT_NUM_TRIAC > 0)
+     60              #define MULTISEQUENCE_REGISTERED_PILOT_TRIAC          1
+     61          #else
+     62              #define MULTISEQUENCE_REGISTERED_PILOT_TRIAC          0
+     63          #endif
+     64          
+     65          #if (HBL_PILOT_NUM_ZCRELAY > 0)
+     66              #define MULTISEQUENCE_REGISTERED_PILOT_ZCRELAY        1
+     67          #else
+     68              #define MULTISEQUENCE_REGISTERED_PILOT_ZCRELAY        0
+     69          #endif
+     70          
+     71          #if (HBL_PILOT_NUM_STEADYPWMPROFILE > 0)
+     72              #define MULTISEQUENCE_REGISTERED_PILOT_STEADYPWMPROFILE        1
+     73          #else
+     74              #define MULTISEQUENCE_REGISTERED_PILOT_STEADYPWMPROFILE        0
+     75          #endif
+     76          
+     77          #if (HBL_PILOT_NUM_EXPANSION > 0)
+     78              #define MULTISEQUENCE_REGISTERED_PILOT_EXPANSION    1
+     79          #else
+     80              #define MULTISEQUENCE_REGISTERED_PILOT_EXPANSION    0
+     81          #endif
+     82          
+     83          
+     84          #define MULTISEQUENCE_NUM_REGISTERED_PILOT                  (MULTISEQUENCE_REGISTERED_PILOT_DIGITAL + MULTISEQUENCE_REGISTERED_PILOT_TRIAC + MULTISEQUENCE_REGISTERED_PILOT_ZCRELAY + MULTISEQUENCE_REGISTERED_PILOT_STEADYPWMPROFILE + MULTISEQUENCE_REGISTERED_PILOT_EXPANSION)
+     85          
+     86          #define NO_PARAMETER_OFFSET                                 0xFF
+     87          #define MULTISEQUENCEPILOT_MAX_PILOT_HANDLING               4
+     88          
+     89          #define MULTISEQUENCEPILOT_MINIMUM_SEQUENCE_STATE_BYE_SIZE  2
+     90          #define MULTISEQUENCEPILOT_SEQUENCE_STATE_HEADER_SIZE       2
+     91          
+     92          PACKED typedef struct
+     93          {
+     94              uint8 Duration;
+     95              uint8 Pilot_State[MULTISEQUENCEPILOT_MAX_PILOT_HANDLING];
+     96          } MULTISEQUENCEPILOT_SEQUENCE_STATE_TYPE;
+     97          
+     98          
+     99          PACKED typedef struct
+    100          {
+    101              uint8 Number_Sequence;
+    102              uint8 unused;
+    103              MULTISEQUENCEPILOT_SEQUENCE_STATE_TYPE *Sequence_State;
+    104          } MULTISEQUENCEPILOT_SEQUENCE_TYPE;
+    105          
+    106          PACKED typedef struct
+    107          {
+    108              HBL_PILOT_ENUM_TYPE Pilot_Type;
+    109              uint8 Pilot_Type_Params_Offset;
+    110          } MULTISEQUENCEPILOT_PARAMETERS_TYPE;
+    111          
+    112          
+    113          typedef struct
+    114          {
+    115              HBL_LOAD_TYPE Load[MULTISEQUENCEPILOT_MAX_PILOT_HANDLING];
+    116              HBL_LOAD_STATUS_TYPE Status;
+    117              uint8 Current_Sequence_State;
+    118              uint8 Requested_State;
+    119              uint8 Processed_State;
+    120              uint8 Pilot_OutPut_State[MULTISEQUENCEPILOT_MAX_PILOT_HANDLING];
+    121              uint8 Max_Pilot;
+    122              uint8 Max_Sequence;
+    123              uint8 *Sequence_Displacement_Ptr;
+    124              MULTISEQUENCEPILOT_SEQUENCE_TYPE *Sequence_State_Ptr;
+    125              MILLIS_TIMER_TYPE Millis_Timer;
+    126              uint8 TimeOut;
+    127          } MULTISEQUENCEPILOT_DATA_TYPE;
+    128          
+    129          
+    130          #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    131          static MULTISEQUENCEPILOT_DATA_TYPE MultiSequencePilot_Data[HBL_PILOT_NUM_MULTISEQUENCE];
+    132          static uint8 MultiSequencePilot_Allocation;
+    133          
+    134          static const HBL_PILOT_HANDLER_HOOK_TYPE MULTIDRIVER__PILOT_HANDLERS[MULTISEQUENCE_NUM_REGISTERED_PILOT] = {
+    135                                                                                                                  #if (HBL_PILOT_NUM_DIGITALOUTPUT > 0)
+    136                                                                                                                      {DIGITALOUTPUTPILOT_REGISTER        ,HBL_PILOT_DIGITAL}
+    137                                                                                                                  #endif
+    138          
+    139                                                                                                                  #if (HBL_PILOT_NUM_TRIAC > 0)
+    140                                                                                                                      ,{TRIACPILOT_REGISTER               ,HBL_PILOT_TRIAC}
+    141                                                                                                                  #endif
+    142          
+    143                                                                                                                  #if (HBL_PILOT_NUM_ZCRELAY > 0)
+    144                                                                                                                      ,{ZCRELAYPILOT_REGISTER             ,HBL_PILOT_ZEROCROSSING_RELAY}
+    145                                                                                                                  #endif
+    146          
+    147                                                                                                                  #if (HBL_PILOT_NUM_STEADYPWMPROFILE > 0)
+    148                                                                                                                      ,{STEADYPWMPROFILEPILOT_REGISTER    ,HBL_PILOT_STEADY_PWM_PROFILE}
+    149                                                                                                                  #endif
+    150          
+    151                                                                                                                  #if (HBL_PILOT_NUM_EXPANSION > 0)
+    152                                                                                                                      ,{EXPANSION_PILOT_REGISTER          ,HBL_PILOT_EXPANSION_DIGITAL}
+    153                                                                                                                  #endif
+    154                                                                                                               };
+    155          
+    156          #endif
+    157          
+    158          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    159          
+    160          //=====================================================================================================================
+    161          //-------------------------------------- Public Functions -------------------------------------------------------------
+    162          //=====================================================================================================================
+    163          
+    164          //---------------------------------------------------------------------------------------------------------------------
+    165          /**
+    166           *  @brief      It Initializes the module MULTISEQUENCEPILOT and its variables
+    167           *
+    168           */
+    169          void MultiSequencePilot__Initialize(void)
+    170          {
+    171              #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    172                  MultiSequencePilot_Allocation = 0;
+    173                  memset(&MultiSequencePilot_Data,0,sizeof(MultiSequencePilot_Data));
+    174              #endif
+    175          }
+    176          
+    177          //---------------------------------------------------------------------------------------------------------------------
+    178          /**
+    179           * @brief
+    180           * @return
+    181           */
+    182          uint8 MultiSequencePilot__Allocate(void)
+    183          {
+    184              uint8 retval;
+    185              retval = 0xFF;
+    186          
+    187              #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    188                  if (MultiSequencePilot_Allocation < HBL_PILOT_NUM_MULTISEQUENCE)
+    189                  {
+    190                      retval = MultiSequencePilot_Allocation;
+    191                      MultiSequencePilot_Allocation++;
+    192                  }
+    193              #endif
+    194          
+    195              return (retval);
+    196          }
+    197          
+    198          //---------------------------------------------------------------------------------------------------------------------
+    199          /**
+    200           * @brief
+    201           * @param load
+    202           */
+    203          PASS_FAIL_TYPE MultiSequencePilot__InitializeInstance(HBL_LOAD_TYPE * load)
+    204          {
+    205              PASS_FAIL_TYPE retval;
+    206              uint8 index;
+    207              uint8 handler_index;
+    208              MULTISEQUENCEPILOT_PARAMETERS_TYPE *parameters;
+    209          
+    210              retval = FAIL;
+    211          
+    212              #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    213                  if (load->Pilot_Data_Index < MultiSequencePilot_Allocation)
+    214                  {
+    215                      parameters = (void*)load->Parameter_Ptr.Data;
+    216          
+    217                      //HBL_PILOT_MULTISEQUENCE_1
+    218                      MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot             = 1;
+    219          
+    220                      if (load->Pilot_Type == HBL_PILOT_MULTISEQUENCE_2)
+    221                      {
+    222                          MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot = 2;
+    223                      }
+    224                      else if (load->Pilot_Type == HBL_PILOT_MULTISEQUENCE_3)
+    225                      {
+    226                          MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot = 3;
+    227                      }
+    228                      else if (load->Pilot_Type == HBL_PILOT_MULTISEQUENCE_4)
+    229                      {
+    230                          MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot = 4;
+    231                      }
+    232          
+    233                      //Load the Pilot parameters
+    234                      for (index = 0; index < MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot; index++)
+    235                      {
+    236                          MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Load_Id                  = load->Load_Id;
+    237                          MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Type               = parameters[index].Pilot_Type;
+    238                          MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Type_Params_Offset = parameters[index].Pilot_Type_Params_Offset;
+    239                          MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pin_Ptr                  = &(load->Pin_Ptr[index]);
+    240          
+    241                          MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Hi_Low_Activation_Bitmap =  (load->Hi_Low_Activation_Bitmap >> index) & 0x01;
+    242          
+    243                          if (MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Type_Params_Offset != NO_PARAMETER_OFFSET)
+    244                          {
+    245                              SettingFile__BasicLoader(SF_PTR_ACU_IO_DEVICE, MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Type_Params_Offset, &MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Parameter_Ptr);
+    246                          }
+    247                          else
+    248                          {
+    249                              MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Parameter_Ptr.Data = NULL;
+    250                              MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Parameter_Ptr.Length = 0;
+    251                          }
+    252          
+    253                          MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Data_Index = 0xFF;
+    254                          MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Handler_Index= HBL_INDEX_INVALID;
+    255          
+    256                          for (handler_index = 0; handler_index < MULTISEQUENCE_NUM_REGISTERED_PILOT; handler_index++)
+    257                          {
+    258                              if (MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Type == MULTIDRIVER__PILOT_HANDLERS[handler_index].Pilot)
+    259                              {
+    260                                  MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Handler_Index  = handler_index;
+    261                                  MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Data_Index  = MULTIDRIVER__PILOT_HANDLERS[handler_index].Allocate();
+    262                                  retval  = MULTIDRIVER__PILOT_HANDLERS[handler_index].InitializeInstance(&MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index]);
+    263                                  break;
+    264                              }
+    265                          }
+    266                      }
+    267          
+    268                      //Multi Sequence part
+    269                      MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Sequence              = load->Parameter_Ptr.Data[sizeof(MULTISEQUENCEPILOT_PARAMETERS_TYPE) * MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot];
+    270                      MultiSequencePilot_Data[load->Pilot_Data_Index].Sequence_Displacement_Ptr = &(load->Parameter_Ptr.Data[(sizeof(MULTISEQUENCEPILOT_PARAMETERS_TYPE) * MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot) + 1]);
+    271          
+    272                      MultiSequencePilot_Data[load->Pilot_Data_Index].TimeOut = 0;
+    273                      Millis__Reset(&MultiSequencePilot_Data[load->Pilot_Data_Index].Millis_Timer);
+    274          
+    275                      MultiSequencePilot_Data[load->Pilot_Data_Index].Requested_State           = 0;
+    276                      MultiSequencePilot_Data[load->Pilot_Data_Index].Processed_State           = 0;
+    277                      MultiSequencePilot_Data[load->Pilot_Data_Index].Status.Load.Status        = HBL_LOAD_STATUS_TARGET_COMPLETED;
+    278                      MultiSequencePilot_Data[load->Pilot_Data_Index].Status.Load.Cur_Reg       = 0;
+    279          
+    280                      //Turn off all the pilots
+    281                      memset(MultiSequencePilot_Data[load->Pilot_Data_Index].Pilot_OutPut_State, 0, MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot);
+    282                  }
+    283          
+    284              #endif
+    285          
+    286              return (retval);
+    287          }
+    288          
+    289          //---------------------------------------------------------------------------------------------------------------------
+    290          /**
+    291           * @brief
+    292           * @param load
+    293           * @param data
+    294           * @return
+    295           */
+    296          PASS_FAIL_TYPE MultiSequencePilot__Request(HBL_LOAD_TYPE * load, void * data)
+    297          {
+    298              PASS_FAIL_TYPE retval;
+    299          
+    300              retval = FAIL;
+    301          
+    302              #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    303                  if (load->Pilot_Data_Index < MultiSequencePilot_Allocation)
+    304                  {
+    305                      if (MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Sequence > *((uint8 *)data))
+    306                      {
+    307                          MultiSequencePilot_Data[load->Pilot_Data_Index].Requested_State = *((uint8 *)data);
+    308          
+    309                          retval = PASS;
+    310                      }
+    311                  }
+    312          
+    313              #endif
+    314          
+    315              return (retval);
+    316          }
+    317          
+    318          //---------------------------------------------------------------------------------------------------------------------
+    319          /**
+    320           * @brief
+    321           * @param load
+    322           * @return
+    323           */
+    324          PASS_FAIL_TYPE MultiSequencePilot__Process(HBL_LOAD_TYPE * load)
+    325          {
+    326              PASS_FAIL_TYPE retval;
+    327              SETTINGFILE_LOADER_TYPE sequence_state_loader;
+    328          
+    329              retval     = FAIL;
+    330          
+    331              #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    332                  if (load->Pilot_Data_Index < MultiSequencePilot_Allocation)
+    333                  {
+    334                      //Sequence 0 is to turn off all the loads has the highest priority
+    335                      // Other sequence requested are accepted only when the previous sequence is reached to SEQUENCE_END
+    336                      // If Requested_State and Processed_State are the same, it continues on that sequence.
+    337                      if (((MultiSequencePilot_Data[load->Pilot_Data_Index].Requested_State == 0) ||
+    338                              (MultiSequencePilot_Data[load->Pilot_Data_Index].Status.Load.Status == HBL_LOAD_STATUS_TARGET_COMPLETED)) &&
+    339                          (MultiSequencePilot_Data[load->Pilot_Data_Index].Requested_State != MultiSequencePilot_Data[load->Pilot_Data_Index].Processed_State))
+    340                      {
+    341                          MultiSequencePilot_Data[load->Pilot_Data_Index].Sequence_State_Ptr       = NULL;
+    342                          SettingFile__BasicLoader(SF_PTR_ACU_IO_DEVICE, MultiSequencePilot_Data[load->Pilot_Data_Index].Sequence_Displacement_Ptr[MultiSequencePilot_Data[load->Pilot_Data_Index].Requested_State], &sequence_state_loader);
+    343                          MultiSequencePilot_Data[load->Pilot_Data_Index].Processed_State          = MultiSequencePilot_Data[load->Pilot_Data_Index].Requested_State;
+    344                          MultiSequencePilot_Data[load->Pilot_Data_Index].Current_Sequence_State   = 0;
+    345                          MultiSequencePilot_Data[load->Pilot_Data_Index].Status.Load.Status       = HBL_LOAD_STATUS_WAITING_TARGET;
+    346                          MultiSequencePilot_Data[load->Pilot_Data_Index].Status.Load.Cur_Reg      = MultiSequencePilot_Data[load->Pilot_Data_Index].Requested_State;
+    347          
+    348                          //expire the timeout
+    349                          MultiSequencePilot_Data[load->Pilot_Data_Index].TimeOut = 0;
+    350                          Millis__Reset(&MultiSequencePilot_Data[load->Pilot_Data_Index].Millis_Timer);
+    351          
+    352                          MultiSequencePilot_Data[load->Pilot_Data_Index].Sequence_State_Ptr = (void*)sequence_state_loader.Data;
+    353          
+    354                          retval = PASS;
+    355                      }
+    356                  }
+    357          
+    358              #endif
+    359          
+    360              return (retval);
+    361          }
+    362          
+    363          //---------------------------------------------------------------------------------------------------------------------
+    364          /**
+    365           * @brief
+    366           * @param load
+    367           * @param data
+    368           * @return
+    369           */
+    370          PASS_FAIL_TYPE MultiSequencePilot__AsynchProcess(HBL_LOAD_TYPE * load)
+    371          {
+    372              PASS_FAIL_TYPE retval = FAIL;
+    373              #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    374              if (load->Pilot_Data_Index < MultiSequencePilot_Allocation)
+    375              {
+    376                  MULTISEQUENCEPILOT_DATA_TYPE * data = &MultiSequencePilot_Data[load->Pilot_Data_Index];
+    377          
+    378                  // Manage the Sequence State
+    379                  if ( (Millis__ReachedTarget(&data->Millis_Timer , data->TimeOut * 5) == TRUE) &&
+    380                       (data->Sequence_State_Ptr != NULL) )
+    381                  {
+    382                      if ( data->Current_Sequence_State < data->Sequence_State_Ptr->Number_Sequence)
+    383                      {
+    384                          MULTISEQUENCEPILOT_SEQUENCE_STATE_TYPE * sequence_state_parameter = (MULTISEQUENCEPILOT_SEQUENCE_STATE_TYPE *)((uint8 *)data->Sequence_State_Ptr +
+    385                                                                                                                                         MULTISEQUENCEPILOT_SEQUENCE_STATE_HEADER_SIZE +
+    386                                                                                                                                         data->Current_Sequence_State * (data->Max_Pilot + 1));
+    387          
+    388                          memcpy(data->Pilot_OutPut_State, sequence_state_parameter->Pilot_State, data->Max_Pilot);
+    389          
+    390                          // Handle the Request function for pilots
+    391                          for ( uint8 index = 0; index < data->Max_Pilot; index++ )
+    392                          {
+    393                              uint8 handler_index = data->Load[index].Pilot_Handler_Index;
+    394                              if (( handler_index != HBL_INDEX_INVALID ) &&
+    395                                  ( MULTIDRIVER__PILOT_HANDLERS[handler_index].Request != NULL ))
+    396                              {
+    397                                  retval = MULTIDRIVER__PILOT_HANDLERS[handler_index].Request(&(data->Load[index]), &(data->Pilot_OutPut_State[index]) );
+    398                                  if (( retval == PASS ) &&
+    399                                      ( MULTIDRIVER__PILOT_HANDLERS[handler_index].Process != NULL ))
+    400                                  {
+    401                                      retval &= MULTIDRIVER__PILOT_HANDLERS[handler_index].Process(&(data->Load[index]));
+    402                                  }
+    403                              }
+    404                          }
+    405          
+    406                          // set the timer
+    407                          data->TimeOut = sequence_state_parameter->Duration;
+    408                          Millis__Start(&data->Millis_Timer);
+    409          
+    410                          data->Current_Sequence_State++;
+    411          
+    412                      }
+    413                      else
+    414                      {
+    415                          data->Status.Load.Status = HBL_LOAD_STATUS_TARGET_COMPLETED;
+    416                          data->Sequence_State_Ptr = NULL;
+    417                      }
+    418                  }
+    419          
+    420                  // Handle the Asynchronous function for pilots
+    421                  for ( uint8 index = 0; index < data->Max_Pilot; index++ )
+    422                  {
+    423                      uint8 handler_index = data->Load[index].Pilot_Handler_Index;
+    424                      if (( handler_index != HBL_INDEX_INVALID ) &&
+    425                          ( MULTIDRIVER__PILOT_HANDLERS[handler_index].AsynchProcess != NULL ))
+    426                      {
+    427                          retval = MULTIDRIVER__PILOT_HANDLERS[handler_index].AsynchProcess(&(data->Load[index]));
+    428                      }
+    429                  }
+    430              }
+    431              #endif
+    432              return ( retval );
+    433          }
+    434          
+    435          //---------------------------------------------------------------------------------------------------------------------
+    436          /**
+    437           * @brief
+    438           * @param load
+    439           * @param data
+    440           * @return
+    441           */
+    442          PASS_FAIL_TYPE MultiSequencePilot__ZCProcess(HBL_LOAD_TYPE * load)
+    443          {
+    444              PASS_FAIL_TYPE retval;
+    445              uint8 index;
+    446              uint8 handler_index;
+    447          
+    448              retval     = FAIL;
+    449          
+    450              #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    451                  if (load->Pilot_Data_Index < MultiSequencePilot_Allocation)
+    452                  {
+    453                      for (index = 0; index < MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot; index++)
+    454                      {
+    455                          handler_index = MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Handler_Index;
+    456          
+    457                          if (handler_index != HBL_INDEX_INVALID)
+    458                          {
+    459                              if (MULTIDRIVER__PILOT_HANDLERS[handler_index].ZcProcess != NULL)
+    460                              {
+    461                                  retval  = MULTIDRIVER__PILOT_HANDLERS[handler_index].ZcProcess(&MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index]);
+    462                              }
+    463                          }
+    464                      }
+    465                  }
+    466          
+    467              #endif
+    468          
+    469              return (retval);
+    470          }
+    471          
+    472          //---------------------------------------------------------------------------------------------------------------------
+    473          /**
+    474           * @brief
+    475           * @param load
+    476           * @return
+    477           */
+    478          PASS_FAIL_TYPE MultiSequencePilot__OneMsHandler(HBL_LOAD_TYPE * load)
+    479          {
+    480              #if (HBL_PILOT_NUM_STEADYPWMPROFILE > 0)
+    481                  PASS_FAIL_TYPE retval;
+    482                  uint8 index;
+    483                  uint8 handler_index;
+    484          
+    485                  retval     = FAIL;
+    486          
+    487                  #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    488                      if (load->Pilot_Data_Index < MultiSequencePilot_Allocation)
+    489                      {
+    490                          for (index = 0; index < MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot; index++)
+    491                          {
+    492                              handler_index = MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Handler_Index;
+    493          
+    494                              if (handler_index != HBL_INDEX_INVALID)
+    495                              {
+    496                                  if (MULTIDRIVER__PILOT_HANDLERS[handler_index].OneMsHandler != NULL)
+    497                                  {
+    498                                      retval  = MULTIDRIVER__PILOT_HANDLERS[handler_index].OneMsHandler(&MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index]);
+    499                                  }
+    500                              }
+    501                          }
+    502                      }
+    503          
+    504                  #endif
+    505          
+    506                  return (retval);
+    507              #else
+    508                  return(FAIL);
+    509              #endif
+    510          }
+    511          
+    512          //---------------------------------------------------------------------------------------------------------------------
+    513          /**
+    514           * @brief
+    515           * @param load
+    516           * @return
+    517           */
+    518          PASS_FAIL_TYPE MultiSequencePilot__OCProcess(HBL_LOAD_TYPE * load)
+    519          {
+    520              #if (HBL_PILOT_NUM_TRIAC > 0)
+    521                  PASS_FAIL_TYPE retval;
+    522                  uint8 index;
+    523                  uint8 handler_index;
+    524          
+    525                  retval     = FAIL;
+    526          
+    527                  #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    528                      if (load->Pilot_Data_Index < MultiSequencePilot_Allocation)
+    529                      {
+    530                          for (index = 0; index < MultiSequencePilot_Data[load->Pilot_Data_Index].Max_Pilot; index++)
+    531                          {
+    532                              handler_index = MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index].Pilot_Handler_Index;
+    533          
+    534                              if (handler_index != HBL_INDEX_INVALID)
+    535                              {
+    536                                  if (MULTIDRIVER__PILOT_HANDLERS[handler_index].OCProcess != NULL)
+    537                                  {
+    538                                      retval  = MULTIDRIVER__PILOT_HANDLERS[handler_index].OCProcess(&MultiSequencePilot_Data[load->Pilot_Data_Index].Load[index]);
+    539                                  }
+    540                              }
+    541                          }
+    542                      }
+    543          
+    544                  #endif
+    545          
+    546              return (retval);
+    547              #else
+    548                  return(FAIL);
+    549              #endif
+    550          }
+    551          //---------------------------------------------------------------------------------------------------------------------
+    552          /**
+    553           * @brief
+    554           * @param load
+    555           * @return
+    556           */
+    557          void * MultiSequencePilot__GetRequested(HBL_LOAD_TYPE * load)
+    558          {
+    559              void *retval;
+    560          
+    561              retval = NULL;
+    562          
+    563          #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    564              if (load->Pilot_Data_Index < MultiSequencePilot_Allocation)
+    565              {
+    566                  retval = (void *)(&MultiSequencePilot_Data[load->Pilot_Data_Index].Requested_State);
+    567              }
+    568          #endif
+    569          
+    570              return (retval);
+    571          }
+    572          
+    573          //---------------------------------------------------------------------------------------------------------------------
+    574          /**
+    575           * @brief
+    576           * @param load
+    577           * @return
+    578           */
+    579          void * MultiSequencePilot__GetProcessed(HBL_LOAD_TYPE * load)
+    580          {
+    581              void *retval;
+    582          
+    583              retval = NULL;
+    584          
+    585          #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    586              if (load->Pilot_Data_Index < MultiSequencePilot_Allocation)
+    587              {
+    588                  retval = (void *) (&MultiSequencePilot_Data[load->Pilot_Data_Index].Processed_State);
+    589              }
+    590          #endif
+    591          
+    592              return (retval);
+    593          }
+    594          
+    595          //---------------------------------------------------------------------------------------------------------------------
+    596          /**
+    597           *  @brief      Get Multi sequence current status.
+    598           *
+    599           *  @param      HBL_LOAD_TYPE *load - Pointer to MultiSequence load instance.
+    600           *
+    601           *  @return     void *status - pointer to status of pilot instance. Cast it using *((HBL_LOAD_STATUS_TYPE *)ptr) to get value.
+    602           *
+    603           */
+    604          void * MultiSequencePilot__GetStatus(HBL_LOAD_TYPE *load)
+    605          {
+    606              void *status;
+    607          
+    608              status = NULL;
+    609          
+    610              #if (MULTISEQUENCE_NUM_REGISTERED_PILOT > 0)
+    611                  if (load->Pilot_Data_Index < MultiSequencePilot_Allocation)
+    612                  {
+    613                      status = (void *)(&MultiSequencePilot_Data[load->Pilot_Data_Index].Status.Byte);
+    614                  }
+    615              #endif
+    616          
+    617              return (status);
+    618          }
+    619          
+    620          
+    621          //=====================================================================================================================
+    622          //-------------------------------------- Private Functions ------------------------------------------------------------
+    623          //=====================================================================================================================
+    624          
+    625          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

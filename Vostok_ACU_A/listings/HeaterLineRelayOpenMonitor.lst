@@ -1,0 +1,1146 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:17
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor/HeaterLineRelayOpenMonitor.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\HeaterLineRelayOpenMonitor.lst -o
+#        obj\HeaterLineRelayOpenMonitor.obj
+#        source/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor/HeaterLineRelayOpenMonitor.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\HeaterLineRelayOpenMonitor.lst
+#    Object file  =  obj\HeaterLineRelayOpenMonitor.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Monitors\WashHeaterFaultMonitor\HeaterLineRelayOpenMonitor\HeaterLineRelayOpenMonitor.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Basic description of file contents
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8           *
+      9             @startuml{LineRelayOpenFaultMonitor_State_Machine.jpg}
+     10                  title Line Relay Open Monitor State Machine
+     11          
+     12                   [*] --> INITIALIZE
+     13          
+     14                  INITIALIZE : entry / InitializeModule()
+     15                  INITIALIZE --> NO_FAILURE  : evStartMonitor\n/ ResetFailuresDetection()
+     16                  INITIALIZE --> [*]         : evSettingDataMissing
+     17          
+     18                  NO_FAILURE : do /\t CheckForFailures()
+     19                  NO_FAILURE --> RELAY_L_OPEN_DETECTED  : evRelayLOpenDetected
+     20          
+     21                  RELAY_L_OPEN_DETECTED : entry /\t SetRelayLOpenDetection()
+     22                  RELAY_L_OPEN_DETECTED : do /\t CheckRelayLOpenRemoval()
+     23                  RELAY_L_OPEN_DETECTED --> NO_FAILURE  : evNoRelayLOpenFailurePresent\n/ ResetFailuresDetection()
+     24                  RELAY_L_OPEN_DETECTED --> OPEN_FAULT  : evRelayLOpenDebounceCompleted
+     25          
+     26          		OPEN_FAULT : exit /\t RestartStabilizationTime()
+     27          		OPEN_FAULT : do /\t MonitorRelayLOpenFaultState()
+     28          		OPEN_FAULT --> NO_FAILURE : evHeaterFaultReset\n/ ResetFailuresDetection()
+     29          
+     30              @enduml
+     31          
+     32           *  @copyright  Copyright 2017-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     33           */
+     34          //---------------------------------------------------------------------------------------------------------------------
+     35          //---------------------------------------------------------------------------------------------------------------------
+     36          
+     37          
+     38          //-------------------------------------- Include Files ----------------------------------------------------------------
+     39          // -- This Module --
+     40          #include "SystemConfig.h"
+     41          #include "WashHeaterFaultMonitor.h"
+     42          #include "HeaterLineRelayOpenMonitor.h"
+     43          
+     44          // -- Other Modules --
+     45          #include "Fault.h"
+     46          #include "Hbl.h"
+     47          #include "HblDefs.h"
+     48          #include "Supervisor.h"
+     49          
+     50          //=====================================================================================================================
+     51          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Line Relay Open Monitor State Machine
+     52          //=====================================================================================================================
+     53          // !! StateEngineCrank cannot update this code if you change the header !!
+     54          
+     55          
+     56          //! Unique names used to identify states of the Line Relay Open Monitor state machine.
+     57          typedef enum LINE_RELAY_OPEN_MONITOR_STATE_ENUM
+     58          {
+     59              STATE_LINE_RELAY_OPEN_MONITOR_NONE                  = 0,
+     60          
+     61              STATE_LINE_RELAY_OPEN_MONITOR_INITIALIZE            = 1, //!< (initial_state)
+     62              STATE_LINE_RELAY_OPEN_MONITOR_NO_FAILURE            = 2,
+     63              STATE_LINE_RELAY_OPEN_MONITOR_RELAY_L_OPEN_DETECTED = 3,
+     64              STATE_LINE_RELAY_OPEN_MONITOR_OPEN_FAULT            = 4,
+     65          
+     66              STATE_LINE_RELAY_OPEN_MONITOR_END                   = 5
+     67          } LINE_RELAY_OPEN_MONITOR_STATE_TYPE;
+     68          
+     69          //! The state variable for the Line Relay Open Monitor state machine.
+     70          //! State machines with a history pseudostate may write to this variable during initialization.
+     71          //! Other state machines must only write to this variable through auto-generated functions.
+
+   \                                 In section .bss, align 1
+     72          static LINE_RELAY_OPEN_MONITOR_STATE_TYPE Line_Relay_Open_Monitor_State;
+   \                     Line_Relay_Open_Monitor_State:
+   \   00000000                      DS8 1
+     73          
+     74          // -- Private Function Prototypes used by the state machine for customization functions --
+     75          static void CheckForFailures(void);
+     76          static void CheckRelayLOpenRemoval(void);
+     77          static void InitializeModule(void);
+     78          static void MonitorRelayLOpenFaultState(void);
+     79          static void ResetFailuresDetection(void);
+     80          static void RestartStabilizationTime(void);
+     81          static void SetRelayLOpenDetection(void);
+     82          
+     83          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+     84          static void EventHeaterFaultReset(void);
+     85          static void EventNoRelayLOpenFailurePresent(void);
+     86          static void EventRelayLOpenDebounceCompleted(void);
+     87          static void EventRelayLOpenDetected(void);
+     88          static void EventSettingDataMissing(void);
+     89          static void EventStartMonitor(void);
+     90          static void LineRelayOpenMonitorExecute(void);
+     91          static void LineRelayOpenMonitorInitialize(void);
+     92          
+     93          // !! StateEngineCrank cannot update this code if you change the footer !!
+     94          // End of StateEngineCrank Auto-Generated Code.
+     95          
+     96          
+     97          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     98          
+     99          
+    100          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    101          
+    102          
+    103          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    104          
+    105          //=====================================================================================================================
+    106          //-------------------------------------- Public Functions -------------------------------------------------------------
+    107          //=====================================================================================================================
+    108          
+    109          //----------------------------------------------------------------------------
+    110          /**
+    111           *  @brief
+    112           *  @details
+    113           *
+    114           */
+
+   \                                 In section .text, align 2, keep-with-next
+    115          void HeaterLineRelayOpenMonitor__Initialize(void)
+    116          {
+   \                     HeaterLineRelayOpenMonitor__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    117          	LineRelayOpenMonitorInitialize();
+   \   00000002   0x.... 0x....      BL       LineRelayOpenMonitorInitialize
+    118          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    119          
+    120          
+    121          //----------------------------------------------------------------------------
+    122          /**
+    123           *  @brief
+    124           *  @details
+    125           *
+    126           */
+
+   \                                 In section .text, align 2, keep-with-next
+    127          void HeaterLineRelayOpenMonitor__Execution(void)
+    128          {
+   \                     HeaterLineRelayOpenMonitor__Execution: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    129          	LineRelayOpenMonitorExecute();
+   \   00000002   0x.... 0x....      BL       LineRelayOpenMonitorExecute
+    130          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    131          
+    132          
+    133          //----------------------------------------------------------------------------
+    134          /**
+    135           *  @brief
+    136           *  @details
+    137           *
+    138           */
+
+   \                                 In section .text, align 2, keep-with-next
+    139          void HeaterLineRelayOpenMonitor__ExitFault(void)
+    140          {
+   \                     HeaterLineRelayOpenMonitor__ExitFault: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    141          	EventHeaterFaultReset();
+   \   00000002   0x.... 0x....      BL       EventHeaterFaultReset
+    142          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    143          
+    144          
+    145          //=====================================================================================================================
+    146          //-------------------------------------- Private Functions ------------------------------------------------------------
+    147          //=====================================================================================================================
+    148          
+    149          
+    150          //=====================================================================================================================
+    151          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    152          //=====================================================================================================================
+    153          
+    154          
+    155          //---------------------------------------------------------------------------------------------------------------------
+    156          /**
+    157           *
+    158           */
+
+   \                                 In section .text, align 2, keep-with-next
+    159          static void CheckForFailures(void)
+    160          {
+   \                     CheckForFailures: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    161          	if ((uint8)WashHeaterFaultMonitor__GetMonitorPrecondition() == (uint8)TRUE)
+   \   00000002   0x.... 0x....      BL       WashHeaterFaultMonitor__GetMonitorPrecondition
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD109             BNE      ??CheckForFailures_0
+    162          	{
+    163          		if (WashHeaterFaultMonitor__GetStabilizationCounter() == (uint8)0)
+   \   0000000A   0x.... 0x....      BL       WashHeaterFaultMonitor__GetStabilizationCounter
+   \   0000000E   0x2800             CMP      R0,#+0
+   \   00000010   0xD105             BNE      ??CheckForFailures_0
+    164          		{
+    165          			if (HEATER_L_RELAY_OPEN_FAULT_CONDITION)
+   \   00000012   0x.... 0x....      BL       WashHeaterFaultMonitor__GetHeaterConsistency
+   \   00000016   0x2834             CMP      R0,#+52
+   \   00000018   0xD101             BNE      ??CheckForFailures_0
+    166          			{
+    167          				EventRelayLOpenDetected();
+   \   0000001A   0x.... 0x....      BL       EventRelayLOpenDetected
+    168          			}
+    169          		}
+    170          		else
+    171          		{
+    172          			// Wait for signals stabilization
+    173          		}
+    174          	}
+    175          	else
+    176          	{
+    177          		// No failures detection if pre-conditions are not satisfied
+    178          	}
+    179          }
+   \                     ??CheckForFailures_0: (+1)
+   \   0000001E   0xBD01             POP      {R0,PC}          ;; return
+    180          
+    181          
+    182          //---------------------------------------------------------------------------------------------------------------------
+    183          /**
+    184           *
+    185           */
+
+   \                                 In section .text, align 2, keep-with-next
+    186          static void CheckRelayLOpenRemoval(void)
+    187          {
+   \                     CheckRelayLOpenRemoval: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    188          	if ((uint8)Fault__IsInFaultState(HEATER_LINE_RELAY_FAULT_ID) == (uint8)TRUE)
+   \   00000002   0x2041             MOVS     R0,#+65
+   \   00000004   0x.... 0x....      BL       Fault__IsInFaultState
+   \   00000008   0x2801             CMP      R0,#+1
+   \   0000000A   0xD109             BNE      ??CheckRelayLOpenRemoval_0
+    189          	{
+    190          		if (Supervisor__IsTestCycleActive() == FALSE)
+   \   0000000C   0x.... 0x....      BL       Supervisor__IsTestCycleActive
+   \   00000010   0x2800             CMP      R0,#+0
+   \   00000012   0xD102             BNE      ??CheckRelayLOpenRemoval_1
+    191          		{
+    192          			WashHeaterFaultMonitor__SetHeaterDisabledBitmapBit(HEATER_DISABLED_BY_L_RELAY_STUCK_OPEN);
+   \   00000014   0x2001             MOVS     R0,#+1
+   \   00000016   0x.... 0x....      BL       WashHeaterFaultMonitor__SetHeaterDisabledBitmapBit
+    193          		}
+    194          		EventRelayLOpenDebounceCompleted();
+   \                     ??CheckRelayLOpenRemoval_1: (+1)
+   \   0000001A   0x.... 0x....      BL       EventRelayLOpenDebounceCompleted
+   \   0000001E   0xBD01             POP      {R0,PC}
+    195          	}
+    196          	else
+    197          	{
+    198          		if ((WashHeaterFaultMonitor__GetMonitorPrecondition() == FALSE) ||
+    199          			(Fault__IsObserverActive(HEATER_LINE_RELAY_FAULT_ID) == FALSE) ||
+    200          			(!HEATER_L_RELAY_OPEN_FAULT_CONDITION))
+   \                     ??CheckRelayLOpenRemoval_0: (+1)
+   \   00000020   0x.... 0x....      BL       WashHeaterFaultMonitor__GetMonitorPrecondition
+   \   00000024   0x2800             CMP      R0,#+0
+   \   00000026   0xD008             BEQ      ??CheckRelayLOpenRemoval_2
+   \   00000028   0x2041             MOVS     R0,#+65
+   \   0000002A   0x.... 0x....      BL       Fault__IsObserverActive
+   \   0000002E   0x2800             CMP      R0,#+0
+   \   00000030   0xD003             BEQ      ??CheckRelayLOpenRemoval_2
+   \   00000032   0x.... 0x....      BL       WashHeaterFaultMonitor__GetHeaterConsistency
+   \   00000036   0x2834             CMP      R0,#+52
+   \   00000038   0xD001             BEQ      ??CheckRelayLOpenRemoval_3
+    201          		{
+    202          			EventNoRelayLOpenFailurePresent();
+   \                     ??CheckRelayLOpenRemoval_2: (+1)
+   \   0000003A   0x.... 0x....      BL       EventNoRelayLOpenFailurePresent
+    203          		}
+    204          	}
+    205          }
+   \                     ??CheckRelayLOpenRemoval_3: (+1)
+   \   0000003E   0xBD01             POP      {R0,PC}          ;; return
+    206          
+    207          
+    208          //---------------------------------------------------------------------------------------------------------------------
+    209          /**
+    210           *
+    211           */
+
+   \                                 In section .text, align 2, keep-with-next
+    212          static void SetRelayLOpenDetection(void)
+    213          {
+   \                     SetRelayLOpenDetection: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    214          	Fault__ConditionDetected(HEATER_LINE_RELAY_FAULT_ID);
+   \   00000002   0x2041             MOVS     R0,#+65
+   \   00000004   0x.... 0x....      BL       Fault__ConditionDetected
+    215          }
+   \   00000008   0xBD01             POP      {R0,PC}          ;; return
+    216          
+    217          
+    218          //---------------------------------------------------------------------------------------------------------------------
+    219          /**
+    220           *
+    221           */
+
+   \                                 In section .text, align 2, keep-with-next
+    222          static void ResetFailuresDetection(void)
+    223          {
+   \                     ResetFailuresDetection: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    224          	Fault__ConditionRemoved(HEATER_LINE_RELAY_FAULT_ID);
+   \   00000002   0x2041             MOVS     R0,#+65
+   \   00000004   0x.... 0x....      BL       Fault__ConditionRemoved
+    225          }
+   \   00000008   0xBD01             POP      {R0,PC}          ;; return
+    226          
+    227          
+    228          //---------------------------------------------------------------------------------------------------------------------
+    229          /**
+    230           *
+    231           */
+
+   \                                 In section .text, align 2, keep-with-next
+    232          static void MonitorRelayLOpenFaultState(void)
+    233          {
+   \                     MonitorRelayLOpenFaultState: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    234          	if (Fault__IsInFaultState(HEATER_LINE_RELAY_FAULT_ID) == FALSE)
+   \   00000002   0x2041             MOVS     R0,#+65
+   \   00000004   0x.... 0x....      BL       Fault__IsInFaultState
+   \   00000008   0x2800             CMP      R0,#+0
+   \   0000000A   0xD101             BNE      ??MonitorRelayLOpenFaultState_0
+    235          	{
+    236          		EventHeaterFaultReset();
+   \   0000000C   0x.... 0x....      BL       EventHeaterFaultReset
+    237          	}
+    238          }
+   \                     ??MonitorRelayLOpenFaultState_0: (+1)
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+    239          
+    240          
+    241          //---------------------------------------------------------------------------------------------------------------------
+    242          /**
+    243           *
+    244           */
+
+   \                                 In section .text, align 2, keep-with-next
+    245          static void RestartStabilizationTime(void)
+    246          {
+   \                     RestartStabilizationTime: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    247          	WashHeaterFaultMonitor__RestartStabilizationCounter();
+   \   00000002   0x.... 0x....      BL       WashHeaterFaultMonitor__RestartStabilizationCounter
+    248          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    249          
+    250          
+    251          //---------------------------------------------------------------------------------------------------------------------
+    252          /**
+    253           *
+    254           */
+
+   \                                 In section .text, align 2, keep-with-next
+    255          static void InitializeModule(void)
+    256          {
+   \                     InitializeModule: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    257          	if (Fault__GetParameters(HEATER_LINE_RELAY_FAULT_ID) != NULL)
+   \   00000002   0x2041             MOVS     R0,#+65
+   \   00000004   0x.... 0x....      BL       Fault__GetParameters
+   \   00000008   0x2800             CMP      R0,#+0
+   \   0000000A   0xD002             BEQ      ??InitializeModule_0
+    258          	{
+    259          		EventStartMonitor();
+   \   0000000C   0x.... 0x....      BL       EventStartMonitor
+   \   00000010   0xBD01             POP      {R0,PC}
+    260          	}
+    261          	else
+    262          	{
+    263          		EventSettingDataMissing();
+   \                     ??InitializeModule_0: (+1)
+   \   00000012   0x.... 0x....      BL       EventSettingDataMissing
+    264          	}
+    265          }
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    266          
+    267          
+    268          //=====================================================================================================================
+    269          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Line Relay Open Monitor State Machine
+    270          //=====================================================================================================================
+    271          // !! StateEngineCrank cannot update this code if you change the header !!
+    272          
+    273          
+    274          //---------------------------------------------------------------------------------------------------------------------
+    275          /**
+    276           * Process the Heater Fault Reset Event for the Line Relay Open Monitor state machine.
+    277           *
+    278           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    279           *
+    280           * This function was auto-generated and must not be edited manually.
+    281           * Change the UML used to generate this function and regenerate the source code.
+    282           */
+
+   \                                 In section .text, align 2, keep-with-next
+    283          static void EventHeaterFaultReset(void)
+    284          {
+   \                     EventHeaterFaultReset: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    285              switch (Line_Relay_Open_Monitor_State)
+   \   00000002   0x....             LDR      R4,??DataTable7
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2804             CMP      R0,#+4
+   \   00000008   0xD105             BNE      ??EventHeaterFaultReset_0
+    286              {
+    287                  case STATE_LINE_RELAY_OPEN_MONITOR_OPEN_FAULT:
+    288                      RestartStabilizationTime();             // Exit function.
+   \   0000000A   0x.... 0x....      BL       RestartStabilizationTime
+    289                      ResetFailuresDetection();               // Transition action function.
+   \   0000000E   0x.... 0x....      BL       ResetFailuresDetection
+    290                      Line_Relay_Open_Monitor_State = STATE_LINE_RELAY_OPEN_MONITOR_NO_FAILURE;
+   \   00000012   0x2002             MOVS     R0,#+2
+   \   00000014   0x7020             STRB     R0,[R4, #+0]
+    291                      break;
+    292          
+    293                  default:
+    294                      // Event is ignored for all other values of Line_Relay_Open_Monitor_State.
+    295                      break;
+    296              }
+    297          }
+   \                     ??EventHeaterFaultReset_0: (+1)
+   \   00000016   0xBD10             POP      {R4,PC}          ;; return
+    298          
+    299          
+    300          //---------------------------------------------------------------------------------------------------------------------
+    301          /**
+    302           * Process the No Relay L Open Failure Present Event for the Line Relay Open Monitor state machine.
+    303           *
+    304           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    305           *
+    306           * This function was auto-generated and must not be edited manually.
+    307           * Change the UML used to generate this function and regenerate the source code.
+    308           */
+
+   \                                 In section .text, align 2, keep-with-next
+    309          static void EventNoRelayLOpenFailurePresent(void)
+    310          {
+   \                     EventNoRelayLOpenFailurePresent: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    311              switch (Line_Relay_Open_Monitor_State)
+   \   00000002   0x....             LDR      R4,??DataTable7
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2803             CMP      R0,#+3
+   \   00000008   0xD103             BNE      ??EventNoRelayLOpenFailurePresent_0
+    312              {
+    313                  case STATE_LINE_RELAY_OPEN_MONITOR_RELAY_L_OPEN_DETECTED:
+    314                      ResetFailuresDetection();               // Transition action function.
+   \   0000000A   0x.... 0x....      BL       ResetFailuresDetection
+    315                      Line_Relay_Open_Monitor_State = STATE_LINE_RELAY_OPEN_MONITOR_NO_FAILURE;
+   \   0000000E   0x2002             MOVS     R0,#+2
+   \   00000010   0x7020             STRB     R0,[R4, #+0]
+    316                      break;
+    317          
+    318                  default:
+    319                      // Event is ignored for all other values of Line_Relay_Open_Monitor_State.
+    320                      break;
+    321              }
+    322          }
+   \                     ??EventNoRelayLOpenFailurePresent_0: (+1)
+   \   00000012   0xBD10             POP      {R4,PC}          ;; return
+    323          
+    324          
+    325          //---------------------------------------------------------------------------------------------------------------------
+    326          /**
+    327           * Process the Relay L Open Debounce Completed Event for the Line Relay Open Monitor state machine.
+    328           *
+    329           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    330           *
+    331           * This function was auto-generated and must not be edited manually.
+    332           * Change the UML used to generate this function and regenerate the source code.
+    333           */
+
+   \                                 In section .text, align 2, keep-with-next
+    334          static void EventRelayLOpenDebounceCompleted(void)
+    335          {
+    336              switch (Line_Relay_Open_Monitor_State)
+   \                     EventRelayLOpenDebounceCompleted: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2903             CMP      R1,#+3
+   \   00000006   0xD101             BNE      ??EventRelayLOpenDebounceCompleted_0
+    337              {
+    338                  case STATE_LINE_RELAY_OPEN_MONITOR_RELAY_L_OPEN_DETECTED:
+    339                      Line_Relay_Open_Monitor_State = STATE_LINE_RELAY_OPEN_MONITOR_OPEN_FAULT;
+   \   00000008   0x2104             MOVS     R1,#+4
+   \   0000000A   0x7001             STRB     R1,[R0, #+0]
+    340                      break;
+    341          
+    342                  default:
+    343                      // Event is ignored for all other values of Line_Relay_Open_Monitor_State.
+    344                      break;
+    345              }
+    346          }
+   \                     ??EventRelayLOpenDebounceCompleted_0: (+1)
+   \   0000000C   0x4770             BX       LR               ;; return
+    347          
+    348          
+    349          //---------------------------------------------------------------------------------------------------------------------
+    350          /**
+    351           * Process the Relay L Open Detected Event for the Line Relay Open Monitor state machine.
+    352           *
+    353           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    354           *
+    355           * This function was auto-generated and must not be edited manually.
+    356           * Change the UML used to generate this function and regenerate the source code.
+    357           */
+
+   \                                 In section .text, align 2, keep-with-next
+    358          static void EventRelayLOpenDetected(void)
+    359          {
+    360              switch (Line_Relay_Open_Monitor_State)
+   \                     EventRelayLOpenDetected: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2902             CMP      R1,#+2
+   \   00000006   0xD000             BEQ      ??EventRelayLOpenDetected_0
+   \   00000008   0x4770             BX       LR
+    361              {
+    362                  case STATE_LINE_RELAY_OPEN_MONITOR_NO_FAILURE:
+    363                      Line_Relay_Open_Monitor_State = STATE_LINE_RELAY_OPEN_MONITOR_RELAY_L_OPEN_DETECTED;
+   \                     ??EventRelayLOpenDetected_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2103             MOVS     R1,#+3
+   \   0000000E   0x7001             STRB     R1,[R0, #+0]
+    364                      SetRelayLOpenDetection();               // Entry Function.
+   \   00000010   0x.... 0x....      BL       SetRelayLOpenDetection
+    365                      break;
+    366          
+    367                  default:
+    368                      // Event is ignored for all other values of Line_Relay_Open_Monitor_State.
+    369                      break;
+    370              }
+    371          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+    372          
+    373          
+    374          //---------------------------------------------------------------------------------------------------------------------
+    375          /**
+    376           * Process the Setting Data Missing Event for the Line Relay Open Monitor state machine.
+    377           *
+    378           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    379           *
+    380           * This function was auto-generated and must not be edited manually.
+    381           * Change the UML used to generate this function and regenerate the source code.
+    382           */
+
+   \                                 In section .text, align 2, keep-with-next
+    383          static void EventSettingDataMissing(void)
+    384          {
+    385              switch (Line_Relay_Open_Monitor_State)
+   \                     EventSettingDataMissing: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2901             CMP      R1,#+1
+   \   00000006   0xD101             BNE      ??EventSettingDataMissing_0
+    386              {
+    387                  case STATE_LINE_RELAY_OPEN_MONITOR_INITIALIZE:
+    388                      Line_Relay_Open_Monitor_State = STATE_LINE_RELAY_OPEN_MONITOR_NONE; // Terminate Line Relay Open Monitor state machine execution.
+   \   00000008   0x2100             MOVS     R1,#+0
+   \   0000000A   0x7001             STRB     R1,[R0, #+0]
+    389                      break;
+    390          
+    391                  default:
+    392                      // Event is ignored for all other values of Line_Relay_Open_Monitor_State.
+    393                      break;
+    394              }
+    395          }
+   \                     ??EventSettingDataMissing_0: (+1)
+   \   0000000C   0x4770             BX       LR               ;; return
+    396          
+    397          
+    398          //---------------------------------------------------------------------------------------------------------------------
+    399          /**
+    400           * Process the Start Monitor Event for the Line Relay Open Monitor state machine.
+    401           *
+    402           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    403           *
+    404           * This function was auto-generated and must not be edited manually.
+    405           * Change the UML used to generate this function and regenerate the source code.
+    406           */
+
+   \                                 In section .text, align 2, keep-with-next
+    407          static void EventStartMonitor(void)
+    408          {
+   \                     EventStartMonitor: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    409              switch (Line_Relay_Open_Monitor_State)
+   \   00000002   0x....             LDR      R4,??DataTable7
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD103             BNE      ??EventStartMonitor_0
+    410              {
+    411                  case STATE_LINE_RELAY_OPEN_MONITOR_INITIALIZE:
+    412                      ResetFailuresDetection();               // Transition action function.
+   \   0000000A   0x.... 0x....      BL       ResetFailuresDetection
+    413                      Line_Relay_Open_Monitor_State = STATE_LINE_RELAY_OPEN_MONITOR_NO_FAILURE;
+   \   0000000E   0x2002             MOVS     R0,#+2
+   \   00000010   0x7020             STRB     R0,[R4, #+0]
+    414                      break;
+    415          
+    416                  default:
+    417                      // Event is ignored for all other values of Line_Relay_Open_Monitor_State.
+    418                      break;
+    419              }
+    420          }
+   \                     ??EventStartMonitor_0: (+1)
+   \   00000012   0xBD10             POP      {R4,PC}          ;; return
+    421          
+    422          
+    423          //---------------------------------------------------------------------------------------------------------------------
+    424          /**
+    425           * The main execution function for the Line Relay Open Monitor state machine.
+    426           * This function should be called periodically while the state machine is running.
+    427           *
+    428           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    429           *
+    430           * This function was auto-generated and must not be edited manually.
+    431           * Change the UML used to generate this function and regenerate the source code.
+    432           */
+
+   \                                 In section .text, align 2, keep-with-next
+    433          static void LineRelayOpenMonitorExecute(void)
+    434          {
+   \                     LineRelayOpenMonitorExecute: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    435              switch(Line_Relay_Open_Monitor_State)
+   \   00000002   0x....             LDR      R0,??DataTable7
+   \   00000004   0x7800             LDRB     R0,[R0, #+0]
+   \   00000006   0x2802             CMP      R0,#+2
+   \   00000008   0xD004             BEQ      ??LineRelayOpenMonitorExecute_0
+   \   0000000A   0xD30B             BCC      ??LineRelayOpenMonitorExecute_1
+   \   0000000C   0x2804             CMP      R0,#+4
+   \   0000000E   0xD007             BEQ      ??LineRelayOpenMonitorExecute_2
+   \   00000010   0xD303             BCC      ??LineRelayOpenMonitorExecute_3
+   \   00000012   0xBD01             POP      {R0,PC}
+    436              {
+    437                  case STATE_LINE_RELAY_OPEN_MONITOR_NO_FAILURE:
+    438                      CheckForFailures();                     // Do function.
+   \                     ??LineRelayOpenMonitorExecute_0: (+1)
+   \   00000014   0x.... 0x....      BL       CheckForFailures
+    439                      break;
+   \   00000018   0xBD01             POP      {R0,PC}
+    440          
+    441                  case STATE_LINE_RELAY_OPEN_MONITOR_RELAY_L_OPEN_DETECTED:
+    442                      CheckRelayLOpenRemoval();               // Do function.
+   \                     ??LineRelayOpenMonitorExecute_3: (+1)
+   \   0000001A   0x.... 0x....      BL       CheckRelayLOpenRemoval
+    443                      break;
+   \   0000001E   0xBD01             POP      {R0,PC}
+    444          
+    445                  case STATE_LINE_RELAY_OPEN_MONITOR_OPEN_FAULT:
+    446                      MonitorRelayLOpenFaultState();          // Do function.
+   \                     ??LineRelayOpenMonitorExecute_2: (+1)
+   \   00000020   0x.... 0x....      BL       MonitorRelayLOpenFaultState
+    447                      break;
+    448          
+    449                  default:
+    450                      // There is nothing to do for all other values of Line_Relay_Open_Monitor_State.
+    451                      break;
+    452              }
+    453          }
+   \                     ??LineRelayOpenMonitorExecute_1: (+1)
+   \   00000024   0xBD01             POP      {R0,PC}          ;; return
+    454          
+    455          
+    456          //---------------------------------------------------------------------------------------------------------------------
+    457          /**
+    458           * The initialization function for the Line Relay Open Monitor state machine.
+    459           * This function resets the state machine to the initial state and executes the initial state's
+    460           * entry function.
+    461           *
+    462           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    463           *
+    464           * This function was auto-generated and must not be edited manually.
+    465           * Change the UML used to generate this function and regenerate the source code.
+    466           */
+
+   \                                 In section .text, align 2, keep-with-next
+    467          static void LineRelayOpenMonitorInitialize(void)
+    468          {
+   \                     LineRelayOpenMonitorInitialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    469              Line_Relay_Open_Monitor_State = STATE_LINE_RELAY_OPEN_MONITOR_INITIALIZE;
+   \   00000002   0x2001             MOVS     R0,#+1
+   \   00000004   0x....             LDR      R1,??DataTable7
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+    470              InitializeModule();                             // Entry Function.
+   \   00000008   0x.... 0x....      BL       InitializeModule
+    471          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \   00000000   0x........         DC32     Line_Relay_Open_Monitor_State
+    472          
+    473          
+    474          // !! StateEngineCrank cannot update this code if you change the footer !!
+    475          // End of StateEngineCrank Auto-Generated Code.
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   CheckForFailures
+         8   -> EventRelayLOpenDetected
+         8   -> WashHeaterFaultMonitor__GetHeaterConsistency
+         8   -> WashHeaterFaultMonitor__GetMonitorPrecondition
+         8   -> WashHeaterFaultMonitor__GetStabilizationCounter
+       8   CheckRelayLOpenRemoval
+         8   -> EventNoRelayLOpenFailurePresent
+         8   -> EventRelayLOpenDebounceCompleted
+         8   -> Fault__IsInFaultState
+         8   -> Fault__IsObserverActive
+         8   -> Supervisor__IsTestCycleActive
+         8   -> WashHeaterFaultMonitor__GetHeaterConsistency
+         8   -> WashHeaterFaultMonitor__GetMonitorPrecondition
+         8   -> WashHeaterFaultMonitor__SetHeaterDisabledBitmapBit
+       8   EventHeaterFaultReset
+         8   -> ResetFailuresDetection
+         8   -> RestartStabilizationTime
+       8   EventNoRelayLOpenFailurePresent
+         8   -> ResetFailuresDetection
+       0   EventRelayLOpenDebounceCompleted
+       8   EventRelayLOpenDetected
+         8   -> SetRelayLOpenDetection
+       0   EventSettingDataMissing
+       8   EventStartMonitor
+         8   -> ResetFailuresDetection
+       8   HeaterLineRelayOpenMonitor__Execution
+         8   -> LineRelayOpenMonitorExecute
+       8   HeaterLineRelayOpenMonitor__ExitFault
+         8   -> EventHeaterFaultReset
+       8   HeaterLineRelayOpenMonitor__Initialize
+         8   -> LineRelayOpenMonitorInitialize
+       8   InitializeModule
+         8   -> EventSettingDataMissing
+         8   -> EventStartMonitor
+         8   -> Fault__GetParameters
+       8   LineRelayOpenMonitorExecute
+         8   -> CheckForFailures
+         8   -> CheckRelayLOpenRemoval
+         8   -> MonitorRelayLOpenFaultState
+       8   LineRelayOpenMonitorInitialize
+         8   -> InitializeModule
+       8   MonitorRelayLOpenFaultState
+         8   -> EventHeaterFaultReset
+         8   -> Fault__IsInFaultState
+       8   ResetFailuresDetection
+         8   -> Fault__ConditionRemoved
+       8   RestartStabilizationTime
+         8   -> WashHeaterFaultMonitor__RestartStabilizationCounter
+       8   SetRelayLOpenDetection
+         8   -> Fault__ConditionDetected
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable7
+      32  CheckForFailures
+      64  CheckRelayLOpenRemoval
+      24  EventHeaterFaultReset
+      20  EventNoRelayLOpenFailurePresent
+      14  EventRelayLOpenDebounceCompleted
+      22  EventRelayLOpenDetected
+      14  EventSettingDataMissing
+      20  EventStartMonitor
+       8  HeaterLineRelayOpenMonitor__Execution
+       8  HeaterLineRelayOpenMonitor__ExitFault
+       8  HeaterLineRelayOpenMonitor__Initialize
+      24  InitializeModule
+      38  LineRelayOpenMonitorExecute
+      14  LineRelayOpenMonitorInitialize
+       1  Line_Relay_Open_Monitor_State
+      18  MonitorRelayLOpenFaultState
+      10  ResetFailuresDetection
+       8  RestartStabilizationTime
+      10  SetRelayLOpenDetection
+
+ 
+   1 byte  in section .bss
+ 360 bytes in section .text
+ 
+ 360 bytes of CODE memory
+   1 byte  of DATA memory
+
+Errors: none
+Warnings: none

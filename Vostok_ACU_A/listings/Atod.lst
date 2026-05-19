@@ -1,0 +1,1646 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:01
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/Micros/STM32G0x/Driver/Atod/Atod.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Atod.lst -o
+#        obj\Atod.obj source/Micros/STM32G0x/Driver/Atod/Atod.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Atod.lst
+#    Object file  =  obj\Atod.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Micros\STM32G0x\Driver\Atod\Atod.c
+      1          /**
+      2           *  @file
+      3           *  @defgroup   CLASS_B
+      4           *
+      5           *  @brief      The Atod GDM for STM32G0x is a module that implements the
+      6           *              Atod standard API (Application Programming interface for the Atod module) for the STM32G0x family
+      7           *              of microcontrollers. This module provides the interface to the application to read the Digital value
+      8           *              from the Analog signal using ADC Engine.
+      9           *  @details    In addition to regular Atod GDM module, Atod contains all necessary mechanisms to Ensure fully safe
+     10           *              reading of digital values from the analog signal and
+     11           *              meets requirements from Normative IEC 60730-1 (annex H.11).
+     12           *
+     13           *              The STM32G0x implements up to 18 A/D channels. It has 16 External channels and 3 internal channels
+     14           *              ATOD_CH12, ATOD_CH13 & ATOD_CH14 are used as internal channels.
+     15           * <pre>
+     16           *               Following table contains the ADC Channel, Port, Pin associated with ADC module for STM32F0x
+     17           *                --------------------------------------
+     18           *               | ATOD Channel   |  Port    |   Pin    |
+     19           *               |----------------|----------|----------|
+     20           *               |    ATOD_CH0    |   PORTA  |    0     |
+     21           *               |----------------|----------|----------|
+     22           *               |    ATOD_CH1    |   PORTA  |    1     |
+     23           *               | ---------------|----------|----------|
+     24           *               |    ATOD_CH2    |   PORTA  |    2     |
+     25           *               |----------------|----------|----------|
+     26           *               |    ATOD_CH3    |   PORTA  |    3     |
+     27           *               |----------------|----------|----------|
+     28           *               |    ATOD_CH4    |   PORTA  |    4     |
+     29           *               |----------------|----------|----------|
+     30           *               |    ATOD_CH5    |   PORTA  |    5     |
+     31           *               |----------------|----------|----------|
+     32           *               |    ATOD_CH6    |   PORTA  |    6     |
+     33           *               |----------------|----------|----------|
+     34           *               |    ATOD_CH7    |   PORTA  |    7     |
+     35           *               |----------------|----------|----------|
+     36           *               |    ATOD_CH8    |   PORTB  |    0     |
+     37           *               |----------------|----------|----------|
+     38           *               |    ATOD_CH9    |   PORTB  |    1     |
+     39           *               |----------------|----------|----------|
+     40           *               |    ATOD_CH10   |   PORTB  |    2     |
+     41           *               |----------------|----------|----------|
+     42           *               |    ATOD_CH11   |   PORTB  |    10    |
+     43           *               |----------------|----------|----------|
+     44           *               |    ATOD_CH12   |  Internal Channel   |
+     45           *               |                | (Temperature Sensor)|
+     46           *               |----------------|----------|----------|
+     47           *               |    ATOD_CH13   |  Internal Channel   |
+     48           *               |                |     (Vrefint)       |
+     49           *               |----------------|----------|----------|
+     50           *               |    ATOD_CH14   |  Monitoring Vbat    |
+     51           *               |                |     (Vbat/3)        |
+     52           *               |----------------|----------|----------|
+     53           *               |    ATOD_CH15   |   PORTB  |    11    |
+     54           *               |----------------|----------|----------|
+     55           *               |    ATOD_CH16   |   PORTB  |    12    |
+     56           *               |----------------|----------|----------|
+     57           *               |    ATOD_CH17   |   PORTC  |    4     |
+     58           *               |----------------|----------|----------|
+     59           *               |    ATOD_CH18   |   PORTC  |    5     |
+     60           *                -------------------------------------- </pre>
+     61           *
+     62           *  @section    Applicable_Documents
+     63           *                  List here all the applicable documents if needed. <tr>
+     64           *
+     65           *  $Header: $
+     66           *
+     67           *  @copyright  Copyright 2015-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     68           */
+     69          //-------------------------------------- Include Files ----------------------------------------------------------------
+     70          #include "C_Extensions.h"
+     71          #include "SRSystemConfig.h"
+     72          #include "uc.h"
+     73          #include "Micro.h"
+     74          #include "Atod.h"
+     75          
+     76          #include "Atod_defs.h"
+     77          #include "Atod_prv.h"
+     78          
+     79          
+     80          
+     81          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+     82              #include "SRTaskSequence.h"
+     83          #endif
+     84          
+     85          #if (CLASSB_FEATURE == ENABLED)
+     86              #ifndef ATOD_SR_FEATURE_TEST
+     87                  #define ATOD_SR_FEATURE_TEST                               ENABLED
+     88              #endif
+     89          #else
+     90              #ifndef ATOD_SR_FEATURE_TEST
+     91                  #define ATOD_SR_FEATURE_TEST                               DISABLED
+     92              #endif
+     93          #endif
+     94          
+     95          //Class B related modules
+     96          #if (ATOD_SR_FEATURE_TEST == ENABLED)
+     97              #include "SRException.h"
+     98              #include "SRData.h"
+     99          #endif
+    100          
+    101          // Atod Channel check max ADC delta threshold
+    102          #ifndef ATOD_CHANNEL_CHECK_MAX_DELTA_ADC
+    103              #define ATOD_CHANNEL_CHECK_MAX_DELTA_ADC   100
+    104          #endif
+    105          
+    106          // Pre/Discharge delay for Atod Channel check - unit is NOPs
+    107          #ifndef ATOD_CHARGE_DELAY
+    108              #define ATOD_CHARGE_DELAY           0
+    109          #endif
+    110          
+    111          #if (ATOD_CHARGE_DELAY < 0)
+    112              #error: "ATOD_CHARGE_DELAY must be equal (for no delay) or higher than 0."
+    113          #endif
+    114          
+    115          #if (ATOD_CHARGE_DELAY > 15)
+    116              #error: "ATOD_CHARGE_DELAY must be lower than 15."
+    117          #endif
+    118          
+    119          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    120          //---------------------------------------------------------------------------------------------------------------------
+    121          
+    122          
+    123          //=====================================================================================================================
+    124          /**
+    125           *    @brief  - Maximum de-bounce counter value for invalid reference voltage detection.
+    126           *    @details- When the ADC get stuck then the de-bounce counter starts incrementing and
+    127           *              whenever the counter reaches to the above macro value it throws an SRATOD_STUCK_EXCEPTION.
+    128           *
+    129           *              If the Atod__EngineClassBCheck() function is called from Applience thread which runs at 100ms then
+    130           *              module will throw an SRATOD_STUCK_EXCEPTION exception after 100 * MAX_INTERNAL_REF_DEBOUNCE time if the Atod engine got stuck
+    131           *
+    132           *    @param  - 1/2/3/4
+    133           *
+    134           *    @note -   "#define MAX_INTERNAL_REF_DEBOUNCE          5"
+    135           *              "#define MAX_INTERNAL_REF_DEBOUNCE          10"
+    136           */
+    137          //=====================================================================================================================
+    138          #ifndef MAX_INTERNAL_REF_DEBOUNCE
+    139              #define MAX_INTERNAL_REF_DEBOUNCE                       5
+    140          #endif
+    141          
+    142          //=====================================================================================================================
+    143          //Macro Defines
+    144          //=====================================================================================================================
+    145          #define MAX_ADC_EXTERN_CHANNEL              16
+    146          #define MAX_ADC_INTERNAL_CHANNEL            3
+    147          #define MAX_ADC_CHANNEL                     (MAX_ADC_EXTERN_CHANNEL + MAX_ADC_INTERNAL_CHANNEL)
+    148          
+    149          /* Fixed timeout value for ADC calibration.                                   */
+    150          /* Values defined to be higher than worst cases: maximum ratio between ADC    */
+    151          /* and CPU clock frequencies.                                                 */
+    152          /* Example of profile low frequency : ADC frequency at 31.25kHz (ADC clock    */
+    153          /* source PLL 8MHz, ADC clock prescaler 256), CPU frequency 52MHz.            */
+    154          /* Calibration time max = 116 / fADC (refer to datasheet)                     */
+    155          /*                      = 193 024 CPU cycles                                  */
+    156          #define ADC_CALIBRATION_TIMEOUT             (193024UL)   /*!< ADC calibration time-out value (unit: CPU cycles) */
+    157          
+    158          #define CLEAR_IER_REG                       ((uint32)0x00000000)
+    159          
+    160          #define CLEAR_ADC_CR_REG                    ((uint32)0x00000000)
+    161          
+    162          //! Atod uses the ADC1 engine because the "Internal Power Block(Vrefint)" and Temperature sensor are available with ADC1 engine only
+    163          #define  ADC_ENG                            ADC1
+    164          
+    165          //! Internal channel Vrefint
+    166          //#define ADC_VREF_CHANNEL                        ATOD_CH13
+    167          #define ADC_VREF_CHANNEL                    ATOD_CH13
+    168          
+    169          //! Number of bits used by the A/D converter when measuring the Internal channel Vrefint
+    170          #define AD_CONVERTER_BITS                   10
+    171          
+    172          //=====================================================================================================================
+    173          /**
+    174           *    @brief  - Defines the channel by channel Programmable sampling time.
+    175           *    @details- Each channel can be sampled with a different sample time.\n
+    176           *              The recommended sampling time for the temperature sensor is 17.1us
+    177           *
+    178           *              Default Sampling time set to SAMPLE_TIME_39_5_CYCLE for more accuracy in atod count.
+    179           *
+    180           *    @param  - SAMPLE_TIME_1_5_CYCLE = 0,  //1.5 ADC Clock Cycle
+    181           *              SAMPLE_TIME_3_5_CYCLE,      //3.5 ADC Clock Cycle
+    182           *              SAMPLE_TIME_7_5_CYCLE,      //7.5 ADC Clock Cycle
+    183           *              SAMPLE_TIME_12_5_CYCLE,     //12.5 ADC Clock Cycle
+    184           *              SAMPLE_TIME_19_5_CYCLE,     //19.5 ADC Clock Cycle
+    185           *              SAMPLE_TIME_39_5_CYCLE,     //39.5 ADC Clock Cycle
+    186           *              SAMPLE_TIME_79_5_CYCLE,     //79.5 ADC Clock Cycle
+    187           *              SAMPLE_TIME_160_5_CYCLE,    //160.5 ADC Clock Cycle
+    188           *
+    189           */
+    190          #ifndef ATOD_CH0_SAMPLE_TIME
+    191              #define ATOD_CH0_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    192          #endif
+    193          
+    194          #ifndef ATOD_CH1_SAMPLE_TIME
+    195              #define ATOD_CH1_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    196          #endif
+    197          
+    198          #ifndef ATOD_CH2_SAMPLE_TIME
+    199              #define ATOD_CH2_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    200          #endif
+    201          
+    202          #ifndef ATOD_CH3_SAMPLE_TIME
+    203              #define ATOD_CH3_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    204          #endif
+    205          
+    206          #ifndef ATOD_CH4_SAMPLE_TIME
+    207              #define ATOD_CH4_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    208          #endif
+    209          
+    210          #ifndef ATOD_CH5_SAMPLE_TIME
+    211              #define ATOD_CH5_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    212          #endif
+    213          
+    214          #ifndef ATOD_CH6_SAMPLE_TIME
+    215              #define ATOD_CH6_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    216          #endif
+    217          
+    218          #ifndef ATOD_CH7_SAMPLE_TIME
+    219              #define ATOD_CH7_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    220          #endif
+    221          
+    222          #ifndef ATOD_CH8_SAMPLE_TIME
+    223              #define ATOD_CH8_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    224          #endif
+    225          
+    226          #ifndef ATOD_CH9_SAMPLE_TIME
+    227              #define ATOD_CH9_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    228          #endif
+    229          
+    230          #ifndef ATOD_CH10_SAMPLE_TIME
+    231              #define ATOD_CH10_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    232          #endif
+    233          
+    234          #ifndef ATOD_CH11_SAMPLE_TIME
+    235              #define ATOD_CH11_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    236          #endif
+    237          
+    238          #ifndef ATOD_CH12_SAMPLE_TIME
+    239              #define ATOD_CH12_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    240          #endif
+    241          
+    242          #ifndef ATOD_CH13_SAMPLE_TIME
+    243              #define ATOD_CH13_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    244          #endif
+    245          
+    246          #ifndef ATOD_CH14_SAMPLE_TIME
+    247              #define ATOD_CH14_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    248          #endif
+    249          
+    250          #ifndef ATOD_CH15_SAMPLE_TIME
+    251              #define ATOD_CH15_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    252          #endif
+    253          
+    254          #ifndef ATOD_CH16_SAMPLE_TIME
+    255              #define ATOD_CH16_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    256          #endif
+    257          
+    258          #ifndef ATOD_CH17_SAMPLE_TIME
+    259              #define ATOD_CH17_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    260          #endif
+    261          
+    262          #ifndef ATOD_CH18_SAMPLE_TIME
+    263              #define ATOD_CH18_SAMPLE_TIME                 SAMPLE_TIME_39_5_CYCLE
+    264          #endif
+    265          
+    266          #ifdef ATOD_HARDCODED_RESOLUTION
+    267              #if (ATOD_HARDCODED_RESOLUTION == 4)
+    268                  #define INTERNAL_REFERENCE_CH_RESOLUTION    >>6
+    269              #elif (ATOD_HARDCODED_RESOLUTION == 8)
+    270                  #define INTERNAL_REFERENCE_CH_RESOLUTION    >>2
+    271                  result = result>>4;
+    272              #elif (ATOD_HARDCODED_RESOLUTION == 10)
+    273                  #define INTERNAL_REFERENCE_CH_RESOLUTION    >>0
+    274                  result = result>>2;
+    275              #elif (ATOD_HARDCODED_RESOLUTION == 12)
+    276                  #define INTERNAL_REFERENCE_CH_RESOLUTION    <<2
+    277              #elif (ATOD_HARDCODED_RESOLUTION == 14)
+    278                  #define INTERNAL_REFERENCE_CH_RESOLUTION    <<4
+    279              #elif (ATOD_HARDCODED_RESOLUTION == 16)
+    280                  #define INTERNAL_REFERENCE_CH_RESOLUTION    <<6
+    281              #endif
+    282          #else
+    283              #define INTERNAL_REFERENCE_CH_RESOLUTION    >>0
+    284          #endif
+    285          
+    286          //! Macro for converting millivolts into ADC count
+    287          #define ATOD_INTERNAL_REF_MIN_COUNT             (uint16)(((((uint32)ATOD_MIN_INTERNAL_REF_IN_MILLIVOLTS)<<AD_CONVERTER_BITS)/ATOD_ENGINE_REF_IN_MILLIVOLTS) INTERNAL_REFERENCE_CH_RESOLUTION)
+    288          #define ATOD_INTERNAL_REF_MAX_COUNT             (uint16)(((((uint32)ATOD_MAX_INTERNAL_REF_IN_MILLIVOLTS)<<AD_CONVERTER_BITS)/ATOD_ENGINE_REF_IN_MILLIVOLTS) INTERNAL_REFERENCE_CH_RESOLUTION)
+    289          
+    290          //=====================================================================================================================
+    291          //Compiler directive
+    292          //=====================================================================================================================
+    293          #ifndef ATOD_ENGINE_REF_IN_MILLIVOLTS
+    294              #error: "ATOD_ENGINE_REF_IN_MILLIVOLTS must be defined in the Atod_prv.h file."
+    295          #else
+    296              #if((ATOD_ENGINE_REF_IN_MILLIVOLTS < 2000) ||(ATOD_ENGINE_REF_IN_MILLIVOLTS > 3600))
+    297                  #error: "ATOD_ENGINE_REF_IN_MILLIVOLTS value should be between 2000(2V) and 3600(3.6V) in the Atod_prv.h file."
+    298              #endif
+    299          #endif
+    300          
+    301          #ifndef ATOD_MIN_INTERNAL_REF_IN_MILLIVOLTS
+    302              #error: "ATOD_MIN_INTERNAL_REF_IN_MILLIVOLTS must be defined in the Atod_prv.h file."
+    303          #else
+    304              #if((ATOD_MIN_INTERNAL_REF_IN_MILLIVOLTS < 500) || (ATOD_MIN_INTERNAL_REF_IN_MILLIVOLTS > 2000))
+    305                  #error: "ATOD_MIN_INTERNAL_REF_IN_MILLIVOLTS value should be between 500(0.5V) and 2000(2V) in the Atod_prv.h file."
+    306              #endif
+    307          #endif
+    308          
+    309          #ifndef ATOD_MAX_INTERNAL_REF_IN_MILLIVOLTS
+    310              #error: "ATOD_MAX_INTERNAL_REF_IN_MILLIVOLTS must be defined in the Atod_prv.h file."
+    311          #else
+    312              #if((ATOD_MAX_INTERNAL_REF_IN_MILLIVOLTS < 500) || (ATOD_MAX_INTERNAL_REF_IN_MILLIVOLTS > 2000))
+    313                  #error: "ATOD_MAX_INTERNAL_REF_IN_MILLIVOLTS value should be between 500(0.5V) and 2000(2V) in the Atod_prv.h file."
+    314              #endif
+    315          #endif
+    316          
+    317          #ifndef MAX_INTERNAL_REF_DEBOUNCE
+    318              #define MAX_INTERNAL_REF_DEBOUNCE           5
+    319          #else
+    320              #if(MAX_INTERNAL_REF_DEBOUNCE>255)
+    321                  #error: "MAX_INTERNAL_REF_DEBOUNCE count should not exceed more than 255 in the Atod_prm.h file."
+    322              #endif
+    323          #endif
+    324          
+    325          //=====================================================================================================================
+    326          //Variable section
+    327          //=====================================================================================================================
+    328          //! Structure containing the ADC read value, mode and resolution for each channel
+    329          PACKED typedef struct
+    330          {
+    331              uint16 value;
+    332          
+    333              #ifndef ATOD_HARDCODED_RESOLUTION
+    334                  ATOD_CHANNEL_RESOLUTION_DEF resolution;
+    335              #endif
+    336          } ATOD_SYSTEM_DEF;
+    337          
+    338          //! Structure containing the ADC channel port pin
+    339          PACKED typedef struct
+    340          {
+    341              volatile GPIO_DEF * port_ptr;
+    342              GPIO_PORT_TYPE port_label;
+    343              uint8 pin;
+    344          } PORT_STRUCT_DEF;
+    345          
+    346          //! Port configuration for each A/D channel
+
+   \                                 In section .text, align 4, keep-with-next
+    347          const PORT_STRUCT_DEF ATOD_PORT[MAX_ADC_CHANNEL] =
+   \                     ATOD_PORT:
+   \   00000000   0x50000000         DC32 50000000H
+   \   00000004   0x00 0x00          DC8 0, 0
+   \   00000006   0x50000000         DC32 50000000H
+   \   0000000A   0x00 0x01          DC8 0, 1
+   \   0000000C   0x50000000         DC32 50000000H
+   \   00000010   0x00 0x02          DC8 0, 2
+   \   00000012   0x50000000         DC32 50000000H
+   \   00000016   0x00 0x03          DC8 0, 3
+   \   00000018   0x50000000         DC32 50000000H
+   \   0000001C   0x00 0x04          DC8 0, 4
+   \   0000001E   0x50000000         DC32 50000000H
+   \   00000022   0x00 0x05          DC8 0, 5
+   \   00000024   0x50000000         DC32 50000000H
+   \   00000028   0x00 0x06          DC8 0, 6
+   \   0000002A   0x50000000         DC32 50000000H
+   \   0000002E   0x00 0x07          DC8 0, 7
+   \   00000030   0x50000400         DC32 50000400H
+   \   00000034   0x01 0x00          DC8 1, 0
+   \   00000036   0x50000400         DC32 50000400H
+   \   0000003A   0x01 0x01          DC8 1, 1
+   \   0000003C   0x50000400         DC32 50000400H
+   \   00000040   0x01 0x02          DC8 1, 2
+   \   00000042   0x50000400         DC32 50000400H
+   \   00000046   0x01 0x0A          DC8 1, 10
+   \   00000048   0x50000000         DC32 50000000H
+   \   0000004C   0xFF 0x00          DC8 255, 0
+   \   0000004E   0x50000000         DC32 50000000H
+   \   00000052   0xFF 0x00          DC8 255, 0
+   \   00000054   0x50000000         DC32 50000000H
+   \   00000058   0xFF 0x00          DC8 255, 0
+   \   0000005A   0x50000400         DC32 50000400H
+   \   0000005E   0x01 0x0B          DC8 1, 11
+   \   00000060   0x50000400         DC32 50000400H
+   \   00000064   0x01 0x0C          DC8 1, 12
+   \   00000066   0x50000800         DC32 50000800H
+   \   0000006A   0x02 0x04          DC8 2, 4
+   \   0000006C   0x50000800         DC32 50000800H
+   \   00000070   0x02 0x05          DC8 2, 5, 0, 0
+   \              0x00 0x00    
+    348          {
+    349              {GPIOA, PORTA, 0},      //CH0
+    350              {GPIOA, PORTA, 1},      //CH1
+    351              {GPIOA, PORTA, 2},      //CH2
+    352              {GPIOA, PORTA, 3},      //CH3
+    353              {GPIOA, PORTA, 4},      //CH4
+    354              {GPIOA, PORTA, 5},      //CH5
+    355              {GPIOA, PORTA, 6},      //CH6
+    356              {GPIOA, PORTA, 7},      //CH7
+    357              {GPIOB, PORTB, 0},      //CH8
+    358              {GPIOB, PORTB, 1},      //CH9
+    359              {GPIOB, PORTB, 2},      //CH10
+    360              {GPIOB, PORTB, 10},     //CH11
+    361          
+    362              {GPIOA, PORT_NULL, 0},  //CH12 - Internal Temperature sensor
+    363              {GPIOA, PORT_NULL, 0},  //CH13 - Internal Vrefint
+    364              {GPIOA, PORT_NULL, 0},  //CH14 - Internal Vbat
+    365          
+    366              {GPIOB, PORTB, 11},     //CH15
+    367              {GPIOB, PORTB, 12},     //CH16
+    368              {GPIOC, PORTC, 4},      //CH17
+    369              {GPIOC, PORTC, 5}};     //CH18
+    370          
+    371          //! Sample time channel table
+
+   \                                 In section .text, align 4, keep-with-next
+    372          const uint8 SAMPLE_TIME_TABLE[MAX_ADC_CHANNEL]  = { ATOD_CH0_SAMPLE_TIME,
+   \                     SAMPLE_TIME_TABLE:
+   \   00000000   0x03 0x03          DC8 3, 3, 3, 5, 3, 3, 3, 3, 3, 5, 5, 3, 5, 5, 5, 6, 5, 3, 5, 0
+   \              0x03 0x05    
+   \              0x03 0x03    
+   \              0x03 0x03    
+   \              0x03 0x05    
+   \              0x05 0x03    
+   \              0x05 0x05    
+   \              0x05 0x06    
+   \              0x05 0x03    
+   \              0x05 0x00    
+    373                                                              ATOD_CH1_SAMPLE_TIME,
+    374                                                              ATOD_CH2_SAMPLE_TIME,
+    375                                                              ATOD_CH3_SAMPLE_TIME,
+    376                                                              ATOD_CH4_SAMPLE_TIME,
+    377                                                              ATOD_CH5_SAMPLE_TIME,
+    378                                                              ATOD_CH6_SAMPLE_TIME,
+    379                                                              ATOD_CH7_SAMPLE_TIME,
+    380                                                              ATOD_CH8_SAMPLE_TIME,
+    381                                                              ATOD_CH9_SAMPLE_TIME,
+    382                                                              ATOD_CH10_SAMPLE_TIME,
+    383                                                              ATOD_CH11_SAMPLE_TIME,
+    384                                                              ATOD_CH12_SAMPLE_TIME,
+    385                                                              ATOD_CH13_SAMPLE_TIME,
+    386                                                              ATOD_CH14_SAMPLE_TIME,
+    387                                                              ATOD_CH15_SAMPLE_TIME,
+    388                                                              ATOD_CH16_SAMPLE_TIME,
+    389                                                              ATOD_CH17_SAMPLE_TIME,
+    390                                                              ATOD_CH18_SAMPLE_TIME};
+    391          
+    392          
+    393          
+    394          //! Class B Data section
+    395          #if (ATOD_SR_FEATURE_TEST == ENABLED)
+    396              static uint8 Atod_Exception_Debounce_Count;
+    397              static uint8 Atod_Channel_Debounce_Count[MAX_ADC_CHANNEL];
+    398              static uint8 N_Atod_Exception_Debounce_Count;
+    399              static uint8 N_Atod_Channel_Debounce_Count[MAX_ADC_CHANNEL];
+    400          #endif
+    401          
+    402          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    403          
+    404          
+    405          //=====================================================================================================================
+    406          //-------------------------------------- Public Functions -------------------------------------------------------------
+    407          //=====================================================================================================================
+    408          //---------------------------------------------------------------------------------------------------------------------
+    409          /**
+    410           *    @brief    This method initializes the ADC Engine.
+    411           *    @details  This method initializes the Atod module variable and resets the entire ADC related variable.
+    412           *              This method is called in the Initialization_Tasks (SRMain_prm.h),
+    413           *              should be called after SRGpio__Initialize().
+    414           *              This must be called before calling any other Atod API’s.
+    415           */
+
+   \                                 In section .text, align 2, keep-with-next
+    416          void Atod__EngineInitialize(void)
+    417          {
+   \                     Atod__EngineInitialize: (+1)
+   \   00000000   0xB4F0             PUSH     {R4-R7}
+    418              #if (ATOD_SR_FEATURE_TEST == ENABLED)
+    419                  SR_SET_BYTE(Atod_Exception_Debounce_Count, 0);
+    420                  SRData__Fill(&Atod_Channel_Debounce_Count, &N_Atod_Channel_Debounce_Count, 0, sizeof(Atod_Channel_Debounce_Count));
+    421              #endif
+    422          
+    423              uint32 calibrationcounter = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+   \   00000004   0x0001             MOVS     R1,R0
+    424              uint32 calibrationstatus = 0;
+    425          
+    426              //===============================================================================================================
+    427              /**
+    428               * Clock Configuration
+    429               */
+    430          
+    431              //Reset the ADC1 engine
+    432              RCC.APBRSTR2 |= RCC_APBRSTR2_ADCRST;
+   \   00000006   0x2380             MOVS     R3,#+128
+   \   00000008   0x035B             LSLS     R3,R3,#+13       ;; #+1048576
+   \   0000000A   0x....             LDR      R2,??DataTable4  ;; 0x40021030
+   \   0000000C   0x6814             LDR      R4,[R2, #+0]
+   \   0000000E   0x431C             ORRS     R4,R4,R3
+   \   00000010   0x6014             STR      R4,[R2, #+0]
+    433              RCC.APBRSTR2 &= (uint32)(~RCC_APBRSTR2_ADCRST);
+   \   00000012   0x6814             LDR      R4,[R2, #+0]
+   \   00000014   0x....             LDR      R5,??DataTable4_1  ;; 0xffefffff
+   \   00000016   0x4025             ANDS     R5,R5,R4
+   \   00000018   0x6015             STR      R5,[R2, #+0]
+    434          
+    435              //Enable the ADC device in the APB2 bus
+    436              RCC.APBENR2 |= RCC_APBENR2_ADCEN;
+   \   0000001A   0x6914             LDR      R4,[R2, #+16]
+   \   0000001C   0x4323             ORRS     R3,R3,R4
+   \   0000001E   0x6113             STR      R3,[R2, #+16]
+    437          
+    438              //System Clock as ADC Clock source
+    439              RCC.CCIPR &= ~RCC_CCIPR_ADCSEL;
+   \   00000020   0x6A53             LDR      R3,[R2, #+36]
+   \   00000022   0x009B             LSLS     R3,R3,#+2
+   \   00000024   0x089B             LSRS     R3,R3,#+2
+   \   00000026   0x6253             STR      R3,[R2, #+36]
+    440          
+    441              //Maxumim ADC clock shall be not more then 35MHz
+    442              // SYSTEM_CLK(64MHz)/2 to comply
+    443              ADC1_COMMON.CCR = ADC_CLOCK_ASYNC_DIV2;
+   \   00000028   0x2280             MOVS     R2,#+128
+   \   0000002A   0x02D2             LSLS     R2,R2,#+11       ;; #+262144
+   \   0000002C   0x....             LDR      R3,??DataTable4_2  ;; 0x40012708
+   \   0000002E   0x601A             STR      R2,[R3, #+0]
+    444          
+    445              //Configure the ADC Clock mode
+    446              //CKMODE[]:00 ADCCLK (Asynchronous clock mode), generated at product level
+    447              ADC_ENG.CFGR2 = 0;
+   \   00000030   0x....             LDR      R2,??DataTable4_3  ;; 0x40012404
+   \   00000032   0x60D0             STR      R0,[R2, #+12]
+    448          
+    449              // Set the ADDIS to Disable the ADC peripheral only if its enabled
+    450              if ((ADC_ENG.CR & ADC_CR_ADEN) != 0)
+   \   00000034   0x2301             MOVS     R3,#+1
+   \   00000036   0x6854             LDR      R4,[R2, #+4]
+   \   00000038   0x401C             ANDS     R4,R4,R3
+   \   0000003A   0xD001             BEQ      ??Atod__EngineInitialize_0
+    451              {
+    452                  ADC_ENG.CR = (uint32)ADC_CR_ADDIS;
+   \   0000003C   0x2402             MOVS     R4,#+2
+   \   0000003E   0x6054             STR      R4,[R2, #+4]
+    453              }
+    454          
+    455              while((ADC_ENG.CR & ADC_CR_ADEN) != 0);
+   \                     ??Atod__EngineInitialize_0: (+1)
+   \   00000040   0x6854             LDR      R4,[R2, #+4]
+   \   00000042   0x401C             ANDS     R4,R4,R3
+   \   00000044   0xD1FC             BNE      ??Atod__EngineInitialize_0
+   \   00000046   0x247F             MOVS     R4,#+127
+   \   00000048   0x....             LDR      R5,??DataTable4_4  ;; 0x40002c00
+   \   0000004A   0x602C             STR      R4,[R5, #+0]
+   \   0000004C   0x....             LDR      R5,??DataTable4_5  ;; 0xaaaa
+   \   0000004E   0x....             LDR      R6,??DataTable4_6  ;; 0x40003000
+   \   00000050   0x6035             STR      R5,[R6, #+0]
+    456          
+    457          
+    458              //===============================================================================================================
+    459              /**
+    460               * Voltage stabilization
+    461               */
+    462              SERVICE_WATCHDOG();
+    463          
+    464              ADC_ENG.CR |= (uint32)ADC_CR_ADVREGEN;
+   \   00000052   0x6856             LDR      R6,[R2, #+4]
+   \   00000054   0x071F             LSLS     R7,R3,#+28
+   \   00000056   0x4337             ORRS     R7,R7,R6
+   \   00000058   0x6057             STR      R7,[R2, #+4]
+    465          
+    466              /* Delay for ADC stabilization time */
+    467              /* Wait loop initialization and execution */
+    468              /* Note: Variable divided by 2 to compensate partially              */
+    469              /*       CPU processing cycles, scaling in us split to not          */
+    470              /*       exceed 32 bits register capacity and handle low frequency. */
+    471              uint32 wait_loop_index = ((LL_ADC_DELAY_INTERNAL_REGUL_STAB_US / 10UL) * (SYSTEM_CLOCK_64MHZ / (100000UL * 2UL)));
+   \   0000005A   0x26A0             MOVS     R6,#+160
+   \   0000005C   0x00B6             LSLS     R6,R6,#+2        ;; #+640
+   \   0000005E   0xE000             B        ??Atod__EngineInitialize_1
+    472              while (wait_loop_index != 0UL)
+    473              {
+    474                wait_loop_index--;
+   \                     ??Atod__EngineInitialize_2: (+1)
+   \   00000060   0x1E76             SUBS     R6,R6,#+1
+    475              }
+   \                     ??Atod__EngineInitialize_1: (+1)
+   \   00000062   0xD1FD             BNE      ??Atod__EngineInitialize_2
+    476          
+    477          
+    478              //===============================================================================================================
+    479              /**
+    480               * Calibration
+    481               */
+    482              SERVICE_WATCHDOG();
+   \   00000064   0x....             LDR      R6,??DataTable4_4  ;; 0x40002c00
+   \   00000066   0x6034             STR      R4,[R6, #+0]
+   \   00000068   0x....             LDR      R4,??DataTable4_6  ;; 0x40003000
+   \   0000006A   0x6025             STR      R5,[R4, #+0]
+    483          
+    484              calibrationcounter = 0;
+    485          
+    486              // Set the ADC calibration
+    487              ADC_ENG.CR |= (uint32)ADC_CR_ADCAL;
+   \   0000006C   0x6854             LDR      R4,[R2, #+4]
+   \   0000006E   0x2580             MOVS     R5,#+128
+   \   00000070   0x062D             LSLS     R5,R5,#+24       ;; #-2147483648
+   \   00000072   0x4325             ORRS     R5,R5,R4
+   \   00000074   0x6055             STR      R5,[R2, #+4]
+    488          
+    489              // Wait until ADC calibration is completed
+    490              do
+    491              {
+    492                  calibrationstatus = ADC_ENG.CR & ADC_CR_ADCAL;
+   \                     ??Atod__EngineInitialize_3: (+1)
+   \   00000076   0x6854             LDR      R4,[R2, #+4]
+   \   00000078   0x2580             MOVS     R5,#+128
+   \   0000007A   0x062D             LSLS     R5,R5,#+24       ;; #-2147483648
+   \   0000007C   0x402C             ANDS     R4,R4,R5
+    493                  calibrationcounter++;
+   \   0000007E   0x1C49             ADDS     R1,R1,#+1
+    494              } while ((calibrationcounter != ADC_CALIBRATION_TIMEOUT) &&
+    495                       (calibrationstatus != 0x00));
+   \   00000080   0x....             LDR      R5,??DataTable4_7  ;; 0x2f200
+   \   00000082   0x42A9             CMP      R1,R5
+   \   00000084   0xD001             BEQ      ??Atod__EngineInitialize_4
+   \   00000086   0x2C00             CMP      R4,#+0
+   \   00000088   0xD1F5             BNE      ??Atod__EngineInitialize_3
+    496          
+    497          
+    498              //===============================================================================================================
+    499              /**
+    500               * ADC Enable, configuration
+    501               */
+    502          
+    503              //Enable the ADC Engine
+    504              ADC_ENG.CR |= ADC_CR_ADEN;
+   \                     ??Atod__EngineInitialize_4: (+1)
+   \   0000008A   0x6851             LDR      R1,[R2, #+4]
+   \   0000008C   0x430B             ORRS     R3,R3,R1
+   \   0000008E   0x6053             STR      R3,[R2, #+4]
+    505          
+    506              //Disable all the ADC related Interrupts
+    507              ADC_ENG.IER = CLEAR_IER_REG;
+   \   00000090   0x6010             STR      R0,[R2, #+0]
+    508          
+    509              //SCANDIR, RES[1:0] = 12bit, ALIGN = Right, EXTSEL[2:0], EXTEN[1:0] = Software trigger and CONT = disable
+    510              ADC_ENG.CFGR1 = 0;
+   \   00000092   0x6090             STR      R0,[R2, #+8]
+    511          }
+   \   00000094   0xBCF0             POP      {R4-R7}
+   \   00000096   0x4770             BX       LR               ;; return
+    512          
+    513          //---------------------------------------------------------------------------------------------------------------------
+    514          /**
+    515           *    @brief    This method disables the ADC Engine
+    516           *    @details  This could help in saving the power during "low power mode".
+    517           */
+
+   \                                 In section .text, align 2, keep-with-next
+    518          void Atod__EngineDisable(void)
+    519          {
+    520              //Disables the ADC device from the APB2 bus
+    521              RCC.APBENR2 &= (uint32)(~RCC_APBENR2_ADCEN);
+   \                     Atod__EngineDisable: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable4_8  ;; 0x40021040
+   \   00000002   0x6801             LDR      R1,[R0, #+0]
+   \   00000004   0x....             LDR      R2,??DataTable4_1  ;; 0xffefffff
+   \   00000006   0x400A             ANDS     R2,R2,R1
+   \   00000008   0x6002             STR      R2,[R0, #+0]
+    522          }
+   \   0000000A   0x4770             BX       LR               ;; return
+    523          
+    524          
+    525          //---------------------------------------------------------------------------------------------------------------------
+    526          /**
+    527           *    @brief    This method initializes a specific channel of the A/D converter
+    528           *    @details  This method configures the specific A/D channel to "INPUT_ANALOG" mode, assigns the resolution to the
+    529           *              requested A/D channel and by default initializes each channel in "ONE SHOT" mode
+    530           *    @param    channel : Defines the specific A/D channel
+    531           *    @param    resolution : Define the A/D resolution
+    532           *    @return   ATOD_RETURN_DEF
+    533           *      @retval ATOD_RETURN_FAIL(0)   : Channel is failed to initialize
+    534           *      @retval ATOD_RETURN_SUCCESS(1): Channel is successfully initialized
+    535           */
+    536          
+
+   \                                 In section .text, align 4, keep-with-next
+    537          uint16 Atod__Convert(ATOD_CHANNEL_DEF channel,ATOD_CHANNEL_RESOLUTION_DEF resolution)
+    538          {
+   \                     Atod__Convert: (+1)
+   \   00000000   0xB5F3             PUSH     {R0,R1,R4-R7,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+    539              uint16 response = ATOD_INVALID_CONVERSION;
+   \   00000004   0x....             LDR      R4,??DataTable4_9  ;; 0xffff
+    540              uint32 analogconfig = 0;
+    541              uint32 wait_loop_index = 0;
+    542          
+    543              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    544          
+    545              if (channel <= MAX_ADC_CHANNEL)
+   \   00000006   0x4668             MOV      R0,SP
+   \   00000008   0x7B05             LDRB     R5,[R0, #+12]
+   \   0000000A   0x2D14             CMP      R5,#+20
+   \   0000000C   0xDB00             BLT      .+4
+   \   0000000E   0xE098             B        ??Atod__Convert_1
+    546              {
+    547                  switch(channel)
+   \   00000010   0x4628             MOV      R0,R5
+   \   00000012   0x280C             CMP      R0,#+12
+   \   00000014   0xD004             BEQ      ??Atod__Convert_2
+   \   00000016   0xD325             BCC      ??Atod__Convert_3
+   \   00000018   0x280E             CMP      R0,#+14
+   \   0000001A   0xD018             BEQ      ??Atod__Convert_4
+   \   0000001C   0xD30B             BCC      ??Atod__Convert_5
+   \   0000001E   0xE021             B        ??Atod__Convert_3
+    548                  {
+    549                      case ATOD_CH12:
+    550                          //This enables the Internal Temperature sensor
+    551                          ADC1_COMMON.CCR |= ADC_CCR_TSEN;
+   \                     ??Atod__Convert_2: (+1)
+   \   00000020   0x....             LDR      R0,??DataTable4_2  ;; 0x40012708
+   \   00000022   0x6801             LDR      R1,[R0, #+0]
+   \   00000024   0x2280             MOVS     R2,#+128
+   \   00000026   0x0412             LSLS     R2,R2,#+16       ;; #+8388608
+   \   00000028   0x430A             ORRS     R2,R2,R1
+   \   0000002A   0x6002             STR      R2,[R0, #+0]
+    552          
+    553                          wait_loop_index = (((LL_ADC_DELAY_TEMPSENSOR_STAB_US / 10UL) * (SYSTEM_CLOCK_64MHZ / (100000UL * 2UL))) + 1UL);
+   \   0000002C   0x....             LDR      R0,??DataTable4_10  ;; 0xf01
+    554                          while (wait_loop_index != 0UL)
+   \                     ??Atod__Convert_6: (+1)
+   \   0000002E   0x2800             CMP      R0,#+0
+   \   00000030   0xD043             BEQ      ??Atod__Convert_7
+    555                          {
+    556                            wait_loop_index--;
+   \   00000032   0x1E40             SUBS     R0,R0,#+1
+   \   00000034   0xE7FB             B        ??Atod__Convert_6
+    557                          }
+    558          
+    559                          break;
+    560          
+    561                      case ATOD_CH13:
+    562                          //This enables the Internal Vrefint
+    563                          ADC1_COMMON.CCR |= ADC_CCR_VREFEN;
+   \                     ??Atod__Convert_5: (+1)
+   \   00000036   0x....             LDR      R0,??DataTable4_2  ;; 0x40012708
+   \   00000038   0x6801             LDR      R1,[R0, #+0]
+   \   0000003A   0x2280             MOVS     R2,#+128
+   \   0000003C   0x03D2             LSLS     R2,R2,#+15       ;; #+4194304
+   \   0000003E   0x430A             ORRS     R2,R2,R1
+   \   00000040   0x6002             STR      R2,[R0, #+0]
+    564          
+    565                          wait_loop_index = (((LL_ADC_DELAY_VREFINT_STAB_US / 10UL) * (SYSTEM_CLOCK_64MHZ / (100000UL * 2UL))) + 1UL);
+   \   00000042   0x20FF             MOVS     R0,#+255
+   \   00000044   0x3042             ADDS     R0,R0,#+66       ;; #+321
+    566                          while (wait_loop_index != 0UL)
+   \                     ??Atod__Convert_8: (+1)
+   \   00000046   0x2800             CMP      R0,#+0
+   \   00000048   0xD037             BEQ      ??Atod__Convert_7
+    567                          {
+    568                            wait_loop_index--;
+   \   0000004A   0x1E40             SUBS     R0,R0,#+1
+   \   0000004C   0xE7FB             B        ??Atod__Convert_8
+    569                          }
+    570          
+    571                          break;
+    572          
+    573                      case ATOD_CH14:
+    574                          //This enables the Internal Vbat
+    575                          ADC1_COMMON.CCR |= ADC_CCR_VBATEN;
+   \                     ??Atod__Convert_4: (+1)
+   \   0000004E   0x....             LDR      R0,??DataTable4_2  ;; 0x40012708
+   \   00000050   0x6801             LDR      R1,[R0, #+0]
+   \   00000052   0x2280             MOVS     R2,#+128
+   \   00000054   0x0452             LSLS     R2,R2,#+17       ;; #+16777216
+   \   00000056   0x430A             ORRS     R2,R2,R1
+   \   00000058   0x6002             STR      R2,[R0, #+0]
+    576          
+    577                          wait_loop_index = (((LL_ADC_DELAY_INTERNAL_REGUL_STAB_US / 10UL) * (SYSTEM_CLOCK_64MHZ / (100000UL * 2UL))) + 1UL);
+   \   0000005A   0x....             LDR      R0,??DataTable4_11  ;; 0x281
+    578                          while (wait_loop_index != 0UL)
+   \                     ??Atod__Convert_9: (+1)
+   \   0000005C   0x2800             CMP      R0,#+0
+   \   0000005E   0xD02C             BEQ      ??Atod__Convert_7
+    579                          {
+    580                            wait_loop_index--;
+   \   00000060   0x1E40             SUBS     R0,R0,#+1
+   \   00000062   0xE7FB             B        ??Atod__Convert_9
+    581                          }
+    582          
+    583                          break;
+    584          
+    585                      default:
+    586                          // write to register_buff configuration bits on their correct positions
+    587          
+    588                          // If ATOD_SR_FEATURE_TEST is DISABLED, configure current Analog channel as Analog input,
+    589                          // otherwise it will be configured as digital input, since it doesn't affect analog reading
+    590                          // and allows use of pull up/pull down for Channel check
+    591                          analogconfig = (((uint32)3) << (ATOD_PORT[channel].pin << 1));
+   \                     ??Atod__Convert_3: (+1)
+   \   00000064   0x....             ADR.N    R0,ATOD_PORT
+   \   00000066   0x0069             LSLS     R1,R5,#+1
+   \   00000068   0x1949             ADDS     R1,R1,R5
+   \   0000006A   0x0049             LSLS     R1,R1,#+1
+   \   0000006C   0x1840             ADDS     R0,R0,R1
+   \   0000006E   0x9000             STR      R0,[SP, #+0]
+   \   00000070   0x2003             MOVS     R0,#+3
+   \   00000072   0x9900             LDR      R1,[SP, #+0]
+   \   00000074   0x7949             LDRB     R1,[R1, #+5]
+   \   00000076   0x0049             LSLS     R1,R1,#+1
+   \   00000078   0x4088             LSLS     R0,R0,R1
+   \   0000007A   0x9001             STR      R0,[SP, #+4]
+    592                          (ATOD_PORT[channel].port_ptr)->MODER  &= (uint32)(~analogconfig);
+   \   0000007C   0x9800             LDR      R0,[SP, #+0]
+   \   0000007E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000082   0x9002             STR      R0,[SP, #+8]
+   \   00000084   0x6807             LDR      R7,[R0, #+0]
+   \   00000086   0x9800             LDR      R0,[SP, #+0]
+   \   00000088   0x.... 0x....      BL       __aeabi_uread4
+   \   0000008C   0x9901             LDR      R1,[SP, #+4]
+   \   0000008E   0x43CE             MVNS     R6,R1
+   \   00000090   0x4037             ANDS     R7,R7,R6
+   \   00000092   0x6007             STR      R7,[R0, #+0]
+    593                          #if (ATOD_SR_FEATURE_TEST == DISABLED)
+    594                              (ATOD_PORT[channel].port_ptr)->MODER |= analogconfig;
+   \   00000094   0x9800             LDR      R0,[SP, #+0]
+   \   00000096   0x.... 0x....      BL       __aeabi_uread4
+   \   0000009A   0x6807             LDR      R7,[R0, #+0]
+   \   0000009C   0x9800             LDR      R0,[SP, #+0]
+   \   0000009E   0x.... 0x....      BL       __aeabi_uread4
+   \   000000A2   0x9901             LDR      R1,[SP, #+4]
+   \   000000A4   0x4339             ORRS     R1,R1,R7
+   \   000000A6   0x6001             STR      R1,[R0, #+0]
+    595                              (ATOD_PORT[channel].port_ptr)->PUPDR &= (uint32)(~analogconfig);
+   \   000000A8   0x9800             LDR      R0,[SP, #+0]
+   \   000000AA   0x.... 0x....      BL       __aeabi_uread4
+   \   000000AE   0x68C7             LDR      R7,[R0, #+12]
+   \   000000B0   0x9800             LDR      R0,[SP, #+0]
+   \   000000B2   0x.... 0x....      BL       __aeabi_uread4
+   \   000000B6   0x403E             ANDS     R6,R6,R7
+   \   000000B8   0x60C6             STR      R6,[R0, #+12]
+    596                          #endif
+    597                          break;
+    598                  }
+    599          
+    600          
+    601                  if (FALSE != (RCC.APBENR2 & RCC_APBENR2_ADCEN))
+   \                     ??Atod__Convert_7: (+1)
+   \   000000BA   0x....             LDR      R0,??DataTable4_8  ;; 0x40021040
+   \   000000BC   0x6800             LDR      R0,[R0, #+0]
+   \   000000BE   0x02C0             LSLS     R0,R0,#+11
+   \   000000C0   0xD526             BPL      ??Atod__Convert_10
+    602                  {
+    603                      #if (ATOD_SR_FEATURE_TEST == ENABLED)
+    604                          /**
+    605                           * Atod Engine and Channel MUX Test
+    606                           */
+    607                          BOOL_TYPE exception = FALSE;
+    608          
+    609                          switch(channel)
+    610                          {
+    611                              case ATOD_CH12:
+    612                                  if ((ADC1_COMMON.CCR & ADC_CCR_TSEN) == FALSE)
+    613                                  {
+    614                                      exception = TRUE;
+    615                                  }
+    616                                  break;
+    617          
+    618                              case ATOD_CH13:
+    619                                  if ((ADC1_COMMON.CCR & ADC_CCR_VREFEN) == FALSE)
+    620                                  {
+    621                                      exception = TRUE;
+    622                                  }
+    623                                  break;
+    624          
+    625                              case ATOD_CH14:
+    626                                  if ((ADC1_COMMON.CCR & ADC_CCR_VBATEN) == FALSE)
+    627                                  {
+    628                                      exception = TRUE;
+    629                                  }
+    630                                  break;
+    631          
+    632                              default:
+    633                                  //The specific Atod channel should be configured as digital input
+    634                                  if (((ATOD_PORT[channel].port_ptr)->MODER & (((uint32)3) << ((ATOD_PORT[channel].pin) * 2))) != 0)
+    635                                  {
+    636                                      exception = TRUE;
+    637                                  }
+    638                                  break;
+    639                          }
+    640          
+    641                          if (exception == TRUE)
+    642                          {
+    643                              //generate an exception if the ADC gegisters are corrupted
+    644                              SRException__Queue(SREXCEPTION_ATOD_CONFIGURATION_CORRUPTION, channel, 0);
+    645                          }
+    646                      #endif
+    647          
+    648                      //Save and Disable the Interrupts
+    649                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+   \   000000C2   0xF3EF 0x8010      MRS      R0,PRIMASK
+   \   000000C6   0xB672             CPSID    I
+    650          
+    651                      //Stop the Ongoing ADC conversion
+    652                      ADC_ENG.CR |= ADC_CR_ADSTP;
+   \   000000C8   0x....             LDR      R1,??DataTable4_12  ;; 0x40012400
+   \   000000CA   0x688A             LDR      R2,[R1, #+8]
+   \   000000CC   0x2310             MOVS     R3,#+16
+   \   000000CE   0x4313             ORRS     R3,R3,R2
+   \   000000D0   0x608B             STR      R3,[R1, #+8]
+   \   000000D2   0x2204             MOVS     R2,#+4
+    653          
+    654                      while((ADC_ENG.CR & ADC_CR_ADSTART) != FALSE);
+   \                     ??Atod__Convert_11: (+1)
+   \   000000D4   0x688B             LDR      R3,[R1, #+8]
+   \   000000D6   0x4013             ANDS     R3,R3,R2
+   \   000000D8   0xD1FC             BNE      ??Atod__Convert_11
+    655          
+    656                      //Configure the Sampling time
+    657                      ADC_ENG.SMPR = (uint32)SAMPLE_TIME_TABLE[channel];;
+   \   000000DA   0xBF00             Nop      
+   \   000000DC   0x....             ADR.N    R3,SAMPLE_TIME_TABLE
+   \   000000DE   0x5D5B             LDRB     R3,[R3, R5]
+   \   000000E0   0x614B             STR      R3,[R1, #+20]
+    658          
+    659                      //Enable the Discontinuous mode
+    660                      ADC_ENG.CFGR1 |= ADC_CFGR1_DISCEN;
+   \   000000E2   0x68CB             LDR      R3,[R1, #+12]
+   \   000000E4   0x0394             LSLS     R4,R2,#+14
+   \   000000E6   0x431C             ORRS     R4,R4,R3
+   \   000000E8   0x60CC             STR      R4,[R1, #+12]
+    661                      ADC_ENG.CFGR1 &= (uint32)(~ADC_CFGR1_CONT);
+   \   000000EA   0x68CB             LDR      R3,[R1, #+12]
+   \   000000EC   0x....             LDR      R4,??DataTable4_13  ;; 0xffffdfff
+   \   000000EE   0x401C             ANDS     R4,R4,R3
+   \   000000F0   0x60CC             STR      R4,[R1, #+12]
+    662          
+    663                      // Configure the ADC Channel
+    664                      ADC_ENG.CHSELR = (uint32)(1 << channel);
+   \   000000F2   0x2301             MOVS     R3,#+1
+   \   000000F4   0x466C             MOV      R4,SP
+   \   000000F6   0x7B24             LDRB     R4,[R4, #+12]
+   \   000000F8   0x40A3             LSLS     R3,R3,R4
+   \   000000FA   0x628B             STR      R3,[R1, #+40]
+    665          
+    666                      //Start the ADC conversion
+    667                      ADC_ENG.CR |= ADC_CR_ADSTART;
+   \   000000FC   0x688B             LDR      R3,[R1, #+8]
+   \   000000FE   0x4313             ORRS     R3,R3,R2
+   \   00000100   0x608B             STR      R3,[R1, #+8]
+    668          
+    669                      while ((ADC_ENG.ISR & ADC_ISR_EOC) == FALSE);            // wait for the end of the conversion
+   \                     ??Atod__Convert_12: (+1)
+   \   00000102   0x680B             LDR      R3,[R1, #+0]
+   \   00000104   0x4013             ANDS     R3,R3,R2
+   \   00000106   0xD0FC             BEQ      ??Atod__Convert_12
+    670          
+    671                      response = (uint16)ADC_ENG.DR;
+   \   00000108   0x6C0C             LDR      R4,[R1, #+64]
+   \   0000010A   0xB2A4             UXTH     R4,R4
+    672          
+    673                      //Restore Interrupts
+    674                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+   \   0000010C   0xF380 0x8810      MSR      PRIMASK,R0
+    675                  }
+    676          
+    677                  switch (resolution)
+   \                     ??Atod__Convert_10: (+1)
+   \   00000110   0x4668             MOV      R0,SP
+   \   00000112   0x7C00             LDRB     R0,[R0, #+16]
+   \   00000114   0x2805             CMP      R0,#+5
+   \   00000116   0xD814             BHI      ??Atod__Convert_1
+   \   00000118   0xA101             ADR      R1,??Atod__Convert_0
+   \   0000011A   0x5C09             LDRB     R1,[R1, R0]
+   \   0000011C   0x448F             ADD      PC,PC,R1
+   \   0000011E   0xBF00             Nop      
+   \                     ??Atod__Convert_0:
+   \   00000120   0x06 0x0C          DC8      0x6,0xC,0x12,0x22
+   \              0x12 0x22    
+   \   00000124   0x18 0x1E          DC8      0x18,0x1E
+    678                  {
+    679                      case ATOD_RESOLUTION_04BITS:
+    680                          response = response >> 8;
+   \                     ??Atod__Convert_13: (+1)
+   \   00000126   0x1224             ASRS     R4,R4,#+8
+   \   00000128   0xB2A4             UXTH     R4,R4
+    681                          break;
+   \   0000012A   0xE00A             B        ??Atod__Convert_1
+    682          
+    683                      case ATOD_RESOLUTION_08BITS:
+    684                          response = response >> 4;
+   \                     ??Atod__Convert_14: (+1)
+   \   0000012C   0x1124             ASRS     R4,R4,#+4
+   \   0000012E   0xB2A4             UXTH     R4,R4
+    685                          break;
+   \   00000130   0xE007             B        ??Atod__Convert_1
+    686          
+    687                      case ATOD_RESOLUTION_10BITS:
+    688                          response = response >> 2;
+   \                     ??Atod__Convert_15: (+1)
+   \   00000132   0x10A4             ASRS     R4,R4,#+2
+   \   00000134   0xB2A4             UXTH     R4,R4
+    689                          break;
+   \   00000136   0xE004             B        ??Atod__Convert_1
+    690          
+    691                      case ATOD_RESOLUTION_14BITS:
+    692                          response = response << 2;
+   \                     ??Atod__Convert_16: (+1)
+   \   00000138   0x00A4             LSLS     R4,R4,#+2
+   \   0000013A   0xB2A4             UXTH     R4,R4
+    693                          break;
+   \   0000013C   0xE001             B        ??Atod__Convert_1
+    694          
+    695                      case ATOD_RESOLUTION_16BITS:
+    696                          response = response << 4;
+   \                     ??Atod__Convert_17: (+1)
+   \   0000013E   0x0124             LSLS     R4,R4,#+4
+   \   00000140   0xB2A4             UXTH     R4,R4
+    697                          break;
+    698          
+    699                      default:
+    700                          break;
+    701                  }
+    702              }
+    703          
+    704              return (response);
+   \                     ??Atod__Convert_1: (+1)
+   \   00000142   0x0020             MOVS     R0,R4
+   \   00000144   0xB005             ADD      SP,SP,#+20
+   \   00000146   0xBDF0             POP      {R4-R7,PC}       ;; return
+    705          }
+    706          
+    707          //---------------------------------------------------------------------------------------------------------------------
+    708          /**
+    709           *    @brief    This method handles internal voltage reference in order to check A/D accuracy and proper multiplexing.
+    710           *    @details  On every call it verifies the ADCx Engine by reading the Internal power block.
+    711           *              This method should be called periodically or as per application requirement to ensure the ADCx Engine is working.
+    712           *    @retval PASS : ADC value read from the "Internal Power Block" is in range
+    713           *    @retval FAIL : ADC value read from the "Internal Power Block" is out of range
+    714           */
+    715          #pragma optimize=none
+
+   \                                 In section .text, align 2, keep-with-next
+    716          PASS_FAIL_TYPE Atod__EngineClassBCheck(void)
+    717          {
+    718              PASS_FAIL_TYPE retval = PASS;
+   \                     Atod__EngineClassBCheck: (+1)
+   \   00000000   0x2001             MOVS     R0,#+1
+    719          
+    720              #if (ATOD_SR_FEATURE_TEST == ENABLED)
+    721          
+    722                  #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    723                      SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_THREAD, SRTASKSEQUENCE_APPL_ATOD_ENGINECLASSB_CHECK_ENTER);
+    724                  #endif
+    725          
+    726                  //-----------------------------------------------------------------------------------------------------------------
+    727                  // CLASS B Test : Reading the Internal Reference voltage periodically
+    728                  //
+    729                  //In order to be sure that a valid analog data has been measured, the Atod__EngineClassBCheck() function measures
+    730                  //the "Internal Power Block" as reference. This mechanism checks if ADC has proper accuracy
+    731                  //and embedded channel multiplexer works properly
+    732                  //-----------------------------------------------------------------------------------------------------------------
+    733                  //measure internal reference voltage to detect inaccuracy of ADC conversion
+    734                  uint16 internal_ref = Atod__Convert(ADC_VREF_CHANNEL, ATOD_RESOLUTION_10BITS);
+    735          
+    736                  //Check for the range
+    737                  if( (internal_ref < ATOD_INTERNAL_REF_MIN_COUNT) || (internal_ref > ATOD_INTERNAL_REF_MAX_COUNT) )
+    738                  {
+    739                      SR_CHECK_BYTE(Atod_Exception_Debounce_Count);
+    740          
+    741                      SR_SET_BYTE(Atod_Exception_Debounce_Count, Atod_Exception_Debounce_Count + 1);
+    742          
+    743                      if(Atod_Exception_Debounce_Count > MAX_INTERNAL_REF_DEBOUNCE)
+    744                      {
+    745                          SR_SET_BYTE(Atod_Exception_Debounce_Count, 0);
+    746          
+    747                          //generate an exception if the ADC value read from the "Internal Power Block" is out of range
+    748                          SRException__Queue(SREXCEPTION_ATOD_STUCK, internal_ref, Atod_Exception_Debounce_Count);
+    749                          retval = FAIL;
+    750                      }
+    751                  }
+    752                  else
+    753                  {
+    754                      SR_SET_BYTE(Atod_Exception_Debounce_Count, 0);
+    755                  }
+    756          
+    757                  #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    758                      SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_THREAD, SRTASKSEQUENCE_APPL_ATOD_ENGINECLASSB_CHECK_EXIT);
+    759                  #endif
+    760              #endif
+    761          
+    762              return(retval);
+   \   00000002   0xB2C0             UXTB     R0,R0
+   \   00000004   0x4770             BX       LR               ;; return
+    763          }
+    764          
+    765          //---------------------------------------------------------------------------------------------------------------------
+    766          /**
+    767           * @brief This method perform Channel checks required for Class B
+    768           * @details STM32F0x micro does not support this features
+    769           *
+    770           * @param channel Channel to convert
+    771           * @param port Port used to perform Channel check - Not used
+    772           * @param pin Pin used to perform Channel check - Not used
+    773           * @return PASS if test is good, FAIL if there is any failure
+    774           */
+    775          
+    776          #pragma optimize=none
+
+   \                                 In section .text, align 2, keep-with-next
+    777          PASS_FAIL_TYPE Atod__ChannelClassBCheck(ATOD_CHANNEL_DEF channel, GPIO_PORT_TYPE port, uint8 pin)
+    778          {
+   \                     Atod__ChannelClassBCheck: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+   \   00000002   0x0003             MOVS     R3,R0
+    779              PASS_FAIL_TYPE retval;
+    780              #if (ATOD_SR_FEATURE_TEST == ENABLED)
+    781                   retval = FAIL;
+    782          
+    783                  /* Check channel is configured or not */
+    784                  if(channel < MAX_ADC_EXTERN_CHANNEL)
+    785                  {
+    786                      MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    787                      PORT_STRUCT_DEF *atod_ptr = (void *) &ATOD_PORT[channel];
+    788                      uint8 atod_port_cfg = ((atod_ptr->port_ptr)->MODER >> ((atod_ptr->pin) * 2)) & 3;
+    789                      uint16 atod_discharge_value;
+    790                      uint16 atod_precharge_value;
+    791                      uint16 atod_delta;
+    792          
+    793                      // Check if Gpio pin associated to Atod channel has been already configured as Digital or Analog reading
+    794                      if((atod_port_cfg == 0) ||
+    795                          (atod_port_cfg == 3))
+    796                      {
+    797                          /*   Floating pin detection  */
+    798                          retval = PASS;
+    799          
+    800                          // Discharge value check - configure it as pull down / connect to GND
+    801                          MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    802                          GPIO__PIN_COFIG_I_PULLDOWN(atod_ptr->port_label, atod_ptr->pin);
+    803                          #if(ATOD_CHARGE_DELAY > 0)
+    804                              Micro__DelayNumNops(ATOD_CHARGE_DELAY);
+    805                          #endif
+    806                          atod_discharge_value =  Atod__Convert(channel ,ATOD_RESOLUTION_12BITS );
+    807                          GPIO__PIN_COFIG_I_FLOAT(atod_ptr->port_label, atod_ptr->pin);
+    808                          MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    809          
+    810                          // Precharge value check - configure it as pull up / connect to Vcc
+    811                          MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    812                          GPIO__PIN_COFIG_I_PULLUP(atod_ptr->port_label, atod_ptr->pin);
+    813                          #if(ATOD_CHARGE_DELAY > 0)
+    814                              Micro__DelayNumNops(ATOD_CHARGE_DELAY);
+    815                          #endif
+    816                          atod_precharge_value =  Atod__Convert(channel ,ATOD_RESOLUTION_12BITS );
+    817                          GPIO__PIN_COFIG_I_FLOAT(atod_ptr->port_label, atod_ptr->pin);
+    818                          MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    819          
+    820                          if (atod_precharge_value > atod_discharge_value)
+    821                          {
+    822                              atod_delta = atod_precharge_value - atod_discharge_value;
+    823                          }
+    824                          else
+    825                          {
+    826                              atod_delta = atod_discharge_value - atod_precharge_value;
+    827                          }
+    828          
+    829                          if (atod_delta > ATOD_CHANNEL_CHECK_MAX_DELTA_ADC)
+    830                          {
+    831                              SRData__UpdateByte(&Atod_Channel_Debounce_Count[channel], &N_Atod_Channel_Debounce_Count[channel], Atod_Channel_Debounce_Count[channel]+1);
+    832                              if (Atod_Channel_Debounce_Count[channel] >= MAX_INTERNAL_REF_DEBOUNCE)
+    833                              {
+    834                                  SRData__UpdateByte(&Atod_Channel_Debounce_Count[channel], &N_Atod_Channel_Debounce_Count[channel], 0);
+    835                                  //generate an exception if the ADC value read from the "Internal Power Block" is out of range
+    836                                  SRException__Queue(SREXCEPTION_ATOD_STUCK, atod_delta, channel);
+    837                                  retval = FAIL;
+    838                              }
+    839                          }
+    840                          else
+    841                          {
+    842                              SRData__UpdateByte(&Atod_Channel_Debounce_Count[channel], &N_Atod_Channel_Debounce_Count[channel], 0);
+    843                          }
+    844                        }
+    845                  }
+    846              #else
+    847                  retval = PASS;
+   \   00000004   0x2401             MOVS     R4,#+1
+   \   00000006   0x0020             MOVS     R0,R4
+    848              #endif
+    849          
+    850              return (retval);
+   \   00000008   0xB2C0             UXTB     R0,R0
+   \   0000000A   0xBC10             POP      {R4}
+   \   0000000C   0x4770             BX       LR               ;; return
+    851          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4:
+   \   00000000   0x40021030         DC32     0x40021030
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_1:
+   \   00000000   0xFFEFFFFF         DC32     0xffefffff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_2:
+   \   00000000   0x40012708         DC32     0x40012708
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_3:
+   \   00000000   0x40012404         DC32     0x40012404
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_4:
+   \   00000000   0x40002C00         DC32     0x40002c00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_5:
+   \   00000000   0x0000AAAA         DC32     0xaaaa
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_6:
+   \   00000000   0x40003000         DC32     0x40003000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_7:
+   \   00000000   0x0002F200         DC32     0x2f200
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_8:
+   \   00000000   0x40021040         DC32     0x40021040
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_9:
+   \   00000000   0x0000FFFF         DC32     0xffff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_10:
+   \   00000000   0x00000F01         DC32     0xf01
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_11:
+   \   00000000   0x00000281         DC32     0x281
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_12:
+   \   00000000   0x40012400         DC32     0x40012400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_13:
+   \   00000000   0xFFFFDFFF         DC32     0xffffdfff
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       4   Atod__ChannelClassBCheck
+      40   Atod__Convert
+        40 __aeabi_uread4
+       0   Atod__EngineClassBCheck
+       0   Atod__EngineDisable
+      16   Atod__EngineInitialize
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+       4  ??DataTable4_1
+       4  ??DataTable4_10
+       4  ??DataTable4_11
+       4  ??DataTable4_12
+       4  ??DataTable4_13
+       4  ??DataTable4_2
+       4  ??DataTable4_3
+       4  ??DataTable4_4
+       4  ??DataTable4_5
+       4  ??DataTable4_6
+       4  ??DataTable4_7
+       4  ??DataTable4_8
+       4  ??DataTable4_9
+     116  ATOD_PORT
+      14  Atod__ChannelClassBCheck
+     328  Atod__Convert
+       6  Atod__EngineClassBCheck
+      12  Atod__EngineDisable
+     152  Atod__EngineInitialize
+      20  SAMPLE_TIME_TABLE
+
+ 
+ 704 bytes in section .text
+ 
+ 704 bytes of CODE memory
+
+Errors: none
+Warnings: none

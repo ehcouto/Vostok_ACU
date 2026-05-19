@@ -1,0 +1,848 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:05
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Common/all/Common/Crc16/Crc16.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Crc16.lst -o
+#        obj\Crc16.obj source/XCategory/Common/all/Common/Crc16/Crc16.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Crc16.lst
+#    Object file  =  obj\Crc16.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\Common\Crc16\Crc16.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @defgroup CLASS_B
+      5           *
+      6           *  @brief      THis module calculates CRC 16 bits using CCITT polynomial
+      7           *
+      8           *  @copyright  Copyright 2015-2017. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+      9           */
+     10          //---------------------------------------------------------------------------------------------------------------------
+     11          //---------------------------------------------------------------------------------------------------------------------
+     12          
+     13          
+     14          //-------------------------------------- Include Files ----------------------------------------------------------------
+     15          #include "C_Extensions.h"
+     16          #include "Crc16.h" 
+     17          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     18          #if (MICRO_IS_LITTLE_ENDIAN == 0)
+     19              #define CRC_LOW     0
+     20              #define CRC_HIGH    1
+     21          #elif (MICRO_IS_LITTLE_ENDIAN == 1)
+     22              #define CRC_LOW     1
+     23              #define CRC_HIGH    0
+     24          #endif
+     25          
+
+   \                                 In section .text, align 4, keep-with-next
+     26          const uint8 Tab_Crc16_Hi[256] = {
+   \                     Tab_Crc16_Hi:
+   \   00000000   0x00 0x10          DC8 0, 16, 32, 48, 64, 80, 96, 112, 129, 145, 161, 177, 193, 209, 225
+   \              0x20 0x30    
+   \              0x40 0x50    
+   \              0x60 0x70    
+   \              0x81 0x91    
+   \              0xA1 0xB1    
+   \              0xC1 0xD1    
+   \              0xE1         
+   \   0000000F   0xF1 0x12          DC8 241, 18, 2, 50, 34, 82, 66, 114, 98, 147, 131, 179, 163, 211, 195
+   \              0x02 0x32    
+   \              0x22 0x52    
+   \              0x42 0x72    
+   \              0x62 0x93    
+   \              0x83 0xB3    
+   \              0xA3 0xD3    
+   \              0xC3         
+   \   0000001E   0xF3 0xE3          DC8 243, 227, 36, 52, 4, 20, 100, 116, 68, 84, 165, 181, 133, 149, 229
+   \              0x24 0x34    
+   \              0x04 0x14    
+   \              0x64 0x74    
+   \              0x44 0x54    
+   \              0xA5 0xB5    
+   \              0x85 0x95    
+   \              0xE5         
+   \   0000002D   0xF5 0xC5          DC8 245, 197, 213, 54, 38, 22, 6, 118, 102, 86, 70, 183, 167, 151, 135
+   \              0xD5 0x36    
+   \              0x26 0x16    
+   \              0x06 0x76    
+   \              0x66 0x56    
+   \              0x46 0xB7    
+   \              0xA7 0x97    
+   \              0x87         
+   \   0000003C   0xF7 0xE7          DC8 247, 231, 215, 199, 72, 88, 104, 120, 8, 24, 40, 56, 201, 217, 233
+   \              0xD7 0xC7    
+   \              0x48 0x58    
+   \              0x68 0x78    
+   \              0x08 0x18    
+   \              0x28 0x38    
+   \              0xC9 0xD9    
+   \              0xE9         
+   \   0000004B   0xF9 0x89          DC8 249, 137, 153, 169, 185, 90, 74, 122, 106, 26, 10, 58, 42, 219, 203
+   \              0x99 0xA9    
+   \              0xB9 0x5A    
+   \              0x4A 0x7A    
+   \              0x6A 0x1A    
+   \              0x0A 0x3A    
+   \              0x2A 0xDB    
+   \              0xCB         
+   \   0000005A   0xFB 0xEB          DC8 251, 235, 155, 139, 187, 171, 108, 124, 76, 92, 44, 60, 12, 28, 237
+   \              0x9B 0x8B    
+   \              0xBB 0xAB    
+   \              0x6C 0x7C    
+   \              0x4C 0x5C    
+   \              0x2C 0x3C    
+   \              0x0C 0x1C    
+   \              0xED         
+   \   00000069   0xFD 0xCD          DC8 253, 205, 221, 173, 189, 141, 157, 126, 110, 94, 78, 62, 46, 30, 14
+   \              0xDD 0xAD    
+   \              0xBD 0x8D    
+   \              0x9D 0x7E    
+   \              0x6E 0x5E    
+   \              0x4E 0x3E    
+   \              0x2E 0x1E    
+   \              0x0E         
+   \   00000078   0xFF 0xEF          DC8 255, 239, 223, 207, 191, 175, 159, 143, 145, 129, 177, 161, 209
+   \              0xDF 0xCF    
+   \              0xBF 0xAF    
+   \              0x9F 0x8F    
+   \              0x91 0x81    
+   \              0xB1 0xA1    
+   \              0xD1         
+   \   00000085   0xC1 0xF1          DC8 193, 241, 225, 16, 0, 48, 32, 80, 64, 112, 96, 131, 147, 163, 179
+   \              0xE1 0x10    
+   \              0x00 0x30    
+   \              0x20 0x50    
+   \              0x40 0x70    
+   \              0x60 0x83    
+   \              0x93 0xA3    
+   \              0xB3         
+   \   00000094   0xC3 0xD3          DC8 195, 211, 227, 243, 2, 18, 34, 50, 66, 82, 98, 114, 181, 165, 149
+   \              0xE3 0xF3    
+   \              0x02 0x12    
+   \              0x22 0x32    
+   \              0x42 0x52    
+   \              0x62 0x72    
+   \              0xB5 0xA5    
+   \              0x95         
+   \   000000A3   0x85 0xF5          DC8 133, 245, 229, 213, 197, 52, 36, 20, 4, 116, 100, 84, 68, 167, 183
+   \              0xE5 0xD5    
+   \              0xC5 0x34    
+   \              0x24 0x14    
+   \              0x04 0x74    
+   \              0x64 0x54    
+   \              0x44 0xA7    
+   \              0xB7         
+   \   000000B2   0x87 0x97          DC8 135, 151, 231, 247, 199, 215, 38, 54, 6, 22, 102, 118, 70, 86, 217
+   \              0xE7 0xF7    
+   \              0xC7 0xD7    
+   \              0x26 0x36    
+   \              0x06 0x16    
+   \              0x66 0x76    
+   \              0x46 0x56    
+   \              0xD9         
+   \   000000C1   0xC9 0xF9          DC8 201, 249, 233, 153, 137, 185, 169, 88, 72, 120, 104, 24, 8, 56, 40
+   \              0xE9 0x99    
+   \              0x89 0xB9    
+   \              0xA9 0x58    
+   \              0x48 0x78    
+   \              0x68 0x18    
+   \              0x08 0x38    
+   \              0x28         
+   \   000000D0   0xCB 0xDB          DC8 203, 219, 235, 251, 139, 155, 171, 187, 74, 90, 106, 122, 10, 26
+   \              0xEB 0xFB    
+   \              0x8B 0x9B    
+   \              0xAB 0xBB    
+   \              0x4A 0x5A    
+   \              0x6A 0x7A    
+   \              0x0A 0x1A    
+   \   000000DE   0x2A 0x3A          DC8 42, 58, 253, 237, 221, 205, 189, 173, 157, 141, 124, 108, 92, 76
+   \              0xFD 0xED    
+   \              0xDD 0xCD    
+   \              0xBD 0xAD    
+   \              0x9D 0x8D    
+   \              0x7C 0x6C    
+   \              0x5C 0x4C    
+   \   000000EC   0x3C 0x2C          DC8 60, 44, 28, 12, 239, 255, 207, 223, 175, 191, 143, 159, 110, 126
+   \              0x1C 0x0C    
+   \              0xEF 0xFF    
+   \              0xCF 0xDF    
+   \              0xAF 0xBF    
+   \              0x8F 0x9F    
+   \              0x6E 0x7E    
+   \   000000FA   0x4E 0x5E          DC8 78, 94, 46, 62, 14, 30
+   \              0x2E 0x3E    
+   \              0x0E 0x1E    
+     27                  0x00,0x10,0x20,0x30,0x40,0x50,0x60,0x70,0x81,0x91,0xA1,0xB1,0xC1,0xD1,0xE1,0xF1,
+     28                  0x12,0x02,0x32,0x22,0x52,0x42,0x72,0x62,0x93,0x83,0xB3,0xA3,0xD3,0xC3,0xF3,0xE3,
+     29                  0x24,0x34,0x04,0x14,0x64,0x74,0x44,0x54,0xA5,0xB5,0x85,0x95,0xE5,0xF5,0xC5,0xD5,
+     30                  0x36,0x26,0x16,0x06,0x76,0x66,0x56,0x46,0xB7,0xA7,0x97,0x87,0xF7,0xE7,0xD7,0xC7,
+     31                  0x48,0x58,0x68,0x78,0x08,0x18,0x28,0x38,0xC9,0xD9,0xE9,0xF9,0x89,0x99,0xA9,0xB9,
+     32                  0x5A,0x4A,0x7A,0x6A,0x1A,0x0A,0x3A,0x2A,0xDB,0xCB,0xFB,0xEB,0x9B,0x8B,0xBB,0xAB,
+     33                  0x6C,0x7C,0x4C,0x5C,0x2C,0x3C,0x0C,0x1C,0xED,0xFD,0xCD,0xDD,0xAD,0xBD,0x8D,0x9D,
+     34                  0x7E,0x6E,0x5E,0x4E,0x3E,0x2E,0x1E,0x0E,0xFF,0xEF,0xDF,0xCF,0xBF,0xAF,0x9F,0x8F,
+     35                  0x91,0x81,0xB1,0xA1,0xD1,0xC1,0xF1,0xE1,0x10,0x00,0x30,0x20,0x50,0x40,0x70,0x60,
+     36                  0x83,0x93,0xA3,0xB3,0xC3,0xD3,0xE3,0xF3,0x02,0x12,0x22,0x32,0x42,0x52,0x62,0x72,
+     37                  0xB5,0xA5,0x95,0x85,0xF5,0xE5,0xD5,0xC5,0x34,0x24,0x14,0x04,0x74,0x64,0x54,0x44,
+     38                  0xA7,0xB7,0x87,0x97,0xE7,0xF7,0xC7,0xD7,0x26,0x36,0x06,0x16,0x66,0x76,0x46,0x56,
+     39                  0xD9,0xC9,0xF9,0xE9,0x99,0x89,0xB9,0xA9,0x58,0x48,0x78,0x68,0x18,0x08,0x38,0x28,
+     40                  0xCB,0xDB,0xEB,0xFB,0x8B,0x9B,0xAB,0xBB,0x4A,0x5A,0x6A,0x7A,0x0A,0x1A,0x2A,0x3A,
+     41                  0xFD,0xED,0xDD,0xCD,0xBD,0xAD,0x9D,0x8D,0x7C,0x6C,0x5C,0x4C,0x3C,0x2C,0x1C,0x0C,
+     42                  0xEF,0xFF,0xCF,0xDF,0xAF,0xBF,0x8F,0x9F,0x6E,0x7E,0x4E,0x5E,0x2E,0x3E,0x0E,0x1E};
+
+   \                                 In section .text, align 4, keep-with-next
+     43              const uint8 Tab_Crc16_Lo[256] = {
+   \                     Tab_Crc16_Lo:
+   \   00000000   0x00 0x21          DC8 0, 33, 66, 99, 132, 165, 198, 231, 8, 41, 74, 107, 140, 173, 206
+   \              0x42 0x63    
+   \              0x84 0xA5    
+   \              0xC6 0xE7    
+   \              0x08 0x29    
+   \              0x4A 0x6B    
+   \              0x8C 0xAD    
+   \              0xCE         
+   \   0000000F   0xEF 0x31          DC8 239, 49, 16, 115, 82, 181, 148, 247, 214, 57, 24, 123, 90, 189, 156
+   \              0x10 0x73    
+   \              0x52 0xB5    
+   \              0x94 0xF7    
+   \              0xD6 0x39    
+   \              0x18 0x7B    
+   \              0x5A 0xBD    
+   \              0x9C         
+   \   0000001E   0xFF 0xDE          DC8 255, 222, 98, 67, 32, 1, 230, 199, 164, 133, 106, 75, 40, 9, 238
+   \              0x62 0x43    
+   \              0x20 0x01    
+   \              0xE6 0xC7    
+   \              0xA4 0x85    
+   \              0x6A 0x4B    
+   \              0x28 0x09    
+   \              0xEE         
+   \   0000002D   0xCF 0xAC          DC8 207, 172, 141, 83, 114, 17, 48, 215, 246, 149, 180, 91, 122, 25, 56
+   \              0x8D 0x53    
+   \              0x72 0x11    
+   \              0x30 0xD7    
+   \              0xF6 0x95    
+   \              0xB4 0x5B    
+   \              0x7A 0x19    
+   \              0x38         
+   \   0000003C   0xDF 0xFE          DC8 223, 254, 157, 188, 196, 229, 134, 167, 64, 97, 2, 35, 204, 237
+   \              0x9D 0xBC    
+   \              0xC4 0xE5    
+   \              0x86 0xA7    
+   \              0x40 0x61    
+   \              0x02 0x23    
+   \              0xCC 0xED    
+   \   0000004A   0x8E 0xAF          DC8 142, 175, 72, 105, 10, 43, 245, 212, 183, 150, 113, 80, 51, 18, 253
+   \              0x48 0x69    
+   \              0x0A 0x2B    
+   \              0xF5 0xD4    
+   \              0xB7 0x96    
+   \              0x71 0x50    
+   \              0x33 0x12    
+   \              0xFD         
+   \   00000059   0xDC 0xBF          DC8 220, 191, 158, 121, 88, 59, 26, 166, 135, 228, 197, 34, 3, 96, 65
+   \              0x9E 0x79    
+   \              0x58 0x3B    
+   \              0x1A 0xA6    
+   \              0x87 0xE4    
+   \              0xC5 0x22    
+   \              0x03 0x60    
+   \              0x41         
+   \   00000068   0xAE 0x8F          DC8 174, 143, 236, 205, 42, 11, 104, 73, 151, 182, 213, 244, 19, 50, 81
+   \              0xEC 0xCD    
+   \              0x2A 0x0B    
+   \              0x68 0x49    
+   \              0x97 0xB6    
+   \              0xD5 0xF4    
+   \              0x13 0x32    
+   \              0x51         
+   \   00000077   0x70 0x9F          DC8 112, 159, 190, 221, 252, 27, 58, 89, 120, 136, 169, 202, 235, 12
+   \              0xBE 0xDD    
+   \              0xFC 0x1B    
+   \              0x3A 0x59    
+   \              0x78 0x88    
+   \              0xA9 0xCA    
+   \              0xEB 0x0C    
+   \   00000085   0x2D 0x4E          DC8 45, 78, 111, 128, 161, 194, 227, 4, 37, 70, 103, 185, 152, 251, 218
+   \              0x6F 0x80    
+   \              0xA1 0xC2    
+   \              0xE3 0x04    
+   \              0x25 0x46    
+   \              0x67 0xB9    
+   \              0x98 0xFB    
+   \              0xDA         
+   \   00000094   0x3D 0x1C          DC8 61, 28, 127, 94, 177, 144, 243, 210, 53, 20, 119, 86, 234, 203, 168
+   \              0x7F 0x5E    
+   \              0xB1 0x90    
+   \              0xF3 0xD2    
+   \              0x35 0x14    
+   \              0x77 0x56    
+   \              0xEA 0xCB    
+   \              0xA8         
+   \   000000A3   0x89 0x6E          DC8 137, 110, 79, 44, 13, 226, 195, 160, 129, 102, 71, 36, 5, 219, 250
+   \              0x4F 0x2C    
+   \              0x0D 0xE2    
+   \              0xC3 0xA0    
+   \              0x81 0x66    
+   \              0x47 0x24    
+   \              0x05 0xDB    
+   \              0xFA         
+   \   000000B2   0x99 0xB8          DC8 153, 184, 95, 126, 29, 60, 211, 242, 145, 176, 87, 118, 21, 52, 76
+   \              0x5F 0x7E    
+   \              0x1D 0x3C    
+   \              0xD3 0xF2    
+   \              0x91 0xB0    
+   \              0x57 0x76    
+   \              0x15 0x34    
+   \              0x4C         
+   \   000000C1   0x6D 0x0E          DC8 109, 14, 47, 200, 233, 138, 171, 68, 101, 6, 39, 192, 225, 130, 163
+   \              0x2F 0xC8    
+   \              0xE9 0x8A    
+   \              0xAB 0x44    
+   \              0x65 0x06    
+   \              0x27 0xC0    
+   \              0xE1 0x82    
+   \              0xA3         
+   \   000000D0   0x7D 0x5C          DC8 125, 92, 63, 30, 249, 216, 187, 154, 117, 84, 55, 22, 241, 208, 179
+   \              0x3F 0x1E    
+   \              0xF9 0xD8    
+   \              0xBB 0x9A    
+   \              0x75 0x54    
+   \              0x37 0x16    
+   \              0xF1 0xD0    
+   \              0xB3         
+   \   000000DF   0x92 0x2E          DC8 146, 46, 15, 108, 77, 170, 139, 232, 201, 38, 7, 100, 69, 162, 131
+   \              0x0F 0x6C    
+   \              0x4D 0xAA    
+   \              0x8B 0xE8    
+   \              0xC9 0x26    
+   \              0x07 0x64    
+   \              0x45 0xA2    
+   \              0x83         
+   \   000000EE   0xE0 0xC1          DC8 224, 193, 31, 62, 93, 124, 155, 186, 217, 248, 23, 54, 85, 116, 147
+   \              0x1F 0x3E    
+   \              0x5D 0x7C    
+   \              0x9B 0xBA    
+   \              0xD9 0xF8    
+   \              0x17 0x36    
+   \              0x55 0x74    
+   \              0x93         
+   \   000000FD   0xB2 0xD1          DC8 178, 209, 240
+   \              0xF0         
+     44                  0x00,0x21,0x42,0x63,0x84,0xA5,0xC6,0xE7,0x08,0x29,0x4A,0x6B,0x8C,0xAD,0xCE,0xEF,
+     45                  0x31,0x10,0x73,0x52,0xB5,0x94,0xF7,0xD6,0x39,0x18,0x7B,0x5A,0xBD,0x9C,0xFF,0xDE,
+     46                  0x62,0x43,0x20,0x01,0xE6,0xC7,0xA4,0x85,0x6A,0x4B,0x28,0x09,0xEE,0xCF,0xAC,0x8D,
+     47                  0x53,0x72,0x11,0x30,0xD7,0xF6,0x95,0xB4,0x5B,0x7A,0x19,0x38,0xDF,0xFE,0x9D,0xBC,
+     48                  0xC4,0xE5,0x86,0xA7,0x40,0x61,0x02,0x23,0xCC,0xED,0x8E,0xAF,0x48,0x69,0x0A,0x2B,
+     49                  0xF5,0xD4,0xB7,0x96,0x71,0x50,0x33,0x12,0xFD,0xDC,0xBF,0x9E,0x79,0x58,0x3B,0x1A,
+     50                  0xA6,0x87,0xE4,0xC5,0x22,0x03,0x60,0x41,0xAE,0x8F,0xEC,0xCD,0x2A,0x0B,0x68,0x49,
+     51                  0x97,0xB6,0xD5,0xF4,0x13,0x32,0x51,0x70,0x9F,0xBE,0xDD,0xFC,0x1B,0x3A,0x59,0x78,
+     52                  0x88,0xA9,0xCA,0xEB,0x0C,0x2D,0x4E,0x6F,0x80,0xA1,0xC2,0xE3,0x04,0x25,0x46,0x67,
+     53                  0xB9,0x98,0xFB,0xDA,0x3D,0x1C,0x7F,0x5E,0xB1,0x90,0xF3,0xD2,0x35,0x14,0x77,0x56,
+     54                  0xEA,0xCB,0xA8,0x89,0x6E,0x4F,0x2C,0x0D,0xE2,0xC3,0xA0,0x81,0x66,0x47,0x24,0x05,
+     55                  0xDB,0xFA,0x99,0xB8,0x5F,0x7E,0x1D,0x3C,0xD3,0xF2,0x91,0xB0,0x57,0x76,0x15,0x34,
+     56                  0x4C,0x6D,0x0E,0x2F,0xC8,0xE9,0x8A,0xAB,0x44,0x65,0x06,0x27,0xC0,0xE1,0x82,0xA3,
+     57                  0x7D,0x5C,0x3F,0x1E,0xF9,0xD8,0xBB,0x9A,0x75,0x54,0x37,0x16,0xF1,0xD0,0xB3,0x92,
+     58                  0x2E,0x0F,0x6C,0x4D,0xAA,0x8B,0xE8,0xC9,0x26,0x07,0x64,0x45,0xA2,0x83,0xE0,0xC1,
+     59                  0x1F,0x3E,0x5D,0x7C,0x9B,0xBA,0xD9,0xF8,0x17,0x36,0x55,0x74,0x93,0xB2,0xD1,0xF0};
+     60          
+     61          typedef union
+     62          {
+     63              uint16 integer;
+     64              uint8 byte[2];
+     65          } INT_BYTE_FIELD_CRC;
+     66          
+     67          
+     68          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     69          
+     70          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     71          
+     72          
+     73          //=====================================================================================================================
+     74          //-------------------------------------- Public Functions -------------------------------------------------------------
+     75          //=====================================================================================================================
+     76          
+
+   \                                 In section .text, align 4, keep-with-next
+     77          uint16 Crc16__ByteProcess(uint16 crc_accum , uint8 data_byte)
+     78          {
+   \                     Crc16__ByteProcess: (+1)
+   \   00000000   0xB081             SUB      SP,SP,#+4
+     79          
+     80          //Here's the old code first
+     81          //    data_byte = (((crc_accum >> 8) & 0x00FF) ^ data_byte);
+     82          //    crc_accum = ((crc_accum << 8) ^ tabCrc16[data_byte]);
+     83          //    return crc_accum;
+     84          
+     85              INT_BYTE_FIELD_CRC reg;
+     86          
+     87              reg.integer = crc_accum;
+   \   00000002   0x466A             MOV      R2,SP
+   \   00000004   0x8010             STRH     R0,[R2, #+0]
+     88              data_byte ^= reg.byte[CRC_LOW];
+   \   00000006   0x4668             MOV      R0,SP
+   \   00000008   0x7840             LDRB     R0,[R0, #+1]
+   \   0000000A   0x4048             EORS     R0,R0,R1
+     89              reg.byte[CRC_LOW] = reg.byte[CRC_HIGH] ^ Tab_Crc16_Hi[data_byte];
+   \   0000000C   0x4669             MOV      R1,SP
+   \   0000000E   0x7809             LDRB     R1,[R1, #+0]
+   \   00000010   0x....             ADR.N    R2,Tab_Crc16_Hi
+   \   00000012   0x5C12             LDRB     R2,[R2, R0]
+   \   00000014   0x404A             EORS     R2,R2,R1
+   \   00000016   0x4669             MOV      R1,SP
+   \   00000018   0x704A             STRB     R2,[R1, #+1]
+     90              reg.byte[CRC_HIGH] = Tab_Crc16_Lo[data_byte];
+   \   0000001A   0xBF00             Nop      
+   \   0000001C   0x....             ADR.N    R2,Tab_Crc16_Lo
+   \   0000001E   0x5C10             LDRB     R0,[R2, R0]
+   \   00000020   0x7008             STRB     R0,[R1, #+0]
+     91              return (reg.integer);
+   \   00000022   0x4668             MOV      R0,SP
+   \   00000024   0x8800             LDRH     R0,[R0, #+0]
+   \   00000026   0xB001             ADD      SP,SP,#+4
+   \   00000028   0x4770             BX       LR               ;; return
+     92          }
+     93          
+     94          
+     95          
+
+   \                                 In section .text, align 2, keep-with-next
+     96          uint16 Crc16__RangeProcess(uint8 *buf, uint16 crc, uint16 size)
+     97          {
+   \                     Crc16__RangeProcess: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x0008             MOVS     R0,R1
+   \   00000006   0x0016             MOVS     R6,R2
+     98              uint16 i;
+     99              for (i = 0; i < size; i++)
+   \   00000008   0x2500             MOVS     R5,#+0
+   \   0000000A   0xE004             B        ??Crc16__RangeProcess_0
+    100              {
+    101                  crc = Crc16__ByteProcess(crc, *buf);             // Add in he CRC for this byte
+   \                     ??Crc16__RangeProcess_1: (+1)
+   \   0000000C   0x7821             LDRB     R1,[R4, #+0]
+   \   0000000E   0x.... 0x....      BL       Crc16__ByteProcess
+    102                  buf++;                                      // Point to next byte
+   \   00000012   0x1C64             ADDS     R4,R4,#+1
+    103              }
+   \   00000014   0x1C6D             ADDS     R5,R5,#+1
+   \                     ??Crc16__RangeProcess_0: (+1)
+   \   00000016   0x0029             MOVS     R1,R5
+   \   00000018   0x0032             MOVS     R2,R6
+   \   0000001A   0xB289             UXTH     R1,R1
+   \   0000001C   0x4291             CMP      R1,R2
+   \   0000001E   0xD3F5             BCC      ??Crc16__RangeProcess_1
+    104              return (crc);
+   \   00000020   0xBD70             POP      {R4-R6,PC}       ;; return
+    105          }
+    106          
+    107          
+
+   \                                 In section .text, align 2, keep-with-next
+    108          uint16 Crc16__ConstRangeProcess(uint8 const FAR *buf, uint16 crc, uint16 size)
+    109          {
+   \                     Crc16__ConstRangeProcess: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x0008             MOVS     R0,R1
+   \   00000006   0x0016             MOVS     R6,R2
+    110              uint16 i;
+    111          
+    112              for (i = 0; i < size; i++)
+   \   00000008   0x2500             MOVS     R5,#+0
+   \   0000000A   0xE004             B        ??Crc16__ConstRangeProcess_0
+    113              {
+    114                  crc = Crc16__ByteProcess(crc, *buf);             // Add in he CRC for this byte
+   \                     ??Crc16__ConstRangeProcess_1: (+1)
+   \   0000000C   0x7821             LDRB     R1,[R4, #+0]
+   \   0000000E   0x.... 0x....      BL       Crc16__ByteProcess
+    115                  buf++;                                      // Point to next byte
+   \   00000012   0x1C64             ADDS     R4,R4,#+1
+    116              }
+   \   00000014   0x1C6D             ADDS     R5,R5,#+1
+   \                     ??Crc16__ConstRangeProcess_0: (+1)
+   \   00000016   0x0029             MOVS     R1,R5
+   \   00000018   0x0032             MOVS     R2,R6
+   \   0000001A   0xB289             UXTH     R1,R1
+   \   0000001C   0x4291             CMP      R1,R2
+   \   0000001E   0xD3F5             BCC      ??Crc16__ConstRangeProcess_1
+    117          
+    118              return crc;
+   \   00000020   0xBD70             POP      {R4-R6,PC}       ;; return
+    119          }
+    120          //=====================================================================================================================
+    121          //-------------------------------------- Private Functions ------------------------------------------------------------
+    122          //=====================================================================================================================
+    123          
+    124          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       4   Crc16__ByteProcess
+      16   Crc16__ConstRangeProcess
+        16   -> Crc16__ByteProcess
+      16   Crc16__RangeProcess
+        16   -> Crc16__ByteProcess
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      42  Crc16__ByteProcess
+      34  Crc16__ConstRangeProcess
+      34  Crc16__RangeProcess
+     256  Tab_Crc16_Hi
+     256  Tab_Crc16_Lo
+
+ 
+ 622 bytes in section .text
+ 
+ 622 bytes of CODE memory
+
+Errors: none
+Warnings: none

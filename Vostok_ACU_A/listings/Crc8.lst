@@ -1,0 +1,643 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:06
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Common/all/Common/Crc8/Crc8.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Crc8.lst -o
+#        obj\Crc8.obj source/XCategory/Common/all/Common/Crc8/Crc8.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Crc8.lst
+#    Object file  =  obj\Crc8.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\Common\Crc8\Crc8.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @defgroup CLASS_B
+      5           *
+      6           *  @brief      This module process CRC8 Maxim 1 wire calculation.
+      7           *  @details    The algorithm used is "X8 + X5 + X4 + 1"
+      8           *
+      9           *
+     10           *  @copyright  Copyright 2007-2017. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     11           */
+     12          //---------------------------------------------------------------------------------------------------------------------
+     13          //---------------------------------------------------------------------------------------------------------------------
+     14          
+     15          //-------------------------------------- Include Files ----------------------------------------------------------------
+     16          #include "C_Extensions.h"
+     17          #include "Crc8.h" 
+     18          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     19          
+     20          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+
+   \                                 In section .text, align 4, keep-with-next
+     21          static uint8 const CRC8_TABLE[]	=
+   \                     CRC8_TABLE:
+   \   00000000   0x00 0x31          DC8 0, 49, 98, 83, 196, 245, 166, 151, 185, 136, 219, 234, 125, 76, 31
+   \              0x62 0x53    
+   \              0xC4 0xF5    
+   \              0xA6 0x97    
+   \              0xB9 0x88    
+   \              0xDB 0xEA    
+   \              0x7D 0x4C    
+   \              0x1F         
+   \   0000000F   0x2E 0x43          DC8 46, 67, 114, 33, 16, 135, 182, 229, 212, 250, 203, 152, 169, 62, 15
+   \              0x72 0x21    
+   \              0x10 0x87    
+   \              0xB6 0xE5    
+   \              0xD4 0xFA    
+   \              0xCB 0x98    
+   \              0xA9 0x3E    
+   \              0x0F         
+   \   0000001E   0x5C 0x6D          DC8 92, 109, 134, 183, 228, 213, 66, 115, 32, 17, 63, 14, 93, 108, 251
+   \              0x86 0xB7    
+   \              0xE4 0xD5    
+   \              0x42 0x73    
+   \              0x20 0x11    
+   \              0x3F 0x0E    
+   \              0x5D 0x6C    
+   \              0xFB         
+   \   0000002D   0xCA 0x99          DC8 202, 153, 168, 197, 244, 167, 150, 1, 48, 99, 82, 124, 77, 30, 47
+   \              0xA8 0xC5    
+   \              0xF4 0xA7    
+   \              0x96 0x01    
+   \              0x30 0x63    
+   \              0x52 0x7C    
+   \              0x4D 0x1E    
+   \              0x2F         
+   \   0000003C   0xB8 0x89          DC8 184, 137, 218, 235, 61, 12, 95, 110, 249, 200, 155, 170, 132, 181
+   \              0xDA 0xEB    
+   \              0x3D 0x0C    
+   \              0x5F 0x6E    
+   \              0xF9 0xC8    
+   \              0x9B 0xAA    
+   \              0x84 0xB5    
+   \   0000004A   0xE6 0xD7          DC8 230, 215, 64, 113, 34, 19, 126, 79, 28, 45, 186, 139, 216, 233, 199
+   \              0x40 0x71    
+   \              0x22 0x13    
+   \              0x7E 0x4F    
+   \              0x1C 0x2D    
+   \              0xBA 0x8B    
+   \              0xD8 0xE9    
+   \              0xC7         
+   \   00000059   0xF6 0xA5          DC8 246, 165, 148, 3, 50, 97, 80, 187, 138, 217, 232, 127, 78, 29, 44
+   \              0x94 0x03    
+   \              0x32 0x61    
+   \              0x50 0xBB    
+   \              0x8A 0xD9    
+   \              0xE8 0x7F    
+   \              0x4E 0x1D    
+   \              0x2C         
+   \   00000068   0x02 0x33          DC8 2, 51, 96, 81, 198, 247, 164, 149, 248, 201, 154, 171, 60, 13, 94
+   \              0x60 0x51    
+   \              0xC6 0xF7    
+   \              0xA4 0x95    
+   \              0xF8 0xC9    
+   \              0x9A 0xAB    
+   \              0x3C 0x0D    
+   \              0x5E         
+   \   00000077   0x6F 0x41          DC8 111, 65, 112, 35, 18, 133, 180, 231, 214, 122, 75, 24, 41, 190, 143
+   \              0x70 0x23    
+   \              0x12 0x85    
+   \              0xB4 0xE7    
+   \              0xD6 0x7A    
+   \              0x4B 0x18    
+   \              0x29 0xBE    
+   \              0x8F         
+   \   00000086   0xDC 0xED          DC8 220, 237, 195, 242, 161, 144, 7, 54, 101, 84, 57, 8, 91, 106, 253
+   \              0xC3 0xF2    
+   \              0xA1 0x90    
+   \              0x07 0x36    
+   \              0x65 0x54    
+   \              0x39 0x08    
+   \              0x5B 0x6A    
+   \              0xFD         
+   \   00000095   0xCC 0x9F          DC8 204, 159, 174, 128, 177, 226, 211, 68, 117, 38, 23, 252, 205, 158
+   \              0xAE 0x80    
+   \              0xB1 0xE2    
+   \              0xD3 0x44    
+   \              0x75 0x26    
+   \              0x17 0xFC    
+   \              0xCD 0x9E    
+   \   000000A3   0xAF 0x38          DC8 175, 56, 9, 90, 107, 69, 116, 39, 22, 129, 176, 227, 210, 191, 142
+   \              0x09 0x5A    
+   \              0x6B 0x45    
+   \              0x74 0x27    
+   \              0x16 0x81    
+   \              0xB0 0xE3    
+   \              0xD2 0xBF    
+   \              0x8E         
+   \   000000B2   0xDD 0xEC          DC8 221, 236, 123, 74, 25, 40, 6, 55, 100, 85, 194, 243, 160, 145, 71
+   \              0x7B 0x4A    
+   \              0x19 0x28    
+   \              0x06 0x37    
+   \              0x64 0x55    
+   \              0xC2 0xF3    
+   \              0xA0 0x91    
+   \              0x47         
+   \   000000C1   0x76 0x25          DC8 118, 37, 20, 131, 178, 225, 208, 254, 207, 156, 173, 58, 11, 88
+   \              0x14 0x83    
+   \              0xB2 0xE1    
+   \              0xD0 0xFE    
+   \              0xCF 0x9C    
+   \              0xAD 0x3A    
+   \              0x0B 0x58    
+   \   000000CF   0x69 0x04          DC8 105, 4, 53, 102, 87, 192, 241, 162, 147, 189, 140, 223, 238, 121
+   \              0x35 0x66    
+   \              0x57 0xC0    
+   \              0xF1 0xA2    
+   \              0x93 0xBD    
+   \              0x8C 0xDF    
+   \              0xEE 0x79    
+   \   000000DD   0x48 0x1B          DC8 72, 27, 42, 193, 240, 163, 146, 5, 52, 103, 86, 120, 73, 26, 43
+   \              0x2A 0xC1    
+   \              0xF0 0xA3    
+   \              0x92 0x05    
+   \              0x34 0x67    
+   \              0x56 0x78    
+   \              0x49 0x1A    
+   \              0x2B         
+   \   000000EC   0xBC 0x8D          DC8 188, 141, 222, 239, 130, 179, 224, 209, 70, 119, 36, 21, 59, 10, 89
+   \              0xDE 0xEF    
+   \              0x82 0xB3    
+   \              0xE0 0xD1    
+   \              0x46 0x77    
+   \              0x24 0x15    
+   \              0x3B 0x0A    
+   \              0x59         
+   \   000000FB   0x68 0xFF          DC8 104, 255, 206, 157, 172
+   \              0xCE 0x9D    
+   \              0xAC         
+     22          	{
+     23                  0x00, 0x31, 0x62, 0x53, 0xC4, 0xF5, 0xA6, 0x97,
+     24                  0xB9, 0x88, 0xDB, 0xEA, 0x7D, 0x4C, 0x1F, 0x2E,
+     25                  0x43, 0x72, 0x21, 0x10, 0x87, 0xB6, 0xE5, 0xD4,
+     26                  0xFA, 0xCB, 0x98, 0xA9, 0x3E, 0x0F, 0x5C, 0x6D,
+     27                  0x86, 0xB7, 0xE4, 0xD5, 0x42, 0x73, 0x20, 0x11,
+     28                  0x3F, 0x0E, 0x5D, 0x6C, 0xFB, 0xCA, 0x99, 0xA8,
+     29                  0xC5, 0xF4, 0xA7, 0x96, 0x01, 0x30, 0x63, 0x52,
+     30                  0x7C, 0x4D, 0x1E, 0x2F, 0xB8, 0x89, 0xDA, 0xEB,
+     31                  0x3D, 0x0C, 0x5F, 0x6E, 0xF9, 0xC8, 0x9B, 0xAA,
+     32                  0x84, 0xB5, 0xE6, 0xD7, 0x40, 0x71, 0x22, 0x13,
+     33                  0x7E, 0x4F, 0x1C, 0x2D, 0xBA, 0x8B, 0xD8, 0xE9,
+     34                  0xC7, 0xF6, 0xA5, 0x94, 0x03, 0x32, 0x61, 0x50,
+     35                  0xBB, 0x8A, 0xD9, 0xE8, 0x7F, 0x4E, 0x1D, 0x2C,
+     36                  0x02, 0x33, 0x60, 0x51, 0xC6, 0xF7, 0xA4, 0x95,
+     37                  0xF8, 0xC9, 0x9A, 0xAB, 0x3C, 0x0D, 0x5E, 0x6F,
+     38                  0x41, 0x70, 0x23, 0x12, 0x85, 0xB4, 0xE7, 0xD6,
+     39                  0x7A, 0x4B, 0x18, 0x29, 0xBE, 0x8F, 0xDC, 0xED,
+     40                  0xC3, 0xF2, 0xA1, 0x90, 0x07, 0x36, 0x65, 0x54,
+     41                  0x39, 0x08, 0x5B, 0x6A, 0xFD, 0xCC, 0x9F, 0xAE,
+     42                  0x80, 0xB1, 0xE2, 0xD3, 0x44, 0x75, 0x26, 0x17,
+     43                  0xFC, 0xCD, 0x9E, 0xAF, 0x38, 0x09, 0x5A, 0x6B,
+     44                  0x45, 0x74, 0x27, 0x16, 0x81, 0xB0, 0xE3, 0xD2,
+     45                  0xBF, 0x8E, 0xDD, 0xEC, 0x7B, 0x4A, 0x19, 0x28,
+     46                  0x06, 0x37, 0x64, 0x55, 0xC2, 0xF3, 0xA0, 0x91,
+     47                  0x47, 0x76, 0x25, 0x14, 0x83, 0xB2, 0xE1, 0xD0,
+     48                  0xFE, 0xCF, 0x9C, 0xAD, 0x3A, 0x0B, 0x58, 0x69,
+     49                  0x04, 0x35, 0x66, 0x57, 0xC0, 0xF1, 0xA2, 0x93,
+     50                  0xBD, 0x8C, 0xDF, 0xEE, 0x79, 0x48, 0x1B, 0x2A,
+     51                  0xC1, 0xF0, 0xA3, 0x92, 0x05, 0x34, 0x67, 0x56,
+     52                  0x78, 0x49, 0x1A, 0x2B, 0xBC, 0x8D, 0xDE, 0xEF,
+     53                  0x82, 0xB3, 0xE0, 0xD1, 0x46, 0x77, 0x24, 0x15,
+     54                  0x3B, 0x0A, 0x59, 0x68, 0xFF, 0xCE, 0x9D, 0xAC};
+     55          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     56          
+     57          
+     58          //=====================================================================================================================
+     59          //-------------------------------------- Public Functions -------------------------------------------------------------
+     60          //=====================================================================================================================
+     61          
+     62          
+     63          
+     64          //=====================================================================================================================
+     65          //-------------------------------------- Private Functions ------------------------------------------------------------
+     66          //=====================================================================================================================
+     67          
+     68          //---------------------------------------------------------------------------------------------------------------------
+     69          /**
+     70           *  @brief  	This method calculates a CRC8-Maxim 1 Wire based on a data table
+     71           *
+     72           *  @param		init	initial value for the crc
+     73           *  @param		buf		pointer to the data array
+     74           *  @param		size	size of the buffer
+     75           *  @return     unsigned char Result of the calculation
+     76           */
+
+   \                                 In section .text, align 4, keep-with-next
+     77          uint8 Crc8(uint8 init,uint8 * buf, uint8 size)
+     78          {
+   \                     Crc8: (+1)
+   \   00000000   0xB430             PUSH     {R4,R5}
+     79          	uint8 crc;
+     80          	uint8 count;
+     81          	crc = init;
+     82          	for ( count = 0 ; count < size ; count++)
+   \   00000002   0x2300             MOVS     R3,#+0
+   \   00000004   0xE006             B        ??Crc8_0
+     83          	{
+     84          		crc = CRC8_TABLE[(crc ^buf[count] )];
+   \                     ??Crc8_1: (+1)
+   \   00000006   0xBF00             Nop      
+   \   00000008   0x....             ADR.N    R4,CRC8_TABLE
+   \   0000000A   0xB2DB             UXTB     R3,R3
+   \   0000000C   0x5CCD             LDRB     R5,[R1, R3]
+   \   0000000E   0x4045             EORS     R5,R5,R0
+   \   00000010   0x5D60             LDRB     R0,[R4, R5]
+     85          	}
+   \   00000012   0x1C5B             ADDS     R3,R3,#+1
+   \                     ??Crc8_0: (+1)
+   \   00000014   0x001C             MOVS     R4,R3
+   \   00000016   0x0015             MOVS     R5,R2
+   \   00000018   0xB2E4             UXTB     R4,R4
+   \   0000001A   0x42AC             CMP      R4,R5
+   \   0000001C   0xD3F3             BCC      ??Crc8_1
+     86          	return (crc);
+   \   0000001E   0xBC30             POP      {R4,R5}
+   \   00000020   0x4770             BX       LR               ;; return
+     87          }
+     88          
+     89          //---------------------------------------------------------------------------------------------------------------------
+     90          /**
+     91           * @brief This method process one step CRC8-Maxim 1 Wire process
+     92           * @param previews is the previews crc value
+     93           * @param data is the data to be used in the calculation in the crc
+     94           * @return result of the crc computation.
+     95           */
+
+   \                                 In section .text, align 4, keep-with-next
+     96          uint8 Crc8__ProcessByte(uint8 previews,uint8 data)
+     97          {
+     98              return (CRC8_TABLE[(previews ^ data )]);
+   \                     Crc8__ProcessByte: (+1)
+   \   00000000   0x....             ADR.N    R2,CRC8_TABLE
+   \   00000002   0x4041             EORS     R1,R1,R0
+   \   00000004   0x5C50             LDRB     R0,[R2, R1]
+   \   00000006   0x4770             BX       LR               ;; return
+     99          }
+    100          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   Crc8
+       0   Crc8__ProcessByte
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+     256  CRC8_TABLE
+      34  Crc8
+       8  Crc8__ProcessByte
+
+ 
+ 298 bytes in section .text
+ 
+ 298 bytes of CODE memory
+
+Errors: none
+Warnings: none

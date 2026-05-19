@@ -1,0 +1,720 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:41
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI/SRICTachometerLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SRICTachometerLLI.lst
+#        -o obj\SRICTachometerLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI/SRICTachometerLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SRICTachometerLLI.lst
+#    Object file  =  obj\SRICTachometerLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\SRICTachometerLLI\SRICTachometerLLI.c
+      1          /** @addtogroup SRICTachometerLLI
+      2           *  @{
+      3           *  @file       SRICTachometerLLI.c
+      4           *
+      5           *  @brief      SR Input Capture based Tachometer reading
+      6           *
+      7           *  @details    This module implements the SR methods for reading a tachometer input which provides to the microcontroller
+      8           *              a square wave signal whose frequency range is expected to be between 0 to 1KHz.
+      9           *
+     10           *              The 0 Hz detection, which is critical for the system, is made through a configurable timeout timer.
+     11           *
+     12           *  @defgroup   CLASS_B
+     13           *
+     14           *  @copyright  Copyright 2017-2018. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     15           *  }@
+     16           */
+     17          //---------------------------------------------------------------------------------------------------------------------
+     18          //---------------------------------------------------------------------------------------------------------------------
+     19          
+     20          //-------------------------------------- Include Files ----------------------------------------------------------------
+     21          #include "SRICTachometerLLI.h"
+     22          
+     23          #if (HBL_LLI_NUM_SRICTACHOMETER > 0)
+     24          #include "Crc8.h"
+     25          #include "Timer.h"
+     26          #include "SRData.h"
+     27          #include "SRException.h"
+     28          #include "SRMicro.h"
+     29          #include "SRTaskSequence.h"
+     30          #include <string.h>
+     31          #include "VirtualPin.h"
+     32          
+     33          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     34          
+     35          //!Parameter hardcoded as it is fundamental for the SR
+     36          #define SRICTACHOMETER_COUNT_TO_DETECT_0Hz      1000// 1s of non IC detection It assumes Zero RPM
+     37          
+     38          //! Counts to 1000 rpm
+     39          #define TACHO_MINUMUM_COUNT_VALUE               468
+     40          
+     41          //! Defines the data for an instance of an SRICTachometer LLI
+     42          PACKED typedef struct
+     43          {
+     44              SRICTACHOMETER_PUBLIC_TYPE Public_Data;		//!< Holds the public data of this module. It can be accessed by the "Get" function
+     45              TIMER_PARAMETER_TYPE Timer_Parameter;		//!< Holds the parameters of this module.
+     46              uint32 Timer_Counter;						//!< Used to detect zero RPM. It increments every 1ms and gets reset once an IC happens.
+     47              uint32 Accumulator;							//!< Accumulate the last 5 samples to average it. The result of the average is at "Filtered_Period" variable.
+     48              uint8  Samples_Counter;						//!< Holds the numember of samples to take the average.
+     49          }SRICTACHOMETER_DATA_TYPE;
+     50          
+     51          //! Module data for each instance of an SRICTachometer LLI
+     52          static SRICTACHOMETER_DATA_TYPE SRICTachometerLLI_Data[HBL_LLI_NUM_SRICTACHOMETER];
+     53          
+     54          //! Holds a CRC for data in SRICTachometerLLI_Data variable)
+     55          static uint8 SRICTachometerLLI_Data_Crc[HBL_LLI_NUM_SRICTACHOMETER];
+     56          
+     57          //! Keeps track of how many SRICTachometer LLIs have been allocated by the application (based on setting file configuration)
+     58          static uint8 SRICTachometerLLI_Allocation;
+     59          //! Inverted memory for the Class B variable
+     60          static uint8 N_SRICTachometerLLI_Allocation;
+     61          
+     62          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     63          
+     64          
+     65          //=====================================================================================================================
+     66          //-------------------------------------- Public Functions -------------------------------------------------------------
+     67          //=====================================================================================================================
+     68          
+     69          //---------------------------------------------------------------------------------------------------------------------
+     70          /**
+     71           *  @brief      It Initializes the module SRICTachometerLLI and its variables.
+     72           *
+     73           */
+     74          void SRICTachometerLLI__Initialize(void)
+     75          {
+     76              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+     77          
+     78              for (uint8 index = 0; index < HBL_LLI_NUM_SRICTACHOMETER; index++)
+     79              {
+     80                  MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+     81                  memset(&SRICTachometerLLI_Data[index],0,sizeof(SRICTachometerLLI_Data[0]));
+     82          
+     83                  SRICTachometerLLI_Data[index].Public_Data.Filtered_Period = TACHO_ZERO_RPM_TIMER_COUNTS;
+     84                  SRICTachometerLLI_Data[index].Public_Data.Raw_Period = TACHO_ZERO_RPM_TIMER_COUNTS;
+     85          
+     86                  SRICTachometerLLI_Data_Crc[index] = Crc8(0xFF,(uint8 *)(void *)&SRICTachometerLLI_Data[index], sizeof(SRICTachometerLLI_Data[0]));
+     87                  MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+     88              }
+     89              SR_SET_BYTE(SRICTachometerLLI_Allocation, 0);
+     90          
+     91          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+     92              SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_INIT, SRTASKSEQUENCE_APPL_INIT_SRICTACHOMETER_LLI);
+     93          #endif
+     94          }
+     95          
+     96          //---------------------------------------------------------------------------------------------------------------------
+     97          /**
+     98           * @brief  It allocates the index for the SRICTachometer.
+     99           *
+    100           * @return SRICTachometerLLI_Allocation
+    101           */
+    102          uint8 SRICTachometerLLI__Allocate(void)
+    103          {
+    104              uint8 retval = HBL_ALLOCATION_INVALID;
+    105          
+    106              if ((SR_CHECK_BYTE(SRICTachometerLLI_Allocation) == SRDATA_OK) &&
+    107                  (SRICTachometerLLI_Allocation < HBL_LLI_NUM_SRICTACHOMETER))
+    108              {
+    109                  retval = SRICTachometerLLI_Allocation;
+    110                  SR_SET_BYTE(SRICTachometerLLI_Allocation, SRICTachometerLLI_Allocation+1);
+    111              }
+    112          
+    113              return (retval);
+    114          }
+    115          
+    116          //---------------------------------------------------------------------------------------------------------------------
+    117          /**
+    118           *  @brief It initialize the instance of the SRICTachometer module.
+    119           *
+    120           *  @details A timer is used as InputCapture. The configuration comes from the virtual pin table.
+    121           */
+    122          PASS_FAIL_TYPE SRICTachometerLLI__InitializeInstance(HBL_LLI_TYPE * input)
+    123          {
+    124              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    125              PASS_FAIL_TYPE ret_status;
+    126              uint8 virtual_pin;
+    127              SRICTACHOMETER_DATA_TYPE *data;
+    128          
+    129              ret_status = FAIL;
+    130          
+    131              if ((SR_CHECK_BYTE(SRICTachometerLLI_Allocation) == SRDATA_OK) &&
+    132                  (input->Data_Index < SRICTachometerLLI_Allocation) &&
+    133                  (Crc8(0xFF, (uint8 *)(void *)&SRICTachometerLLI_Data[input->Data_Index], sizeof(SRICTachometerLLI_Data[0])) == SRICTachometerLLI_Data_Crc[input->Data_Index]))
+    134              {
+    135                  data = (SRICTACHOMETER_DATA_TYPE *)(void *)&SRICTachometerLLI_Data[input->Data_Index];
+    136          
+    137                  virtual_pin = input->Pin_Ptr[0];
+    138                  MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    139          
+    140                  //configure timer for Input Capture
+    141                  data->Timer_Parameter.Timer       =   (TIMER_TYPE)VIRTUALPIN_TABLE[virtual_pin].device;
+    142                  data->Timer_Parameter.Channel     =   (TIMER_CHANNEL_TYPE)VIRTUALPIN_TABLE[virtual_pin].param0;
+    143                  data->Timer_Parameter.Mode        =   TIMER_MODE_INPUT_CAPTURE;
+    144                  data->Timer_Parameter.Port        =   VIRTUALPIN_TABLE[virtual_pin].port;
+    145                  data->Timer_Parameter.Pin         =   VIRTUALPIN_TABLE[virtual_pin].pin;
+    146                  data->Timer_Parameter.Pin_ReMap   =   VIRTUALPIN_TABLE[virtual_pin].pin_remap;
+    147                  data->Timer_Parameter.Polarity    =   TIMER_POLARITY_ACTIVE_HIGH;
+    148          
+    149                  //Configure Continuous reading
+    150                  ret_status =  Timer__Config(&data->Timer_Parameter);
+    151                  ret_status |= Timer__CaptureStart(&data->Timer_Parameter, TIMER_CAPTURE_CYCLE, TIMER_CAPTUREON_RISING_EDGE);
+    152          
+    153                  SRICTachometerLLI_Data_Crc[input->Data_Index] = Crc8(0xFF, (uint8 *)(void *)data, sizeof(SRICTachometerLLI_Data[0]));
+    154                  MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    155              }
+    156          
+    157              return (ret_status);
+    158          }
+    159          
+    160          //---------------------------------------------------------------------------------------------------------------------
+    161          /**
+    162           * @brief   One ms Handler of SRICTachometer module.
+    163           *
+    164           * @details This method handles the zero rpm detection. An internal counter is used to detect It.
+    165           *
+    166           * @param   input
+    167           *
+    168           * @return  BOOL_TYPE
+    169           */
+    170          BOOL_TYPE SRICTachometerLLI__OneMsProcess(HBL_LLI_TYPE * input)
+    171          {
+    172              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    173              SRICTACHOMETER_DATA_TYPE *data;
+    174              BOOL_TYPE crc_check;
+    175              PASS_FAIL_TYPE config_check;
+    176              BOOL_TYPE ret_val;
+    177          
+    178              ret_val = FALSE; // Always return FALSE to avoid any unexpected sequence updated. The LLI sequence gets updated by the ICPorcess.
+    179          
+    180              if ((SR_CHECK_BYTE(SRICTachometerLLI_Allocation) == SRDATA_OK) &&
+    181                  (input->Data_Index < SRICTachometerLLI_Allocation))
+    182              {
+    183                  data = (SRICTACHOMETER_DATA_TYPE *)(void *)&SRICTachometerLLI_Data[input->Data_Index];
+    184                  MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    185                  crc_check = (BOOL_TYPE) (Crc8(0xFF, (uint8 *)(void *)data, sizeof(SRICTachometerLLI_Data[0])) == SRICTachometerLLI_Data_Crc[input->Data_Index]);
+    186                  config_check = Timer__ConfigCheck(&data->Timer_Parameter);
+    187                  MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    188          
+    189                  if ( (TRUE == crc_check) &&
+    190                       (PASS == config_check) )
+    191                  {
+    192                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    193                      //Zero RPM
+    194          
+    195                      if (data->Timer_Counter >= SRICTACHOMETER_COUNT_TO_DETECT_0Hz)
+    196                      {
+    197                          data->Public_Data.Filtered_Period = TACHO_ZERO_RPM_TIMER_COUNTS;    // reset filtered period variable
+    198                          data->Public_Data.Raw_Period = TACHO_ZERO_RPM_TIMER_COUNTS;    		// reset raw period variable
+    199                      }
+    200                      else
+    201                      {
+    202                          data->Timer_Counter++;
+    203                      }
+    204          
+    205                      SRICTachometerLLI_Data_Crc[input->Data_Index] = Crc8(0xFF,(uint8 *)(void *)&SRICTachometerLLI_Data[input->Data_Index], sizeof(SRICTachometerLLI_Data[0]));
+    206                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    207          
+    208                  }
+    209              }
+    210          
+    211              return (ret_val);
+    212          }
+    213          
+    214          //---------------------------------------------------------------------------------------------------------------------
+    215          /**
+    216           * @brief    Performs periodic check on the integrity of the RAM variables used in this module
+    217           * @details  This function shall be called from HBL__PREPROCESSLOADS() in Hbl module
+    218           */
+    219          void SRICTachometerLLI__Handler(void)
+    220          {
+    221              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    222              BOOL_TYPE retval = (BOOL_TYPE) (SR_CHECK_BYTE(SRICTachometerLLI_Allocation) == SRDATA_OK);
+    223          
+    224              for (uint8 index = 0; index < HBL_LLI_NUM_SRICTACHOMETER; index++)
+    225              {
+    226                  MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    227                  retval &= (BOOL_TYPE) (Crc8(0xFF, (uint8 *)(void *)&SRICTachometerLLI_Data[index], sizeof(SRICTachometerLLI_Data[0])) == SRICTachometerLLI_Data_Crc[index]);
+    228                  MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    229                  if (retval == FALSE)
+    230                  {
+    231                      SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, 0, index);
+    232                      break;
+    233                  }
+    234              }
+    235          
+    236          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    237              SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_THREAD, SRTASKSEQUENCE_APPL_SRICTACHOMETERLLI_CHECKS);
+    238          #endif
+    239          
+    240          }
+    241          
+    242          //---------------------------------------------------------------------------------------------------------------------
+    243          /**
+    244           * @brief   Getter of SRICTachometer module.
+    245           *
+    246           * @details It return the SRICTachometerLLI data. It contains a buffer with the raw counts from the IC, as the Zero rpm detection.
+    247           *          No integrity checks on RAM variables performed in this function since returning bad data is no different
+    248           *          than returning NULL. The Handler() function will ensure a safe reaction when the integrity check fails.
+    249           *
+    250           * @param  input
+    251           *
+    252           * @return SRICTachometerLLI_Data[index]
+    253           */
+    254          void *SRICTachometerLLI__Get(HBL_LLI_TYPE * input)
+    255          {
+    256              void *ret_val = NULL;
+    257          
+    258              if (input->Data_Index < SRICTachometerLLI_Allocation)
+    259              {
+    260                  ret_val = ((void *)&SRICTachometerLLI_Data[input->Data_Index]);
+    261              }
+    262          
+    263              return(ret_val);
+    264          }
+    265          //---------------------------------------------------------------------------------------------------------------------
+    266          
+    267          /**
+    268           * @brief   Input Capture of SRICTachometer module.
+    269           *
+    270           * @details It works as a callback from IntMgr. It fills the SRICTachometer buffer with the capture durations (in counts).
+    271           *
+    272           * @param   HBL_LLI_TYPE * input
+    273           *
+    274           * @return  Returns TRUE once it gets a valid sample. It can be tracked by the sequence at HBL.
+    275           */
+    276          BOOL_TYPE SRICTachometerLLI__ICProcess(HBL_LLI_TYPE * input)
+    277          {
+    278          
+    279              SRICTACHOMETER_DATA_TYPE *data;
+    280              BOOL_TYPE crc_check;
+    281              BOOL_TYPE retval;
+    282              uint32 captured_duration;
+    283              uint32 lower_limit;
+    284              uint32 upper_limit;
+    285          
+    286              retval = FALSE;
+    287          
+    288              if ((SR_CHECK_BYTE(SRICTachometerLLI_Allocation) == SRDATA_OK)
+    289                  && (input->Data_Index < SRICTachometerLLI_Allocation))
+    290              {
+    291                  data = (SRICTACHOMETER_DATA_TYPE *)(void *)&SRICTachometerLLI_Data[input->Data_Index];
+    292          
+    293                  crc_check = (BOOL_TYPE) (Crc8(0xFF, (uint8 *)(void *)data, sizeof(SRICTachometerLLI_Data[0])) == SRICTachometerLLI_Data_Crc[input->Data_Index]);
+    294          
+    295                  if (crc_check)
+    296                  {
+    297                      //Read the current captured duration and duty
+    298                      captured_duration = Timer__GetCaptureDuration(&data->Timer_Parameter);
+    299                      if (captured_duration >= TACHO_MINUMUM_COUNT_VALUE)
+    300                      {
+    301                          // The limit is: previous_speed/8 (Delta of 25%).
+    302                          lower_limit = data->Public_Data.Raw_Period - (data->Public_Data.Raw_Period >> 3);
+    303                          upper_limit = data->Public_Data.Raw_Period + (data->Public_Data.Raw_Period >> 3);
+    304          
+    305                          if ((captured_duration <= upper_limit) &&
+    306                              (captured_duration >= lower_limit))
+    307                          {
+    308                              //Store the captured duration at the current buffer position
+    309                              data->Public_Data.Raw_Period = captured_duration;
+    310                          }
+    311                          else
+    312                          {
+    313                              // if speed is above upper limit
+    314                              if (captured_duration >= upper_limit)
+    315                              {
+    316                                  // Set period buffer to upper_limit
+    317                                  data->Public_Data.Raw_Period = upper_limit;
+    318                              }
+    319                              else
+    320                              {
+    321                                  // Set period buffer to lower_limit
+    322                                  data->Public_Data.Raw_Period = lower_limit;
+    323                              }
+    324                          }
+    325          
+    326                          data->Accumulator += data->Public_Data.Raw_Period;
+    327                          data->Samples_Counter++;
+    328          
+    329                          if (data->Samples_Counter >= SRICTACHOMETERLLI_AVERAGE_SAMPLES)
+    330                          {
+    331                          	// Take the average of raw period
+    332                              data->Public_Data.Filtered_Period = data->Accumulator / SRICTACHOMETERLLI_AVERAGE_SAMPLES;
+    333          
+    334                              // Reset the variables
+    335                          	data->Samples_Counter = 0;
+    336                          	data->Accumulator = 0;
+    337                          }
+    338          
+    339                          retval = TRUE; // Once it returns TRUE the Sequence gets updated.
+    340          
+    341                      }
+    342          
+    343                      // Reset the timer counting while IC is processing
+    344                      data->Timer_Counter = 0;
+    345          
+    346                      //Update CRC
+    347                      SRICTachometerLLI_Data_Crc[input->Data_Index] = Crc8(0xFF, (uint8 *)(void *)data, sizeof(SRICTachometerLLI_Data[0]));
+    348                  }
+    349              }
+    350              return (retval);
+    351          }
+    352          
+    353          //=====================================================================================================================
+    354          //-------------------------------------- Private Functions ------------------------------------------------------------
+    355          //=====================================================================================================================
+    356          
+    357          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

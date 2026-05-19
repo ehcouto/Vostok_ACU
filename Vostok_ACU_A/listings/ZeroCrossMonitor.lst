@@ -1,0 +1,626 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:18:00
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Monitors/ZeroCrossMonitor/ZeroCrossMonitor.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\ZeroCrossMonitor.lst
+#        -o obj\ZeroCrossMonitor.obj
+#        source/Category/Application/acu/Monitors/ZeroCrossMonitor/ZeroCrossMonitor.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\ZeroCrossMonitor.lst
+#    Object file  =  obj\ZeroCrossMonitor.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Monitors\ZeroCrossMonitor\ZeroCrossMonitor.c
+      1          /*
+      2           * ZeroCrossMonitor.c
+      3           *
+      4           *  Created on: Mar 20, 2018
+      5           *      Author: DHAMAAD
+      6           */
+      7          
+      8          /**
+      9           *  @file       ZeroCrossMonitor.c
+     10           *  @brief      Basic description of file contents
+     11           *
+     12           *  @details    Detailed description of the file contents
+     13           *
+     14           *---------------------------------------------------------------------------------------------------------------------
+     15           *------------------- Copyright 2011.  Whirlpool Corporation.  All rights reserved - CONFIDENTIAL ---------------------
+     16           *---------------------------------------------------------------------------------------------------------------------
+     17           */
+     18          
+     19          //-------------------------------------- Include Files ----------------------------------------------------------------
+     20          // -- This Module --
+     21          #include "SystemConfig.h"
+     22          #include "ZeroCrossMonitor.h"
+     23          
+     24          // -- Other Modules --
+     25          #include "DishAuxVar.h"
+     26          #include "Fault.h"
+     27          #include "Hbl.h"
+     28          #include "Micro.h"
+     29          #include "SettingFile.h"
+     30          #include "WashHeaterFaultMonitor.h"
+     31          #include "ZeroCross.h"
+     32          
+     33          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     34          
+     35          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+
+   \                                 In section .bss, align 2
+     36          static BOOL_TYPE Zero_Cross_Present;
+   \                     Zero_Cross_Present:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 1
+   \   00000002                      DS8 2
+     37          static uint16 AC_Line_Lower_Threshold;
+     38          
+     39          //! Boolean indicating if the Zero Cross Monitor is active or not
+     40          static BOOL_TYPE ZeroCross_Monitor_Is_Active;
+     41          
+     42          
+     43          
+     44          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     45          
+     46          //=====================================================================================================================
+     47          //-------------------------------------- Public Functions -------------------------------------------------------------
+     48          //=====================================================================================================================
+     49          
+     50          //---------------------------------------------------------------------------------------------------------------------
+     51          /**
+     52           *  @brief      It Initializes the module ZeroCrossMonitor and its variables
+     53           *
+     54           */
+
+   \                                 In section .text, align 2, keep-with-next
+     55          void ZeroCrossMonitor__Initialize(void)
+     56          {
+   \                     ZeroCrossMonitor__Initialize: (+1)
+   \   00000000   0xB51C             PUSH     {R2-R4,LR}
+     57          	SETTINGFILE_LOADER_TYPE loader;
+     58          	if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+   \   00000002   0x.... 0x....      BL       Micro__GetResetMode
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD125             BNE      ??ZeroCrossMonitor__Initialize_0
+     59          	{
+     60          		Zero_Cross_Present = FALSE;
+   \   0000000A   0x2000             MOVS     R0,#+0
+   \   0000000C   0x....             LDR      R4,??DataTable1
+   \   0000000E   0x0001             MOVS     R1,R0
+   \   00000010   0x7021             STRB     R1,[R4, #+0]
+     61          		ZeroCross_Monitor_Is_Active = FALSE;
+   \   00000012   0x7060             STRB     R0,[R4, #+1]
+     62          
+     63          		if (Fault__GetParameters(FAULT_ID_ZEROCROSS) != NULL)
+   \   00000014   0x2002             MOVS     R0,#+2
+   \   00000016   0x.... 0x....      BL       Fault__GetParameters
+   \   0000001A   0x2800             CMP      R0,#+0
+   \   0000001C   0xD01B             BEQ      ??ZeroCrossMonitor__Initialize_0
+     64          		{
+     65          			if ((Hbl__GetLoadIndexByLoadID(HBL_LOAD_PILOT_RELAY) != (uint8)HBL_INDEX_INVALID) ||
+     66          				(Hbl__GetLoadIndexByLoadID(HBL_LOAD_RELAY_ENABLE) != (uint8)HBL_INDEX_INVALID))
+   \   0000001E   0x2051             MOVS     R0,#+81
+   \   00000020   0x.... 0x....      BL       Hbl__GetLoadIndexByLoadID
+   \   00000024   0x28FF             CMP      R0,#+255
+   \   00000026   0xD104             BNE      ??ZeroCrossMonitor__Initialize_1
+   \   00000028   0x2052             MOVS     R0,#+82
+   \   0000002A   0x.... 0x....      BL       Hbl__GetLoadIndexByLoadID
+   \   0000002E   0x28FF             CMP      R0,#+255
+   \   00000030   0xD011             BEQ      ??ZeroCrossMonitor__Initialize_0
+     67          			{
+     68          
+     69          				AC_Line_Lower_Threshold = 0xFFFF;
+   \                     ??ZeroCrossMonitor__Initialize_1: (+1)
+   \   00000032   0x....             LDR      R0,??DataTable1_1  ;; 0xffff
+   \   00000034   0x8060             STRH     R0,[R4, #+2]
+     70          
+     71          				if (SettingFile__BasicLoader(SF_PTR_ACU_PRODUCT_CONFIGURATION_DATA, DSPL_HEATER_CURRENT_SENSING_PARAMS, &loader) == PASS)
+   \   00000036   0x466A             MOV      R2,SP
+   \   00000038   0x2106             MOVS     R1,#+6
+   \   0000003A   0x2004             MOVS     R0,#+4
+   \   0000003C   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000040   0x2801             CMP      R0,#+1
+   \   00000042   0xD108             BNE      ??ZeroCrossMonitor__Initialize_0
+     72          				{
+     73          					AC_Line_Lower_Threshold = ENDIANU16_STON(((HEATER_CURRENT_SENSING_PARAMS_TYPE *)(void*)loader.Data)->AC_Line_Lower_Threshold);
+   \   00000044   0x9900             LDR      R1,[SP, #+0]
+   \   00000046   0x7A08             LDRB     R0,[R1, #+8]
+   \   00000048   0x7A4A             LDRB     R2,[R1, #+9]
+   \   0000004A   0x0612             LSLS     R2,R2,#+24
+   \   0000004C   0x0C12             LSRS     R2,R2,#+16
+   \   0000004E   0x4310             ORRS     R0,R0,R2
+   \   00000050   0x8060             STRH     R0,[R4, #+2]
+     74          
+     75          					ZeroCross_Monitor_Is_Active = TRUE;
+   \   00000052   0x2001             MOVS     R0,#+1
+   \   00000054   0x7060             STRB     R0,[R4, #+1]
+     76          				}
+     77          			}
+     78          			else
+     79          			{
+     80          				// Neither Pilot Relay nor Relay Enable is present, monitor is disabled
+     81          			}
+     82          		}
+     83          		else
+     84          		{
+     85          			// Fault parameters not present in setting file, monitor is disabled
+     86          		}
+     87          	}
+     88          }
+   \                     ??ZeroCrossMonitor__Initialize_0: (+1)
+   \   00000056   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+     89          
+
+   \                                 In section .text, align 2, keep-with-next
+     90          void ZeroCrossMonitor__Execution(void)
+     91          {
+   \                     ZeroCrossMonitor__Execution: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+     92          	if ((uint8)ZeroCross_Monitor_Is_Active == (uint8)TRUE)
+   \   00000002   0x....             LDR      R4,??DataTable1
+   \   00000004   0x7860             LDRB     R0,[R4, #+1]
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD11E             BNE      ??ZeroCrossMonitor__Execution_0
+     93          	{
+     94          		uint8 *pilot_relay_state;
+     95          
+     96          		pilot_relay_state = (uint8*)(Hbl__GetLoadStatusByLoadID(HBL_LOAD_PILOT_RELAY));
+   \   0000000A   0x2051             MOVS     R0,#+81
+   \   0000000C   0x.... 0x....      BL       Hbl__GetLoadStatusByLoadID
+   \   00000010   0x0005             MOVS     R5,R0
+     97          
+     98          		if (pilot_relay_state == NULL)
+   \   00000012   0xD103             BNE      ??ZeroCrossMonitor__Execution_1
+     99          		{
+    100          			pilot_relay_state = (uint8*)(Hbl__GetLoadStatusByLoadID(HBL_LOAD_RELAY_ENABLE));
+   \   00000014   0x2052             MOVS     R0,#+82
+   \   00000016   0x.... 0x....      BL       Hbl__GetLoadStatusByLoadID
+   \   0000001A   0x0005             MOVS     R5,R0
+    101          		}
+    102          
+    103          		Zero_Cross_Present = Hbl__IsZeroCrossPresent();
+   \                     ??ZeroCrossMonitor__Execution_1: (+1)
+   \   0000001C   0x.... 0x....      BL       Hbl__IsZeroCrossPresent
+   \   00000020   0x7020             STRB     R0,[R4, #+0]
+    104          
+    105          		if (pilot_relay_state != NULL)
+   \   00000022   0x2D00             CMP      R5,#+0
+   \   00000024   0xD010             BEQ      ??ZeroCrossMonitor__Execution_0
+    106          		{
+    107          			if (*pilot_relay_state == (uint8)ON)
+   \   00000026   0x7829             LDRB     R1,[R5, #+0]
+   \   00000028   0x2901             CMP      R1,#+1
+   \   0000002A   0xD10A             BNE      ??ZeroCrossMonitor__Execution_2
+    108          			{
+    109          				// Pilot Relay is On
+    110          				if ((Zero_Cross_Present == FALSE) && (DishAuxVar__GetACLine() > AC_Line_Lower_Threshold))
+   \   0000002C   0x2800             CMP      R0,#+0
+   \   0000002E   0xD108             BNE      ??ZeroCrossMonitor__Execution_2
+   \   00000030   0x.... 0x....      BL       DishAuxVar__GetACLine
+   \   00000034   0x8861             LDRH     R1,[R4, #+2]
+   \   00000036   0x4281             CMP      R1,R0
+   \   00000038   0xD203             BCS      ??ZeroCrossMonitor__Execution_2
+    111          				{
+    112          					// Zero Crossing signal is absent and AC Line signal is present: it means that there is a failure in the Zero Crossing signal
+    113          					Fault__ConditionDetected(FAULT_ID_ZEROCROSS);
+   \   0000003A   0x2002             MOVS     R0,#+2
+   \   0000003C   0x.... 0x....      BL       Fault__ConditionDetected
+   \   00000040   0xBD31             POP      {R0,R4,R5,PC}
+    114          				}
+    115          				else
+    116          				{
+    117          					// Zero Crossing signal is present (so no failure detected) or Zero Crossing signal is absent but also AC Line signal is absent:
+    118          					// it means that Pilot Relay is stuck open or (in the configurations for which the pilot relay status depends on the door)
+    119          					// that the door is open.
+    120          					Fault__ConditionRemoved(FAULT_ID_ZEROCROSS);
+    121          				}
+    122          			}
+    123          			else
+    124          			{
+    125          				// Pilot Relay is Off
+    126          				Fault__ConditionRemoved(FAULT_ID_ZEROCROSS);
+   \                     ??ZeroCrossMonitor__Execution_2: (+1)
+   \   00000042   0x2002             MOVS     R0,#+2
+   \   00000044   0x.... 0x....      BL       Fault__ConditionRemoved
+    127          			}
+    128          		}
+    129          	}
+    130          }
+   \                     ??ZeroCrossMonitor__Execution_0: (+1)
+   \   00000048   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     Zero_Cross_Present
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x0000FFFF         DC32     0xffff
+    131          
+    132          //=====================================================================================================================
+    133          //-------------------------------------- Private Functions ------------------------------------------------------------
+    134          //=====================================================================================================================
+    135          
+    136          
+    137          
+    138          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   ZeroCrossMonitor__Execution
+        16   -> DishAuxVar__GetACLine
+        16   -> Fault__ConditionDetected
+        16   -> Fault__ConditionRemoved
+        16   -> Hbl__GetLoadStatusByLoadID
+        16   -> Hbl__IsZeroCrossPresent
+      16   ZeroCrossMonitor__Initialize
+        16   -> Fault__GetParameters
+        16   -> Hbl__GetLoadIndexByLoadID
+        16   -> Micro__GetResetMode
+        16   -> SettingFile__BasicLoader
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+      74  ZeroCrossMonitor__Execution
+      88  ZeroCrossMonitor__Initialize
+       4  Zero_Cross_Present
+          ZeroCross_Monitor_Is_Active
+          AC_Line_Lower_Threshold
+
+ 
+   4 bytes in section .bss
+ 170 bytes in section .text
+ 
+ 170 bytes of CODE memory
+   4 bytes of DATA memory
+
+Errors: none
+Warnings: none

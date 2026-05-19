@@ -1,0 +1,1144 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:38
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/Micros/STM32G0x/Driver/RTCDriver/RtcDriver.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\RtcDriver.lst -o
+#        obj\RtcDriver.obj source/Micros/STM32G0x/Driver/RTCDriver/RtcDriver.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\RtcDriver.lst
+#    Object file  =  obj\RtcDriver.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Micros\STM32G0x\Driver\RTCDriver\RtcDriver.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      Real Time Clock Driver for STM32F0x using Epoch method
+      5           *              By default uses the LSI clock and Alarm feature
+      6           *
+      7           *  @details    This module depends on ExtInterrupt module for interrupt generation
+      8           *
+      9           *  
+     10           *
+     11           *  @copyright  Copyright 2013-. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     12           */
+     13          //---------------------------------------------------------------------------------------------------------------------
+     14          //---------------------------------------------------------------------------------------------------------------------
+     15          //-------------------------------------- Include Files ----------------------------------------------------------------
+     16          #include "RtcDriver.h"
+     17          #include "uc.h"
+     18          #include "Micro.h"
+     19          #include "RtcDriver_prv.h"
+     20          #include "ExtInterrupt.h"
+     21          
+     22          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     23          
+     24          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     25          
+     26          #ifndef RTCDRIVER_GENERATE_INTERRUPT_EVERY_NUMBER_OF_SECONDS
+     27              #define RTCDRIVER_GENERATE_INTERRUPT_EVERY_NUMBER_OF_SECONDS         0
+     28          #else
+     29              #if (RTCDRIVER_GENERATE_INTERRUPT_EVERY_NUMBER_OF_SECONDS > 60)
+     30                  #error : RTCDRIVER_GENERATE_INTERRUPT_EVERY_NUMBER_OF_SECONDS shall be within 60 seconds
+     31              #endif
+     32          #endif
+     33          
+     34          #ifndef DEFAULT_CALIBRATION_VALUE
+     35              #define DEFAULT_CALIBRATION_VALUE           65
+     36          #endif
+     37          
+     38          //LSE clock value
+     39          #ifndef LSE_VALUE
+     40              #define LSE_VALUE       32768
+     41          #endif
+     42          
+     43          //Lsi clock is fixed to 32KHz
+     44          #define LSI_VALUE                   32000
+     45          
+     46          #define RTC_CALIBRATION_CLEAR_MASK  0xFF80
+     47          #define RTC_CALIBRATION_LIMIT_MASK  0x007F
+     48          
+     49          
+     50          #ifndef RTC_INTERRUPT_PREEMPTION_PRIORITY
+     51              #define RTC_INTERRUPT_PREEMPTION_PRIORITY   2
+     52          #elif (RTC_INTERRUPT_PREEMPTION_PRIORITY > 3)
+     53              #error:"RTC_INTERRUPT_PREEMPTION_PRIORITY value should be 0 to 3, 0 is for high priority and 3 is for low priority"
+     54          #endif
+     55          
+     56          
+     57          #define EXTI_21_CONNECTED_TO_RTC_ALARM_EVENT    21
+     58          
+     59          #define RTC_WRITE_PROTECTION_DISABLED()         { RTC.WPR = 0xCA; RTC.WPR = 0x53; }
+     60          #define RTC_WRITE_PROTECTION_ENABLED()          { RTC.WPR = 0xFF;}
+     61          #define RTC_INIT_MASK                           ((uint32)0xFFFFFFFF)
+     62          
+     63          #define INITMODE_TIMEOUT                        ((uint32) 0x00004000)
+     64          #define SYNCHRO_TIMEOUT                         ((uint32) 0x00008000)
+     65          
+     66          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     67          static PASS_FAIL_TYPE RtcEnterInitMode(void);
+     68          static void RtcExitInitMode(void);
+     69          static PASS_FAIL_TYPE RtcWaitForSynchro(void);
+     70          static void RtcSetTime(uint8 hours, uint8 minutes, uint8 seconds);
+     71          static uint8 RtcByteToBcd2(uint8 Value);
+     72          
+     73          //=====================================================================================================================
+     74          //-------------------------------------- Public Functions -------------------------------------------------------------
+     75          //=====================================================================================================================
+     76          //---------------------------------------------------------------------------------------------------------------------
+     77          /**
+     78           *  @brief      Initializes the module RtcDriver and its variables including RTC Registers.
+     79           *
+     80           */
+
+   \                                 In section .text, align 2, keep-with-next
+     81          void RtcDriver__Initialize(void)
+     82          {
+   \                     RtcDriver__Initialize: (+1)
+   \   00000000   0xB5F0             PUSH     {R4-R7,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+     83          	volatile uint32 synchrocounter = 0;
+   \   00000004   0x2500             MOVS     R5,#+0
+   \   00000006   0x9501             STR      R5,[SP, #+4]
+     84          	uint32 synchrostatus = 0x00;
+     85          
+     86          	//Enable clock for the power
+     87          	RCC.APBENR1 |= RCC_APBENR1_PWREN;
+   \   00000008   0x....             LDR      R0,??DataTable5  ;; 0x4002103c
+   \   0000000A   0x6801             LDR      R1,[R0, #+0]
+   \   0000000C   0x2280             MOVS     R2,#+128
+   \   0000000E   0x0552             LSLS     R2,R2,#+21       ;; #+268435456
+   \   00000010   0x430A             ORRS     R2,R2,R1
+   \   00000012   0x6002             STR      R2,[R0, #+0]
+     88          
+     89          	// Enable the Backup Domain Access
+     90          	PWR.CR1 |= PWR_CR1_DBP;
+   \   00000014   0x0D84             LSRS     R4,R0,#+22
+   \   00000016   0x....             LDR      R1,??DataTable5_1  ;; 0x40007000
+   \   00000018   0x680A             LDR      R2,[R1, #+0]
+   \   0000001A   0x4322             ORRS     R2,R2,R4
+   \   0000001C   0x600A             STR      R2,[R1, #+0]
+     91          
+     92          	//Enable the LSI clock
+     93          	RCC.CSR |= RCC_CSR_LSION;
+   \   0000001E   0x6A41             LDR      R1,[R0, #+36]
+   \   00000020   0x2201             MOVS     R2,#+1
+   \   00000022   0x430A             ORRS     R2,R2,R1
+   \   00000024   0x6242             STR      R2,[R0, #+36]
+     94          
+     95          	while ((RCC.CSR & RCC_CSR_LSIRDY) == FALSE);
+   \                     ??RtcDriver__Initialize_0: (+1)
+   \   00000026   0x6A41             LDR      R1,[R0, #+36]
+   \   00000028   0x0789             LSLS     R1,R1,#+30
+   \   0000002A   0xD5FC             BPL      ??RtcDriver__Initialize_0
+     96          
+     97          	// LSI as RTC Clock
+     98          	RCC.BDCR |= RCC_BDCR_RTCSEL_LSI;
+   \   0000002C   0x6A01             LDR      R1,[R0, #+32]
+   \   0000002E   0x0D42             LSRS     R2,R0,#+21
+   \   00000030   0x430A             ORRS     R2,R2,R1
+   \   00000032   0x6202             STR      R2,[R0, #+32]
+     99          
+    100          	// Enable the RTC Clock
+    101          	RCC.BDCR |= RCC_BDCR_RTCEN;
+   \   00000034   0x01E7             LSLS     R7,R4,#+7
+   \   00000036   0x6A01             LDR      R1,[R0, #+32]
+   \   00000038   0x4339             ORRS     R1,R1,R7
+   \   0000003A   0x6201             STR      R1,[R0, #+32]
+    102          
+    103          	RCC.APBENR1 |= RCC_APBENR1_RTCAPBEN;
+   \   0000003C   0x6801             LDR      R1,[R0, #+0]
+   \   0000003E   0x0D02             LSRS     R2,R0,#+20
+   \   00000040   0x430A             ORRS     R2,R2,R1
+   \   00000042   0x6002             STR      R2,[R0, #+0]
+    104          
+    105          	#if (RTCDRIVER_GENERATE_INTERRUPT_EVERY_NUMBER_OF_SECONDS > 0)
+    106          		ExtInterrupt__Initialize();
+   \   00000044   0x.... 0x....      BL       ExtInterrupt__Initialize
+    107          		//EXTI line 17 is connected to the RTC Alarm event
+    108          		ExtInterrupt__Config(EXTINT_CH21, PORT_NULL, 0, 0, EXTINT_TRG_RISE);
+   \   00000048   0x2001             MOVS     R0,#+1
+   \   0000004A   0x9000             STR      R0,[SP, #+0]
+   \   0000004C   0x462B             MOV      R3,R5
+   \   0000004E   0x461A             MOV      R2,R3
+   \   00000050   0x21FF             MOVS     R1,#+255
+   \   00000052   0x2015             MOVS     R0,#+21
+   \   00000054   0x.... 0x....      BL       ExtInterrupt__Config
+    109          
+    110          		//Configure the RTC interrupt
+    111          		Micro__NVICEnableIRQ(RTC_TAMP_IRQ_CHANNEL, RTC_INTERRUPT_PREEMPTION_PRIORITY);
+   \   00000058   0x2102             MOVS     R1,#+2
+   \   0000005A   0x4608             MOV      R0,R1
+   \   0000005C   0x.... 0x....      BL       Micro__NVICEnableIRQ
+    112          	#endif
+    113          
+    114          
+    115          	// Disable the write protection for RTC registers
+    116          	RTC_WRITE_PROTECTION_DISABLED();
+   \   00000060   0x....             LDR      R6,??DataTable5_2  ;; 0x40002800
+   \   00000062   0x20CA             MOVS     R0,#+202
+   \   00000064   0x6270             STR      R0,[R6, #+36]
+   \   00000066   0x2053             MOVS     R0,#+83
+   \   00000068   0x6270             STR      R0,[R6, #+36]
+    117          
+    118          	// Set Initialization mode
+    119          	if (RtcEnterInitMode() == FAIL)
+   \   0000006A   0x.... 0x....      BL       RtcEnterInitMode
+   \   0000006E   0x2800             CMP      R0,#+0
+   \   00000070   0xD02A             BEQ      ??RtcDriver__Initialize_1
+    120          	{
+    121          
+    122          	}
+    123          	else
+    124          	{
+    125          		//LSI = 32000
+    126          		// ck_apre = 32000/(127+1) = 250Hz
+    127          		// ck_spre = 250Hz/(249+1) = 1Hz
+    128          
+    129          		#define PREDIV_ASYNC_PREDIV     (0x007F0000)
+    130          		#define PREDIV_SYNC_PREDIV      (0x000000F9)
+    131          
+    132          		RTC.PRER = (uint32)(PREDIV_SYNC_PREDIV);
+   \   00000072   0x20F9             MOVS     R0,#+249
+   \   00000074   0x6130             STR      R0,[R6, #+16]
+    133          		RTC.PRER |= (uint32)(PREDIV_ASYNC_PREDIV);
+   \   00000076   0x6930             LDR      R0,[R6, #+16]
+   \   00000078   0x21FE             MOVS     R1,#+254
+   \   0000007A   0x03C9             LSLS     R1,R1,#+15       ;; #+8323072
+   \   0000007C   0x4301             ORRS     R1,R1,R0
+   \   0000007E   0x6131             STR      R1,[R6, #+16]
+    134          
+    135          		// MSK4: Alarm A date mask, Date/day don’t care in Alarm A comparison,
+    136          		// MSK3: Alarm A hours mask, Hours don’t care in Alarm A comparison
+    137          		// MSK2: Alarm A minutes mask, Minutes don’t care in Alarm A comparison
+    138          		// No Masking for the Seconds
+    139          		//Set the seconds in BCD format
+    140          		RTC.ALRMAR = RTC_ALRMAR_MSK4 | RTC_ALRMAR_MSK3 | RTC_ALRMAR_MSK2 | (RtcByteToBcd2(RTCDRIVER_GENERATE_INTERRUPT_EVERY_NUMBER_OF_SECONDS) & (RTC_ALRMAR_SU | RTC_ALRMAR_ST));
+   \   00000080   0x2002             MOVS     R0,#+2
+   \   00000082   0x.... 0x....      BL       RtcByteToBcd2
+   \   00000086   0x0640             LSLS     R0,R0,#+25
+   \   00000088   0x0E40             LSRS     R0,R0,#+25
+   \   0000008A   0x....             LDR      R1,??DataTable5_3  ;; 0x80808000
+   \   0000008C   0x4301             ORRS     R1,R1,R0
+   \   0000008E   0x6431             STR      R1,[R6, #+64]
+    141          
+    142          		/* Configure the Interrupts in the RTC_CR register */
+    143          		RTC.CR = (uint32)(RTC_CR_ALRAIE);
+   \   00000090   0x0120             LSLS     R0,R4,#+4
+   \   00000092   0x61B0             STR      R0,[R6, #+24]
+    144          
+    145          
+    146          		//Enable the Alarm
+    147          		RTC.CR |= RTC_CR_ALRAE;
+   \   00000094   0x69B0             LDR      R0,[R6, #+24]
+   \   00000096   0x4304             ORRS     R4,R4,R0
+   \   00000098   0x61B4             STR      R4,[R6, #+24]
+    148          
+    149          		//Clear the Alarm Flag
+    150          		RTC.SCR = (RTC_SCR_CITSF | RTC_SCR_CTSOVF | RTC_SCR_CTSF | RTC_SCR_CWUTF | RTC_SCR_CALRBF | RTC_SCR_CALRAF);
+   \   0000009A   0x203F             MOVS     R0,#+63
+   \   0000009C   0x65F0             STR      R0,[R6, #+92]
+    151          
+    152          		//Clear the Timer
+    153          		RTC.TR = 0;
+   \   0000009E   0x6035             STR      R5,[R6, #+0]
+    154          
+    155          		/* Exit Initialization mode */
+    156          		RtcExitInitMode();
+   \   000000A0   0x.... 0x....      BL       RtcExitInitMode
+    157          
+    158          		/* If  RTC_CR_BYPSHAD bit = 0, wait for synchro else this check is not needed */
+    159          		if ((RTC.CR & RTC_CR_BYPSHAD) == 0)
+   \   000000A4   0x2020             MOVS     R0,#+32
+   \   000000A6   0x69B1             LDR      R1,[R6, #+24]
+   \   000000A8   0x4001             ANDS     R1,R1,R0
+   \   000000AA   0xD10D             BNE      ??RtcDriver__Initialize_1
+    160          		{
+    161          			// Clear RSF flag
+    162          			RTC.ICSR &= (~(uint32)RTC_ICSR_RSF);
+   \   000000AC   0x68F1             LDR      R1,[R6, #+12]
+   \   000000AE   0x4602             MOV      R2,R0
+   \   000000B0   0x4391             BICS     R1,R1,R2
+   \   000000B2   0x60F1             STR      R1,[R6, #+12]
+    163          
+    164          			// Wait the registers to be synchronized
+    165          			do
+    166          			{
+    167          				synchrostatus = RTC.ICSR & RTC_ICSR_RSF;
+   \                     ??RtcDriver__Initialize_2: (+1)
+   \   000000B4   0x68F1             LDR      R1,[R6, #+12]
+   \   000000B6   0x4001             ANDS     R1,R1,R0
+    168          				synchrocounter++;
+   \   000000B8   0x9A01             LDR      R2,[SP, #+4]
+   \   000000BA   0x1C52             ADDS     R2,R2,#+1
+   \   000000BC   0x9201             STR      R2,[SP, #+4]
+    169          			} while((synchrocounter != SYNCHRO_TIMEOUT) && (synchrostatus == 0x00));
+   \   000000BE   0x9A01             LDR      R2,[SP, #+4]
+   \   000000C0   0x42BA             CMP      R2,R7
+   \   000000C2   0xD001             BEQ      ??RtcDriver__Initialize_1
+   \   000000C4   0x2900             CMP      R1,#+0
+   \   000000C6   0xD0F5             BEQ      ??RtcDriver__Initialize_2
+    170          		}
+    171          	}
+    172          
+    173          	// Enable the write protection for RTC registers
+    174          	RTC_WRITE_PROTECTION_ENABLED();
+   \                     ??RtcDriver__Initialize_1: (+1)
+   \   000000C8   0x20FF             MOVS     R0,#+255
+   \   000000CA   0x6270             STR      R0,[R6, #+36]
+    175          }
+   \   000000CC   0xBDF7             POP      {R0-R2,R4-R7,PC}  ;; return
+    176          
+    177          //---------------------------------------------------------------------------------------------------------------------
+    178          /**
+    179           *  @brief      Set the calibration value for the RTC.
+    180           *
+    181           * @param calib
+    182           */
+
+   \                                 In section .text, align 2, keep-with-next
+    183          void RtcDriver__SetCalibration (uint32 calib)
+    184          {
+    185          
+    186          }
+   \                     RtcDriver__SetCalibration: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    187          
+    188          //---------------------------------------------------------------------------------------------------------------------
+    189          /**
+    190           *  @brief      Get the calibration value for the RTC.
+    191           *
+    192           * @return
+    193           */
+
+   \                                 In section .text, align 2, keep-with-next
+    194          uint32 RtcDriver__GetCalibration(void)
+    195          {
+    196              return (0);
+   \                     RtcDriver__GetCalibration: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    197          }
+    198          
+    199          //---------------------------------------------------------------------------------------------------------------------
+    200          /**
+    201           *  @brief     Handler is used to read the Epoch count update by polling method
+    202           *  @details   This function should be called periodically in a less than 1 sec slot
+    203           *
+    204           */
+
+   \                                 In section .text, align 2, keep-with-next
+    205          void RtcDriver__Handler(void)
+    206          {
+    207          
+    208          }
+   \                     RtcDriver__Handler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    209          
+    210          //---------------------------------------------------------------------------------------------------------------------
+    211          /**
+    212           *  @brief      Get Epoch_Time.
+    213           *
+    214           *  @return     uint32 Epoch_Time.
+    215           */
+
+   \                                 In section .text, align 2, keep-with-next
+    216          uint32 RtcDriver__GetEpochTime(void)
+    217          {
+    218              return (0);
+   \                     RtcDriver__GetEpochTime: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    219          }
+    220          
+    221          //---------------------------------------------------------------------------------------------------------------------
+    222          /**
+    223           *  @brief      Set Epoch_Time to epoch_time. Also set RTC peripheral register values to epoch_time.
+    224           *
+    225           *  @details    Only set if valid from MINIMUM_START_DATE through MAXIMUM_START_DATE.
+    226           *
+    227           *  @param     uint32 epoch_time - seconds since 1/1/1970 00:00:00
+    228           */
+
+   \                                 In section .text, align 2, keep-with-next
+    229          void RtcDriver__SetEpochTime(uint32 epoch_time)
+    230          {
+    231          }
+   \                     RtcDriver__SetEpochTime: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    232          
+    233          //---------------------------------------------------------------------------------------------------------------------
+    234          /**
+    235           *    @brief    This method handles the RTC interrupt. Interrupt generated based on the RTCDRIVER_GENERATE_INTERRUPT_EVERY_NUMBER_OF_SECONDS
+    236           *    @details  This needs to be configured in the InterruptVector_prm.h file
+    237           *
+    238           *              #define RTC_IRQ()                       RtcDriver__Interrupt()
+    239           */
+
+   \                                 In section .text, align 2, keep-with-next
+    240          void RtcDriver__Interrupt(void)
+    241          {
+   \                     RtcDriver__Interrupt: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    242              //Clear the Alarm Flag
+    243              RTC.SCR = (RTC_SCR_CITSF | RTC_SCR_CTSOVF | RTC_SCR_CTSF | RTC_SCR_CWUTF | RTC_SCR_CALRBF | RTC_SCR_CALRAF);
+   \   00000002   0x203F             MOVS     R0,#+63
+   \   00000004   0x....             LDR      R1,??DataTable5_4  ;; 0x4000285c
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+    244          
+    245              RtcSetTime(0,0,0);
+   \   00000008   0x2200             MOVS     R2,#+0
+   \   0000000A   0x4611             MOV      R1,R2
+   \   0000000C   0x4608             MOV      R0,R1
+   \   0000000E   0x.... 0x....      BL       RtcSetTime
+    246          
+    247              #if (RTCDRIVER_GENERATE_INTERRUPT_EVERY_NUMBER_OF_SECONDS > 0)
+    248                  //Call-back function every time the RTC interrupt occurs
+    249                  RTCDRIVER_INTERRUPT_HANDLER();
+   \   00000012   0x.... 0x....      BL       Mode__GetMode
+   \   00000016   0x2803             CMP      R0,#+3
+   \   00000018   0xD103             BNE      ??RtcDriver__Interrupt_0
+   \   0000001A   0x2050             MOVS     R0,#+80
+   \   0000001C   0x.... 0x....      BL       SRClockMonitor__MonitorExtClk
+   \   00000020   0xBD01             POP      {R0,PC}
+   \                     ??RtcDriver__Interrupt_0: (+1)
+   \   00000022   0x20FA             MOVS     R0,#+250
+   \   00000024   0x00C0             LSLS     R0,R0,#+3        ;; #+2000
+   \   00000026   0x.... 0x....      BL       SRClockMonitor__MonitorExtClk
+    250              #endif
+    251          }
+   \   0000002A   0xBD01             POP      {R0,PC}          ;; return
+    252          
+    253          //=====================================================================================================================
+    254          //-------------------------------------- Private Functions ------------------------------------------------------------
+    255          //=====================================================================================================================
+    256          
+    257          //---------------------------------------------------------------------------------------------------------------------
+    258          /**
+    259            * @brief  Enters the RTC Initialization mode.
+    260            * @note   The RTC Initialization mode is write protected, use the
+    261            *         RTC_WriteProtectionCmd(DISABLE) before calling this function.
+    262            * @param  None
+    263            * @retval An ErrorStatus enumeration value:
+    264            *          - SUCCESS: RTC is in Init mode
+    265            *          - ERROR: RTC is not in Init mode
+    266            */
+
+   \                                 In section .text, align 2, keep-with-next
+    267          PASS_FAIL_TYPE RtcEnterInitMode(void)
+    268          {
+   \                     RtcEnterInitMode: (+1)
+   \   00000000   0xB418             PUSH     {R3,R4}
+    269            volatile uint32 initcounter = 0x00;
+   \   00000002   0x2000             MOVS     R0,#+0
+   \   00000004   0x9000             STR      R0,[SP, #+0]
+    270            PASS_FAIL_TYPE status = FAIL;
+    271            uint32 initstatus = 0x00;
+    272          
+    273            // Check if the Initialization mode is set
+    274            if ((RTC.ICSR & RTC_ICSR_INITF) == (uint32)0)
+   \   00000006   0x2040             MOVS     R0,#+64
+   \   00000008   0x....             LDR      R1,??DataTable5_5  ;; 0x4000280c
+   \   0000000A   0x680A             LDR      R2,[R1, #+0]
+   \   0000000C   0x4002             ANDS     R2,R2,R0
+   \   0000000E   0xD113             BNE      ??RtcEnterInitMode_0
+    275            {
+    276              // Set the Initialization mode
+    277              RTC.ICSR = (uint32)RTC_INIT_MASK;
+   \   00000010   0x2200             MOVS     R2,#+0
+   \   00000012   0x43D2             MVNS     R2,R2            ;; #-1
+   \   00000014   0x600A             STR      R2,[R1, #+0]
+   \   00000016   0x0204             LSLS     R4,R0,#+8
+    278          
+    279              // Wait till RTC is in INIT state and if Time out is reached exit
+    280              do
+    281              {
+    282                initstatus = RTC.ICSR & RTC_ICSR_INITF;
+   \                     ??RtcEnterInitMode_1: (+1)
+   \   00000018   0x680A             LDR      R2,[R1, #+0]
+   \   0000001A   0x4002             ANDS     R2,R2,R0
+    283                initcounter++;
+   \   0000001C   0x9B00             LDR      R3,[SP, #+0]
+   \   0000001E   0x1C5B             ADDS     R3,R3,#+1
+   \   00000020   0x9300             STR      R3,[SP, #+0]
+    284              } while((initcounter != INITMODE_TIMEOUT) && (initstatus == 0x00));
+   \   00000022   0x9B00             LDR      R3,[SP, #+0]
+   \   00000024   0x42A3             CMP      R3,R4
+   \   00000026   0xD001             BEQ      ??RtcEnterInitMode_2
+   \   00000028   0x2A00             CMP      R2,#+0
+   \   0000002A   0xD0F5             BEQ      ??RtcEnterInitMode_1
+    285          
+    286              if ((RTC.ICSR & RTC_ICSR_INITF) != 0)
+   \                     ??RtcEnterInitMode_2: (+1)
+   \   0000002C   0x6808             LDR      R0,[R1, #+0]
+    287              {
+    288                  status = PASS;
+    289              }
+    290              else
+    291              {
+    292                  status = FAIL;
+   \   0000002E   0x0981             LSRS     R1,R0,#+6
+   \   00000030   0x0008             MOVS     R0,R1
+   \   00000032   0x07C0             LSLS     R0,R0,#+31
+   \   00000034   0x0FC0             LSRS     R0,R0,#+31
+   \   00000036   0xE000             B        ??RtcEnterInitMode_3
+    293              }
+    294            }
+    295            else
+    296            {
+    297                status = PASS;
+   \                     ??RtcEnterInitMode_0: (+1)
+   \   00000038   0x2001             MOVS     R0,#+1
+    298            }
+    299          
+    300            return (status);
+   \                     ??RtcEnterInitMode_3: (+1)
+   \   0000003A   0xBC12             POP      {R1,R4}
+   \   0000003C   0x4770             BX       LR               ;; return
+    301          }
+    302          
+    303          //---------------------------------------------------------------------------------------------------------------------
+    304          /**
+    305            * @brief  Exits the RTC Initialization mode.
+    306            * @note   When the initialization sequence is complete, the calendar restarts
+    307            *         counting after 4 RTCCLK cycles.
+    308            * @note   The RTC Initialization mode is write protected, use the
+    309            *         RTC_WriteProtectionCmd(DISABLE) before calling this function.
+    310            * @param  None
+    311            * @retval None
+    312            */
+
+   \                                 In section .text, align 2, keep-with-next
+    313          static void RtcExitInitMode(void)
+    314          {
+    315            // Exit Initialization mode
+    316            RTC.ICSR &= (uint32)~RTC_ICSR_INIT;
+   \                     RtcExitInitMode: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable5_5  ;; 0x4000280c
+   \   00000002   0x6801             LDR      R1,[R0, #+0]
+   \   00000004   0x2280             MOVS     R2,#+128
+   \   00000006   0x4391             BICS     R1,R1,R2
+   \   00000008   0x6001             STR      R1,[R0, #+0]
+    317          }
+   \   0000000A   0x4770             BX       LR               ;; return
+    318          
+    319          //---------------------------------------------------------------------------------------------------------------------
+    320          /**
+    321            * @brief  Waits until the RTC Time and Date registers (RTC_TR and RTC_DR) are
+    322            *         synchronized with RTC APB clock.
+    323            * @note   The RTC Resynchronization mode is write protected, use the
+    324            *         RTC_WriteProtectionCmd(DISABLE) before calling this function.
+    325            * @note   To read the calendar through the shadow registers after Calendar
+    326            *         initialization, calendar update or after wakeup from low power modes
+    327            *         the software must first clear the RSF flag.
+    328            *         The software must then wait until it is set again before reading
+    329            *         the calendar, which means that the calendar registers have been
+    330            *         correctly copied into the RTC_TR and RTC_DR shadow registers.
+    331            * @param  None
+    332            * @retval An ErrorStatus enumeration value:
+    333            *          - SUCCESS: RTC registers are synchronised
+    334            *          - ERROR: RTC registers are not synchronised
+    335            */
+
+   \                                 In section .text, align 2, keep-with-next
+    336          static PASS_FAIL_TYPE RtcWaitForSynchro(void)
+    337          {
+   \                     RtcWaitForSynchro: (+1)
+   \   00000000   0xB418             PUSH     {R3,R4}
+    338            volatile uint32 synchrocounter = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+   \   00000004   0x9000             STR      R0,[SP, #+0]
+    339            PASS_FAIL_TYPE status = FAIL;
+    340            uint32 synchrostatus = 0x00;
+    341          
+    342            if ((RTC.CR & RTC_CR_BYPSHAD) != 0)
+   \   00000006   0x....             LDR      R1,??DataTable5_5  ;; 0x4000280c
+   \   00000008   0x2020             MOVS     R0,#+32
+   \   0000000A   0x68CA             LDR      R2,[R1, #+12]
+   \   0000000C   0x4002             ANDS     R2,R2,R0
+   \   0000000E   0xD001             BEQ      ??RtcWaitForSynchro_0
+    343            {
+    344              // Bypass shadow mode
+    345              status = PASS;
+   \   00000010   0x2001             MOVS     R0,#+1
+   \   00000012   0xE019             B        ??RtcWaitForSynchro_1
+    346            }
+    347            else
+    348            {
+    349              // Disable the write protection for RTC registers
+    350              RTC_WRITE_PROTECTION_DISABLED();
+   \                     ??RtcWaitForSynchro_0: (+1)
+   \   00000014   0x22CA             MOVS     R2,#+202
+   \   00000016   0x618A             STR      R2,[R1, #+24]
+   \   00000018   0x2253             MOVS     R2,#+83
+   \   0000001A   0x618A             STR      R2,[R1, #+24]
+    351          
+    352              // Clear RSF flag
+    353              RTC.ICSR &= (~(uint32)RTC_ICSR_RSF);
+   \   0000001C   0x680A             LDR      R2,[R1, #+0]
+   \   0000001E   0x4603             MOV      R3,R0
+   \   00000020   0x439A             BICS     R2,R2,R3
+   \   00000022   0x600A             STR      R2,[R1, #+0]
+   \   00000024   0x0284             LSLS     R4,R0,#+10
+    354          
+    355              // Wait the registers to be synchronized
+    356              do
+    357              {
+    358                synchrostatus = RTC.ICSR & RTC_ICSR_RSF;
+   \                     ??RtcWaitForSynchro_2: (+1)
+   \   00000026   0x680A             LDR      R2,[R1, #+0]
+   \   00000028   0x4002             ANDS     R2,R2,R0
+    359                synchrocounter++;
+   \   0000002A   0x9B00             LDR      R3,[SP, #+0]
+   \   0000002C   0x1C5B             ADDS     R3,R3,#+1
+   \   0000002E   0x9300             STR      R3,[SP, #+0]
+    360              } while((synchrocounter != SYNCHRO_TIMEOUT) && (synchrostatus == 0x00));
+   \   00000030   0x9B00             LDR      R3,[SP, #+0]
+   \   00000032   0x42A3             CMP      R3,R4
+   \   00000034   0xD001             BEQ      ??RtcWaitForSynchro_3
+   \   00000036   0x2A00             CMP      R2,#+0
+   \   00000038   0xD0F5             BEQ      ??RtcWaitForSynchro_2
+    361          
+    362              if ((RTC.ICSR & RTC_ICSR_RSF) != 0)
+   \                     ??RtcWaitForSynchro_3: (+1)
+   \   0000003A   0x6808             LDR      R0,[R1, #+0]
+    363              {
+    364                status = PASS;
+    365              }
+    366              else
+    367              {
+    368                status = FAIL;
+   \   0000003C   0x0942             LSRS     R2,R0,#+5
+   \   0000003E   0x0010             MOVS     R0,R2
+   \   00000040   0x07C0             LSLS     R0,R0,#+31
+   \   00000042   0x0FC0             LSRS     R0,R0,#+31
+    369              }
+    370          
+    371              // Enable the write protection for RTC registers
+    372              RTC_WRITE_PROTECTION_ENABLED();
+   \   00000044   0x22FF             MOVS     R2,#+255
+   \   00000046   0x618A             STR      R2,[R1, #+24]
+    373            }
+    374          
+    375            return (status);
+   \                     ??RtcWaitForSynchro_1: (+1)
+   \   00000048   0xBC12             POP      {R1,R4}
+   \   0000004A   0x4770             BX       LR               ;; return
+    376          }
+    377          
+    378          //---------------------------------------------------------------------------------------------------------------------
+    379          /**
+    380           * @brief
+    381           * @param hours
+    382           * @param minutes
+    383           * @param seconds
+    384           */
+
+   \                                 In section .text, align 2, keep-with-next
+    385          static void RtcSetTime(uint8 hours, uint8 minutes, uint8 seconds)
+    386          {
+   \                     RtcSetTime: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    387              // Disable the write protection for RTC registers
+    388              RTC_WRITE_PROTECTION_DISABLED();
+   \   00000002   0x....             LDR      R4,??DataTable5_2  ;; 0x40002800
+   \   00000004   0x20CA             MOVS     R0,#+202
+   \   00000006   0x6260             STR      R0,[R4, #+36]
+   \   00000008   0x2053             MOVS     R0,#+83
+   \   0000000A   0x6260             STR      R0,[R4, #+36]
+    389          
+    390              // Set Initialization mode
+    391              if (RtcEnterInitMode() == FAIL)
+   \   0000000C   0x.... 0x....      BL       RtcEnterInitMode
+   \   00000010   0x2800             CMP      R0,#+0
+   \   00000012   0xD008             BEQ      ??RtcSetTime_0
+    392              {
+    393              }
+    394              else
+    395              {
+    396                  RTC.TR = 0;
+   \   00000014   0x2000             MOVS     R0,#+0
+   \   00000016   0x6020             STR      R0,[R4, #+0]
+    397          
+    398                  // Exit Initialization mode
+    399                  RtcExitInitMode();
+   \   00000018   0x.... 0x....      BL       RtcExitInitMode
+    400          
+    401                  // If  RTC_CR_BYPSHAD bit = 0, wait for synchro else this check is not needed */
+    402                  if ((RTC.CR & RTC_CR_BYPSHAD) == 0)
+   \   0000001C   0x69A0             LDR      R0,[R4, #+24]
+   \   0000001E   0x0680             LSLS     R0,R0,#+26
+   \   00000020   0xD401             BMI      ??RtcSetTime_0
+    403                  {
+    404                      RtcWaitForSynchro();
+   \   00000022   0x.... 0x....      BL       RtcWaitForSynchro
+    405                  }
+    406              }
+    407          
+    408              // Enable the write protection for RTC registers
+    409              RTC_WRITE_PROTECTION_ENABLED();
+   \                     ??RtcSetTime_0: (+1)
+   \   00000026   0x20FF             MOVS     R0,#+255
+   \   00000028   0x6260             STR      R0,[R4, #+36]
+    410          }
+   \   0000002A   0xBD10             POP      {R4,PC}          ;; return
+    411          
+    412          //---------------------------------------------------------------------------------------------------------------------
+    413          /**
+    414            * @brief  Converts a 2 digit decimal to BCD format.
+    415            * @param  Value: Byte to be converted.
+    416            * @retval Converted byte
+    417            */
+
+   \                                 In section .text, align 2, keep-with-next
+    418          static uint8 RtcByteToBcd2(uint8 Value)
+    419          {
+    420            uint8 bcdhigh = 0;
+   \                     RtcByteToBcd2: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+   \   00000002   0xE001             B        ??RtcByteToBcd2_0
+    421          
+    422            while (Value >= 10)
+    423            {
+    424              bcdhigh++;
+   \                     ??RtcByteToBcd2_1: (+1)
+   \   00000004   0x1C49             ADDS     R1,R1,#+1
+    425              Value -= 10;
+   \   00000006   0x380A             SUBS     R0,R0,#+10
+    426            }
+   \                     ??RtcByteToBcd2_0: (+1)
+   \   00000008   0xB2C0             UXTB     R0,R0
+   \   0000000A   0x280A             CMP      R0,#+10
+   \   0000000C   0xDAFA             BGE      ??RtcByteToBcd2_1
+    427          
+    428            return((uint8)(bcdhigh << 4) | Value);
+   \   0000000E   0x0109             LSLS     R1,R1,#+4
+   \   00000010   0x4308             ORRS     R0,R0,R1
+   \   00000012   0xB2C0             UXTB     R0,R0
+   \   00000014   0x4770             BX       LR               ;; return
+    429          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \   00000000   0x4002103C         DC32     0x4002103c
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_1:
+   \   00000000   0x40007000         DC32     0x40007000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_2:
+   \   00000000   0x40002800         DC32     0x40002800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_3:
+   \   00000000   0x80808000         DC32     0x80808000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_4:
+   \   00000000   0x4000285C         DC32     0x4000285c
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_5:
+   \   00000000   0x4000280C         DC32     0x4000280c
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   RtcByteToBcd2
+       0   RtcDriver__GetCalibration
+       0   RtcDriver__GetEpochTime
+       0   RtcDriver__Handler
+      32   RtcDriver__Initialize
+        32   -> ExtInterrupt__Config
+        32   -> ExtInterrupt__Initialize
+        32   -> Micro__NVICEnableIRQ
+        32   -> RtcByteToBcd2
+        32   -> RtcEnterInitMode
+        32   -> RtcExitInitMode
+       8   RtcDriver__Interrupt
+         8   -> Mode__GetMode
+         8   -> RtcSetTime
+         8   -> SRClockMonitor__MonitorExtClk
+       0   RtcDriver__SetCalibration
+       0   RtcDriver__SetEpochTime
+       8   RtcEnterInitMode
+       0   RtcExitInitMode
+       8   RtcSetTime
+         8   -> RtcEnterInitMode
+         8   -> RtcExitInitMode
+         8   -> RtcWaitForSynchro
+       8   RtcWaitForSynchro
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_2
+       4  ??DataTable5_3
+       4  ??DataTable5_4
+       4  ??DataTable5_5
+      22  RtcByteToBcd2
+       4  RtcDriver__GetCalibration
+       4  RtcDriver__GetEpochTime
+       2  RtcDriver__Handler
+     206  RtcDriver__Initialize
+      44  RtcDriver__Interrupt
+       2  RtcDriver__SetCalibration
+       2  RtcDriver__SetEpochTime
+      62  RtcEnterInitMode
+      12  RtcExitInitMode
+      44  RtcSetTime
+      76  RtcWaitForSynchro
+
+ 
+ 504 bytes in section .text
+ 
+ 504 bytes of CODE memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,996 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:16:59
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover/AccelDiscover.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\AccelDiscover.lst -o
+#        obj\AccelDiscover.obj
+#        source/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover/AccelDiscover.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\AccelDiscover.lst
+#    Object file  =  obj\AccelDiscover.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\AccelerometerLLI\AccelDiscover\AccelDiscover.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief  Module used to discover the accelerometer that is in the product.
+      5           *          Discovery is based on the WHO_AM_I register (or similar register).
+      6           *          The module cycles through a list of devices, given a register to read and expected device ID.
+      7           *          If the device ID matches the expected value, the module execution is complete.
+      8           *          If the device ID does not match the expected value, the module attempts to read the next device ID in the list.
+      9           *            **NOTE** If no known device ID is read, this module will continue in a loop until it finds a known device ID.
+     10           *
+     11           *  @details
+     12               @startuml{AccelDiscover_sm.png}
+     13                  title AccelDiscover State-Machine
+     14                  ' Suppress transition checks
+     15          
+     16                  [*] --> INTERFACE_MODE
+     17          
+     18                  INTERFACE_MODE: entry / StartTimer() \n \t SetInterfaceMode()
+     19                  INTERFACE_MODE : do / WaitForTimer
+     20                  INTERFACE_MODE -->  BOOT_MODE_LOW : evTimerExpired
+     21          
+     22                  BOOT_MODE_LOW : entry / StartTimer() \n \t SetBootModeLow()
+     23                  BOOT_MODE_LOW : do / WaitForTimer
+     24                  BOOT_MODE_LOW -->  BOOT_MODE_HIGH : evTimerExpired
+     25          
+     26                  BOOT_MODE_HIGH : entry / StartTimer() \n \t SetBootModeHigh()
+     27                  BOOT_MODE_HIGH : do / WaitForTimer
+     28                  BOOT_MODE_HIGH -->  BOOT_DELAY : evTimerExpired
+     29          
+     30                  BOOT_DELAY : entry / AccelHwInit()
+     31                  BOOT_DELAY : do / WaitForBootComplete()
+     32                  BOOT_DELAY --> IDENTIFY : evBootComplete
+     33          
+     34                  IDENTIFY : entry / StartTimer()\n\t AccelReadIdentity()
+     35                  IDENTIFY : do / WaitForIdentity()
+     36                  IDENTIFY --> BOOT_DELAY : evTimeout
+     37                  IDENTIFY --> BOOT_DELAY : evWrongIdentity
+     38                  IDENTIFY --> Complete : evIdentityReceived
+     39          
+     40                  ' The purpose of the COMPLETE state is to have a status to report that the device has been discovered
+     41          
+     42              @enduml
+     43           *
+     44           *  @copyright  Copyright 2022. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     45           */
+     46          //---------------------------------------------------------------------------------------------------------------------
+     47          //---------------------------------------------------------------------------------------------------------------------
+     48          
+     49          //-------------------------------------- Include Files ----------------------------------------------------------------
+     50          #include "SystemConfig.h"
+     51          
+     52          #if (HBL_LLI_NUM_ACCELEROMETER > 0)
+     53          #include "AccelDiscover.h"
+     54          #include "FXLS8974.h"   // Required for access to pin configuration in prm.h file
+     55          #include "Gpio.h"
+     56          #include "I2c.h"
+     57          #include "Spi.h"
+     58          
+     59          //=====================================================================================================================
+     60          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Accel Discover State Machine
+     61          //=====================================================================================================================
+     62          // !! StateEngineCrank cannot update this code if you change the header !!
+     63          
+     64          
+     65          //! Unique names used to identify states of the Accel Discover state machine.
+     66          typedef enum ACCEL_DISCOVER_STATE_ENUM
+     67          {
+     68              STATE_ACCEL_DISCOVER_NONE           = 0,
+     69          
+     70              STATE_ACCEL_DISCOVER_INTERFACE_MODE = 1,        //!< (initial_state)
+     71              STATE_ACCEL_DISCOVER_BOOT_MODE_LOW  = 2,
+     72              STATE_ACCEL_DISCOVER_BOOT_MODE_HIGH = 3,
+     73              STATE_ACCEL_DISCOVER_BOOT_DELAY     = 4,
+     74              STATE_ACCEL_DISCOVER_IDENTIFY       = 5,
+     75              STATE_ACCEL_DISCOVER_COMPLETE       = 6,
+     76          
+     77              STATE_ACCEL_DISCOVER_END            = 7
+     78          } ACCEL_DISCOVER_STATE_TYPE;
+     79          
+     80          //! The state variable for the Accel Discover state machine.
+     81          //! State machines with a history pseudostate may write to this variable during initialization.
+     82          //! Other state machines must only write to this variable through auto-generated functions.
+     83          static ACCEL_DISCOVER_STATE_TYPE Accel_Discover_State;
+     84          
+     85          // -- Private Function Prototypes used by the state machine for customization functions --
+     86          static void AccelHwInit(void);
+     87          static void AccelReadIdentity(void);
+     88          static void SetBootModeHigh(void);
+     89          static void SetBootModeLow(void);
+     90          static void SetInterfaceMode(void);
+     91          static void StartTimer(void);
+     92          static void WaitForBootComplete(void);
+     93          static void WaitForIdentity(void);
+     94          static void WaitForTimer(void);
+     95          
+     96          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+     97          static void AccelDiscoverExecute(void);
+     98          static void AccelDiscoverInitialize(void);
+     99          static void EventBootComplete(void);
+    100          static void EventIdentityReceived(void);
+    101          static void EventTimeout(void);
+    102          static void EventTimerExpired(void);
+    103          static void EventWrongIdentity(void);
+    104          
+    105          // !! StateEngineCrank cannot update this code if you change the footer !!
+    106          // End of StateEngineCrank Auto-Generated Code.
+    107          
+    108          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    109          
+    110          //! The time required for the Accelerometer to initialize itself.
+    111          //! NOTE: This value is based on the call rate of LISxDH__Background()
+    112          #define ACCEL_TIME_BOOT_UP          20U
+    113          
+    114          //! The timeout after which the module decides that the I2C bus will never become available.
+    115          //! NOTE: This value is based on the call rate of LISxDH__Background()
+    116          #define I2C_TIMEOUT_READY           100U // 100 * 200us = 20ms
+    117          
+    118          //! Number of accelerometers that can be discovered by this module
+    119          #define NUM_DEVICES 2U
+    120          
+    121          //! The command sent to the accelerometer to request the device identification data
+    122          #if (SPI_ENABLED == 1)
+    123          // RW bit shall be 1 for a read command; MS bit shall be 0 to read only 1 register
+    124          static const uint8 ACCEL_IDENTIFY_REGISTERS[NUM_DEVICES] =
+    125          {
+    126              0x93,   // NXP FXLS8974
+    127              0x8F    // ST LISxDH
+    128          };
+    129          #else
+    130          //! WARNING! The order of content in this list must match the order in ACCEL_IDENTIFY_REGISTERS (this could be refactored to remove this dependency)
+    131          static const uint8 ACCEL_IDENTIFY_REGISTERS[NUM_DEVICES] =
+    132          {
+    133              0x13,   // NXP FXLS8974
+    134              0x0F    // ST LISxDH
+    135          };
+    136          #endif
+    137          
+    138          //! List of expected device IDs
+    139          //! WARNING! The order of content in this list must match the order in ACCEL_IDENTIFY_REGISTERS (this could be refactored to remove this dependency)
+    140          static const uint8 ACCEL_DEVICE_IDS[NUM_DEVICES] =
+    141          {
+    142              0x86,   // NXP FXLS8974
+    143              0x33    // ST LISxDH
+    144          };
+    145          
+    146          //! Module data
+    147          static struct
+    148          {
+    149              uint8 Address;          // I2C address (if applicable)
+    150              uint8 Device_Index;     // Tracks the device when attempting communication; 0: NXP FXLS8974, 1: ST LISxDH
+    151              uint8 Id;               // Unique identification number of the device
+    152              uint8 Port;             // I2C_ENUM_TYPE or SPI_ENUM_DEF
+    153              uint8 Timer;
+    154          }AccelDiscover;
+    155          
+    156          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    157          
+    158          //=====================================================================================================================
+    159          //-------------------------------------- Public Functions -------------------------------------------------------------
+    160          //=====================================================================================================================
+    161          
+    162          //---------------------------------------------------------------------------------------------------------------------
+    163          /**
+    164           *  @brief      Initializes the module variables
+    165           */
+    166          void AccelDiscover__Initialize(uint8 port, uint8 address)
+    167          {
+    168              AccelDiscover.Address = address;
+    169              AccelDiscover.Port = port;
+    170          
+    171              // Chip Select pin
+    172              Gpio__PinConfig(SPI_CS_PORT, SPI_CS_PIN, OUTPUT_PUSHPULL);
+    173          #if (SPI_ENABLED == 1)
+    174              // Set Chip Select pin low for SPI communication
+    175              Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, FALSE);
+    176          #else
+    177              // Set Chip Select pin high for I2C communication
+    178              Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, TRUE);
+    179          #endif
+    180          
+    181              AccelDiscoverInitialize();
+    182          }
+    183          
+    184          //---------------------------------------------------------------------------------------------------------------------
+    185          /**
+    186           *  @brief
+    187           */
+    188          void AccelDiscover__Execute(void)
+    189          {
+    190              // Update the local time keeping variable.
+    191              AccelDiscover.Timer++;
+    192          
+    193              // Run the state machine.
+    194              AccelDiscoverExecute();
+    195          }
+    196          
+    197          //---------------------------------------------------------------------------------------------------------------------
+    198          /**
+    199           *  @brief  Returns the unique accelerometer device ID
+    200           *  @retval 0x33(51d) : ST LISxDH
+    201           *  @retval 0x86(134d): NXP FXLS8974
+    202           */
+    203          uint8 AccelDiscover__GetId(void)
+    204          {
+    205              return (AccelDiscover.Id);
+    206          }
+    207          
+    208          //---------------------------------------------------------------------------------------------------------------------
+    209          /**
+    210           *  @brief  Returns the completion of the auto discovery
+    211           *  @return TRUE if a known accelerometer has been discovered, else FALSE
+    212           */
+    213          BOOL_TYPE AccelDiscover__IsComplete(void)
+    214          {
+    215              return((Accel_Discover_State == STATE_ACCEL_DISCOVER_COMPLETE) ? TRUE : FALSE);
+    216          }
+    217          
+    218          //=====================================================================================================================
+    219          //-------------------------------------- Private Functions ------------------------------------------------------------
+    220          //=====================================================================================================================
+    221          
+    222          
+    223          //=====================================================================================================================
+    224          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    225          //=====================================================================================================================
+    226          
+    227          
+    228          //---------------------------------------------------------------------------------------------------------------------
+    229          /**
+    230           * Initialize the microcontroller peripherals used by the module
+    231           */
+    232          static void AccelHwInit(void)
+    233          {
+    234          #if (SPI_ENABLED == 1)
+    235          
+    236              Spi__Initialize((SPI_ENUM_DEF)AccelDiscover.Port);
+    237          
+    238              if (AccelDiscover.Device_Index == 0U)    // NXP
+    239              {
+    240                  Spi__SetConfiguration((SPI_ENUM_DEF)AccelDiscover.Port, SPI_POLARITY_SCK_IDLE_0, SPI_EDGE_FIRST, SPI_ODER_MSB_FIRST);
+    241              }
+    242              else    // ST
+    243              {
+    244                  Spi__SetConfiguration((SPI_ENUM_DEF)AccelDiscover.Port, SPI_POLARITY_SCK_IDLE_1, SPI_EDGE_SECOND, SPI_ODER_MSB_FIRST);
+    245              }
+    246          
+    247              Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, TRUE);           // Pull chip select high (reset CS)
+    248          #else
+    249              // Setup the I2C peripheral.
+    250              // NOTE: The I2C module includes the I2C R/W bit as part of the address.
+    251              I2c__Initialize((I2C_ENUM_TYPE)AccelDiscover.Port, (I2C_SPEED_TYPE)I2C_400KHZ, I2C_ADDR_7BITS, (AccelDiscover.Address << 1));
+    252          #endif
+    253          }
+    254          
+    255          
+    256          //---------------------------------------------------------------------------------------------------------------------
+    257          /**
+    258           * Send a command to the accelerometer to read the WHO_AM_I register that identifies the device
+    259           */
+    260          static void AccelReadIdentity(void)
+    261          {
+    262          #if (SPI_ENABLED == 1)
+    263              uint8 buffer[3];
+    264              buffer[0] = ACCEL_IDENTIFY_REGISTERS[AccelDiscover.Device_Index];
+    265              buffer[1] = 0xFF;                                     // Unused byte to read the byte of register data from the accelerometer
+    266              buffer[2] = 0xFF;                                     // Unused byte to read the byte of register data from the accelerometer
+    267              Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, FALSE);       // Pull chip select low during transmission
+    268          
+    269              uint8 num_write_bytes = 2;   // Default value satisfies LISxDH accelerometer
+    270              if (AccelDiscover.Device_Index == 0U)    // NXP
+    271              {
+    272                  num_write_bytes = 3;
+    273              }
+    274              (void)Spi__Write((SPI_ENUM_DEF)AccelDiscover.Port, buffer, num_write_bytes);
+    275          #else
+    276              uint8 buffer[1];
+    277              buffer[0] = ACCEL_IDENTIFY_REGISTERS[AccelDiscover.Device_Index];
+    278          
+    279              I2c__WriteThenRead((I2C_ENUM_TYPE)AccelDiscover.Port, buffer, 1, 1);
+    280          #endif
+    281          }
+    282          
+    283          
+    284          //---------------------------------------------------------------------------------------------------------------------
+    285          /**
+    286           * Pin setting required for FXLS8974 accelerometer
+    287           */
+    288          static void SetBootModeHigh(void)
+    289          {
+    290              Gpio__PinWrite(BOOT_MODE_PORT, BOOT_MODE_PIN, TRUE);
+    291          }
+    292          
+    293          
+    294          //---------------------------------------------------------------------------------------------------------------------
+    295          /**
+    296           * Pin setting required for FXLS8974 accelerometer
+    297           */
+    298          static void SetBootModeLow(void)
+    299          {
+    300              Gpio__PinConfig(BOOT_MODE_PORT, BOOT_MODE_PIN, OUTPUT_PUSHPULL);
+    301              Gpio__PinWrite(BOOT_MODE_PORT, BOOT_MODE_PIN, FALSE);
+    302          }
+    303          
+    304          
+    305          //---------------------------------------------------------------------------------------------------------------------
+    306          /**
+    307           * Pin setting required for FXLS8974 accelerometer to use I2C/SPI communication
+    308           */
+    309          static void SetInterfaceMode(void)
+    310          {
+    311              Gpio__PinConfig(INTERFACE_SELECT_PORT, INTERFACE_SELECT_PIN, OUTPUT_PUSHPULL);
+    312          #if (SPI_ENABLED == 1)
+    313              Gpio__PinWrite(INTERFACE_SELECT_PORT, INTERFACE_SELECT_PIN, TRUE);                 // Pin high for SPI communication
+    314          #else
+    315              Gpio__PinWrite(INTERFACE_SELECT_PORT, INTERFACE_SELECT_PIN, FALSE);                // Pin low for I2C communication
+    316          #endif
+    317          }
+    318          
+    319          
+    320          //---------------------------------------------------------------------------------------------------------------------
+    321          /**
+    322           * Start the timer to measure a potential timeout.
+    323           */
+    324          static void StartTimer(void)
+    325          {
+    326              AccelDiscover.Timer = 0;
+    327          }
+    328          
+    329          
+    330          //---------------------------------------------------------------------------------------------------------------------
+    331          /**
+    332           *
+    333           */
+    334          static void WaitForBootComplete(void)
+    335          {
+    336              if (AccelDiscover.Timer > ACCEL_TIME_BOOT_UP)
+    337              {
+    338                  EventBootComplete();
+    339              }
+    340          }
+    341          
+    342          
+    343          //---------------------------------------------------------------------------------------------------------------------
+    344          /**
+    345           *
+    346           */
+    347          static void WaitForIdentity(void)
+    348          {
+    349              // Check if the accelerometer data has been received.
+    350          #if (SPI_ENABLED == 1)
+    351              if (Spi__GetStatus((SPI_ENUM_DEF)AccelDiscover.Port, SPI_STATUS_STATE) == (uint16)SPI_STATE_IDLE)    // Bus is ready when there are 0 bytes to be processed (read or write)
+    352              {
+    353                  Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, TRUE);           // Pull chip select high now that transmission is complete
+    354          #else
+    355              if (I2c__GetStatus((I2C_ENUM_TYPE)AccelDiscover.Port, I2C_STATUS_STATE) == I2C_STATE_IDLE)
+    356              {
+    357          #endif
+    358                  // Read the data that was received
+    359                  uint8 data[3];
+    360          #if (SPI_ENABLED == 1)
+    361                  uint8 num_read_bytes = 2;               // Default value satisfies LISxDH accelerometer
+    362                  if (AccelDiscover.Device_Index == 0U)    // NXP
+    363                  {
+    364                      num_read_bytes = 3;
+    365                  }
+    366          
+    367                  if (Spi__Read((SPI_ENUM_DEF)AccelDiscover.Port, (void*)data, num_read_bytes))
+    368          #else
+    369                  if (I2c__Read((I2C_ENUM_TYPE)AccelDiscover.Port, (void*)data, sizeof(data)))
+    370          #endif
+    371                  {
+    372                      // Check if the device ID received matches the expected ID
+    373          #if (SPI_ENABLED == 1)
+    374                      uint8 data_byte_position = 1;           // Default value satisfies LISxDH accelerometer
+    375                      if (AccelDiscover.Device_Index == 0U)   // NXP
+    376                      {
+    377                          data_byte_position = 2;
+    378                      }
+    379          
+    380                      if (data[data_byte_position] == ACCEL_DEVICE_IDS[AccelDiscover.Device_Index])
+    381          #else
+    382                      if (data[0] == ACCEL_DEVICE_IDS[AccelDiscover.Device_Index])
+    383          #endif
+    384                      {
+    385          #if (SPI_ENABLED == 1)
+    386                          AccelDiscover.Id = data[data_byte_position];
+    387          #else
+    388                          AccelDiscover.Id = data[0];
+    389          #endif
+    390                          EventIdentityReceived();
+    391                      }
+    392                      else
+    393                      {
+    394                          // Try the next device
+    395                          AccelDiscover.Device_Index++;
+    396                          if (AccelDiscover.Device_Index >= NUM_DEVICES)
+    397                          {
+    398                              AccelDiscover.Device_Index = 0;
+    399                          }
+    400                          EventWrongIdentity();
+    401                      }
+    402                  }
+    403              }
+    404          
+    405              if (AccelDiscover.Timer > I2C_TIMEOUT_READY)
+    406              {
+    407                  EventTimeout();
+    408          
+    409                  // Try the next device
+    410                  AccelDiscover.Device_Index++;
+    411                  if (AccelDiscover.Device_Index >= NUM_DEVICES)
+    412                  {
+    413                      AccelDiscover.Device_Index = 0;
+    414                  }
+    415              }
+    416          }
+    417          
+    418          
+    419          //---------------------------------------------------------------------------------------------------------------------
+    420          /**
+    421           *
+    422           */
+    423          static void WaitForTimer(void)
+    424          {
+    425              if (AccelDiscover.Timer > 100U)
+    426              {
+    427                  EventTimerExpired();
+    428              }
+    429          }
+    430          
+    431          
+    432          //=====================================================================================================================
+    433          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Accel Discover State Machine
+    434          //=====================================================================================================================
+    435          // !! StateEngineCrank cannot update this code if you change the header !!
+    436          
+    437          
+    438          //---------------------------------------------------------------------------------------------------------------------
+    439          /**
+    440           * The main execution function for the Accel Discover state machine.
+    441           * This function should be called periodically while the state machine is running.
+    442           *
+    443           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    444           *
+    445           * This function was auto-generated and must not be edited manually.
+    446           * Change the UML used to generate this function and regenerate the source code.
+    447           */
+    448          static void AccelDiscoverExecute(void)
+    449          {
+    450              switch(Accel_Discover_State)
+    451              {
+    452                  case STATE_ACCEL_DISCOVER_INTERFACE_MODE:
+    453                  case STATE_ACCEL_DISCOVER_BOOT_MODE_LOW:
+    454                  case STATE_ACCEL_DISCOVER_BOOT_MODE_HIGH:
+    455                      WaitForTimer();                         // Do function.
+    456                      break;
+    457          
+    458                  case STATE_ACCEL_DISCOVER_BOOT_DELAY:
+    459                      WaitForBootComplete();                  // Do function.
+    460                      break;
+    461          
+    462                  case STATE_ACCEL_DISCOVER_IDENTIFY:
+    463                      WaitForIdentity();                      // Do function.
+    464                      break;
+    465          
+    466                  default:
+    467                      // There is nothing to do for all other values of Accel_Discover_State.
+    468                      break;
+    469              }
+    470          }
+    471          
+    472          
+    473          //---------------------------------------------------------------------------------------------------------------------
+    474          /**
+    475           * The initialization function for the Accel Discover state machine.
+    476           * This function resets the state machine to the initial state and executes the initial state's
+    477           * entry function.
+    478           *
+    479           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    480           *
+    481           * This function was auto-generated and must not be edited manually.
+    482           * Change the UML used to generate this function and regenerate the source code.
+    483           */
+    484          static void AccelDiscoverInitialize(void)
+    485          {
+    486              Accel_Discover_State = STATE_ACCEL_DISCOVER_INTERFACE_MODE;
+    487              StartTimer();                                   // Entry Function.
+    488              SetInterfaceMode();                             // Entry Function.
+    489          }
+    490          
+    491          
+    492          //---------------------------------------------------------------------------------------------------------------------
+    493          /**
+    494           * Process the Boot Complete Event for the Accel Discover state machine.
+    495           *
+    496           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    497           *
+    498           * This function was auto-generated and must not be edited manually.
+    499           * Change the UML used to generate this function and regenerate the source code.
+    500           */
+    501          static void EventBootComplete(void)
+    502          {
+    503              switch (Accel_Discover_State)
+    504              {
+    505                  case STATE_ACCEL_DISCOVER_BOOT_DELAY:
+    506                      Accel_Discover_State = STATE_ACCEL_DISCOVER_IDENTIFY;
+    507                      StartTimer();                           // Entry Function.
+    508                      AccelReadIdentity();                    // Entry Function.
+    509                      break;
+    510          
+    511                  default:
+    512                      // Event is ignored for all other values of Accel_Discover_State.
+    513                      break;
+    514              }
+    515          }
+    516          
+    517          
+    518          //---------------------------------------------------------------------------------------------------------------------
+    519          /**
+    520           * Process the Identity Received Event for the Accel Discover state machine.
+    521           *
+    522           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    523           *
+    524           * This function was auto-generated and must not be edited manually.
+    525           * Change the UML used to generate this function and regenerate the source code.
+    526           */
+    527          static void EventIdentityReceived(void)
+    528          {
+    529              switch (Accel_Discover_State)
+    530              {
+    531                  case STATE_ACCEL_DISCOVER_IDENTIFY:
+    532                      Accel_Discover_State = STATE_ACCEL_DISCOVER_COMPLETE;
+    533                      break;
+    534          
+    535                  default:
+    536                      // Event is ignored for all other values of Accel_Discover_State.
+    537                      break;
+    538              }
+    539          }
+    540          
+    541          
+    542          //---------------------------------------------------------------------------------------------------------------------
+    543          /**
+    544           * Process the Timeout Event for the Accel Discover state machine.
+    545           *
+    546           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    547           *
+    548           * This function was auto-generated and must not be edited manually.
+    549           * Change the UML used to generate this function and regenerate the source code.
+    550           */
+    551          static void EventTimeout(void)
+    552          {
+    553              switch (Accel_Discover_State)
+    554              {
+    555                  case STATE_ACCEL_DISCOVER_IDENTIFY:
+    556                      Accel_Discover_State = STATE_ACCEL_DISCOVER_BOOT_DELAY;
+    557                      AccelHwInit();                          // Entry Function.
+    558                      break;
+    559          
+    560                  default:
+    561                      // Event is ignored for all other values of Accel_Discover_State.
+    562                      break;
+    563              }
+    564          }
+    565          
+    566          
+    567          //---------------------------------------------------------------------------------------------------------------------
+    568          /**
+    569           * Process the Timer Expired Event for the Accel Discover state machine.
+    570           *
+    571           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    572           *
+    573           * This function was auto-generated and must not be edited manually.
+    574           * Change the UML used to generate this function and regenerate the source code.
+    575           */
+    576          static void EventTimerExpired(void)
+    577          {
+    578              switch (Accel_Discover_State)
+    579              {
+    580                  case STATE_ACCEL_DISCOVER_INTERFACE_MODE:
+    581                      Accel_Discover_State = STATE_ACCEL_DISCOVER_BOOT_MODE_LOW;
+    582                      StartTimer();                           // Entry Function.
+    583                      SetBootModeLow();                       // Entry Function.
+    584                      break;
+    585          
+    586                  case STATE_ACCEL_DISCOVER_BOOT_MODE_LOW:
+    587                      Accel_Discover_State = STATE_ACCEL_DISCOVER_BOOT_MODE_HIGH;
+    588                      StartTimer();                           // Entry Function.
+    589                      SetBootModeHigh();                      // Entry Function.
+    590                      break;
+    591          
+    592                  case STATE_ACCEL_DISCOVER_BOOT_MODE_HIGH:
+    593                      Accel_Discover_State = STATE_ACCEL_DISCOVER_BOOT_DELAY;
+    594                      AccelHwInit();                          // Entry Function.
+    595                      break;
+    596          
+    597                  default:
+    598                      // Event is ignored for all other values of Accel_Discover_State.
+    599                      break;
+    600              }
+    601          }
+    602          
+    603          
+    604          //---------------------------------------------------------------------------------------------------------------------
+    605          /**
+    606           * Process the Wrong Identity Event for the Accel Discover state machine.
+    607           *
+    608           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    609           *
+    610           * This function was auto-generated and must not be edited manually.
+    611           * Change the UML used to generate this function and regenerate the source code.
+    612           */
+    613          static void EventWrongIdentity(void)
+    614          {
+    615              switch (Accel_Discover_State)
+    616              {
+    617                  case STATE_ACCEL_DISCOVER_IDENTIFY:
+    618                      Accel_Discover_State = STATE_ACCEL_DISCOVER_BOOT_DELAY;
+    619                      AccelHwInit();                          // Entry Function.
+    620                      break;
+    621          
+    622                  default:
+    623                      // Event is ignored for all other values of Accel_Discover_State.
+    624                      break;
+    625              }
+    626          }
+    627          
+    628          
+    629          // !! StateEngineCrank cannot update this code if you change the footer !!
+    630          // End of StateEngineCrank Auto-Generated Code.
+    631          
+    632          
+    633          #endif // (HBL_LLI_NUM_ACCELEROMETER > 0)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

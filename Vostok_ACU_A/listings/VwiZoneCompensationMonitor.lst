@@ -1,0 +1,707 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:57
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Monitors/VwiZoneCompensationMonitor/VwiZoneCompensationMonitor.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\VwiZoneCompensationMonitor.lst -o
+#        obj\VwiZoneCompensationMonitor.obj
+#        source/Category/Application/acu/Monitors/VwiZoneCompensationMonitor/VwiZoneCompensationMonitor.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\VwiZoneCompensationMonitor.lst
+#    Object file  =  obj\VwiZoneCompensationMonitor.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Monitors\VwiZoneCompensationMonitor\VwiZoneCompensationMonitor.c
+      1          /**
+      2           *  @file		VwiZoneCompensationMonitor.c
+      3           *
+      4           *  @brief		It provide the Vwi Zone Compensation multiplier to the VWI module
+      5           *
+      6           *  @details
+      7           *
+      8           *
+      9           *  @copyright  Copyright 2017-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     10           */
+     11          //---------------------------------------------------------------------------------------------------------------------
+     12          //---------------------------------------------------------------------------------------------------------------------
+     13          
+     14          
+     15          //-------------------------------------- Include Files ----------------------------------------------------------------
+     16          #include "VwiZoneCompensationMonitor.h"
+     17          #include "SystemConfig.h"
+     18          // -- This Module --
+     19          #include "AlternateLoad.h"
+     20          #include "DishAuxVar.h"
+     21          #include "Hbl.h"
+     22          #include "Micro.h"
+     23          #include "SystemTimers.h"
+     24          #include "Vwi.h"
+     25          #include <string.h>
+     26          #if (VWI_THREE_PHASE_MOTOR_TYPE== ENABLED)
+     27          
+     28          #if (VWI_CLIENT_FEATURE == DISABLED) && (VWI_INTERNAL_COMMUNICATION == DISABLED)
+     29          	#error "For VWI Zone Compensation to work either VWI_CLIENT_FEATURE or VWI_INTERNAL_COMMUNICATION has to be ENABLED."
+     30          #endif
+     31          
+     32          #include "Fault.h"
+     33          
+     34          #if (VWI_CLIENT_FEATURE == ENABLED)
+     35          
+     36          #if (API013_CLIENT_FEATURE == DISABLED)
+     37          	#error "For VWI Zone Compensation to work API013_CLIENT_FEATURE has to be ENABLED if (VWI_CLIENT_FEATURE == ENABLED)."
+     38          #endif
+     39          
+     40          #include "API013RemoteFunction.h"
+     41          #include "RemoteFunctionInterface.h"
+     42          #include "Reveal.h"
+     43          #include "Utilities.h"
+     44          #endif // (VWI_CLIENT_FEATURE == ENABLED)
+     45          
+     46          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     47          
+     48          
+     49          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     50          #define VWI_MULTIPLIER_DEFAULT 4096
+     51          
+     52          #if (VWI_CLIENT_FEATURE == ENABLED)
+     53          //! Period to refresh the value of VWI multiplier to the server
+     54          #define VWI_MULTIPLIER_REFRESH_PERIOD		50
+     55          #endif
+     56          
+     57          //! Setting file parameters structure for Vwi Zone Compensation Common Params
+     58          typedef PACKED struct VWI_ZONE_COMPENSATION_COMMON_PARAMS_STRUCT
+     59          {
+     60          
+     61          	uint8  Unknown_Position_Multiplier_Enable :1; 	//!
+     62          	uint8  Unused							  :7;	//! Reserved for future expansions
+     63          	uint8  Multiplyer_Delay; 						//!
+     64          	uint16 Multiplier_Position_Unknown;			 	//!
+     65          } VWI_ZONE_COMPENSATION_COMMON_PARAMS_TYPE;
+     66          
+     67          //! Setting file parameters structure for a Vwi Zone Compensation Multiplier
+     68          typedef PACKED struct VWI_ZONE_COMPENSATION_MULTIPLIERS_PARAMS_STRUCT
+     69          {
+     70          	uint16 Multiplier_Pos;							//!
+     71          } VWI_ZONE_COMPENSATION_MULTIPLIERS_PARAMS_TYPE;
+     72          
+     73          static const VWI_ZONE_COMPENSATION_COMMON_PARAMS_TYPE *Vwi_Zone_Compensation_Common_Params;
+     74          static BOOL_TYPE VWIZC_Old_Diverter_Position_Is_Stable;
+     75          static uint16 VWIZC_Current_Multiplier;
+     76          static uint16 VWIZC_Old_Current_Multiplier;
+     77          static uint8 *VWIZC_Diverter_Position_Requested;
+     78          static SYSTEMTIMER_NV_TIMER_TYPE NV_Timer_Handle_Vwi_Moltiplier_Delay;
+     79          static uint8 VWIZC_Diverter_Position;
+     80          static uint8 VWIZC_Last_Diverter_Position;
+     81          static uint16 VWIZC_Multiplier_Pos[DIVERTER_POSITION_MAX];
+     82          #if (VWI_CLIENT_FEATURE == ENABLED)
+     83          static uint8 VWIZC_Refresh_Command_Counter;
+     84          #endif // (VWI_CLIENT_FEATURE == ENABLED)
+     85          
+     86          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     87          BOOL_TYPE Diverter_Position_Unknown(void);
+     88          void VwiZoneCompensationReadParams(void);
+     89          #if (VWI_CLIENT_FEATURE == ENABLED)
+     90          static void VwiZoneCompensation_API013ApplReceivedStatus (uint8 client_function_index);
+     91          #endif // (VWI_CLIENT_FEATURE == ENABLED)
+     92          //=====================================================================================================================
+     93          //-------------------------------------- Public Functions -------------------------------------------------------------
+     94          //=====================================================================================================================
+     95          
+     96          //----------------------------------------------------------------------------
+     97          /**
+     98           * It initializes the Vwi Zone Compensation Monitor and its data.
+     99           *
+    100           * @return None
+    101           *
+    102           */
+    103          void VwiZoneCompensationMonitor__Initialize(void)
+    104          {
+    105          	if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+    106          	{
+    107          		SETTINGFILE_LOADER_TYPE loader;
+    108          		Vwi_Zone_Compensation_Common_Params = NULL;
+    109          		if (SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_VWI_ZONE_COMPENSATION_COMMON, &loader) == PASS)
+    110          		{
+    111          			Vwi_Zone_Compensation_Common_Params = (const VWI_ZONE_COMPENSATION_COMMON_PARAMS_TYPE *)(void*)(loader.Data);
+    112          
+    113          			VwiZoneCompensationReadParams();
+    114          
+    115          			VWIZC_Diverter_Position = 0;
+    116          			VWIZC_Current_Multiplier = 0;
+    117          			VWIZC_Old_Current_Multiplier = 0;
+    118          			VWIZC_Old_Diverter_Position_Is_Stable = FALSE;
+    119          			VWIZC_Diverter_Position_Requested = NULL;
+    120          			VWIZC_Last_Diverter_Position = 0;
+    121          		}
+    122          		else
+    123          		{
+    124          			VWIZC_Current_Multiplier = VWI_MULTIPLIER_DEFAULT;
+    125          			VWIZC_Old_Current_Multiplier = 0;
+    126          		}
+    127          #if (VWI_CLIENT_FEATURE == ENABLED)
+    128          		// When VWI is on an external server, the first API013 command sending is triggered by the condition
+    129          		// (VWIZC_Refresh_Command_Counter = 0).
+    130          		// Setting
+    131          		// 		VWIZC_Old_Current_Multiplier = VWIZC_Current_Multiplier;
+    132          		// prevent the API013 command from being sent multiple times before the first API013 status packet is received.
+    133          		VWIZC_Old_Current_Multiplier = VWIZC_Current_Multiplier;
+    134          
+    135          		VWIZC_Refresh_Command_Counter = 0;
+    136          		API013RemoteFunction__RegisterForEvents((API013_EVENT_HANDLER_TYPE)VwiZoneCompensation_API013ApplReceivedStatus);
+    137          #endif // (VWI_CLIENT_FEATURE == ENABLED)
+    138          	}
+    139          }
+    140          
+    141          
+    142          //----------------------------------------------------------------------------
+    143          /**
+    144           * It implements the execution of the Vwi Zone Compensation Monitor
+    145           *
+    146           * @return None
+    147           *
+    148           */
+    149          void VwiZoneCompensationMonitor__Execution(void)
+    150          {
+    151          #if (VWI_CLIENT_FEATURE == ENABLED)
+    152          	uint16 reveal_node_status;
+    153          	uint8 *mcu_enable_state_ptr;
+    154          #endif // (VWI_CLIENT_FEATURE == ENABLED)
+    155          
+    156          	if ((Vwi_Zone_Compensation_Common_Params != NULL) && (DishAuxVar__IsDrainPumpOn() == FALSE))
+    157          	{
+    158          		SETTINGFILE_LOADER_TYPE loader;
+    159          		uint8 num_items;
+    160          
+    161          		if (Diverter_Position_Unknown() == FALSE)
+    162          		{
+    163          			if ((uint8)DishAuxVar__GetDiverterPosition().Is_Stable == (uint8)TRUE)
+    164          			{
+    165          				VWIZC_Diverter_Position = DishAuxVar__GetDiverterPosition().Position;
+    166          
+    167          				VWIZC_Last_Diverter_Position = VWIZC_Diverter_Position;
+    168          
+    169          				SystemTimers__NVResetTimer(&NV_Timer_Handle_Vwi_Moltiplier_Delay);
+    170          			}
+    171          			else if ((DishAuxVar__GetDiverterPosition().Is_Stable == FALSE) && ((uint8)VWIZC_Old_Diverter_Position_Is_Stable == (uint8)TRUE))
+    172          			{
+    173          				VWIZC_Diverter_Position_Requested = (uint8*)Hbl__GetRequestedLoad(Hbl__GetLoadIndexByLoadID(HBL_LOAD_DIVERTER));
+    174          
+    175          				if ((VWIZC_Diverter_Position_Requested != NULL) && (*VWIZC_Diverter_Position_Requested < (uint8)DIVERTER_POSITION_MAX))
+    176          				{
+    177          					if ((VWIZC_Multiplier_Pos[*VWIZC_Diverter_Position_Requested] > VWIZC_Multiplier_Pos[VWIZC_Diverter_Position]) &&
+    178          							(VWIZC_Multiplier_Pos[*VWIZC_Diverter_Position_Requested] != (uint16)__UNSIGNED_SHORT_MAX__))
+    179          					{
+    180          						VWIZC_Diverter_Position = *VWIZC_Diverter_Position_Requested;
+    181          						SystemTimers__NVResetTimer(&NV_Timer_Handle_Vwi_Moltiplier_Delay);
+    182          					}
+    183          					else
+    184          					{
+    185          						if (Vwi_Zone_Compensation_Common_Params->Multiplyer_Delay == (uint8)0)
+    186          						{
+    187          							VWIZC_Diverter_Position = *VWIZC_Diverter_Position_Requested;
+    188          						}
+    189          						else
+    190          						{
+    191          							(void)SystemTimers__NVSetTimerMS(&NV_Timer_Handle_Vwi_Moltiplier_Delay, Vwi_Zone_Compensation_Common_Params->Multiplyer_Delay*(uint32)100 ,SYSTEMTIMERS_TYPE_DOWN_COUNTER);
+    192          						}
+    193          					}
+    194          				}
+    195          			}
+    196          
+    197          			VWIZC_Old_Diverter_Position_Is_Stable = DishAuxVar__GetDiverterPosition().Is_Stable;
+    198          
+    199          			if (SystemTimers__NVCheckTimer(&NV_Timer_Handle_Vwi_Moltiplier_Delay) == SYSTEMTIMERS_STATE_DONE)
+    200          			{
+    201          				if (VWIZC_Diverter_Position_Requested != NULL)
+    202          				{
+    203          					VWIZC_Diverter_Position = *VWIZC_Diverter_Position_Requested;
+    204          				}
+    205          
+    206          				SystemTimers__NVResetTimer(&NV_Timer_Handle_Vwi_Moltiplier_Delay);
+    207          			}
+    208          		}
+    209          
+    210          		if (SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_VWI_ZONE_COMPENSATION_MULTIPLIERS, &loader) == PASS)
+    211          		{
+    212          			num_items = (uint8)(loader.Length/sizeof(VWI_ZONE_COMPENSATION_MULTIPLIERS_PARAMS_TYPE));
+    213          
+    214          			if (VWIZC_Diverter_Position < num_items)
+    215          			{
+    216          				if (Diverter_Position_Unknown() == FALSE)
+    217          				{
+    218          					VWIZC_Current_Multiplier = VWIZC_Multiplier_Pos[VWIZC_Diverter_Position];
+    219          				}
+    220          				else
+    221          				{
+    222          					if ((uint8)Vwi_Zone_Compensation_Common_Params->Unknown_Position_Multiplier_Enable == (uint8)TRUE)
+    223          					{
+    224          						VWIZC_Current_Multiplier = Vwi_Zone_Compensation_Common_Params->Multiplier_Position_Unknown;
+    225          					}
+    226          					else
+    227          					{
+    228          						VWIZC_Current_Multiplier = VWIZC_Multiplier_Pos[VWIZC_Last_Diverter_Position];
+    229          					}
+    230          				}
+    231          			}
+    232          			else
+    233          			{
+    234          				VWIZC_Current_Multiplier = VWI_MULTIPLIER_DEFAULT;
+    235          			}
+    236          		}
+    237          		else
+    238          		{
+    239          			VWIZC_Current_Multiplier = VWI_MULTIPLIER_DEFAULT;
+    240          		}
+    241          	}
+    242          	else
+    243          	{
+    244          		VWIZC_Current_Multiplier = VWI_MULTIPLIER_DEFAULT;
+    245          	}
+    246          
+    247          #if (VWI_CLIENT_FEATURE == ENABLED)
+    248          	reveal_node_status = Reveal__GetNodestatus();
+    249          
+    250          	mcu_enable_state_ptr = (uint8 *)Hbl__GetProcessedLoad(Hbl__GetLoadIndexByLoadID(HBL_LOAD_MCU_ENABLE));
+    251          
+    252          	if (VWIZC_Refresh_Command_Counter > (uint8)0)
+    253          	{
+    254          		VWIZC_Refresh_Command_Counter --;
+    255          	}
+    256          
+    257          	if ((BIT_TEST(reveal_node_status, WIN_MCU_ADDRESS) != (uint8)0) && ((mcu_enable_state_ptr == NULL) || (*mcu_enable_state_ptr != (uint8)OFF)))
+    258          	{
+    259          		// MCU is on and is communicating
+    260          		if ((VWIZC_Current_Multiplier != VWIZC_Old_Current_Multiplier) || (VWIZC_Refresh_Command_Counter == (uint8)0))
+    261          		{
+    262          			// VWI Multiplier has changed or it's time to refresh its value, the command is sent
+    263          			uint8 enable_params[2];
+    264          
+    265          			enable_params[0] = HIBYTE(VWIZC_Current_Multiplier);
+    266          			enable_params[1] = LOBYTE(VWIZC_Current_Multiplier);
+    267          
+    268          			(void)API013RemoteFunction__SendControl (API013_CLIENT_FUNCTION_VWI_MULTIPLIER,  REMOTE_FUNCTION_COMMAND_ENABLE, enable_params, sizeof(enable_params));
+    269          
+    270          			// Reload the refresh counter
+    271          			VWIZC_Refresh_Command_Counter = VWI_MULTIPLIER_REFRESH_PERIOD;
+    272          		}
+    273          	}
+    274          
+    275          #else
+    276          	if (VWIZC_Current_Multiplier != VWIZC_Old_Current_Multiplier)
+    277          	{
+    278          		Vwi_SetInputSignalMultiplier(VWIZC_Current_Multiplier);
+    279          
+    280          		VWIZC_Old_Current_Multiplier = VWIZC_Current_Multiplier;
+    281          	}
+    282          #endif // (VWI_CLIENT_FEATURE == DISABLED)
+    283          
+    284          }
+    285          
+    286          
+    287          //=====================================================================================================================
+    288          //-------------------------------------- Private Functions ------------------------------------------------------------
+    289          //=====================================================================================================================
+    290          BOOL_TYPE Diverter_Position_Unknown(void)
+    291          {
+    292          	BOOL_TYPE ret_value;
+    293          	if 	(Fault__IsInFaultState(FAULT_ID_DIVERTER_CANNOT_FIND_POSITIONS) ||
+    294          	    ((uint8)AlternateLoad__GetAlternateLoadSearchHome() == (uint8)TRUE))
+    295          	{
+    296          		ret_value = TRUE;
+    297          	}
+    298          	else
+    299          	{
+    300          		ret_value = FALSE;
+    301          	}
+    302          	return ret_value;
+    303          }
+    304          
+    305          void VwiZoneCompensationReadParams(void)
+    306          {
+    307          	SETTINGFILE_LOADER_TYPE loader;
+    308          	uint8 num_items;
+    309          	const VWI_ZONE_COMPENSATION_MULTIPLIERS_PARAMS_TYPE *vwi_zone_compensation_multiplier_params_ptr;
+    310          
+    311          	memset(VWIZC_Multiplier_Pos,__UNSIGNED_CHAR_MAX__,sizeof(VWIZC_Multiplier_Pos));
+    312          
+    313          	if (SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_VWI_ZONE_COMPENSATION_MULTIPLIERS, &loader) == PASS)
+    314          	{
+    315          		num_items = (uint8)(loader.Length/sizeof(VWI_ZONE_COMPENSATION_MULTIPLIERS_PARAMS_TYPE));
+    316          
+    317          		for (uint8 pos = 0; pos < num_items; pos++)
+    318          		{
+    319          			vwi_zone_compensation_multiplier_params_ptr = (const VWI_ZONE_COMPENSATION_MULTIPLIERS_PARAMS_TYPE *)(void*)(loader.Data + (pos * sizeof(VWI_ZONE_COMPENSATION_MULTIPLIERS_PARAMS_TYPE)));
+    320          			VWIZC_Multiplier_Pos[pos] = vwi_zone_compensation_multiplier_params_ptr->Multiplier_Pos;
+    321          		}
+    322          	}
+    323          }
+    324          
+    325          
+    326          #if (VWI_CLIENT_FEATURE == ENABLED) && (VWI_INTERNAL_COMMUNICATION == DISABLED) && (API013_CLIENT_FEATURE == ENABLED)
+    327          static void VwiZoneCompensation_API013ApplReceivedStatus (uint8 client_function_index)
+    328          {
+    329          	const API013_FUNCTION_STATUS_TYPE* received_status;
+    330          
+    331          	received_status = API013RemoteFunction__GetReceivedStatus();
+    332          
+    333          	if (client_function_index == (uint8)API013_CLIENT_FUNCTION_VWI_MULTIPLIER)
+    334          	{
+    335          		if (received_status->Size >= sizeof(VWIZC_Old_Current_Multiplier))
+    336          		{
+    337          			VWIZC_Old_Current_Multiplier = Utilities__ConvertArrayTo16bits(received_status->Status);
+    338          		}
+    339          	}
+    340          }
+    341          #endif // (VWI_CLIENT_FEATURE == ENABLED)
+    342          
+    343          #endif // (VWI_THREE_PHASE_MOTOR_TYPE== ENABLED)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

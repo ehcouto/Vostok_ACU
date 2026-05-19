@@ -1,0 +1,225 @@
+/**
+ *  @file		Config.icf       
+ *
+ *  @brief      This file contains the linker configurations related to STM32G0x micro
+ *
+ *  @details    The Flash Memory page size is 0x800 bytes.
+ *              Size of SETTINGFILE_SIZE size and IAP_SIZE size shall be multiple of 0x800
+ *              
+ *              The Data Flash Memory page size is 0x800 bytes
+ *
+ *  @copyright  Copyright 2021-$Date: 2021/07/27 14:15:12EDT $. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+ */
+//---------------------------------------------------------------------------------------------------------------------
+
+/*=======================================================================================================*/
+/* Memory Map for STM32G0x Micro-controller. Only modify the value as per the micro specification
+/*-------------------------------------------------------------------------------------------------------*/
+
+/*-Memory Regions-*/
+define exported symbol FLASH_TOTAL_SIZE                     = 0x80000;      // 512KB Total Flash
+define exported symbol RAM_TOTAL_SIZE                       = 0x24000;      // 144KB Total RAM
+define exported symbol DATAFLASH_SIZE                       = 0x1800;       // Shall be multiple of 0x800.
+
+/*-Sizes-*/
+define exported symbol __ICFEDIT_size_cstack__              = 0x400;
+define exported symbol __ICFEDIT_size_heap__                = 0x4;
+
+/*------------ End of Memory Map ------------------------------------------------------------------------*/
+
+
+/*=======================================================================================================*/
+/* FIT Table Offset - Default value (0xC0) - Do not change                                               */
+/*-------------------------------------------------------------------------------------------------------*/
+define exported symbol FIT_TABLE_OFFSET                                     = 0xC0;
+
+/*------------ End of FIT Table Offset ------------------------------------------------------------------*/
+
+
+
+
+/*=======================================================================================================*/
+/* Mapping the sections - Do not change
+/*-------------------------------------------------------------------------------------------------------*/
+
+/*-Do not change the size */
+define exported symbol IAP_SIZE                                             = 0x2800;
+
+define exported symbol __ICFEDIT_region_ROM_start__                         = 0x08000000;
+define exported symbol __ICFEDIT_region_ROM_end__                           = (__ICFEDIT_region_ROM_start__ + IAP_SIZE - 1);
+
+define exported symbol __ICFEDIT_region_RAM_start__                         = 0x20000000;
+define exported symbol __ICFEDIT_region_RAM_end__                           = (__ICFEDIT_region_RAM_start__ + RAM_TOTAL_SIZE - 1);
+
+/* IAP will map Application area using Setting File references */
+define exported symbol __SettingFile_X_Start__                              = (__ICFEDIT_region_ROM_start__ + IAP_SIZE);
+define exported symbol __SettingFile_X_End_                                 = (__ICFEDIT_region_ROM_start__ + FLASH_TOTAL_SIZE - DATAFLASH_SIZE - 1);
+
+/* Data flash area - this will not be touched by IAP */
+define exported symbol __DataFlash_Start__                                  = (__ICFEDIT_region_ROM_start__ + FLASH_TOTAL_SIZE - DATAFLASH_SIZE);
+define exported symbol __DataFlash_End__                                    = (__ICFEDIT_region_ROM_start__ + FLASH_TOTAL_SIZE - 1);
+
+define exported symbol __ICFEDIT_size_stack_bottom__                        = 0x10;
+define exported symbol __ICFEDIT_size_stack_top__                           = 0x10;
+
+define exported symbol __ICFEDIT_INTERRUPT_TABLE_start__                    = __ICFEDIT_region_ROM_start__;
+define exported symbol __ICFEDIT_APPLICATION_INTERRUPT_TABLE_start__        = (__ICFEDIT_region_ROM_start__ + IAP_SIZE);
+
+/*-Do not change the size */
+define memory mem with size = 4G;
+
+/*------------ End of Memory Map ------------------------------------------------------------------------*/
+
+
+
+/*===DO NOT MODIFY BELOW CONTENT===*/
+/*===DO NOT MODIFY BELOW CONTENT===*/
+/*===DO NOT MODIFY BELOW CONTENT===*/
+
+
+/*=======================================================================================================*/
+/* RESET Information region - Do not modify
+/*-------------------------------------------------------------------------------------------------------*/
+define symbol RESETINFO_HEADER_SIZE                                         = 56;
+define symbol RESETINFO_HEADER_START                                        = __ICFEDIT_region_RAM_start__;
+define symbol RESETINFO_HEADER_END                                          = RESETINFO_HEADER_START + RESETINFO_HEADER_SIZE;
+
+define symbol RESETINFO_FOOTER_SIZE                                         = 44;
+define symbol RESETINFO_FOOTER_START                                        = __ICFEDIT_region_RAM_end__ - RESETINFO_FOOTER_SIZE;
+define symbol RESETINFO_FOOTER_END                                          = __ICFEDIT_region_RAM_end__;
+
+define symbol APPLICATION_RAM_region_start                                  = RESETINFO_HEADER_END;
+define symbol APPLICATION_RAM_region_end                                    = RESETINFO_FOOTER_START;
+
+define region RESETINFO_HEADER_region                                       = mem:[from RESETINFO_HEADER_START to RESETINFO_HEADER_END  ];
+define region RESETINFO_FOOTER_region                                       = mem:[from RESETINFO_FOOTER_START to RESETINFO_FOOTER_END  ];
+
+do not initialize { section .RESET_INFO_HEADER, section .RESET_INFO_FOOTER};
+
+place in RESETINFO_HEADER_region { section .RESET_INFO_HEADER  };
+place in RESETINFO_FOOTER_region { section .RESET_INFO_FOOTER  };
+
+/*------------ End of RESET Information region ----------------------------------------------------------*/
+
+
+
+
+
+/*=======================================================================================================*/
+/* Memory region allocation
+/*-------------------------------------------------------------------------------------------------------*/
+define region ROM_region   				    = mem:[from __ICFEDIT_region_ROM_start__   to __ICFEDIT_region_ROM_end__];
+define region RAM_region        		    = mem:[from APPLICATION_RAM_region_start   to APPLICATION_RAM_region_end];
+
+define block CSTACK    	                    with alignment = 8, size = __ICFEDIT_size_cstack__   { };
+define block HEAP      	                    with alignment = 8, size = __ICFEDIT_size_heap__     { };
+
+define block INTERRUPT_STACK                with size = 0 { };
+define block SYSTEM_STACK                   { block CSTACK };
+
+define block STACK_OVERFLOW_SIGNATURE       with alignment = 4, size = 0x10{};
+define block STACK_UNDERFLOW_SIGNATURE      with alignment = 4, size = 0x10{};
+                                         
+define block STACKS with alignment = 4, fixed order
+                                            {   block STACK_OVERFLOW_SIGNATURE,
+                                                block SYSTEM_STACK,
+                                                block INTERRUPT_STACK,
+                                                block STACK_UNDERFLOW_SIGNATURE,
+                                            };
+
+/*------------ End of memory region allocation ---------------------------------------------------------*/
+
+
+
+
+
+
+/*=======================================================================================================*/
+/* Application area configuartion - mapped as Setting file to make Flash_prm.h ready - Do Not Modify
+/*-------------------------------------------------------------------------------------------------------*/
+define exported symbol __SetingFile_Start                                   = __SettingFile_X_Start__;
+define exported symbol __SetingFile_Size                                    = FLASH_TOTAL_SIZE - IAP_SIZE - DATAFLASH_SIZE;
+define exported symbol __SetingFile_End                                     = __SettingFile_X_Start__+__SetingFile_Size;
+define exported symbol __RAM_Start                                          = __ICFEDIT_region_RAM_start__;
+define exported symbol __RAM_Size                                           = (__ICFEDIT_region_RAM_end__ - __ICFEDIT_region_RAM_start__);
+define exported symbol __RAM_End                                            = __ICFEDIT_region_RAM_end__;
+
+
+
+
+
+
+
+/*=======================================================================================================*/
+/* NVData Configuration
+/*-------------------------------------------------------------------------------------------------------*/
+ define exported symbol __DataFlash_Start	   =__DataFlash_Start__; 
+ define exported symbol __DataFlash_End	       =__DataFlash_End__;
+
+ define region DATA_FLASH_region = mem:[from __DataFlash_Start to __DataFlash_End];
+ "DATAFLASH":place in DATA_FLASH_region    
+                                    { ro section .dataflash* };
+
+/*------------ End of NVData Configuration ---------------------------------------------------------------*/
+
+
+
+
+
+
+/*=======================================================================================================*/
+/* ClassB-Configuration - Do not modify
+/*-------------------------------------------------------------------------------------------------------*/
+define exported symbol MICRO_FLASH_START = __ICFEDIT_region_ROM_start__;
+define exported symbol MICRO_FLASH_END   = __ICFEDIT_region_ROM_end__ - 4;
+
+/* FLASH CRC checksum region on the ROM*/
+place at end of ROM_region { ro section IAP_WPART_NUMBER_REGION, ro section .MICRO_CRC_region };
+
+/*------------ End of ClassB Configuration -------------------------------------------------------------*/
+
+
+
+
+
+
+/*=======================================================================================================*/
+/* IAP (In-Application Programming) configuration for Application project - Do not modify
+/*-------------------------------------------------------------------------------------------------------*/
+
+/* Flash test range symbols are exported and referred in the makefile.bat file and also in the FITMgr_prv.h file */
+define exported symbol APPL_BLOCK_1_START                              = __ICFEDIT_region_ROM_start__;
+define exported symbol APPL_BLOCK_1_END                                = __ICFEDIT_region_ROM_end__ - 4;
+
+/* This address is shared with the IAP Software */
+/* Edit only if the FIT Application Table start address is different then the below */
+define exported symbol FIT_APPLICATION_TABLE_START_ADDRESS             = __ICFEDIT_APPLICATION_INTERRUPT_TABLE_start__ + FIT_TABLE_OFFSET;
+
+
+define symbol IAP_WPART_SIZE                                           = 12; //10 actual size + 2 for alignment
+define exported symbol IAP_WPART_NUMBER                               = (MICRO_FLASH_END+1)-IAP_WPART_SIZE;    
+/*------------ End of IAP Configuration       ----------------------------------------------------------*/
+
+
+
+
+
+
+/*=======================================================================================================*/
+/* Placing of the memory
+/*-------------------------------------------------------------------------------------------------------*/
+
+initialize by copy { readwrite };
+do not initialize  { section .noinit};
+place at address mem:__ICFEDIT_INTERRUPT_TABLE_start__ { readonly section .intvec };
+
+place in ROM_region   { readonly };
+place in RAM_region   { readwrite};
+
+// The Heap and Stack memory shall be placed at the end of the RAM memory and before the reset signature
+// IAP uses the stack memory for code execution and this stack memory shall not be overlap with the data memory used by the application. 
+// If the Stack and Heap memory's are placed at the end of the RAM then it will never overwrite the Data memory of the application
+place at end of RAM_region                                             { block HEAP,
+                                                                         block STACKS };
+
+ /*------------ End of memory placing       ----------------------------------------------------------*/

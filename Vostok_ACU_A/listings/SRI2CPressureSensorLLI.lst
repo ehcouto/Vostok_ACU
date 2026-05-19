@@ -1,0 +1,791 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:40
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI/SRI2CPressureSensorLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\SRI2CPressureSensorLLI.lst -o obj\SRI2CPressureSensorLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI/SRI2CPressureSensorLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SRI2CPressureSensorLLI.lst
+#    Object file  =  obj\SRI2CPressureSensorLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\SRI2CPressureSensorLLI\SRI2CPressureSensorLLI.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      SR Reading and Filtering of an I2C Pressure Sensor
+      5           *
+      6           *  @details    Interacts with the I2C driver to request and read Pressures sensor data.
+      7           *              This Module Runs an IIR Filter on the Incoming data. Returns a known invalid value while the filter settles.
+      8           *              If the I2C data request is not received within a configured time a fault is set.
+      9           *
+     10           *  @defgroup   CLASS_B
+     11           *
+     12           *  @copyright  Copyright 2018. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     13           */
+     14          //---------------------------------------------------------------------------------------------------------------------
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          
+     17          //-------------------------------------- Include Files ----------------------------------------------------------------
+     18          
+     19          #include "SRI2CPressureSensorLLI.h"
+     20          
+     21          #if (HBL_LLI_NUM_SRI2C_PRESSURE_SENSOR > 0U)
+     22          
+     23          #include "Crc8.h"
+     24          #include "I2c.h"
+     25          #include "Micro_Defs.h"
+     26          #include "SRData.h"
+     27          #include "SRException.h"
+     28          #include "SRI2CPresureSensorDefs.h"
+     29          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+     30              #include "SRTaskSequence.h"
+     31          #endif
+     32          #include <string.h>
+     33          #include "VirtualPin.h"
+     34          
+     35          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     36          
+     37          //! Hold initial value of the filter
+     38          #define PRESURE_SENSOR_INITIAL_FILTER_VALUE     0
+     39          
+     40          //! Holds the LLI Output value while the filter is stabilizing;
+     41          static const sint32 STABILIZING_PRESSURE = SRI2CPRESSURESENSOR_STABILIZING;
+     42          
+     43          //! Holds the LLI Output value if there is an active I2C communication failure
+     44          static const sint32 I2C_COMM_FAILURE_PRESSURE = SRI2CPRESSURESENSOR_I2C_FAILURE;
+     45          
+     46          //! The maximum bit value for the Alpha used on the IIR filter.
+     47          //! A maximum bit value of 15 results in the heaviest filtering provided by an alpha of 1/32768.
+     48          #define IIRFILTER_MAX_COEFFICIENT_BIT   15
+     49          
+     50          //! Rate at which the Asynchronous function is called. This is used for stabilizing time.
+     51          #define ASYNCH_CALL_RATE 5U
+     52          
+     53          //! Identifies the format of the raw and filtered values in the IIR filter.
+     54          typedef sint32 FILTER_DATA_TYPE;
+     55          
+     56          //! A structure that holds the variables required for the IIR filter functionality.
+     57          PACKED typedef struct IIR_FILTER_MEASURE_STRUCT
+     58          {
+     59              //! The filtered value provided by the filter. This value is always available after initialization.
+     60                  sint32 Filtered_Value;
+     61          
+     62              //! The accumulator value contains a fixed-point version of the filtered value.
+     63              //! This fixed-point value uses higher precision based on the alpha coefficient used.
+     64                  sint32 Accumulator;
+     65          
+     66              //! This value is initially the inverted alpha coefficient. After the Filter__Initialize()
+     67              //! function is called, this value is converted to the number of bits to shift between the
+     68              //! accumulator and the filtered value.
+     69              uint16 Inverted_Alpha;
+     70          } IIR_FILTER_MEASURE_TYPE;
+     71          
+     72          typedef enum
+     73          {
+     74              I2C_PRESSURE_SENSOR_REQUEST = 0,
+     75              I2C_PRESSURE_SENSOR_READ
+     76          }I2C_PRESSURE_SENSOR_STATE_TYPE;
+     77          
+     78          //! Definition of setting file parameters for the module
+     79          PACKED typedef struct
+     80          {
+     81              uint16 Unused_1;                        // 2 bytes reserved for all LLI modules (none of the data applies to this LLI)
+     82              uint8  Unused_2;                        // Currently not used (previously Device Type, but this is configured by hardware in the device); kept for backwards compatibility
+     83              uint8  Inverted_Alpha;                  // Feedback filter coefficient for IIR filter
+     84              uint16 Initial_Time;
+     85              uint8  Communication_Fault_Debounce;    // Amount of time for the I2C communication failure to be present before a recovery/retry
+     86              uint8  Communication_Fault_Retries;     // Number of recovery retries to attempt before reporting a failure to the application
+     87          }I2C_PRESSURE_SENSOR_PARAM_TYPE;
+     88          
+     89          //! Definition of variables used by the module
+     90          PACKED typedef struct
+     91          {
+     92              I2C_PRESSURE_SENSOR_STATE_TYPE State;
+     93              IIR_FILTER_MEASURE_TYPE Filter;
+     94              uint16 Settling_Timer;
+     95              uint16 Pressure;
+     96              uint8 Communication_Fault_Debounce;             // Hold the debounce limit configure in setting file
+     97              uint8 Communication_Fault_Retries;              // Hold the retires limit configure in setting file
+     98              uint8 Communication_Fault_Debounce_Counter;     // This counter counts till Communication_Fault_Debounce value then retry to recovery from I2C communication failure
+     99              uint8 Communication_Fault_Retry_Counter;        // This counter counts till Communication_Fault_Retries value then report I2C communication failure
+    100              uint8 Buffer[4];
+    101          }I2C_PRESSURE_SENSOR_DATA_TYPE;
+    102          
+    103          
+    104          //! CRC of the data for the module to be used when checking the integrity of the data
+    105          static uint8 SRI2CPressureSensorLLI_Crc[HBL_LLI_NUM_SRI2C_PRESSURE_SENSOR];
+    106          
+    107          //! Module data used to request and process I2C Pressure Sensor data
+    108          static I2C_PRESSURE_SENSOR_DATA_TYPE Sr_I2c_Pressure_Data[HBL_LLI_NUM_SRI2C_PRESSURE_SENSOR];
+    109          
+    110          //! Tracks the number of SR I2C Pressure Sensors Configured in the Setting file.
+    111          static uint8 Sr_I2CPressure_Sensor_LLI_Allocation;
+    112          
+    113          //! Inverted variable for Class B verification
+    114          static uint8 N_Sr_I2CPressure_Sensor_LLI_Allocation;
+    115          
+    116          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    117          
+    118          void InitIirFilter(void* filter_struct, FILTER_DATA_TYPE initial_value);
+    119          void UpdateIirFilter(void* filter_struct, FILTER_DATA_TYPE new_sample_value);
+    120          
+    121          //=====================================================================================================================
+    122          //-------------------------------------- Public Functions -------------------------------------------------------------
+    123          //=====================================================================================================================
+    124          //---------------------------------------------------------------------------------------------------------------------
+    125          /**
+    126           * @brief   It Initializes the module I2CPressureSensor LLI and its variables
+    127           */
+    128          void SRI2CPressureSensorLLI__Initialize(void)
+    129          {
+    130              memset(Sr_I2c_Pressure_Data,0,sizeof(Sr_I2c_Pressure_Data));
+    131          
+    132              for (uint8 index = 0; index < HBL_LLI_NUM_SRI2C_PRESSURE_SENSOR; index++)
+    133              {
+    134                  SRI2CPressureSensorLLI_Crc[index] = Crc8(0xFF, (uint8 *)(void *)&Sr_I2c_Pressure_Data[index], sizeof(I2C_PRESSURE_SENSOR_DATA_TYPE));
+    135              }
+    136          
+    137              SR_SET_BYTE(Sr_I2CPressure_Sensor_LLI_Allocation,0);
+    138          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    139              SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_INIT, SRTASKSEQUENCE_APPL_INIT_SRI2C_PRESSURE_SENSOR_LLI);
+    140          #endif
+    141          }
+    142          
+    143          //---------------------------------------------------------------------------------------------------------------------
+    144          /**
+    145           * @brief   Determines the destination (index) of the data for the LLI.
+    146           * @return  Index to a local buffer where the data will reside.
+    147           */
+    148          uint8 SRI2CPressureSensorLLI__Allocate(void)
+    149          {
+    150              uint8 retval;
+    151              retval = HBL_INDEX_INVALID;
+    152              SR_CHECK_BYTE(Sr_I2CPressure_Sensor_LLI_Allocation);
+    153              if (Sr_I2CPressure_Sensor_LLI_Allocation < HBL_LLI_NUM_SRI2C_PRESSURE_SENSOR)
+    154              {
+    155                  retval = Sr_I2CPressure_Sensor_LLI_Allocation;
+    156                  SR_SET_BYTE(Sr_I2CPressure_Sensor_LLI_Allocation,Sr_I2CPressure_Sensor_LLI_Allocation + 1U);
+    157              }
+    158              return (retval);
+    159          }
+    160          
+    161          //---------------------------------------------------------------------------------------------------------------------
+    162          /**
+    163           * @brief   Initialize an instance of the LLI by extracting parameter data and initializing variables.
+    164           * @param   input: data related to the instance of the LLI
+    165           * @param   PASS if the initialization was successful, else FAIL
+    166           */
+    167          PASS_FAIL_TYPE SRI2CPressureSensorLLI__InitializeInstance(HBL_LLI_TYPE * input)
+    168          {
+    169              PASS_FAIL_TYPE retval = FAIL;
+    170              I2C_PRESSURE_SENSOR_PARAM_TYPE *param_ptr;
+    171              uint8 i2c_address = 0;
+    172          
+    173              SR_CHECK_BYTE(Sr_I2CPressure_Sensor_LLI_Allocation);
+    174              if (input->Data_Index < Sr_I2CPressure_Sensor_LLI_Allocation)
+    175              {
+    176                  param_ptr = (I2C_PRESSURE_SENSOR_PARAM_TYPE *) (void *)(input->Parameter_Ptr.Data);
+    177          
+    178                  const VIRTUALPIN_TYPE* pin_ptr = &(VIRTUALPIN_TABLE[input->Pin_Ptr[0]]);
+    179          
+    180                  i2c_address = (((pin_ptr->param0) << 1) & 0xFFU);
+    181          
+    182                  retval = (PASS_FAIL_TYPE)I2c__Initialize((I2C_ENUM_TYPE)pin_ptr->device, (I2C_SPEED_TYPE)pin_ptr->param1, I2C_ADDR_7BITS, i2c_address); // initialize I2C bus with this sensor
+    183          
+    184                  Sr_I2c_Pressure_Data[input->Data_Index].Settling_Timer = param_ptr->Initial_Time/ASYNCH_CALL_RATE;
+    185          
+    186                  Sr_I2c_Pressure_Data[input->Data_Index].Filter.Inverted_Alpha = param_ptr->Inverted_Alpha;
+    187          
+    188                  Sr_I2c_Pressure_Data[input->Data_Index].Communication_Fault_Debounce = param_ptr->Communication_Fault_Debounce;
+    189          
+    190                  Sr_I2c_Pressure_Data[input->Data_Index].Communication_Fault_Retries = param_ptr->Communication_Fault_Retries;
+    191          
+    192                  //Initialize filter
+    193                  InitIirFilter((void *)&(Sr_I2c_Pressure_Data[input->Data_Index].Filter), PRESURE_SENSOR_INITIAL_FILTER_VALUE);
+    194                  SRI2CPressureSensorLLI_Crc[input->Data_Index] = Crc8(0xFF, (uint8 *)(void *)&Sr_I2c_Pressure_Data[input->Data_Index], sizeof(I2C_PRESSURE_SENSOR_DATA_TYPE));
+    195              }
+    196              return (retval);
+    197          }
+    198          
+    199          //---------------------------------------------------------------------------------------------------------------------
+    200          /**
+    201           * @brief   Retrieves the current value of the LLI
+    202           * @param   input: data related to the instance of the LLI
+    203           * @retval  NULL = lli instance not allocated
+    204           *          STABILIZING_PRESSURE = Filter is settling
+    205           *          else Current LLI Value
+    206           */
+    207          void * SRI2CPressureSensorLLI__Get(HBL_LLI_TYPE * input)
+    208          {
+    209              void* ptr = NULL;
+    210          
+    211              SR_CHECK_BYTE(Sr_I2CPressure_Sensor_LLI_Allocation);
+    212          
+    213              if (input->Data_Index < Sr_I2CPressure_Sensor_LLI_Allocation)
+    214              {
+    215                  MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    216                  MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    217                  BOOL_TYPE test_crc_match = ((SRI2CPressureSensorLLI_Crc[input->Data_Index] == (Crc8(0xFF, (uint8 *)(void *)&Sr_I2c_Pressure_Data[input->Data_Index], sizeof(I2C_PRESSURE_SENSOR_DATA_TYPE)))) ? TRUE : FALSE);
+    218                  MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    219          
+    220                  if(test_crc_match == FALSE)
+    221                  {
+    222                      SRException__Queue(SREXCEPTION_SRCHECK_DATA_NOT_CONSISTENT,input->LLI_Handler_Index, input->Data_Index);
+    223                  }
+    224          
+    225                  if (Sr_I2c_Pressure_Data[input->Data_Index].Settling_Timer == 0U)
+    226                  {
+    227          
+    228                      if (Sr_I2c_Pressure_Data[input->Data_Index].Communication_Fault_Retry_Counter > Sr_I2c_Pressure_Data[input->Data_Index].Communication_Fault_Retries)
+    229                      {
+    230                          // Return unique pressure value if there is an I2c communication failure
+    231                          ptr = (void *)&I2C_COMM_FAILURE_PRESSURE;
+    232                      }
+    233                      else
+    234                      {
+    235                          ptr =  ((void *)&Sr_I2c_Pressure_Data[input->Data_Index].Filter.Filtered_Value);
+    236                      }
+    237                  }
+    238                  else
+    239                  {
+    240                      ptr = (void *)&STABILIZING_PRESSURE;
+    241                  }
+    242              }
+    243              return ptr;
+    244          }
+    245          
+    246          //---------------------------------------------------------------------------------------------------------------------
+    247          /**
+    248           * @brief   Asynchronous processing of a the LLI
+    249           * @param   input: data related to the instance of the LLI
+    250           * @return  PASS if the LLI was successfully processed, else FAIL
+    251           */
+    252          BOOL_TYPE SRI2CPressureSensorLLI__AsynchProcess(HBL_LLI_TYPE * input)
+    253          {
+    254              BOOL_TYPE retval = FALSE;
+    255              I2C_PRESSURE_SENSOR_DATA_TYPE *ptr;
+    256          
+    257              SR_CHECK_BYTE(Sr_I2CPressure_Sensor_LLI_Allocation);
+    258              if (SRI2CPressureSensorLLI_Crc[input->Data_Index] == Crc8(0xFF, (uint8 *)(void *)&Sr_I2c_Pressure_Data[input->Data_Index], sizeof(I2C_PRESSURE_SENSOR_DATA_TYPE)))
+    259              {
+    260                  if (input->Data_Index < Sr_I2CPressure_Sensor_LLI_Allocation)
+    261                  {
+    262                      ptr = &Sr_I2c_Pressure_Data[input->Data_Index];
+    263          
+    264                      ptr->Settling_Timer = (ptr->Settling_Timer > 0U) ? (ptr->Settling_Timer - 1U) : 0U;
+    265          
+    266                      const VIRTUALPIN_TYPE* pin_ptr = &(VIRTUALPIN_TABLE[input->Pin_Ptr[0]]);
+    267          
+    268                      switch(Sr_I2c_Pressure_Data[input->Data_Index].State)
+    269                      {
+    270                          case I2C_PRESSURE_SENSOR_REQUEST:
+    271          
+    272                              retval = I2c__RequestRead((I2C_ENUM_TYPE)pin_ptr->device, 2);                           // Request the reading to the device
+    273                              ptr->State = I2C_PRESSURE_SENSOR_READ;
+    274                              break;
+    275          
+    276                          case I2C_PRESSURE_SENSOR_READ:
+    277          
+    278                              if (I2c__GetStatus((I2C_ENUM_TYPE)pin_ptr->device,I2C_STATUS_STATE) == (uint16)I2C_STATE_IDLE)  // Check if bus is free
+    279                              {
+    280                                  retval = I2c__Read((I2C_ENUM_TYPE)pin_ptr->device, Sr_I2c_Pressure_Data[input->Data_Index].Buffer, sizeof(Sr_I2c_Pressure_Data[input->Data_Index].Buffer)); // Copy the I2c Rx buffer to the I2c_Pressure_Buffer
+    281          
+    282                                  ptr->Pressure  = (((uint16)ptr->Buffer[0]) << 8) | ptr->Buffer[1]; // Merge the pressure data bytes
+    283                                  ptr->Pressure &= (uint16)0x3FFF;    // Mask off 2 status bits
+    284          
+    285                                  //Update Filter
+    286                                  UpdateIirFilter((void *)&(ptr->Filter), (FILTER_DATA_TYPE)(ptr->Pressure));
+    287          
+    288                                  ptr->Communication_Fault_Debounce_Counter = 0;
+    289                                  ptr->Communication_Fault_Retry_Counter = 0;
+    290          
+    291                                  ptr->State = I2C_PRESSURE_SENSOR_REQUEST;
+    292                              }
+    293                              else if (ptr->Communication_Fault_Retry_Counter <= ptr->Communication_Fault_Retries)    // Handle communication error
+    294                              {
+    295                                  // Max retries not reached; keep debouncing the communication error and/or attempting to recover the I2C communication
+    296                                  if (ptr->Communication_Fault_Debounce_Counter < ptr->Communication_Fault_Debounce)
+    297                                  {
+    298                                      // No action; wait for debounce counter to expire or for communication to be restored
+    299                                      ptr->Communication_Fault_Debounce_Counter++;
+    300                                  }
+    301                                  else if (ptr->Communication_Fault_Debounce_Counter >= ptr->Communication_Fault_Debounce)
+    302                                  {
+    303                                      // Attempt recovery of I2C communication and retry data request
+    304                                      I2c__Clear((I2C_ENUM_TYPE)pin_ptr->device);
+    305                                      (void)I2c__ResetBus((I2C_ENUM_TYPE)pin_ptr->device);
+    306                                      ptr->Communication_Fault_Debounce_Counter = 0;
+    307                                      ptr->Communication_Fault_Retry_Counter++;
+    308                                      ptr->State = I2C_PRESSURE_SENSOR_REQUEST;
+    309                                  }
+    310                              }
+    311                              else //ptr->Communication_Fault_Retry_Counter > SRI2cPressureSensorLLI_Param[input->Data_Index]->Communication_Fault_Retries
+    312                              {
+    313                                  //Attempt recovery of I2C communication and retry data request
+    314                                  I2c__Clear((I2C_ENUM_TYPE)pin_ptr->device);
+    315                                  (void)I2c__ResetBus((I2C_ENUM_TYPE)pin_ptr->device);
+    316                                  ptr->State = I2C_PRESSURE_SENSOR_REQUEST;
+    317                              }
+    318          
+    319                              break;
+    320          
+    321                          default:
+    322                              // lint -fallthrough
+    323                              break;
+    324                      }
+    325                      SRI2CPressureSensorLLI_Crc[input->Data_Index] = Crc8(0xFF, (uint8 *)(void *)&Sr_I2c_Pressure_Data[input->Data_Index], sizeof(I2C_PRESSURE_SENSOR_DATA_TYPE));
+    326                  }
+    327              }
+    328              else
+    329              {
+    330                  SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, input->LLI_Handler_Index, input->Data_Index);
+    331              }
+    332              return (retval);
+    333          }
+    334          
+    335          //---------------------------------------------------------------------------------------------------------------------
+    336          /**
+    337           * @brief   Handler for periodic SRI2CPressureSensorLLI Data Verification.
+    338           */
+    339          void SRI2CPressureSensorLLI__Handler(void)
+    340          {
+    341              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    342              BOOL_TYPE retval;
+    343              uint8 index;
+    344          
+    345              MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    346              retval = (BOOL_TYPE) (SR_CHECK_BYTE(Sr_I2CPressure_Sensor_LLI_Allocation) == SRDATA_OK);
+    347              MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    348          
+    349              for (index = 0; index < HBL_LLI_NUM_SRI2C_PRESSURE_SENSOR; index++)
+    350              {
+    351                  MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    352                  retval &= (BOOL_TYPE) (Crc8(0xFF, (uint8 *) &Sr_I2c_Pressure_Data[index], sizeof(I2C_PRESSURE_SENSOR_DATA_TYPE)) == SRI2CPressureSensorLLI_Crc[index]); //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    353                  MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    354                  if (retval == FALSE)
+    355                  {
+    356                      SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, 0, index);
+    357                      break;
+    358                  }
+    359              }
+    360          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    361              SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_THREAD, SRTASKSEQUENCE_APPL_SRI2C_PRESSURE_SENSOR_LLI_CHECKS);
+    362          #endif
+    363          
+    364          }
+    365          
+    366          //=====================================================================================================================
+    367          //-------------------------------------- Private Functions ------------------------------------------------------------
+    368          //=====================================================================================================================
+    369          //---------------------------------------------------------------------------------------------------------------------
+    370          /**
+    371           * Initialize the filter data structure.
+    372           * @param filter_struct = The structure used by the filter.
+    373           * @param initial_value = The initial value that the filter should be set to.
+    374           * @param filter_type = The type of filter that is being initialized.
+    375           */
+    376          void InitIirFilter(void* filter_struct, FILTER_DATA_TYPE initial_value)
+    377          {
+    378              IIR_FILTER_MEASURE_TYPE* iir_filter;
+    379              uint16 i;
+    380          
+    381              // Convert the inverted alpha to the number of bits that will be shifted.
+    382              iir_filter = (IIR_FILTER_MEASURE_TYPE*)filter_struct;
+    383          
+    384              for (i = IIRFILTER_MAX_COEFFICIENT_BIT; i > 0U; i--)
+    385              {
+    386                  if (BIT_TEST(iir_filter->Inverted_Alpha, i))
+    387                  {
+    388                      break;  // Exit the loop
+    389                  }
+    390              }
+    391              iir_filter->Inverted_Alpha = i;
+    392          
+    393              // Setup the Accumulator value.
+    394              iir_filter->Accumulator = initial_value << iir_filter->Inverted_Alpha;
+    395          
+    396              iir_filter->Filtered_Value = initial_value;
+    397          }
+    398          
+    399          
+    400          //---------------------------------------------------------------------------------------------------------------------
+    401          /**
+    402           * Update the filter variables based on a new sampled value.
+    403           * @param filter_struct = The structure used by the filter.
+    404           * @param new_sample_value = The new sampled value that should be considered by the filter.
+    405           * @param filter_type = The type of filter that is being updated.
+    406           */
+    407          void UpdateIirFilter(void* filter_struct, FILTER_DATA_TYPE new_sample_value)
+    408          {
+    409              IIR_FILTER_MEASURE_TYPE* iir_filter;
+    410              FILTER_DATA_TYPE value;
+    411          
+    412              iir_filter = ((IIR_FILTER_MEASURE_TYPE*)filter_struct);
+    413              iir_filter->Accumulator += new_sample_value - iir_filter->Filtered_Value;
+    414              value = iir_filter->Accumulator;
+    415          
+    416              if (iir_filter->Inverted_Alpha > 1U)
+    417              {
+    418                  value >>= iir_filter->Inverted_Alpha - 1;
+    419              }
+    420              if (iir_filter->Inverted_Alpha > 0U)
+    421              {
+    422                  value += 1;
+    423                  value >>= 1;
+    424              }
+    425              iir_filter->Filtered_Value = value;
+    426          }
+    427          
+    428          #endif // (HBL_LLI_NUM_SRI2C_PRESSURE_SENSOR > 0)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

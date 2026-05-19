@@ -1,0 +1,634 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:41
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Common/all/SRCommon/SRException/SRException.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SRException.lst -o
+#        obj\SRException.obj
+#        source/XCategory/Common/all/SRCommon/SRException/SRException.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SRException.lst
+#    Object file  =  obj\SRException.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\SRCommon\SRException\SRException.c
+      1          /**
+      2           *  @file       SRException.c
+      3           *  @defgroup   CLASS_B
+      4           *  @brief      Basic description of file contents
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8           *---------------------------------------------------------------------------------------------------------------------
+      9           *------------------- Copyright 2007.  Whirlpool Corporation.  All rights reserved - CONFIDENTIAL ---------------------
+     10           *---------------------------------------------------------------------------------------------------------------------
+     11           */
+     12          
+     13          //-------------------------------------- Include Files ----------------------------------------------------------------
+     14          #include "SystemConfig.h"
+     15          #include "string.h"
+     16          #include "SRException.h"
+     17          #include "Micro.h"
+     18          #include "Log.h"
+     19          
+     20          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     21          
+     22          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     23          //------- Log Module messages ---------------------------------------
+     24          //! A list of log message IDs that are generated by this module.
+     25          typedef enum
+     26          {
+     27              EVENT_TYPE = 0,
+     28              EVENT_DATA1,
+     29              EVENT_DATA2,
+     30          } MODULE_SREXCEPTION_LOG_MESSAGE_ID_TYPE;
+     31          
+     32          #define MODULE_NAME MODULE_SREXCEPTION      //!< The name of this module for use by the Log module.
+     33          
+     34          #define SREXCEPTION_LOGGED_EVENT_IS_VALID       ((uint16)0xDE51)
+     35          
+     36          typedef struct
+     37          {
+     38              SREXCEPTION_EVENT_TYPE Event;
+     39              uint32 Data1;
+     40              uint32 Data2;
+     41              uint16 Signature;
+     42          }SREXCEPTION_EVENT_DATA_TYPE;
+     43          
+
+   \                                 In section .noinit, align 4
+     44          static NO_INIT SREXCEPTION_EVENT_DATA_TYPE SRException_Event_Data;
+   \                     SRException_Event_Data:
+   \   00000000                      DS8 16
+     45          
+     46          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     47          static void srexceptionforcereset(SREXCEPTION_EVENT_TYPE event,uint32 data1, uint32 data2);
+     48          
+     49          //=====================================================================================================================
+     50          //-------------------------------------- Public Functions -------------------------------------------------------------
+     51          //=====================================================================================================================
+     52          /**
+     53           * @brief -
+     54           * @param event
+     55           * @param data1
+     56           * @param data2
+     57           */
+
+   \                                 In section .text, align 2, keep-with-next
+     58          void SRException__LogLastException(void)
+     59          {
+   \                     SRException__LogLastException: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+     60              if (SRException_Event_Data.Signature == SREXCEPTION_LOGGED_EVENT_IS_VALID)
+   \   00000002   0x....             LDR      R4,??DataTable1
+   \   00000004   0x89A0             LDRH     R0,[R4, #+12]
+   \   00000006   0x....             LDR      R1,??DataTable1_1  ;; 0xde51
+   \   00000008   0x4288             CMP      R0,R1
+   \   0000000A   0xD113             BNE      ??SRException__LogLastException_0
+     61              {
+     62                  LOG_ADD_EXCEPTION(EVENT_TYPE, (LOG_DATA_TYPE)SRException_Event_Data.Event);
+   \   0000000C   0x7823             LDRB     R3,[R4, #+0]
+   \   0000000E   0x2201             MOVS     R2,#+1
+   \   00000010   0x2100             MOVS     R1,#+0
+   \   00000012   0x2053             MOVS     R0,#+83
+   \   00000014   0x.... 0x....      BL       Log__AddMessage
+     63                  LOG_ADD_EXCEPTION(EVENT_DATA1, (LOG_DATA_TYPE)SRException_Event_Data.Data1);
+   \   00000018   0x6863             LDR      R3,[R4, #+4]
+   \   0000001A   0xB29B             UXTH     R3,R3
+   \   0000001C   0x2201             MOVS     R2,#+1
+   \   0000001E   0x4611             MOV      R1,R2
+   \   00000020   0x2053             MOVS     R0,#+83
+   \   00000022   0x.... 0x....      BL       Log__AddMessage
+     64                  LOG_ADD_EXCEPTION(EVENT_DATA2, (LOG_DATA_TYPE)SRException_Event_Data.Data2);
+   \   00000026   0x68A3             LDR      R3,[R4, #+8]
+   \   00000028   0xB29B             UXTH     R3,R3
+   \   0000002A   0x2201             MOVS     R2,#+1
+   \   0000002C   0x2102             MOVS     R1,#+2
+   \   0000002E   0x2053             MOVS     R0,#+83
+   \   00000030   0x.... 0x....      BL       Log__AddMessage
+     65              }
+     66          
+     67              memset(&SRException_Event_Data, 0, sizeof(SREXCEPTION_EVENT_DATA_TYPE));
+   \                     ??SRException__LogLastException_0: (+1)
+   \   00000034   0x2200             MOVS     R2,#+0
+   \   00000036   0x2110             MOVS     R1,#+16
+   \   00000038   0x0020             MOVS     R0,R4
+   \   0000003A   0x.... 0x....      BL       __aeabi_memset4
+     68          }
+   \   0000003E   0xBD10             POP      {R4,PC}          ;; return
+     69          
+     70          //---------------------------------------------------------------------------------------------------------------------
+     71          /**
+     72           *  @brief      Enter brief description of function.
+     73           *
+     74           *  @param
+     75           *
+     76           *  @return
+     77           */
+
+   \                                 In section .text, align 2, keep-with-next
+     78          void SRException__Queue(SREXCEPTION_EVENT_TYPE event,uint32 data1, uint32 data2)
+     79          {
+   \                     SRException__Queue: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x000D             MOVS     R5,R1
+   \   00000004   0x0014             MOVS     R4,R2
+     80              switch (event)
+   \   00000006   0x0001             MOVS     R1,R0
+   \   00000008   0xD001             BEQ      ??SRException__Queue_0
+   \   0000000A   0x291D             CMP      R1,#+29
+   \   0000000C   0xD114             BNE      ??SRException__Queue_1
+     81              {
+     82                  case SREXCEPTION_NONE:
+     83                  case SREXCEPTION_PRODUCT_LEVEL_RECOVERABLE:
+     84              #if(CLASSB_FEATURE == DISABLED)
+     85                      // This exception is made for the boards which have to manage the Non Volatile Data management by external EEPROM
+     86                  case SREXCEPTION_SRTASKMON_SUSPEND_OVERRUN:
+     87              #endif
+     88                      LOG_ADD_EXCEPTION(EVENT_TYPE, event);
+   \                     ??SRException__Queue_0: (+1)
+   \   0000000E   0x0003             MOVS     R3,R0
+   \   00000010   0x2201             MOVS     R2,#+1
+   \   00000012   0x2100             MOVS     R1,#+0
+   \   00000014   0x2053             MOVS     R0,#+83
+   \   00000016   0x.... 0x....      BL       Log__AddMessage
+     89                      LOG_ADD_EXCEPTION(EVENT_DATA1, data1);
+   \   0000001A   0x002B             MOVS     R3,R5
+   \   0000001C   0xB29B             UXTH     R3,R3
+   \   0000001E   0x2201             MOVS     R2,#+1
+   \   00000020   0x4611             MOV      R1,R2
+   \   00000022   0x2053             MOVS     R0,#+83
+   \   00000024   0x.... 0x....      BL       Log__AddMessage
+     90                      LOG_ADD_EXCEPTION(EVENT_DATA2, data2);
+   \   00000028   0x0023             MOVS     R3,R4
+   \   0000002A   0xB29B             UXTH     R3,R3
+   \   0000002C   0x2201             MOVS     R2,#+1
+   \   0000002E   0x2102             MOVS     R1,#+2
+   \   00000030   0x2053             MOVS     R0,#+83
+   \   00000032   0x.... 0x....      BL       Log__AddMessage
+     91          
+     92                      //NO RESET
+     93                      break;
+   \   00000036   0xBD31             POP      {R0,R4,R5,PC}
+     94                  case SREXCEPTION_SRDATA_NOISE:
+     95                  case SREXCEPTION_APPLICATION_TASK_OVERRUN:
+     96                  case SREXCEPTION_ASSYNCHRONOUS_TASK_OVERRUN:
+     97                  case SREXCEPTION_COMMUNICATION_TASK_OVERRUN:
+     98                  case SREXCEPTION_SRCLOCK_TEST:
+     99                  case SREXCEPTION_SRCLOCK_OVERRUN:
+    100                  case SREXCEPTION_ATOD_CONFIGURATION_CORRUPTION:
+    101                  case SREXCEPTION_ATOD_STUCK:
+    102                  case SREXCEPTION_GPIO_CONFIGURATION_CORRUPTION:
+    103                  case SREXCEPTION_GPIO_DATA_CORRUPTION:
+    104                  case SREXCEPTION_SRDATA_BAD_MEMORY:
+    105                  case SREXCEPTION_SRDATA_NOT_ALLOWED:
+    106                  case SREXCEPTION_HBL_DATA_NOT_CONSISTENT:
+    107                  case SREXCEPTION_SRCHECK_DATA_NOT_CONSISTENT:
+    108                  case SREXCEPTION_SRACTION_DATA_NOT_CONSISTENT:
+    109                  case SREXCEPTION_SRTASKMON_ALREADY_ENABLED:
+    110                  case SREXCEPTION_SRTASKMON_NO_TASKS:
+    111                  case SREXCEPTION_SRTASKMON_TIMEOUT:
+    112                  case SREXCEPTION_SRTASKMON_ENTER_OUTOFRANGE:
+    113                  case SREXCEPTION_SRTASKMON_ENTER_INACTIVE:
+    114                  case SREXCEPTION_SRTASKMON_ALREADY_ENTER:
+    115                  case SREXCEPTION_SRTASKMON_EXIT_OUTOFRANGE:
+    116                  case SREXCEPTION_SRTASKMON_EXIT_INACTIVE:
+    117                  case SREXCEPTION_SRTASKMON_ALREADY_EXIT:
+    118                  case SREXCEPTION_SRTASKSEQ_WRONG_NUMBER:
+    119                  case SREXCEPTION_SRTASKSEQ_INCOMPLETED:
+    120                  case SREXCEPTION_SRTASKSEQ_TIMEOUT:
+    121                  case SREXCEPTION_SRISR_OVERRUN:
+    122                  case SREXCEPTION_SRISR_SEQUENCE_MISMATCH:
+    123                  case SREXCEPTION_SRISR_TIMEOUT:
+    124                  case SREXCEPTION_OS_ERROR:
+    125                  case SREXCEPTION_STACK_OVERFLOW:
+    126                  case SREXCEPTION_PRODUCT_LEVEL_NOT_RECOVERABLE:
+    127                  case SREXCEPTION_MICRO_RAM_INTEGRITY_TEST:
+    128                  case SREXCEPTION_MICRO_FLASH_INTEGRITY_TEST:
+    129                  case SREXCEPTION_MICRO_CPU_REGISTER_TEST:
+    130                  case SREXCEPTION_TIMER_DATA_CORRUPTION:
+    131              #if(CLASSB_FEATURE == ENABLED)
+    132                  case SREXCEPTION_SRTASKMON_SUSPEND_OVERRUN:
+    133              #endif
+    134          
+    135                  default:
+    136          
+    137                      // for this the log will be generated after the micro reset
+    138                      srexceptionforcereset(event, data1, data2);
+   \                     ??SRException__Queue_1: (+1)
+   \   00000038   0x0029             MOVS     R1,R5
+   \   0000003A   0x.... 0x....      BL       srexceptionforcereset
+    139                      break;
+    140              }
+    141          }
+   \   0000003E   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    142          
+    143          //SREXCEPTION_SRTASKMON_SUSPEND_OVERRUN
+    144          //=====================================================================================================================
+    145          //-------------------------------------- Private Functions ------------------------------------------------------------
+    146          //=====================================================================================================================
+
+   \                                 In section .text, align 2, keep-with-next
+    147          static void srexceptionforcereset(SREXCEPTION_EVENT_TYPE event,uint32 data1, uint32 data2)
+    148          {
+   \                     srexceptionforcereset: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    149              SRException_Event_Data.Event        = event;
+   \   00000002   0x....             LDR      R3,??DataTable1
+   \   00000004   0x7018             STRB     R0,[R3, #+0]
+    150              SRException_Event_Data.Data1        = data1;
+   \   00000006   0x6059             STR      R1,[R3, #+4]
+    151              SRException_Event_Data.Data2        = data2;
+   \   00000008   0x609A             STR      R2,[R3, #+8]
+    152              SRException_Event_Data.Signature    = SREXCEPTION_LOGGED_EVENT_IS_VALID;
+   \   0000000A   0x....             LDR      R0,??DataTable1_1  ;; 0xde51
+   \   0000000C   0x8198             STRH     R0,[R3, #+12]
+    153          
+    154              Micro__ForceReset(MICRO_RESET_MODE_COLD);
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x.... 0x....      BL       Micro__ForceReset
+    155          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     SRException_Event_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x0000DE51         DC32     0xde51
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   SRException__LogLastException
+         8   -> Log__AddMessage
+         8   -> __aeabi_memset4
+      16   SRException__Queue
+        16   -> Log__AddMessage
+        16   -> srexceptionforcereset
+       8   srexceptionforcereset
+         8   -> Micro__ForceReset
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+      16  SRException_Event_Data
+      64  SRException__LogLastException
+      64  SRException__Queue
+      22  srexceptionforcereset
+
+ 
+  16 bytes in section .noinit
+ 158 bytes in section .text
+ 
+ 158 bytes of CODE memory
+  16 bytes of DATA memory
+
+Errors: none
+Warnings: none

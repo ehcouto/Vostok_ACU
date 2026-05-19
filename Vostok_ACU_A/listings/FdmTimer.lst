@@ -1,0 +1,731 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:13
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Hbl/acu/FdmTimer/FdmTimer.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\FdmTimer.lst -o
+#        obj\FdmTimer.obj source/XCategory/Hbl/acu/FdmTimer/FdmTimer.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\FdmTimer.lst
+#    Object file  =  obj\FdmTimer.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\acu\FdmTimer\FdmTimer.c
+      1          /**
+      2           * @file
+      3           * @brief       A Fault Debounce module that uses time to debounce error conditions.
+      4           *
+      5           * @copyright   Copyright 2016,2018 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+      6           */
+      7          
+      8          //  --- Include Files -------------------------------------------------------------------------------------------------
+      9          
+     10          // -- This Module --
+     11          #include "C_Extensions.h"
+     12          #include "FdmTimer.h"
+     13          
+     14          // -- Other Modules --
+     15          
+     16          
+     17          //  --- Private Properties --------------------------------------------------------------------------------------------
+     18          
+     19          
+     20          // -- Private Variable Definitions --
+     21          
+     22          //! The maximum number of debounce data elements found in a single setting file entry (so far).
+     23          //! If this value is 2, then the old setting file format is being used.
+
+   \                                 In section .bss, align 1
+     24          static uint8 Fdm_Timer_Max_Debounce_Array_Size;
+   \                     Fdm_Timer_Max_Debounce_Array_Size:
+   \   00000000                      DS8 1
+     25          
+     26          
+     27          // -- Private Flash-Based Constants --
+     28          
+     29          //! Multipliers used to convert the delay to deciseconds.
+
+   \                                 In section .text, align 4, keep-with-next
+     30          const uint16 PRESCALAR_MULTIPLIER[] =
+   \                     PRESCALAR_MULTIPLIER:
+   \   00000000   0x0001 0x000A      DC16 1, 10, 100, 600, 6000
+   \              0x0064 0x0258
+   \              0x1770       
+   \   0000000A   0x00 0x00          DC8 0, 0
+     31          {
+     32              1,                                              //!< 1 delay unit = 100 milliseconds
+     33              10,                                             //!< 1 delay unit = 1 second
+     34              100,                                            //!< 1 delay unit = 10 seconds
+     35              600,                                            //!< 1 delay unit = 1 minute
+     36              6000                                            //!< 1 delay unit = 10 minutes
+     37          };
+     38          
+     39          
+     40          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+     41          
+     42          static BOOL_TYPE SetupTimer(uint8 delay, uint8 prescalar, struct FDM_TIMER_DATA_STRUCT* data);
+     43          
+     44          
+     45          //=====================================================================================================================
+     46          //  --- Public Methods ------------------------------------------------------------------------------------------------
+     47          //=====================================================================================================================
+     48          
+     49          
+     50          //---------------------------------------------------------------------------------------------------------------------
+     51          /**
+     52           * Setup the fault debounce module's data based on the parameters provided.
+     53           * @param data = Pointer to the data used by the Fault Debounce module.
+     54           * @param params = Pointer to setting file configuration data for the Fault Debounce module.
+     55           * @return The event that should be triggered on the parent state machine.
+     56           */
+
+   \                                 In section .text, align 2, keep-with-next
+     57          FAULT_DEBOUNCE_EVENT_TYPE FdmTimer__Setup(FAULT_DEBOUNCE_TYPE* config, FAULT_DEBOUNCE_PROPERTIES_TYPE* data)
+     58          {
+   \                     FdmTimer__Setup: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     59              data->Timer.Detecting = TRUE;
+   \   00000002   0x680A             LDR      R2,[R1, #+0]
+   \   00000004   0x2380             MOVS     R3,#+128
+   \   00000006   0x061B             LSLS     R3,R3,#+24       ;; #-2147483648
+   \   00000008   0x4313             ORRS     R3,R3,R2
+   \   0000000A   0x600B             STR      R3,[R1, #+0]
+     60              if (SetupTimer(config[0].Delay, config[0].Prescalar, &data->Timer) == FALSE)
+   \   0000000C   0x000A             MOVS     R2,R1
+   \   0000000E   0x7801             LDRB     R1,[R0, #+0]
+   \   00000010   0x0749             LSLS     R1,R1,#+29
+   \   00000012   0x0F49             LSRS     R1,R1,#+29
+   \   00000014   0x7840             LDRB     R0,[R0, #+1]
+   \   00000016   0x.... 0x....      BL       SetupTimer
+   \   0000001A   0x2800             CMP      R0,#+0
+   \   0000001C   0xD101             BNE      ??FdmTimer__Setup_0
+     61              {
+     62                  return FAULT_DEBOUNCE_EVENT_NEXT;
+   \   0000001E   0x2002             MOVS     R0,#+2
+   \   00000020   0xBD02             POP      {R1,PC}
+     63              }
+     64          
+     65              return FAULT_DEBOUNCE_EVENT_NONE;
+   \                     ??FdmTimer__Setup_0: (+1)
+   \   00000022   0x2000             MOVS     R0,#+0
+   \   00000024   0xBD02             POP      {R1,PC}          ;; return
+     66          }
+     67          
+     68          
+     69          //---------------------------------------------------------------------------------------------------------------------
+     70          /**
+     71           * Manage the new detection of an error condition.
+     72           * @param data = Pointer to the data used by the Fault Debounce module.
+     73           * @return The event that should be triggered on the parent state machine.
+     74           */
+
+   \                                 In section .text, align 2, keep-with-next
+     75          FAULT_DEBOUNCE_EVENT_TYPE FdmTimer__ConditionDetected(FAULT_DEBOUNCE_TYPE* config, FAULT_DEBOUNCE_PROPERTIES_TYPE* data)
+     76          {
+   \                     FdmTimer__ConditionDetected: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     77              if (data->Timer.Detecting == FALSE)
+   \   00000002   0x680A             LDR      R2,[R1, #+0]
+   \   00000004   0x0FD2             LSRS     R2,R2,#+31
+   \   00000006   0xD102             BNE      ??FdmTimer__ConditionDetected_0
+     78              {
+     79                  return FdmTimer__Setup(config, data);
+   \   00000008   0x.... 0x....      BL       FdmTimer__Setup
+   \   0000000C   0xBD02             POP      {R1,PC}
+     80              }
+     81              return FAULT_DEBOUNCE_EVENT_NONE;
+   \                     ??FdmTimer__ConditionDetected_0: (+1)
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0xBD02             POP      {R1,PC}          ;; return
+     82          }
+     83          
+     84          
+     85          //---------------------------------------------------------------------------------------------------------------------
+     86          /**
+     87           * Manage the discovered absence of an error condition.
+     88           * @param data = Pointer to the data used by the Fault Debounce module.
+     89           * @return The event that should be triggered on the parent state machine.
+     90           */
+
+   \                                 In section .text, align 2, keep-with-next
+     91          FAULT_DEBOUNCE_EVENT_TYPE FdmTimer__ConditionRemoved(FAULT_DEBOUNCE_TYPE* config, FAULT_DEBOUNCE_PROPERTIES_TYPE* data)
+     92          {
+   \                     FdmTimer__ConditionRemoved: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     93              if (data->Timer.Detecting == TRUE)
+   \   00000002   0x680A             LDR      R2,[R1, #+0]
+   \   00000004   0x0FD3             LSRS     R3,R2,#+31
+   \   00000006   0xD016             BEQ      ??FdmTimer__ConditionRemoved_0
+     94              {
+     95                  data->Timer.Detecting = FALSE;
+   \   00000008   0x0052             LSLS     R2,R2,#+1
+   \   0000000A   0x0852             LSRS     R2,R2,#+1
+   \   0000000C   0x600A             STR      R2,[R1, #+0]
+     96                  uint8 index = (Fdm_Timer_Max_Debounce_Array_Size <= 2) ? 0 : 2;
+   \   0000000E   0x....             LDR      R2,??DataTable2
+   \   00000010   0x7812             LDRB     R2,[R2, #+0]
+   \   00000012   0x2A03             CMP      R2,#+3
+   \   00000014   0xDA01             BGE      ??FdmTimer__ConditionRemoved_1
+   \   00000016   0x2200             MOVS     R2,#+0
+   \   00000018   0xE000             B        ??FdmTimer__ConditionRemoved_2
+   \                     ??FdmTimer__ConditionRemoved_1: (+1)
+   \   0000001A   0x2202             MOVS     R2,#+2
+     97                  if (SetupTimer(config[index].Delay, config[index].Prescalar, &data->Timer) == FALSE)
+   \                     ??FdmTimer__ConditionRemoved_2: (+1)
+   \   0000001C   0x0052             LSLS     R2,R2,#+1
+   \   0000001E   0x1880             ADDS     R0,R0,R2
+   \   00000020   0x000A             MOVS     R2,R1
+   \   00000022   0x7801             LDRB     R1,[R0, #+0]
+   \   00000024   0x0749             LSLS     R1,R1,#+29
+   \   00000026   0x0F49             LSRS     R1,R1,#+29
+   \   00000028   0x7840             LDRB     R0,[R0, #+1]
+   \   0000002A   0x.... 0x....      BL       SetupTimer
+   \   0000002E   0x2800             CMP      R0,#+0
+   \   00000030   0xD101             BNE      ??FdmTimer__ConditionRemoved_0
+     98                  {
+     99                      return FAULT_DEBOUNCE_EVENT_CANCEL;
+   \   00000032   0x2003             MOVS     R0,#+3
+   \   00000034   0xBD02             POP      {R1,PC}
+    100                  }
+    101              }
+    102              return FAULT_DEBOUNCE_EVENT_NONE;
+   \                     ??FdmTimer__ConditionRemoved_0: (+1)
+   \   00000036   0x2000             MOVS     R0,#+0
+   \   00000038   0xBD02             POP      {R1,PC}          ;; return
+    103          }
+    104          
+    105          
+    106          //---------------------------------------------------------------------------------------------------------------------
+    107          /**
+    108           * Manage the passing of time while debouncing a fault.
+    109           * @param data = Pointer to the data used by the Fault Debounce module.
+    110           * @return The event that should be triggered on the parent state machine.
+    111           */
+
+   \                                 In section .text, align 2, keep-with-next
+    112          FAULT_DEBOUNCE_EVENT_TYPE FdmTimer__TimePassed(FAULT_DEBOUNCE_TYPE* config, FAULT_DEBOUNCE_PROPERTIES_TYPE* data)
+    113          {
+    114              if (data->Timer.Time > 1)
+   \                     FdmTimer__TimePassed: (+1)
+   \   00000000   0x6808             LDR      R0,[R1, #+0]
+   \   00000002   0x0042             LSLS     R2,R0,#+1
+   \   00000004   0x0852             LSRS     R2,R2,#+1
+   \   00000006   0x2A02             CMP      R2,#+2
+   \   00000008   0xDB09             BLT      ??FdmTimer__TimePassed_0
+    115              {
+    116                  data->Timer.Time--;
+   \   0000000A   0x2280             MOVS     R2,#+128
+   \   0000000C   0x0612             LSLS     R2,R2,#+24       ;; #-2147483648
+   \   0000000E   0x4002             ANDS     R2,R2,R0
+   \   00000010   0x1E40             SUBS     R0,R0,#+1
+   \   00000012   0x0040             LSLS     R0,R0,#+1
+   \   00000014   0x0840             LSRS     R0,R0,#+1
+   \   00000016   0x4310             ORRS     R0,R0,R2
+   \   00000018   0x6008             STR      R0,[R1, #+0]
+    117              }
+    118              else if (data->Timer.Detecting == TRUE)
+    119              {
+    120                  return FAULT_DEBOUNCE_EVENT_NEXT;
+    121              }
+    122              else
+    123              {
+    124                  return FAULT_DEBOUNCE_EVENT_CANCEL;
+    125              }
+    126          
+    127              return FAULT_DEBOUNCE_EVENT_NONE;
+   \   0000001A   0x2000             MOVS     R0,#+0
+   \   0000001C   0x4770             BX       LR
+   \                     ??FdmTimer__TimePassed_0: (+1)
+   \   0000001E   0x0FC0             LSRS     R0,R0,#+31
+   \   00000020   0xD001             BEQ      ??FdmTimer__TimePassed_1
+   \   00000022   0x2002             MOVS     R0,#+2
+   \   00000024   0x4770             BX       LR
+   \                     ??FdmTimer__TimePassed_1: (+1)
+   \   00000026   0x2003             MOVS     R0,#+3
+   \   00000028   0x4770             BX       LR               ;; return
+    128          }
+    129          
+    130          
+    131          //---------------------------------------------------------------------------------------------------------------------
+    132          /**
+    133           * Let the FdmTimer module know the number of bytes found in debounce data.
+    134           * This function is used to detect the difference between old and new setting files.
+    135           * For older setting files, this value will always be 2 words (4 bytes).
+    136           * Newer setting files may have 2, 3, or 4 words (4 to 8 bytes).
+    137           * @param debounce_data_size = Number of bytes in a single displacement of debounce data.
+    138           */
+
+   \                                 In section .text, align 2, keep-with-next
+    139          void FdmTimer__DebounceDataSize(uint8 debounce_data_size)
+    140          {
+    141              uint8 array_size = debounce_data_size / sizeof(FAULT_DEBOUNCE_TYPE);
+   \                     FdmTimer__DebounceDataSize: (+1)
+   \   00000000   0x0840             LSRS     R0,R0,#+1
+    142              if (Fdm_Timer_Max_Debounce_Array_Size < array_size)
+   \   00000002   0x....             LDR      R1,??DataTable2
+   \   00000004   0x780A             LDRB     R2,[R1, #+0]
+   \   00000006   0x0003             MOVS     R3,R0
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD200             BCS      ??FdmTimer__DebounceDataSize_0
+   \   0000000C   0x001A             MOVS     R2,R3
+   \                     ??FdmTimer__DebounceDataSize_0: (+1)
+   \   0000000E   0x700A             STRB     R2,[R1, #+0]
+    143              {
+    144                  Fdm_Timer_Max_Debounce_Array_Size = array_size;
+    145              }
+    146          }
+   \   00000010   0x4770             BX       LR               ;; return
+    147          
+    148          
+    149          //=====================================================================================================================
+    150          //  --- Private Methods -----------------------------------------------------------------------------------------------
+    151          //=====================================================================================================================
+    152          
+    153          
+    154          //---------------------------------------------------------------------------------------------------------------------
+    155          /**
+    156           * Setup the timer to debounce the error condition.
+    157           * Used to debounce both the detection and removal of the error condition.
+    158           * @param delay = The delay set in the setting file data.
+    159           * @param prescalar = The unit of measure for the delay set in the setting file.
+    160           * @param data = Pointer to the data structure used by the timer.
+    161           * @return TRUE if the timer was setup with a non-zero value.
+    162           *          FALSE if the timer value should be zero.
+    163           */
+
+   \                                 In section .text, align 4, keep-with-next
+    164          static BOOL_TYPE SetupTimer(uint8 delay, uint8 prescalar, struct FDM_TIMER_DATA_STRUCT* data)
+    165          {
+   \                     SetupTimer: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    166              if ((delay > 0) &&
+    167                  (prescalar < ELEMENTS_IN_ARRAY(PRESCALAR_MULTIPLIER)))
+   \   00000002   0x0003             MOVS     R3,R0
+   \   00000004   0xD00D             BEQ      ??SetupTimer_0
+   \   00000006   0x2905             CMP      R1,#+5
+   \   00000008   0xD20B             BCS      ??SetupTimer_0
+    168              {
+    169                  data->Time = delay * PRESCALAR_MULTIPLIER[prescalar];
+   \   0000000A   0x6813             LDR      R3,[R2, #+0]
+   \   0000000C   0x2480             MOVS     R4,#+128
+   \   0000000E   0x0624             LSLS     R4,R4,#+24       ;; #-2147483648
+   \   00000010   0x4023             ANDS     R3,R3,R4
+   \   00000012   0xBF00             Nop      
+   \   00000014   0x....             ADR.N    R4,PRESCALAR_MULTIPLIER
+   \   00000016   0x0049             LSLS     R1,R1,#+1
+   \   00000018   0x5A61             LDRH     R1,[R4, R1]
+   \   0000001A   0x4348             MULS     R0,R1,R0
+   \   0000001C   0x4318             ORRS     R0,R0,R3
+   \   0000001E   0x6010             STR      R0,[R2, #+0]
+   \   00000020   0xE004             B        ??SetupTimer_1
+    170              }
+    171              else
+    172              {
+    173                  data->Time = 0;
+   \                     ??SetupTimer_0: (+1)
+   \   00000022   0x6810             LDR      R0,[R2, #+0]
+   \   00000024   0x2180             MOVS     R1,#+128
+   \   00000026   0x0609             LSLS     R1,R1,#+24       ;; #-2147483648
+   \   00000028   0x4008             ANDS     R0,R0,R1
+   \   0000002A   0x6010             STR      R0,[R2, #+0]
+    174              }
+    175          
+    176              return (BOOL_TYPE)(data->Time > 0);
+   \                     ??SetupTimer_1: (+1)
+   \   0000002C   0x6810             LDR      R0,[R2, #+0]
+   \   0000002E   0x0040             LSLS     R0,R0,#+1
+   \   00000030   0x0840             LSRS     R0,R0,#+1
+   \   00000032   0x2801             CMP      R0,#+1
+   \   00000034   0xDB01             BLT      ??SetupTimer_2
+   \   00000036   0x2001             MOVS     R0,#+1
+   \   00000038   0xE000             B        ??SetupTimer_3
+   \                     ??SetupTimer_2: (+1)
+   \   0000003A   0x2000             MOVS     R0,#+0
+   \                     ??SetupTimer_3: (+1)
+   \   0000003C   0xBC10             POP      {R4}
+   \   0000003E   0x4770             BX       LR               ;; return
+    177          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x........         DC32     Fdm_Timer_Max_Debounce_Array_Size
+    178          
+    179          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   FdmTimer__ConditionDetected
+         8   -> FdmTimer__Setup
+       8   FdmTimer__ConditionRemoved
+         8   -> SetupTimer
+       0   FdmTimer__DebounceDataSize
+       8   FdmTimer__Setup
+         8   -> SetupTimer
+       0   FdmTimer__TimePassed
+       4   SetupTimer
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+      18  FdmTimer__ConditionDetected
+      58  FdmTimer__ConditionRemoved
+      18  FdmTimer__DebounceDataSize
+      38  FdmTimer__Setup
+      42  FdmTimer__TimePassed
+       1  Fdm_Timer_Max_Debounce_Array_Size
+      12  PRESCALAR_MULTIPLIER
+      64  SetupTimer
+
+ 
+   1 byte  in section .bss
+ 254 bytes in section .text
+ 
+ 254 bytes of CODE memory
+   1 byte  of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,651 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:35
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Common/acu/CommonDish/PumpCommand/PumpCommand.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\PumpCommand.lst -o
+#        obj\PumpCommand.obj
+#        source/Category/Common/acu/CommonDish/PumpCommand/PumpCommand.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\PumpCommand.lst
+#    Object file  =  obj\PumpCommand.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Common\acu\CommonDish\PumpCommand\PumpCommand.c
+      1          /**
+      2           * @file
+      3           * @brief       Simplifies formatting of motor commands to control the drum through HBL.
+      4           *
+      5           * @details
+      6           *
+      7           * @copyright   Copyright 2016 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+      8           */
+      9          
+     10          //  --- Include Files -------------------------------------------------------------------------------------------------
+     11          
+     12          // -- This Module --
+     13          #include "PumpCommand.h"
+     14          
+     15          #include "SystemConfig.h"
+     16          #include "ExternalMotorDeclare.h"
+     17          #include <string.h>
+     18          
+     19          
+     20          //  --- Private Declarations ------------------------------------------------------------------------------------------
+     21          
+     22          
+     23          // -- Private Constant Declarations --
+     24          
+     25          
+     26          // -- Private Enumerated Constant Declarations --
+     27          
+     28          
+     29          // -- Private Structure Type Declarations --
+     30          
+     31          
+     32          //  --- Private Definitions -------------------------------------------------------------------------------------------
+     33          
+     34          
+     35          // -- Private Flash-Based Constant Definitions --
+     36          
+     37          
+     38          // -- Private Variable Definitions --
+     39          
+     40          
+     41          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+     42          
+     43          //=====================================================================================================================
+     44          //  --- Public Functions ----------------------------------------------------------------------------------------------
+     45          //=====================================================================================================================
+     46          
+     47          
+     48          //---------------------------------------------------------------------------------------------------------------------
+     49          /**
+     50           * Send a command to maintain the drum command that was previously sent.
+     51           * @param priority = The priority to use when asking to maintain the previous command
+     52           * @param pump = The pump to use when asking to maintain the previous command
+     53           */
+
+   \                                 In section .text, align 2, keep-with-next
+     54          void PumpCommand__MaintainPreviousCommand(HBL_PRIORITY_TYPE priority, HBL_LOAD_ENUM_TYPE pump)
+     55          {
+   \                     PumpCommand__MaintainPreviousCommand: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+   \   00000002   0x0003             MOVS     R3,R0
+   \   00000004   0x0008             MOVS     R0,R1
+     56              uint8 cmd = EXTERNAL_MOTOR_NO_CHANGE;
+   \   00000006   0x2101             MOVS     R1,#+1
+   \   00000008   0x466A             MOV      R2,SP
+   \   0000000A   0x7011             STRB     R1,[R2, #+0]
+     57              (void)Hbl__SetLoadRequestByLoadID(pump, priority, &cmd);
+   \   0000000C   0x0019             MOVS     R1,R3
+   \   0000000E   0x.... 0x....      BL       Hbl__SetLoadRequestByLoadID
+     58          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+     59          
+     60          //---------------------------------------------------------------------------------------------------------------------
+     61          /**
+     62           * Send a run command that specifies the pump acceleration.
+     63           * @param velocity = The pump target velocity in rpm
+     64           * @param acceleration = The pump acceleration rate in rpm/s
+     65           * @param priority = The priority to use to run the motor
+     66           * @param pump = The pump to use to run
+     67           */
+
+   \                                 In section .text, align 4, keep-with-next
+     68          void PumpCommand__Run(sint16 velocity, uint16 acceleration, HBL_PRIORITY_TYPE priority, HBL_LOAD_ENUM_TYPE pump)
+     69          {
+   \                     PumpCommand__Run: (+1)
+   \   00000000   0xB5F0             PUSH     {R4-R7,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+   \   00000004   0x0014             MOVS     R4,R2
+     70              EMP_BUILD_RUN_COMMAND(run, velocity, acceleration);
+   \   00000006   0x466A             MOV      R2,SP
+   \   00000008   0x....             ADR.N    R5,?_1
+   \   0000000A   0xCDC0             LDM      R5!,{R6,R7}
+   \   0000000C   0xC2C0             STM      R2!,{R6,R7}
+   \   0000000E   0x466A             MOV      R2,SP
+   \   00000010   0x0005             MOVS     R5,R0
+   \   00000012   0x7055             STRB     R5,[R2, #+1]
+   \   00000014   0xB280             UXTH     R0,R0
+   \   00000016   0x0A00             LSRS     R0,R0,#+8
+   \   00000018   0x7090             STRB     R0,[R2, #+2]
+   \   0000001A   0x0008             MOVS     R0,R1
+   \   0000001C   0x70D0             STRB     R0,[R2, #+3]
+   \   0000001E   0x0A00             LSRS     R0,R0,#+8
+   \   00000020   0x7110             STRB     R0,[R2, #+4]
+     71              (void)Hbl__SetLoadRequestByLoadID(pump, priority, run);
+   \   00000022   0x0021             MOVS     R1,R4
+   \   00000024   0x0018             MOVS     R0,R3
+   \   00000026   0x.... 0x....      BL       Hbl__SetLoadRequestByLoadID
+     72          }
+   \   0000002A   0xBDF7             POP      {R0-R2,R4-R7,PC}  ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_1:
+   \   00000000   0x03 0x00          DC8 3, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+     73          
+     74          
+     75          //---------------------------------------------------------------------------------------------------------------------
+     76          /**
+     77           * Send a run command that does not specify the drum acceleration.
+     78           * @param velocity = The pump target velocity in rpm
+     79           * @param priority = The priority to use to run the motor
+     80           * @param pump = The pump to use to run
+     81           */
+
+   \                                 In section .text, align 2, keep-with-next
+     82          void PumpCommand__RunWithDefAccel(sint16 velocity, HBL_PRIORITY_TYPE priority, HBL_LOAD_ENUM_TYPE pump)
+     83          {
+   \                     PumpCommand__RunWithDefAccel: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     84              PumpCommand__Run(velocity, DEFAULT_ACCELERATION, priority, pump);
+   \   00000002   0x0013             MOVS     R3,R2
+   \   00000004   0x000A             MOVS     R2,R1
+   \   00000006   0x21FA             MOVS     R1,#+250
+   \   00000008   0x0049             LSLS     R1,R1,#+1        ;; #+500
+   \   0000000A   0x.... 0x....      BL       PumpCommand__Run
+     85          }
+   \   0000000E   0xBD01             POP      {R0,PC}          ;; return
+     86          
+     87          //---------------------------------------------------------------------------------------------------------------------
+     88          /**
+     89           * Send a deblocking command that specifies the pump acceleration.
+     90           * @param velocity = The pump target velocity in rpm
+     91           * @param acceleration = The pump acceleration rate in rpm/s
+     92           * @param priority = The priority to use to run the motor
+     93           * @param pump = The pump to use to run
+     94           */
+
+   \                                 In section .text, align 4, keep-with-next
+     95          void PumpCommand__Deblocking(sint16 velocity, uint16 acceleration, HBL_PRIORITY_TYPE priority, HBL_LOAD_ENUM_TYPE pump)
+     96          {
+   \                     PumpCommand__Deblocking: (+1)
+   \   00000000   0xB5F0             PUSH     {R4-R7,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+   \   00000004   0x0014             MOVS     R4,R2
+     97          	EMP_BUILD_DEBLOCKING_COMMAND(run, velocity, acceleration);
+   \   00000006   0x466A             MOV      R2,SP
+   \   00000008   0x....             ADR.N    R5,?_2
+   \   0000000A   0xCDC0             LDM      R5!,{R6,R7}
+   \   0000000C   0xC2C0             STM      R2!,{R6,R7}
+   \   0000000E   0x466A             MOV      R2,SP
+   \   00000010   0x0005             MOVS     R5,R0
+   \   00000012   0x70D5             STRB     R5,[R2, #+3]
+   \   00000014   0xB280             UXTH     R0,R0
+   \   00000016   0x0A00             LSRS     R0,R0,#+8
+   \   00000018   0x7110             STRB     R0,[R2, #+4]
+   \   0000001A   0x0008             MOVS     R0,R1
+   \   0000001C   0x7150             STRB     R0,[R2, #+5]
+   \   0000001E   0x0A00             LSRS     R0,R0,#+8
+   \   00000020   0x7190             STRB     R0,[R2, #+6]
+     98          	(void)Hbl__SetLoadRequestByLoadID(pump, priority, run);
+   \   00000022   0x0021             MOVS     R1,R4
+   \   00000024   0x0018             MOVS     R0,R3
+   \   00000026   0x.... 0x....      BL       Hbl__SetLoadRequestByLoadID
+     99          }
+   \   0000002A   0xBDF7             POP      {R0-R2,R4-R7,PC}  ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_2:
+   \   00000000   0x05 0x00          DC8 5, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+    100          
+    101          //---------------------------------------------------------------------------------------------------------------------
+    102          /**
+    103           * Send a stop command to stop pump.
+    104           * @param deceleration = The pump deceleration rate in rpm/s
+    105           * @param priority = The priority to use to stop the motor
+    106           * @param pump = The pump to use to stop
+    107           */
+
+   \                                 In section .text, align 4, keep-with-next
+    108          void PumpCommand__Stop(uint16 deceleration, HBL_PRIORITY_TYPE priority, HBL_LOAD_ENUM_TYPE pump)
+    109          {
+   \                     PumpCommand__Stop: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0013             MOVS     R3,R2
+    110          	EMP_BUILD_STOP_COMMAND(stop, deceleration);
+   \   00000004   0x466A             MOV      R2,SP
+   \   00000006   0xBF00             Nop      
+   \   00000008   0x....             ADR.N    R4,?_3
+   \   0000000A   0x6825             LDR      R5,[R4, #0]
+   \   0000000C   0x6015             STR      R5,[R2, #0]
+   \   0000000E   0x0004             MOVS     R4,R0
+   \   00000010   0x7054             STRB     R4,[R2, #+1]
+   \   00000012   0x0A00             LSRS     R0,R0,#+8
+   \   00000014   0x7090             STRB     R0,[R2, #+2]
+    111          	(void)Hbl__SetLoadRequestByLoadID(pump, priority, stop);
+   \   00000016   0x0018             MOVS     R0,R3
+   \   00000018   0x.... 0x....      BL       Hbl__SetLoadRequestByLoadID
+    112          }
+   \   0000001C   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_3:
+   \   00000000   0x02 0x00          DC8 2, 0, 0, 0
+   \              0x00 0x00    
+    113          
+    114          //---------------------------------------------------------------------------------------------------------------------
+    115          /**
+    116           * Send a Stop command that does not specify the pump deceleration.
+    117            * @param priority = The priority to use to run the motor
+    118            * @param pump = The pump to use to stop
+    119           */
+
+   \                                 In section .text, align 4, keep-with-next
+    120          void PumpCommand__StopWithDefDecel(HBL_PRIORITY_TYPE priority, HBL_LOAD_ENUM_TYPE pump)
+    121          {
+   \                     PumpCommand__StopWithDefDecel: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0xB082             SUB      SP,SP,#+8
+   \   00000004   0x0003             MOVS     R3,R0
+   \   00000006   0x0008             MOVS     R0,R1
+    122          	EMP_BUILD_STOP_COMMAND(stop, DEFAULT_DECELERATION);
+   \   00000008   0x4669             MOV      R1,SP
+   \   0000000A   0xBF00             Nop      
+   \   0000000C   0x....             ADR.N    R2,?_0
+   \   0000000E   0x6814             LDR      R4,[R2, #0]
+   \   00000010   0x600C             STR      R4,[R1, #0]
+    123          	(void)Hbl__SetLoadRequestByLoadID(pump, priority, stop);
+   \   00000012   0x466A             MOV      R2,SP
+   \   00000014   0x0019             MOVS     R1,R3
+   \   00000016   0x.... 0x....      BL       Hbl__SetLoadRequestByLoadID
+    124          }
+   \   0000001A   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_0:
+   \   00000000   0x02 0xF4          DC8 2, 244, 1, 0
+   \              0x01 0x00    
+    125          
+    126          //=====================================================================================================================
+    127          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    128          //=====================================================================================================================
+    129          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      32   PumpCommand__Deblocking
+        32   -> Hbl__SetLoadRequestByLoadID
+       8   PumpCommand__MaintainPreviousCommand
+         8   -> Hbl__SetLoadRequestByLoadID
+      32   PumpCommand__Run
+        32   -> Hbl__SetLoadRequestByLoadID
+       8   PumpCommand__RunWithDefAccel
+         8   -> PumpCommand__Run
+      16   PumpCommand__Stop
+        16   -> Hbl__SetLoadRequestByLoadID
+      16   PumpCommand__StopWithDefDecel
+        16   -> Hbl__SetLoadRequestByLoadID
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?_0
+       8  ?_1
+       8  ?_2
+       4  ?_3
+      44  PumpCommand__Deblocking
+      20  PumpCommand__MaintainPreviousCommand
+      44  PumpCommand__Run
+      16  PumpCommand__RunWithDefAccel
+      30  PumpCommand__Stop
+      28  PumpCommand__StopWithDefDecel
+
+ 
+ 206 bytes in section .text
+ 
+ 206 bytes of CODE memory
+
+Errors: none
+Warnings: none

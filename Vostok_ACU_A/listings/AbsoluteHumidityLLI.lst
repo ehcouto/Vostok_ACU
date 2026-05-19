@@ -1,0 +1,1328 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:16:59
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI/AbsoluteHumidityLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\AbsoluteHumidityLLI.lst -o obj\AbsoluteHumidityLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI/AbsoluteHumidityLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\AbsoluteHumidityLLI.lst
+#    Object file  =  obj\AbsoluteHumidityLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\AbsoluteHumidityLLI\AbsoluteHumidityLLI.c
+      1          /**
+      2           *  @file       AbsoluteHumidityLLI.c
+      3           *
+      4           *  @brief      Module for AbsoluteHumidityLLI readings
+      5           *
+      6           *  @details    This module perform reading of Absolute humidity and perform some filters.
+      7           *
+      8           *              Measuring principle:
+      9           *
+     10           *              The absolute humidity sensor consists of two thermistors which are coupled in series,  when LLI enable pin is high, it will be fed with a
+     11           *              current of approximately 30 mA, which heat them to a working temperature of around 150C.
+     12           *
+     13           *              These two thermistors are mounted in two separate cavities, and connected to a measuring bridge. One cavity is hermetically sealed, while
+     14           *              the other is open to a surrounding air. Humid air going past this cavity will cool the thermistor, causing its resistance to increase and
+     15           *              changing the bridge balance. The bridge has a feedback output connected to LLI feedback pin so that LLI can detect the bridge balance,and
+     16           *              a pulse input connected to  LLI PWM pin so that  LLI can adjust the PWM output to pulse the bridge's resistor  and compensate the voltage
+     17           *              difference to get the bridge balance.
+     18           *
+     19           *              Constantly adjusting PWM output,so that the bridge is always in balance,and the duty can be used to reflect the change of air humidity.
+     20           *
+     21                @startuml{AbsoluteHumidityLLI_SM.png}
+     22                  title AbsoluteHumidityLLI State Machine
+     23          
+     24                  ' Use State = Absolute_Humidity_LLI_Data[LLI_Index].State
+     25                  [*] --> HEATING
+     26          
+     27                  ' HEATING State - request LLI heating state on entry and wait for event in do
+     28                      HEATING: entry /\t CounterInitialize() \n\t\t ErrorStatusInitialize() \n\t\t AbsoluteHumidityHeatingOn() \n\t\t AbsoluteHumidityPWMStartForHeating()
+     29                      HEATING: do /\t\t MonitorHeating()
+     30                      HEATING --> BALANCING: evBalancing
+     31          
+     32                  ' BALANCING State - request LLI balancing state on entry and wait for event in do
+     33                      BALANCING: entry /\t CounterInitialize() \n\t\t AbsoluteHumidityPWMStartForBalancing()
+     34                      BALANCING: do /\t\t ExecuteSuccessiveApproximation()
+     35                      BALANCING --> REGULATING: evRegulating
+     36          
+     37                  ' REGULATING State - request LLI regulating state on entry and wait for event in do
+     38                      REGULATING: entry / CounterInitialize()
+     39                      REGULATING: do /\t ExecuteFineTuning() \n\t MonitorUnbalanced()
+     40                      REGULATING --> BALANCED: evBalanced
+     41                      REGULATING --> BALANCING: evBalancing
+     42          
+     43                  ' BALANCED State - request LLI balanced state on entry and wait for event in do
+     44                      BALANCED: entry / CounterInitialize()
+     45                      BALANCED: do /\t ExecuteFineTuning() \n\t MonitorBalanced()
+     46                      BALANCED --> BALANCING: evBalancing
+     47          
+     48              @enduml
+     49           *
+     50           *
+     51           *  @copyright  Copyright 2018 Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     52           */
+     53          //---------------------------------------------------------------------------------------------------------------------
+     54          //---------------------------------------------------------------------------------------------------------------------
+     55          
+     56          //-------------------------------------- Include Files ----------------------------------------------------------------
+     57          
+     58          //lint -e766 Suppress Info: header not used in module 'VirtualGI.c'
+     59          #include "SystemConfig.h"
+     60          
+     61          #if (HBL_LLI_NUM_ABSOLUTEHUMIDITY > 0)
+     62          #include "AbsoluteHumidityLLI.h"
+     63          #include "Hbl.h"
+     64          #include "Log.h"
+     65          #include "Gpio.h"
+     66          #include "Timer.h"
+     67          #include "VirtualPin.h"
+     68          #include "RTOS.h"
+     69          
+     70          #include <string.h>
+     71          #include <limits.h>
+     72          
+     73          //  --- Private Declarations ------------------------------------------------------------------------------------------
+     74          
+     75          //=====================================================================================================================
+     76          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Absolute Humidity LLI State Machine
+     77          //=====================================================================================================================
+     78          // !! StateEngineCrank cannot update this code if you change the header !!
+     79          
+     80          
+     81          //! Unique names used to identify states of the Absolute Humidity LLI state machine.
+     82          typedef enum ABSOLUTE_HUMIDITY_LLI_STATE_ENUM
+     83          {
+     84              STATE_ABSOLUTE_HUMIDITY_LLI_NONE       = 0,
+     85          
+     86              STATE_ABSOLUTE_HUMIDITY_LLI_HEATING    = 1,     //!< (initial_state)
+     87              STATE_ABSOLUTE_HUMIDITY_LLI_BALANCING  = 2,
+     88              STATE_ABSOLUTE_HUMIDITY_LLI_REGULATING = 3,
+     89              STATE_ABSOLUTE_HUMIDITY_LLI_BALANCED   = 4,
+     90          
+     91              STATE_ABSOLUTE_HUMIDITY_LLI_END        = 5
+     92          } ABSOLUTE_HUMIDITY_LLI_STATE_TYPE;
+     93          
+     94          //! The transition variable for the Absolute Humidity LLI state machine.
+     95          //! Flag used by the state machine to track when a transition occurs in the middle of a state's
+     96          //! Entry() or Do() action that contains more than one function.
+     97          static BOOL_TYPE Absolute_Humidity_LLI_Transitioned;
+     98          
+     99          // -- Private Function Prototypes used by the state machine for customization functions --
+    100          static void AbsoluteHumidityHeatingOn(void);
+    101          static void AbsoluteHumidityPWMStartForBalancing(void);
+    102          static void AbsoluteHumidityPWMStartForHeating(void);
+    103          static void CounterInitialize(void);
+    104          static void ErrorStatusInitialize(void);
+    105          static void ExecuteFineTuning(void);
+    106          static void ExecuteSuccessiveApproximation(void);
+    107          static void MonitorBalanced(void);
+    108          static void MonitorHeating(void);
+    109          static void MonitorUnbalanced(void);
+    110          
+    111          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+    112          static void AbsoluteHumidityLLIExecute(void);
+    113          static void AbsoluteHumidityLLIInitialize(void);
+    114          static void EventBalanced(void);
+    115          static void EventBalancing(void);
+    116          static void EventRegulating(void);
+    117          
+    118          // !! StateEngineCrank cannot update this code if you change the footer !!
+    119          // End of StateEngineCrank Auto-Generated Code.
+    120          
+    121          //  --- Private Definitions -------------------------------------------------------------------------------------------
+    122          #define ABSOLUTE_HUMIDITY_PWM_FREQUENCY         4000
+    123          #define ABSOLUTE_HUMIDITY_PWM_DUTY_FOR_HEATING   312    // 3.12% - for 14 bits PWM, the value is 0x200
+    124          #define ABSOLUTE_HUMIDITY_PWM_MIN_DUTY            39    // 0.39% - for 14 bits PWM, the value is 0x40
+    125          #define ABSOLUTE_HUMIDITY_PWM_MID_DUTY          5000    //50.00% - for 14 bits PWM, the value is 0x2000
+    126          #define ABSOLUTE_HUMIDITY_PWM_MAX_DUTY          9922    //99.22% - for 14 bits PWM, the value is 0x3F80
+    127          #define ABSOLUTE_HUMIDITY_PWM_LOW_DUTY          1875    //18.75% - for 14 bits PWM, the value is 0xC00
+    128          #define ABSOLUTE_HUMIDITY_PWM_HI_DUTY           9374    //93.74% - for 14 bits PWM, the value is 0x3BFF
+    129          
+    130          #define ABSOLUTE_HUMIDITY_HEATING_TIMEOUT       600     //60s
+    131          #define ABSOLUTE_HUMIDITY_REGULATING_DELAY      20      //2s
+    132          #define ABSOLUTE_HUMIDITY_ERROR_DELAY           10      //1s
+    133          
+    134          #define ABSOLUTE_HUMIDITY_FILTER_B1             35
+    135          #define ABSOLUTE_HUMIDITY_FILTER_A2_MINUS       186
+    136          
+    137          #define ABSOLUTE_HUMIDITY_FB_HIGH_THRESHOLD     3
+    138          #define ABSOLUTE_HUMIDITY_FB_LOW_THRESHOLD      -3
+    139          #define ABSOLUTE_HUMIDITY_HEATING_END_THRESHOLD 3
+    140          
+    141          #define ENABLE_PIN                              0
+    142          #define PWM_PIN                                 1
+    143          #define FEEDBACK_PIN                            2
+    144          
+    145          PACKED typedef struct
+    146          {
+    147              HBL_LLI_TYPE *LLI;
+    148              TIMER_PARAMETER_TYPE Timer_Parameter;
+    149              uint8 Enable;
+    150              ABSOLUTE_HUMIDITY_LLI_STATE_TYPE State;
+    151              ABSOLUTE_HUMIDITY_LLI_GET_DATA_TYPE Get_Data;
+    152              uint16 Test_Duty;
+    153              uint16 Output_Duty;
+    154              uint32 Filter_Delay;
+    155              uint16 Filtered_PWM;
+    156              sint8 Feedback_Status;
+    157              uint8 Error_Status;
+    158              uint8 Error_Counter;
+    159              uint16 Delay_Counter;
+    160              uint8 Asynch_Process_Counter;
+    161              uint8 Heating_Counter;
+    162              sint8 Direction_Counter;
+    163          } ABSOLUTE_HUMIDITY_LLI_DATA_TYPE;
+    164          
+    165          //! Tracks the number of absolute humidity LLI allocations.
+    166          static uint8 Absolute_Humidity_LLI_Allocation;
+    167          
+    168          //! LLI index for current running absolute humidity state machine.
+    169          static uint8 LLI_Index;
+    170          
+    171          //! Absolute humidity data array. One entry per absolute humidity instance.
+    172          static ABSOLUTE_HUMIDITY_LLI_DATA_TYPE Absolute_Humidity_LLI_Data[HBL_LLI_NUM_ABSOLUTEHUMIDITY];
+    173          
+    174          //! The name of this module for use by the Log module.
+    175          #define MODULE_NAME MODULE_ABSOLUTE_HUMIDITY_LLI
+    176          
+    177          //! A list of log message IDs that are generated by this module.
+    178          typedef enum MODULE_ABSOLUTE_HUMIDITY_LLI_LOG_MESSAGE_ID_ENUM
+    179          {
+    180              CONFIGURE_ENABLE_PIN_FAILED                 = 1,
+    181              CONFIGURE_FEEDBACK_PIN_FAILED               = 2,
+    182              CONFIGURE_PWM_PIN_FAILED                    = 3,
+    183              CONFIGURE_PWM_FAILED                        = 4,
+    184              HUMIDITY_SENSOR_ERROR_PRESENT_IN_UNBALANCED = 5,
+    185              HUMIDITY_SENSOR_ERROR_PRESENT_IN_BALANCED   = 6,
+    186              HUMIDITY_SENSOR_ERROR_CANCEL                = 7,
+    187          } MODULE_ABSOLUTE_HUMIDITY_LLI_LOG_MESSAGE_ID_TYPE;
+    188          
+    189          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    190          static void AbsoluteHumidityPWMSetDuty(uint16 duty);
+    191          static uint16 AbsoluteHumidityPWMGetDuty(void);
+    192          static BOOL_TYPE AbsoluteHumidityGetFeedback(void);
+    193          static uint16 AbsoluteHumidityFilter(uint16 sample);
+    194          
+    195          //=====================================================================================================================
+    196          //-------------------------------------- Public Functions -------------------------------------------------------------
+    197          //=====================================================================================================================
+    198          
+    199          //---------------------------------------------------------------------------------------------------------------------
+    200          /**
+    201           * @brief	Initializes the AbsoluteHumidityLLI module and its variables
+    202           */
+    203          void AbsoluteHumidityLLI__Initialize(void)
+    204          {
+    205              Absolute_Humidity_LLI_Allocation = 0;
+    206              memset(&Absolute_Humidity_LLI_Data,0,sizeof(Absolute_Humidity_LLI_Data));
+    207          }
+    208          
+    209          //---------------------------------------------------------------------------------------------------------------------
+    210          /**
+    211           * @brief	Checks if there is free space and reserve a new instance
+    212           * @return	index of AbsoluteHumidityLLI instance, 0xFF if all HBL_LLI_NUM_ABSOLUTEHUMIDITY are already allocated
+    213           */
+    214          uint8 AbsoluteHumidityLLI__Allocate(void)
+    215          {
+    216              uint8 retval = HBL_ALLOCATION_INVALID;
+    217          
+    218              if(Absolute_Humidity_LLI_Allocation < HBL_LLI_NUM_ABSOLUTEHUMIDITY)
+    219              {
+    220                  retval = Absolute_Humidity_LLI_Allocation;
+    221                  Absolute_Humidity_LLI_Allocation++;
+    222              }
+    223              return (retval);
+    224          }
+    225          
+    226          //---------------------------------------------------------------------------------------------------------------------
+    227          /**
+    228           * @brief Initializes a new instance of AbsoluteHumidityLLI
+    229           * @param input		pointer to HBL_LLI_TYPE structure reserved for that instance
+    230           * @param status
+    231           */
+    232          PASS_FAIL_TYPE AbsoluteHumidityLLI__InitializeInstance(HBL_LLI_TYPE *input)
+    233          {
+    234              PASS_FAIL_TYPE retval = FAIL;
+    235              uint8 table_index;
+    236          
+    237              if(input->Data_Index < Absolute_Humidity_LLI_Allocation)
+    238              {
+    239                  LLI_Index = input->Data_Index;
+    240                  Absolute_Humidity_LLI_Data[LLI_Index].LLI = input;
+    241          
+    242                  //! Initialize AH enable pin
+    243                  table_index = Absolute_Humidity_LLI_Data[LLI_Index].LLI->Pin_Ptr[ENABLE_PIN];
+    244                  if(VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    245                  {
+    246                      Gpio__PinWrite(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, FALSE);
+    247                      Gpio__PinConfig(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, VIRTUALPIN_TABLE[table_index].pin_config);
+    248          
+    249                      //! Initialize AH feedback pin
+    250                      table_index = Absolute_Humidity_LLI_Data[LLI_Index].LLI->Pin_Ptr[FEEDBACK_PIN];
+    251                      if(VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    252                      {
+    253                          Gpio__PinConfig(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, VIRTUALPIN_TABLE[table_index].pin_config);
+    254          
+    255                          //! Initialize AH pwm pin
+    256                          table_index = Absolute_Humidity_LLI_Data[LLI_Index].LLI->Pin_Ptr[PWM_PIN];
+    257                          if(VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    258                          {
+    259                              Gpio__PinWrite(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, FALSE);
+    260                              Gpio__PinConfig(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, VIRTUALPIN_TABLE[table_index].pin_config);
+    261          
+    262                              Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter.Timer         = (TIMER_TYPE)VIRTUALPIN_TABLE[table_index].device;
+    263                              Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter.Channel       = (TIMER_CHANNEL_TYPE)VIRTUALPIN_TABLE[table_index].param0;
+    264                              Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter.Mode          = TIMER_MODE_PWM;
+    265                              Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter.Port          = VIRTUALPIN_TABLE[table_index].port;
+    266                              Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter.Pin           = VIRTUALPIN_TABLE[table_index].pin;
+    267                              Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter.Pin_ReMap     = VIRTUALPIN_TABLE[table_index].pin_remap;
+    268                              Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter.Polarity      = TIMER_POLARITY_ACTIVE_HIGH;
+    269          
+    270                              if(Timer__Config(&Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter) == PASS)
+    271                              {
+    272                                  //! Initialize Absolute humidity LLI state machine
+    273                                  AbsoluteHumidityLLIInitialize();
+    274          
+    275                                  //! Enable Absolute humidity LLI
+    276                                  Absolute_Humidity_LLI_Data[LLI_Index].Enable = TRUE;
+    277          
+    278                                  retval = PASS;
+    279                              }
+    280                              else
+    281                              {
+    282                                  LOG_ADD_EXCEPTION(CONFIGURE_PWM_FAILED, LLI_Index);
+    283                              }
+    284                          }
+    285                          else
+    286                          {
+    287                              LOG_ADD_EXCEPTION(CONFIGURE_FEEDBACK_PIN_FAILED, LLI_Index);
+    288                          }
+    289                      }
+    290                      else
+    291                      {
+    292                          LOG_ADD_EXCEPTION(CONFIGURE_FEEDBACK_PIN_FAILED, LLI_Index);
+    293                      }
+    294                  }
+    295                  else
+    296                  {
+    297                      LOG_ADD_EXCEPTION(CONFIGURE_ENABLE_PIN_FAILED, LLI_Index);
+    298                  }
+    299              }
+    300          
+    301              return (retval);
+    302          }
+    303          
+    304          //---------------------------------------------------------------------------------------------------------------------
+    305          /**
+    306           * @brief   Get function to provide Data of an AbsoluteHumidityLLI instance
+    307           *
+    308           * @param   input   pointer to HBL_LLI_TYPE structure instance
+    309           *
+    310           * @return	pointer to a ABSOLUTE_HUMIDITY_LLI_DATA_TYPE which contains the specified input state and pwm count
+    311           * @return  NULL is the input parameter is invalid
+    312           */
+    313          void * AbsoluteHumidityLLI__Get(HBL_LLI_TYPE * input)
+    314          {
+    315              if(input->Data_Index < Absolute_Humidity_LLI_Allocation)
+    316              {
+    317                  LLI_Index = input->Data_Index;
+    318          
+    319                  if(Absolute_Humidity_LLI_Data[LLI_Index].Enable == TRUE)
+    320                  {
+    321                      if(Absolute_Humidity_LLI_Data[LLI_Index].Error_Status == TRUE)
+    322                      {
+    323                          Absolute_Humidity_LLI_Data[LLI_Index].Get_Data.State = ABSOLUTE_HUMIDITY_LLI_STATE_ERROR;
+    324                      }
+    325                      else
+    326                      {
+    327                          switch(Absolute_Humidity_LLI_Data[LLI_Index].State)
+    328                          {
+    329                              case STATE_ABSOLUTE_HUMIDITY_LLI_HEATING:
+    330                                  Absolute_Humidity_LLI_Data[LLI_Index].Get_Data.State = ABSOLUTE_HUMIDITY_LLI_STATE_HEATING;
+    331                                  break;
+    332          
+    333                              case STATE_ABSOLUTE_HUMIDITY_LLI_BALANCING:
+    334                                  Absolute_Humidity_LLI_Data[LLI_Index].Get_Data.State = ABSOLUTE_HUMIDITY_LLI_STATE_BALANCING;
+    335                                  break;
+    336          
+    337                              case STATE_ABSOLUTE_HUMIDITY_LLI_REGULATING:
+    338                                  Absolute_Humidity_LLI_Data[LLI_Index].Get_Data.State = ABSOLUTE_HUMIDITY_LLI_STATE_REGULATING;
+    339                                  break;
+    340          
+    341                              case STATE_ABSOLUTE_HUMIDITY_LLI_BALANCED:
+    342                                  Absolute_Humidity_LLI_Data[LLI_Index].Get_Data.State = ABSOLUTE_HUMIDITY_LLI_STATE_BALANCED;
+    343                                  break;
+    344          
+    345                              default:
+    346                                  Absolute_Humidity_LLI_Data[LLI_Index].Get_Data.State = ABSOLUTE_HUMIDITY_LLI_STATE_OFF;
+    347                                  break;
+    348                          }
+    349                      }
+    350          
+    351                      //! Disable the OS scheduler
+    352                      OS_EnterRegion();
+    353          
+    354                      Absolute_Humidity_LLI_Data[LLI_Index].Get_Data.Value = Absolute_Humidity_LLI_Data[LLI_Index].Filtered_PWM;
+    355          
+    356                      //! Enabled the OS scheduler
+    357                      OS_LeaveRegion();
+    358          
+    359                      return (&Absolute_Humidity_LLI_Data[LLI_Index].Get_Data);
+    360                  }
+    361                  else
+    362                  {
+    363                      return (NULL);
+    364                  }
+    365              }
+    366              else
+    367              {
+    368                  return (NULL);
+    369              }
+    370          }
+    371          
+    372          //---------------------------------------------------------------------------------------------------------------------
+    373          /**
+    374           * @brief	AsynchProcess called at every 5ms to generate Absolute humidity 100ms handler
+    375           * @param   input   pointer to HBL_LLI_TYPE structure instance
+    376           * @param   status
+    377           * @return	PASS if a new sample is ready, FAIL otherwise
+    378           */
+    379          BOOL_TYPE AbsoluteHumidityLLI__AsynchProcess(HBL_LLI_TYPE * input)
+    380          {
+    381              BOOL_TYPE retval = FALSE;
+    382          
+    383              if(input->Data_Index < Absolute_Humidity_LLI_Allocation)
+    384              {
+    385                  LLI_Index = input->Data_Index;
+    386          
+    387                  if(Absolute_Humidity_LLI_Data[LLI_Index].Enable == TRUE)
+    388                  {
+    389                      Absolute_Humidity_LLI_Data[LLI_Index].Asynch_Process_Counter++;
+    390                      if(Absolute_Humidity_LLI_Data[LLI_Index].Asynch_Process_Counter >= 20)
+    391                      {
+    392                          Absolute_Humidity_LLI_Data[LLI_Index].Asynch_Process_Counter = 0;
+    393          
+    394                          AbsoluteHumidityLLIExecute();
+    395          
+    396                          //! Disable the OS scheduler
+    397                          OS_EnterRegion();
+    398          
+    399                          Absolute_Humidity_LLI_Data[LLI_Index].Filtered_PWM = AbsoluteHumidityFilter(AbsoluteHumidityPWMGetDuty());
+    400          
+    401                          //! Enabled the OS scheduler
+    402                          OS_LeaveRegion();
+    403          
+    404                          retval = TRUE;
+    405                      }
+    406                  }
+    407              }
+    408          
+    409              return (retval);
+    410          }
+    411          
+    412          //---------------------------------------------------------------------------------------------------------------------
+    413          /**
+    414           * @brief   Process function to read on ZC Peak angle (90, 270)
+    415           * @param   input   pointer to HBL_LLI_TYPE structure instance
+    416           * @param   status
+    417           * @param   peak_polarity   TRUE for 90, FALSE for 270
+    418           * @return  TRUE if a new sample is ready, FALSE otherwise
+    419           */
+    420          BOOL_TYPE AbsoluteHumidityLLI__PeakProcess(HBL_LLI_TYPE * input, BOOL_TYPE peak_polarity)
+    421          {
+    422              BOOL_TYPE retval = FALSE;
+    423          
+    424              if(input->Data_Index < Absolute_Humidity_LLI_Allocation)
+    425              {
+    426                  //! Sample the feedback at ZC peak angle 270 only
+    427                  if(peak_polarity == FALSE)
+    428                  {
+    429                      //! Save LLI_Index before changing it in peak process
+    430                      uint8 LLI_Index_Bak = LLI_Index;
+    431          
+    432                      LLI_Index = input->Data_Index;
+    433          
+    434                      if(Absolute_Humidity_LLI_Data[LLI_Index].Enable == TRUE)
+    435                      {
+    436                          if(AbsoluteHumidityGetFeedback() == TRUE)
+    437                          {
+    438                              if(Absolute_Humidity_LLI_Data[LLI_Index].Feedback_Status >= ABSOLUTE_HUMIDITY_FB_HIGH_THRESHOLD)
+    439                              {
+    440                                  Absolute_Humidity_LLI_Data[LLI_Index].Feedback_Status = ABSOLUTE_HUMIDITY_FB_HIGH_THRESHOLD;
+    441                              }
+    442                              else
+    443                              {
+    444                                  Absolute_Humidity_LLI_Data[LLI_Index].Feedback_Status++;
+    445                              }
+    446                          }
+    447                          else
+    448                          {
+    449                              if(Absolute_Humidity_LLI_Data[LLI_Index].Feedback_Status <= ABSOLUTE_HUMIDITY_FB_LOW_THRESHOLD)
+    450                              {
+    451                                  Absolute_Humidity_LLI_Data[LLI_Index].Feedback_Status = ABSOLUTE_HUMIDITY_FB_LOW_THRESHOLD;
+    452                              }
+    453                              else
+    454                              {
+    455                                  Absolute_Humidity_LLI_Data[LLI_Index].Feedback_Status--;
+    456                              }
+    457                          }
+    458          
+    459                          retval = TRUE;
+    460                      }
+    461          
+    462                      //! Restore LLI_Index to previous value before exiting peak process
+    463                      LLI_Index = LLI_Index_Bak;
+    464                  }
+    465              }
+    466          
+    467              return (retval);
+    468          }
+    469          
+    470          
+    471          //=====================================================================================================================
+    472          //-------------------------------------- Private Functions ------------------------------------------------------------
+    473          //=====================================================================================================================
+    474          
+    475          
+    476          //---------------------------------------------------------------------------------------------------------------------
+    477          /**
+    478           * @brief   Initialize the error status before a new measurement.
+    479           */
+    480          static void ErrorStatusInitialize(void)
+    481          {
+    482              Absolute_Humidity_LLI_Data[LLI_Index].Error_Status = FALSE;
+    483              Absolute_Humidity_LLI_Data[LLI_Index].Error_Counter = 0;
+    484          }
+    485          
+    486          
+    487          //---------------------------------------------------------------------------------------------------------------------
+    488          /**
+    489           * @brief   Initialize the counters when state is changed.
+    490           */
+    491          static void CounterInitialize(void)
+    492          {
+    493              Absolute_Humidity_LLI_Data[LLI_Index].Delay_Counter = 0;
+    494              Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter = 0;
+    495          }
+    496          
+    497          
+    498          //---------------------------------------------------------------------------------------------------------------------
+    499          /**
+    500           * @brief   Execute successive approximation to get the measuring bridge approximated balance,
+    501           *          then trigger regulating event.
+    502           */
+    503          static void ExecuteSuccessiveApproximation(void)
+    504          {
+    505              uint16 duty;
+    506          
+    507              Absolute_Humidity_LLI_Data[LLI_Index].Test_Duty >>= 1;
+    508          
+    509              if(Absolute_Humidity_LLI_Data[LLI_Index].Feedback_Status > 0)
+    510              {
+    511                  duty = AbsoluteHumidityPWMGetDuty() - Absolute_Humidity_LLI_Data[LLI_Index].Test_Duty;
+    512              }
+    513              else
+    514              {
+    515                  duty = AbsoluteHumidityPWMGetDuty() + Absolute_Humidity_LLI_Data[LLI_Index].Test_Duty;
+    516              }
+    517          
+    518              AbsoluteHumidityPWMSetDuty(duty);
+    519          
+    520              Absolute_Humidity_LLI_Data[LLI_Index].Feedback_Status = 0;
+    521          
+    522             if(Absolute_Humidity_LLI_Data[LLI_Index].Test_Duty == 1)
+    523             {
+    524                 EventRegulating();
+    525             }
+    526          }
+    527          
+    528          
+    529          //---------------------------------------------------------------------------------------------------------------------
+    530          /**
+    531           * @brief   Execute Fine turning to get the measuring bridge balance.
+    532           */
+    533          static void ExecuteFineTuning(void)
+    534          {
+    535              uint16 duty;
+    536          
+    537              if(Absolute_Humidity_LLI_Data[LLI_Index].Feedback_Status > 0)
+    538              {
+    539                  duty = AbsoluteHumidityPWMGetDuty() - 1;
+    540          
+    541                  if(Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter > 0)
+    542                  {
+    543                      Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter = 0;
+    544                  }
+    545                  else if(Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter > SCHAR_MIN)
+    546                  {
+    547                      Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter--;
+    548                  }
+    549              }
+    550              else
+    551              {
+    552                  duty = AbsoluteHumidityPWMGetDuty() + 1;
+    553          
+    554                  if(Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter < 0)
+    555                  {
+    556                      Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter = 0;
+    557                  }
+    558                  else if(Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter < SCHAR_MAX)
+    559                  {
+    560                      Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter++;
+    561                  }
+    562              }
+    563          
+    564              AbsoluteHumidityPWMSetDuty(duty);
+    565          
+    566              Absolute_Humidity_LLI_Data[LLI_Index].Feedback_Status = 0;
+    567          }
+    568          
+    569          
+    570          //---------------------------------------------------------------------------------------------------------------------
+    571          /**
+    572           * @brief   Heat absolute humidity sensor until FB signal become low level or timeout, then trigger balancing event.
+    573           *
+    574           */
+    575          static void MonitorHeating(void)
+    576          {
+    577              Absolute_Humidity_LLI_Data[LLI_Index].Delay_Counter++;
+    578              if(Absolute_Humidity_LLI_Data[LLI_Index].Delay_Counter >  ABSOLUTE_HUMIDITY_HEATING_TIMEOUT)
+    579              {
+    580                  EventBalancing();
+    581              }
+    582              else
+    583              {
+    584                  if(AbsoluteHumidityGetFeedback() == FALSE)
+    585                  {
+    586                      Absolute_Humidity_LLI_Data[LLI_Index].Heating_Counter++;
+    587                      if(Absolute_Humidity_LLI_Data[LLI_Index].Heating_Counter > ABSOLUTE_HUMIDITY_HEATING_END_THRESHOLD)
+    588                      {
+    589                          EventBalancing();
+    590                      }
+    591                  }
+    592                  else
+    593                  {
+    594                      Absolute_Humidity_LLI_Data[LLI_Index].Heating_Counter = 0;
+    595                  }
+    596              }
+    597          }
+    598          
+    599          
+    600          //---------------------------------------------------------------------------------------------------------------------
+    601          /**
+    602           * @brief   Monitor unbalanced after entering regulating state for 2s, if PWM is out of range or PWM continue
+    603           *          increasing or decreasing by 10, trigger balancing event; Otherwise, trigger balanced event.
+    604           *
+    605           */
+    606          static void MonitorUnbalanced(void)
+    607          {
+    608              Absolute_Humidity_LLI_Data[LLI_Index].Delay_Counter++;
+    609               if(Absolute_Humidity_LLI_Data[LLI_Index].Delay_Counter > ABSOLUTE_HUMIDITY_REGULATING_DELAY)
+    610               {
+    611                   if((AbsoluteHumidityPWMGetDuty() < ABSOLUTE_HUMIDITY_PWM_LOW_DUTY) || (AbsoluteHumidityPWMGetDuty() > ABSOLUTE_HUMIDITY_PWM_HI_DUTY))
+    612                   {
+    613                       if(Absolute_Humidity_LLI_Data[LLI_Index].Error_Counter >= ABSOLUTE_HUMIDITY_ERROR_DELAY)
+    614                       {
+    615                           Absolute_Humidity_LLI_Data[LLI_Index].Error_Counter = ABSOLUTE_HUMIDITY_ERROR_DELAY;
+    616                           if(Absolute_Humidity_LLI_Data[LLI_Index].Error_Status == FALSE)
+    617                           {
+    618                               Absolute_Humidity_LLI_Data[LLI_Index].Error_Status = TRUE;
+    619                               LOG_ADD_EXCEPTION(HUMIDITY_SENSOR_ERROR_PRESENT_IN_UNBALANCED, LLI_Index);
+    620                           }
+    621                       }
+    622                       else
+    623                       {
+    624                           Absolute_Humidity_LLI_Data[LLI_Index].Error_Counter++;
+    625                       }
+    626                   }
+    627                   else
+    628                   {
+    629                       if(Absolute_Humidity_LLI_Data[LLI_Index].Error_Status == TRUE)
+    630                       {
+    631                           Absolute_Humidity_LLI_Data[LLI_Index].Error_Status = FALSE;
+    632                           LOG_ADD_EXCEPTION(HUMIDITY_SENSOR_ERROR_CANCEL, LLI_Index);
+    633                       }
+    634                       Absolute_Humidity_LLI_Data[LLI_Index].Error_Counter = 0;
+    635                   }
+    636          
+    637                   if(((Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter < -10) || (Absolute_Humidity_LLI_Data[LLI_Index].Direction_Counter > 10)) || (Absolute_Humidity_LLI_Data[LLI_Index].Error_Status == TRUE))
+    638                   {
+    639                       EventBalancing();
+    640                   }
+    641                   else
+    642                   {
+    643                       EventBalanced();
+    644                   }
+    645               }
+    646          }
+    647          
+    648          
+    649          //---------------------------------------------------------------------------------------------------------------------
+    650          /**
+    651           * @brief   Monitor balanced in balancing state, if PWM is out of range, then trigger balancing event to re-balance
+    652           *          the measuring bridge.
+    653           */
+    654          static void MonitorBalanced(void)
+    655          {
+    656              if((AbsoluteHumidityPWMGetDuty() < ABSOLUTE_HUMIDITY_PWM_LOW_DUTY) || (AbsoluteHumidityPWMGetDuty() > ABSOLUTE_HUMIDITY_PWM_HI_DUTY))
+    657              {
+    658                  Absolute_Humidity_LLI_Data[LLI_Index].Error_Status = TRUE;
+    659                  LOG_ADD_EXCEPTION(HUMIDITY_SENSOR_ERROR_PRESENT_IN_BALANCED, LLI_Index);
+    660                  EventBalancing();
+    661              }
+    662          }
+    663          
+    664          
+    665          //----------------------------------------------------------------------------------------------
+    666          /**
+    667           *  @brief      It Start heating absolute humidity sensor.
+    668           */
+    669          static void AbsoluteHumidityHeatingOn(void)
+    670          {
+    671              uint8 table_index = Absolute_Humidity_LLI_Data[LLI_Index].LLI->Pin_Ptr[ENABLE_PIN];
+    672          
+    673              Gpio__PinWrite(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, TRUE);
+    674          
+    675              Absolute_Humidity_LLI_Data[LLI_Index].Heating_Counter = 0;
+    676          }
+    677          
+    678          
+    679          //----------------------------------------------------------------------------------------------
+    680          /**
+    681           *  @brief      It Start absolute humidity PWM with specified duty for heating state.
+    682           */
+    683          static void AbsoluteHumidityPWMStartForHeating(void)
+    684          {
+    685              (void)Timer__PwmStart(&Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter, ABSOLUTE_HUMIDITY_PWM_FREQUENCY, ABSOLUTE_HUMIDITY_PWM_DUTY_FOR_HEATING);
+    686          }
+    687          
+    688          
+    689          //---------------------------------------------------------------------------------------------------------------------
+    690          /**
+    691           *  @brief      It Start absolute humidity PWM with 50% duty for balancing state.
+    692           */
+    693          static void AbsoluteHumidityPWMStartForBalancing(void)
+    694          {
+    695              Absolute_Humidity_LLI_Data[LLI_Index].Test_Duty = ABSOLUTE_HUMIDITY_PWM_MID_DUTY;
+    696              (void)Timer__PwmSetDutyCycle(&Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter, ABSOLUTE_HUMIDITY_PWM_MID_DUTY);
+    697          }
+    698          
+    699          
+    700          //----------------------------------------------------------------------------------------------
+    701          /**
+    702           *  @brief      It set up the duty of humidity PWM.
+    703           */
+    704          static void AbsoluteHumidityPWMSetDuty(uint16 duty)
+    705          {
+    706              if(duty > ABSOLUTE_HUMIDITY_PWM_MIN_DUTY && duty < ABSOLUTE_HUMIDITY_PWM_MAX_DUTY)
+    707              {
+    708                  Absolute_Humidity_LLI_Data[LLI_Index].Output_Duty = duty;
+    709                  (void)Timer__PwmSetDutyCycle(&Absolute_Humidity_LLI_Data[LLI_Index].Timer_Parameter, duty);
+    710              }
+    711          }
+    712          
+    713          
+    714          //----------------------------------------------------------------------------------------------
+    715          /**
+    716           *  @brief      It return the duty of humidity PWM.
+    717           */
+    718          static uint16 AbsoluteHumidityPWMGetDuty(void)
+    719          {
+    720              return Absolute_Humidity_LLI_Data[LLI_Index].Output_Duty;
+    721          }
+    722          
+    723          
+    724          //----------------------------------------------------------------------------------------------
+    725          /**
+    726           *  @brief      It return absolute humidity feedback pin status.
+    727           */
+    728          static BOOL_TYPE AbsoluteHumidityGetFeedback(void)
+    729          {
+    730              uint8 table_index = Absolute_Humidity_LLI_Data[LLI_Index].LLI->Pin_Ptr[FEEDBACK_PIN];
+    731          
+    732              BOOL_TYPE pin_state = Gpio__PinRead(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin);
+    733          
+    734              return pin_state;
+    735          }
+    736          
+    737          
+    738          //----------------------------------------------------------------------------------------------
+    739          /**
+    740           *  @brief      It filter the duty value and return filtered PWM value.
+    741           *
+    742                  Humidity signal filter. Filters 14-bit signal from PWM Data Buffer.
+    743          
+    744                  1:st degree butterworth lowpass canonical IIR-filter,
+    745                  with Fc = 0.1*Fn.  (Fc= Frequency cutoff, Fn = nyquist)
+    746          
+    747                  Filter parameters:
+    748                  a1=1
+    749                  a2=-0.7265
+    750                  b1=0.1367
+    751                  b2=0.1367
+    752          
+    753                  a2-b2 normalized to (1(decimal)=256) gives: -a2=186
+    754                                                              b1=b2=35.
+    755          
+    756                  All calculations is 32-bit. No truncation except for last division with 256.
+    757          
+    758                  Canonical structure:
+    759          
+    760                  x(n) >--------------------------
+    761                                  | b2            | b1
+    762                                  |      _        |
+    763                                  + --->|T| ----> + --------------> y(n)
+    764                                  |      -             |
+    765                                  | -a2                |
+    766                                  <--------------------
+    767          
+    768                  y(n) = b1*x(n) + b2*x(n-1) - a2*y(n-1)
+    769           */
+    770          static uint16 AbsoluteHumidityFilter(uint16 sample)
+    771          {
+    772              uint32 newSample, tempValue;
+    773          
+    774              // Conver duty (0~10000) to 14 bit pwm (0~16383)
+    775              tempValue = (uint32)sample*(uint32)16383;
+    776              tempValue /= 10000;
+    777              sample = (uint16)tempValue;
+    778          
+    779              // Calculate new filter output value
+    780              newSample = (uint32)sample*(uint32)ABSOLUTE_HUMIDITY_FILTER_B1;    // newSample = 256*b1*x(n)
+    781              tempValue = newSample;
+    782              newSample += (uint32)(Absolute_Humidity_LLI_Data[LLI_Index].Filter_Delay); // newSample += 256*b2*x(n-1) + 256*(-a2)*y(n-1) => 256y(n)
+    783          
+    784              // calculate new filter delay tap value
+    785              Absolute_Humidity_LLI_Data[LLI_Index].Filter_Delay = tempValue; // Filter_Delay = 256*b2*x(n)
+    786              Absolute_Humidity_LLI_Data[LLI_Index].Filter_Delay += ((((uint32)(newSample))*(uint32)ABSOLUTE_HUMIDITY_FILTER_A2_MINUS) >> 8); // Filter_Delay += 256*(-a2) * 256*y(n) / 256 => 256*b2*x(n) + 256*(-a2)*y(n)
+    787          
+    788              // Return new filtered value
+    789              return((uint16)(newSample >>= 8)); // newSample/256 => y(n)
+    790          }
+    791          
+    792          
+    793          //=====================================================================================================================
+    794          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Absolute Humidity LLI State Machine
+    795          //=====================================================================================================================
+    796          // !! StateEngineCrank cannot update this code if you change the header !!
+    797          
+    798          
+    799          //---------------------------------------------------------------------------------------------------------------------
+    800          /**
+    801           * The main execution function for the Absolute Humidity LLI state machine.
+    802           * This function should be called periodically while the state machine is running.
+    803           *
+    804           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    805           *
+    806           * This function was auto-generated and must not be edited manually.
+    807           * Change the UML used to generate this function and regenerate the source code.
+    808           */
+    809          static void AbsoluteHumidityLLIExecute(void)
+    810          {
+    811              Absolute_Humidity_LLI_Transitioned = FALSE;
+    812              switch(Absolute_Humidity_LLI_Data[LLI_Index].State)
+    813              {
+    814                  case STATE_ABSOLUTE_HUMIDITY_LLI_HEATING:
+    815                      MonitorHeating();                       // Do function.
+    816                      break;
+    817          
+    818                  case STATE_ABSOLUTE_HUMIDITY_LLI_BALANCING:
+    819                      ExecuteSuccessiveApproximation();       // Do function.
+    820                      break;
+    821          
+    822                  case STATE_ABSOLUTE_HUMIDITY_LLI_REGULATING:
+    823                      ExecuteFineTuning();                    // Do function.
+    824                      if (Absolute_Humidity_LLI_Transitioned == FALSE)
+    825                      {
+    826                          MonitorUnbalanced();                // Do function.
+    827                      }
+    828                      break;
+    829          
+    830                  case STATE_ABSOLUTE_HUMIDITY_LLI_BALANCED:
+    831                      ExecuteFineTuning();                    // Do function.
+    832                      if (Absolute_Humidity_LLI_Transitioned == FALSE)
+    833                      {
+    834                          MonitorBalanced();                  // Do function.
+    835                      }
+    836                      break;
+    837          
+    838                  default:
+    839                      // There is nothing to do for all other values of Absolute_Humidity_LLI_Data[LLI_Index].State.
+    840                      break;
+    841              }
+    842          }
+    843          
+    844          
+    845          //---------------------------------------------------------------------------------------------------------------------
+    846          /**
+    847           * The initialization function for the Absolute Humidity LLI state machine.
+    848           * This function resets the state machine to the initial state and executes the initial state's
+    849           * entry function.
+    850           *
+    851           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    852           *
+    853           * This function was auto-generated and must not be edited manually.
+    854           * Change the UML used to generate this function and regenerate the source code.
+    855           */
+    856          static void AbsoluteHumidityLLIInitialize(void)
+    857          {
+    858              Absolute_Humidity_LLI_Data[LLI_Index].State = STATE_ABSOLUTE_HUMIDITY_LLI_HEATING;
+    859              Absolute_Humidity_LLI_Transitioned = FALSE;
+    860              CounterInitialize();                            // Entry Function.
+    861              if (Absolute_Humidity_LLI_Transitioned == FALSE)
+    862              {
+    863                  ErrorStatusInitialize();                    // Entry Function.
+    864                  if (Absolute_Humidity_LLI_Transitioned == FALSE)
+    865                  {
+    866                      AbsoluteHumidityHeatingOn();            // Entry Function.
+    867                      if (Absolute_Humidity_LLI_Transitioned == FALSE)
+    868                      {
+    869                          AbsoluteHumidityPWMStartForHeating(); // Entry Function.
+    870                      }
+    871                  }
+    872              }
+    873              Absolute_Humidity_LLI_Transitioned = TRUE;
+    874          }
+    875          
+    876          
+    877          //---------------------------------------------------------------------------------------------------------------------
+    878          /**
+    879           * Process the Balanced Event for the Absolute Humidity LLI state machine.
+    880           *
+    881           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    882           *
+    883           * This function was auto-generated and must not be edited manually.
+    884           * Change the UML used to generate this function and regenerate the source code.
+    885           */
+    886          static void EventBalanced(void)
+    887          {
+    888              switch (Absolute_Humidity_LLI_Data[LLI_Index].State)
+    889              {
+    890                  case STATE_ABSOLUTE_HUMIDITY_LLI_REGULATING:
+    891                      Absolute_Humidity_LLI_Data[LLI_Index].State = STATE_ABSOLUTE_HUMIDITY_LLI_BALANCED;
+    892                      CounterInitialize();                    // Entry Function.
+    893                      Absolute_Humidity_LLI_Transitioned = TRUE;
+    894                      break;
+    895          
+    896                  default:
+    897                      // Event is ignored for all other values of Absolute_Humidity_LLI_Data[LLI_Index].State.
+    898                      break;
+    899              }
+    900          }
+    901          
+    902          
+    903          //---------------------------------------------------------------------------------------------------------------------
+    904          /**
+    905           * Process the Balancing Event for the Absolute Humidity LLI state machine.
+    906           *
+    907           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    908           *
+    909           * This function was auto-generated and must not be edited manually.
+    910           * Change the UML used to generate this function and regenerate the source code.
+    911           */
+    912          static void EventBalancing(void)
+    913          {
+    914              switch (Absolute_Humidity_LLI_Data[LLI_Index].State)
+    915              {
+    916                  case STATE_ABSOLUTE_HUMIDITY_LLI_HEATING:
+    917                  case STATE_ABSOLUTE_HUMIDITY_LLI_REGULATING:
+    918                  case STATE_ABSOLUTE_HUMIDITY_LLI_BALANCED:
+    919                      Absolute_Humidity_LLI_Data[LLI_Index].State = STATE_ABSOLUTE_HUMIDITY_LLI_BALANCING;
+    920                      Absolute_Humidity_LLI_Transitioned = FALSE;
+    921                      CounterInitialize();                    // Entry Function.
+    922                      if (Absolute_Humidity_LLI_Transitioned == FALSE)
+    923                      {
+    924                          AbsoluteHumidityPWMStartForBalancing(); // Entry Function.
+    925                      }
+    926                      Absolute_Humidity_LLI_Transitioned = TRUE;
+    927                      break;
+    928          
+    929                  default:
+    930                      // Event is ignored for all other values of Absolute_Humidity_LLI_Data[LLI_Index].State.
+    931                      break;
+    932              }
+    933          }
+    934          
+    935          
+    936          //---------------------------------------------------------------------------------------------------------------------
+    937          /**
+    938           * Process the Regulating Event for the Absolute Humidity LLI state machine.
+    939           *
+    940           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    941           *
+    942           * This function was auto-generated and must not be edited manually.
+    943           * Change the UML used to generate this function and regenerate the source code.
+    944           */
+    945          static void EventRegulating(void)
+    946          {
+    947              switch (Absolute_Humidity_LLI_Data[LLI_Index].State)
+    948              {
+    949                  case STATE_ABSOLUTE_HUMIDITY_LLI_BALANCING:
+    950                      Absolute_Humidity_LLI_Data[LLI_Index].State = STATE_ABSOLUTE_HUMIDITY_LLI_REGULATING;
+    951                      CounterInitialize();                    // Entry Function.
+    952                      Absolute_Humidity_LLI_Transitioned = TRUE;
+    953                      break;
+    954          
+    955                  default:
+    956                      // Event is ignored for all other values of Absolute_Humidity_LLI_Data[LLI_Index].State.
+    957                      break;
+    958              }
+    959          }
+    960          
+    961          
+    962          // !! StateEngineCrank cannot update this code if you change the footer !!
+    963          // End of StateEngineCrank Auto-Generated Code.
+    964          
+    965          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

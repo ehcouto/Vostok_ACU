@@ -1,0 +1,105 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//  nucleus-sdk.lnt
+//  Standard PC-lint options for projects and SDKs based on the Nucleus SDK
+//
+
+// specifies the class of header files that are by default treated as library headers. Each
+// identifier can be one of:
+//   angle (specified with angle brackets),
+//   foreign (comes from a foreign directory using -i or the INCLUDE environment variable),
+//   ansi (one of those specified by ANSI/ISO C), or
+//   all (meaning all header files).
++libclass(angle,ansi)
+
+// Treat the Segger EmbOS files provided by Segger as library files.
+// PC-lint will handle library modules differently.
++libm(OS_Error.c,SEGGER_RTT.c,SEGGER_RTT_printf.c)
++libh(JLINKMEM.h,OS_Config.h,RTOS.h,SEGGER_RTT.h,SEGGER_RTT_Conf.h)
+
+// Embedded Workbench extended defines
+// The definitions in the predef_macros.h file are internal definitions created by and used by
+// the IAR compiler. They are required for the successful parsing of IAR library header files.
++libh(predef_macros.h)
+-header(predef_macros.h)
+
+//  Bit fields are unsigned flag (default OFF).
+//  When this flag is ON, bit fields will be considered unsigned even though a nominal int
+//  is used in its specification. For example:
+//      struct S { int b:1; };
+//  has a one-bit bit field b whose values normally range from -1 to 0. It will receive an
+//  Informational message (806) warning about the unusual character of the declaration.
+//  However some compilers, treat this as ranging from 0 to 1. i.e., they treat the bit field as
+//  unsigned.
+//  The preferred programmer response is to declare the bit field unsigned, as this is
+//  portable. If you don't want to do this for some reason, you may set this flag ON, to match
+//  the behavior of your compiler.
++fbu
+
+//  Integer model for Enum flag (default OFF).
+//  Options: +fie -fie ++fie --fie
+//  If this flag is ON, a loose model for enumerations is used (loose model means that
+//  enumerations are regarded semantically as integers). By default, a strict model is used
+//  wherein a variable of some enumerated type, if it is to be assigned a value, must be
+//  assigned a compatible enumerated value and an attempt to use an enumeration as an int
+//  is greeted with a (suppressible) warning 641. An important exception is an enum that has
+//  no tag and no variable. Thus
+//      enum {false,true};
+//  is assumed to define two integer constants and is always integer model.
++fie
+
+//  String constants are const char flag (default OFF).
+//  When this flag is ON, string constants are considered pointers to const char. For
+//  example:
+//      strcpy( "abc", buffer );
+//  draws a diagnostic because strcpy is declared within string.h (by all the major
+//  compiler venders) as
+//      char * strcpy( char *, const char * );
+//  The diagnostic is issued because a const char * is being passed to a char *.
+//  You may think it odd that string constants are not const char * by default. If you set
+//  this flag ON, you will probably discover the reason. There will undoubtedly be numerous
+//  places where a function is passed a string constant where the corresponding parameter
+//  should be declared const char * but isn't. There will also be cases of variables that
+//  should be declared as const char * but aren't. Thus, you may regard this flag as a good
+//  way to ferret out places where such type checking can be tightened.
++fsc
+
+-A(C2011)
+
+//  This option allows the user to specify alternate identifier characters. Each character in
+//  string is taken to be an identifier character. For example if your compiler allows @ as an
+//  identifier character then you may want to use the option:
+//      -ident(@)
+//  Option -$ is identical in effect to -ident($) and is retained for historical reasons.
+-ident($)
+
+//  will report on pairs of identifiers in the same name space that are identical in their first
+//  count characters but are otherwise different. Options are:
+//      x linker (eXternal) symbols
+//      p Preprocessor symbols
+//      c Compiler symbols
+//  If omitted, all symbols are assumed.
+//  Frequently, linkers and, less frequently, preprocessors and compilers, have a limit on the
+//  number of significant characters of an identifier. They will ignore all but the first count
+//  characters. The -idlen option can be used to find pairs of identifiers that are identical in
+//  the first count characters but are nonetheless different. PC-lint/FlexeLint treats the
+//  identifiers as different but reports on the clash.
+//  Option x, linker symbols, refers to inter-module symbols. Option p, preprocessor
+//  symbols, refers to macros and parameters of function-like macros. Option c, compiler
+//  symbols, refers to all the other symbols and includes symbols local to a function, struct/
+//  union tags and member names, enum constants, etc. Warning 621, Identifier
+//  clash may be suppressed for individual identifiers with the -esym option. -idlen is off
+//  by default.
+-idlen(200)
+
+-passes(2)
+
+-strong(AJXB,BOOL_TYPE)
+
+// sets PC-lint/FlexeLint's idea of what the Tab size is. This is used for indentation checking.
+// By default PC-lint/FlexeLint presumes that tabs occur every 8 column positions. If your
+// editor is converting blanks to tabs at some other exchange rate, then use this option. For
+// example -t4 indicates that a tab is worth 4 blank characters.
+-t4
+
+//  sets the exit code to 0. This is useful to prohibit the premature termination of make files
+//-zero

@@ -1,0 +1,1236 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:04
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Application/acuhmi/CommunicationMonitor/CommunicationMonitor.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\CommunicationMonitor.lst -o obj\CommunicationMonitor.obj
+#        source/XCategory/Application/acuhmi/CommunicationMonitor/CommunicationMonitor.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\CommunicationMonitor.lst
+#    Object file  =  obj\CommunicationMonitor.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Application\acuhmi\CommunicationMonitor\CommunicationMonitor.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      Source file for the Communication Monitor module.
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8           *  @section    Applicable_Documents
+      9           *                  List here all the applicable documents if needed. <tr>
+     10           *
+     11          
+     12              @startuml{CommunicationMonitor State Machine.jpg}
+     13                  title CommunicationMonitor State Machine
+     14          
+     15                  'use state = CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index]
+     16          
+     17                  [*] --> FAULT_MONITORING
+     18          
+     19                  FAULT_MONITORING : do /\t CheckRevealNodeStatus() \n RemoveFault()
+     20                  FAULT_MONITORING --> FAULT_RECOVERING  : evFaultDetected
+     21                  FAULT_MONITORING --> DISABLED  : evMonitoringDisabled
+     22          
+     23                  FAULT_RECOVERING : do /\t CheckRevealNodeStatus() \n ReportFault()
+     24                  FAULT_RECOVERING --> FAULT_MONITORING  : evFaultRecovered
+     25                  FAULT_RECOVERING --> DISABLED  : evMonitoringDisabled
+     26          
+     27                  DISABLED --> FAULT_MONITORING      : evMonitoringEnabled
+     28          
+     29          
+     30              @enduml
+     31          
+     32           *  $Header: $
+     33           *
+     34           *  @copyright  Copyright 2017-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     35           */
+     36          //---------------------------------------------------------------------------------------------------------------------
+     37          //---------------------------------------------------------------------------------------------------------------------
+     38          
+     39          
+     40          //-------------------------------------- Include Files ----------------------------------------------------------------
+     41          #include "CommunicationMonitor.h"
+     42          #include <string.h>
+     43          
+     44          #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+     45          #include "Reveal.h"
+     46          
+     47          #if(FAULT_MANAGEMENT_FEATURE == ENABLED)
+     48              #include "Fault.h"
+     49          #endif
+     50          
+     51          #define MAXIMUM_NUMBER_OF_NODES_TO_MONITOR                  (15)
+     52          
+     53          #define PERIODIC_CHECK_AT_EVERY_FIVE_SECONDS                (5000/100)
+     54          #define CHECK_COMMUNICATION_AFTER_15S_DELAY                 (15000/100)
+     55          
+     56          #define INVALID_NODE_ID                                     (0xFF)
+     57          
+     58          #endif // #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+     59          
+     60          
+     61          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     62          
+     63          
+     64          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     65          #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+     66          
+     67          
+     68          //=====================================================================================================================
+     69          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Communication Monitor State Machine
+     70          //=====================================================================================================================
+     71          // !! StateEngineCrank cannot update this code if you change the header !!
+     72          
+     73          
+     74          //! Unique names used to identify states of the Communication Monitor state machine.
+     75          typedef enum COMMUNICATION_MONITOR_STATE_ENUM
+     76          {
+     77              STATE_COMMUNICATION_MONITOR_NONE             = 0,
+     78          
+     79              STATE_COMMUNICATION_MONITOR_FAULT_MONITORING = 1, //!< (initial_state)
+     80              STATE_COMMUNICATION_MONITOR_FAULT_RECOVERING = 2,
+     81              STATE_COMMUNICATION_MONITOR_DISABLED         = 3,
+     82          
+     83              STATE_COMMUNICATION_MONITOR_END              = 4
+     84          } COMMUNICATION_MONITOR_STATE_TYPE;
+     85          
+     86          //! The transition variable for the Communication Monitor state machine.
+     87          //! Flag used by the state machine to track when a transition occurs in the middle of a state's
+     88          //! Entry() or Do() action that contains more than one function.
+     89          static BOOL_TYPE Communication_Monitor_Transitioned;
+     90          
+     91          // -- Private Function Prototypes used by the state machine for customization functions --
+     92          static void CheckRevealNodeStatus(void);
+     93          static void RemoveFault(void);
+     94          static void ReportFault(void);
+     95          
+     96          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+     97          static void CommunicationMonitorExecute(void);
+     98          static void CommunicationMonitorInitialize(void);
+     99          static void EventFaultDetected(void);
+    100          static void EventFaultRecovered(void);
+    101          static void EventMonitoringDisabled(void);
+    102          static void EventMonitoringEnabled(void);
+    103          
+    104          // !! StateEngineCrank cannot update this code if you change the footer !!
+    105          // End of StateEngineCrank Auto-Generated Code.
+    106          typedef PACKED struct
+    107          {
+    108              uint8 Node;
+    109              uint8 Fault_Id;     //! Same structure is used for HMI side and HMI Does not know about the FAULT_ID scheme so its intentionally declared as uint8
+    110          } COMMUNICATION_MONITOR_NODES_TO_MONITOR_TYPE;
+    111          
+    112          #if(FAULT_MANAGEMENT_FEATURE == ENABLED)
+
+   \                                 In section .text, align 4, keep-with-next
+    113              static const COMMUNICATION_MONITOR_NODES_TO_MONITOR_TYPE COMMUNICATION_MONITOR_NODE_LIST[] =
+   \                     COMMUNICATION_MONITOR_NODE_LIST:
+   \   00000000   0x01 0x00          DC8 1, 0
+
+   \                                 In section .bss, align 4
+    114              {
+    115                  COMMUNICATION_MONITOR_NODES_TO_MONITOR
+    116              };
+    117          #else
+    118          
+    119              #ifndef COMMUNICATION_MONITOR_FAULT_ID_COMMUNICATION_ACU
+    120                  #error "Define this macro in the SystemConfig_prm.h file. This macro shall have the FAULT_ID used for in case of ACU communication error";
+    121              #endif
+    122          
+    123              static const COMMUNICATION_MONITOR_NODES_TO_MONITOR_TYPE COMMUNICATION_MONITOR_NODE_LIST[] =
+    124              {
+    125                  { WIN_ACU_ADDRESS        ,COMMUNICATION_MONITOR_FAULT_ID_COMMUNICATION_ACU  }
+    126              };
+    127          
+    128              BOOL_TYPE CommunicationMonitor_IsACUNodeInFault;
+    129          #endif
+    130          
+    131          #define NUMBER_OF_NODES_TO_MONITOR  (ELEMENTS_IN_ARRAY(COMMUNICATION_MONITOR_NODE_LIST))
+    132          
+    133          static uint16 CommunicationMonitor_HasNodeInFault;
+    134          
+    135          //! module static variables
+    136          static PACKED struct
+    137          {
+    138              uint8                            Data_Index;
+    139              COMMUNICATION_MONITOR_STATE_TYPE State[NUMBER_OF_NODES_TO_MONITOR];
+    140          } CommunicationMonitor_Data;
+   \                     CommunicationMonitor_Data:
+   \   00000000                      DS8 4
+   \   00000004                      DS8 1
+   \   00000005                      DS8 1
+   \   00000006                      DS8 2
+    141          
+    142          static uint8 CommunicationMonitor_Timer_Tick;
+    143          
+    144          #endif // #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    145          
+    146          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    147          
+    148          //=====================================================================================================================
+    149          //-------------------------------------- Public Functions -------------------------------------------------------------
+    150          //=====================================================================================================================
+    151          
+    152          //---------------------------------------------------------------------------------------------------------------------
+    153          /**
+    154           *  @brief      It Initializes the module ACUCommFault and its variables
+    155           *
+    156           */
+
+   \                                 In section .text, align 2, keep-with-next
+    157          void CommunicationMonitor__Initialize(void)
+    158          {
+   \                     CommunicationMonitor__Initialize: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    159              #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    160                  memset(&CommunicationMonitor_Data, 0, sizeof(CommunicationMonitor_Data));
+   \   00000002   0x....             LDR      R4,??DataTable14
+   \   00000004   0x2200             MOVS     R2,#+0
+   \   00000006   0x2102             MOVS     R1,#+2
+   \   00000008   0x0020             MOVS     R0,R4
+   \   0000000A   0x.... 0x....      BL       __aeabi_memset4
+    161          
+    162                  CommunicationMonitor_Timer_Tick = CHECK_COMMUNICATION_AFTER_15S_DELAY;
+   \   0000000E   0x2096             MOVS     R0,#+150
+   \   00000010   0x7160             STRB     R0,[R4, #+5]
+    163          
+    164                  #if(FAULT_MANAGEMENT_FEATURE == DISABLED)
+    165                      CommunicationMonitor_IsACUNodeInFault = FALSE;
+    166                  #endif
+    167          
+    168                  for ( CommunicationMonitor_Data.Data_Index = 0; CommunicationMonitor_Data.Data_Index < NUMBER_OF_NODES_TO_MONITOR; CommunicationMonitor_Data.Data_Index++ )
+   \   00000012   0x2500             MOVS     R5,#+0
+   \   00000014   0x0028             MOVS     R0,R5
+   \   00000016   0x7020             STRB     R0,[R4, #+0]
+   \   00000018   0xE004             B        ??CommunicationMonitor__Initialize_0
+    169                  {
+    170                      CommunicationMonitorInitialize();
+   \                     ??CommunicationMonitor__Initialize_1: (+1)
+   \   0000001A   0x.... 0x....      BL       CommunicationMonitorInitialize
+    171                  }
+   \   0000001E   0x7820             LDRB     R0,[R4, #+0]
+   \   00000020   0x1C40             ADDS     R0,R0,#+1
+   \   00000022   0x7020             STRB     R0,[R4, #+0]
+   \                     ??CommunicationMonitor__Initialize_0: (+1)
+   \   00000024   0x7820             LDRB     R0,[R4, #+0]
+   \   00000026   0x2800             CMP      R0,#+0
+   \   00000028   0xD0F7             BEQ      ??CommunicationMonitor__Initialize_1
+    172          
+    173                  CommunicationMonitor_HasNodeInFault = 0;
+   \   0000002A   0x80E5             STRH     R5,[R4, #+6]
+    174          
+    175              #endif // #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    176          }
+   \   0000002C   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    177          
+    178          //---------------------------------------------------------------------------------------------------------------------
+    179          /**
+    180           *  @brief      This API shall be called periodically every 100ms
+    181           *
+    182           */
+
+   \                                 In section .text, align 2, keep-with-next
+    183          void CommunicationMonitor__Execute(void)
+    184          {
+   \                     CommunicationMonitor__Execute: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    185              #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    186          
+    187                  CommunicationMonitor_Timer_Tick--;
+   \   00000002   0x....             LDR      R4,??DataTable14
+   \   00000004   0x7960             LDRB     R0,[R4, #+5]
+   \   00000006   0x1E40             SUBS     R0,R0,#+1
+   \   00000008   0x7160             STRB     R0,[R4, #+5]
+    188          
+    189                  if ( CommunicationMonitor_Timer_Tick == 0)
+   \   0000000A   0x0600             LSLS     R0,R0,#+24
+   \   0000000C   0xD10C             BNE      ??CommunicationMonitor__Execute_0
+    190                  {
+    191                      CommunicationMonitor_Timer_Tick = PERIODIC_CHECK_AT_EVERY_FIVE_SECONDS;
+   \   0000000E   0x2032             MOVS     R0,#+50
+   \   00000010   0x7160             STRB     R0,[R4, #+5]
+    192          
+    193                      for ( CommunicationMonitor_Data.Data_Index = 0; CommunicationMonitor_Data.Data_Index < NUMBER_OF_NODES_TO_MONITOR; CommunicationMonitor_Data.Data_Index++ )
+   \   00000012   0x2000             MOVS     R0,#+0
+   \   00000014   0x7020             STRB     R0,[R4, #+0]
+   \   00000016   0xE004             B        ??CommunicationMonitor__Execute_1
+    194                      {
+    195                          CommunicationMonitorExecute();
+   \                     ??CommunicationMonitor__Execute_2: (+1)
+   \   00000018   0x.... 0x....      BL       CommunicationMonitorExecute
+    196                      }
+   \   0000001C   0x7820             LDRB     R0,[R4, #+0]
+   \   0000001E   0x1C40             ADDS     R0,R0,#+1
+   \   00000020   0x7020             STRB     R0,[R4, #+0]
+   \                     ??CommunicationMonitor__Execute_1: (+1)
+   \   00000022   0x7820             LDRB     R0,[R4, #+0]
+   \   00000024   0x2800             CMP      R0,#+0
+   \   00000026   0xD0F7             BEQ      ??CommunicationMonitor__Execute_2
+    197                  }
+    198          
+    199              #endif // #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    200          }
+   \                     ??CommunicationMonitor__Execute_0: (+1)
+   \   00000028   0xBD10             POP      {R4,PC}          ;; return
+    201          
+    202          #if(FAULT_MANAGEMENT_FEATURE == DISABLED)
+    203          //---------------------------------------------------------------------------------------------------------------------
+    204          /**
+    205           * @brief This API returns weather the ACU is alive in the communication or not
+    206           *
+    207           *        Shall be used only at the HMI side only
+    208           * @return
+    209           */
+    210          BOOL_TYPE CommunicationMonitor__IsACUNodeInFault(void)
+    211          {
+    212              #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    213                  return CommunicationMonitor_IsACUNodeInFault;
+    214              #else
+    215                  return FALSE;
+    216              #endif
+    217          }
+    218          #endif
+    219          
+    220          
+    221          //---------------------------------------------------------------------------------------------------------------------
+    222          /**
+    223           * @brief   Returns if CommunicationMonitor has found any faulty node
+    224           * @details Can be used by any node (ACU, HMI, etc)
+    225           * @return
+    226           *  @retval TRUE (1) One of the node in the network is in Fault
+    227           *  @retval FALSE(0) None of the nodes are in fault
+    228           */
+
+   \                                 In section .text, align 2, keep-with-next
+    229          BOOL_TYPE CommunicationMonitor__HasNodeInFault(void)
+    230          {
+    231              #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    232                  return ((CommunicationMonitor_HasNodeInFault != 0)?TRUE:FALSE);
+   \                     CommunicationMonitor__HasNodeInFault: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable14
+   \   00000002   0x88C1             LDRH     R1,[R0, #+6]
+   \   00000004   0x1E48             SUBS     R0,R1,#+1
+   \   00000006   0x4180             SBCS     R0,R0,R0
+   \   00000008   0x43C0             MVNS     R0,R0
+   \   0000000A   0x0FC0             LSRS     R0,R0,#+31
+   \   0000000C   0x4770             BX       LR               ;; return
+    233              #else
+    234                  return FALSE;
+    235              #endif
+    236          }
+    237          
+    238          //---------------------------------------------------------------------------------------------------------------------
+    239          /**
+    240           *  @brief  Enable the monitoring of a node.
+    241           *
+    242           *  @param  node    the node to enable
+    243           */
+
+   \                                 In section .text, align 2, keep-with-next
+    244          void CommunicationMonitor__Enable(uint8 node)
+    245          {
+   \                     CommunicationMonitor__Enable: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0007             MOVS     R7,R0
+    246              #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    247              uint8 temp_data_index;
+    248          
+    249              for ( uint8 data_index = 0; data_index < NUMBER_OF_NODES_TO_MONITOR; data_index++ )
+   \   00000004   0x2400             MOVS     R4,#+0
+   \   00000006   0x0020             MOVS     R0,R4
+   \   00000008   0x....             LDR      R5,??DataTable14
+   \   0000000A   0xE00B             B        ??CommunicationMonitor__Enable_0
+    250              {
+    251                  if ( node == COMMUNICATION_MONITOR_NODE_LIST[data_index].Node )
+   \                     ??CommunicationMonitor__Enable_1: (+1)
+   \   0000000C   0x0038             MOVS     R0,R7
+   \   0000000E   0x2801             CMP      R0,#+1
+   \   00000010   0xD107             BNE      ??CommunicationMonitor__Enable_2
+    252                  {
+    253                      if (CommunicationMonitor_Data.State[data_index] == STATE_COMMUNICATION_MONITOR_DISABLED)
+   \   00000012   0x7868             LDRB     R0,[R5, #+1]
+   \   00000014   0x2803             CMP      R0,#+3
+   \   00000016   0xD104             BNE      ??CommunicationMonitor__Enable_2
+    254                      {
+    255                          //Save the current node index
+    256                          temp_data_index = CommunicationMonitor_Data.Data_Index;
+   \   00000018   0x782E             LDRB     R6,[R5, #+0]
+    257          
+    258                          // Assign the node to be enabled
+    259                          CommunicationMonitor_Data.Data_Index = data_index;
+   \   0000001A   0x702C             STRB     R4,[R5, #+0]
+    260          
+    261                          EventMonitoringEnabled();
+   \   0000001C   0x.... 0x....      BL       EventMonitoringEnabled
+    262          
+    263                          // restore the current node index
+    264                          CommunicationMonitor_Data.Data_Index = temp_data_index;
+   \   00000020   0x702E             STRB     R6,[R5, #+0]
+    265                      }
+    266                  }
+    267              }
+   \                     ??CommunicationMonitor__Enable_2: (+1)
+   \   00000022   0x2001             MOVS     R0,#+1
+   \                     ??CommunicationMonitor__Enable_0: (+1)
+   \   00000024   0x2800             CMP      R0,#+0
+   \   00000026   0xD0F1             BEQ      ??CommunicationMonitor__Enable_1
+    268              #endif // #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    269          }
+   \   00000028   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+    270          
+    271          
+    272          //---------------------------------------------------------------------------------------------------------------------
+    273          /**
+    274           *  @brief  Disable the monitoring of a node.
+    275           *
+    276           *  @param  node    the node to disable
+    277           */
+
+   \                                 In section .text, align 2, keep-with-next
+    278          void CommunicationMonitor__Disable(uint8 node)
+    279          {
+   \                     CommunicationMonitor__Disable: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0007             MOVS     R7,R0
+    280              #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    281              for ( uint8 data_index = 0; data_index < NUMBER_OF_NODES_TO_MONITOR; data_index++ )
+   \   00000004   0x2400             MOVS     R4,#+0
+   \   00000006   0x0020             MOVS     R0,R4
+   \   00000008   0x....             LDR      R5,??DataTable14
+   \   0000000A   0xE008             B        ??CommunicationMonitor__Disable_0
+    282              {
+    283                  if ( node == COMMUNICATION_MONITOR_NODE_LIST[data_index].Node )
+   \                     ??CommunicationMonitor__Disable_1: (+1)
+   \   0000000C   0x0038             MOVS     R0,R7
+   \   0000000E   0x2801             CMP      R0,#+1
+   \   00000010   0xD104             BNE      ??CommunicationMonitor__Disable_2
+    284                  {
+    285                      //Save the current node index
+    286                      uint8 temp_data_index = CommunicationMonitor_Data.Data_Index;
+   \   00000012   0x782E             LDRB     R6,[R5, #+0]
+    287          
+    288                      // Assign the node to be disabled
+    289                      CommunicationMonitor_Data.Data_Index = data_index;
+   \   00000014   0x702C             STRB     R4,[R5, #+0]
+    290          
+    291                      EventMonitoringDisabled();
+   \   00000016   0x.... 0x....      BL       EventMonitoringDisabled
+    292          
+    293                      // restore the current node index
+    294                      CommunicationMonitor_Data.Data_Index = temp_data_index;
+   \   0000001A   0x702E             STRB     R6,[R5, #+0]
+    295                  }
+    296              }
+   \                     ??CommunicationMonitor__Disable_2: (+1)
+   \   0000001C   0x2001             MOVS     R0,#+1
+   \                     ??CommunicationMonitor__Disable_0: (+1)
+   \   0000001E   0x2800             CMP      R0,#+0
+   \   00000020   0xD0F4             BEQ      ??CommunicationMonitor__Disable_1
+    297              #endif // #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    298          }
+   \   00000022   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+    299          
+    300          //=====================================================================================================================
+    301          //-------------------------------------- Private Functions ------------------------------------------------------------
+    302          //=====================================================================================================================
+    303          #if (COMMUNICATION_MONITOR_FEATURE == ENABLED)
+    304          
+    305          //=====================================================================================================================
+    306          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    307          //=====================================================================================================================
+    308          
+    309          
+    310          //---------------------------------------------------------------------------------------------------------------------
+    311          /**
+    312           * @brief   Report the loss of communication Fault
+    313           */
+
+   \                                 In section .text, align 4, keep-with-next
+    314          static void ReportFault(void)
+    315          {
+   \                     ReportFault: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    316              #if(FAULT_MANAGEMENT_FEATURE == ENABLED)
+    317                  Fault__ConditionDetected((FAULT_ID_TYPE)COMMUNICATION_MONITOR_NODE_LIST[CommunicationMonitor_Data.Data_Index].Fault_Id);
+   \   00000002   0x....             LDR      R4,??DataTable14
+   \   00000004   0x....             ADR.N    R5,COMMUNICATION_MONITOR_NODE_LIST
+   \   00000006   0x7820             LDRB     R0,[R4, #+0]
+   \   00000008   0x0040             LSLS     R0,R0,#+1
+   \   0000000A   0x1828             ADDS     R0,R5,R0
+   \   0000000C   0x7840             LDRB     R0,[R0, #+1]
+   \   0000000E   0x.... 0x....      BL       Fault__ConditionDetected
+    318              #else
+    319                  CommunicationMonitor_IsACUNodeInFault = TRUE;
+    320              #endif
+    321          
+    322              BIT_SET(CommunicationMonitor_HasNodeInFault, COMMUNICATION_MONITOR_NODE_LIST[CommunicationMonitor_Data.Data_Index].Node);
+   \   00000012   0x88E0             LDRH     R0,[R4, #+6]
+   \   00000014   0x2101             MOVS     R1,#+1
+   \   00000016   0x7822             LDRB     R2,[R4, #+0]
+   \   00000018   0x0052             LSLS     R2,R2,#+1
+   \   0000001A   0x5CAA             LDRB     R2,[R5, R2]
+   \   0000001C   0x4091             LSLS     R1,R1,R2
+   \   0000001E   0x4301             ORRS     R1,R1,R0
+   \   00000020   0x80E1             STRH     R1,[R4, #+6]
+    323          }
+   \   00000022   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    324          
+    325          //---------------------------------------------------------------------------------------------------------------------
+    326          /**
+    327           *
+    328           */
+
+   \                                 In section .text, align 4, keep-with-next
+    329          static void CheckRevealNodeStatus(void)
+    330          {
+   \                     CheckRevealNodeStatus: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    331              uint16 reveal_node_status = Reveal__GetNodestatus();
+   \   00000002   0x.... 0x....      BL       Reveal__GetNodestatus
+    332          
+    333              if (BIT_TEST(reveal_node_status, COMMUNICATION_MONITOR_NODE_LIST[CommunicationMonitor_Data.Data_Index].Node) == 0)
+   \   00000006   0xBF00             Nop      
+   \   00000008   0x....             ADR.N    R1,COMMUNICATION_MONITOR_NODE_LIST
+   \   0000000A   0x....             LDR      R2,??DataTable14
+   \   0000000C   0x7812             LDRB     R2,[R2, #+0]
+   \   0000000E   0x0052             LSLS     R2,R2,#+1
+   \   00000010   0x5C89             LDRB     R1,[R1, R2]
+   \   00000012   0x40C8             LSRS     R0,R0,R1
+   \   00000014   0x07C0             LSLS     R0,R0,#+31
+   \   00000016   0xD402             BMI      ??CheckRevealNodeStatus_0
+    334              {
+    335                  EventFaultDetected();
+   \   00000018   0x.... 0x....      BL       EventFaultDetected
+   \   0000001C   0xBD01             POP      {R0,PC}
+    336              }
+    337              else
+    338              {
+    339                  EventFaultRecovered();
+   \                     ??CheckRevealNodeStatus_0: (+1)
+   \   0000001E   0x.... 0x....      BL       EventFaultRecovered
+    340              }
+    341          }
+   \   00000022   0xBD01             POP      {R0,PC}          ;; return
+    342          
+    343          //---------------------------------------------------------------------------------------------------------------------
+    344          /**
+    345           * @brief - This function removes the fault and also clears the flag from the CommunicationMonitor_HasNodeInFault
+    346           *
+    347           */
+
+   \                                 In section .text, align 4, keep-with-next
+    348          static void RemoveFault(void)
+    349          {
+   \                     RemoveFault: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    350              #if(FAULT_MANAGEMENT_FEATURE == ENABLED)
+    351                  Fault__ConditionRemoved((FAULT_ID_TYPE)COMMUNICATION_MONITOR_NODE_LIST[CommunicationMonitor_Data.Data_Index].Fault_Id);
+   \   00000002   0x....             LDR      R4,??DataTable14
+   \   00000004   0x....             ADR.N    R5,COMMUNICATION_MONITOR_NODE_LIST
+   \   00000006   0x7820             LDRB     R0,[R4, #+0]
+   \   00000008   0x0040             LSLS     R0,R0,#+1
+   \   0000000A   0x1828             ADDS     R0,R5,R0
+   \   0000000C   0x7840             LDRB     R0,[R0, #+1]
+   \   0000000E   0x.... 0x....      BL       Fault__ConditionRemoved
+    352              #else
+    353                  CommunicationMonitor_IsACUNodeInFault = FALSE;
+    354              #endif
+    355          
+    356              BIT_CLR(CommunicationMonitor_HasNodeInFault, COMMUNICATION_MONITOR_NODE_LIST[CommunicationMonitor_Data.Data_Index].Node);
+   \   00000012   0x88E0             LDRH     R0,[R4, #+6]
+   \   00000014   0x2101             MOVS     R1,#+1
+   \   00000016   0x7822             LDRB     R2,[R4, #+0]
+   \   00000018   0x0052             LSLS     R2,R2,#+1
+   \   0000001A   0x5CAA             LDRB     R2,[R5, R2]
+   \   0000001C   0x4091             LSLS     R1,R1,R2
+   \   0000001E   0x4388             BICS     R0,R0,R1
+   \   00000020   0x80E0             STRH     R0,[R4, #+6]
+    357          }
+   \   00000022   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    358          
+    359          
+    360          //=====================================================================================================================
+    361          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Communication Monitor State Machine
+    362          //=====================================================================================================================
+    363          // !! StateEngineCrank cannot update this code if you change the header !!
+    364          
+    365          
+    366          //---------------------------------------------------------------------------------------------------------------------
+    367          /**
+    368           * The main execution function for the Communication Monitor state machine.
+    369           * This function should be called periodically while the state machine is running.
+    370           *
+    371           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    372           *
+    373           * This function was auto-generated and must not be edited manually.
+    374           * Change the UML used to generate this function and regenerate the source code.
+    375           */
+
+   \                                 In section .text, align 2, keep-with-next
+    376          static void CommunicationMonitorExecute(void)
+    377          {
+   \                     CommunicationMonitorExecute: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    378              Communication_Monitor_Transitioned = FALSE;
+   \   00000002   0x....             LDR      R4,??DataTable14
+   \   00000004   0x2000             MOVS     R0,#+0
+   \   00000006   0x7120             STRB     R0,[R4, #+4]
+    379              switch(CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index])
+   \   00000008   0x7820             LDRB     R0,[R4, #+0]
+   \   0000000A   0x1820             ADDS     R0,R4,R0
+   \   0000000C   0x7840             LDRB     R0,[R0, #+1]
+   \   0000000E   0x2801             CMP      R0,#+1
+   \   00000010   0xD002             BEQ      ??CommunicationMonitorExecute_0
+   \   00000012   0x2802             CMP      R0,#+2
+   \   00000014   0xD008             BEQ      ??CommunicationMonitorExecute_1
+   \   00000016   0xBD10             POP      {R4,PC}
+    380              {
+    381                  case STATE_COMMUNICATION_MONITOR_FAULT_MONITORING:
+    382                      CheckRevealNodeStatus();                // Do function.
+   \                     ??CommunicationMonitorExecute_0: (+1)
+   \   00000018   0x.... 0x....      BL       CheckRevealNodeStatus
+    383                      if (Communication_Monitor_Transitioned == FALSE)
+   \   0000001C   0x7920             LDRB     R0,[R4, #+4]
+   \   0000001E   0x2800             CMP      R0,#+0
+   \   00000020   0xD109             BNE      ??CommunicationMonitorExecute_2
+    384                      {
+    385                          RemoveFault();                      // Do function.
+   \   00000022   0x.... 0x....      BL       RemoveFault
+   \   00000026   0xBD10             POP      {R4,PC}
+    386                      }
+    387                      break;
+    388          
+    389                  case STATE_COMMUNICATION_MONITOR_FAULT_RECOVERING:
+    390                      CheckRevealNodeStatus();                // Do function.
+   \                     ??CommunicationMonitorExecute_1: (+1)
+   \   00000028   0x.... 0x....      BL       CheckRevealNodeStatus
+    391                      if (Communication_Monitor_Transitioned == FALSE)
+   \   0000002C   0x7920             LDRB     R0,[R4, #+4]
+   \   0000002E   0x2800             CMP      R0,#+0
+   \   00000030   0xD101             BNE      ??CommunicationMonitorExecute_2
+    392                      {
+    393                          ReportFault();                      // Do function.
+   \   00000032   0x.... 0x....      BL       ReportFault
+    394                      }
+    395                      break;
+    396          
+    397                  default:
+    398                      // There is nothing to do for all other values of CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index].
+    399                      break;
+    400              }
+    401          }
+   \                     ??CommunicationMonitorExecute_2: (+1)
+   \   00000036   0xBD10             POP      {R4,PC}          ;; return
+    402          
+    403          
+    404          //---------------------------------------------------------------------------------------------------------------------
+    405          /**
+    406           * The initialization function for the Communication Monitor state machine.
+    407           * This function resets the state machine to the initial state.
+    408           *
+    409           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    410           *
+    411           * This function was auto-generated and must not be edited manually.
+    412           * Change the UML used to generate this function and regenerate the source code.
+    413           */
+
+   \                                 In section .text, align 2, keep-with-next
+    414          static void CommunicationMonitorInitialize(void)
+    415          {
+    416              CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index] = STATE_COMMUNICATION_MONITOR_FAULT_MONITORING;
+   \                     CommunicationMonitorInitialize: (+1)
+   \   00000000   0x2001             MOVS     R0,#+1
+   \   00000002   0x....             LDR      R1,??DataTable14
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x780B             LDRB     R3,[R1, #+0]
+   \   00000008   0x18CB             ADDS     R3,R1,R3
+   \   0000000A   0x705A             STRB     R2,[R3, #+1]
+    417              Communication_Monitor_Transitioned = TRUE;
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+    418          }
+   \   0000000E   0x4770             BX       LR               ;; return
+    419          
+    420          
+    421          //---------------------------------------------------------------------------------------------------------------------
+    422          /**
+    423           * Process the Fault Detected Event for the Communication Monitor state machine.
+    424           *
+    425           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    426           *
+    427           * This function was auto-generated and must not be edited manually.
+    428           * Change the UML used to generate this function and regenerate the source code.
+    429           */
+
+   \                                 In section .text, align 2, keep-with-next
+    430          static void EventFaultDetected(void)
+    431          {
+    432              switch (CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index])
+   \                     EventFaultDetected: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable14
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x1841             ADDS     R1,R0,R1
+   \   00000006   0x784A             LDRB     R2,[R1, #+1]
+   \   00000008   0x2A01             CMP      R2,#+1
+   \   0000000A   0xD103             BNE      ??EventFaultDetected_0
+    433              {
+    434                  case STATE_COMMUNICATION_MONITOR_FAULT_MONITORING:
+    435                      CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index] = STATE_COMMUNICATION_MONITOR_FAULT_RECOVERING;
+   \   0000000C   0x2202             MOVS     R2,#+2
+   \   0000000E   0x704A             STRB     R2,[R1, #+1]
+    436                      Communication_Monitor_Transitioned = TRUE;
+   \   00000010   0x2101             MOVS     R1,#+1
+   \   00000012   0x7101             STRB     R1,[R0, #+4]
+    437                      break;
+    438          
+    439                  default:
+    440                      // Event is ignored for all other values of CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index].
+    441                      break;
+    442              }
+    443          }
+   \                     ??EventFaultDetected_0: (+1)
+   \   00000014   0x4770             BX       LR               ;; return
+    444          
+    445          
+    446          //---------------------------------------------------------------------------------------------------------------------
+    447          /**
+    448           * Process the Fault Recovered Event for the Communication Monitor state machine.
+    449           *
+    450           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    451           *
+    452           * This function was auto-generated and must not be edited manually.
+    453           * Change the UML used to generate this function and regenerate the source code.
+    454           */
+
+   \                                 In section .text, align 2, keep-with-next
+    455          static void EventFaultRecovered(void)
+    456          {
+    457              switch (CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index])
+   \                     EventFaultRecovered: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable14
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x1841             ADDS     R1,R0,R1
+   \   00000006   0x784A             LDRB     R2,[R1, #+1]
+   \   00000008   0x2A02             CMP      R2,#+2
+   \   0000000A   0xD103             BNE      ??EventFaultRecovered_0
+    458              {
+    459                  case STATE_COMMUNICATION_MONITOR_FAULT_RECOVERING:
+    460                      CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index] = STATE_COMMUNICATION_MONITOR_FAULT_MONITORING;
+   \   0000000C   0x2201             MOVS     R2,#+1
+   \   0000000E   0x0013             MOVS     R3,R2
+   \   00000010   0x704B             STRB     R3,[R1, #+1]
+    461                      Communication_Monitor_Transitioned = TRUE;
+   \   00000012   0x7102             STRB     R2,[R0, #+4]
+    462                      break;
+    463          
+    464                  default:
+    465                      // Event is ignored for all other values of CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index].
+    466                      break;
+    467              }
+    468          }
+   \                     ??EventFaultRecovered_0: (+1)
+   \   00000014   0x4770             BX       LR               ;; return
+    469          
+    470          
+    471          //---------------------------------------------------------------------------------------------------------------------
+    472          /**
+    473           * Process the Monitoring Disabled Event for the Communication Monitor state machine.
+    474           *
+    475           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    476           *
+    477           * This function was auto-generated and must not be edited manually.
+    478           * Change the UML used to generate this function and regenerate the source code.
+    479           */
+
+   \                                 In section .text, align 2, keep-with-next
+    480          static void EventMonitoringDisabled(void)
+    481          {
+    482              switch (CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index])
+   \                     EventMonitoringDisabled: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable14
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x1841             ADDS     R1,R0,R1
+   \   00000006   0x784A             LDRB     R2,[R1, #+1]
+   \   00000008   0x1E52             SUBS     R2,R2,#+1
+   \   0000000A   0x2A01             CMP      R2,#+1
+   \   0000000C   0xD803             BHI      ??EventMonitoringDisabled_0
+    483              {
+    484                  case STATE_COMMUNICATION_MONITOR_FAULT_MONITORING:
+    485                  case STATE_COMMUNICATION_MONITOR_FAULT_RECOVERING:
+    486                      CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index] = STATE_COMMUNICATION_MONITOR_DISABLED;
+   \   0000000E   0x2203             MOVS     R2,#+3
+   \   00000010   0x704A             STRB     R2,[R1, #+1]
+    487                      Communication_Monitor_Transitioned = TRUE;
+   \   00000012   0x2101             MOVS     R1,#+1
+   \   00000014   0x7101             STRB     R1,[R0, #+4]
+    488                      break;
+    489          
+    490                  default:
+    491                      // Event is ignored for all other values of CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index].
+    492                      break;
+    493              }
+    494          }
+   \                     ??EventMonitoringDisabled_0: (+1)
+   \   00000016   0x4770             BX       LR               ;; return
+    495          
+    496          
+    497          //---------------------------------------------------------------------------------------------------------------------
+    498          /**
+    499           * Process the Monitoring Enabled Event for the Communication Monitor state machine.
+    500           *
+    501           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    502           *
+    503           * This function was auto-generated and must not be edited manually.
+    504           * Change the UML used to generate this function and regenerate the source code.
+    505           */
+
+   \                                 In section .text, align 2, keep-with-next
+    506          static void EventMonitoringEnabled(void)
+    507          {
+    508              switch (CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index])
+   \                     EventMonitoringEnabled: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable14
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x1841             ADDS     R1,R0,R1
+   \   00000006   0x784A             LDRB     R2,[R1, #+1]
+   \   00000008   0x2A03             CMP      R2,#+3
+   \   0000000A   0xD103             BNE      ??EventMonitoringEnabled_0
+    509              {
+    510                  case STATE_COMMUNICATION_MONITOR_DISABLED:
+    511                      CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index] = STATE_COMMUNICATION_MONITOR_FAULT_MONITORING;
+   \   0000000C   0x2201             MOVS     R2,#+1
+   \   0000000E   0x0013             MOVS     R3,R2
+   \   00000010   0x704B             STRB     R3,[R1, #+1]
+    512                      Communication_Monitor_Transitioned = TRUE;
+   \   00000012   0x7102             STRB     R2,[R0, #+4]
+    513                      break;
+    514          
+    515                  default:
+    516                      // Event is ignored for all other values of CommunicationMonitor_Data.State[CommunicationMonitor_Data.Data_Index].
+    517                      break;
+    518              }
+    519          }
+   \                     ??EventMonitoringEnabled_0: (+1)
+   \   00000014   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable14:
+   \   00000000   0x........         DC32     CommunicationMonitor_Data
+    520          
+    521          
+    522          // !! StateEngineCrank cannot update this code if you change the footer !!
+    523          // End of StateEngineCrank Auto-Generated Code.
+    524          
+    525          
+    526          #endif
+    527          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   CheckRevealNodeStatus
+         8   -> EventFaultDetected
+         8   -> EventFaultRecovered
+         8   -> Reveal__GetNodestatus
+       8   CommunicationMonitorExecute
+         8   -> CheckRevealNodeStatus
+         8   -> RemoveFault
+         8   -> ReportFault
+       0   CommunicationMonitorInitialize
+      24   CommunicationMonitor__Disable
+        24   -> EventMonitoringDisabled
+      24   CommunicationMonitor__Enable
+        24   -> EventMonitoringEnabled
+       8   CommunicationMonitor__Execute
+         8   -> CommunicationMonitorExecute
+       0   CommunicationMonitor__HasNodeInFault
+      16   CommunicationMonitor__Initialize
+        16   -> CommunicationMonitorInitialize
+        16   -> __aeabi_memset4
+       0   EventFaultDetected
+       0   EventFaultRecovered
+       0   EventMonitoringDisabled
+       0   EventMonitoringEnabled
+      16   RemoveFault
+        16   -> Fault__ConditionRemoved
+      16   ReportFault
+        16   -> Fault__ConditionDetected
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable14
+       2  COMMUNICATION_MONITOR_NODE_LIST
+      36  CheckRevealNodeStatus
+      56  CommunicationMonitorExecute
+      16  CommunicationMonitorInitialize
+       8  CommunicationMonitor_Data
+          Communication_Monitor_Transitioned
+          CommunicationMonitor_Timer_Tick
+          CommunicationMonitor_HasNodeInFault
+      36  CommunicationMonitor__Disable
+      42  CommunicationMonitor__Enable
+      42  CommunicationMonitor__Execute
+      14  CommunicationMonitor__HasNodeInFault
+      46  CommunicationMonitor__Initialize
+      22  EventFaultDetected
+      22  EventFaultRecovered
+      24  EventMonitoringDisabled
+      22  EventMonitoringEnabled
+      36  RemoveFault
+      36  ReportFault
+
+ 
+   8 bytes in section .bss
+ 456 bytes in section .text
+ 
+ 456 bytes of CODE memory
+   8 bytes of DATA memory
+
+Errors: none
+Warnings: none

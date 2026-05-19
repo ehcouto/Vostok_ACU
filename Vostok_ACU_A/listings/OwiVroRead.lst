@@ -1,0 +1,2521 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:33
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Processes/OWI_VRO/OwiVroRead.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\OwiVroRead.lst -o
+#        obj\OwiVroRead.obj
+#        source/Category/Application/acu/Processes/OWI_VRO/OwiVroRead.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\OwiVroRead.lst
+#    Object file  =  obj\OwiVroRead.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Processes\OWI_VRO\OwiVroRead.c
+      1          /**
+      2           *  @file		OwiVroRead.c
+      3           *
+      4           *  @brief		A process that implements the OWI Voltage Regulated Output
+      5           *
+      6           *  @details
+      7           *
+      8           *
+      9             @startuml{OWI VRO State Machine.jpg}
+     10                  title OWI VRO State Machine
+     11                  ' Use state = OwiVroRead_Data.State
+     12          
+     13          		[*] --> INITIALIZE
+     14          
+     15          		INITIALIZE --> WAIT_FOR_INITIAL_DELAY : evStartOwiVro
+     16                  INITIALIZE --> OWI_VRO_COMPLETE : evSkipOwiVro
+     17          
+     18          		WAIT_FOR_INITIAL_DELAY : entry / StartDelay()
+     19          		WAIT_FOR_INITIAL_DELAY : do / WaitForInitialDelay()
+     20          		WAIT_FOR_INITIAL_DELAY : exit / InitSamplesAcquisition()
+     21          		WAIT_FOR_INITIAL_DELAY --> WAIT_FOR_NEXT_SAMPLE : evInitialDelayExpired
+     22          
+     23          		WAIT_FOR_NEXT_SAMPLE : entry / StartNextSampleAcquisition()
+     24          		WAIT_FOR_NEXT_SAMPLE : do / CheckForNewSample()
+     25          		WAIT_FOR_NEXT_SAMPLE --> WAIT_FOR_DELAY_BTW_SAMPLES : evNewSampleAcquired
+     26          		WAIT_FOR_NEXT_SAMPLE --> SAMPLES_PROCESS : evStopSamplesAcquisition
+     27          
+     28          		WAIT_FOR_DELAY_BTW_SAMPLES: do / WaitForDelayBtwSamples()
+     29          		WAIT_FOR_DELAY_BTW_SAMPLES --> WAIT_FOR_NEXT_SAMPLE : evDelayBtwSamplesExpired
+     30          
+     31          		SAMPLES_PROCESS : do / ProcessSamples()
+     32                  SAMPLES_PROCESS --> OWI_VRO_COMPLETE : evSampleProcessed
+     33          
+     34              @enduml
+     35           *
+     36           *  @copyright  Copyright 2017-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     37           */
+     38          //---------------------------------------------------------------------------------------------------------------------
+     39          //---------------------------------------------------------------------------------------------------------------------
+     40          
+     41          
+     42          //-------------------------------------- Include Files ----------------------------------------------------------------
+     43          // -- This Module --
+     44          #include "SystemConfig.h"
+     45          #include "OwiVroRead.h"
+     46          
+     47          // -- Other Modules --
+     48          #include "DishAuxVar.h"
+     49          #include "Fault.h"
+     50          #include "limits.h"
+     51          #include "Log.h"
+     52          #include "Interpreter.h"
+     53          #include <math.h>
+     54          #include "Micro.h"
+     55          #include "Millis.h"
+     56          #include "NVData.h"
+     57          #include "OWIVoltageRegulatedOutput.h"
+     58          #include "SettingFile.h"
+     59          #include <stdlib.h>
+     60          #include <string.h>
+     61          #include "Selector.h"
+     62          #include "Variable.h"
+     63          
+     64          
+     65          //=====================================================================================================================
+     66          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Owi Vro State Machine
+     67          //=====================================================================================================================
+     68          // !! StateEngineCrank cannot update this code if you change the header !!
+     69          
+     70          
+     71          //! Unique names used to identify states of the Owi Vro state machine.
+     72          typedef enum OWI_VRO_STATE_ENUM
+     73          {
+     74              STATE_OWI_VRO_NONE                       = 0,
+     75          
+     76              STATE_OWI_VRO_INITIALIZE                 = 1,   //!< (initial_state)
+     77              STATE_OWI_VRO_WAIT_FOR_INITIAL_DELAY     = 2,
+     78              STATE_OWI_VRO_COMPLETE                   = 3,
+     79              STATE_OWI_VRO_WAIT_FOR_NEXT_SAMPLE       = 4,
+     80              STATE_OWI_VRO_WAIT_FOR_DELAY_BTW_SAMPLES = 5,
+     81              STATE_OWI_VRO_SAMPLES_PROCESS            = 6,
+     82          
+     83              STATE_OWI_VRO_END                        = 7
+     84          } OWI_VRO_STATE_TYPE;
+     85          
+     86          // -- Private Function Prototypes used by the state machine for customization functions --
+     87          static void CheckForNewSample(void);
+     88          static void InitSamplesAcquisition(void);
+     89          static void ProcessSamples(void);
+     90          static void StartDelay(void);
+     91          static void StartNextSampleAcquisition(void);
+     92          static void WaitForDelayBtwSamples(void);
+     93          static void WaitForInitialDelay(void);
+     94          
+     95          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+     96          static void EventDelayBtwSamplesExpired(void);
+     97          static void EventInitialDelayExpired(void);
+     98          static void EventNewSampleAcquired(void);
+     99          static void EventSampleProcessed(void);
+    100          static void EventSkipOwiVro(void);
+    101          static void EventStartOwiVro(void);
+    102          static void EventStopSamplesAcquisition(void);
+    103          static void OwiVroExecute(void);
+    104          static void OwiVroInitialize(void);
+    105          
+    106          // !! StateEngineCrank cannot update this code if you change the footer !!
+    107          // End of StateEngineCrank Auto-Generated Code.
+    108          
+    109          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+    110          #pragma location = "_appliance_segment"
+    111          OWI_STATUS_TYPE OWI_VRO_OWI_Status;
+    112          
+    113          
+    114          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    115          //! The name of this module for use by the Log module.
+    116          #define MODULE_NAME MODULE_OWI_VRO_READ
+    117          
+    118          //! The maximum number of duty cycle samples to be acquired during the process.
+    119          #define DUTYCYCLE_SAMPLES_MAX_NUM 					8
+    120          
+    121          // DishAuxVar_AverageWithRejection(), used in Owi Vro Read, support a maximum of AVEARAGE_WITH_REJ_MAX_SUPPORTED_SAMPLES_NUM,
+    122          // so the number of samples on which calculate the average has to be less than or equal to that limit.
+    123          CT_ASSERT((uint8)DUTYCYCLE_SAMPLES_MAX_NUM <= AVEARAGE_WITH_REJ_MAX_SUPPORTED_SAMPLES_NUM);
+    124          
+    125          //! The maximum number of compensation coefficients to be saved for each setpoint.
+    126          #define OWI_VRO_SAVED_COMP_COEFFS 					8
+    127          
+    128          // DishAuxVar_AverageWithRejection(), used in Owi Vro Read, support a maximum of AVEARAGE_WITH_REJ_MAX_SUPPORTED_SAMPLES_NUM,
+    129          // so the number of samples on which calculate the average has to be less than or equal to that limit.
+    130          CT_ASSERT((uint8)OWI_VRO_SAVED_COMP_COEFFS <= AVEARAGE_WITH_REJ_MAX_SUPPORTED_SAMPLES_NUM);
+    131          
+    132          //! Default value for compensation coefficients.
+    133          #define DEFAULT_COMP_COEFFS_VALUE 					1000
+    134          
+    135          //! Number of Voltage setpoints for OWI VRO Algorithm
+    136          #define OWI_VRO_SETPOINT_NUM						3
+    137          
+    138          //! Number of saved Soil Measures Non Compensated
+    139          #define OWI_VRO_SAVED_SOIL_MEASURES_NON_COMP_NUM	6
+    140          
+    141          //! List of values to compare with the F1_F0_Flags.
+    142          enum OWI_VRO_READ_OPTION_ENUM
+    143          {
+    144          	OWI_VRO_TURBIDITY_READ		= 0x00,	//!< F1=0, F0=0
+    145          	OWI_VRO_CALIBRATION_READ	= 0x01,	//!< F1=0, F0=1
+    146          	OWI_VRO_VERIFICATION_READ	= 0x02,	//!< F1=1, F0=0
+    147          
+    148          	OWI_VRO_READ_OPTION_COUNT
+    149          };
+    150          
+    151          //! A list of log message IDs that are generated by this module.
+    152          typedef enum MODULE_OWI_VRO_READ_LOG_MESSAGE_ID_ENUM
+    153          {
+    154          	INVALID_PROCESS_CONTROL = 1,
+    155          	ERROR_MISSING_PROCESS_PARAMETERS,
+    156          	ERROR_MISSING_MACHINE_CONFIG_PARAMETERS,
+    157          	ERROR_INCONSISTENT_PARAMETER_VALUE,
+    158          	ERROR_INCONSISTENT_AVERAGE_DATA,
+    159          } MODULE_OWI_VRO_READ_LOG_MESSAGE_ID_TYPE;
+    160          
+    161          typedef PACKED struct OWI_VRO_READ_PROCESS_SF_PARAMS_STRUCT
+    162          {
+    163          	uint8 Setpoint_Index			:3;	//! Index of Voltage setpoint for the process
+    164          	uint8 Unused_b37				:5;
+    165          
+    166          	uint8 Samples_To_Acquire		:4;	//! The number of samples to be acquired by the process
+    167          	uint8 Samples_To_Reject			:4;	//! The number of samples to be rejected by the process
+    168          
+    169          	uint8 Initial_Delay;			//! Units = 2s
+    170          	uint8 Delay_Btw_Samples;		//! Units = 2s
+    171          } OWI_VRO_READ_PROCESS_SF_PARAMS_TYPE;
+    172          
+    173          //! Structure of volatile data for Owi Vro Read Process
+    174          typedef struct OWI_VRO_READ_PROCESS_DATA_STRUCT
+    175          {
+    176          	const OWI_VRO_READ_PROCESS_SF_PARAMS_TYPE* Process_Params_Ptr;
+    177          	const OWI_VRO_COMMON_SF_PARAMS_TYPE* Common_Params_Ptr;
+    178          	const OWI_VRO_SETPOINT_SF_PARAMS_TYPE* Setpoint_Params_Ptr;
+    179          	MILLIS_TIMER_TYPE Timer;
+    180          	uint16 DutyCycle_Stable_Samples[DUTYCYCLE_SAMPLES_MAX_NUM];
+    181          	uint16 DutyCycle_Comp_Samples[DUTYCYCLE_SAMPLES_MAX_NUM];
+    182          	uint16 Avg_DutyCycle_Stable;
+    183          	uint16 Avg_DutyCycle_Comp;
+    184          	uint8 Process_Config;
+    185          	uint8 Setpoint_Index;
+    186          	OWI_VRO_STATE_TYPE State;
+    187          	uint8 Sample_Sequence_Id;
+    188          	uint8 Num_Samples_Acquired;
+    189          	BOOL_TYPE Sample_Timeout_Expired;
+    190          } OWI_VRO_READ_PROCESS_DATA_TYPE;
+    191          
+    192          //! Structure of non volatile data for Owi Vro Read Process
+    193          typedef struct OWI_VRO_READ_PROCESS_NV_DATA_STRUCT
+    194          {
+    195          	uint8 Cycles_To_Calibration;
+    196          	uint8 Cal_Read_Retry_Counter;
+    197          	uint8 Completed_Calibration;
+    198          } OWI_VRO_READ_PROCESS_NV_DATA_TYPE;
+    199          
+    200          //! Array of displacements index of for i-th setpoint parameters in SF_PTR_ACU_ALGORITHM_PARAMETERS pointer data area
+
+   \                                 In section .text, align 4, keep-with-next
+    201          static const uint8 OWI_VRO_Setpoint_Displacements[OWI_VRO_SETPOINT_NUM] = {
+   \                     OWI_VRO_Setpoint_Displacements:
+   \   00000000   0x16 0x17          DC8 22, 23, 24, 0
+   \              0x18 0x00    
+    202          	DISPL_OWI_VRO_SETPOINT_1_PARAMS,
+    203          	DISPL_OWI_VRO_SETPOINT_2_PARAMS,
+    204          	DISPL_OWI_VRO_SETPOINT_3_PARAMS,
+    205          };
+    206          
+    207          //! Volatile data for Owi Vro Read Process
+
+   \                                 In section .bss, align 4
+    208          static OWI_VRO_READ_PROCESS_DATA_TYPE OwiVroRead_Data;
+   \                     OwiVroRead_Data:
+   \   00000000                      DS8 60
+
+   \                                 In section _appliance_segment, align 4
+    209          
+    210          //! Non volatile data for Owi Vro Read Process
+    211          #pragma location = "_appliance_segment"
+    212          static OWI_VRO_READ_PROCESS_NV_DATA_TYPE OwiVroRead_NV_Data;
+   \                     OwiVroRead_NV_Data:
+   \   00000000                      DS8 4
+   \                     OWI_VRO_OWI_Status:
+   \   00000004                      DS8 1
+   \   00000005                      DS8 3
+   \   00000008                      DS8 48
+   \   00000038                      DS8 8
+    213          
+    214          //! FIFO Array of OWI VRO historical compensation coefficients, one array for each setpoint. The stored value is actual value x 1000.
+    215          #pragma location = "_appliance_segment"
+    216          static uint16 OWI_VRO_Comp_Coeffs_Array[OWI_VRO_SETPOINT_NUM][OWI_VRO_SAVED_COMP_COEFFS];
+    217          
+    218          //! OWI VRO average compensation coefficients, one for each setpoint. The stored value is actual value x 1000.
+    219          #pragma location = "_appliance_segment"
+    220          static uint16 OWI_VRO_Avg_Coeff_SP[OWI_VRO_SETPOINT_NUM];
+    221          
+    222          //! Array of saved Soil Measures Non Compensated
+    223          #pragma location = "_appliance_segment"
+
+   \                                 In section _appliance_segment, align 4
+    224          static uint16 OWI_VRO_Soil_Measure_NonComp[OWI_VRO_SAVED_SOIL_MEASURES_NON_COMP_NUM];
+   \                     OWI_VRO_Soil_Measure_NonComp:
+   \   00000000                      DS8 12
+    225          
+    226          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    227          static void ReadOwiVroParameters(PROCESS_CONTROL_TYPE* control);
+    228          
+    229          //=====================================================================================================================
+    230          //-------------------------------------- Public Functions -------------------------------------------------------------
+    231          //=====================================================================================================================
+    232          //---------------------------------------------------------------------------------------------------------------------
+    233          
+    234          //---------------------------------------------------------------------------------------------------------------------
+    235          /**
+    236           * Initialize the OWI VRO module's data.
+    237           */
+
+   \                                 In section .text, align 2, keep-with-next
+    238          void OwiVroRead__Initialize(void)
+    239          {
+   \                     OwiVroRead__Initialize: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    240          	if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+   \   00000002   0x.... 0x....      BL       Micro__GetResetMode
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD134             BNE      ??OwiVroRead__Initialize_0
+    241          	{
+    242          		Millis__Reset(&OwiVroRead_Data.Timer);
+   \   0000000A   0x....             LDR      R0,??DataTable7
+   \   0000000C   0x.... 0x....      BL       Millis__Reset
+    243          
+    244          		if (NVData__GetLastRestoreStatus()->Bit.Appliance_Data_Recovered != (NVDATA_RESTORE_TYPE)NVDATA_RESTORE_OKAY)
+   \   00000010   0x.... 0x....      BL       NVData__GetLastRestoreStatus
+   \   00000014   0x7800             LDRB     R0,[R0, #+0]
+   \   00000016   0x0780             LSLS     R0,R0,#+30
+   \   00000018   0x0F80             LSRS     R0,R0,#+30
+   \   0000001A   0x2801             CMP      R0,#+1
+   \   0000001C   0xD02A             BEQ      ??OwiVroRead__Initialize_0
+    245          		{
+    246          			uint8 i, j;
+    247          			for (i = 0; i < ELEMENTS_IN_ARRAY(OWI_VRO_Comp_Coeffs_Array); i++)
+   \   0000001E   0x2000             MOVS     R0,#+0
+   \   00000020   0x0001             MOVS     R1,R0
+   \   00000022   0xE00B             B        ??OwiVroRead__Initialize_1
+    248          			{
+    249          				for (j = 0; j < ELEMENTS_IN_ARRAY(OWI_VRO_Comp_Coeffs_Array[0]); j++)
+    250          				{
+    251          					OWI_VRO_Comp_Coeffs_Array[i][j] = DEFAULT_COMP_COEFFS_VALUE;
+   \                     ??OwiVroRead__Initialize_2: (+1)
+   \   00000024   0x....             LDR      R3,??DataTable7_1
+   \   00000026   0x010C             LSLS     R4,R1,#+4
+   \   00000028   0x191B             ADDS     R3,R3,R4
+   \   0000002A   0x0054             LSLS     R4,R2,#+1
+   \   0000002C   0x191B             ADDS     R3,R3,R4
+   \   0000002E   0x24FA             MOVS     R4,#+250
+   \   00000030   0x00A4             LSLS     R4,R4,#+2        ;; #+1000
+   \   00000032   0x811C             STRH     R4,[R3, #+8]
+    252          				}
+   \   00000034   0x1C52             ADDS     R2,R2,#+1
+   \                     ??OwiVroRead__Initialize_3: (+1)
+   \   00000036   0x2A08             CMP      R2,#+8
+   \   00000038   0xD3F4             BCC      ??OwiVroRead__Initialize_2
+   \   0000003A   0x1C49             ADDS     R1,R1,#+1
+   \                     ??OwiVroRead__Initialize_1: (+1)
+   \   0000003C   0x2903             CMP      R1,#+3
+   \   0000003E   0xD201             BCS      ??OwiVroRead__Initialize_4
+   \   00000040   0x0002             MOVS     R2,R0
+   \   00000042   0xE7F8             B        ??OwiVroRead__Initialize_3
+    253          			}
+    254          
+    255          			for (i = 0; i < ELEMENTS_IN_ARRAY(OWI_VRO_Avg_Coeff_SP); i++)
+   \                     ??OwiVroRead__Initialize_4: (+1)
+   \   00000044   0x0001             MOVS     R1,R0
+   \   00000046   0x22FA             MOVS     R2,#+250
+   \   00000048   0x0092             LSLS     R2,R2,#+2        ;; #+1000
+   \   0000004A   0xE004             B        ??OwiVroRead__Initialize_5
+    256          			{
+    257          				OWI_VRO_Avg_Coeff_SP[i] = DEFAULT_COMP_COEFFS_VALUE;
+   \                     ??OwiVroRead__Initialize_6: (+1)
+   \   0000004C   0x....             LDR      R3,??DataTable7_1
+   \   0000004E   0x004C             LSLS     R4,R1,#+1
+   \   00000050   0x191B             ADDS     R3,R3,R4
+   \   00000052   0x871A             STRH     R2,[R3, #+56]
+    258          			}
+   \   00000054   0x1C49             ADDS     R1,R1,#+1
+   \                     ??OwiVroRead__Initialize_5: (+1)
+   \   00000056   0x2903             CMP      R1,#+3
+   \   00000058   0xD3F8             BCC      ??OwiVroRead__Initialize_6
+    259          
+    260          			for (i = 0; i < ELEMENTS_IN_ARRAY(OWI_VRO_Soil_Measure_NonComp); i++)
+   \   0000005A   0x0001             MOVS     R1,R0
+   \   0000005C   0x0002             MOVS     R2,R0
+   \   0000005E   0x....             LDR      R3,??DataTable7_2
+   \   00000060   0xE002             B        ??OwiVroRead__Initialize_7
+    261          			{
+    262          				OWI_VRO_Soil_Measure_NonComp[i] = 0;
+   \                     ??OwiVroRead__Initialize_8: (+1)
+   \   00000062   0x004C             LSLS     R4,R1,#+1
+   \   00000064   0x531A             STRH     R2,[R3, R4]
+    263          			}
+   \   00000066   0x1C49             ADDS     R1,R1,#+1
+   \                     ??OwiVroRead__Initialize_7: (+1)
+   \   00000068   0x2906             CMP      R1,#+6
+   \   0000006A   0xD3FA             BCC      ??OwiVroRead__Initialize_8
+    264          
+    265          			OwiVroRead_NV_Data.Cal_Read_Retry_Counter = 0;
+   \   0000006C   0x....             LDR      R1,??DataTable7_1
+    266          			OwiVroRead_NV_Data.Cycles_To_Calibration = 0;
+   \   0000006E   0x800A             STRH     R2,[R1, #+0]
+    267          			OwiVroRead_NV_Data.Completed_Calibration = 0;
+   \   00000070   0x708A             STRB     R2,[R1, #+2]
+    268          
+    269          			OWI_VRO_OWI_Status = OWI_STATUS_NEEDS_CALIBRATION;
+   \   00000072   0x7108             STRB     R0,[R1, #+4]
+    270          		}
+    271          	}
+    272          }
+   \                     ??OwiVroRead__Initialize_0: (+1)
+   \   00000074   0xBD10             POP      {R4,PC}          ;; return
+    273          
+    274          
+    275          //---------------------------------------------------------------------------------------------------------------------
+    276          /**
+    277           * The OWI VRO Read process.
+    278           *
+    279           * It implements the OWI VRO Read algorithm
+    280           *
+    281           * @param control = pointer to the process control parameters provided by the Interpreter.
+    282           * @retval PROCESS_COMPLETE = The process is ready for the Interpreter to proceed to the next step.
+    283           * @retval PROCESS_BUSY = The process is not ready for the Interpreter to proceed to the next step.
+    284           */
+
+   \                                 In section .text, align 2, keep-with-next
+    285          PROCESS_RESULT_TYPE OwiVroRead__Process(PROCESS_CONTROL_TYPE* control)
+    286          {
+   \                     OwiVroRead__Process: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0005             MOVS     R5,R0
+    287              PROCESS_RESULT_TYPE result = PROCESS_COMPLETE;
+   \   00000004   0x2300             MOVS     R3,#+0
+   \   00000006   0x001C             MOVS     R4,R3
+    288          
+    289          	if ((control == NULL) ||
+    290          		(control->F1_F0_Flags >= (uint8)OWI_VRO_READ_OPTION_COUNT) ||
+    291          		(control->Compartment >= APPLIANCE_MAX_COMPARTMENTS) ||
+    292          		(control->Process_Instance > (uint8)0))
+   \   00000008   0x2D00             CMP      R5,#+0
+   \   0000000A   0xD00C             BEQ      ??OwiVroRead__Process_0
+   \   0000000C   0x7968             LDRB     R0,[R5, #+5]
+   \   0000000E   0x0001             MOVS     R1,R0
+   \   00000010   0x0909             LSRS     R1,R1,#+4
+   \   00000012   0x0789             LSLS     R1,R1,#+30
+   \   00000014   0x0F89             LSRS     R1,R1,#+30
+   \   00000016   0x2903             CMP      R1,#+3
+   \   00000018   0xDA05             BGE      ??OwiVroRead__Process_0
+   \   0000001A   0x78E9             LDRB     R1,[R5, #+3]
+   \   0000001C   0x2900             CMP      R1,#+0
+   \   0000001E   0xD102             BNE      ??OwiVroRead__Process_0
+   \   00000020   0x7929             LDRB     R1,[R5, #+4]
+   \   00000022   0x2900             CMP      R1,#+0
+   \   00000024   0xD008             BEQ      ??OwiVroRead__Process_1
+    293          	{
+    294          		LOG_ADD_EXCEPTION(INVALID_PROCESS_CONTROL, (control != NULL));
+   \                     ??OwiVroRead__Process_0: (+1)
+   \   00000026   0x2D00             CMP      R5,#+0
+   \   00000028   0xD000             BEQ      ??OwiVroRead__Process_2
+   \   0000002A   0x2301             MOVS     R3,#+1
+   \                     ??OwiVroRead__Process_2: (+1)
+   \   0000002C   0x2201             MOVS     R2,#+1
+   \   0000002E   0x4611             MOV      R1,R2
+   \   00000030   0x2040             MOVS     R0,#+64
+   \   00000032   0x.... 0x....      BL       Log__AddMessage
+   \   00000036   0xE00E             B        ??OwiVroRead__Process_3
+    295          	}
+    296          	else
+    297          	{
+    298          		if (((uint8)control->Step_Initializing == (uint8)TRUE) ||
+    299          			((uint8)control->Resume_From_Reset == (uint8)TRUE) ||
+    300          			((uint8)control->Resume_From_Pause == (uint8)TRUE))
+   \                     ??OwiVroRead__Process_1: (+1)
+   \   00000038   0x0740             LSLS     R0,R0,#+29
+   \   0000003A   0xD005             BEQ      ??OwiVroRead__Process_4
+    301          		{
+    302          			// Initialize this instance of the Owi Vro Read process.
+    303          			OwiVroInitialize();
+   \   0000003C   0x.... 0x....      BL       OwiVroInitialize
+    304          			ReadOwiVroParameters(control);
+   \   00000040   0x0028             MOVS     R0,R5
+   \   00000042   0x.... 0x....      BL       ReadOwiVroParameters
+   \   00000046   0xE001             B        ??OwiVroRead__Process_5
+    305          		}
+    306          		else
+    307          		{
+    308          			// Execute the Owi Vro Read Process state machine.
+    309          			OwiVroExecute();
+   \                     ??OwiVroRead__Process_4: (+1)
+   \   00000048   0x.... 0x....      BL       OwiVroExecute
+    310          		}
+    311          
+    312          		if (OwiVroRead_Data.State != STATE_OWI_VRO_COMPLETE)
+   \                     ??OwiVroRead__Process_5: (+1)
+   \   0000004C   0x....             LDR      R0,??DataTable7_3
+   \   0000004E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000050   0x2803             CMP      R0,#+3
+   \   00000052   0xD000             BEQ      ??OwiVroRead__Process_3
+    313          		{
+    314          			result = PROCESS_BUSY;
+   \   00000054   0x2401             MOVS     R4,#+1
+    315          		}
+    316          	}
+    317          
+    318          	return result;
+   \                     ??OwiVroRead__Process_3: (+1)
+   \   00000056   0x0020             MOVS     R0,R4
+   \   00000058   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    319          }
+    320          
+    321          
+    322          /**
+    323           * It returns the OWI VRO Compensation coefficient for the specified setpoint
+    324           *
+    325           */
+
+   \                                 In section .text, align 2, keep-with-next
+    326          uint16 OwiVroRead__GetAvgCoeff(uint8 setpoint_index)
+    327          {
+   \                     OwiVroRead__GetAvgCoeff: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    328          	uint16 retvalue = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+    329          
+    330          	if (setpoint_index < ELEMENTS_IN_ARRAY(OWI_VRO_Avg_Coeff_SP))
+   \   00000004   0x2903             CMP      R1,#+3
+   \   00000006   0xD203             BCS      ??OwiVroRead__GetAvgCoeff_0
+    331          	{
+    332          		retvalue = OWI_VRO_Avg_Coeff_SP[setpoint_index];
+   \   00000008   0x....             LDR      R0,??DataTable7_1
+   \   0000000A   0x0049             LSLS     R1,R1,#+1
+   \   0000000C   0x1840             ADDS     R0,R0,R1
+   \   0000000E   0x8F00             LDRH     R0,[R0, #+56]
+    333          	}
+    334          
+    335          	return retvalue;
+   \                     ??OwiVroRead__GetAvgCoeff_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+    336          }
+    337          
+    338          
+    339          /**
+    340           * Called at the end of cycle, it manages Cycles_To_Calibration and OWI_VRO_OWI_Status
+    341           *
+    342           */
+
+   \                                 In section .text, align 2, keep-with-next
+    343          void OwiVroRead__CycleEndEvent(void)
+    344          {
+    345          	if (OwiVroRead_NV_Data.Cycles_To_Calibration > (uint8)0)
+   \                     OwiVroRead__CycleEndEvent: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7_1
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x000A             MOVS     R2,R1
+   \   00000006   0xD002             BEQ      ??OwiVroRead__CycleEndEvent_0
+    346          	{
+    347          		OwiVroRead_NV_Data.Cycles_To_Calibration --;
+   \   00000008   0x1E49             SUBS     R1,R1,#+1
+   \   0000000A   0x7001             STRB     R1,[R0, #+0]
+   \   0000000C   0x4770             BX       LR
+    348          	}
+    349          	else
+    350          	{
+    351          		OWI_VRO_OWI_Status = OWI_STATUS_NEEDS_CALIBRATION;
+   \                     ??OwiVroRead__CycleEndEvent_0: (+1)
+   \   0000000E   0x2100             MOVS     R1,#+0
+   \   00000010   0x7101             STRB     R1,[R0, #+4]
+    352          	}
+    353          }
+   \   00000012   0x4770             BX       LR               ;; return
+    354          
+    355          
+    356          /**
+    357           * Called at the start of a cycle, if the cycle is an Eol or Service cycles it resets the Owi Vro Calibration related variables.
+    358           *
+    359           */
+
+   \                                 In section .text, align 2, keep-with-next
+    360          void OwiVroRead__CycleStarted(void)
+    361          {
+   \                     OwiVroRead__CycleStarted: (+1)
+   \   00000000   0xB51C             PUSH     {R2-R4,LR}
+    362              if (Selector__GetCycleGroup(Interpreter__GetCurrentSFIndex(COMPARTMENT_DEFAULT), COMPARTMENT_DEFAULT, Interpreter__GetStatus().Main_Cycle[COMPARTMENT_DEFAULT]) == CYCLE_GROUP_EOL_TEST)
+   \   00000002   0x4668             MOV      R0,SP
+   \   00000004   0x.... 0x....      BL       Interpreter__GetStatus
+   \   00000008   0x2000             MOVS     R0,#+0
+   \   0000000A   0x.... 0x....      BL       Interpreter__GetCurrentSFIndex
+   \   0000000E   0x4669             MOV      R1,SP
+   \   00000010   0x780A             LDRB     R2,[R1, #+0]
+   \   00000012   0x2100             MOVS     R1,#+0
+   \   00000014   0x.... 0x....      BL       Selector__GetCycleGroup
+   \   00000018   0x2802             CMP      R0,#+2
+   \   0000001A   0xD121             BNE      ??OwiVroRead__CycleStarted_0
+    363          	{
+    364          		uint8 i, j;
+    365          		for (i = 0; i < ELEMENTS_IN_ARRAY(OWI_VRO_Comp_Coeffs_Array); i++)
+   \   0000001C   0x2000             MOVS     R0,#+0
+   \   0000001E   0x0001             MOVS     R1,R0
+   \   00000020   0xE00B             B        ??OwiVroRead__CycleStarted_1
+    366          		{
+    367          			for (j = 0; j < ELEMENTS_IN_ARRAY(OWI_VRO_Comp_Coeffs_Array[0]); j++)
+    368          			{
+    369          				OWI_VRO_Comp_Coeffs_Array[i][j] = DEFAULT_COMP_COEFFS_VALUE;
+   \                     ??OwiVroRead__CycleStarted_2: (+1)
+   \   00000022   0x....             LDR      R3,??DataTable7_1
+   \   00000024   0x010C             LSLS     R4,R1,#+4
+   \   00000026   0x191B             ADDS     R3,R3,R4
+   \   00000028   0x0054             LSLS     R4,R2,#+1
+   \   0000002A   0x191B             ADDS     R3,R3,R4
+   \   0000002C   0x24FA             MOVS     R4,#+250
+   \   0000002E   0x00A4             LSLS     R4,R4,#+2        ;; #+1000
+   \   00000030   0x811C             STRH     R4,[R3, #+8]
+    370          			}
+   \   00000032   0x1C52             ADDS     R2,R2,#+1
+   \                     ??OwiVroRead__CycleStarted_3: (+1)
+   \   00000034   0x2A08             CMP      R2,#+8
+   \   00000036   0xD3F4             BCC      ??OwiVroRead__CycleStarted_2
+   \   00000038   0x1C49             ADDS     R1,R1,#+1
+   \                     ??OwiVroRead__CycleStarted_1: (+1)
+   \   0000003A   0x2903             CMP      R1,#+3
+   \   0000003C   0xD201             BCS      ??OwiVroRead__CycleStarted_4
+   \   0000003E   0x0002             MOVS     R2,R0
+   \   00000040   0xE7F8             B        ??OwiVroRead__CycleStarted_3
+    371          		}
+    372          
+    373          		for (i = 0; i < ELEMENTS_IN_ARRAY(OWI_VRO_Avg_Coeff_SP); i++)
+   \                     ??OwiVroRead__CycleStarted_4: (+1)
+   \   00000042   0x0001             MOVS     R1,R0
+   \   00000044   0x23FA             MOVS     R3,#+250
+   \   00000046   0x009B             LSLS     R3,R3,#+2        ;; #+1000
+   \   00000048   0xE003             B        ??OwiVroRead__CycleStarted_5
+    374          		{
+    375          			OWI_VRO_Avg_Coeff_SP[i] = DEFAULT_COMP_COEFFS_VALUE;
+   \                     ??OwiVroRead__CycleStarted_6: (+1)
+   \   0000004A   0x004C             LSLS     R4,R1,#+1
+   \   0000004C   0x1912             ADDS     R2,R2,R4
+   \   0000004E   0x8713             STRH     R3,[R2, #+56]
+    376          		}
+   \   00000050   0x1C49             ADDS     R1,R1,#+1
+   \                     ??OwiVroRead__CycleStarted_5: (+1)
+   \   00000052   0x....             LDR      R2,??DataTable7_1
+   \   00000054   0x2903             CMP      R1,#+3
+   \   00000056   0xD3F8             BCC      ??OwiVroRead__CycleStarted_6
+    377          
+    378          		OwiVroRead_NV_Data.Cal_Read_Retry_Counter = 0;
+   \   00000058   0x0001             MOVS     R1,R0
+    379          		OwiVroRead_NV_Data.Cycles_To_Calibration = 0;
+   \   0000005A   0x8011             STRH     R1,[R2, #+0]
+    380          		OwiVroRead_NV_Data.Completed_Calibration = 0;
+   \   0000005C   0x7091             STRB     R1,[R2, #+2]
+    381          		OWI_VRO_OWI_Status = OWI_STATUS_NEEDS_CALIBRATION;
+   \   0000005E   0x7110             STRB     R0,[R2, #+4]
+    382              }
+    383          }
+   \                     ??OwiVroRead__CycleStarted_0: (+1)
+   \   00000060   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+    384          //=====================================================================================================================
+    385          //-------------------------------------- Private Functions ------------------------------------------------------------
+    386          //=====================================================================================================================
+    387          
+    388          /**
+    389           * It reads the Owi Vro Read process parameters and other needed Machine Configuration parameters from the setting file.
+    390           *
+    391           * @param control = pointer to the process control parameters provided by the Interpreter.
+    392           */
+
+   \                                 In section .text, align 4, keep-with-next
+    393          static void ReadOwiVroParameters(PROCESS_CONTROL_TYPE* control)
+    394          {
+   \                     ReadOwiVroParameters: (+1)
+   \   00000000   0xB5FE             PUSH     {R1-R7,LR}
+   \   00000002   0x0007             MOVS     R7,R0
+   \   00000004   0x2600             MOVS     R6,#+0
+   \   00000006   0x2503             MOVS     R5,#+3
+    395              SETTINGFILE_LOADER_TYPE loader;
+    396              BOOL_TYPE start_process = FALSE;
+    397              MODULE_OWI_VRO_READ_LOG_MESSAGE_ID_TYPE msg = ERROR_MISSING_MACHINE_CONFIG_PARAMETERS;
+    398              uint16 msg_data = DISPL_OWI_VRO_COMMON_PARAMS;
+   \   00000008   0x2415             MOVS     R4,#+21
+    399          
+    400              if (SettingFile__MSettingBasicLoader(control->Setting_File_Index,
+    401              									 SF_PTR_ACU_PROCESS_OWI_VRO_READ,
+    402                                                   control->Data_Field_Index,
+    403                                                   &loader) == PASS)
+   \   0000000A   0xAB01             ADD      R3,SP,#+4
+   \   0000000C   0x883A             LDRH     R2,[R7, #+0]
+   \   0000000E   0x211D             MOVS     R1,#+29
+   \   00000010   0x78B8             LDRB     R0,[R7, #+2]
+   \   00000012   0x.... 0x....      BL       SettingFile__MSettingBasicLoader
+   \   00000016   0x2801             CMP      R0,#+1
+   \   00000018   0xD14B             BNE      ??ReadOwiVroParameters_0
+   \   0000001A   0x9801             LDR      R0,[SP, #+4]
+   \   0000001C   0x....             LDR      R1,??DataTable7_4
+   \   0000001E   0x6008             STR      R0,[R1, #+0]
+    404              {
+    405              	OwiVroRead_Data.Process_Params_Ptr = (const OWI_VRO_READ_PROCESS_SF_PARAMS_TYPE *)(void *)loader.Data;
+    406              	OwiVroRead_Data.Process_Config = control->F1_F0_Flags;
+   \   00000020   0x....             LDR      R0,??DataTable7_5
+   \   00000022   0x9000             STR      R0,[SP, #+0]
+   \   00000024   0x7978             LDRB     R0,[R7, #+5]
+   \   00000026   0x0900             LSRS     R0,R0,#+4
+   \   00000028   0x0780             LSLS     R0,R0,#+30
+   \   0000002A   0x0F80             LSRS     R0,R0,#+30
+   \   0000002C   0x9900             LDR      R1,[SP, #+0]
+   \   0000002E   0x7008             STRB     R0,[R1, #+0]
+    407              	OwiVroRead_Data.Setpoint_Index = OwiVroRead_Data.Process_Params_Ptr->Setpoint_Index; // For MAC monitoring
+   \   00000030   0x....             LDR      R0,??DataTable7_4
+   \   00000032   0x6801             LDR      R1,[R0, #+0]
+   \   00000034   0x7808             LDRB     R0,[R1, #+0]
+   \   00000036   0x0740             LSLS     R0,R0,#+29
+   \   00000038   0x0F40             LSRS     R0,R0,#+29
+   \   0000003A   0x9A00             LDR      R2,[SP, #+0]
+   \   0000003C   0x7050             STRB     R0,[R2, #+1]
+    408          
+    409          		if ((OwiVroRead_Data.Process_Params_Ptr->Samples_To_Acquire > (uint8)0) &&
+    410          			(OwiVroRead_Data.Process_Params_Ptr->Samples_To_Acquire <= (uint8)DUTYCYCLE_SAMPLES_MAX_NUM) &&
+    411          			(OwiVroRead_Data.Process_Params_Ptr->Samples_To_Acquire > OwiVroRead_Data.Process_Params_Ptr->Samples_To_Reject) &&
+    412          			(OwiVroRead_Data.Setpoint_Index < (uint8)OWI_VRO_SETPOINT_NUM))
+   \   0000003E   0x7849             LDRB     R1,[R1, #+1]
+   \   00000040   0x070A             LSLS     R2,R1,#+28
+   \   00000042   0xD033             BEQ      ??ReadOwiVroParameters_1
+   \   00000044   0x070A             LSLS     R2,R1,#+28
+   \   00000046   0x0F12             LSRS     R2,R2,#+28
+   \   00000048   0x2A09             CMP      R2,#+9
+   \   0000004A   0xDA2F             BGE      ??ReadOwiVroParameters_1
+   \   0000004C   0x0909             LSRS     R1,R1,#+4
+   \   0000004E   0x4291             CMP      R1,R2
+   \   00000050   0xD22C             BCS      ??ReadOwiVroParameters_1
+   \   00000052   0x2803             CMP      R0,#+3
+   \   00000054   0xDA2A             BGE      ??ReadOwiVroParameters_1
+    413          		{
+    414          
+    415          		    if (SettingFile__MSettingBasicLoader(control->Setting_File_Index,
+    416          		    									 SF_PTR_ACU_ALGORITHM_PARAMETERS,
+    417          												 DISPL_OWI_VRO_COMMON_PARAMS,
+    418          		                                         &loader) == PASS)
+   \   00000056   0xAB01             ADD      R3,SP,#+4
+   \   00000058   0x4622             MOV      R2,R4
+   \   0000005A   0x2127             MOVS     R1,#+39
+   \   0000005C   0x78B8             LDRB     R0,[R7, #+2]
+   \   0000005E   0x.... 0x....      BL       SettingFile__MSettingBasicLoader
+   \   00000062   0x2801             CMP      R0,#+1
+   \   00000064   0xD127             BNE      ??ReadOwiVroParameters_2
+    419          		    {
+    420          		    	OwiVroRead_Data.Common_Params_Ptr = (const OWI_VRO_COMMON_SF_PARAMS_TYPE *)(void *)loader.Data;
+   \   00000066   0x9801             LDR      R0,[SP, #+4]
+   \   00000068   0x....             LDR      R1,??DataTable7_4
+   \   0000006A   0x6048             STR      R0,[R1, #+4]
+   \   0000006C   0x4608             MOV      R0,R1
+   \   0000006E   0x6840             LDR      R0,[R0, #+4]
+   \   00000070   0x7900             LDRB     R0,[R0, #+4]
+   \   00000072   0x0700             LSLS     R0,R0,#+28
+   \   00000074   0x0F00             LSRS     R0,R0,#+28
+   \   00000076   0x2809             CMP      R0,#+9
+   \   00000078   0xDA15             BGE      ??ReadOwiVroParameters_3
+   \   0000007A   0xAB01             ADD      R3,SP,#+4
+   \   0000007C   0x....             ADR.N    R0,OWI_VRO_Setpoint_Displacements
+   \   0000007E   0x9900             LDR      R1,[SP, #+0]
+   \   00000080   0x7849             LDRB     R1,[R1, #+1]
+   \   00000082   0x5C42             LDRB     R2,[R0, R1]
+   \   00000084   0x2127             MOVS     R1,#+39
+   \   00000086   0x78B8             LDRB     R0,[R7, #+2]
+    421          
+    422          			    if (OwiVroRead_Data.Common_Params_Ptr->Coeffs_To_Acquire <= (uint8)OWI_VRO_SAVED_COMP_COEFFS)
+    423          			    {
+    424          					if (SettingFile__MSettingBasicLoader(control->Setting_File_Index,
+    425          														 SF_PTR_ACU_ALGORITHM_PARAMETERS,
+    426          														 OWI_VRO_Setpoint_Displacements[OwiVroRead_Data.Setpoint_Index],
+    427          														 &loader) == PASS)
+   \   00000088   0x.... 0x....      BL       SettingFile__MSettingBasicLoader
+   \   0000008C   0x2801             CMP      R0,#+1
+   \   0000008E   0xD104             BNE      ??ReadOwiVroParameters_4
+    428          					{
+    429          						OwiVroRead_Data.Setpoint_Params_Ptr = (const OWI_VRO_SETPOINT_SF_PARAMS_TYPE *)(void *)loader.Data;
+   \   00000090   0x9801             LDR      R0,[SP, #+4]
+   \   00000092   0x....             LDR      R1,??DataTable7_4
+   \   00000094   0x6088             STR      R0,[R1, #+8]
+    430          
+    431          						start_process = TRUE;
+   \   00000096   0x2601             MOVS     R6,#+1
+   \   00000098   0xE00D             B        ??ReadOwiVroParameters_2
+    432          					}
+    433          					else
+    434          					{
+    435          						// Setpoint Parameters missing, default log message, only update msg_data
+    436          						msg_data = OWI_VRO_Setpoint_Displacements[OwiVroRead_Data.Setpoint_Index];
+   \                     ??ReadOwiVroParameters_4: (+1)
+   \   0000009A   0xBF00             Nop      
+   \   0000009C   0x....             ADR.N    R0,OWI_VRO_Setpoint_Displacements
+   \   0000009E   0x9900             LDR      R1,[SP, #+0]
+   \   000000A0   0x7849             LDRB     R1,[R1, #+1]
+   \   000000A2   0x5C44             LDRB     R4,[R0, R1]
+   \   000000A4   0xE007             B        ??ReadOwiVroParameters_2
+    437          					}
+    438          			    }
+    439          			    else
+    440          			    {
+    441          					// Inconsistent common parameters value
+    442          					msg = ERROR_INCONSISTENT_PARAMETER_VALUE;
+   \                     ??ReadOwiVroParameters_3: (+1)
+   \   000000A6   0x2504             MOVS     R5,#+4
+    443          					msg_data = OwiVroRead_Data.Common_Params_Ptr->Coeffs_To_Acquire;
+   \   000000A8   0x0004             MOVS     R4,R0
+   \   000000AA   0xE004             B        ??ReadOwiVroParameters_2
+    444          
+    445          			    }
+    446          		    }
+    447          		    else
+    448          		    {
+    449          				// Machine Configuration Common Parameters missing, default log message data
+    450          		    }
+    451          		}
+    452          		else
+    453          		{
+    454          			// Inconsistent process parameters value
+    455          			msg = ERROR_INCONSISTENT_PARAMETER_VALUE;
+   \                     ??ReadOwiVroParameters_1: (+1)
+   \   000000AC   0x2504             MOVS     R5,#+4
+    456          			msg_data = 0;
+   \   000000AE   0x4634             MOV      R4,R6
+   \   000000B0   0xE001             B        ??ReadOwiVroParameters_2
+    457          		}
+    458              }
+    459          	else
+    460          	{
+    461          		// Process parameters missing
+    462          		msg = ERROR_MISSING_PROCESS_PARAMETERS;
+   \                     ??ReadOwiVroParameters_0: (+1)
+   \   000000B2   0x2502             MOVS     R5,#+2
+    463          		msg_data = control->Data_Field_Index;
+   \   000000B4   0x883C             LDRH     R4,[R7, #+0]
+    464          	}
+    465          
+    466              if ((uint8)start_process == (uint8)TRUE)
+   \                     ??ReadOwiVroParameters_2: (+1)
+   \   000000B6   0x2E01             CMP      R6,#+1
+   \   000000B8   0xD102             BNE      ??ReadOwiVroParameters_5
+    467              {
+    468              	EventStartOwiVro();
+   \   000000BA   0x.... 0x....      BL       EventStartOwiVro
+   \   000000BE   0xBDF7             POP      {R0-R2,R4-R7,PC}
+    469              }
+    470              else
+    471              {
+    472          		LOG_ADD_EXCEPTION(msg, msg_data);
+   \                     ??ReadOwiVroParameters_5: (+1)
+   \   000000C0   0x0023             MOVS     R3,R4
+   \   000000C2   0x2201             MOVS     R2,#+1
+   \   000000C4   0x0029             MOVS     R1,R5
+   \   000000C6   0x2040             MOVS     R0,#+64
+   \   000000C8   0x.... 0x....      BL       Log__AddMessage
+    473          		EventSkipOwiVro();
+   \   000000CC   0x.... 0x....      BL       EventSkipOwiVro
+    474              }
+    475          }
+   \   000000D0   0xBDF7             POP      {R0-R2,R4-R7,PC}  ;; return
+    476          
+    477          
+    478          
+    479          
+    480          //=====================================================================================================================
+    481          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    482          //=====================================================================================================================
+    483          
+    484          
+    485          //---------------------------------------------------------------------------------------------------------------------
+    486          /**
+    487           *
+    488           */
+
+   \                                 In section .text, align 2, keep-with-next
+    489          static void CheckForNewSample(void)
+    490          {
+   \                     CheckForNewSample: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    491          	if ((uint8)Millis__ReachedTargetSeconds(&OwiVroRead_Data.Timer, OwiVroRead_Data.Common_Params_Ptr->Sample_Max_Time * (uint32)10) == (uint8)TRUE)
+   \   00000002   0x....             LDR      R5,??DataTable7_4
+   \   00000004   0x002C             MOVS     R4,R5
+   \   00000006   0x3434             ADDS     R4,R4,#+52
+   \   00000008   0x6868             LDR      R0,[R5, #+4]
+   \   0000000A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000000C   0x0081             LSLS     R1,R0,#+2
+   \   0000000E   0x1809             ADDS     R1,R1,R0
+   \   00000010   0x0049             LSLS     R1,R1,#+1
+   \   00000012   0x0028             MOVS     R0,R5
+   \   00000014   0x300C             ADDS     R0,R0,#+12
+   \   00000016   0x.... 0x....      BL       Millis__ReachedTargetSeconds
+   \   0000001A   0x2801             CMP      R0,#+1
+   \   0000001C   0xD104             BNE      ??CheckForNewSample_0
+    492          	{
+    493          		// Sample acquisition timeout expired
+    494          		OwiVroRead_Data.Sample_Timeout_Expired = TRUE;
+   \   0000001E   0x2001             MOVS     R0,#+1
+   \   00000020   0x7160             STRB     R0,[R4, #+5]
+    495          
+    496          		EventStopSamplesAcquisition();
+   \   00000022   0x.... 0x....      BL       EventStopSamplesAcquisition
+   \   00000026   0xBD31             POP      {R0,R4,R5,PC}
+    497          	}
+    498          	else
+    499          	{
+    500          		if (OWIVoltageRegulatedOutput__GetSequenceId() != OwiVroRead_Data.Sample_Sequence_Id)
+   \                     ??CheckForNewSample_0: (+1)
+   \   00000028   0x.... 0x....      BL       OWIVoltageRegulatedOutput__GetSequenceId
+   \   0000002C   0x78E1             LDRB     R1,[R4, #+3]
+   \   0000002E   0x4288             CMP      R0,R1
+   \   00000030   0xD030             BEQ      ??CheckForNewSample_1
+    501          		{
+    502          			// New sample available
+    503          
+    504          			sint32 duty_cycle_value;
+    505          			if (Variable__GetValue(VARIABLE_OWI_VRO_DUTYCYCLE_STABLE, 0, &duty_cycle_value) == FALSE)
+   \   00000032   0x466A             MOV      R2,SP
+   \   00000034   0x2100             MOVS     R1,#+0
+   \   00000036   0x204F             MOVS     R0,#+79
+   \   00000038   0x.... 0x....      BL       Variable__GetValue
+   \   0000003C   0x2800             CMP      R0,#+0
+   \   0000003E   0xD101             BNE      ??CheckForNewSample_2
+    506          			{
+    507          				duty_cycle_value = 0;
+   \   00000040   0x2000             MOVS     R0,#+0
+   \   00000042   0x9000             STR      R0,[SP, #+0]
+    508          			}
+    509          
+    510          			OwiVroRead_Data.DutyCycle_Stable_Samples[OwiVroRead_Data.Num_Samples_Acquired] = (uint16)duty_cycle_value;
+   \                     ??CheckForNewSample_2: (+1)
+   \   00000044   0x7920             LDRB     R0,[R4, #+4]
+   \   00000046   0x0040             LSLS     R0,R0,#+1
+   \   00000048   0x1828             ADDS     R0,R5,R0
+   \   0000004A   0x9900             LDR      R1,[SP, #+0]
+   \   0000004C   0x8201             STRH     R1,[R0, #+16]
+    511          
+    512          			if (OwiVroRead_Data.Process_Config != (uint8)OWI_VRO_CALIBRATION_READ)
+   \   0000004E   0x7820             LDRB     R0,[R4, #+0]
+   \   00000050   0x2801             CMP      R0,#+1
+   \   00000052   0xD00D             BEQ      ??CheckForNewSample_3
+    513          			{
+    514          				if (Variable__GetValue(VARIABLE_OWI_VRO_DUTYCYCLE_COMP, 0, &duty_cycle_value) == FALSE)
+   \   00000054   0x466A             MOV      R2,SP
+   \   00000056   0x2100             MOVS     R1,#+0
+   \   00000058   0x2050             MOVS     R0,#+80
+   \   0000005A   0x.... 0x....      BL       Variable__GetValue
+   \   0000005E   0x2800             CMP      R0,#+0
+   \   00000060   0xD101             BNE      ??CheckForNewSample_4
+    515          				{
+    516          					duty_cycle_value = 0;
+   \   00000062   0x2000             MOVS     R0,#+0
+   \   00000064   0x9000             STR      R0,[SP, #+0]
+    517          				}
+    518          
+    519          				OwiVroRead_Data.DutyCycle_Comp_Samples[OwiVroRead_Data.Num_Samples_Acquired] = (uint16)duty_cycle_value;
+   \                     ??CheckForNewSample_4: (+1)
+   \   00000066   0x7920             LDRB     R0,[R4, #+4]
+   \   00000068   0x0040             LSLS     R0,R0,#+1
+   \   0000006A   0x1828             ADDS     R0,R5,R0
+   \   0000006C   0x9900             LDR      R1,[SP, #+0]
+   \   0000006E   0x8401             STRH     R1,[R0, #+32]
+    520          			}
+    521          
+    522          			OwiVroRead_Data.Num_Samples_Acquired ++;
+   \                     ??CheckForNewSample_3: (+1)
+   \   00000070   0x7920             LDRB     R0,[R4, #+4]
+   \   00000072   0x1C40             ADDS     R0,R0,#+1
+   \   00000074   0x7120             STRB     R0,[R4, #+4]
+    523          
+    524          			// Stop the model
+    525          			OWIVoltageRegulatedOutput__RequestStop();
+   \   00000076   0x.... 0x....      BL       OWIVoltageRegulatedOutput__RequestStop
+    526          
+    527          			if (OwiVroRead_Data.Num_Samples_Acquired >= OwiVroRead_Data.Process_Params_Ptr->Samples_To_Acquire)
+   \   0000007A   0x7920             LDRB     R0,[R4, #+4]
+   \   0000007C   0x6829             LDR      R1,[R5, #+0]
+   \   0000007E   0x7849             LDRB     R1,[R1, #+1]
+   \   00000080   0x0709             LSLS     R1,R1,#+28
+   \   00000082   0x0F09             LSRS     R1,R1,#+28
+   \   00000084   0x4288             CMP      R0,R1
+   \   00000086   0xD302             BCC      ??CheckForNewSample_5
+    528          			{
+    529          				// All samples acquired
+    530          				EventStopSamplesAcquisition();
+   \   00000088   0x.... 0x....      BL       EventStopSamplesAcquisition
+   \   0000008C   0xBD31             POP      {R0,R4,R5,PC}
+    531          			}
+    532          			else
+    533          			{
+    534          				EventNewSampleAcquired();
+   \                     ??CheckForNewSample_5: (+1)
+   \   0000008E   0x.... 0x....      BL       EventNewSampleAcquired
+   \   00000092   0xBD31             POP      {R0,R4,R5,PC}
+    535          			}
+    536          		}
+    537          		else
+    538          		{
+    539          			OWIVoltageRegulatedOutput__RequestKeepRunning();
+   \                     ??CheckForNewSample_1: (+1)
+   \   00000094   0x.... 0x....      BL       OWIVoltageRegulatedOutput__RequestKeepRunning
+    540          		}
+    541          	}
+    542          }
+   \   00000098   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    543          
+    544          
+    545          //---------------------------------------------------------------------------------------------------------------------
+    546          /**
+    547           *
+    548           */
+
+   \                                 In section .text, align 2, keep-with-next
+    549          static void ProcessSamples(void)
+    550          {
+   \                     ProcessSamples: (+1)
+   \   00000000   0xB5F0             PUSH     {R4-R7,LR}
+   \   00000002   0xB085             SUB      SP,SP,#+20
+    551          	sint32 variable_value;
+    552          	uint8 i;
+    553          
+    554          	if (OwiVroRead_Data.Sample_Timeout_Expired == FALSE)
+   \   00000004   0x....             LDR      R4,??DataTable13
+   \   00000006   0x0026             MOVS     R6,R4
+   \   00000008   0x3634             ADDS     R6,R6,#+52
+   \   0000000A   0x7970             LDRB     R0,[R6, #+5]
+   \   0000000C   0x2800             CMP      R0,#+0
+   \   0000000E   0xD136             BNE      ??ProcessSamples_0
+   \   00000010   0x6820             LDR      R0,[R4, #+0]
+   \   00000012   0x7840             LDRB     R0,[R0, #+1]
+   \   00000014   0x270F             MOVS     R7,#+15
+   \   00000016   0x003A             MOVS     R2,R7
+   \   00000018   0x4002             ANDS     R2,R2,R0
+   \   0000001A   0x0021             MOVS     R1,R4
+   \   0000001C   0x3130             ADDS     R1,R1,#+48
+   \   0000001E   0x9100             STR      R1,[SP, #+0]
+   \   00000020   0x0900             LSRS     R0,R0,#+4
+   \   00000022   0x1A13             SUBS     R3,R2,R0
+   \   00000024   0xB2DB             UXTB     R3,R3
+   \   00000026   0x2108             MOVS     R1,#+8
+   \   00000028   0x0020             MOVS     R0,R4
+   \   0000002A   0x3010             ADDS     R0,R0,#+16
+    555          	{
+    556          		// Apply Average with Rejection to acquired samples
+    557          		if (DishAuxVar_AverageWithRejection(&OwiVroRead_Data.DutyCycle_Stable_Samples[0],
+    558          											 ELEMENTS_IN_ARRAY(OwiVroRead_Data.DutyCycle_Stable_Samples),
+    559          											 OwiVroRead_Data.Process_Params_Ptr->Samples_To_Acquire,
+    560          											 OwiVroRead_Data.Process_Params_Ptr->Samples_To_Acquire - OwiVroRead_Data.Process_Params_Ptr->Samples_To_Reject,
+    561          											 &OwiVroRead_Data.Avg_DutyCycle_Stable) == FAIL)
+   \   0000002C   0x.... 0x....      BL       DishAuxVar_AverageWithRejection
+   \   00000030   0x2800             CMP      R0,#+0
+   \   00000032   0xD107             BNE      ??ProcessSamples_1
+    562          		{
+    563          			LOG_ADD_EXCEPTION(ERROR_INCONSISTENT_AVERAGE_DATA, OwiVroRead_Data.Process_Params_Ptr->Samples_To_Acquire);
+   \   00000034   0x6820             LDR      R0,[R4, #+0]
+   \   00000036   0x7843             LDRB     R3,[R0, #+1]
+   \   00000038   0x403B             ANDS     R3,R3,R7
+   \   0000003A   0x2201             MOVS     R2,#+1
+   \   0000003C   0x2105             MOVS     R1,#+5
+   \   0000003E   0x2040             MOVS     R0,#+64
+   \   00000040   0x.... 0x....      BL       Log__AddMessage
+    564          		}
+    565          
+    566          		if (OwiVroRead_Data.Process_Config != (uint8)OWI_VRO_CALIBRATION_READ)
+   \                     ??ProcessSamples_1: (+1)
+   \   00000044   0x7830             LDRB     R0,[R6, #+0]
+   \   00000046   0x2801             CMP      R0,#+1
+   \   00000048   0xD019             BEQ      ??ProcessSamples_0
+   \   0000004A   0x6820             LDR      R0,[R4, #+0]
+   \   0000004C   0x7840             LDRB     R0,[R0, #+1]
+   \   0000004E   0x003A             MOVS     R2,R7
+   \   00000050   0x4002             ANDS     R2,R2,R0
+   \   00000052   0x0021             MOVS     R1,R4
+   \   00000054   0x3132             ADDS     R1,R1,#+50
+   \   00000056   0x9100             STR      R1,[SP, #+0]
+   \   00000058   0x0900             LSRS     R0,R0,#+4
+   \   0000005A   0x1A13             SUBS     R3,R2,R0
+   \   0000005C   0xB2DB             UXTB     R3,R3
+   \   0000005E   0x2108             MOVS     R1,#+8
+   \   00000060   0x0020             MOVS     R0,R4
+   \   00000062   0x3020             ADDS     R0,R0,#+32
+    567          		{
+    568          			if (DishAuxVar_AverageWithRejection(&OwiVroRead_Data.DutyCycle_Comp_Samples[0],
+    569          												 ELEMENTS_IN_ARRAY(OwiVroRead_Data.DutyCycle_Comp_Samples),
+    570          					  	  	  	  	  	  	  	 OwiVroRead_Data.Process_Params_Ptr->Samples_To_Acquire,
+    571          												 OwiVroRead_Data.Process_Params_Ptr->Samples_To_Acquire - OwiVroRead_Data.Process_Params_Ptr->Samples_To_Reject,
+    572          												 &OwiVroRead_Data.Avg_DutyCycle_Comp) == FAIL)
+   \   00000064   0x.... 0x....      BL       DishAuxVar_AverageWithRejection
+   \   00000068   0x2800             CMP      R0,#+0
+   \   0000006A   0xD108             BNE      ??ProcessSamples_0
+    573          			{
+    574          				LOG_ADD_EXCEPTION(ERROR_INCONSISTENT_AVERAGE_DATA, OwiVroRead_Data.Process_Params_Ptr->Samples_To_Acquire);
+   \   0000006C   0x6820             LDR      R0,[R4, #+0]
+   \   0000006E   0x7840             LDRB     R0,[R0, #+1]
+   \   00000070   0x4007             ANDS     R7,R7,R0
+   \   00000072   0x003B             MOVS     R3,R7
+   \   00000074   0x2201             MOVS     R2,#+1
+   \   00000076   0x2105             MOVS     R1,#+5
+   \   00000078   0x2040             MOVS     R0,#+64
+   \   0000007A   0x.... 0x....      BL       Log__AddMessage
+    575          			}
+    576          		}
+    577          	}
+    578          
+    579          	// Execute calculations on average depending on F1 F0
+    580          	switch (OwiVroRead_Data.Process_Config)
+   \                     ??ProcessSamples_0: (+1)
+   \   0000007E   0x7830             LDRB     R0,[R6, #+0]
+   \   00000080   0x2800             CMP      R0,#+0
+   \   00000082   0xD004             BEQ      ??ProcessSamples_2
+   \   00000084   0x2802             CMP      R0,#+2
+   \   00000086   0xD100             BNE      .+4
+   \   00000088   0xE0D4             B        ??ProcessSamples_3
+   \   0000008A   0xD363             BCC      ??ProcessSamples_4
+   \   0000008C   0xE116             B        ??ProcessSamples_5
+    581          	{
+    582          		case OWI_VRO_TURBIDITY_READ:
+    583          			// Update Soil_Measure_x and Soil_Measure_x_NonComp
+    584          			if ((uint8)Variable__GetValue(VARIABLE_SOIL_MEASURE_5, 0, &variable_value) == (uint8)TRUE)
+   \                     ??ProcessSamples_2: (+1)
+   \   0000008E   0xAA01             ADD      R2,SP,#+4
+   \   00000090   0x2100             MOVS     R1,#+0
+   \   00000092   0x2022             MOVS     R0,#+34
+   \   00000094   0x.... 0x....      BL       Variable__GetValue
+   \   00000098   0x2801             CMP      R0,#+1
+   \   0000009A   0xD105             BNE      ??ProcessSamples_6
+    585          			{
+    586          				(void)Variable__SetValue (VARIABLE_OPERATION_SET, VARIABLE_SOIL_MEASURE_6, 0, variable_value);
+   \   0000009C   0x9B01             LDR      R3,[SP, #+4]
+   \   0000009E   0x2200             MOVS     R2,#+0
+   \   000000A0   0x2123             MOVS     R1,#+35
+   \   000000A2   0x4610             MOV      R0,R2
+   \   000000A4   0x.... 0x....      BL       Variable__SetValue
+    587          			}
+    588          			if ((uint8)Variable__GetValue(VARIABLE_SOIL_MEASURE_4, 0, &variable_value) == (uint8)TRUE)
+   \                     ??ProcessSamples_6: (+1)
+   \   000000A8   0xAA01             ADD      R2,SP,#+4
+   \   000000AA   0x2100             MOVS     R1,#+0
+   \   000000AC   0x2021             MOVS     R0,#+33
+   \   000000AE   0x.... 0x....      BL       Variable__GetValue
+   \   000000B2   0x2801             CMP      R0,#+1
+   \   000000B4   0xD105             BNE      ??ProcessSamples_7
+    589          			{
+    590          				(void)Variable__SetValue (VARIABLE_OPERATION_SET, VARIABLE_SOIL_MEASURE_5, 0, variable_value);
+   \   000000B6   0x9B01             LDR      R3,[SP, #+4]
+   \   000000B8   0x2200             MOVS     R2,#+0
+   \   000000BA   0x2122             MOVS     R1,#+34
+   \   000000BC   0x4610             MOV      R0,R2
+   \   000000BE   0x.... 0x....      BL       Variable__SetValue
+    591          			}
+    592          			if ((uint8)Variable__GetValue(VARIABLE_SOIL_MEASURE_3, 0, &variable_value) == (uint8)TRUE)
+   \                     ??ProcessSamples_7: (+1)
+   \   000000C2   0xAA01             ADD      R2,SP,#+4
+   \   000000C4   0x2100             MOVS     R1,#+0
+   \   000000C6   0x2020             MOVS     R0,#+32
+   \   000000C8   0x.... 0x....      BL       Variable__GetValue
+   \   000000CC   0x2801             CMP      R0,#+1
+   \   000000CE   0xD105             BNE      ??ProcessSamples_8
+    593          			{
+    594          				(void)Variable__SetValue (VARIABLE_OPERATION_SET, VARIABLE_SOIL_MEASURE_4, 0, variable_value);
+   \   000000D0   0x9B01             LDR      R3,[SP, #+4]
+   \   000000D2   0x2200             MOVS     R2,#+0
+   \   000000D4   0x2121             MOVS     R1,#+33
+   \   000000D6   0x4610             MOV      R0,R2
+   \   000000D8   0x.... 0x....      BL       Variable__SetValue
+    595          			}
+    596          			if ((uint8)Variable__GetValue(VARIABLE_SOIL_MEASURE_2, 0, &variable_value) == (uint8)TRUE)
+   \                     ??ProcessSamples_8: (+1)
+   \   000000DC   0xAA01             ADD      R2,SP,#+4
+   \   000000DE   0x2100             MOVS     R1,#+0
+   \   000000E0   0x201F             MOVS     R0,#+31
+   \   000000E2   0x.... 0x....      BL       Variable__GetValue
+   \   000000E6   0x2801             CMP      R0,#+1
+   \   000000E8   0xD105             BNE      ??ProcessSamples_9
+    597          			{
+    598          				(void)Variable__SetValue (VARIABLE_OPERATION_SET, VARIABLE_SOIL_MEASURE_3, 0, variable_value);
+   \   000000EA   0x9B01             LDR      R3,[SP, #+4]
+   \   000000EC   0x2200             MOVS     R2,#+0
+   \   000000EE   0x2120             MOVS     R1,#+32
+   \   000000F0   0x4610             MOV      R0,R2
+   \   000000F2   0x.... 0x....      BL       Variable__SetValue
+    599          			}
+    600          			if ((uint8)Variable__GetValue(VARIABLE_SOIL_MEASURE_RECENT, 0, &variable_value) == (uint8)TRUE)
+   \                     ??ProcessSamples_9: (+1)
+   \   000000F6   0xAA01             ADD      R2,SP,#+4
+   \   000000F8   0x2100             MOVS     R1,#+0
+   \   000000FA   0x201E             MOVS     R0,#+30
+   \   000000FC   0x.... 0x....      BL       Variable__GetValue
+   \   00000100   0x2801             CMP      R0,#+1
+   \   00000102   0xD105             BNE      ??ProcessSamples_10
+    601          			{
+    602          				(void)Variable__SetValue (VARIABLE_OPERATION_SET, VARIABLE_SOIL_MEASURE_2, 0, variable_value);
+   \   00000104   0x9B01             LDR      R3,[SP, #+4]
+   \   00000106   0x2200             MOVS     R2,#+0
+   \   00000108   0x211F             MOVS     R1,#+31
+   \   0000010A   0x4610             MOV      R0,R2
+   \   0000010C   0x.... 0x....      BL       Variable__SetValue
+    603          			}
+    604          
+    605          			variable_value = 1; // Default value in case of sample timeout
+   \                     ??ProcessSamples_10: (+1)
+   \   00000110   0x2001             MOVS     R0,#+1
+   \   00000112   0x9001             STR      R0,[SP, #+4]
+    606          			if (OwiVroRead_Data.Sample_Timeout_Expired == FALSE)
+   \   00000114   0x7970             LDRB     R0,[R6, #+5]
+   \   00000116   0x2800             CMP      R0,#+0
+   \   00000118   0xD101             BNE      ??ProcessSamples_11
+    607          			{
+    608          				variable_value = OwiVroRead_Data.Avg_DutyCycle_Comp;
+   \   0000011A   0x8E60             LDRH     R0,[R4, #+50]
+   \   0000011C   0x9001             STR      R0,[SP, #+4]
+    609          			}
+    610          
+    611          			(void)Variable__SetValue (VARIABLE_OPERATION_SET, VARIABLE_SOIL_MEASURE_RECENT, 0, variable_value);
+   \                     ??ProcessSamples_11: (+1)
+   \   0000011E   0x9B01             LDR      R3,[SP, #+4]
+   \   00000120   0x2200             MOVS     R2,#+0
+   \   00000122   0x211E             MOVS     R1,#+30
+   \   00000124   0x4610             MOV      R0,R2
+   \   00000126   0x.... 0x....      BL       Variable__SetValue
+    612          
+    613          			// Update OWI_VRO_Soil_Measure_NonComp[] array
+    614          			for (i = (ELEMENTS_IN_ARRAY(OWI_VRO_Soil_Measure_NonComp) - (uint8)1); i > (uint8)0; i --)
+   \   0000012A   0x2105             MOVS     R1,#+5
+   \   0000012C   0xE007             B        ??ProcessSamples_12
+   \                     ??ProcessSamples_13: (+1)
+   \   0000012E   0x....             LDR      R0,??DataTable22
+   \   00000130   0x004A             LSLS     R2,R1,#+1
+   \   00000132   0x1880             ADDS     R0,R0,R2
+   \   00000134   0x1E82             SUBS     R2,R0,#+2
+   \   00000136   0x8812             LDRH     R2,[R2, #+0]
+   \   00000138   0x8002             STRH     R2,[R0, #+0]
+    615          			{
+    616          				OWI_VRO_Soil_Measure_NonComp[i] = OWI_VRO_Soil_Measure_NonComp[i - (uint8)1];
+   \   0000013A   0x1E49             SUBS     R1,R1,#+1
+   \   0000013C   0xB2C9             UXTB     R1,R1
+   \                     ??ProcessSamples_12: (+1)
+   \   0000013E   0x2900             CMP      R1,#+0
+   \   00000140   0xD1F5             BNE      ??ProcessSamples_13
+    617          			}
+    618          
+    619          			if (OwiVroRead_Data.Sample_Timeout_Expired == FALSE)
+   \   00000142   0x7970             LDRB     R0,[R6, #+5]
+   \   00000144   0x2800             CMP      R0,#+0
+   \   00000146   0xD101             BNE      ??ProcessSamples_14
+    620          			{
+    621          				variable_value = OwiVroRead_Data.Avg_DutyCycle_Stable;
+   \   00000148   0x8E20             LDRH     R0,[R4, #+48]
+   \   0000014A   0x9001             STR      R0,[SP, #+4]
+    622          			}
+    623          
+    624          			OWI_VRO_Soil_Measure_NonComp[0] = (uint16)variable_value;
+   \                     ??ProcessSamples_14: (+1)
+   \   0000014C   0x9801             LDR      R0,[SP, #+4]
+   \   0000014E   0x....             LDR      R1,??DataTable22
+   \   00000150   0x8008             STRH     R0,[R1, #+0]
+    625          
+    626          			break;
+   \   00000152   0xE0B3             B        ??ProcessSamples_5
+    627          
+    628          		case OWI_VRO_CALIBRATION_READ:
+    629          			// Calculate new coefficient from OwiVroRead_Data.Avg_DutyCycle_Stable
+    630          			if ((ENDIANU16_STON(OwiVroRead_Data.Setpoint_Params_Ptr->Compensation_Target) > (uint16)0) && (OwiVroRead_Data.Sample_Timeout_Expired == FALSE))
+   \                     ??ProcessSamples_4: (+1)
+   \   00000154   0x68A1             LDR      R1,[R4, #+8]
+   \   00000156   0x7888             LDRB     R0,[R1, #+2]
+   \   00000158   0x78CA             LDRB     R2,[R1, #+3]
+   \   0000015A   0x0612             LSLS     R2,R2,#+24
+   \   0000015C   0x0C12             LSRS     R2,R2,#+16
+   \   0000015E   0x4310             ORRS     R0,R0,R2
+   \   00000160   0xD100             BNE      .+4
+   \   00000162   0xE0AB             B        ??ProcessSamples_5
+   \   00000164   0x7970             LDRB     R0,[R6, #+5]
+   \   00000166   0x2800             CMP      R0,#+0
+   \   00000168   0xD000             BEQ      .+4
+   \   0000016A   0xE0A7             B        ??ProcessSamples_5
+    631          			{
+    632          				uint16 *coeffs_ptr = OWI_VRO_Comp_Coeffs_Array[OwiVroRead_Data.Setpoint_Index];
+   \   0000016C   0x....             LDR      R5,??DataTable22_1
+   \   0000016E   0x7870             LDRB     R0,[R6, #+1]
+   \   00000170   0x0100             LSLS     R0,R0,#+4
+   \   00000172   0x1828             ADDS     R0,R5,R0
+   \   00000174   0x3008             ADDS     R0,R0,#+8
+   \   00000176   0x9003             STR      R0,[SP, #+12]
+    633          				sint32 diff;
+    634          				float32 coeff_local;
+    635          
+    636          				// Calculate new coefficient from NON compensated average duty cycle acquired during this instance of the Calibration process
+    637          				// Result is for sure <= 2 * DEFAULT_COMP_COEFFS_VALUE.
+    638          				diff = (sint32)ENDIANU16_STON(OwiVroRead_Data.Setpoint_Params_Ptr->Compensation_Target) - (sint32)OwiVroRead_Data.Avg_DutyCycle_Stable;
+   \   00000178   0x68A1             LDR      R1,[R4, #+8]
+   \   0000017A   0x7888             LDRB     R0,[R1, #+2]
+   \   0000017C   0x78CA             LDRB     R2,[R1, #+3]
+   \   0000017E   0x0612             LSLS     R2,R2,#+24
+   \   00000180   0x0C12             LSRS     R2,R2,#+16
+   \   00000182   0x4310             ORRS     R0,R0,R2
+   \   00000184   0x8E21             LDRH     R1,[R4, #+48]
+   \   00000186   0x1A40             SUBS     R0,R0,R1
+    639          				coeff_local = (float32)DEFAULT_COMP_COEFFS_VALUE + (((float32)DEFAULT_COMP_COEFFS_VALUE * (float32)(diff))/(float32)ENDIANU16_STON(OwiVroRead_Data.Setpoint_Params_Ptr->Compensation_Target));
+   \   00000188   0x4669             MOV      R1,SP
+   \   0000018A   0x68A2             LDR      R2,[R4, #+8]
+   \   0000018C   0x7897             LDRB     R7,[R2, #+2]
+   \   0000018E   0x78D3             LDRB     R3,[R2, #+3]
+   \   00000190   0x061B             LSLS     R3,R3,#+24
+   \   00000192   0x0C1B             LSRS     R3,R3,#+16
+   \   00000194   0x431F             ORRS     R7,R7,R3
+   \   00000196   0x810F             STRH     R7,[R1, #+8]
+   \   00000198   0x....             LDR      R7,??DataTable22_2  ;; 0x447a0000
+   \   0000019A   0x.... 0x....      BL       __aeabi_i2f
+   \   0000019E   0x0001             MOVS     R1,R0
+   \   000001A0   0x0038             MOVS     R0,R7
+   \   000001A2   0x.... 0x....      BL       __aeabi_fmul
+   \   000001A6   0x9000             STR      R0,[SP, #+0]
+   \   000001A8   0x4668             MOV      R0,SP
+   \   000001AA   0x8900             LDRH     R0,[R0, #+8]
+   \   000001AC   0x.... 0x....      BL       __aeabi_ui2f
+   \   000001B0   0x0001             MOVS     R1,R0
+   \   000001B2   0x9800             LDR      R0,[SP, #+0]
+   \   000001B4   0x.... 0x....      BL       __aeabi_fdiv
+   \   000001B8   0x0001             MOVS     R1,R0
+   \   000001BA   0x0038             MOVS     R0,R7
+   \   000001BC   0x.... 0x....      BL       __aeabi_fadd
+    640          
+    641          				if(coeff_local < 0.0F)
+   \   000001C0   0x2100             MOVS     R1,#+0
+   \   000001C2   0x.... 0x....      BL       __aeabi_cfcmple
+   \   000001C6   0xD200             BCS      ??ProcessSamples_15
+    642          				{
+    643          					coeff_local = 0.0F;
+   \   000001C8   0x4608             MOV      R0,R1
+    644          				}
+    645          
+    646          				// Shift FIFO array
+    647          				for (i = (ELEMENTS_IN_ARRAY(OWI_VRO_Comp_Coeffs_Array[0]) - (uint8)1); i > (uint8)0; i --)
+   \                     ??ProcessSamples_15: (+1)
+   \   000001CA   0x2107             MOVS     R1,#+7
+   \   000001CC   0xE007             B        ??ProcessSamples_16
+    648          				{
+    649          					coeffs_ptr[i] = coeffs_ptr[i - (uint8)1];
+   \                     ??ProcessSamples_17: (+1)
+   \   000001CE   0x9A03             LDR      R2,[SP, #+12]
+   \   000001D0   0x004B             LSLS     R3,R1,#+1
+   \   000001D2   0x18D2             ADDS     R2,R2,R3
+   \   000001D4   0x1E93             SUBS     R3,R2,#+2
+   \   000001D6   0x881B             LDRH     R3,[R3, #+0]
+   \   000001D8   0x8013             STRH     R3,[R2, #+0]
+    650          				}
+   \   000001DA   0x1E49             SUBS     R1,R1,#+1
+   \   000001DC   0xB2C9             UXTB     R1,R1
+   \                     ??ProcessSamples_16: (+1)
+   \   000001DE   0x2900             CMP      R1,#+0
+   \   000001E0   0xD1F5             BNE      ??ProcessSamples_17
+    651          
+    652          				coeffs_ptr[0] = (uint16)lroundf(coeff_local);
+   \   000001E2   0x.... 0x....      BL       lroundf
+   \   000001E6   0x9903             LDR      R1,[SP, #+12]
+   \   000001E8   0x8008             STRH     R0,[R1, #+0]
+   \   000001EA   0x6860             LDR      R0,[R4, #+4]
+   \   000001EC   0x7900             LDRB     R0,[R0, #+4]
+   \   000001EE   0x270F             MOVS     R7,#+15
+   \   000001F0   0x4007             ANDS     R7,R7,R0
+   \   000001F2   0x78A9             LDRB     R1,[R5, #+2]
+   \   000001F4   0x000A             MOVS     R2,R1
+   \   000001F6   0x003B             MOVS     R3,R7
+   \   000001F8   0x429A             CMP      R2,R3
+   \   000001FA   0xD201             BCS      ??ProcessSamples_18
+    653          
+    654          				if (OwiVroRead_NV_Data.Completed_Calibration < OwiVroRead_Data.Common_Params_Ptr->Coeffs_To_Acquire)
+    655          				{
+    656          					OwiVroRead_NV_Data.Completed_Calibration ++;
+   \   000001FC   0x1C49             ADDS     R1,R1,#+1
+   \   000001FE   0x70A9             STRB     R1,[R5, #+2]
+    657          				}
+    658          
+    659          				if (OwiVroRead_Data.Common_Params_Ptr->Coeffs_To_Acquire > OwiVroRead_Data.Common_Params_Ptr->Coeffs_To_Reject)
+   \                     ??ProcessSamples_18: (+1)
+   \   00000200   0x0900             LSRS     R0,R0,#+4
+   \   00000202   0x0001             MOVS     R1,R0
+   \   00000204   0x003A             MOVS     R2,R7
+   \   00000206   0x4291             CMP      R1,R2
+   \   00000208   0xD258             BCS      ??ProcessSamples_5
+    660          				{
+    661          					if (DishAuxVar_AverageWithRejection(coeffs_ptr,
+    662          														ELEMENTS_IN_ARRAY(OWI_VRO_Comp_Coeffs_Array[0]),
+    663          							   	   	   	   	   	   	   	OwiVroRead_NV_Data.Completed_Calibration,
+    664          														OwiVroRead_Data.Common_Params_Ptr->Coeffs_To_Acquire - OwiVroRead_Data.Common_Params_Ptr->Coeffs_To_Reject,
+    665          														&OWI_VRO_Avg_Coeff_SP[OwiVroRead_Data.Setpoint_Index]) == FAIL)
+   \   0000020A   0x7871             LDRB     R1,[R6, #+1]
+   \   0000020C   0x0049             LSLS     R1,R1,#+1
+   \   0000020E   0x1869             ADDS     R1,R5,R1
+   \   00000210   0x3138             ADDS     R1,R1,#+56
+   \   00000212   0x9100             STR      R1,[SP, #+0]
+   \   00000214   0x1A3B             SUBS     R3,R7,R0
+   \   00000216   0xB2DB             UXTB     R3,R3
+   \   00000218   0x78AA             LDRB     R2,[R5, #+2]
+   \   0000021A   0x2108             MOVS     R1,#+8
+   \   0000021C   0x9803             LDR      R0,[SP, #+12]
+   \   0000021E   0x.... 0x....      BL       DishAuxVar_AverageWithRejection
+   \   00000222   0x2800             CMP      R0,#+0
+   \   00000224   0xD14A             BNE      ??ProcessSamples_5
+    666          					{
+    667          						LOG_ADD_EXCEPTION(ERROR_INCONSISTENT_AVERAGE_DATA, OwiVroRead_NV_Data.Completed_Calibration);
+   \   00000226   0x78AB             LDRB     R3,[R5, #+2]
+   \   00000228   0x2201             MOVS     R2,#+1
+   \   0000022A   0x2105             MOVS     R1,#+5
+   \   0000022C   0x2040             MOVS     R0,#+64
+   \   0000022E   0x.... 0x....      BL       Log__AddMessage
+   \   00000232   0xE043             B        ??ProcessSamples_5
+    668          					}
+    669          				}
+    670          			}
+    671          			break;
+    672          
+    673          		case OWI_VRO_VERIFICATION_READ:
+    674          			// Check compensated and non compensated values
+    675          			if ((OwiVroRead_Data.Avg_DutyCycle_Stable >= ENDIANU16_STON(OwiVroRead_Data.Setpoint_Params_Ptr->NonComp_Lower_Limit)) &&
+    676          				(OwiVroRead_Data.Avg_DutyCycle_Stable <= ENDIANU16_STON(OwiVroRead_Data.Setpoint_Params_Ptr->NonComp_Upper_Limit)) &&
+    677          				(OwiVroRead_Data.Avg_DutyCycle_Comp >= ENDIANU16_STON(OwiVroRead_Data.Setpoint_Params_Ptr->Comp_Lower_Limit)) &&
+    678          				(OwiVroRead_Data.Avg_DutyCycle_Comp <= ENDIANU16_STON(OwiVroRead_Data.Setpoint_Params_Ptr->Comp_Upper_Limit)) &&
+    679          				(OwiVroRead_Data.Sample_Timeout_Expired == FALSE))
+   \                     ??ProcessSamples_3: (+1)
+   \   00000234   0x68A1             LDR      R1,[R4, #+8]
+   \   00000236   0x7A88             LDRB     R0,[R1, #+10]
+   \   00000238   0x7ACA             LDRB     R2,[R1, #+11]
+   \   0000023A   0x0612             LSLS     R2,R2,#+24
+   \   0000023C   0x0C12             LSRS     R2,R2,#+16
+   \   0000023E   0x4310             ORRS     R0,R0,R2
+   \   00000240   0x8E21             LDRH     R1,[R4, #+48]
+   \   00000242   0x4281             CMP      R1,R0
+   \   00000244   0xD326             BCC      ??ProcessSamples_19
+   \   00000246   0x68A1             LDR      R1,[R4, #+8]
+   \   00000248   0x7B08             LDRB     R0,[R1, #+12]
+   \   0000024A   0x7B4A             LDRB     R2,[R1, #+13]
+   \   0000024C   0x0612             LSLS     R2,R2,#+24
+   \   0000024E   0x0C12             LSRS     R2,R2,#+16
+   \   00000250   0x4310             ORRS     R0,R0,R2
+   \   00000252   0x8E21             LDRH     R1,[R4, #+48]
+   \   00000254   0x4288             CMP      R0,R1
+   \   00000256   0xD31D             BCC      ??ProcessSamples_19
+   \   00000258   0x68A1             LDR      R1,[R4, #+8]
+   \   0000025A   0x7988             LDRB     R0,[R1, #+6]
+   \   0000025C   0x79CA             LDRB     R2,[R1, #+7]
+   \   0000025E   0x0612             LSLS     R2,R2,#+24
+   \   00000260   0x0C12             LSRS     R2,R2,#+16
+   \   00000262   0x4310             ORRS     R0,R0,R2
+   \   00000264   0x8E61             LDRH     R1,[R4, #+50]
+   \   00000266   0x4281             CMP      R1,R0
+   \   00000268   0xD314             BCC      ??ProcessSamples_19
+   \   0000026A   0x68A1             LDR      R1,[R4, #+8]
+   \   0000026C   0x7A08             LDRB     R0,[R1, #+8]
+   \   0000026E   0x7A4A             LDRB     R2,[R1, #+9]
+   \   00000270   0x0612             LSLS     R2,R2,#+24
+   \   00000272   0x0C12             LSRS     R2,R2,#+16
+   \   00000274   0x4310             ORRS     R0,R0,R2
+   \   00000276   0x8E61             LDRH     R1,[R4, #+50]
+   \   00000278   0x4288             CMP      R0,R1
+   \   0000027A   0xD30B             BCC      ??ProcessSamples_19
+   \   0000027C   0x7970             LDRB     R0,[R6, #+5]
+   \   0000027E   0x2800             CMP      R0,#+0
+   \   00000280   0xD108             BNE      ??ProcessSamples_19
+    680          			{
+    681          				// Verification passed
+    682          
+    683          				OWI_VRO_OWI_Status = OWI_STATUS_CALIBRATED;
+   \   00000282   0x....             LDR      R5,??DataTable22_1
+   \   00000284   0x2001             MOVS     R0,#+1
+   \   00000286   0x7128             STRB     R0,[R5, #+4]
+    684          				OwiVroRead_NV_Data.Cal_Read_Retry_Counter = 0;
+   \   00000288   0x2000             MOVS     R0,#+0
+   \   0000028A   0x7068             STRB     R0,[R5, #+1]
+    685          				OwiVroRead_NV_Data.Cycles_To_Calibration = OwiVroRead_Data.Common_Params_Ptr->Cycles_Btw_Calibration;
+   \   0000028C   0x6860             LDR      R0,[R4, #+4]
+   \   0000028E   0x78C0             LDRB     R0,[R0, #+3]
+   \   00000290   0x7028             STRB     R0,[R5, #+0]
+   \   00000292   0xE013             B        ??ProcessSamples_5
+    686          			}
+    687          			else
+    688          			{
+    689          				// Verification failed
+    690          
+    691          				OWI_VRO_OWI_Status = OWI_STATUS_NEEDS_CALIBRATION;
+   \                     ??ProcessSamples_19: (+1)
+   \   00000294   0x2000             MOVS     R0,#+0
+   \   00000296   0x....             LDR      R5,??DataTable22_1
+   \   00000298   0x0001             MOVS     R1,R0
+   \   0000029A   0x7129             STRB     R1,[R5, #+4]
+    692          				OwiVroRead_NV_Data.Cal_Read_Retry_Counter ++;
+   \   0000029C   0x7869             LDRB     R1,[R5, #+1]
+   \   0000029E   0x1C49             ADDS     R1,R1,#+1
+   \   000002A0   0x7069             STRB     R1,[R5, #+1]
+    693          
+    694          				if (OwiVroRead_NV_Data.Cal_Read_Retry_Counter >= OwiVroRead_Data.Common_Params_Ptr->Calibration_Read_Retry_Max)
+   \   000002A2   0x6862             LDR      R2,[R4, #+4]
+   \   000002A4   0x7893             LDRB     R3,[R2, #+2]
+   \   000002A6   0xB2C9             UXTB     R1,R1
+   \   000002A8   0x4299             CMP      R1,R3
+   \   000002AA   0xD307             BCC      ??ProcessSamples_5
+    695          				{
+    696          					OWI_VRO_OWI_Status = OWI_STATUS_NON_SENSOR_MODE;
+   \   000002AC   0x2102             MOVS     R1,#+2
+   \   000002AE   0x7129             STRB     R1,[R5, #+4]
+    697          					OwiVroRead_NV_Data.Cal_Read_Retry_Counter = 0;
+   \   000002B0   0x7068             STRB     R0,[R5, #+1]
+    698          					OwiVroRead_NV_Data.Cycles_To_Calibration = OwiVroRead_Data.Common_Params_Ptr->Cycles_Btw_Calibration;
+   \   000002B2   0x78D0             LDRB     R0,[R2, #+3]
+   \   000002B4   0x7028             STRB     R0,[R5, #+0]
+    699          		            Fault__ConditionDetected(FAULT_ID_OWI_CALIBRATION_FAILURE);
+   \   000002B6   0x2020             MOVS     R0,#+32
+   \   000002B8   0x.... 0x....      BL       Fault__ConditionDetected
+    700          				}
+    701          			}
+    702          
+    703          			break;
+    704          
+    705          		default:
+    706          			// Nothing to do
+    707          			break;
+    708          	}
+    709          
+    710          	EventSampleProcessed();
+   \                     ??ProcessSamples_5: (+1)
+   \   000002BC   0x.... 0x....      BL       EventSampleProcessed
+    711          }
+   \   000002C0   0xB005             ADD      SP,SP,#+20
+   \   000002C2   0xBDF0             POP      {R4-R7,PC}       ;; return
+    712          
+    713          
+    714          //---------------------------------------------------------------------------------------------------------------------
+    715          /**
+    716           *
+    717           */
+
+   \                                 In section .text, align 2, keep-with-next
+    718          static void InitSamplesAcquisition(void)
+    719          {
+   \                     InitSamplesAcquisition: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    720          	OwiVroRead_Data.Num_Samples_Acquired = 0;
+   \   00000002   0x....             LDR      R4,??DataTable13
+   \   00000004   0x0020             MOVS     R0,R4
+   \   00000006   0x3038             ADDS     R0,R0,#+56
+   \   00000008   0x2100             MOVS     R1,#+0
+   \   0000000A   0x000A             MOVS     R2,R1
+   \   0000000C   0x8002             STRH     R2,[R0, #+0]
+    721          	OwiVroRead_Data.Sample_Timeout_Expired = FALSE;
+    722          	memset(&OwiVroRead_Data.DutyCycle_Stable_Samples[0], 0, sizeof(OwiVroRead_Data.DutyCycle_Stable_Samples));
+   \   0000000E   0x2110             MOVS     R1,#+16
+   \   00000010   0x0020             MOVS     R0,R4
+   \   00000012   0x3010             ADDS     R0,R0,#+16
+   \   00000014   0x.... 0x....      BL       __aeabi_memset4
+    723          	memset(&OwiVroRead_Data.DutyCycle_Comp_Samples[0], 0, sizeof(OwiVroRead_Data.DutyCycle_Comp_Samples));
+   \   00000018   0x2200             MOVS     R2,#+0
+   \   0000001A   0x2110             MOVS     R1,#+16
+   \   0000001C   0x0020             MOVS     R0,R4
+   \   0000001E   0x3020             ADDS     R0,R0,#+32
+   \   00000020   0x.... 0x....      BL       __aeabi_memset4
+    724          }
+   \   00000024   0xBD10             POP      {R4,PC}          ;; return
+    725          
+    726          
+    727          //---------------------------------------------------------------------------------------------------------------------
+    728          /**
+    729           *
+    730           */
+
+   \                                 In section .text, align 2, keep-with-next
+    731          static void StartDelay(void)
+    732          {
+   \                     StartDelay: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    733              Millis__Start(&OwiVroRead_Data.Timer);
+   \   00000002   0x....             LDR      R0,??DataTable22_3
+   \   00000004   0x.... 0x....      BL       Millis__Start
+    734          }
+   \   00000008   0xBD01             POP      {R0,PC}          ;; return
+    735          
+    736          
+    737          //---------------------------------------------------------------------------------------------------------------------
+    738          /**
+    739           *
+    740           */
+
+   \                                 In section .text, align 2, keep-with-next
+    741          static void WaitForInitialDelay(void)
+    742          {
+   \                     WaitForInitialDelay: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    743          	if ((uint8)Millis__ReachedTargetSeconds(&OwiVroRead_Data.Timer, OwiVroRead_Data.Process_Params_Ptr->Initial_Delay * (uint32)2) == (uint8)TRUE)
+   \   00000002   0x....             LDR      R0,??DataTable13
+   \   00000004   0x6801             LDR      R1,[R0, #+0]
+   \   00000006   0x7889             LDRB     R1,[R1, #+2]
+   \   00000008   0x0049             LSLS     R1,R1,#+1
+   \   0000000A   0x300C             ADDS     R0,R0,#+12
+   \   0000000C   0x.... 0x....      BL       Millis__ReachedTargetSeconds
+   \   00000010   0x2801             CMP      R0,#+1
+   \   00000012   0xD101             BNE      ??WaitForInitialDelay_0
+    744          	{
+    745          		EventInitialDelayExpired();
+   \   00000014   0x.... 0x....      BL       EventInitialDelayExpired
+    746          	}
+    747          }
+   \                     ??WaitForInitialDelay_0: (+1)
+   \   00000018   0xBD01             POP      {R0,PC}          ;; return
+    748          
+    749          
+    750          //---------------------------------------------------------------------------------------------------------------------
+    751          /**
+    752           *
+    753           */
+
+   \                                 In section .text, align 2, keep-with-next
+    754          static void StartNextSampleAcquisition(void)
+    755          {
+   \                     StartNextSampleAcquisition: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    756          	Millis__Start(&OwiVroRead_Data.Timer);
+   \   00000002   0x....             LDR      R4,??DataTable13
+   \   00000004   0x0020             MOVS     R0,R4
+   \   00000006   0x300C             ADDS     R0,R0,#+12
+   \   00000008   0x.... 0x....      BL       Millis__Start
+    757          	OwiVroRead_Data.Sample_Sequence_Id = OWIVoltageRegulatedOutput__GetSequenceId();
+   \   0000000C   0x3435             ADDS     R4,R4,#+53
+   \   0000000E   0x.... 0x....      BL       OWIVoltageRegulatedOutput__GetSequenceId
+   \   00000012   0x70A0             STRB     R0,[R4, #+2]
+    758          	OWIVoltageRegulatedOutput__RequestReset(OwiVroRead_Data.Setpoint_Index);
+   \   00000014   0x7820             LDRB     R0,[R4, #+0]
+   \   00000016   0x.... 0x....      BL       OWIVoltageRegulatedOutput__RequestReset
+    759          }
+   \   0000001A   0xBD10             POP      {R4,PC}          ;; return
+    760          
+    761          
+    762          //---------------------------------------------------------------------------------------------------------------------
+    763          /**
+    764           *
+    765           */
+
+   \                                 In section .text, align 2, keep-with-next
+    766          static void WaitForDelayBtwSamples(void)
+    767          {
+   \                     WaitForDelayBtwSamples: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    768          	if ((uint8)Millis__ReachedTargetSeconds(&OwiVroRead_Data.Timer, OwiVroRead_Data.Process_Params_Ptr->Delay_Btw_Samples * (uint32)2) == (uint8)TRUE)
+   \   00000002   0x....             LDR      R0,??DataTable13
+   \   00000004   0x6801             LDR      R1,[R0, #+0]
+   \   00000006   0x78C9             LDRB     R1,[R1, #+3]
+   \   00000008   0x0049             LSLS     R1,R1,#+1
+   \   0000000A   0x300C             ADDS     R0,R0,#+12
+   \   0000000C   0x.... 0x....      BL       Millis__ReachedTargetSeconds
+   \   00000010   0x2801             CMP      R0,#+1
+   \   00000012   0xD102             BNE      ??WaitForDelayBtwSamples_0
+    769          	{
+    770          		EventDelayBtwSamplesExpired();
+   \   00000014   0x.... 0x....      BL       EventDelayBtwSamplesExpired
+   \   00000018   0xBD01             POP      {R0,PC}
+    771          	}
+    772          	else
+    773          	{
+    774          		OWIVoltageRegulatedOutput__RequestKeepRunning();
+   \                     ??WaitForDelayBtwSamples_0: (+1)
+   \   0000001A   0x.... 0x....      BL       OWIVoltageRegulatedOutput__RequestKeepRunning
+    775          	}
+    776          }
+   \   0000001E   0xBD01             POP      {R0,PC}          ;; return
+    777          
+    778          
+    779          //=====================================================================================================================
+    780          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Owi Vro State Machine
+    781          //=====================================================================================================================
+    782          // !! StateEngineCrank cannot update this code if you change the header !!
+    783          
+    784          
+    785          //---------------------------------------------------------------------------------------------------------------------
+    786          /**
+    787           * Process the Delay Btw Samples Expired Event for the Owi Vro state machine.
+    788           *
+    789           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    790           *
+    791           * This function was auto-generated and must not be edited manually.
+    792           * Change the UML used to generate this function and regenerate the source code.
+    793           */
+
+   \                                 In section .text, align 2, keep-with-next
+    794          static void EventDelayBtwSamplesExpired(void)
+    795          {
+    796              switch (OwiVroRead_Data.State)
+   \                     EventDelayBtwSamplesExpired: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable22_4
+   \   00000002   0x2136             MOVS     R1,#+54
+   \   00000004   0x5C41             LDRB     R1,[R0, R1]
+   \   00000006   0x2905             CMP      R1,#+5
+   \   00000008   0xD000             BEQ      ??EventDelayBtwSamplesExpired_0
+   \   0000000A   0x4770             BX       LR
+    797              {
+    798                  case STATE_OWI_VRO_WAIT_FOR_DELAY_BTW_SAMPLES:
+    799                      OwiVroRead_Data.State = STATE_OWI_VRO_WAIT_FOR_NEXT_SAMPLE;
+   \                     ??EventDelayBtwSamplesExpired_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x2104             MOVS     R1,#+4
+   \   00000010   0x2236             MOVS     R2,#+54
+   \   00000012   0x5481             STRB     R1,[R0, R2]
+    800                      StartNextSampleAcquisition();           // Entry Function.
+   \   00000014   0x.... 0x....      BL       StartNextSampleAcquisition
+    801                      break;
+    802          
+    803                  default:
+    804                      // Event is ignored for all other values of OwiVroRead_Data.State.
+    805                      break;
+    806              }
+    807          }
+   \   00000018   0xBD01             POP      {R0,PC}          ;; return
+    808          
+    809          
+    810          //---------------------------------------------------------------------------------------------------------------------
+    811          /**
+    812           * Process the Initial Delay Expired Event for the Owi Vro state machine.
+    813           *
+    814           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    815           *
+    816           * This function was auto-generated and must not be edited manually.
+    817           * Change the UML used to generate this function and regenerate the source code.
+    818           */
+
+   \                                 In section .text, align 2, keep-with-next
+    819          static void EventInitialDelayExpired(void)
+    820          {
+   \                     EventInitialDelayExpired: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    821              switch (OwiVroRead_Data.State)
+   \   00000002   0x....             LDR      R4,??DataTable22_4
+   \   00000004   0x2036             MOVS     R0,#+54
+   \   00000006   0x5C20             LDRB     R0,[R4, R0]
+   \   00000008   0x2802             CMP      R0,#+2
+   \   0000000A   0xD106             BNE      ??EventInitialDelayExpired_0
+    822              {
+    823                  case STATE_OWI_VRO_WAIT_FOR_INITIAL_DELAY:
+    824                      InitSamplesAcquisition();               // Exit function.
+   \   0000000C   0x.... 0x....      BL       InitSamplesAcquisition
+    825                      OwiVroRead_Data.State = STATE_OWI_VRO_WAIT_FOR_NEXT_SAMPLE;
+   \   00000010   0x2004             MOVS     R0,#+4
+   \   00000012   0x2136             MOVS     R1,#+54
+   \   00000014   0x5460             STRB     R0,[R4, R1]
+    826                      StartNextSampleAcquisition();           // Entry Function.
+   \   00000016   0x.... 0x....      BL       StartNextSampleAcquisition
+    827                      break;
+    828          
+    829                  default:
+    830                      // Event is ignored for all other values of OwiVroRead_Data.State.
+    831                      break;
+    832              }
+    833          }
+   \                     ??EventInitialDelayExpired_0: (+1)
+   \   0000001A   0xBD10             POP      {R4,PC}          ;; return
+    834          
+    835          
+    836          //---------------------------------------------------------------------------------------------------------------------
+    837          /**
+    838           * Process the New Sample Acquired Event for the Owi Vro state machine.
+    839           *
+    840           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    841           *
+    842           * This function was auto-generated and must not be edited manually.
+    843           * Change the UML used to generate this function and regenerate the source code.
+    844           */
+
+   \                                 In section .text, align 2, keep-with-next
+    845          static void EventNewSampleAcquired(void)
+    846          {
+    847              switch (OwiVroRead_Data.State)
+   \                     EventNewSampleAcquired: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable22_4
+   \   00000002   0x2136             MOVS     R1,#+54
+   \   00000004   0x5C41             LDRB     R1,[R0, R1]
+   \   00000006   0x2904             CMP      R1,#+4
+   \   00000008   0xD102             BNE      ??EventNewSampleAcquired_0
+    848              {
+    849                  case STATE_OWI_VRO_WAIT_FOR_NEXT_SAMPLE:
+    850                      OwiVroRead_Data.State = STATE_OWI_VRO_WAIT_FOR_DELAY_BTW_SAMPLES;
+   \   0000000A   0x2105             MOVS     R1,#+5
+   \   0000000C   0x2236             MOVS     R2,#+54
+   \   0000000E   0x5481             STRB     R1,[R0, R2]
+    851                      break;
+    852          
+    853                  default:
+    854                      // Event is ignored for all other values of OwiVroRead_Data.State.
+    855                      break;
+    856              }
+    857          }
+   \                     ??EventNewSampleAcquired_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+    858          
+    859          
+    860          //---------------------------------------------------------------------------------------------------------------------
+    861          /**
+    862           * Process the Sample Processed Event for the Owi Vro state machine.
+    863           *
+    864           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    865           *
+    866           * This function was auto-generated and must not be edited manually.
+    867           * Change the UML used to generate this function and regenerate the source code.
+    868           */
+
+   \                                 In section .text, align 2, keep-with-next
+    869          static void EventSampleProcessed(void)
+    870          {
+    871              switch (OwiVroRead_Data.State)
+   \                     EventSampleProcessed: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable22_4
+   \   00000002   0x2136             MOVS     R1,#+54
+   \   00000004   0x5C41             LDRB     R1,[R0, R1]
+   \   00000006   0x2906             CMP      R1,#+6
+   \   00000008   0xD102             BNE      ??EventSampleProcessed_0
+    872              {
+    873                  case STATE_OWI_VRO_SAMPLES_PROCESS:
+    874                      OwiVroRead_Data.State = STATE_OWI_VRO_COMPLETE;
+   \   0000000A   0x2103             MOVS     R1,#+3
+   \   0000000C   0x2236             MOVS     R2,#+54
+   \   0000000E   0x5481             STRB     R1,[R0, R2]
+    875                      break;
+    876          
+    877                  default:
+    878                      // Event is ignored for all other values of OwiVroRead_Data.State.
+    879                      break;
+    880              }
+    881          }
+   \                     ??EventSampleProcessed_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+    882          
+    883          
+    884          //---------------------------------------------------------------------------------------------------------------------
+    885          /**
+    886           * Process the Skip Owi Vro Event for the Owi Vro state machine.
+    887           *
+    888           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    889           *
+    890           * This function was auto-generated and must not be edited manually.
+    891           * Change the UML used to generate this function and regenerate the source code.
+    892           */
+
+   \                                 In section .text, align 2, keep-with-next
+    893          static void EventSkipOwiVro(void)
+    894          {
+    895              switch (OwiVroRead_Data.State)
+   \                     EventSkipOwiVro: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable22_4
+   \   00000002   0x2136             MOVS     R1,#+54
+   \   00000004   0x5C41             LDRB     R1,[R0, R1]
+   \   00000006   0x2901             CMP      R1,#+1
+   \   00000008   0xD102             BNE      ??EventSkipOwiVro_0
+    896              {
+    897                  case STATE_OWI_VRO_INITIALIZE:
+    898                      OwiVroRead_Data.State = STATE_OWI_VRO_COMPLETE;
+   \   0000000A   0x2103             MOVS     R1,#+3
+   \   0000000C   0x2236             MOVS     R2,#+54
+   \   0000000E   0x5481             STRB     R1,[R0, R2]
+    899                      break;
+    900          
+    901                  default:
+    902                      // Event is ignored for all other values of OwiVroRead_Data.State.
+    903                      break;
+    904              }
+    905          }
+   \                     ??EventSkipOwiVro_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+    906          
+    907          
+    908          //---------------------------------------------------------------------------------------------------------------------
+    909          /**
+    910           * Process the Start Owi Vro Event for the Owi Vro state machine.
+    911           *
+    912           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    913           *
+    914           * This function was auto-generated and must not be edited manually.
+    915           * Change the UML used to generate this function and regenerate the source code.
+    916           */
+
+   \                                 In section .text, align 2, keep-with-next
+    917          static void EventStartOwiVro(void)
+    918          {
+    919              switch (OwiVroRead_Data.State)
+   \                     EventStartOwiVro: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable22_4
+   \   00000002   0x2136             MOVS     R1,#+54
+   \   00000004   0x5C41             LDRB     R1,[R0, R1]
+   \   00000006   0x2901             CMP      R1,#+1
+   \   00000008   0xD000             BEQ      ??EventStartOwiVro_0
+   \   0000000A   0x4770             BX       LR
+    920              {
+    921                  case STATE_OWI_VRO_INITIALIZE:
+    922                      OwiVroRead_Data.State = STATE_OWI_VRO_WAIT_FOR_INITIAL_DELAY;
+   \                     ??EventStartOwiVro_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x2102             MOVS     R1,#+2
+   \   00000010   0x2236             MOVS     R2,#+54
+   \   00000012   0x5481             STRB     R1,[R0, R2]
+    923                      StartDelay();                           // Entry Function.
+   \   00000014   0x.... 0x....      BL       StartDelay
+    924                      break;
+    925          
+    926                  default:
+    927                      // Event is ignored for all other values of OwiVroRead_Data.State.
+    928                      break;
+    929              }
+    930          }
+   \   00000018   0xBD01             POP      {R0,PC}          ;; return
+    931          
+    932          
+    933          //---------------------------------------------------------------------------------------------------------------------
+    934          /**
+    935           * Process the Stop Samples Acquisition Event for the Owi Vro state machine.
+    936           *
+    937           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    938           *
+    939           * This function was auto-generated and must not be edited manually.
+    940           * Change the UML used to generate this function and regenerate the source code.
+    941           */
+
+   \                                 In section .text, align 2, keep-with-next
+    942          static void EventStopSamplesAcquisition(void)
+    943          {
+    944              switch (OwiVroRead_Data.State)
+   \                     EventStopSamplesAcquisition: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable22_4
+   \   00000002   0x2136             MOVS     R1,#+54
+   \   00000004   0x5C41             LDRB     R1,[R0, R1]
+   \   00000006   0x2904             CMP      R1,#+4
+   \   00000008   0xD102             BNE      ??EventStopSamplesAcquisition_0
+    945              {
+    946                  case STATE_OWI_VRO_WAIT_FOR_NEXT_SAMPLE:
+    947                      OwiVroRead_Data.State = STATE_OWI_VRO_SAMPLES_PROCESS;
+   \   0000000A   0x2106             MOVS     R1,#+6
+   \   0000000C   0x2236             MOVS     R2,#+54
+   \   0000000E   0x5481             STRB     R1,[R0, R2]
+    948                      break;
+    949          
+    950                  default:
+    951                      // Event is ignored for all other values of OwiVroRead_Data.State.
+    952                      break;
+    953              }
+    954          }
+   \                     ??EventStopSamplesAcquisition_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+    955          
+    956          
+    957          //---------------------------------------------------------------------------------------------------------------------
+    958          /**
+    959           * The main execution function for the Owi Vro state machine.
+    960           * This function should be called periodically while the state machine is running.
+    961           *
+    962           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    963           *
+    964           * This function was auto-generated and must not be edited manually.
+    965           * Change the UML used to generate this function and regenerate the source code.
+    966           */
+
+   \                                 In section .text, align 2, keep-with-next
+    967          static void OwiVroExecute(void)
+    968          {
+   \                     OwiVroExecute: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    969              switch(OwiVroRead_Data.State)
+   \   00000002   0x....             LDR      R0,??DataTable22_5
+   \   00000004   0x7800             LDRB     R0,[R0, #+0]
+   \   00000006   0x2802             CMP      R0,#+2
+   \   00000008   0xD006             BEQ      ??OwiVroExecute_0
+   \   0000000A   0x2804             CMP      R0,#+4
+   \   0000000C   0xD007             BEQ      ??OwiVroExecute_1
+   \   0000000E   0x2805             CMP      R0,#+5
+   \   00000010   0xD008             BEQ      ??OwiVroExecute_2
+   \   00000012   0x2806             CMP      R0,#+6
+   \   00000014   0xD009             BEQ      ??OwiVroExecute_3
+   \   00000016   0xBD01             POP      {R0,PC}
+    970              {
+    971                  case STATE_OWI_VRO_WAIT_FOR_INITIAL_DELAY:
+    972                      WaitForInitialDelay();                  // Do function.
+   \                     ??OwiVroExecute_0: (+1)
+   \   00000018   0x.... 0x....      BL       WaitForInitialDelay
+    973                      break;
+   \   0000001C   0xBD01             POP      {R0,PC}
+    974          
+    975                  case STATE_OWI_VRO_WAIT_FOR_NEXT_SAMPLE:
+    976                      CheckForNewSample();                    // Do function.
+   \                     ??OwiVroExecute_1: (+1)
+   \   0000001E   0x.... 0x....      BL       CheckForNewSample
+    977                      break;
+   \   00000022   0xBD01             POP      {R0,PC}
+    978          
+    979                  case STATE_OWI_VRO_WAIT_FOR_DELAY_BTW_SAMPLES:
+    980                      WaitForDelayBtwSamples();               // Do function.
+   \                     ??OwiVroExecute_2: (+1)
+   \   00000024   0x.... 0x....      BL       WaitForDelayBtwSamples
+    981                      break;
+   \   00000028   0xBD01             POP      {R0,PC}
+    982          
+    983                  case STATE_OWI_VRO_SAMPLES_PROCESS:
+    984                      ProcessSamples();                       // Do function.
+   \                     ??OwiVroExecute_3: (+1)
+   \   0000002A   0x.... 0x....      BL       ProcessSamples
+    985                      break;
+    986          
+    987                  default:
+    988                      // There is nothing to do for all other values of OwiVroRead_Data.State.
+    989                      break;
+    990              }
+    991          }
+   \   0000002E   0xBD01             POP      {R0,PC}          ;; return
+    992          
+    993          
+    994          //---------------------------------------------------------------------------------------------------------------------
+    995          /**
+    996           * The initialization function for the Owi Vro state machine.
+    997           * This function resets the state machine to the initial state.
+    998           *
+    999           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1000           *
+   1001           * This function was auto-generated and must not be edited manually.
+   1002           * Change the UML used to generate this function and regenerate the source code.
+   1003           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1004          static void OwiVroInitialize(void)
+   1005          {
+   1006              OwiVroRead_Data.State = STATE_OWI_VRO_INITIALIZE;
+   \                     OwiVroInitialize: (+1)
+   \   00000000   0x2001             MOVS     R0,#+1
+   \   00000002   0x....             LDR      R1,??DataTable22_5
+   \   00000004   0x7008             STRB     R0,[R1, #+0]
+   1007          }
+   \   00000006   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \   00000000   0x........         DC32     OwiVroRead_Data+0xC
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_1:
+   \   00000000   0x........         DC32     OwiVroRead_NV_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_2:
+   \   00000000   0x........         DC32     OWI_VRO_Soil_Measure_NonComp
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_3:
+   \   00000000   0x........         DC32     OwiVroRead_Data+0x36
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_4:
+   \   00000000   0x........         DC32     OwiVroRead_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_5:
+   \   00000000   0x........         DC32     OwiVroRead_Data+0x34
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13:
+   \   00000000   0x........         DC32     OwiVroRead_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22:
+   \   00000000   0x........         DC32     OWI_VRO_Soil_Measure_NonComp
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_1:
+   \   00000000   0x........         DC32     OwiVroRead_NV_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_2:
+   \   00000000   0x447A0000         DC32     0x447a0000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_3:
+   \   00000000   0x........         DC32     OwiVroRead_Data+0xC
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_4:
+   \   00000000   0x........         DC32     OwiVroRead_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_5:
+   \   00000000   0x........         DC32     OwiVroRead_Data+0x36
+   1008          
+   1009          
+   1010          // !! StateEngineCrank cannot update this code if you change the footer !!
+   1011          // End of StateEngineCrank Auto-Generated Code.
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   CheckForNewSample
+        16   -> EventNewSampleAcquired
+        16   -> EventStopSamplesAcquisition
+        16   -> Millis__ReachedTargetSeconds
+        16   -> OWIVoltageRegulatedOutput__GetSequenceId
+        16   -> OWIVoltageRegulatedOutput__RequestKeepRunning
+        16   -> OWIVoltageRegulatedOutput__RequestStop
+        16   -> Variable__GetValue
+       8   EventDelayBtwSamplesExpired
+         8   -> StartNextSampleAcquisition
+       8   EventInitialDelayExpired
+         8   -> InitSamplesAcquisition
+         8   -> StartNextSampleAcquisition
+       0   EventNewSampleAcquired
+       0   EventSampleProcessed
+       0   EventSkipOwiVro
+       8   EventStartOwiVro
+         8   -> StartDelay
+       0   EventStopSamplesAcquisition
+       8   InitSamplesAcquisition
+         8   -> __aeabi_memset4
+       8   OwiVroExecute
+         8   -> CheckForNewSample
+         8   -> ProcessSamples
+         8   -> WaitForDelayBtwSamples
+         8   -> WaitForInitialDelay
+       0   OwiVroInitialize
+       0   OwiVroRead__CycleEndEvent
+      16   OwiVroRead__CycleStarted
+        16   -> Interpreter__GetCurrentSFIndex
+        16   -> Interpreter__GetStatus
+        16   -> Selector__GetCycleGroup
+       0   OwiVroRead__GetAvgCoeff
+       8   OwiVroRead__Initialize
+         8   -> Micro__GetResetMode
+         8   -> Millis__Reset
+         8   -> NVData__GetLastRestoreStatus
+      16   OwiVroRead__Process
+        16   -> Log__AddMessage
+        16   -> OwiVroExecute
+        16   -> OwiVroInitialize
+        16   -> ReadOwiVroParameters
+      40   ProcessSamples
+        40   -> DishAuxVar_AverageWithRejection
+        40   -> EventSampleProcessed
+        40   -> Fault__ConditionDetected
+        40   -> Log__AddMessage
+        40   -> Variable__GetValue
+        40   -> Variable__SetValue
+        40   -> __aeabi_fadd
+        40   -> __aeabi_fdiv
+        40   -> __aeabi_fmul
+        40   -> __aeabi_i2f
+        40   -> __aeabi_ui2f
+        40   -> lroundf
+        40 __aeabi_cfcmple
+      32   ReadOwiVroParameters
+        32   -> EventSkipOwiVro
+        32   -> EventStartOwiVro
+        32   -> Log__AddMessage
+        32   -> SettingFile__MSettingBasicLoader
+       8   StartDelay
+         8   -> Millis__Start
+       8   StartNextSampleAcquisition
+         8   -> Millis__Start
+         8   -> OWIVoltageRegulatedOutput__GetSequenceId
+         8   -> OWIVoltageRegulatedOutput__RequestReset
+       8   WaitForDelayBtwSamples
+         8   -> EventDelayBtwSamplesExpired
+         8   -> Millis__ReachedTargetSeconds
+         8   -> OWIVoltageRegulatedOutput__RequestKeepRunning
+       8   WaitForInitialDelay
+         8   -> EventInitialDelayExpired
+         8   -> Millis__ReachedTargetSeconds
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable13
+       4  ??DataTable22
+       4  ??DataTable22_1
+       4  ??DataTable22_2
+       4  ??DataTable22_3
+       4  ??DataTable22_4
+       4  ??DataTable22_5
+       4  ??DataTable7
+       4  ??DataTable7_1
+       4  ??DataTable7_2
+       4  ??DataTable7_3
+       4  ??DataTable7_4
+       4  ??DataTable7_5
+     154  CheckForNewSample
+      26  EventDelayBtwSamplesExpired
+      28  EventInitialDelayExpired
+      18  EventNewSampleAcquired
+      18  EventSampleProcessed
+      18  EventSkipOwiVro
+      26  EventStartOwiVro
+      18  EventStopSamplesAcquisition
+      38  InitSamplesAcquisition
+       4  OWI_VRO_Setpoint_Displacements
+      12  OWI_VRO_Soil_Measure_NonComp
+      48  OwiVroExecute
+       8  OwiVroInitialize
+      60  OwiVroRead_Data
+      64  OwiVroRead_NV_Data
+          OWI_VRO_OWI_Status
+          OWI_VRO_Comp_Coeffs_Array
+          OWI_VRO_Avg_Coeff_SP
+      20  OwiVroRead__CycleEndEvent
+      98  OwiVroRead__CycleStarted
+      18  OwiVroRead__GetAvgCoeff
+     118  OwiVroRead__Initialize
+      90  OwiVroRead__Process
+     708  ProcessSamples
+     210  ReadOwiVroParameters
+      10  StartDelay
+      28  StartNextSampleAcquisition
+      32  WaitForDelayBtwSamples
+      26  WaitForInitialDelay
+
+ 
+    60 bytes in section .bss
+ 1 814 bytes in section .text
+    76 bytes in section _appliance_segment
+ 
+ 1 814 bytes of CODE memory
+   136 bytes of DATA memory
+
+Errors: none
+Warnings: none

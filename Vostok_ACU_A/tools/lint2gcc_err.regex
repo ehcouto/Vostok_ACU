@@ -1,0 +1,7 @@
+# List search and replace regular expressions
+# Default return value is 0
+# Append a single numeric digit to cause a match to update the return value
+
+# Define the typical match
+#   1-  -1  2- -2   3-    4-                     -43     5- -5
+s/^"(\S*?)",(\d+)\s+(lint (note|info|warning|error)):?\s*(.*?)[\r\n]/\1:\2: \4: \5 (Lint)/gim

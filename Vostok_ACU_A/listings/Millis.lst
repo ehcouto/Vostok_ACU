@@ -1,0 +1,1590 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:27
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Common/all/Common/Millis/Millis.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Millis.lst -o
+#        obj\Millis.obj source/XCategory/Common/all/Common/Millis/Millis.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Millis.lst
+#    Object file  =  obj\Millis.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\Common\Millis\Millis.c
+      1          /**
+      2           * @file
+      3           * @brief       A module to create and manage timers
+      4           *
+      5           * @details     Each timer can measure up to about 12.4 days.
+      6           *              Non-volatile timers can be used by storing the timer data structure in non-volatile
+      7           *              memory.
+      8           *
+      9           *              Millis automatically supports non-volatile timers on ACU project types. For Millis
+     10           *              to support non-volatile timers on other project types, the following macros must be
+     11           *              defined.
+     12           *                  RESTORE_INIT()
+     13           *                  RESTORE_HANDLER()
+     14           *                  STORE_HANDLER()
+     15           *              Refer to the Millis_prv.h file for details.
+     16           *
+     17           *              Usage Example 1: Measure seconds
+     18           *                  MILLIS_TIMER_TYPE my_timer;
+     19           *                  Millis__Start(&my_timer);
+     20           *                  ...
+     21           *                  uint32 Seconds = Millis__ElapsedSeconds(&my_timer);
+     22           *
+     23           *              Usage Example 2: Check for a timeout
+     24           *                  MILLIS_TIMER_TYPE my_timer;
+     25           *                  Millis__Start(&my_timer);
+     26           *                  ...
+     27           *                  if (Millis__ReachedTargetSeconds(&my_timer, TARGET_SECONDS) == TRUE)
+     28           *                  {
+     29           *                      // Timer reached TARGET_SECONDS.
+     30           *                  }
+     31           *
+     32           *              Usage Example 3: Pause & resume timer
+     33           *                  MILLIS_TIMER_TYPE my_timer;
+     34           *                  Millis__Start(&my_timer);
+     35           *                  ...
+     36           *                  Millis__Pause(&my_timer);
+     37           *                  ...
+     38           *                  Millis__Resume(&my_timer);
+     39           *
+     40           *              Usage Example 4: Reset timer
+     41           *                  MILLIS_TIMER_TYPE my_timer;
+     42           *                  Millis__Reset(&my_timer);
+     43           *
+     44           *              Usage Example 5: Restore a non-volatile timer (on non-ACU project types)
+     45           *                  MILLIS_TIMER_TYPE My_Timer;     // Definition of non-volatile timer RAM
+     46           *                  // Arrange to call this function once after non-volatile data is restored.
+     47           *                  void Module__NVDataIsRestored(void)
+     48           *                  {
+     49           *                      Millis__RestoreTimer(&My_Timer);
+     50           *                  }
+     51           *
+     52           *              Millis calls functions for SystemTimers module. When SystemTimers module is deprecated,
+     53           *              it will be removed from this module and replaced by Millis.
+     54           *
+     55           * @copyright   Copyright 2021 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     56           */
+     57          
+     58          //  --- Include Files -------------------------------------------------------------------------------------------------
+     59          
+     60          // -- This Module --
+     61          #include "SystemConfig.h"
+     62          #include "Millis.h"
+     63          #include "Millis_prv.h"
+
+   \                                 In section _appliance_segment, align 4
+   \   static __absolute uint32 Milliseconds
+   \                     Milliseconds:
+   \   00000000                      DS8 4
+     64          #if (SYSTEM_TIMERS_FEATURE == ENABLED)
+     65          #include "SystemTimers.h"
+     66          #endif
+     67          
+     68          // -- Pre-compiler Directives --
+     69          #ifndef MILLIS_SUPPORT_NV_TIMERS
+     70              //! If not explicitly specified, then do not support nonvolatile timers
+     71              #define MILLIS_SUPPORT_NV_TIMERS DISABLED
+     72          #endif
+     73          
+     74          // -- Other Modules --
+     75          #if ((MILLIS_SUPPORT_NV_TIMERS == ENABLED) && (SYSTEM_ACU_HANDLING == DISABLED))
+     76              CT_ASSERT(API007DATA_BULK_DATA_FEATURE == ENABLED);
+     77              #include "Micro.h"
+     78              #include "Mode.h"
+     79          #endif
+     80          
+     81          //  --- Private Declarations ------------------------------------------------------------------------------------------
+     82          
+     83          
+     84          // -- Private Constant Declarations --
+     85          
+     86          //! A mask to limit the Milliseconds free-running counter to 30 bits.
+     87          #define MILLISECONDS_MASK 0x3FFFFFFF
+     88          
+     89          
+     90          // -- Private Enumerated Constant Declarations --
+     91          
+     92          
+     93          // -- Private Structure Type Declarations --
+     94          
+     95          
+     96          // -- Private Macro Declarations --
+     97          
+     98          #ifndef RESTORE_HANDLER
+     99          #define RESTORE_HANDLER()
+    100          #endif
+    101          
+    102          #ifndef RESTORE_TIMER
+    103          #define RESTORE_TIMER(timer)
+    104          #endif
+    105          
+    106          #ifndef STORE_HANDLER
+    107          #define STORE_HANDLER()
+    108          #endif
+    109          
+    110          
+    111          //  --- Private Definitions -------------------------------------------------------------------------------------------
+    112          
+    113          
+    114          // -- Private Flash-Based Constant Definitions --
+    115          
+    116          
+    117          // -- Private Variable Definitions --
+    118          
+    119          #if ((MILLIS_SUPPORT_NV_TIMERS == ENABLED) && (SYSTEM_ACU_HANDLING == DISABLED))
+    120              //! Flag indicates whether the Millis module is initialized and ready to run timers.
+    121              static BOOL_TYPE Init_Complete;
+    122          
+    123              //! A timer used to periodically store the Milliseconds value through API007.
+    124              static MILLIS_TIMER_TYPE Millis_Store_Timer;
+    125          #endif
+    126          
+    127          
+    128          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    129          
+    130          static uint32 ConvertHmsToMilliseconds(MILLIS_HMS_TYPE hms);
+    131          static MILLIS_HMS_TYPE ConvertMillisecondsToHms(uint32 milliseconds);
+    132          
+    133          
+    134          //=====================================================================================================================
+    135          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    136          //=====================================================================================================================
+    137          
+    138          //---------------------------------------------------------------------------------------------------------------------
+    139          /**
+    140           * Restore the Milliseconds value from non-volatile memory.
+    141           * On the ACU there are two possibilities after a reset:
+    142           *  1. NVData recovered RAM variables
+    143           *     In this case, the Milliseconds variable is restored to its value before the reset and
+    144           *     it is ready for use. Also, all the non-volatile timers are restored and ready for use.
+    145           *  2. NVData was unable to recover RAM variables
+    146           *     In this case, the non-volatile timers were not restored either. Therefore, the value of
+    147           *     the Milliseconds variable is probably 0 from the initialization firmware; but the value
+    148           *     is actually unimportant. Any starting value will work since there are no active timers.
+    149           *
+    150           * On any non-ACU project type, the method of restoring the Milliseconds value must be managed
+    151           * through the Millis_prv.h file using the following macros:
+    152           *      RESTORE_HANDLER()
+    153           *      INIT_COMPLETE()
+    154           *      STORE_HANDLER()
+    155           */
+
+   \                                 In section .text, align 2, keep-with-next
+    156          void Millis__Initialize(void)
+    157          {
+   \                     Millis__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    158              #if ((MILLIS_SUPPORT_NV_TIMERS == ENABLED) && (SYSTEM_ACU_HANDLING == DISABLED))
+    159                  if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+    160                  {
+    161                      Init_Complete = FALSE;
+    162                      Millis__Reset(&Millis_Store_Timer);
+    163                      Milliseconds = 0;
+    164                  }
+    165              #endif
+    166          
+    167              #if (SYSTEM_TIMERS_FEATURE == ENABLED)
+    168                  SystemTimers__Initialize();
+   \   00000002   0x.... 0x....      BL       SystemTimers__Initialize
+    169              #endif
+    170          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    171          
+    172          //---------------------------------------------------------------------------------------------------------------------
+    173          /**
+    174           * Determine whether the Millis module is ready to run timers.
+    175           * @return TRUE if Millis module is ready to run timers; otherwise FALSE.
+    176           */
+
+   \                                 In section .text, align 2, keep-with-next
+    177          BOOL_TYPE Millis__InitComplete(void)
+    178          {
+    179              #if ((MILLIS_SUPPORT_NV_TIMERS == ENABLED) && (SYSTEM_ACU_HANDLING == DISABLED))
+    180                  return Init_Complete;
+    181              #else
+    182                  return TRUE;
+   \                     Millis__InitComplete: (+1)
+   \   00000000   0x2001             MOVS     R0,#+1
+   \   00000002   0x4770             BX       LR               ;; return
+    183              #endif
+    184          }
+    185          
+    186          //---------------------------------------------------------------------------------------------------------------------
+    187          /**
+    188           * Update the free-running millisecond counter. The 1ms handler in SystemTimers module is called if the feature is enabled.
+    189           * This function must be called once every millisecond.
+    190           */
+
+   \                                 In section .text, align 2, keep-with-next
+    191          void Millis__Handler1ms(void)
+    192          {
+   \                     Millis__Handler1ms: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    193              Milliseconds++;
+   \   00000002   0x....             LDR      R0,??DataTable8
+   \   00000004   0x6801             LDR      R1,[R0, #+0]
+   \   00000006   0x1C49             ADDS     R1,R1,#+1
+   \   00000008   0x6001             STR      R1,[R0, #+0]
+    194          
+    195              #if (SYSTEM_TIMERS_FEATURE == ENABLED)
+    196                  SystemTimers__Handler1ms();
+   \   0000000A   0x.... 0x....      BL       SystemTimers__Handler1ms
+    197              #endif
+    198          }
+   \   0000000E   0xBD01             POP      {R0,PC}          ;; return
+    199          
+    200          //---------------------------------------------------------------------------------------------------------------------
+    201          /**
+    202           * Takes care of store(requirement specifies when the value has to be stored, i.e. each second or each minute)
+    203           * and restore (after a power failure) action of the timer reference
+    204           * This function should be called from the lowest priority thread.
+    205           */
+
+   \                                 In section .text, align 2, keep-with-next
+    206          void Millis__SlowHandler(void)
+    207          {
+    208              #if ((MILLIS_SUPPORT_NV_TIMERS == ENABLED) && (SYSTEM_ACU_HANDLING == DISABLED))
+    209                  if (Init_Complete)
+    210                  {
+    211                      if (Millis__ReachedTargetSeconds(&Millis_Store_Timer, MILLIS_SAVE_PERIOD_SECONDS))
+    212                      {
+    213                          Stored_Milliseconds = Milliseconds;
+    214                          // Prepare for the next update
+    215                          Millis__RestartSecondsPeriod(&Millis_Store_Timer, MILLIS_SAVE_PERIOD_SECONDS);
+    216                      }
+    217                  }
+    218                  else
+    219                  {
+    220                      if ((Mode__GetMode() == MODE_NORMAL) &&
+    221                          (Mode__GetSubMode() == SUBMODE_NORMAL_SUPERVISOR) &&
+    222                          (IS_MILLIS_DATA_RESTORED() == TRUE))
+    223                      {
+    224                          Milliseconds = Stored_Milliseconds;
+    225                          Init_Complete = TRUE;
+    226                      }
+    227                      else
+    228                      {
+    229                          if (Milliseconds >= MILLIS_START_UP_TIMEOUT)
+    230                          {
+    231                              Init_Complete = TRUE;
+    232                          }
+    233                      }
+    234          
+    235                      if (Init_Complete)
+    236                      {
+    237                          Millis__Start(&Millis_Store_Timer);
+    238                          Stored_Milliseconds = Milliseconds;   // store Milliseconds value in case of power interruption before 60 seconds since Power On
+    239                      }
+    240                  }
+    241              #endif
+    242          }
+   \                     Millis__SlowHandler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    243          
+    244          //---------------------------------------------------------------------------------------------------------------------
+    245          /**
+    246           * Returns the current value of the 32-bit free-running counter.
+    247           * @return the current value of the free-running 32-bit millisecond counter
+    248           */
+
+   \                                 In section .text, align 2, keep-with-next
+    249          uint32 Millis__GetFreeRunningCounter(void)
+    250          {
+    251              return Milliseconds;
+   \                     Millis__GetFreeRunningCounter: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable8
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+    252          }
+    253          
+    254          //---------------------------------------------------------------------------------------------------------------------
+    255          /**
+    256           * Reset a timer.
+    257           * @param timer = The timer to reset
+    258           */
+
+   \                                 In section .text, align 2, keep-with-next
+    259          void Millis__Reset(MILLIS_TIMER_TYPE* timer)
+    260          {
+    261              timer->Reference = 0;
+   \                     Millis__Reset: (+1)
+   \   00000000   0x6801             LDR      R1,[R0, #+0]
+   \   00000002   0x0F89             LSRS     R1,R1,#+30
+   \   00000004   0x0789             LSLS     R1,R1,#+30
+   \   00000006   0x6001             STR      R1,[R0, #+0]
+    262              timer->Running = FALSE;
+   \   00000008   0x....             LDR      R2,??DataTable8_1  ;; 0xbfffffff
+   \   0000000A   0x400A             ANDS     R2,R2,R1
+   \   0000000C   0x6002             STR      R2,[R0, #+0]
+    263              timer->Done = FALSE;
+   \   0000000E   0x0051             LSLS     R1,R2,#+1
+   \   00000010   0x0849             LSRS     R1,R1,#+1
+   \   00000012   0x6001             STR      R1,[R0, #+0]
+    264          }
+   \   00000014   0x4770             BX       LR               ;; return
+    265          
+    266          //---------------------------------------------------------------------------------------------------------------------
+    267          /**
+    268           * Determine whether or not the timer is paused.
+    269           * @param timer = The timer to check
+    270           * @return TRUE if the timer is running; otherwise FALSE.
+    271           */
+
+   \                                 In section .text, align 2, keep-with-next
+    272          BOOL_TYPE Millis__IsTimerPaused(MILLIS_TIMER_TYPE* timer)
+    273          {
+    274              return (BOOL_TYPE)((timer == NULL) || (timer->Running == FALSE));
+   \                     Millis__IsTimerPaused: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD007             BEQ      ??Millis__IsTimerPaused_0
+   \   00000004   0x6800             LDR      R0,[R0, #+0]
+   \   00000006   0x0F80             LSRS     R0,R0,#+30
+   \   00000008   0x0001             MOVS     R1,R0
+   \   0000000A   0x07C9             LSLS     R1,R1,#+31
+   \   0000000C   0x0FC9             LSRS     R1,R1,#+31
+   \   0000000E   0x2001             MOVS     R0,#+1
+   \   00000010   0x4048             EORS     R0,R0,R1
+   \   00000012   0x4770             BX       LR
+   \                     ??Millis__IsTimerPaused_0: (+1)
+   \   00000014   0x2001             MOVS     R0,#+1
+   \   00000016   0x4770             BX       LR               ;; return
+    275          }
+    276          
+    277          //---------------------------------------------------------------------------------------------------------------------
+    278          /**
+    279           * Determine whether or not the timer is running.
+    280           * @param timer = The timer to check
+    281           * @return TRUE if the timer is running; otherwise FALSE.
+    282           */
+
+   \                                 In section .text, align 2, keep-with-next
+    283          BOOL_TYPE Millis__IsTimerRunning(MILLIS_TIMER_TYPE* timer)
+    284          {
+    285              return (BOOL_TYPE)((timer != NULL) && (timer->Running));
+   \                     Millis__IsTimerRunning: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD005             BEQ      ??Millis__IsTimerRunning_0
+   \   00000004   0x6800             LDR      R0,[R0, #+0]
+   \   00000006   0x0F81             LSRS     R1,R0,#+30
+   \   00000008   0x0008             MOVS     R0,R1
+   \   0000000A   0x07C0             LSLS     R0,R0,#+31
+   \   0000000C   0x0FC0             LSRS     R0,R0,#+31
+   \   0000000E   0x4770             BX       LR
+   \                     ??Millis__IsTimerRunning_0: (+1)
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x4770             BX       LR               ;; return
+    286          }
+    287          
+    288          //---------------------------------------------------------------------------------------------------------------------
+    289          /**
+    290           * Set the elapsed milliseconds on the specified timer.
+    291           * @param timer = The timer to set
+    292           * @param milliseconds = The elapsed milliseconds on the specified timer
+    293           */
+
+   \                                 In section .text, align 2, keep-with-next
+    294          void Millis__SetElapsed(MILLIS_TIMER_TYPE* timer, uint32 milliseconds)
+    295          {
+    296              if (timer != NULL)
+   \                     Millis__SetElapsed: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD100             BNE      ??Millis__SetElapsed_0
+   \   00000004   0x4770             BX       LR
+    297              {
+    298                  if (timer->Running)
+   \                     ??Millis__SetElapsed_0: (+1)
+   \   00000006   0xB410             PUSH     {R4}
+   \   00000008   0x6803             LDR      R3,[R0, #+0]
+   \   0000000A   0x0F9A             LSRS     R2,R3,#+30
+   \   0000000C   0x0792             LSLS     R2,R2,#+30
+   \   0000000E   0x001C             MOVS     R4,R3
+   \   00000010   0x0064             LSLS     R4,R4,#+1
+   \   00000012   0x0FE4             LSRS     R4,R4,#+31
+   \   00000014   0xD007             BEQ      ??Millis__SetElapsed_1
+    299                  {
+    300                      timer->Reference = Milliseconds - milliseconds;
+   \   00000016   0x....             LDR      R3,??DataTable8
+   \   00000018   0x681B             LDR      R3,[R3, #+0]
+   \   0000001A   0x1A59             SUBS     R1,R3,R1
+   \   0000001C   0x0089             LSLS     R1,R1,#+2
+   \   0000001E   0x0889             LSRS     R1,R1,#+2
+   \   00000020   0x4311             ORRS     R1,R1,R2
+   \   00000022   0x6001             STR      R1,[R0, #+0]
+   \   00000024   0xE003             B        ??Millis__SetElapsed_2
+    301                  }
+    302                  else
+    303                  {
+    304                      timer->Reference = milliseconds;
+   \                     ??Millis__SetElapsed_1: (+1)
+   \   00000026   0x0089             LSLS     R1,R1,#+2
+   \   00000028   0x0889             LSRS     R1,R1,#+2
+   \   0000002A   0x4311             ORRS     R1,R1,R2
+   \   0000002C   0x6001             STR      R1,[R0, #+0]
+    305                  }
+    306                  timer->Done = FALSE;
+   \                     ??Millis__SetElapsed_2: (+1)
+   \   0000002E   0x6801             LDR      R1,[R0, #+0]
+   \   00000030   0x0049             LSLS     R1,R1,#+1
+   \   00000032   0x0849             LSRS     R1,R1,#+1
+   \   00000034   0x6001             STR      R1,[R0, #+0]
+    307              }
+    308          }
+   \   00000036   0xBC10             POP      {R4}
+   \   00000038   0x4770             BX       LR               ;; return
+    309          
+    310          //---------------------------------------------------------------------------------------------------------------------
+    311          /**
+    312           * Set the elapsed seconds on the specified timer.
+    313           * @param timer = The timer to set
+    314           * @param seconds = The elapsed seconds on the specified timer
+    315           */
+
+   \                                 In section .text, align 2, keep-with-next
+    316          void Millis__SetElapsedSeconds(MILLIS_TIMER_TYPE* timer, uint32 seconds)
+    317          {
+   \                     Millis__SetElapsedSeconds: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    318              Millis__SetElapsed(timer, seconds * 1000);
+   \   00000002   0x22FA             MOVS     R2,#+250
+   \   00000004   0x0092             LSLS     R2,R2,#+2        ;; #+1000
+   \   00000006   0x4351             MULS     R1,R2,R1
+   \   00000008   0x.... 0x....      BL       Millis__SetElapsed
+    319          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+    320          
+    321          //---------------------------------------------------------------------------------------------------------------------
+    322          /**
+    323           * Set the elapsed HMS clock time on the specified timer.
+    324           * @param timer = The timer to set
+    325           * @param hms = The elapsed HMS clock time on the specified timer
+    326           */
+
+   \                                 In section .text, align 2, keep-with-next
+    327          void Millis__SetElapsedHms(MILLIS_TIMER_TYPE* timer, MILLIS_HMS_TYPE hms)
+    328          {
+   \                     Millis__SetElapsedHms: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x0008             MOVS     R0,R1
+    329              uint32 milliseconds = ConvertHmsToMilliseconds(hms);
+   \   00000006   0x.... 0x....      BL       ConvertHmsToMilliseconds
+   \   0000000A   0x0001             MOVS     R1,R0
+    330              Millis__SetElapsed(timer, milliseconds);
+   \   0000000C   0x0020             MOVS     R0,R4
+   \   0000000E   0x.... 0x....      BL       Millis__SetElapsed
+    331          }
+   \   00000012   0xBD10             POP      {R4,PC}          ;; return
+    332          
+    333          //---------------------------------------------------------------------------------------------------------------------
+    334          /**
+    335           * Restart the specified timer from 0 milliseconds.
+    336           * This is a short-cut function that effectively does the following:
+    337           *      Millis__Pause(timer);
+    338           *      Millis__SetElapsed(timer, 0);
+    339           *      Millis__Resume(timer);
+    340           * @param timer = The timer to restart
+    341           */
+
+   \                                 In section .text, align 2, keep-with-next
+    342          void Millis__Start(MILLIS_TIMER_TYPE* timer)
+    343          {
+    344              if (timer != NULL)
+   \                     Millis__Start: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD00F             BEQ      ??Millis__Start_0
+    345              {
+    346                  timer->Reference = Milliseconds;
+   \   00000004   0x6801             LDR      R1,[R0, #+0]
+   \   00000006   0x0F8A             LSRS     R2,R1,#+30
+   \   00000008   0x0792             LSLS     R2,R2,#+30
+   \   0000000A   0x....             LDR      R1,??DataTable8
+   \   0000000C   0x6809             LDR      R1,[R1, #+0]
+   \   0000000E   0x0089             LSLS     R1,R1,#+2
+   \   00000010   0x0889             LSRS     R1,R1,#+2
+   \   00000012   0x4311             ORRS     R1,R1,R2
+   \   00000014   0x6001             STR      R1,[R0, #+0]
+    347                  timer->Running = TRUE;
+   \   00000016   0x2280             MOVS     R2,#+128
+   \   00000018   0x05D2             LSLS     R2,R2,#+23       ;; #+1073741824
+   \   0000001A   0x430A             ORRS     R2,R2,R1
+   \   0000001C   0x6002             STR      R2,[R0, #+0]
+    348                  timer->Done = FALSE;
+   \   0000001E   0x0051             LSLS     R1,R2,#+1
+   \   00000020   0x0849             LSRS     R1,R1,#+1
+   \   00000022   0x6001             STR      R1,[R0, #+0]
+    349              }
+    350          }
+   \                     ??Millis__Start_0: (+1)
+   \   00000024   0x4770             BX       LR               ;; return
+    351          
+    352          //---------------------------------------------------------------------------------------------------------------------
+    353          /**
+    354           * Pause a running timer.
+    355           * This function has no effect if the timer was already paused.
+    356           * @param timer = The timer to pause
+    357           */
+
+   \                                 In section .text, align 2, keep-with-next
+    358          void Millis__Pause(MILLIS_TIMER_TYPE* timer)
+    359          {
+    360              if ((timer != NULL) && (timer->Running))
+   \                     Millis__Pause: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD015             BEQ      ??Millis__Pause_0
+   \   00000004   0x6801             LDR      R1,[R0, #+0]
+   \   00000006   0x000A             MOVS     R2,R1
+   \   00000008   0x0052             LSLS     R2,R2,#+1
+   \   0000000A   0x0FD2             LSRS     R2,R2,#+31
+   \   0000000C   0xD010             BEQ      ??Millis__Pause_0
+    361              {
+    362                  timer->Reference = Milliseconds - timer->Reference;
+   \   0000000E   0x....             LDR      R2,??DataTable8
+   \   00000010   0x6812             LDR      R2,[R2, #+0]
+   \   00000012   0x008B             LSLS     R3,R1,#+2
+   \   00000014   0x089B             LSRS     R3,R3,#+2
+   \   00000016   0x1AD2             SUBS     R2,R2,R3
+   \   00000018   0x0F8B             LSRS     R3,R1,#+30
+   \   0000001A   0x079B             LSLS     R3,R3,#+30
+   \   0000001C   0x0091             LSLS     R1,R2,#+2
+   \   0000001E   0x0889             LSRS     R1,R1,#+2
+   \   00000020   0x4319             ORRS     R1,R1,R3
+   \   00000022   0x6001             STR      R1,[R0, #+0]
+    363                  timer->Running = FALSE;
+   \   00000024   0x....             LDR      R2,??DataTable8_1  ;; 0xbfffffff
+   \   00000026   0x400A             ANDS     R2,R2,R1
+   \   00000028   0x6002             STR      R2,[R0, #+0]
+    364                  timer->Done = FALSE;
+   \   0000002A   0x0051             LSLS     R1,R2,#+1
+   \   0000002C   0x0849             LSRS     R1,R1,#+1
+   \   0000002E   0x6001             STR      R1,[R0, #+0]
+    365              }
+    366          }
+   \                     ??Millis__Pause_0: (+1)
+   \   00000030   0x4770             BX       LR               ;; return
+    367          
+    368          //---------------------------------------------------------------------------------------------------------------------
+    369          /**
+    370           * Resume a paused timer.
+    371           * This function has no effect if the timer was already running.
+    372           * @param timer = The timer to resume.
+    373           */
+
+   \                                 In section .text, align 2, keep-with-next
+    374          void Millis__Resume(MILLIS_TIMER_TYPE* timer)
+    375          {
+    376              if ((timer != NULL) && (timer->Running == FALSE))
+   \                     Millis__Resume: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD016             BEQ      ??Millis__Resume_0
+   \   00000004   0x6801             LDR      R1,[R0, #+0]
+   \   00000006   0x000A             MOVS     R2,R1
+   \   00000008   0x0052             LSLS     R2,R2,#+1
+   \   0000000A   0x0FD2             LSRS     R2,R2,#+31
+   \   0000000C   0xD111             BNE      ??Millis__Resume_0
+    377              {
+    378                  timer->Reference = Milliseconds - timer->Reference;
+   \   0000000E   0x....             LDR      R2,??DataTable8
+   \   00000010   0x6812             LDR      R2,[R2, #+0]
+   \   00000012   0x008B             LSLS     R3,R1,#+2
+   \   00000014   0x089B             LSRS     R3,R3,#+2
+   \   00000016   0x1AD2             SUBS     R2,R2,R3
+   \   00000018   0x0F8B             LSRS     R3,R1,#+30
+   \   0000001A   0x079B             LSLS     R3,R3,#+30
+   \   0000001C   0x0091             LSLS     R1,R2,#+2
+   \   0000001E   0x0889             LSRS     R1,R1,#+2
+   \   00000020   0x4319             ORRS     R1,R1,R3
+   \   00000022   0x6001             STR      R1,[R0, #+0]
+    379                  timer->Running = TRUE;
+   \   00000024   0x2280             MOVS     R2,#+128
+   \   00000026   0x05D2             LSLS     R2,R2,#+23       ;; #+1073741824
+   \   00000028   0x430A             ORRS     R2,R2,R1
+   \   0000002A   0x6002             STR      R2,[R0, #+0]
+    380                  timer->Done = FALSE;
+   \   0000002C   0x0051             LSLS     R1,R2,#+1
+   \   0000002E   0x0849             LSRS     R1,R1,#+1
+   \   00000030   0x6001             STR      R1,[R0, #+0]
+    381              }
+    382          }
+   \                     ??Millis__Resume_0: (+1)
+   \   00000032   0x4770             BX       LR               ;; return
+    383          
+    384          //---------------------------------------------------------------------------------------------------------------------
+    385          /**
+    386           * Get the elapsed milliseconds on the specified timer.
+    387           * @param timer = The timer to read
+    388           * @return The elapsed milliseconds on the specified timer
+    389           */
+
+   \                                 In section .text, align 2, keep-with-next
+    390          uint32 Millis__GetElapsed(MILLIS_TIMER_TYPE* timer)
+    391          {
+   \                     Millis__GetElapsed: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    392              uint32 elapsed = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+    393              if (timer != NULL)
+   \   00000004   0x2900             CMP      R1,#+0
+   \   00000006   0xD00C             BEQ      ??Millis__GetElapsed_0
+    394              {
+    395                  if (timer->Running)
+   \   00000008   0x6808             LDR      R0,[R1, #+0]
+   \   0000000A   0x0001             MOVS     R1,R0
+   \   0000000C   0x0049             LSLS     R1,R1,#+1
+   \   0000000E   0x0FC9             LSRS     R1,R1,#+31
+   \   00000010   0xD005             BEQ      ??Millis__GetElapsed_1
+    396                  {
+    397                      elapsed = (Milliseconds - timer->Reference) & MILLISECONDS_MASK;
+   \   00000012   0x....             LDR      R1,??DataTable8
+   \   00000014   0x6809             LDR      R1,[R1, #+0]
+   \   00000016   0x1A08             SUBS     R0,R1,R0
+   \   00000018   0x0080             LSLS     R0,R0,#+2
+   \   0000001A   0x0880             LSRS     R0,R0,#+2
+   \   0000001C   0x4770             BX       LR
+    398                  }
+    399                  else
+    400                  {
+    401                      elapsed = timer->Reference;
+   \                     ??Millis__GetElapsed_1: (+1)
+   \   0000001E   0x0080             LSLS     R0,R0,#+2
+   \   00000020   0x0880             LSRS     R0,R0,#+2
+    402                  }
+    403              }
+    404              return elapsed;
+   \                     ??Millis__GetElapsed_0: (+1)
+   \   00000022   0x4770             BX       LR               ;; return
+    405          }
+    406          
+    407          //---------------------------------------------------------------------------------------------------------------------
+    408          /**
+    409           * Get the elapsed seconds on the specified timer.
+    410           * @param timer = The timer to read
+    411           * @return The elapsed seconds on the specified timer
+    412           */
+
+   \                                 In section .text, align 2, keep-with-next
+    413          uint32 Millis__GetElapsedSeconds(MILLIS_TIMER_TYPE* timer)
+    414          {
+   \                     Millis__GetElapsedSeconds: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    415              return Millis__GetElapsed(timer) / 1000;
+   \   00000002   0x.... 0x....      BL       Millis__GetElapsed
+   \   00000006   0x21FA             MOVS     R1,#+250
+   \   00000008   0x0089             LSLS     R1,R1,#+2        ;; #+1000
+   \   0000000A   0x.... 0x....      BL       __aeabi_uidiv
+   \   0000000E   0xBD02             POP      {R1,PC}          ;; return
+    416          }
+    417          
+    418          //---------------------------------------------------------------------------------------------------------------------
+    419          /**
+    420           * Get the elapsed HMS clock time on the specified timer.
+    421           * @param timer = The timer to read
+    422           * @return The elapsed HMS clock time on the specified timer
+    423           */
+
+   \                                 In section .text, align 2, keep-with-next
+    424          MILLIS_HMS_TYPE Millis__GetElapsedHms(MILLIS_TIMER_TYPE* timer)
+    425          {
+   \                     Millis__GetElapsedHms: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    426              uint32 milliseconds = Millis__GetElapsed(timer);
+   \   00000002   0x.... 0x....      BL       Millis__GetElapsed
+   \   00000006   0x.... 0x....      BL       ConvertMillisecondsToHms
+   \   0000000A   0x9000             STR      R0,[SP, #+0]
+    427              return ConvertMillisecondsToHms(milliseconds);
+   \   0000000C   0xBD02             POP      {R1,PC}          ;; return
+    428          }
+    429          
+    430          //---------------------------------------------------------------------------------------------------------------------
+    431          /**
+    432           * Get the remaining milliseconds before the specified timer reaches the specified target milliseconds.
+    433           * @param timer = The timer to read
+    434           * @param target_milliseconds = The target milliseconds
+    435           * @return The remaining milliseconds to reach the target milliseconds.
+    436           *         If the target was already reached, returns 0.
+    437           */
+
+   \                                 In section .text, align 2, keep-with-next
+    438          uint32 Millis__GetRemaining(MILLIS_TIMER_TYPE* timer, uint32 target_milliseconds)
+    439          {
+   \                     Millis__GetRemaining: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0005             MOVS     R5,R0
+   \   00000004   0x000C             MOVS     R4,R1
+    440              uint32 remaining = 0;
+   \   00000006   0x2600             MOVS     R6,#+0
+    441              if (timer != NULL)
+   \   00000008   0x2D00             CMP      R5,#+0
+   \   0000000A   0xD00F             BEQ      ??Millis__GetRemaining_0
+    442              {
+    443                  if(timer->Done == FALSE)
+   \   0000000C   0x6828             LDR      R0,[R5, #+0]
+   \   0000000E   0x0FC0             LSRS     R0,R0,#+31
+   \   00000010   0xD10D             BNE      ??Millis__GetRemaining_1
+    444                  {
+    445                      uint32 milliseconds = Millis__GetElapsed(timer);
+   \   00000012   0x0028             MOVS     R0,R5
+   \   00000014   0x.... 0x....      BL       Millis__GetElapsed
+    446                      if (target_milliseconds > milliseconds)
+   \   00000018   0x42A0             CMP      R0,R4
+   \   0000001A   0xD201             BCS      ??Millis__GetRemaining_2
+    447                      {
+    448                          remaining = target_milliseconds - milliseconds;
+   \   0000001C   0x1A26             SUBS     R6,R4,R0
+   \   0000001E   0xE006             B        ??Millis__GetRemaining_1
+    449                      }
+    450                      else
+    451                      {
+    452                          timer->Done = TRUE;
+   \                     ??Millis__GetRemaining_2: (+1)
+   \   00000020   0x6828             LDR      R0,[R5, #+0]
+   \   00000022   0x2180             MOVS     R1,#+128
+   \   00000024   0x0609             LSLS     R1,R1,#+24       ;; #-2147483648
+   \   00000026   0x4301             ORRS     R1,R1,R0
+   \   00000028   0x6029             STR      R1,[R5, #+0]
+   \   0000002A   0xE000             B        ??Millis__GetRemaining_1
+    453                      }
+    454                  }
+    455              }
+    456              else
+    457              {
+    458                  remaining = target_milliseconds;
+   \                     ??Millis__GetRemaining_0: (+1)
+   \   0000002C   0x0026             MOVS     R6,R4
+    459              }
+    460          
+    461              return remaining;
+   \                     ??Millis__GetRemaining_1: (+1)
+   \   0000002E   0x0030             MOVS     R0,R6
+   \   00000030   0xBD70             POP      {R4-R6,PC}       ;; return
+    462          }
+    463          
+    464          //---------------------------------------------------------------------------------------------------------------------
+    465          /**
+    466           * Get the remaining seconds before the specified timer reaches the specified target seconds.
+    467           * @param timer = The timer to read
+    468           * @param target_seconds = The target seconds
+    469           * @return The remaining seconds (rounded up) to reach the target seconds.
+    470           *         Example: if there are 2.01 seconds remaining, the function will return 3.
+    471           *         If the target was already reached, returns 0.
+    472           */
+
+   \                                 In section .text, align 2, keep-with-next
+    473          uint32 Millis__GetRemainingSeconds(MILLIS_TIMER_TYPE* timer, uint32 target_seconds)
+    474          {
+   \                     Millis__GetRemainingSeconds: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    475              uint32 remaining_milliseconds = Millis__GetRemaining(timer, target_seconds * 1000);
+    476              return (remaining_milliseconds + 999) / 1000;
+   \   00000002   0x24FA             MOVS     R4,#+250
+   \   00000004   0x00A4             LSLS     R4,R4,#+2        ;; #+1000
+   \   00000006   0x4361             MULS     R1,R4,R1
+   \   00000008   0x.... 0x....      BL       Millis__GetRemaining
+   \   0000000C   0x1E61             SUBS     R1,R4,#+1
+   \   0000000E   0x1840             ADDS     R0,R0,R1
+   \   00000010   0x0021             MOVS     R1,R4
+   \   00000012   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000016   0xBD10             POP      {R4,PC}          ;; return
+    477          }
+    478          
+    479          //---------------------------------------------------------------------------------------------------------------------
+    480          /**
+    481           * Get the remaining HMS clock time before the specified timer reaches the specified target HMS clock time.
+    482           * @param timer = The timer to read
+    483           * @param target_hms = The target HMS clock time
+    484           * @return The remaining HMS clock time to reach the target HMS clock time.
+    485           *         If the target was already reached, returns an HMS clock time of 0.
+    486           */
+
+   \                                 In section .text, align 2, keep-with-next
+    487          MILLIS_HMS_TYPE Millis__GetRemainingHms(MILLIS_TIMER_TYPE* timer, MILLIS_HMS_TYPE target_hms)
+    488          {
+   \                     Millis__GetRemainingHms: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0xB082             SUB      SP,SP,#+8
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x0008             MOVS     R0,R1
+    489              uint32 target_milliseconds = ConvertHmsToMilliseconds(target_hms);
+   \   00000008   0x.... 0x....      BL       ConvertHmsToMilliseconds
+   \   0000000C   0x0001             MOVS     R1,R0
+    490              uint32 remaining_milliseconds = Millis__GetRemaining(timer, target_milliseconds);
+   \   0000000E   0x0020             MOVS     R0,R4
+   \   00000010   0x.... 0x....      BL       Millis__GetRemaining
+   \   00000014   0x.... 0x....      BL       ConvertMillisecondsToHms
+   \   00000018   0x9000             STR      R0,[SP, #+0]
+    491              return ConvertMillisecondsToHms(remaining_milliseconds);
+   \   0000001A   0xBD16             POP      {R1,R2,R4,PC}    ;; return
+    492          }
+    493          
+    494          //---------------------------------------------------------------------------------------------------------------------
+    495          /**
+    496           * Checks if the specified timer has reached the specified milliseconds target.
+    497           * Helper function when using the timer as a count down timer.
+    498           * @param timer = The timer to read
+    499           * @param target_milliseconds = The target milliseconds
+    500           * @return TRUE if the timer has reached the specified target milliseconds; otherwise FALSE.
+    501           */
+
+   \                                 In section .text, align 2, keep-with-next
+    502          BOOL_TYPE Millis__ReachedTarget(MILLIS_TIMER_TYPE* timer, uint32 target_milliseconds)
+    503          {
+   \                     Millis__ReachedTarget: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    504              return (BOOL_TYPE)(Millis__GetRemaining(timer, target_milliseconds) == 0);
+   \   00000002   0x.... 0x....      BL       Millis__GetRemaining
+   \   00000006   0x1E40             SUBS     R0,R0,#+1
+   \   00000008   0x4180             SBCS     R0,R0,R0
+   \   0000000A   0x0FC0             LSRS     R0,R0,#+31
+   \   0000000C   0xBD02             POP      {R1,PC}          ;; return
+    505          }
+    506          
+    507          //---------------------------------------------------------------------------------------------------------------------
+    508          /**
+    509           * Checks if the specified timer has reached the specified seconds target.
+    510           * Helper function when using the timer as a count down timer.
+    511           * @param timer = The timer to read
+    512           * @param target_seconds = The target seconds
+    513           * @return TRUE if the timer has reached the specified target seconds; otherwise FALSE.
+    514           */
+
+   \                                 In section .text, align 2, keep-with-next
+    515          BOOL_TYPE Millis__ReachedTargetSeconds(MILLIS_TIMER_TYPE* timer, uint32 target_seconds)
+    516          {
+   \                     Millis__ReachedTargetSeconds: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    517              return (BOOL_TYPE)(Millis__GetRemainingSeconds(timer, target_seconds) == 0);
+   \   00000002   0x.... 0x....      BL       Millis__GetRemainingSeconds
+   \   00000006   0x1E40             SUBS     R0,R0,#+1
+   \   00000008   0x4180             SBCS     R0,R0,R0
+   \   0000000A   0x0FC0             LSRS     R0,R0,#+31
+   \   0000000C   0xBD02             POP      {R1,PC}          ;; return
+    518          }
+    519          
+    520          //---------------------------------------------------------------------------------------------------------------------
+    521          /**
+    522           * Checks if the specified timer has reached the specified HMS clock time target.
+    523           * Helper function when using the timer as a count down timer.
+    524           * @param timer = The timer to read
+    525           * @param target_hms = The target HMS clock time
+    526           * @return TRUE if the timer has reached the specified target HMS clock time; otherwise FALSE.
+    527           */
+
+   \                                 In section .text, align 2, keep-with-next
+    528          BOOL_TYPE Millis__ReachedTargetHms(MILLIS_TIMER_TYPE* timer, MILLIS_HMS_TYPE target_hms)
+    529          {
+   \                     Millis__ReachedTargetHms: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    530              uint32 target_milliseconds = ConvertHmsToMilliseconds(target_hms);
+   \   00000004   0x0008             MOVS     R0,R1
+   \   00000006   0x.... 0x....      BL       ConvertHmsToMilliseconds
+    531              return (BOOL_TYPE)(Millis__GetRemaining(timer, target_milliseconds) == 0);
+   \   0000000A   0x0001             MOVS     R1,R0
+   \   0000000C   0x0020             MOVS     R0,R4
+   \   0000000E   0x.... 0x....      BL       Millis__GetRemaining
+   \   00000012   0x1E40             SUBS     R0,R0,#+1
+   \   00000014   0x4180             SBCS     R0,R0,R0
+   \   00000016   0x0FC0             LSRS     R0,R0,#+31
+   \   00000018   0xBD10             POP      {R4,PC}          ;; return
+    532          }
+    533          
+    534          //---------------------------------------------------------------------------------------------------------------------
+    535          /**
+    536           * Subtract milliseconds from the timer without going below zero.
+    537           * If the timer has less time than the value subtracted, then the timer is set to zero.
+    538           * Allows a timer to be used to measure time periods without losing time between periods.
+    539           * @param timer = The timer to update
+    540           * @param milliseconds = The number of milliseconds to subtract from the timer
+    541           */
+
+   \                                 In section .text, align 2, keep-with-next
+    542          void Millis__RestartPeriod(MILLIS_TIMER_TYPE* timer, uint32 milliseconds)
+    543          {
+    544              if (timer != NULL)
+   \                     Millis__RestartPeriod: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD100             BNE      ??Millis__RestartPeriod_0
+   \   00000004   0x4770             BX       LR
+    545              {
+    546                  if (timer->Running)
+   \                     ??Millis__RestartPeriod_0: (+1)
+   \   00000006   0xB538             PUSH     {R3-R5,LR}
+   \   00000008   0x6802             LDR      R2,[R0, #+0]
+   \   0000000A   0x0013             MOVS     R3,R2
+   \   0000000C   0x005B             LSLS     R3,R3,#+1
+   \   0000000E   0x0FDB             LSRS     R3,R3,#+31
+   \   00000010   0xD019             BEQ      ??Millis__RestartPeriod_1
+    547                  {
+    548                      uint32 sample_milliseconds = Milliseconds;
+   \   00000012   0x....             LDR      R3,??DataTable8
+   \   00000014   0x681C             LDR      R4,[R3, #+0]
+    549                      uint32 elapsed_milliseconds = (sample_milliseconds - timer->Reference) & MILLISECONDS_MASK;
+    550                      if (elapsed_milliseconds > milliseconds)
+   \   00000016   0x0F93             LSRS     R3,R2,#+30
+   \   00000018   0x079B             LSLS     R3,R3,#+30
+   \   0000001A   0x1AA5             SUBS     R5,R4,R2
+   \   0000001C   0x00AD             LSLS     R5,R5,#+2
+   \   0000001E   0x08AD             LSRS     R5,R5,#+2
+   \   00000020   0x42A9             CMP      R1,R5
+   \   00000022   0xD207             BCS      ??Millis__RestartPeriod_2
+    551                      {
+    552                          timer->Reference = timer->Reference + milliseconds;
+   \   00000024   0x0092             LSLS     R2,R2,#+2
+   \   00000026   0x0892             LSRS     R2,R2,#+2
+   \   00000028   0x1851             ADDS     R1,R2,R1
+   \   0000002A   0x0089             LSLS     R1,R1,#+2
+   \   0000002C   0x0889             LSRS     R1,R1,#+2
+   \   0000002E   0x4319             ORRS     R1,R1,R3
+   \   00000030   0x6001             STR      R1,[R0, #+0]
+   \   00000032   0xE003             B        ??Millis__RestartPeriod_3
+    553                      }
+    554                      else
+    555                      {
+    556                          timer->Reference = sample_milliseconds;
+   \                     ??Millis__RestartPeriod_2: (+1)
+   \   00000034   0x00A1             LSLS     R1,R4,#+2
+   \   00000036   0x0889             LSRS     R1,R1,#+2
+   \   00000038   0x4319             ORRS     R1,R1,R3
+   \   0000003A   0x6001             STR      R1,[R0, #+0]
+    557                      }
+    558                      timer->Done  = FALSE;
+   \                     ??Millis__RestartPeriod_3: (+1)
+   \   0000003C   0x6801             LDR      R1,[R0, #+0]
+   \   0000003E   0x0049             LSLS     R1,R1,#+1
+   \   00000040   0x0849             LSRS     R1,R1,#+1
+   \   00000042   0x6001             STR      R1,[R0, #+0]
+   \   00000044   0xBD31             POP      {R0,R4,R5,PC}
+    559                  }
+    560                  else
+    561                  {
+    562                      Millis__Start(timer);
+   \                     ??Millis__RestartPeriod_1: (+1)
+   \   00000046   0x.... 0x....      BL       Millis__Start
+    563                  }
+    564              }
+    565          }
+   \   0000004A   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    566          
+    567          //---------------------------------------------------------------------------------------------------------------------
+    568          /**
+    569           * Subtract seconds from the timer without going below zero.
+    570           * If the timer has less time than the value subtracted, then the timer is set to zero.
+    571           * Allows a timer to be used to measure time periods without losing time between periods.
+    572           * @param timer = The timer to update
+    573           * @param seconds = The number of seconds to subtract from the timer
+    574           */
+
+   \                                 In section .text, align 2, keep-with-next
+    575          void Millis__RestartSecondsPeriod(MILLIS_TIMER_TYPE* timer, uint32 seconds)
+    576          {
+   \                     Millis__RestartSecondsPeriod: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    577              Millis__RestartPeriod(timer, seconds * 1000);
+   \   00000002   0x22FA             MOVS     R2,#+250
+   \   00000004   0x0092             LSLS     R2,R2,#+2        ;; #+1000
+   \   00000006   0x4351             MULS     R1,R2,R1
+   \   00000008   0x.... 0x....      BL       Millis__RestartPeriod
+    578          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+    579          
+    580          //---------------------------------------------------------------------------------------------------------------------
+    581          /**
+    582           * Subtract HMS clock time from the timer without going below zero.
+    583           * If the timer has less time than the value subtracted, then the timer is set to zero.
+    584           * Allows a timer to be used to measure time periods without losing time between periods.
+    585           * @param timer = The timer to update
+    586           * @param hms = The HMS clock time to subtract from the timer
+    587           */
+
+   \                                 In section .text, align 2, keep-with-next
+    588          void Millis__RestartHmsPeriod(MILLIS_TIMER_TYPE* timer, MILLIS_HMS_TYPE hms)
+    589          {
+   \                     Millis__RestartHmsPeriod: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x0008             MOVS     R0,R1
+    590              uint32 milliseconds = ConvertHmsToMilliseconds(hms);
+   \   00000006   0x.... 0x....      BL       ConvertHmsToMilliseconds
+   \   0000000A   0x0001             MOVS     R1,R0
+    591              Millis__RestartPeriod(timer, milliseconds);
+   \   0000000C   0x0020             MOVS     R0,R4
+   \   0000000E   0x.... 0x....      BL       Millis__RestartPeriod
+    592          }
+   \   00000012   0xBD10             POP      {R4,PC}          ;; return
+    593          
+    594          
+    595          //=====================================================================================================================
+    596          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    597          //=====================================================================================================================
+    598          
+    599          //---------------------------------------------------------------------------------------------------------------------
+    600          /**
+    601           * Convert HMS clock time to milliseconds.
+    602           * @param hms = The HMS clock time to convert
+    603           * @return The equivalent time in milliseconds
+    604           */
+
+   \                                 In section .text, align 2, keep-with-next
+    605          static uint32 ConvertHmsToMilliseconds(MILLIS_HMS_TYPE hms)
+    606          {
+   \                     ConvertHmsToMilliseconds: (+1)
+   \   00000000   0xB401             PUSH     {R0}
+    607              uint32 value = hms.Hours;
+    608              value *= 60;
+    609              value += hms.Minutes;
+    610              value *= 60;
+    611              value += hms.Seconds;
+    612              value *= 1000;
+    613              value += hms.Milliseconds;
+    614              return value;
+   \   00000002   0x4668             MOV      R0,SP
+   \   00000004   0x8800             LDRH     R0,[R0, #+0]
+   \   00000006   0x0A80             LSRS     R0,R0,#+10
+   \   00000008   0x0101             LSLS     R1,R0,#+4
+   \   0000000A   0x1A08             SUBS     R0,R1,R0
+   \   0000000C   0x0080             LSLS     R0,R0,#+2
+   \   0000000E   0x4669             MOV      R1,SP
+   \   00000010   0x7889             LDRB     R1,[R1, #+2]
+   \   00000012   0x1840             ADDS     R0,R0,R1
+   \   00000014   0x0101             LSLS     R1,R0,#+4
+   \   00000016   0x1A08             SUBS     R0,R1,R0
+   \   00000018   0x0080             LSLS     R0,R0,#+2
+   \   0000001A   0x4669             MOV      R1,SP
+   \   0000001C   0x78C9             LDRB     R1,[R1, #+3]
+   \   0000001E   0x1840             ADDS     R0,R0,R1
+   \   00000020   0x21FA             MOVS     R1,#+250
+   \   00000022   0x0089             LSLS     R1,R1,#+2        ;; #+1000
+   \   00000024   0x4348             MULS     R0,R1,R0
+   \   00000026   0x4669             MOV      R1,SP
+   \   00000028   0x8809             LDRH     R1,[R1, #+0]
+   \   0000002A   0x0589             LSLS     R1,R1,#+22
+   \   0000002C   0x0D89             LSRS     R1,R1,#+22
+   \   0000002E   0x1840             ADDS     R0,R0,R1
+   \   00000030   0xB001             ADD      SP,SP,#+4
+   \   00000032   0x4770             BX       LR               ;; return
+    615          }
+    616          
+    617          //---------------------------------------------------------------------------------------------------------------------
+    618          /**
+    619           * Convert milliseconds to HMS clock time.
+    620           * @param milliseconds = The milliseconds to convert
+    621           * @return The equivalent HMS clock time.
+    622           */
+
+   \                                 In section .text, align 2, keep-with-next
+    623          static MILLIS_HMS_TYPE ConvertMillisecondsToHms(uint32 milliseconds)
+    624          {
+   \                     ConvertMillisecondsToHms: (+1)
+   \   00000000   0xB578             PUSH     {R3-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    625              MILLIS_HMS_TYPE result;
+    626              uint32 value = milliseconds;
+    627              result.Milliseconds = (value % 1000);
+   \   00000004   0x25FA             MOVS     R5,#+250
+   \   00000006   0x00AD             LSLS     R5,R5,#+2        ;; #+1000
+   \   00000008   0x4668             MOV      R0,SP
+   \   0000000A   0x8800             LDRH     R0,[R0, #+0]
+   \   0000000C   0x26FC             MOVS     R6,#+252
+   \   0000000E   0x0236             LSLS     R6,R6,#+8        ;; #+64512
+   \   00000010   0x4006             ANDS     R6,R6,R0
+   \   00000012   0x0020             MOVS     R0,R4
+   \   00000014   0x0029             MOVS     R1,R5
+   \   00000016   0x.... 0x....      BL       __aeabi_uidivmod
+   \   0000001A   0x0588             LSLS     R0,R1,#+22
+   \   0000001C   0x0D80             LSRS     R0,R0,#+22
+   \   0000001E   0x4330             ORRS     R0,R0,R6
+   \   00000020   0x4669             MOV      R1,SP
+   \   00000022   0x8008             STRH     R0,[R1, #+0]
+    628              value /= 1000;
+   \   00000024   0x0020             MOVS     R0,R4
+   \   00000026   0x0029             MOVS     R1,R5
+   \   00000028   0x.... 0x....      BL       __aeabi_uidiv
+   \   0000002C   0x0005             MOVS     R5,R0
+    629              result.Seconds = (value % 60);
+   \   0000002E   0x243C             MOVS     R4,#+60
+   \   00000030   0x0021             MOVS     R1,R4
+   \   00000032   0x.... 0x....      BL       __aeabi_uidivmod
+   \   00000036   0x4668             MOV      R0,SP
+   \   00000038   0x70C1             STRB     R1,[R0, #+3]
+    630              value /= 60;
+   \   0000003A   0x0028             MOVS     R0,R5
+   \   0000003C   0x0021             MOVS     R1,R4
+   \   0000003E   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000042   0x0005             MOVS     R5,R0
+    631              result.Minutes = (value % 60);
+   \   00000044   0x0021             MOVS     R1,R4
+   \   00000046   0x.... 0x....      BL       __aeabi_uidivmod
+   \   0000004A   0x4668             MOV      R0,SP
+   \   0000004C   0x7081             STRB     R1,[R0, #+2]
+    632              value /= 60;
+    633              result.Hours = (value % 24);
+   \   0000004E   0x8800             LDRH     R0,[R0, #+0]
+   \   00000050   0x0586             LSLS     R6,R0,#+22
+   \   00000052   0x0DB6             LSRS     R6,R6,#+22
+   \   00000054   0x0028             MOVS     R0,R5
+   \   00000056   0x0021             MOVS     R1,R4
+   \   00000058   0x.... 0x....      BL       __aeabi_uidiv
+   \   0000005C   0x2118             MOVS     R1,#+24
+   \   0000005E   0x.... 0x....      BL       __aeabi_uidivmod
+   \   00000062   0x0288             LSLS     R0,R1,#+10
+   \   00000064   0x4330             ORRS     R0,R0,R6
+   \   00000066   0x4669             MOV      R1,SP
+   \   00000068   0x8008             STRH     R0,[R1, #+0]
+    634              return result;
+   \   0000006A   0x9800             LDR      R0,[SP, #+0]
+   \   0000006C   0xBD72             POP      {R1,R4-R6,PC}    ;; return
+    635          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \   00000000   0x........         DC32     Milliseconds
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_1:
+   \   00000000   0xBFFFFFFF         DC32     0xbfffffff
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       4   ConvertHmsToMilliseconds
+      20   ConvertMillisecondsToHms
+        20 __aeabi_uidiv
+        20 __aeabi_uidivmod
+       0   Millis__GetElapsed
+       8   Millis__GetElapsedHms
+         8   -> ConvertMillisecondsToHms
+         8   -> Millis__GetElapsed
+       8   Millis__GetElapsedSeconds
+         8   -> Millis__GetElapsed
+         8 __aeabi_uidiv
+       0   Millis__GetFreeRunningCounter
+      16   Millis__GetRemaining
+        16   -> Millis__GetElapsed
+      16   Millis__GetRemainingHms
+        16   -> ConvertHmsToMilliseconds
+        16   -> ConvertMillisecondsToHms
+        16   -> Millis__GetRemaining
+       8   Millis__GetRemainingSeconds
+         8   -> Millis__GetRemaining
+         8 __aeabi_uidiv
+       8   Millis__Handler1ms
+         8   -> SystemTimers__Handler1ms
+       0   Millis__InitComplete
+       8   Millis__Initialize
+         8   -> SystemTimers__Initialize
+       0   Millis__IsTimerPaused
+       0   Millis__IsTimerRunning
+       0   Millis__Pause
+       8   Millis__ReachedTarget
+         8   -> Millis__GetRemaining
+       8   Millis__ReachedTargetHms
+         8   -> ConvertHmsToMilliseconds
+         8   -> Millis__GetRemaining
+       8   Millis__ReachedTargetSeconds
+         8   -> Millis__GetRemainingSeconds
+       0   Millis__Reset
+       8   Millis__RestartHmsPeriod
+         8   -> ConvertHmsToMilliseconds
+         8   -> Millis__RestartPeriod
+      16   Millis__RestartPeriod
+        16   -> Millis__Start
+       8   Millis__RestartSecondsPeriod
+         8   -> Millis__RestartPeriod
+       0   Millis__Resume
+       4   Millis__SetElapsed
+       8   Millis__SetElapsedHms
+         8   -> ConvertHmsToMilliseconds
+         8   -> Millis__SetElapsed
+       8   Millis__SetElapsedSeconds
+         8   -> Millis__SetElapsed
+       0   Millis__SlowHandler
+       0   Millis__Start
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable8
+       4  ??DataTable8_1
+      52  ConvertHmsToMilliseconds
+     110  ConvertMillisecondsToHms
+      36  Millis__GetElapsed
+      14  Millis__GetElapsedHms
+      16  Millis__GetElapsedSeconds
+       6  Millis__GetFreeRunningCounter
+      50  Millis__GetRemaining
+      28  Millis__GetRemainingHms
+      24  Millis__GetRemainingSeconds
+      16  Millis__Handler1ms
+       4  Millis__InitComplete
+       8  Millis__Initialize
+      24  Millis__IsTimerPaused
+      20  Millis__IsTimerRunning
+      50  Millis__Pause
+      14  Millis__ReachedTarget
+      26  Millis__ReachedTargetHms
+      14  Millis__ReachedTargetSeconds
+      22  Millis__Reset
+      20  Millis__RestartHmsPeriod
+      76  Millis__RestartPeriod
+      14  Millis__RestartSecondsPeriod
+      52  Millis__Resume
+      58  Millis__SetElapsed
+      20  Millis__SetElapsedHms
+      14  Millis__SetElapsedSeconds
+       2  Millis__SlowHandler
+      38  Millis__Start
+       4  Milliseconds
+
+ 
+ 836 bytes in section .text
+   4 bytes in section _appliance_segment
+ 
+ 836 bytes of CODE memory
+   4 bytes of DATA memory
+
+Errors: none
+Warnings: none

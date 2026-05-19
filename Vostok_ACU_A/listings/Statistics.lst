@@ -1,0 +1,2442 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:48
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Common/acu/Statistics/Statistics.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Statistics.lst -o
+#        obj\Statistics.obj source/XCategory/Common/acu/Statistics/Statistics.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Statistics.lst
+#    Object file  =  obj\Statistics.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\acu\Statistics\Statistics.c
+      1          /**
+      2           * @file
+      3           * @brief       Manages all statistics data.
+      4           *
+      5           * @details
+      6           *
+      7           * The Statistics module stores information that may be useful to a diagnostic tool.
+      8           *
+      9           *      - Lifetime measurements
+     10           *          - Lifetime data that measures the total life of the appliance components
+     11           *      - Cycle measurements [ last C cycles run ]
+     12           *          - Measurements that describe the behavior of completed and interrupted cycles
+     13           *          - Optionally, more detailed data for the most recent last cycles
+     14           *      - Fault information [ last F faults detected ]
+     15           *          - Fault ID
+     16           *          - Number of occurrences
+     17           *          - Black box data at the time the fault occurred
+     18           *          - Cycle data for the most recent cycle
+     19           *          - Optionally, more detailed data for the most recent faults
+     20           *      - Pre-fault information [ last P pre-faults detected ]
+     21           *          - Pre-fault ID
+     22           *          - Number of occurrences
+     23           *          - Black box data at the time the pre-fault occurred
+     24           *          - Cycle data for the most recent cycle
+     25           *          - Optionally, more detailed data for the most recent pre-faults
+     26           *
+     27           * @copyright  Copyright 2015-2016 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     28           */
+     29          
+     30          //  --- Include Files -------------------------------------------------------------------------------------------------
+     31          
+     32          // -- This Module --
+     33          #include "SystemConfig.h"
+     34          #include "Statistics.h"
+     35          #if (((STATISTICS_SAVED_CYCLES > 0) && (STATISTICS_CUSTOM_CYCLE_ENABLE == ENABLED)) || \
+     36               ((STATISTICS_SAVED_CYCLES > 0) && (STATISTICS_SAVED_CYCLE_REGULATIONS > 0)) || \
+     37               (STATISTICS_SAVED_LAST_CYCLES > 0) || \
+     38               (STATISTICS_SAVED_FAULT_BLACK_BOX > 0) || \
+     39               (STATISTICS_SAVED_PRE_FAULT_BLACK_BOX > 0) || \
+     40               (STATISTICS_CUSTOM_LIFETIME_ENABLE == ENABLED))
+     41              #include "Statistics_prv.h"
+
+   \                                 In section .text, align 4, keep-with-next
+   \   static __absolute enum <unnamed> const STATISTICS_CYCLE_REGULATION_FUNCTION_IDS[27]
+   \                     STATISTICS_CYCLE_REGULATION_FUNCTION_IDS:
+   \   00000000   0x01 0x02          DC8 1, 2, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 35
+   \              0x0D 0x0E    
+   \              0x0F 0x10    
+   \              0x11 0x12    
+   \              0x13 0x14    
+   \              0x15 0x17    
+   \              0x18 0x19    
+   \              0x1A 0x1B    
+   \              0x23         
+   \   00000011   0x24 0x25          DC8 36, 37, 39, 40, 47, 50, 51, 52, 53, 99, 0
+   \              0x27 0x28    
+   \              0x2F 0x32    
+   \              0x33 0x34    
+   \              0x35 0x63    
+   \              0x00         
+     42          #endif
+     43          
+     44          // -- Other Modules --
+     45          #include "Estimator.h"
+     46          #include "Interpreter.h"
+     47          #include <limits.h>
+     48          #include "Log.h"
+     49          #include "Micro.h"
+     50          #include "Millis.h"
+     51          #include "NVData.h"
+     52          #if ((STATISTICS_SAVED_CYCLES > 0) && (STATISTICS_SAVED_CYCLE_REGULATIONS > 0))
+     53              #include "Regulations.h"
+     54          #endif
+     55          #if (STATISTICS_SAVED_CYCLES > 0)
+     56              #include "Selector.h"
+     57          #endif
+     58          #include <string.h>
+     59          #if (STATISTICS_SAVED_CYCLES > 0)
+     60              #include "Supervisor.h"
+     61          #endif
+     62          
+     63          
+     64          //  --- Compile-Time Assertions ---------------------------------------------------------------------------------------
+     65          
+     66          
+     67          // If cycle statistics are saved, there must be at least one saved cycle for every appliance compartment.
+     68          CT_ASSERT((STATISTICS_SAVED_CYCLES == 0) || (STATISTICS_SAVED_CYCLES >= APPLIANCE_MAX_COMPARTMENTS));
+     69          
+     70          // The number of saved last cycles must be less than or equal to the number of saved cycles.
+     71          CT_ASSERT((0 <= STATISTICS_SAVED_LAST_CYCLES) && (STATISTICS_SAVED_LAST_CYCLES <= STATISTICS_SAVED_CYCLES));
+     72          
+     73          // The statistics data structure must store at least 5 faults.
+     74          CT_ASSERT(STATISTICS_SAVED_FAULTS >= 5);
+     75          
+     76          // The number of saved fault black box data must be less than or equal to the number of saved faults.
+     77          CT_ASSERT((0 <= STATISTICS_SAVED_FAULT_BLACK_BOX) && (STATISTICS_SAVED_FAULT_BLACK_BOX <= STATISTICS_SAVED_FAULTS));
+     78          
+     79          // The statistics data structure must store at least 5 pre-faults.
+     80          CT_ASSERT(STATISTICS_SAVED_PRE_FAULTS >= 5);
+     81          
+     82          // The number of saved pre-fault black box data must be less than or equal to the number of saved pre-faults.
+     83          CT_ASSERT((0 <= STATISTICS_SAVED_PRE_FAULT_BLACK_BOX) && (STATISTICS_SAVED_PRE_FAULT_BLACK_BOX <= STATISTICS_SAVED_PRE_FAULTS));
+     84          
+     85          #if (STATISTICS_SAVED_CYCLE_REGULATIONS > 0)
+     86              // The number of regulations saved must match the number of function IDs defined.
+     87              CT_ASSERT(ELEMENTS_IN_ARRAY(STATISTICS_CYCLE_REGULATION_FUNCTION_IDS) == STATISTICS_SAVED_CYCLE_REGULATIONS);
+     88          #endif
+     89          
+     90          // Set default configuration for how fault age should be measured.
+     91          #ifndef STATISTICS_FAULT_AGE_BY_CYCLES
+     92              #if (STATISTICS_SAVED_CYCLES > 0)
+     93                  #define STATISTICS_FAULT_AGE_BY_CYCLES ENABLED
+     94              #else
+     95                  #define STATISTICS_FAULT_AGE_BY_CYCLES DISABLED
+     96              #endif
+     97          #endif
+     98          
+     99          #ifndef STATISTICS_FAULT_MAX_AGE_DIFF
+    100              #if (STATISTICS_FAULT_AGE_BY_CYCLES == ENABLED)
+    101                  // Default age cutoff is 10 cycles
+    102                  #define STATISTICS_FAULT_MAX_AGE_DIFF 10
+    103              #else
+    104                  // Default age cutoff is 30 days
+    105                  #define STATISTICS_FAULT_MAX_AGE_DIFF 300
+    106              #endif
+    107          #endif
+    108          
+    109          
+    110          //  --- Private Properties --------------------------------------------------------------------------------------------
+    111          
+    112          
+    113          // -- Private Constant Declarations --
+    114          
+    115          //! The maximum value for a counter that counts the number of resets during a cycle.
+    116          #define MAX_CYCLE_RESETS 15
+    117          
+    118          //! The name of this module for use by the Log module.
+    119          #define MODULE_NAME MODULE_STATISTICS
+    120          
+    121          //! Number of seconds in a day. Used for tracking appliance age on some appliances.
+    122          #define SECONDS_IN_ONE_TENTH_DAY 8640L
+    123          
+    124          
+    125          // -- Private Type Declarations --
+    126          
+    127          //! A list of reference values used by several functions to manage either
+    128          //!     1) The Statistics.Fault array and the Statistics.Fault_Black_Box array, or
+    129          //!     2) The Statistics.Pre_Fault array and the Statistics.Pre_Fault_Black_Box array
+    130          typedef struct FAULT_REFERENCE_STRUCT
+    131          {
+    132              STATISTICS_FAULT_TYPE* Faults;
+    133              #if ((STATISTICS_SAVED_FAULT_BLACK_BOX > 0) || (STATISTICS_SAVED_PRE_FAULT_BLACK_BOX > 0))
+    134                  PLATFORM_BLACK_BOX_TYPE* Black_Box;
+    135              #else
+    136                  void* Unused;
+    137              #endif
+    138              uint8 Fault_Count;
+    139              uint8 Black_Box_Count;
+    140          } FAULT_REFERENCE_TYPE;
+    141          
+    142          //! A list of log message IDs that are generated by this module.
+    143          typedef enum MODULE_STATISTICS_LOG_MESSAGE_ID_ENUM
+    144          {
+    145              REQUESTED_CYCLE_OUT_OF_RANGE = 1,
+    146              REQUESTED_FAULT_OUT_OF_RANGE,
+    147              REQUESTED_FAULT_BLACK_BOX_OUT_OF_RANGE,
+    148              REQUESTED_LAST_CYCLE_OUT_OF_RANGE,
+    149              REQUESTED_PRE_FAULT_OUT_OF_RANGE,
+    150              REQUESTED_PRE_FAULT_BLACK_BOX_OUT_OF_RANGE,
+    151              DATA_LOST_DUE_TO_CORRUPTION
+    152          } MODULE_STATISTICS_LOG_MESSAGE_ID_TYPE;
+    153          
+    154          
+    155          // -- Private Variable Definitions --
+    156          
+    157          //! A time reference used by Statistics to know when a second has passed.
+
+   \                                 In section .bss, align 4
+    158          static uint16 Statistics_Milliseconds;
+    159          
+    160          //! The number of seconds since the last warm or cold reset.
+    161          uint32 Statistics_Seconds_Since_Reset;
+    162          
+    163          #if (STATISTICS_SAVED_CYCLES > 0)
+    164              // Index of current running cycle storage Set to STATISTICS_SAVED_CYCLES if data does not indicate a running cycle
+    165              static uint8 Cycles_Index[APPLIANCE_MAX_COMPARTMENTS];
+   \                     Cycles_Index:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 1
+   \   00000002                      DS8 2
+   \                     Statistics_Seconds_Since_Reset:
+   \   00000004                      DS8 4
+    166          #endif
+    167          
+    168          #pragma location = "_statistics_segment"
+
+   \                                 In section _statistics_segment, align 4
+    169          STATISTICS_TYPE Statistics;
+   \                     Statistics:
+   \   00000000                      DS8 772
+    170          
+    171          
+    172          // -- Private Flash-Based Constant Definitions --
+    173          
+
+   \                                 In section .text, align 4, keep-with-next
+    174          static const FAULT_REFERENCE_TYPE FAULT_REF =
+   \                     FAULT_REF:
+   \   00000000   0x........         DC32 Statistics + 2AEH, Statistics + 2EAH
+   \              0x........   
+   \   00000008   0x05 0x02          DC8 5, 2, 0, 0
+   \              0x00 0x00    
+    175          {
+    176              Statistics.Fault,
+    177              #if (STATISTICS_SAVED_FAULT_BLACK_BOX > 0)
+    178                  Statistics.Fault_Black_Box,
+    179              #else
+    180                  NULL,
+    181              #endif
+    182              STATISTICS_SAVED_FAULTS,
+    183              STATISTICS_SAVED_FAULT_BLACK_BOX
+    184          };
+    185          
+
+   \                                 In section .text, align 4, keep-with-next
+    186          static const FAULT_REFERENCE_TYPE PRE_FAULT_REF =
+   \                     PRE_FAULT_REF:
+   \   00000000   0x........         DC32 Statistics + 2CCH, Statistics + 2F6H
+   \              0x........   
+   \   00000008   0x05 0x02          DC8 5, 2, 0, 0
+   \              0x00 0x00    
+    187          {
+    188              Statistics.Pre_Fault,
+    189              #if (STATISTICS_SAVED_PRE_FAULT_BLACK_BOX > 0)
+    190                  Statistics.Pre_Fault_Black_Box,
+    191              #else
+    192                  NULL,
+    193              #endif
+    194              STATISTICS_SAVED_PRE_FAULTS,
+    195              STATISTICS_SAVED_PRE_FAULT_BLACK_BOX
+    196          };
+    197          
+    198          
+    199          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    200          
+    201          static void SaveErrorData(FAULT_REFERENCE_TYPE ref, uint8 compartment, uint8 fault_id, uint8 code, uint8 sub_code, uint8 eng_code);
+    202          static void ShiftArray(void* array, void* swap_space, uint16 element_size, sint8 index);
+    203          static BOOL_TYPE SortFaultsArray(FAULT_REFERENCE_TYPE ref, uint8 code, uint8 sub_code, uint8 eng_code);
+    204          #if (STATISTICS_SAVED_CYCLES > 0)
+    205              static void UpdateCustomCycleData(uint8 index, STATISTICS_CYCLE_STATE_TYPE state);
+    206          #endif
+    207          
+    208          
+    209          //=====================================================================================================================
+    210          //  --- Public Methods ------------------------------------------------------------------------------------------------
+    211          //=====================================================================================================================
+    212          
+    213          
+    214          //---------------------------------------------------------------------------------------------------------------------
+    215          /**
+    216           * Initialize the Statistics module variables.
+    217           */
+
+   \                                 In section .text, align 2, keep-with-next
+    218          void Statistics__Initialize(void)
+    219          {
+   \                     Statistics__Initialize: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+    220              // Restore the Cycles_Index[] array based on the Interpreter cycles.
+    221              #if (STATISTICS_SAVED_CYCLES > 0)
+    222                  memset(Cycles_Index, STATISTICS_SAVED_CYCLES, sizeof(Cycles_Index));
+   \   00000002   0x....             LDR      R6,??DataTable7
+   \   00000004   0x220A             MOVS     R2,#+10
+   \   00000006   0x2101             MOVS     R1,#+1
+   \   00000008   0x0030             MOVS     R0,R6
+   \   0000000A   0x.... 0x....      BL       __aeabi_memset4
+    223                  for (uint8 compartment = 0; compartment < APPLIANCE_MAX_COMPARTMENTS; compartment++)
+   \   0000000E   0x2400             MOVS     R4,#+0
+   \   00000010   0x0020             MOVS     R0,R4
+   \   00000012   0xE010             B        ??Statistics__Initialize_0
+    224                  {
+    225                      CYCLE_PHASE_STATEMENT_TYPE cps = Interpreter__GetCurrentStatement(compartment);
+   \                     ??Statistics__Initialize_1: (+1)
+   \   00000014   0x4620             MOV      R0,R4
+   \   00000016   0x.... 0x....      BL       Interpreter__GetCurrentStatement
+   \   0000001A   0x9000             STR      R0,[SP, #+0]
+    226                      CYCLE_STATE_TYPE state = Selector__GetCycleState(0, compartment, cps.Cycle);
+   \   0000001C   0x4668             MOV      R0,SP
+   \   0000001E   0x7802             LDRB     R2,[R0, #+0]
+   \   00000020   0x4621             MOV      R1,R4
+   \   00000022   0x4608             MOV      R0,R1
+   \   00000024   0x.... 0x....      BL       Selector__GetCycleState
+    227                      if ((state == CYCLE_STATE_RUN) || (state == CYCLE_STATE_PAUSE))
+   \   00000028   0x2801             CMP      R0,#+1
+   \   0000002A   0xD001             BEQ      ??Statistics__Initialize_2
+   \   0000002C   0x2804             CMP      R0,#+4
+   \   0000002E   0xD101             BNE      ??Statistics__Initialize_3
+    228                      {
+    229                          #if (APPLIANCE_MAX_COMPARTMENTS > 1)
+    230                              for (uint8 index = 0; index < STATISTICS_SAVED_CYCLES; index++)
+    231                              {
+    232                                  if (Statistics.Cycle[index].Compartment == compartment)
+    233                                  {
+    234                                      Cycles_Index[compartment] = index;
+    235                                      break;                      // Break out of the inner for('index') loop.
+    236                                  }
+    237                              }
+    238                          #else
+    239                              Cycles_Index[0] = 0;
+   \                     ??Statistics__Initialize_2: (+1)
+   \   00000030   0x0020             MOVS     R0,R4
+   \   00000032   0x7030             STRB     R0,[R6, #+0]
+    240                          #endif
+    241                      }
+    242                  }
+   \                     ??Statistics__Initialize_3: (+1)
+   \   00000034   0x2001             MOVS     R0,#+1
+   \                     ??Statistics__Initialize_0: (+1)
+   \   00000036   0x2800             CMP      R0,#+0
+   \   00000038   0xD0EC             BEQ      ??Statistics__Initialize_1
+    243              #endif
+    244          
+    245              MICRO_RESET_MODE_TYPE reset_mode = Micro__GetResetMode();
+   \   0000003A   0x.... 0x....      BL       Micro__GetResetMode
+   \   0000003E   0x0007             MOVS     R7,R0
+    246              if (reset_mode == MICRO_RESET_MODE_COLD)
+   \   00000040   0x....             LDR      R5,??DataTable8
+   \   00000042   0xD11A             BNE      ??Statistics__Initialize_4
+    247              {
+    248                  if (NVData__GetLastRestoreStatus()->Bit.Statistics_Data_Recovered == NVDATA_RESTORE_CORRUPTED)
+   \   00000044   0x.... 0x....      BL       NVData__GetLastRestoreStatus
+   \   00000048   0x7800             LDRB     R0,[R0, #+0]
+   \   0000004A   0x0880             LSRS     R0,R0,#+2
+   \   0000004C   0x0780             LSLS     R0,R0,#+30
+   \   0000004E   0xD10A             BNE      ??Statistics__Initialize_5
+    249                  {
+    250                      // Non-volatile memory was corrupted -- reset all statistics.
+    251                      memset(&Statistics, 0, sizeof(Statistics));
+   \   00000050   0x4622             MOV      R2,R4
+   \   00000052   0x....             LDR      R1,??DataTable8_1  ;; 0x302
+   \   00000054   0x0028             MOVS     R0,R5
+   \   00000056   0x.... 0x....      BL       __aeabi_memset4
+    252                      LOG_ADD_EXCEPTION(DATA_LOST_DUE_TO_CORRUPTION, 0);
+   \   0000005A   0x4623             MOV      R3,R4
+   \   0000005C   0x2201             MOVS     R2,#+1
+   \   0000005E   0x2107             MOVS     R1,#+7
+   \   00000060   0x2056             MOVS     R0,#+86
+   \   00000062   0x.... 0x....      BL       Log__AddMessage
+    253                  }
+    254                  Statistics_Milliseconds = (uint16)Millis__GetFreeRunningCounter();
+   \                     ??Statistics__Initialize_5: (+1)
+   \   00000066   0x.... 0x....      BL       Millis__GetFreeRunningCounter
+   \   0000006A   0x8070             STRH     R0,[R6, #+2]
+    255                  if (Statistics.Lifetime.Cold_Reset_Count < USHRT_MAX)
+   \   0000006C   0x88A8             LDRH     R0,[R5, #+4]
+   \   0000006E   0x....             LDR      R1,??DataTable10  ;; 0xffff
+   \   00000070   0x4288             CMP      R0,R1
+   \   00000072   0xD008             BEQ      ??Statistics__Initialize_6
+    256                  {
+    257                      Statistics.Lifetime.Cold_Reset_Count++;
+   \   00000074   0x1C40             ADDS     R0,R0,#+1
+   \   00000076   0x80A8             STRH     R0,[R5, #+4]
+   \   00000078   0xE005             B        ??Statistics__Initialize_6
+    258                  }
+    259              }
+    260              else
+    261              {
+    262                  if (Statistics.Lifetime.Warm_Reset_Count < USHRT_MAX)
+   \                     ??Statistics__Initialize_4: (+1)
+   \   0000007A   0x88E8             LDRH     R0,[R5, #+6]
+   \   0000007C   0x....             LDR      R1,??DataTable10  ;; 0xffff
+   \   0000007E   0x4288             CMP      R0,R1
+   \   00000080   0xD001             BEQ      ??Statistics__Initialize_6
+    263                  {
+    264                      Statistics.Lifetime.Warm_Reset_Count++;
+   \   00000082   0x1C40             ADDS     R0,R0,#+1
+   \   00000084   0x80E8             STRH     R0,[R5, #+6]
+    265                  }
+    266              }
+    267              Statistics_Seconds_Since_Reset = 0;
+   \                     ??Statistics__Initialize_6: (+1)
+   \   00000086   0x6074             STR      R4,[R6, #+4]
+    268          
+    269              // Count the cold/warm reset in any running cycle's data.
+    270              #if (STATISTICS_SAVED_CYCLES > 0)
+    271                  for (uint8 compartment = 0; compartment < APPLIANCE_MAX_COMPARTMENTS; compartment++)
+   \   00000088   0xE006             B        ??Statistics__Initialize_7
+    272                  {
+    273                      uint8 index = Cycles_Index[compartment];
+    274                      if (index < STATISTICS_SAVED_CYCLES)
+    275                      {
+    276                          if (reset_mode == MICRO_RESET_MODE_COLD)
+    277                          {
+    278                              if (Statistics.Cycle[index].Cold_Reset_Count < MAX_CYCLE_RESETS)
+    279                              {
+    280                                  Statistics.Cycle[index].Cold_Reset_Count++;
+    281                              }
+    282                          }
+    283                          else
+    284                          {
+    285                              if (Statistics.Cycle[index].Warm_Reset_Count < MAX_CYCLE_RESETS)
+   \                     ??Statistics__Initialize_8: (+1)
+   \   0000008A   0x000A             MOVS     R2,R1
+   \   0000008C   0x0912             LSRS     R2,R2,#+4
+   \   0000008E   0x2A0F             CMP      R2,#+15
+   \   00000090   0xDA01             BGE      ??Statistics__Initialize_9
+    286                              {
+    287                                  Statistics.Cycle[index].Warm_Reset_Count++;
+   \   00000092   0x3110             ADDS     R1,R1,#+16
+   \   00000094   0x7001             STRB     R1,[R0, #+0]
+    288                              }
+    289                          }
+   \                     ??Statistics__Initialize_9: (+1)
+   \   00000096   0x2401             MOVS     R4,#+1
+   \                     ??Statistics__Initialize_7: (+1)
+   \   00000098   0x2C00             CMP      R4,#+0
+   \   0000009A   0xD115             BNE      ??Statistics__Initialize_10
+   \   0000009C   0x7830             LDRB     R0,[R6, #+0]
+   \   0000009E   0x280A             CMP      R0,#+10
+   \   000000A0   0xDAF9             BGE      ??Statistics__Initialize_9
+   \   000000A2   0x2137             MOVS     R1,#+55
+   \   000000A4   0x4348             MULS     R0,R1,R0
+   \   000000A6   0x1828             ADDS     R0,R5,R0
+   \   000000A8   0x308F             ADDS     R0,R0,#+143
+   \   000000AA   0x7801             LDRB     R1,[R0, #+0]
+   \   000000AC   0x2F00             CMP      R7,#+0
+   \   000000AE   0xD1EC             BNE      ??Statistics__Initialize_8
+   \   000000B0   0x220F             MOVS     R2,#+15
+   \   000000B2   0x0013             MOVS     R3,R2
+   \   000000B4   0x400B             ANDS     R3,R3,R1
+   \   000000B6   0x2B0F             CMP      R3,#+15
+   \   000000B8   0xDAED             BGE      ??Statistics__Initialize_9
+   \   000000BA   0x23F0             MOVS     R3,#+240
+   \   000000BC   0x400B             ANDS     R3,R3,R1
+   \   000000BE   0x1C49             ADDS     R1,R1,#+1
+   \   000000C0   0x400A             ANDS     R2,R2,R1
+   \   000000C2   0x431A             ORRS     R2,R2,R3
+   \   000000C4   0x7002             STRB     R2,[R0, #+0]
+   \   000000C6   0xE7E6             B        ??Statistics__Initialize_9
+    290                      }
+    291                  }
+    292              #endif
+    293          }
+   \                     ??Statistics__Initialize_10: (+1)
+   \   000000C8   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+    294          
+    295          
+    296          //---------------------------------------------------------------------------------------------------------------------
+    297          /**
+    298           * Background function for the BlackBox module.
+    299           *      Lifetime data updates (once per second):
+    300           *          - Update the number of seconds that the board has ever been powered.
+    301           *          - Update the number of seconds that the board has been powered since reset.
+    302           *          - Update custom lifetime data (if appropriate).
+    303           */
+
+   \                                 In section .text, align 2, keep-with-next
+    304          void Statistics__Background(void)
+    305          {
+   \                     Statistics__Background: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    306              // Keep track of seconds that the board has been powered.
+    307              if ((uint16)(Millis__GetFreeRunningCounter() - Statistics_Milliseconds) >= 1000)
+   \   00000002   0x.... 0x....      BL       Millis__GetFreeRunningCounter
+   \   00000006   0x....             LDR      R1,??DataTable7
+   \   00000008   0x884A             LDRH     R2,[R1, #+2]
+   \   0000000A   0x23FA             MOVS     R3,#+250
+   \   0000000C   0x009B             LSLS     R3,R3,#+2        ;; #+1000
+   \   0000000E   0x1A80             SUBS     R0,R0,R2
+   \   00000010   0xB280             UXTH     R0,R0
+   \   00000012   0x4298             CMP      R0,R3
+   \   00000014   0xDB0F             BLT      ??Statistics__Background_0
+    308              {
+    309                  Statistics_Milliseconds += 1000;
+   \   00000016   0x18D0             ADDS     R0,R2,R3
+   \   00000018   0x8048             STRH     R0,[R1, #+2]
+    310                  if (Statistics.Lifetime.Seconds < ULONG_MAX)
+   \   0000001A   0x....             LDR      R0,??DataTable8
+   \   0000001C   0x6802             LDR      R2,[R0, #+0]
+   \   0000001E   0x2300             MOVS     R3,#+0
+   \   00000020   0x43DB             MVNS     R3,R3            ;; #-1
+   \   00000022   0x429A             CMP      R2,R3
+   \   00000024   0xD001             BEQ      ??Statistics__Background_1
+    311                  {
+    312                      Statistics.Lifetime.Seconds++;
+   \   00000026   0x1C52             ADDS     R2,R2,#+1
+   \   00000028   0x6002             STR      R2,[R0, #+0]
+    313                  }
+    314                  Statistics_Seconds_Since_Reset++;
+   \                     ??Statistics__Background_1: (+1)
+   \   0000002A   0x684A             LDR      R2,[R1, #+4]
+   \   0000002C   0x1C52             ADDS     R2,R2,#+1
+   \   0000002E   0x604A             STR      R2,[R1, #+4]
+    315          
+    316                  #if (STATISTICS_CUSTOM_LIFETIME_ENABLE == ENABLED)
+    317                  	UPDATE_CUSTOM_LIFETIME(&Statistics.Lifetime.Platform);
+   \   00000030   0x302E             ADDS     R0,R0,#+46
+   \   00000032   0x.... 0x....      BL       StatisticsDish__UpdateLifetimeData
+    318                  #endif
+    319              }
+    320          }
+   \                     ??Statistics__Background_0: (+1)
+   \   00000036   0xBD01             POP      {R0,PC}          ;; return
+    321          
+    322          
+    323          //---------------------------------------------------------------------------------------------------------------------
+    324          /**
+    325           * Apply the age cutoff to the faults.
+    326           * @return The number of faults that should be displayed.
+    327           */
+
+   \                                 In section .text, align 2, keep-with-next
+    328          uint8 Statistics__ApplyFaultAgeCutoff(void)
+    329          {
+   \                     Statistics__ApplyFaultAgeCutoff: (+1)
+   \   00000000   0xB4F0             PUSH     {R4-R7}
+    330              uint8 fault_count = 0;
+   \   00000002   0x2300             MOVS     R3,#+0
+   \   00000004   0x0018             MOVS     R0,R3
+    331          
+    332              // Determine the age cutoff for faults that are too old to display.
+    333              uint16 age_cutoff;
+    334              if (STATISTICS_FAULT_AGE_BY_CYCLES == ENABLED)
+    335              {
+    336                  age_cutoff = Statistics.Lifetime.Cycles_Completed;
+   \   00000006   0x....             LDR      R1,??DataTable8
+   \   00000008   0x890C             LDRH     R4,[R1, #+8]
+    337              }
+    338              else
+    339              {
+    340                  uint32 age = Statistics.Lifetime.Seconds / SECONDS_IN_ONE_TENTH_DAY;
+    341                  age_cutoff = ((age < USHRT_MAX) ? age : USHRT_MAX);
+    342              }
+    343              if (age_cutoff < STATISTICS_FAULT_MAX_AGE_DIFF - 1)
+   \   0000000A   0x2C09             CMP      R4,#+9
+   \   0000000C   0xDA01             BGE      ??Statistics__ApplyFaultAgeCutoff_0
+    344              {
+    345                  age_cutoff = 0;
+   \   0000000E   0x001C             MOVS     R4,R3
+   \   00000010   0xE001             B        ??Statistics__ApplyFaultAgeCutoff_1
+    346              }
+    347              else
+    348              {
+    349                  age_cutoff -= STATISTICS_FAULT_MAX_AGE_DIFF - 1;
+   \                     ??Statistics__ApplyFaultAgeCutoff_0: (+1)
+   \   00000012   0x3C09             SUBS     R4,R4,#+9
+   \   00000014   0xB2A4             UXTH     R4,R4
+    350              }
+    351          
+    352              // Apply the age cutoff.
+    353              BOOL_TYPE hide_remaining_faults = FALSE;
+   \                     ??Statistics__ApplyFaultAgeCutoff_1: (+1)
+   \   00000016   0x001A             MOVS     R2,R3
+    354              for (uint8 fault_index = 0; fault_index < STATISTICS_SAVED_FAULTS; fault_index++)
+   \   00000018   0xE001             B        ??Statistics__ApplyFaultAgeCutoff_2
+    355              {
+    356                  STATISTICS_FAULT_TYPE* fault = &Statistics.Fault[fault_index];
+    357                  if ((hide_remaining_faults == TRUE) ||
+    358                      (fault->Fault_Id == 0) ||
+    359                      (fault->Hide_From_Hmi == TRUE) ||
+    360                      (fault->Age < age_cutoff))
+    361                  {
+    362                      // Hide the remaining faults.
+    363                      fault->Hide_From_Hmi = TRUE;
+    364                      hide_remaining_faults = TRUE;
+    365                  }
+    366                  else
+    367                  {
+    368                      // Count the fault.
+    369                      fault_count++;
+   \                     ??Statistics__ApplyFaultAgeCutoff_3: (+1)
+   \   0000001A   0x1C40             ADDS     R0,R0,#+1
+    370                  }
+   \                     ??Statistics__ApplyFaultAgeCutoff_4: (+1)
+   \   0000001C   0x1C5B             ADDS     R3,R3,#+1
+   \                     ??Statistics__ApplyFaultAgeCutoff_2: (+1)
+   \   0000001E   0xB2DB             UXTB     R3,R3
+   \   00000020   0x001D             MOVS     R5,R3
+   \   00000022   0x2D05             CMP      R5,#+5
+   \   00000024   0xDA25             BGE      ??Statistics__ApplyFaultAgeCutoff_5
+   \   00000026   0x006E             LSLS     R6,R5,#+1
+   \   00000028   0x1975             ADDS     R5,R6,R5
+   \   0000002A   0x006D             LSLS     R5,R5,#+1
+   \   0000002C   0x194D             ADDS     R5,R1,R5
+   \   0000002E   0x....             LDR      R6,??DataTable15  ;; 0x2ae
+   \   00000030   0x19AD             ADDS     R5,R5,R6
+   \   00000032   0x2A01             CMP      R2,#+1
+   \   00000034   0xD010             BEQ      ??Statistics__ApplyFaultAgeCutoff_6
+   \   00000036   0x792E             LDRB     R6,[R5, #+4]
+   \   00000038   0x2E00             CMP      R6,#+0
+   \   0000003A   0xD00D             BEQ      ??Statistics__ApplyFaultAgeCutoff_6
+   \   0000003C   0x782E             LDRB     R6,[R5, #+0]
+   \   0000003E   0x786F             LDRB     R7,[R5, #+1]
+   \   00000040   0x063F             LSLS     R7,R7,#+24
+   \   00000042   0x0C3F             LSRS     R7,R7,#+16
+   \   00000044   0x433E             ORRS     R6,R6,R7
+   \   00000046   0x0BF6             LSRS     R6,R6,#+15
+   \   00000048   0xD106             BNE      ??Statistics__ApplyFaultAgeCutoff_6
+   \   0000004A   0x78AE             LDRB     R6,[R5, #+2]
+   \   0000004C   0x78EF             LDRB     R7,[R5, #+3]
+   \   0000004E   0x063F             LSLS     R7,R7,#+24
+   \   00000050   0x0C3F             LSRS     R7,R7,#+16
+   \   00000052   0x433E             ORRS     R6,R6,R7
+   \   00000054   0x42A6             CMP      R6,R4
+   \   00000056   0xDAE0             BGE      ??Statistics__ApplyFaultAgeCutoff_3
+   \                     ??Statistics__ApplyFaultAgeCutoff_6: (+1)
+   \   00000058   0x782A             LDRB     R2,[R5, #+0]
+   \   0000005A   0x786E             LDRB     R6,[R5, #+1]
+   \   0000005C   0x0636             LSLS     R6,R6,#+24
+   \   0000005E   0x0C36             LSRS     R6,R6,#+16
+   \   00000060   0x4332             ORRS     R2,R2,R6
+   \   00000062   0x2680             MOVS     R6,#+128
+   \   00000064   0x0236             LSLS     R6,R6,#+8        ;; #+32768
+   \   00000066   0x4316             ORRS     R6,R6,R2
+   \   00000068   0x702E             STRB     R6,[R5, #+0]
+   \   0000006A   0x0A36             LSRS     R6,R6,#+8
+   \   0000006C   0x706E             STRB     R6,[R5, #+1]
+   \   0000006E   0x2201             MOVS     R2,#+1
+   \   00000070   0xE7D4             B        ??Statistics__ApplyFaultAgeCutoff_4
+    371              }
+    372          
+    373              return fault_count;
+   \                     ??Statistics__ApplyFaultAgeCutoff_5: (+1)
+   \   00000072   0xB2C0             UXTB     R0,R0
+   \   00000074   0xBCF0             POP      {R4-R7}
+   \   00000076   0x4770             BX       LR               ;; return
+    374          }
+    375          
+    376          
+    377          //---------------------------------------------------------------------------------------------------------------------
+    378          /**
+    379           * @brief   Mark all faults as hidden from the HMI.
+    380           */
+
+   \                                 In section .text, align 2, keep-with-next
+    381          void Statistics__ClearFaultData(void)
+    382          {
+    383              for (uint8 fault_index = 0; fault_index < STATISTICS_SAVED_FAULTS; fault_index++)
+   \                     Statistics__ClearFaultData: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0xE00C             B        ??Statistics__ClearFaultData_0
+    384              {
+    385                  Statistics.Fault[fault_index].Hide_From_Hmi = TRUE;
+   \                     ??Statistics__ClearFaultData_1: (+1)
+   \   00000004   0x....             LDR      R1,??DataTable8
+   \   00000006   0x0042             LSLS     R2,R0,#+1
+   \   00000008   0x1812             ADDS     R2,R2,R0
+   \   0000000A   0x0052             LSLS     R2,R2,#+1
+   \   0000000C   0x1889             ADDS     R1,R1,R2
+   \   0000000E   0x....             LDR      R2,??DataTable15  ;; 0x2ae
+   \   00000010   0x1889             ADDS     R1,R1,R2
+   \   00000012   0x880A             LDRH     R2,[R1, #+0]
+   \   00000014   0x2380             MOVS     R3,#+128
+   \   00000016   0x021B             LSLS     R3,R3,#+8        ;; #+32768
+   \   00000018   0x4313             ORRS     R3,R3,R2
+   \   0000001A   0x800B             STRH     R3,[R1, #+0]
+    386              }
+   \   0000001C   0x1C40             ADDS     R0,R0,#+1
+   \                     ??Statistics__ClearFaultData_0: (+1)
+   \   0000001E   0x2805             CMP      R0,#+5
+   \   00000020   0xDBF0             BLT      ??Statistics__ClearFaultData_1
+    387          }
+   \   00000022   0x4770             BX       LR               ;; return
+    388          
+    389          
+    390          //---------------------------------------------------------------------------------------------------------------------
+    391          /**
+    392           * Record data related to the start of a new cycle.
+    393           *      Lifetime data updates:
+    394           *          - Increment the number of times that the specific cycle has started (if appropriate).
+    395           *      Cycle data updates:
+    396           *          - Create a new Cycle slot and fill with zeroes.
+    397           *          - Set the Cycle to the selected cycle.
+    398           *          - Set the estimated time (if appropriate).
+    399           *          - Set the compartment (if there is more than one compartment).
+    400           *          - Save the specified user-selected regulations (if appropriate).
+    401           *          - Update custom cycle data (if appropriate).
+    402           *          - Update custom last cycle data (if appropriate).
+    403           * @param compartment = The compartment in which the cycle started.
+    404           * @param cycle_id = The selector of the cycle that was started.
+    405           */
+
+   \                                 In section .text, align 4, keep-with-next
+    406          void Statistics__CycleStarted(uint8 compartment, uint8 cycle_id)
+    407          {
+   \                     Statistics__CycleStarted: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x000C             MOVS     R4,R1
+    408          	if (compartment < APPLIANCE_MAX_COMPARTMENTS)
+   \   00000004   0x2800             CMP      R0,#+0
+   \   00000006   0xD13B             BNE      ??Statistics__CycleStarted_0
+    409          	{
+    410                  #if (STATISTICS_SAVED_CYCLES > 0)
+    411          	        if (Statistics.Lifetime.Cycles_Started < USHRT_MAX)
+   \   00000008   0x....             LDR      R7,??DataTable8
+   \   0000000A   0x8979             LDRH     R1,[R7, #+10]
+   \   0000000C   0x....             LDR      R0,??DataTable10  ;; 0xffff
+   \   0000000E   0x4281             CMP      R1,R0
+   \   00000010   0xD001             BEQ      ??Statistics__CycleStarted_1
+    412          	        {
+    413          	            Statistics.Lifetime.Cycles_Started++;
+   \   00000012   0x1C49             ADDS     R1,R1,#+1
+   \   00000014   0x8179             STRH     R1,[R7, #+10]
+    414          	        }
+    415                      #if (STATISTICS_NUMBER_OF_LIFETIME_CYCLES > 0)
+    416                          // Increment the cycle start counter for this cycle.
+    417                          if ((0 < cycle_id) && (cycle_id <= STATISTICS_NUMBER_OF_LIFETIME_CYCLES))
+   \                     ??Statistics__CycleStarted_1: (+1)
+   \   00000016   0x0021             MOVS     R1,R4
+   \   00000018   0xD008             BEQ      ??Statistics__CycleStarted_2
+   \   0000001A   0x2910             CMP      R1,#+16
+   \   0000001C   0xDA06             BGE      ??Statistics__CycleStarted_2
+    418                          {
+    419                              if (Statistics.Lifetime.Cycle_Started_Count[cycle_id - 1] < USHRT_MAX)
+   \   0000001E   0x0049             LSLS     R1,R1,#+1
+   \   00000020   0x1879             ADDS     R1,R7,R1
+   \   00000022   0x89CA             LDRH     R2,[R1, #+14]
+   \   00000024   0x4282             CMP      R2,R0
+   \   00000026   0xD001             BEQ      ??Statistics__CycleStarted_2
+    420                              {
+    421                                  Statistics.Lifetime.Cycle_Started_Count[cycle_id - 1]++;
+   \   00000028   0x1C52             ADDS     R2,R2,#+1
+   \   0000002A   0x81CA             STRH     R2,[R1, #+14]
+    422                              }
+    423                          }
+    424                      #endif
+    425          
+    426                      // Shift the saved cycles up one -- drop the oldest cycle statistics.
+    427                      ShiftArray(Statistics.Cycle, NULL, sizeof(STATISTICS_CYCLE_TYPE), STATISTICS_SAVED_CYCLES - 1);
+   \                     ??Statistics__CycleStarted_2: (+1)
+   \   0000002C   0x2309             MOVS     R3,#+9
+   \   0000002E   0x2237             MOVS     R2,#+55
+   \   00000030   0x2100             MOVS     R1,#+0
+   \   00000032   0x0038             MOVS     R0,R7
+   \   00000034   0x3088             ADDS     R0,R0,#+136
+   \   00000036   0x.... 0x....      BL       ShiftArray
+    428          
+    429                      // Shift the saved last cycles up one -- drop the oldest last cycle statistics.
+    430                      #if (STATISTICS_SAVED_LAST_CYCLES > 0)
+    431                          ShiftArray(Statistics.Last_Cycle, NULL, sizeof(PLATFORM_LAST_CYCLE_TYPE), STATISTICS_SAVED_LAST_CYCLES - 1);
+    432                      #endif
+    433          
+    434                      // Cycle indices must be incremented for each compartment since all the cycle statistics are shifting up.
+    435                      for (uint8 compartment = 0; compartment < APPLIANCE_MAX_COMPARTMENTS; compartment++)
+   \   0000003A   0x2500             MOVS     R5,#+0
+   \   0000003C   0x0028             MOVS     R0,R5
+   \   0000003E   0xE000             B        ??Statistics__CycleStarted_3
+   \                     ??Statistics__CycleStarted_4: (+1)
+   \   00000040   0x2001             MOVS     R0,#+1
+   \                     ??Statistics__CycleStarted_3: (+1)
+   \   00000042   0x2800             CMP      R0,#+0
+   \   00000044   0xD0FC             BEQ      ??Statistics__CycleStarted_4
+    436                      {
+    437                          if (Cycles_Index[compartment] < STATISTICS_SAVED_CYCLES)
+    438                          {
+    439                              Cycles_Index[compartment]++;
+    440                          }
+    441                      }
+    442          
+    443                      Cycles_Index[compartment] = 0;
+   \   00000046   0x0028             MOVS     R0,R5
+   \   00000048   0x....             LDR      R1,??DataTable7
+   \   0000004A   0x7008             STRB     R0,[R1, #+0]
+    444                      Statistics.Cycle[0].Cps.Cycle = cycle_id;
+   \   0000004C   0x003E             MOVS     R6,R7
+   \   0000004E   0x368C             ADDS     R6,R6,#+140
+   \   00000050   0x7034             STRB     R4,[R6, #+0]
+    445                      #if (TIME_ESTIMATION_FEATURE == ENABLED)
+    446                          Statistics.Cycle[0].Estimated_Seconds = Estimator__GetRemainingSeconds(compartment);
+   \   00000052   0x.... 0x....      BL       Estimator__GetRemainingSeconds
+   \   00000056   0x80B0             STRH     R0,[R6, #+4]
+    447                      #endif
+    448                      #if (APPLIANCE_MAX_COMPARTMENTS > 1)
+    449                          Statistics.Cycle[0].Compartment = compartment;
+    450                      #endif
+    451                      #if (STATISTICS_SAVED_CYCLE_REGULATIONS > 0)
+    452                          for (uint8 index = 0; index < STATISTICS_SAVED_CYCLE_REGULATIONS; index++)
+   \   00000058   0xE00C             B        ??Statistics__CycleStarted_5
+    453                          {
+    454                              uint8 pos = Regulations__GetPositionByFunctionID(STATISTICS_CYCLE_REGULATION_FUNCTION_IDS[index], compartment);
+   \                     ??Statistics__CycleStarted_6: (+1)
+   \   0000005A   0x2100             MOVS     R1,#+0
+   \   0000005C   0x....             ADR.N    R0,STATISTICS_CYCLE_REGULATION_FUNCTION_IDS
+   \   0000005E   0x5D40             LDRB     R0,[R0, R5]
+   \   00000060   0x.... 0x....      BL       Regulations__GetPositionByFunctionID
+    455                              if (pos != REGULATION_INVALID)
+   \   00000064   0x28FF             CMP      R0,#+255
+   \   00000066   0xD004             BEQ      ??Statistics__CycleStarted_7
+    456                              {
+    457                                  Statistics.Cycle[0].Regulations[index] = Regulations__GetIndexValueByPosition(pos);
+   \   00000068   0x.... 0x....      BL       Regulations__GetIndexValueByPosition
+   \   0000006C   0x1979             ADDS     R1,R7,R5
+   \   0000006E   0x2292             MOVS     R2,#+146
+   \   00000070   0x5488             STRB     R0,[R1, R2]
+    458                              }
+    459                          }
+   \                     ??Statistics__CycleStarted_7: (+1)
+   \   00000072   0x1C6D             ADDS     R5,R5,#+1
+   \                     ??Statistics__CycleStarted_5: (+1)
+   \   00000074   0x2D1B             CMP      R5,#+27
+   \   00000076   0xDBF0             BLT      ??Statistics__CycleStarted_6
+    460                      #endif
+    461          
+    462                      // Call category-specific function to update cycle data at the start of the cycle.
+    463                      UpdateCustomCycleData(0, STATS_CYCLE_STARTED);
+   \   00000078   0x2101             MOVS     R1,#+1
+   \   0000007A   0x2000             MOVS     R0,#+0
+   \   0000007C   0x.... 0x....      BL       UpdateCustomCycleData
+    464                  #endif      // #if (STATISTICS_SAVED_CYCLES > 0)
+    465          	}
+    466          }
+   \                     ??Statistics__CycleStarted_0: (+1)
+   \   00000080   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+    467          
+    468          
+    469          //---------------------------------------------------------------------------------------------------------------------
+    470          /**
+    471           * Record data related to the end of a new cycle.
+    472           *      Lifetime data updates:
+    473           *          - Increment the number of cycles completed (if appropriate).
+    474           *          - Update the time spent running cycles.
+    475           *      Cycle data updates:
+    476           *          - Update the time spent in the cycle.
+    477           *          - Update the Cycle, Phase, and Statement where the cycle ended.
+    478           *          - Mark the cycle as completed (if appropriate).
+    479           *          - Update custom cycle data (if appropriate).
+    480           *          - Update custom last cycle data (if appropriate).
+    481           *
+    482           * @param cycle_completed_normally = TRUE if the cycle completed normally. FALSE if the cycle was cancelled.
+    483           * @param compartment = The compartment in which the cycle ended.
+    484           * @param cps = Cycle, Phase, and Statement where the cycle execution ended.
+    485           * @param cycle_seconds = Number of seconds that the cycle was running.
+    486           */
+
+   \                                 In section .text, align 2, keep-with-next
+    487          void Statistics__CycleStopped(BOOL_TYPE cycle_completed_normally, uint8 compartment, CYCLE_PHASE_STATEMENT_TYPE cps, uint16 cycle_seconds)
+    488          {
+   \                     Statistics__CycleStopped: (+1)
+   \   00000000   0xB5F4             PUSH     {R2,R4-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    489              if (cycle_completed_normally == TRUE)
+   \   00000004   0x0027             MOVS     R7,R4
+   \   00000006   0x2F01             CMP      R7,#+1
+   \   00000008   0xD106             BNE      ??Statistics__CycleStopped_0
+    490              {
+    491                  if (Statistics.Lifetime.Cycles_Completed < USHRT_MAX)
+   \   0000000A   0x....             LDR      R0,??DataTable8
+   \   0000000C   0x8902             LDRH     R2,[R0, #+8]
+   \   0000000E   0x....             LDR      R5,??DataTable10  ;; 0xffff
+   \   00000010   0x42AA             CMP      R2,R5
+   \   00000012   0xD001             BEQ      ??Statistics__CycleStopped_0
+    492                  {
+    493                      Statistics.Lifetime.Cycles_Completed++;
+   \   00000014   0x1C52             ADDS     R2,R2,#+1
+   \   00000016   0x8102             STRH     R2,[R0, #+8]
+    494                  }
+    495              }
+    496              #if (STATISTICS_SAVED_CYCLES > 0)
+    497                  if (compartment < APPLIANCE_MAX_COMPARTMENTS)
+   \                     ??Statistics__CycleStopped_0: (+1)
+   \   00000018   0x2900             CMP      R1,#+0
+   \   0000001A   0xD134             BNE      ??Statistics__CycleStopped_1
+   \   0000001C   0x....             LDR      R0,??DataTable18
+   \   0000001E   0x7806             LDRB     R6,[R0, #+0]
+    498                  {
+    499                      uint8 index = Cycles_Index[compartment];
+    500                      if (index < STATISTICS_SAVED_CYCLES)
+   \   00000020   0x0031             MOVS     R1,R6
+   \   00000022   0x290A             CMP      R1,#+10
+   \   00000024   0xDA2C             BGE      ??Statistics__CycleStopped_2
+    501                      {
+    502                          // Update the lifetime statistics.
+    503                          uint32 seconds = Statistics.Lifetime.Seconds_Running_Cycles + cycle_seconds;
+   \   00000026   0x....             LDR      R0,??DataTable8
+   \   00000028   0x68C2             LDR      R2,[R0, #+12]
+   \   0000002A   0xB29B             UXTH     R3,R3
+   \   0000002C   0x18D5             ADDS     R5,R2,R3
+    504                          Statistics.Lifetime.Seconds_Running_Cycles = (seconds >= Statistics.Lifetime.Seconds_Running_Cycles) ? seconds : ULONG_MAX;
+   \   0000002E   0x4295             CMP      R5,R2
+   \   00000030   0xD201             BCS      ??Statistics__CycleStopped_3
+   \   00000032   0x2500             MOVS     R5,#+0
+   \   00000034   0x43ED             MVNS     R5,R5            ;; #-1
+   \                     ??Statistics__CycleStopped_3: (+1)
+   \   00000036   0x60C5             STR      R5,[R0, #+12]
+    505          
+    506                          // Update the running cycle statistics.
+    507                          STATISTICS_CYCLE_TYPE* cycle = &Statistics.Cycle[index];
+   \   00000038   0x2237             MOVS     R2,#+55
+   \   0000003A   0x4351             MULS     R1,R2,R1
+   \   0000003C   0x1840             ADDS     R0,R0,R1
+   \   0000003E   0x0005             MOVS     R5,R0
+   \   00000040   0x3588             ADDS     R5,R5,#+136
+    508                          cycle->Run_Seconds = cycle_seconds;
+   \   00000042   0x702B             STRB     R3,[R5, #+0]
+   \   00000044   0x0A1B             LSRS     R3,R3,#+8
+   \   00000046   0x706B             STRB     R3,[R5, #+1]
+    509                          cycle->Cps = cps;
+   \   00000048   0x1D28             ADDS     R0,R5,#+4
+   \   0000004A   0x4669             MOV      R1,SP
+   \   0000004C   0x2203             MOVS     R2,#+3
+   \   0000004E   0x.... 0x....      BL       __aeabi_memcpy
+    510                          cycle->Cycle_Completed = cycle_completed_normally;
+   \   00000052   0x78A8             LDRB     R0,[R5, #+2]
+   \   00000054   0x78E9             LDRB     R1,[R5, #+3]
+   \   00000056   0x0609             LSLS     R1,R1,#+24
+   \   00000058   0x0C09             LSRS     R1,R1,#+16
+   \   0000005A   0x4308             ORRS     R0,R0,R1
+   \   0000005C   0x0440             LSLS     R0,R0,#+17
+   \   0000005E   0x0C40             LSRS     R0,R0,#+17
+   \   00000060   0x03E1             LSLS     R1,R4,#+15
+   \   00000062   0x4301             ORRS     R1,R1,R0
+   \   00000064   0x70A9             STRB     R1,[R5, #+2]
+   \   00000066   0x0A09             LSRS     R1,R1,#+8
+   \   00000068   0x70E9             STRB     R1,[R5, #+3]
+    511          
+    512                          // Update custom cycle statistics.
+    513                          if (cycle_completed_normally == TRUE)
+   \   0000006A   0x2F01             CMP      R7,#+1
+   \   0000006C   0xD104             BNE      ??Statistics__CycleStopped_4
+    514                          {
+    515                              UpdateCustomCycleData(index, STATS_CYCLE_ENDED);
+   \   0000006E   0x2104             MOVS     R1,#+4
+   \   00000070   0x0030             MOVS     R0,R6
+   \   00000072   0x.... 0x....      BL       UpdateCustomCycleData
+   \   00000076   0xE003             B        ??Statistics__CycleStopped_2
+    516                          }
+    517                          else
+    518                          {
+    519                              UpdateCustomCycleData(index, STATS_CYCLE_CANCELLED);
+   \                     ??Statistics__CycleStopped_4: (+1)
+   \   00000078   0x2103             MOVS     R1,#+3
+   \   0000007A   0x0030             MOVS     R0,R6
+   \   0000007C   0x.... 0x....      BL       UpdateCustomCycleData
+    520                          }
+    521                      }
+    522          
+    523                      // Remember that the cycle has completed.
+    524                      Cycles_Index[compartment] = STATISTICS_SAVED_CYCLES;
+   \                     ??Statistics__CycleStopped_2: (+1)
+   \   00000080   0x200A             MOVS     R0,#+10
+   \   00000082   0x....             LDR      R1,??DataTable18
+   \   00000084   0x7008             STRB     R0,[R1, #+0]
+    525                  }
+    526              #endif
+    527          }
+   \                     ??Statistics__CycleStopped_1: (+1)
+   \   00000086   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+    528          
+    529          
+    530          #if (STATISTICS_SAVED_CYCLES > 0)
+    531          //---------------------------------------------------------------------------------------------------------------------
+    532          /**
+    533           * Get the data for one of the cycle entries.
+    534           *
+    535           * @param index = Which cycle data slot to get. (0 to STATISTICS_SAVED_CYCLES-1)
+    536           *              0 = Most recently started cycle's data
+    537           *              1 = Previously started cycle's data
+    538           *              etc.
+    539           *
+    540           * @return A pointer to the PLATFORM_CYCLE_TYPE with the cycle data.
+    541           */
+
+   \                                 In section .text, align 2, keep-with-next
+    542          STATISTICS_CYCLE_TYPE* Statistics__GetCycleData(uint8 index)
+    543          {
+   \                     Statistics__GetCycleData: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0005             MOVS     R5,R0
+    544          	STATISTICS_CYCLE_TYPE *cycle = NULL;
+   \   00000004   0x2400             MOVS     R4,#+0
+    545              if (index < STATISTICS_SAVED_CYCLES)
+   \   00000006   0x280A             CMP      R0,#+10
+   \   00000008   0xDA1E             BGE      ??Statistics__GetCycleData_0
+    546              {
+    547                  cycle = &Statistics.Cycle[index];
+   \   0000000A   0x....             LDR      R1,??DataTable18_1
+   \   0000000C   0x2237             MOVS     R2,#+55
+   \   0000000E   0x4350             MULS     R0,R2,R0
+   \   00000010   0x1808             ADDS     R0,R1,R0
+   \   00000012   0x0004             MOVS     R4,R0
+   \   00000014   0x3488             ADDS     R4,R4,#+136
+    548                  #if (APPLIANCE_MAX_COMPARTMENTS > 1)
+    549                      uint8 compartment = cycle->Compartment;
+    550                  #else
+    551                      uint8 compartment = 0;
+    552                  #endif
+    553                  if (Cycles_Index[compartment] == index)
+   \   00000016   0x....             LDR      R0,??DataTable18
+   \   00000018   0x7800             LDRB     R0,[R0, #+0]
+   \   0000001A   0x0029             MOVS     R1,R5
+   \   0000001C   0x4288             CMP      R0,R1
+   \   0000001E   0xD119             BNE      ??Statistics__GetCycleData_1
+    554                  {
+    555                      cycle->Run_Seconds = Supervisor__GetCycleTime(compartment);
+   \   00000020   0x2000             MOVS     R0,#+0
+   \   00000022   0x.... 0x....      BL       Supervisor__GetCycleTime
+   \   00000026   0x7020             STRB     R0,[R4, #+0]
+   \   00000028   0x0A00             LSRS     R0,R0,#+8
+   \   0000002A   0x7060             STRB     R0,[R4, #+1]
+    556                      cycle->Cps = Interpreter__GetCurrentStatement(compartment);
+   \   0000002C   0x2000             MOVS     R0,#+0
+   \   0000002E   0x.... 0x....      BL       Interpreter__GetCurrentStatement
+   \   00000032   0x9000             STR      R0,[SP, #+0]
+   \   00000034   0x1D20             ADDS     R0,R4,#+4
+   \   00000036   0x4669             MOV      R1,SP
+   \   00000038   0x2203             MOVS     R2,#+3
+   \   0000003A   0x.... 0x....      BL       __aeabi_memcpy
+    557                      UpdateCustomCycleData(index, STATS_CYCLE_ACTIVE);
+   \   0000003E   0x2102             MOVS     R1,#+2
+   \   00000040   0x0028             MOVS     R0,R5
+   \   00000042   0x.... 0x....      BL       UpdateCustomCycleData
+   \   00000046   0xE005             B        ??Statistics__GetCycleData_1
+    558                  }
+    559              }
+    560          	else
+    561          	{
+    562          		LOG_ADD_EXCEPTION(REQUESTED_CYCLE_OUT_OF_RANGE, index);
+   \                     ??Statistics__GetCycleData_0: (+1)
+   \   00000048   0x002B             MOVS     R3,R5
+   \   0000004A   0x2201             MOVS     R2,#+1
+   \   0000004C   0x4611             MOV      R1,R2
+   \   0000004E   0x2056             MOVS     R0,#+86
+   \   00000050   0x.... 0x....      BL       Log__AddMessage
+    563          	}
+    564              return(cycle);
+   \                     ??Statistics__GetCycleData_1: (+1)
+   \   00000054   0x0020             MOVS     R0,R4
+   \   00000056   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    565          }
+    566          #endif
+    567          
+    568          
+    569          //---------------------------------------------------------------------------------------------------------------------
+    570          /**
+    571           * Get the number of recorded faults in the FAULT data.
+    572           * @return The number of recorded faults in the FAULT data.
+    573           */
+
+   \                                 In section .text, align 2, keep-with-next
+    574          uint8 Statistics__GetFaultCount(void)
+    575          {
+    576              uint8 count;
+    577              for (count = 0; count < STATISTICS_SAVED_FAULTS; count++)
+   \                     Statistics__GetFaultCount: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0xE001             B        ??Statistics__GetFaultCount_0
+   \                     ??Statistics__GetFaultCount_1: (+1)
+   \   00000004   0x1C40             ADDS     R0,R0,#+1
+   \   00000006   0xB2C0             UXTB     R0,R0
+   \                     ??Statistics__GetFaultCount_0: (+1)
+   \   00000008   0x2805             CMP      R0,#+5
+   \   0000000A   0xDA0C             BGE      ??Statistics__GetFaultCount_2
+    578              {
+    579                  if ((Statistics.Fault[count].Fault_Id == 0) ||
+    580                      (Statistics.Fault[count].Hide_From_Hmi == TRUE))
+   \   0000000C   0x....             LDR      R1,??DataTable18_1
+   \   0000000E   0x0042             LSLS     R2,R0,#+1
+   \   00000010   0x1812             ADDS     R2,R2,R0
+   \   00000012   0x0052             LSLS     R2,R2,#+1
+   \   00000014   0x1889             ADDS     R1,R1,R2
+   \   00000016   0x....             LDR      R2,??DataTable15  ;; 0x2ae
+   \   00000018   0x1889             ADDS     R1,R1,R2
+   \   0000001A   0x790A             LDRB     R2,[R1, #+4]
+   \   0000001C   0x2A00             CMP      R2,#+0
+   \   0000001E   0xD002             BEQ      ??Statistics__GetFaultCount_2
+   \   00000020   0x8809             LDRH     R1,[R1, #+0]
+   \   00000022   0x0BC9             LSRS     R1,R1,#+15
+   \   00000024   0xD0EE             BEQ      ??Statistics__GetFaultCount_1
+    581                  {
+    582                      break;                                  // Break out of the for() loop.
+    583                  }
+    584              }
+    585              return count;
+   \                     ??Statistics__GetFaultCount_2: (+1)
+   \   00000026   0x4770             BX       LR               ;; return
+    586          }
+    587          
+    588          
+    589          //---------------------------------------------------------------------------------------------------------------------
+    590          /**
+    591           * Get the data for one of the fault entries.
+    592           *
+    593           * @param index = Which fault data slot to get. (0 to STATISTICS_SAVED_FAULTS-1)
+    594           *
+    595           * @return A pointer to the STATISTICS_FAULT_TYPE with the fault data.
+    596           */
+
+   \                                 In section .text, align 2, keep-with-next
+    597          STATISTICS_FAULT_TYPE* Statistics__GetFaultData(uint8 index)
+    598          {
+   \                     Statistics__GetFaultData: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    599              if (index < STATISTICS_SAVED_FAULTS)
+   \   00000002   0x2805             CMP      R0,#+5
+   \   00000004   0xDA07             BGE      ??Statistics__GetFaultData_0
+    600              {
+    601                  return (&Statistics.Fault[index]);
+   \   00000006   0x....             LDR      R1,??DataTable18_1
+   \   00000008   0x0042             LSLS     R2,R0,#+1
+   \   0000000A   0x1810             ADDS     R0,R2,R0
+   \   0000000C   0x0040             LSLS     R0,R0,#+1
+   \   0000000E   0x1808             ADDS     R0,R1,R0
+   \   00000010   0x....             LDR      R1,??DataTable15  ;; 0x2ae
+   \   00000012   0x1840             ADDS     R0,R0,R1
+   \   00000014   0xBD02             POP      {R1,PC}
+    602              }
+    603              else
+    604              {
+    605                  LOG_ADD_EXCEPTION(REQUESTED_FAULT_OUT_OF_RANGE, index);
+   \                     ??Statistics__GetFaultData_0: (+1)
+   \   00000016   0x0003             MOVS     R3,R0
+   \   00000018   0x2201             MOVS     R2,#+1
+   \   0000001A   0x2102             MOVS     R1,#+2
+   \   0000001C   0x2056             MOVS     R0,#+86
+   \   0000001E   0x.... 0x....      BL       Log__AddMessage
+    606                  return (NULL);
+   \   00000022   0x2000             MOVS     R0,#+0
+   \   00000024   0xBD02             POP      {R1,PC}          ;; return
+    607              }
+    608          }
+    609          
+    610          
+    611          #if (STATISTICS_SAVED_FAULT_BLACK_BOX > 0)
+    612          //---------------------------------------------------------------------------------------------------------------------
+    613          /**
+    614           * Get the black box data for one of the fault entries.
+    615           *
+    616           * @param index = Which fault black box data slot to get. (0 to STATISTICS_SAVED_FAULT_BLACK_BOX-1)
+    617           *
+    618           * @return A pointer to the PLATFORM_BLACK_BOX_TYPE with the fault black box data.
+    619           */
+
+   \                                 In section .text, align 2, keep-with-next
+    620          PLATFORM_BLACK_BOX_TYPE* Statistics__GetFaultBlackBoxData(uint8 index)
+    621          {
+   \                     Statistics__GetFaultBlackBoxData: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    622              if (index < STATISTICS_SAVED_FAULT_BLACK_BOX)
+   \   00000002   0x2802             CMP      R0,#+2
+   \   00000004   0xDA07             BGE      ??Statistics__GetFaultBlackBoxData_0
+    623              {
+    624                  return (&Statistics.Fault_Black_Box[index]);
+   \   00000006   0x....             LDR      R1,??DataTable18_1
+   \   00000008   0x0042             LSLS     R2,R0,#+1
+   \   0000000A   0x1810             ADDS     R0,R2,R0
+   \   0000000C   0x0040             LSLS     R0,R0,#+1
+   \   0000000E   0x1808             ADDS     R0,R1,R0
+   \   00000010   0x....             LDR      R1,??DataTable19  ;; 0x2ea
+   \   00000012   0x1840             ADDS     R0,R0,R1
+   \   00000014   0xBD02             POP      {R1,PC}
+    625              }
+    626              else
+    627              {
+    628                  LOG_ADD_EXCEPTION(REQUESTED_FAULT_BLACK_BOX_OUT_OF_RANGE, index);
+   \                     ??Statistics__GetFaultBlackBoxData_0: (+1)
+   \   00000016   0x0003             MOVS     R3,R0
+   \   00000018   0x2201             MOVS     R2,#+1
+   \   0000001A   0x2103             MOVS     R1,#+3
+   \   0000001C   0x2056             MOVS     R0,#+86
+   \   0000001E   0x.... 0x....      BL       Log__AddMessage
+    629                  return (NULL);
+   \   00000022   0x2000             MOVS     R0,#+0
+   \   00000024   0xBD02             POP      {R1,PC}          ;; return
+    630              }
+    631          }
+    632          #endif
+    633          
+    634          
+    635          #if (STATISTICS_SAVED_LAST_CYCLES > 0)
+    636          //---------------------------------------------------------------------------------------------------------------------
+    637          /**
+    638           * Get the data for one of the last cycle entries.
+    639           *
+    640           * @param index = Which last cycle data slot to get. (0 to STATISTICS_SAVED_LAST_CYCLES-1)
+    641           *
+    642           * @return A pointer to the PLATFORM_LAST_CYCLE_TYPE with the last cycle data.
+    643           */
+    644          PLATFORM_LAST_CYCLE_TYPE* Statistics__GetLastCycleData(uint8 index)
+    645          {
+    646              PLATFORM_LAST_CYCLE_TYPE* last_cycle = NULL;
+    647              if (index < STATISTICS_SAVED_LAST_CYCLES)
+    648              {
+    649                  #if (APPLIANCE_MAX_COMPARTMENTS > 1)
+    650                      uint8 compartment = Statistics.Cycle[index].Compartment;
+    651                  #else
+    652                      uint8 compartment = 0;
+    653                  #endif
+    654                  if (Cycles_Index[compartment] == index)
+    655                  {
+    656                      UpdateCustomCycleData(index, STATS_CYCLE_ACTIVE);
+    657                  }
+    658                  last_cycle = &Statistics.Last_Cycle[index];
+    659              }
+    660              else
+    661              {
+    662                  LOG_ADD_EXCEPTION(REQUESTED_LAST_CYCLE_OUT_OF_RANGE, index);
+    663                  return (NULL);
+    664              }
+    665              return(last_cycle);
+    666          }
+    667          #endif
+    668          
+    669          
+    670          //---------------------------------------------------------------------------------------------------------------------
+    671          /**
+    672           * Get the appliance lifetime data.
+    673           *
+    674           * @return A pointer to the STATISTICS_LIFETIME_TYPE with the appliance lifetime data.
+    675           */
+
+   \                                 In section .text, align 2, keep-with-next
+    676          STATISTICS_LIFETIME_TYPE* Statistics__GetLifetimeData(void)
+    677          {
+    678              return (&Statistics.Lifetime);
+   \                     Statistics__GetLifetimeData: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable18_1
+   \   00000002   0x4770             BX       LR               ;; return
+    679          }
+    680          
+    681          
+    682          //---------------------------------------------------------------------------------------------------------------------
+    683          /**
+    684           * Get the data for one of the pre-fault entries.
+    685           *
+    686           * @param index = Which pre-fault data slot to get. (0 to STATISTICS_SAVED_PRE_FAULTS-1)
+    687           *
+    688           * @return A pointer to the STATISTICS_FAULT_TYPE with the pre-fault data.
+    689           */
+
+   \                                 In section .text, align 2, keep-with-next
+    690          STATISTICS_FAULT_TYPE* Statistics__GetPreFaultData(uint8 index)
+    691          {
+   \                     Statistics__GetPreFaultData: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    692              if (index < STATISTICS_SAVED_PRE_FAULTS)
+   \   00000002   0x2805             CMP      R0,#+5
+   \   00000004   0xDA08             BGE      ??Statistics__GetPreFaultData_0
+    693              {
+    694                  return (&Statistics.Pre_Fault[index]);
+   \   00000006   0x....             LDR      R1,??DataTable18_1
+   \   00000008   0x0042             LSLS     R2,R0,#+1
+   \   0000000A   0x1810             ADDS     R0,R2,R0
+   \   0000000C   0x0040             LSLS     R0,R0,#+1
+   \   0000000E   0x1808             ADDS     R0,R1,R0
+   \   00000010   0x21B3             MOVS     R1,#+179
+   \   00000012   0x0089             LSLS     R1,R1,#+2        ;; #+716
+   \   00000014   0x1840             ADDS     R0,R0,R1
+   \   00000016   0xBD02             POP      {R1,PC}
+    695              }
+    696              else
+    697              {
+    698                  LOG_ADD_EXCEPTION(REQUESTED_PRE_FAULT_OUT_OF_RANGE, index);
+   \                     ??Statistics__GetPreFaultData_0: (+1)
+   \   00000018   0x0003             MOVS     R3,R0
+   \   0000001A   0x2201             MOVS     R2,#+1
+   \   0000001C   0x2105             MOVS     R1,#+5
+   \   0000001E   0x2056             MOVS     R0,#+86
+   \   00000020   0x.... 0x....      BL       Log__AddMessage
+    699                  return (NULL);
+   \   00000024   0x2000             MOVS     R0,#+0
+   \   00000026   0xBD02             POP      {R1,PC}          ;; return
+    700              }
+    701          }
+    702          
+    703          
+    704          #if (STATISTICS_SAVED_PRE_FAULT_BLACK_BOX > 0)
+    705          //---------------------------------------------------------------------------------------------------------------------
+    706          /**
+    707           * Get the black box data for one of the pre-fault entries.
+    708           *
+    709           * @param index = Which pre-fault black box data slots to get. (0 to STATISTICS_SAVED_PRE_FAULT_BLACK_BOX-1)
+    710           *
+    711           * @return A pointer to the PLATFORM_BLACK_BOX_TYPE with the pre-fault black box data.
+    712           */
+
+   \                                 In section .text, align 2, keep-with-next
+    713          PLATFORM_BLACK_BOX_TYPE* Statistics__GetPreFaultBlackBoxData(uint8 index)
+    714          {
+   \                     Statistics__GetPreFaultBlackBoxData: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    715              if (index < STATISTICS_SAVED_PRE_FAULT_BLACK_BOX)
+   \   00000002   0x2802             CMP      R0,#+2
+   \   00000004   0xDA07             BGE      ??Statistics__GetPreFaultBlackBoxData_0
+    716              {
+    717                  return (&Statistics.Pre_Fault_Black_Box[index]);
+   \   00000006   0x....             LDR      R1,??DataTable18_1
+   \   00000008   0x0042             LSLS     R2,R0,#+1
+   \   0000000A   0x1810             ADDS     R0,R2,R0
+   \   0000000C   0x0040             LSLS     R0,R0,#+1
+   \   0000000E   0x1808             ADDS     R0,R1,R0
+   \   00000010   0x....             LDR      R1,??DataTable19_1  ;; 0x2f6
+   \   00000012   0x1840             ADDS     R0,R0,R1
+   \   00000014   0xBD02             POP      {R1,PC}
+    718              }
+    719              else
+    720              {
+    721                  LOG_ADD_EXCEPTION(REQUESTED_PRE_FAULT_BLACK_BOX_OUT_OF_RANGE, index);
+   \                     ??Statistics__GetPreFaultBlackBoxData_0: (+1)
+   \   00000016   0x0003             MOVS     R3,R0
+   \   00000018   0x2201             MOVS     R2,#+1
+   \   0000001A   0x2106             MOVS     R1,#+6
+   \   0000001C   0x2056             MOVS     R0,#+86
+   \   0000001E   0x.... 0x....      BL       Log__AddMessage
+    722                  return (NULL);
+   \   00000022   0x2000             MOVS     R0,#+0
+   \   00000024   0xBD02             POP      {R1,PC}          ;; return
+    723              }
+    724          }
+    725          #endif
+    726          
+    727          
+    728          //---------------------------------------------------------------------------------------------------------------------
+    729          /**
+    730           * Save fault data for the new fault to the statistics data.
+    731           *
+    732           * If the fault ID is already recorded, the error data is updated.
+    733           * If a fault slot is empty, it is used.
+    734           * Otherwise, the fault replaces the oldest fault data.
+    735           *
+    736           * @param compartment = The compartment associated with the fault data
+    737           * @param fault_id = The Fault ID for the generated fault.
+    738           * @param code = The fault code for the generated fault.
+    739           * @param sub_code = The error code for the generated fault.
+    740           * @param eng_code = The engineering code for the generated fault.
+    741           */
+
+   \                                 In section .text, align 4, keep-with-next
+    742          void Statistics__SaveFaultData(uint8 compartment, uint8 fault_id, uint8 code, uint8 sub_code, uint8 eng_code)
+    743          {
+   \                     Statistics__SaveFaultData: (+1)
+   \   00000000   0xB5F2             PUSH     {R1,R4-R7,LR}
+   \   00000002   0xB084             SUB      SP,SP,#+16
+   \   00000004   0x0007             MOVS     R7,R0
+   \   00000006   0x0016             MOVS     R6,R2
+   \   00000008   0x001D             MOVS     R5,R3
+   \   0000000A   0x9C0A             LDR      R4,[SP, #+40]
+    744              SaveErrorData(FAULT_REF, compartment, fault_id, code, sub_code, eng_code);
+   \   0000000C   0x0020             MOVS     R0,R4
+   \   0000000E   0x9003             STR      R0,[SP, #+12]
+   \   00000010   0x0028             MOVS     R0,R5
+   \   00000012   0x9002             STR      R0,[SP, #+8]
+   \   00000014   0x0030             MOVS     R0,R6
+   \   00000016   0x9001             STR      R0,[SP, #+4]
+   \   00000018   0x4668             MOV      R0,SP
+   \   0000001A   0x7C00             LDRB     R0,[R0, #+16]
+   \   0000001C   0x9000             STR      R0,[SP, #+0]
+   \   0000001E   0x003B             MOVS     R3,R7
+   \   00000020   0x....             ADR.N    R0,FAULT_REF
+   \   00000022   0xC807             LDM      R0,{R0-R2}
+   \   00000024   0x.... 0x....      BL       SaveErrorData
+    745              #if (STATISTICS_SAVED_CYCLES > 0)
+    746                  // Save the fault code in the running cycle's statistics data (if any).
+    747                  uint8 index = Cycles_Index[compartment];
+   \   00000028   0x....             LDR      R0,??DataTable18
+   \   0000002A   0x5DC1             LDRB     R1,[R0, R7]
+    748                  if (index < STATISTICS_SAVED_CYCLES)
+   \   0000002C   0x....             LDR      R0,??DataTable18_1
+   \   0000002E   0x290A             CMP      R1,#+10
+   \   00000030   0xDA2A             BGE      ??Statistics__SaveFaultData_0
+    749                  {
+    750                      STATISTICS_CYCLE_TYPE* cycle = &Statistics.Cycle[index];
+   \   00000032   0x2237             MOVS     R2,#+55
+   \   00000034   0x4351             MULS     R1,R2,R1
+   \   00000036   0x1841             ADDS     R1,R0,R1
+   \   00000038   0x3188             ADDS     R1,R1,#+136
+    751                      cycle->Last_Fault_Code = code;
+   \   0000003A   0x788F             LDRB     R7,[R1, #+2]
+   \   0000003C   0x78CA             LDRB     R2,[R1, #+3]
+   \   0000003E   0x0612             LSLS     R2,R2,#+24
+   \   00000040   0x0C12             LSRS     R2,R2,#+16
+   \   00000042   0x4317             ORRS     R7,R7,R2
+   \   00000044   0x22F0             MOVS     R2,#+240
+   \   00000046   0x0112             LSLS     R2,R2,#+4        ;; #+3840
+   \   00000048   0x....             LDR      R3,??DataTable19_2  ;; 0xf0ff
+   \   0000004A   0x401F             ANDS     R7,R7,R3
+   \   0000004C   0x0236             LSLS     R6,R6,#+8
+   \   0000004E   0x4016             ANDS     R6,R6,R2
+   \   00000050   0x433E             ORRS     R6,R6,R7
+   \   00000052   0x708E             STRB     R6,[R1, #+2]
+   \   00000054   0x0A36             LSRS     R6,R6,#+8
+   \   00000056   0x70CE             STRB     R6,[R1, #+3]
+    752                      cycle->Last_Fault_Sub_Code = sub_code;
+   \   00000058   0x784E             LDRB     R6,[R1, #+1]
+   \   0000005A   0x788F             LDRB     R7,[R1, #+2]
+   \   0000005C   0x063F             LSLS     R7,R7,#+24
+   \   0000005E   0x0C3F             LSRS     R7,R7,#+16
+   \   00000060   0x433E             ORRS     R6,R6,R7
+   \   00000062   0x0536             LSLS     R6,R6,#+20
+   \   00000064   0x0D36             LSRS     R6,R6,#+20
+   \   00000066   0x032D             LSLS     R5,R5,#+12
+   \   00000068   0x4335             ORRS     R5,R5,R6
+   \   0000006A   0x704D             STRB     R5,[R1, #+1]
+   \   0000006C   0x0A2D             LSRS     R5,R5,#+8
+   \   0000006E   0x708D             STRB     R5,[R1, #+2]
+    753                      cycle->Last_Fault_Eng_Code = eng_code;
+   \   00000070   0x784D             LDRB     R5,[R1, #+1]
+   \   00000072   0x788E             LDRB     R6,[R1, #+2]
+   \   00000074   0x0636             LSLS     R6,R6,#+24
+   \   00000076   0x0C36             LSRS     R6,R6,#+16
+   \   00000078   0x4335             ORRS     R5,R5,R6
+   \   0000007A   0x402B             ANDS     R3,R3,R5
+   \   0000007C   0x0224             LSLS     R4,R4,#+8
+   \   0000007E   0x4022             ANDS     R2,R2,R4
+   \   00000080   0x431A             ORRS     R2,R2,R3
+   \   00000082   0x704A             STRB     R2,[R1, #+1]
+   \   00000084   0x0A12             LSRS     R2,R2,#+8
+   \   00000086   0x708A             STRB     R2,[R1, #+2]
+    754                  }
+    755              #endif
+    756          
+    757              #if (STATISTICS_SAVED_FAULT_BLACK_BOX > 0)
+    758                  // Update the category-specific black box data related to this fault.
+    759                  UPDATE_CUSTOM_FAULT(Statistics.Fault_Black_Box, fault_id);
+   \                     ??Statistics__SaveFaultData_0: (+1)
+   \   00000088   0x4669             MOV      R1,SP
+   \   0000008A   0x7C09             LDRB     R1,[R1, #+16]
+   \   0000008C   0x....             LDR      R2,??DataTable19  ;; 0x2ea
+   \   0000008E   0x1880             ADDS     R0,R0,R2
+   \   00000090   0x.... 0x....      BL       StatisticsDish__UpdateFaultData
+    760              #endif
+    761          }
+   \   00000094   0xB005             ADD      SP,SP,#+20
+   \   00000096   0xBDF0             POP      {R4-R7,PC}       ;; return
+    762          
+    763          
+    764          //---------------------------------------------------------------------------------------------------------------------
+    765          /**
+    766           * Save pre-fault data for the new pre-fault to the statistics data.
+    767           *
+    768           * If the pre-fault ID is already recorded, the error data is updated.
+    769           * If a pre-fault slot is empty, it is used.
+    770           * Otherwise, the pre-fault replaces the oldest pre-fault data.
+    771           *
+    772           * @param compartment = The compartment associated with the fault data
+    773           * @param fault_id = The Fault ID for the generated fault.
+    774           * @param code = The fault code for the generated fault.
+    775           * @param sub_code = The error code for the generated fault.
+    776           * @param eng_code = The engineering code for the generated fault.
+    777           */
+
+   \                                 In section .text, align 4, keep-with-next
+    778          void Statistics__SavePreFaultData(uint8 compartment, uint8 fault_id, uint8 code, uint8 sub_code, uint8 eng_code)
+    779          {
+   \                     Statistics__SavePreFaultData: (+1)
+   \   00000000   0xB51F             PUSH     {R0-R4,LR}
+   \   00000002   0x000C             MOVS     R4,R1
+    780              SaveErrorData(PRE_FAULT_REF, compartment, fault_id, code, sub_code, eng_code);
+   \   00000004   0x9906             LDR      R1,[SP, #+24]
+   \   00000006   0x9103             STR      R1,[SP, #+12]
+   \   00000008   0x9302             STR      R3,[SP, #+8]
+   \   0000000A   0x9201             STR      R2,[SP, #+4]
+   \   0000000C   0x0021             MOVS     R1,R4
+   \   0000000E   0x9100             STR      R1,[SP, #+0]
+   \   00000010   0x0003             MOVS     R3,R0
+   \   00000012   0xBF00             Nop      
+   \   00000014   0x....             ADR.N    R0,PRE_FAULT_REF
+   \   00000016   0xC807             LDM      R0,{R0-R2}
+   \   00000018   0x.... 0x....      BL       SaveErrorData
+    781              #if (STATISTICS_SAVED_PRE_FAULT_BLACK_BOX > 0)
+    782                  // Update the category-specific black box data related to this pre-fault.
+    783                  UPDATE_CUSTOM_PRE_FAULT(Statistics.Pre_Fault_Black_Box, fault_id);
+   \   0000001C   0x0021             MOVS     R1,R4
+   \   0000001E   0x....             LDR      R0,??DataTable19_3
+   \   00000020   0x.... 0x....      BL       StatisticsDish__UpdatePreFaultData
+    784              #endif
+    785          }
+   \   00000024   0xBD1F             POP      {R0-R4,PC}       ;; return
+    786          
+    787          
+    788          //=====================================================================================================================
+    789          //  --- Private Methods -----------------------------------------------------------------------------------------------
+    790          //=====================================================================================================================
+    791          
+    792          
+    793          //---------------------------------------------------------------------------------------------------------------------
+    794          /**
+    795           * Save the fault data in the Statistics data structure.
+    796           *
+    797           * @param ref = Reference information for fault and related black box data.
+    798           * @param compartment = The compartment associated with the fault data
+    799           * @param fault_id = The Fault ID for the generated fault.
+    800           * @param code = The fault code for the generated fault.
+    801           * @param sub_code = The error code for the generated fault.
+    802           * @param eng_code = The engineering code for the generated fault.
+    803           */
+
+   \                                 In section .text, align 2, keep-with-next
+    804          static void SaveErrorData(FAULT_REFERENCE_TYPE ref, uint8 compartment, uint8 fault_id, uint8 code, uint8 sub_code, uint8 eng_code)
+    805          {
+   \                     SaveErrorData: (+1)
+   \   00000000   0xB577             PUSH     {R0-R2,R4-R6,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+   \   00000004   0x9C0B             LDR      R4,[SP, #+44]
+   \   00000006   0x9E0C             LDR      R6,[SP, #+48]
+   \   00000008   0x9D0D             LDR      R5,[SP, #+52]
+    806              BOOL_TYPE already_in_history = SortFaultsArray(ref, code, sub_code, eng_code);
+    807          
+    808              // Set the fault ID and update the occurrences.
+    809              if (already_in_history == TRUE)
+   \   0000000A   0x0028             MOVS     R0,R5
+   \   0000000C   0x9001             STR      R0,[SP, #+4]
+   \   0000000E   0x0030             MOVS     R0,R6
+   \   00000010   0x9000             STR      R0,[SP, #+0]
+   \   00000012   0x0023             MOVS     R3,R4
+   \   00000014   0xA803             ADD      R0,SP,#+12
+   \   00000016   0xC807             LDM      R0,{R0-R2}
+   \   00000018   0x.... 0x....      BL       SortFaultsArray
+   \   0000001C   0x2801             CMP      R0,#+1
+   \   0000001E   0xD107             BNE      ??SaveErrorData_0
+    810              {
+    811                  if (ref.Faults->Occurrences < UCHAR_MAX)
+   \   00000020   0x9803             LDR      R0,[SP, #+12]
+   \   00000022   0x7940             LDRB     R0,[R0, #+5]
+   \   00000024   0x28FF             CMP      R0,#+255
+   \   00000026   0xD03E             BEQ      ??SaveErrorData_1
+    812                  {
+    813                      ref.Faults->Occurrences++;
+   \   00000028   0x1C40             ADDS     R0,R0,#+1
+   \   0000002A   0x9903             LDR      R1,[SP, #+12]
+   \   0000002C   0x7148             STRB     R0,[R1, #+5]
+   \   0000002E   0xE03A             B        ??SaveErrorData_1
+    814                  }
+    815              }
+    816              else
+    817              {
+    818                  ref.Faults->Fault_Code = code;
+   \                     ??SaveErrorData_0: (+1)
+   \   00000030   0x9903             LDR      R1,[SP, #+12]
+   \   00000032   0x7808             LDRB     R0,[R1, #+0]
+   \   00000034   0x784A             LDRB     R2,[R1, #+1]
+   \   00000036   0x0612             LSLS     R2,R2,#+24
+   \   00000038   0x0C12             LSRS     R2,R2,#+16
+   \   0000003A   0x4310             ORRS     R0,R0,R2
+   \   0000003C   0x....             LDR      R2,??DataTable19_2  ;; 0xf0ff
+   \   0000003E   0x4002             ANDS     R2,R2,R0
+   \   00000040   0x0220             LSLS     R0,R4,#+8
+   \   00000042   0x23F0             MOVS     R3,#+240
+   \   00000044   0x011B             LSLS     R3,R3,#+4        ;; #+3840
+   \   00000046   0x4003             ANDS     R3,R3,R0
+   \   00000048   0x4313             ORRS     R3,R3,R2
+   \   0000004A   0x700B             STRB     R3,[R1, #+0]
+   \   0000004C   0x0A1B             LSRS     R3,R3,#+8
+   \   0000004E   0x704B             STRB     R3,[R1, #+1]
+    819                  ref.Faults->Fault_Sub_Code = sub_code;
+   \   00000050   0x9903             LDR      R1,[SP, #+12]
+   \   00000052   0x7808             LDRB     R0,[R1, #+0]
+   \   00000054   0x784A             LDRB     R2,[R1, #+1]
+   \   00000056   0x0612             LSLS     R2,R2,#+24
+   \   00000058   0x0C12             LSRS     R2,R2,#+16
+   \   0000005A   0x4310             ORRS     R0,R0,R2
+   \   0000005C   0x....             LDR      R2,??DataTable19_4  ;; 0xff0f
+   \   0000005E   0x4002             ANDS     R2,R2,R0
+   \   00000060   0x0130             LSLS     R0,R6,#+4
+   \   00000062   0x23F0             MOVS     R3,#+240
+   \   00000064   0x4003             ANDS     R3,R3,R0
+   \   00000066   0x4313             ORRS     R3,R3,R2
+   \   00000068   0x700B             STRB     R3,[R1, #+0]
+   \   0000006A   0x0A1B             LSRS     R3,R3,#+8
+   \   0000006C   0x704B             STRB     R3,[R1, #+1]
+    820                  ref.Faults->Fault_Eng_Code = eng_code;
+   \   0000006E   0x9903             LDR      R1,[SP, #+12]
+   \   00000070   0x7808             LDRB     R0,[R1, #+0]
+   \   00000072   0x784A             LDRB     R2,[R1, #+1]
+   \   00000074   0x0612             LSLS     R2,R2,#+24
+   \   00000076   0x0C12             LSRS     R2,R2,#+16
+   \   00000078   0x4310             ORRS     R0,R0,R2
+   \   0000007A   0x....             LDR      R2,??DataTable19_5  ;; 0xfff0
+   \   0000007C   0x4002             ANDS     R2,R2,R0
+   \   0000007E   0x0728             LSLS     R0,R5,#+28
+   \   00000080   0x0F00             LSRS     R0,R0,#+28
+   \   00000082   0x4310             ORRS     R0,R0,R2
+   \   00000084   0x7008             STRB     R0,[R1, #+0]
+   \   00000086   0x0A00             LSRS     R0,R0,#+8
+   \   00000088   0x7048             STRB     R0,[R1, #+1]
+    821                  ref.Faults->Unused = 0;
+   \   0000008A   0x9903             LDR      R1,[SP, #+12]
+   \   0000008C   0x7808             LDRB     R0,[R1, #+0]
+   \   0000008E   0x784A             LDRB     R2,[R1, #+1]
+   \   00000090   0x0612             LSLS     R2,R2,#+24
+   \   00000092   0x0C12             LSRS     R2,R2,#+16
+   \   00000094   0x4310             ORRS     R0,R0,R2
+   \   00000096   0x....             LDR      R2,??DataTable19_6  ;; 0x8fff
+   \   00000098   0x4002             ANDS     R2,R2,R0
+   \   0000009A   0x700A             STRB     R2,[R1, #+0]
+   \   0000009C   0x0A12             LSRS     R2,R2,#+8
+   \   0000009E   0x704A             STRB     R2,[R1, #+1]
+    822                  ref.Faults->Occurrences = 1;
+   \   000000A0   0x2001             MOVS     R0,#+1
+   \   000000A2   0x9903             LDR      R1,[SP, #+12]
+   \   000000A4   0x7148             STRB     R0,[R1, #+5]
+    823              }
+    824              ref.Faults->Fault_Id = fault_id;
+   \                     ??SaveErrorData_1: (+1)
+   \   000000A6   0x980A             LDR      R0,[SP, #+40]
+   \   000000A8   0x9903             LDR      R1,[SP, #+12]
+   \   000000AA   0x7108             STRB     R0,[R1, #+4]
+    825              ref.Faults->Hide_From_Hmi = FALSE;
+   \   000000AC   0x9903             LDR      R1,[SP, #+12]
+   \   000000AE   0x7808             LDRB     R0,[R1, #+0]
+   \   000000B0   0x784A             LDRB     R2,[R1, #+1]
+   \   000000B2   0x0612             LSLS     R2,R2,#+24
+   \   000000B4   0x0C12             LSRS     R2,R2,#+16
+   \   000000B6   0x4310             ORRS     R0,R0,R2
+   \   000000B8   0x0440             LSLS     R0,R0,#+17
+   \   000000BA   0x0C40             LSRS     R0,R0,#+17
+   \   000000BC   0x7008             STRB     R0,[R1, #+0]
+   \   000000BE   0x0A00             LSRS     R0,R0,#+8
+   \   000000C0   0x7048             STRB     R0,[R1, #+1]
+    826          
+    827              if (STATISTICS_FAULT_AGE_BY_CYCLES == ENABLED)
+    828              {
+    829                  // Set the age of the fault based on the current number of completed cycles.
+    830                  ref.Faults->Age = Statistics.Lifetime.Cycles_Completed;
+   \   000000C2   0x9803             LDR      R0,[SP, #+12]
+   \   000000C4   0x....             LDR      R1,??DataTable18_1
+   \   000000C6   0x8909             LDRH     R1,[R1, #+8]
+   \   000000C8   0x7081             STRB     R1,[R0, #+2]
+   \   000000CA   0x0A09             LSRS     R1,R1,#+8
+   \   000000CC   0x70C1             STRB     R1,[R0, #+3]
+    831              }
+    832              else
+    833              {
+    834                  // Set the age of the fault based on the amount of time that the appliance has run.
+    835                  // Supports a maximum age of approximately 18 years.
+    836                  uint32 age = Statistics.Lifetime.Seconds / SECONDS_IN_ONE_TENTH_DAY;
+    837                  ref.Faults->Age = (age < USHRT_MAX) ? age : USHRT_MAX;
+    838              }
+    839          }
+   \   000000CE   0xB006             ADD      SP,SP,#+24
+   \   000000D0   0xBD70             POP      {R4-R6,PC}       ;; return
+    840          
+    841          
+    842          //---------------------------------------------------------------------------------------------------------------------
+    843          /**
+    844           * Shift an element in an array to position 0.
+    845           * @param array = Pointer to array data.
+    846           * @param swap_space = Pointer to additional memory to use as swap space for an element.
+    847           *                     NULL indicates that the new element 0 should be erased.
+    848           * @param element_size = The size of the swap_space and of each element in the array.
+    849           * @param index = The index of the element to move to position 0.
+    850           */
+
+   \                                 In section .text, align 2, keep-with-next
+    851          static void ShiftArray(void* array, void* swap_space, uint16 element_size, sint8 index)
+    852          {
+   \                     ShiftArray: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+   \   00000006   0x0016             MOVS     R6,R2
+   \   00000008   0x001F             MOVS     R7,R3
+    853              uint8* buffer = array;
+    854              if (index > 0)
+   \   0000000A   0x2F01             CMP      R7,#+1
+   \   0000000C   0xDB13             BLT      ??ShiftArray_0
+   \   0000000E   0x4377             MULS     R7,R6,R7
+   \   00000010   0xB2BF             UXTH     R7,R7
+    855              {
+    856                  uint16 offset = index * element_size;
+    857                  if (swap_space != NULL)
+   \   00000012   0x2D00             CMP      R5,#+0
+   \   00000014   0xD003             BEQ      ??ShiftArray_1
+    858                  {
+    859                      memcpy(swap_space, &buffer[offset], element_size);
+   \   00000016   0x19E1             ADDS     R1,R4,R7
+   \   00000018   0x0028             MOVS     R0,R5
+   \   0000001A   0x.... 0x....      BL       __aeabi_memcpy
+    860                  }
+    861                  memmove(&buffer[element_size], buffer, offset);
+   \                     ??ShiftArray_1: (+1)
+   \   0000001E   0x003A             MOVS     R2,R7
+   \   00000020   0x0021             MOVS     R1,R4
+   \   00000022   0x19A0             ADDS     R0,R4,R6
+   \   00000024   0x.... 0x....      BL       __aeabi_memmove
+    862                  if (swap_space != NULL)
+   \   00000028   0x2D00             CMP      R5,#+0
+   \   0000002A   0xD004             BEQ      ??ShiftArray_0
+    863                  {
+    864                      memcpy(buffer, swap_space, element_size);
+   \   0000002C   0x0032             MOVS     R2,R6
+   \   0000002E   0x0029             MOVS     R1,R5
+   \   00000030   0x0020             MOVS     R0,R4
+   \   00000032   0x.... 0x....      BL       __aeabi_memcpy
+    865                  }
+    866              }
+    867              if (swap_space == NULL)
+   \                     ??ShiftArray_0: (+1)
+   \   00000036   0x2D00             CMP      R5,#+0
+   \   00000038   0xD104             BNE      ??ShiftArray_2
+    868              {
+    869                  memset(buffer, 0, element_size);
+   \   0000003A   0x2200             MOVS     R2,#+0
+   \   0000003C   0x0031             MOVS     R1,R6
+   \   0000003E   0x0020             MOVS     R0,R4
+   \   00000040   0x.... 0x....      BL       __aeabi_memset
+    870              }
+    871          }
+   \                     ??ShiftArray_2: (+1)
+   \   00000044   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+    872          
+    873          
+    874          //---------------------------------------------------------------------------------------------------------------------
+    875          /**
+    876           * Determine which slot of the statistics array must be updated or replaced with the new fault's data.
+    877           * Sort the statistics array such that the newly detected fault is in the first position.
+    878           * @param fault_statistics = Pointer to an array of saved data for faults or pre-faults.
+    879           * @param fault_id = The FAULT_ID_TYPE of the newly detected fault or pre-fault.
+    880           *
+    881           * @param fault_codes = The codes for the generated fault.
+    882           * @param is_pre_fault = TRUE for pre-faults, FALSE for faults.
+    883           *
+    884           * @return TRUE if the fault already existed; otherwise FALSE.
+    885           */
+
+   \                                 In section .text, align 2, keep-with-next
+    886          static BOOL_TYPE SortFaultsArray(FAULT_REFERENCE_TYPE ref, uint8 code, uint8 sub_code, uint8 eng_code)
+    887          {
+   \                     SortFaultsArray: (+1)
+   \   00000000   0xB5FF             PUSH     {R0-R7,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+   \   00000004   0xA803             ADD      R0,SP,#+12
+   \   00000006   0x7A00             LDRB     R0,[R0, #+8]
+   \   00000008   0x1E45             SUBS     R5,R0,#+1
+    888              // Search the faults (or pre-faults) array for a matching and/or unused slot.
+    889              uint8 fault_index = ref.Fault_Count - 1;
+    890              BOOL_TYPE fault_exists = FALSE;
+   \   0000000A   0x2600             MOVS     R6,#+0
+   \   0000000C   0x0034             MOVS     R4,R6
+    891              for (uint8 index = 0; index < ref.Fault_Count; index++)
+   \   0000000E   0x0030             MOVS     R0,R6
+   \   00000010   0xE001             B        ??SortFaultsArray_0
+   \                     ??SortFaultsArray_1: (+1)
+   \   00000012   0x1C40             ADDS     R0,R0,#+1
+   \   00000014   0xB2C0             UXTB     R0,R0
+   \                     ??SortFaultsArray_0: (+1)
+   \   00000016   0xA903             ADD      R1,SP,#+12
+   \   00000018   0x7A09             LDRB     R1,[R1, #+8]
+   \   0000001A   0x4288             CMP      R0,R1
+   \   0000001C   0xDA27             BGE      ??SortFaultsArray_2
+    892              {
+    893                  if ((ref.Faults[index].Fault_Code == code) &&
+    894                      (ref.Faults[index].Fault_Sub_Code == sub_code) &&
+    895                      (ref.Faults[index].Fault_Eng_Code == eng_code))
+   \   0000001E   0x9903             LDR      R1,[SP, #+12]
+   \   00000020   0x0042             LSLS     R2,R0,#+1
+   \   00000022   0x1812             ADDS     R2,R2,R0
+   \   00000024   0x0052             LSLS     R2,R2,#+1
+   \   00000026   0x1889             ADDS     R1,R1,R2
+   \   00000028   0x780B             LDRB     R3,[R1, #+0]
+   \   0000002A   0x784A             LDRB     R2,[R1, #+1]
+   \   0000002C   0x0612             LSLS     R2,R2,#+24
+   \   0000002E   0x0C12             LSRS     R2,R2,#+16
+   \   00000030   0x4313             ORRS     R3,R3,R2
+   \   00000032   0x220F             MOVS     R2,#+15
+   \   00000034   0x0A1B             LSRS     R3,R3,#+8
+   \   00000036   0x4013             ANDS     R3,R3,R2
+   \   00000038   0x466F             MOV      R7,SP
+   \   0000003A   0x7E3F             LDRB     R7,[R7, #+24]
+   \   0000003C   0x42BB             CMP      R3,R7
+   \   0000003E   0xD1E8             BNE      ??SortFaultsArray_1
+   \   00000040   0x780B             LDRB     R3,[R1, #+0]
+   \   00000042   0x784F             LDRB     R7,[R1, #+1]
+   \   00000044   0x063F             LSLS     R7,R7,#+24
+   \   00000046   0x0C3F             LSRS     R7,R7,#+16
+   \   00000048   0x433B             ORRS     R3,R3,R7
+   \   0000004A   0x091B             LSRS     R3,R3,#+4
+   \   0000004C   0x4013             ANDS     R3,R3,R2
+   \   0000004E   0xAF0C             ADD      R7,SP,#+48
+   \   00000050   0x783F             LDRB     R7,[R7, #+0]
+   \   00000052   0x42BB             CMP      R3,R7
+   \   00000054   0xD1DD             BNE      ??SortFaultsArray_1
+   \   00000056   0x780B             LDRB     R3,[R1, #+0]
+   \   00000058   0x784F             LDRB     R7,[R1, #+1]
+   \   0000005A   0x063F             LSLS     R7,R7,#+24
+   \   0000005C   0x0C3F             LSRS     R7,R7,#+16
+   \   0000005E   0x433B             ORRS     R3,R3,R7
+   \   00000060   0x401A             ANDS     R2,R2,R3
+   \   00000062   0xA90D             ADD      R1,SP,#+52
+   \   00000064   0x7809             LDRB     R1,[R1, #+0]
+   \   00000066   0x428A             CMP      R2,R1
+   \   00000068   0xD1D3             BNE      ??SortFaultsArray_1
+    896                  {
+    897                      fault_index = index;
+   \   0000006A   0x0005             MOVS     R5,R0
+    898                      fault_exists = TRUE;
+   \   0000006C   0x2401             MOVS     R4,#+1
+    899                      break;                                  // Break out of the for() loop.
+    900                  }
+    901              }
+    902          
+    903              // Select which slot in the statistics array should be updated.
+    904              union SWAP_UNION
+    905              {
+    906                  STATISTICS_FAULT_TYPE Swap_Fault;
+    907                  #if ((STATISTICS_SAVED_FAULT_BLACK_BOX > 0) || (STATISTICS_SAVED_PRE_FAULT_BLACK_BOX > 0))
+    908                      PLATFORM_BLACK_BOX_TYPE Swap_Black_Box;
+    909                  #endif
+    910              } swap_space;
+    911              void* no_swap_space = NULL;
+    912              ShiftArray(ref.Faults, fault_exists ? &swap_space : no_swap_space, sizeof(STATISTICS_FAULT_TYPE), fault_index);
+   \                     ??SortFaultsArray_2: (+1)
+   \   0000006E   0x0020             MOVS     R0,R4
+   \   00000070   0xD001             BEQ      ??SortFaultsArray_3
+   \   00000072   0x4669             MOV      R1,SP
+   \   00000074   0xE000             B        ??SortFaultsArray_4
+   \                     ??SortFaultsArray_3: (+1)
+   \   00000076   0x0031             MOVS     R1,R6
+   \                     ??SortFaultsArray_4: (+1)
+   \   00000078   0x002B             MOVS     R3,R5
+   \   0000007A   0xB25B             SXTB     R3,R3
+   \   0000007C   0x2206             MOVS     R2,#+6
+   \   0000007E   0x9803             LDR      R0,[SP, #+12]
+   \   00000080   0x.... 0x....      BL       ShiftArray
+    913          
+    914              #if ((STATISTICS_SAVED_FAULT_BLACK_BOX > 0) || (STATISTICS_SAVED_PRE_FAULT_BLACK_BOX > 0))
+    915                  // Shift the corresponding black-box data.
+    916                  if (ref.Black_Box_Count > 0)
+   \   00000084   0xA803             ADD      R0,SP,#+12
+   \   00000086   0x7A40             LDRB     R0,[R0, #+9]
+   \   00000088   0x0001             MOVS     R1,R0
+   \   0000008A   0xD015             BEQ      ??SortFaultsArray_5
+    917                  {
+    918                      uint8 black_box_index = (fault_index < ref.Black_Box_Count) ? fault_index : ref.Black_Box_Count - 1;
+   \   0000008C   0x0029             MOVS     R1,R5
+   \   0000008E   0x0002             MOVS     R2,R0
+   \   00000090   0xB2C9             UXTB     R1,R1
+   \   00000092   0x4291             CMP      R1,R2
+   \   00000094   0xD300             BCC      ??SortFaultsArray_6
+   \   00000096   0x1E45             SUBS     R5,R0,#+1
+    919                      BOOL_TYPE black_box_exists = (BOOL_TYPE)(fault_exists && (black_box_index >= 0));
+                                                                                                       ^
+Warning[Pe186]: pointless comparison of unsigned integer with zero
+   \                     ??SortFaultsArray_6: (+1)
+   \   00000098   0x0021             MOVS     R1,R4
+   \   0000009A   0x0008             MOVS     R0,R1
+   \   0000009C   0x1E40             SUBS     R0,R0,#+1
+   \   0000009E   0x4180             SBCS     R0,R0,R0
+   \   000000A0   0x43C0             MVNS     R0,R0
+   \   000000A2   0x0FC0             LSRS     R0,R0,#+31
+    920                      ShiftArray(ref.Black_Box, black_box_exists ? &swap_space : no_swap_space, sizeof(PLATFORM_BLACK_BOX_TYPE), black_box_index);
+   \   000000A4   0xD001             BEQ      ??SortFaultsArray_7
+   \   000000A6   0x4669             MOV      R1,SP
+   \   000000A8   0xE000             B        ??SortFaultsArray_8
+   \                     ??SortFaultsArray_7: (+1)
+   \   000000AA   0x0031             MOVS     R1,R6
+   \                     ??SortFaultsArray_8: (+1)
+   \   000000AC   0x002B             MOVS     R3,R5
+   \   000000AE   0xB25B             SXTB     R3,R3
+   \   000000B0   0x2206             MOVS     R2,#+6
+   \   000000B2   0x9804             LDR      R0,[SP, #+16]
+   \   000000B4   0x.... 0x....      BL       ShiftArray
+    921                  }
+    922              #endif
+    923          
+    924              return fault_exists;
+   \                     ??SortFaultsArray_5: (+1)
+   \   000000B8   0x0020             MOVS     R0,R4
+   \   000000BA   0xB007             ADD      SP,SP,#+28
+   \   000000BC   0xBDF0             POP      {R4-R7,PC}       ;; return
+    925          }
+    926          
+    927          
+    928          #if (STATISTICS_SAVED_CYCLES > 0)
+    929          //---------------------------------------------------------------------------------------------------------------------
+    930          /**
+    931           * Update the part of the cycle data that is custom for the category.
+    932           * @param index = Position of the data in the array.
+    933           * @param state = State of the cycle when the update is being made.
+    934           */
+
+   \                                 In section .text, align 2, keep-with-next
+    935          static void UpdateCustomCycleData(uint8 index, STATISTICS_CYCLE_STATE_TYPE state)
+    936          {
+   \                     UpdateCustomCycleData: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    937              #if ((STATISTICS_CUSTOM_CYCLE_ENABLE == ENABLED) || (STATISTICS_SAVED_LAST_CYCLES > 0))
+    938                  #if (APPLIANCE_MAX_COMPARTMENTS > 1)
+    939                      uint8 compartment = Statistics.Cycle[index].Compartment;
+    940                  #else
+    941                      uint8 compartment = 0;
+    942                  #endif
+    943          
+    944                  #if (STATISTICS_CUSTOM_CYCLE_ENABLE == ENABLED)
+    945                      PLATFORM_CYCLE_TYPE* custom_cycle = &Statistics.Cycle[index].Platform;
+    946                  #else
+    947                      void* custom_cycle = NULL;
+    948                  #endif
+    949          
+    950                  #if (STATISTICS_SAVED_LAST_CYCLES > 0)
+    951                      PLATFORM_LAST_CYCLE_TYPE* last_cycle = NULL;
+    952                      if (index < STATISTICS_SAVED_LAST_CYCLES)
+    953                      {
+    954                          last_cycle = &Statistics.Last_Cycle[index];
+    955                      }
+    956                  #else
+    957                      void* last_cycle = NULL;
+    958                  #endif
+    959          
+    960                  UPDATE_CUSTOM_CYCLE(compartment, state, custom_cycle, last_cycle);
+   \   00000002   0x2300             MOVS     R3,#+0
+   \   00000004   0x....             LDR      R2,??DataTable19_7
+   \   00000006   0x2437             MOVS     R4,#+55
+   \   00000008   0x4360             MULS     R0,R4,R0
+   \   0000000A   0x1810             ADDS     R0,R2,R0
+   \   0000000C   0x0002             MOVS     R2,R0
+   \   0000000E   0x32AD             ADDS     R2,R2,#+173
+   \   00000010   0x4618             MOV      R0,R3
+   \   00000012   0x.... 0x....      BL       StatisticsDish__UpdateCycleData
+    961              #endif
+    962          }
+   \   00000016   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \   00000000   0x........         DC32     Cycles_Index
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \   00000000   0x........         DC32     Statistics
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_1:
+   \   00000000   0x00000302         DC32     0x302
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10:
+   \   00000000   0x0000FFFF         DC32     0xffff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15:
+   \   00000000   0x000002AE         DC32     0x2ae
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable18:
+   \   00000000   0x........         DC32     Cycles_Index
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable18_1:
+   \   00000000   0x........         DC32     Statistics
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19:
+   \   00000000   0x000002EA         DC32     0x2ea
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_1:
+   \   00000000   0x000002F6         DC32     0x2f6
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_2:
+   \   00000000   0x0000F0FF         DC32     0xf0ff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_3:
+   \   00000000   0x........         DC32     Statistics+0x2F6
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_4:
+   \   00000000   0x0000FF0F         DC32     0xff0f
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_5:
+   \   00000000   0x0000FFF0         DC32     0xfff0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_6:
+   \   00000000   0x00008FFF         DC32     0x8fff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_7:
+   \   00000000   0x........         DC32     Statistics
+    963          #endif
+    964          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      40   SaveErrorData
+        40   -> SortFaultsArray
+      24   ShiftArray
+        24   -> __aeabi_memcpy
+        24   -> __aeabi_memmove
+        24   -> __aeabi_memset
+      48   SortFaultsArray
+        48   -> ShiftArray
+      16   Statistics__ApplyFaultAgeCutoff
+       8   Statistics__Background
+         8   -> Millis__GetFreeRunningCounter
+         8   -> StatisticsDish__UpdateLifetimeData
+       0   Statistics__ClearFaultData
+      24   Statistics__CycleStarted
+        24   -> Estimator__GetRemainingSeconds
+        24   -> Regulations__GetIndexValueByPosition
+        24   -> Regulations__GetPositionByFunctionID
+        24   -> ShiftArray
+        24   -> UpdateCustomCycleData
+      24   Statistics__CycleStopped
+        24   -> UpdateCustomCycleData
+        24   -> __aeabi_memcpy
+      16   Statistics__GetCycleData
+        16   -> Interpreter__GetCurrentStatement
+        16   -> Log__AddMessage
+        16   -> Supervisor__GetCycleTime
+        16   -> UpdateCustomCycleData
+        16   -> __aeabi_memcpy
+       8   Statistics__GetFaultBlackBoxData
+         8   -> Log__AddMessage
+       0   Statistics__GetFaultCount
+       8   Statistics__GetFaultData
+         8   -> Log__AddMessage
+       0   Statistics__GetLifetimeData
+       8   Statistics__GetPreFaultBlackBoxData
+         8   -> Log__AddMessage
+       8   Statistics__GetPreFaultData
+         8   -> Log__AddMessage
+      24   Statistics__Initialize
+        24   -> Interpreter__GetCurrentStatement
+        24   -> Log__AddMessage
+        24   -> Micro__GetResetMode
+        24   -> Millis__GetFreeRunningCounter
+        24   -> NVData__GetLastRestoreStatus
+        24   -> Selector__GetCycleState
+        24   -> __aeabi_memset4
+      40   Statistics__SaveFaultData
+        40   -> SaveErrorData
+        40   -> StatisticsDish__UpdateFaultData
+      24   Statistics__SavePreFaultData
+        24   -> SaveErrorData
+        24   -> StatisticsDish__UpdatePreFaultData
+       8   UpdateCustomCycleData
+         8   -> StatisticsDish__UpdateCycleData
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable15
+       4  ??DataTable18
+       4  ??DataTable18_1
+       4  ??DataTable19
+       4  ??DataTable19_1
+       4  ??DataTable19_2
+       4  ??DataTable19_3
+       4  ??DataTable19_4
+       4  ??DataTable19_5
+       4  ??DataTable19_6
+       4  ??DataTable19_7
+       4  ??DataTable7
+       4  ??DataTable8
+       4  ??DataTable8_1
+       8  Cycles_Index
+          Statistics_Milliseconds
+          Statistics_Seconds_Since_Reset
+      12  FAULT_REF
+      12  PRE_FAULT_REF
+      28  STATISTICS_CYCLE_REGULATION_FUNCTION_IDS
+     210  SaveErrorData
+      70  ShiftArray
+     190  SortFaultsArray
+     772  Statistics
+     120  Statistics__ApplyFaultAgeCutoff
+      56  Statistics__Background
+      36  Statistics__ClearFaultData
+     130  Statistics__CycleStarted
+     136  Statistics__CycleStopped
+      88  Statistics__GetCycleData
+      38  Statistics__GetFaultBlackBoxData
+      40  Statistics__GetFaultCount
+      38  Statistics__GetFaultData
+       4  Statistics__GetLifetimeData
+      38  Statistics__GetPreFaultBlackBoxData
+      40  Statistics__GetPreFaultData
+     202  Statistics__Initialize
+     152  Statistics__SaveFaultData
+      38  Statistics__SavePreFaultData
+      24  UpdateCustomCycleData
+
+ 
+     8 bytes in section .bss
+ 1 762 bytes in section .text
+   772 bytes in section _statistics_segment
+ 
+ 1 762 bytes of CODE memory
+   780 bytes of DATA memory
+
+Errors: none
+Warnings: 1

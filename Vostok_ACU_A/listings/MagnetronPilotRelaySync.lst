@@ -1,0 +1,1408 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:24
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot/MagnetronPilotRelaySync.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\MagnetronPilotRelaySync.lst -o
+#        obj\MagnetronPilotRelaySync.obj
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot/MagnetronPilotRelaySync.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\MagnetronPilotRelaySync.lst
+#    Object file  =  obj\MagnetronPilotRelaySync.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\acuexpacu\ACUPilotHandler\MagnetronPilot\MagnetronPilotRelaySync.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      Implementation for the Magnetron Pilot Relay Sync.
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8               @startuml{MagnetronPilotRelaySync_SM.png}
+      9                  title MagnetronPilotRelaySync State Machine
+     10          
+     11                  ' Use State = Relay_Sync_Data[Pilot_Index].MW_Relay_State
+     12                  [*] --> OFF
+     13          
+     14                  ' OFF State - request relay sync off on entry and wait for event in do
+     15                      OFF: entry / OffEntry()
+     16                      OFF --> ON_PENDING: evOnPending
+     17          
+     18                  ' ON State - request relay sync on on entry and wait for event in do
+     19                      ON: entry / OnEntry
+     20                      ON --> OFF: evOff
+     21                      ON --> OFF_PENDING: evOffPending
+     22          
+     23                  ' OFF_PENDING State - request relay sync off pending on entry and wait for event in do
+     24                      OFF_PENDING: do / OffPendingDo()
+     25                      OFF_PENDING --> OFF: evOff
+     26                      OFF_PENDING --> ON_PENDING: evOnPending
+     27          
+     28                  ' ON_PENDING State - request relay sync on pending on entry and wait for event in do
+     29                      ON_PENDING: do / OnPendingDo()
+     30                      ON_PENDING --> OFF: evOff
+     31                      ON_PENDING --> ON: evOn
+     32                      ON_PENDING --> OFF_PENDING: evOffPending
+     33          
+     34              @enduml
+     35           *
+     36           *  @copyright  Copyright 2018 Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     37           */
+     38          //---------------------------------------------------------------------------------------------------------------------
+     39          //---------------------------------------------------------------------------------------------------------------------
+     40          
+     41          //-------------------------------------- Include Files ----------------------------------------------------------------
+     42          #include "SystemConfig.h"
+     43          
+     44          #if (HBL_PILOT_NUM_MAGNETRON > 0)
+     45          #include "MagnetronPilotRelaySync.h"
+     46          #include "MagnetronPilotRelaySync_prv.h"
+     47          #include "Hbl.h"
+     48          #include "Log.h"
+     49          #include "Gpio.h"
+     50          #include "VirtualPin.h"
+     51          #include "Fault.h"
+     52          
+     53          #include <string.h>
+     54          
+     55          //  --- Private Declarations ------------------------------------------------------------------------------------------
+     56          
+     57          //=====================================================================================================================
+     58          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Magnetron Pilot Relay Sync State Machine
+     59          //=====================================================================================================================
+     60          // !! StateEngineCrank cannot update this code if you change the header !!
+     61          
+     62          
+     63          //! Unique names used to identify states of the Magnetron Pilot Relay Sync state machine.
+     64          typedef enum MAGNETRON_PILOT_RELAY_SYNC_STATE_ENUM
+     65          {
+     66              STATE_MAGNETRON_PILOT_RELAY_SYNC_NONE        = 0,
+     67          
+     68              STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF         = 1, //!< (initial_state)
+     69              STATE_MAGNETRON_PILOT_RELAY_SYNC_ON_PENDING  = 2,
+     70              STATE_MAGNETRON_PILOT_RELAY_SYNC_ON          = 3,
+     71              STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF_PENDING = 4,
+     72          
+     73              STATE_MAGNETRON_PILOT_RELAY_SYNC_END         = 5
+     74          } MAGNETRON_PILOT_RELAY_SYNC_STATE_TYPE;
+     75          
+     76          // -- Private Function Prototypes used by the state machine for customization functions --
+     77          static void OffEntry(void);
+     78          static void OffPendingDo(void);
+     79          static void OnEntry(void);
+     80          static void OnPendingDo(void);
+     81          
+     82          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+     83          static void EventOff(void);
+     84          static void EventOffPending(void);
+     85          static void EventOn(void);
+     86          static void EventOnPending(void);
+     87          static void MagnetronPilotRelaySyncExecute(void);
+     88          static void MagnetronPilotRelaySyncInitialize(void);
+     89          
+     90          // !! StateEngineCrank cannot update this code if you change the footer !!
+     91          // End of StateEngineCrank Auto-Generated Code.
+     92          
+     93          //! Enumeration for MW relay synchronization type.
+     94          typedef enum
+     95          {
+     96              SYNC_ERROR,         //!< Sync state error. Relay delay off limits.
+     97              SYNC_NOT_FOUND,     //!< Unsynchronized state
+     98              SYNC_FOUND          //!< Synchronized state
+     99          }MW_RELAY_SYNC_TYPE;
+    100          
+    101          //! Relay Sync data type declaration.
+    102          typedef PACKED struct RELAY_SYNC_DATA_STRUCT
+    103          {
+    104              uint8 MW_Feedback_Pin;
+    105              uint8 MW_Relay_Pin;
+    106              uint8 Turbo_Relay_Pin;
+    107              MAGNETRON_PILOT_RELAY_SYNC_STATE_TYPE MW_Relay_State    : 3;    //!< MW Relay state.
+    108              ON_OFF_TYPE MW_Relay_Pin_State                          : 1;    //!< MW Relay pin state.
+    109              ON_OFF_TYPE Turbo_Relay_Pin_State                       : 1;    //!< Turbo Relay pin state.
+    110              uint8 MW_FB_Active_High                                 : 1;    //!< Flag to indicate MW feedback signal active high or low: True: Active High / False: Active Low
+    111              uint8 Turbo_Enable                                      : 1;    //!< Flag to indicate Turbo enable or disable: True: Enable / False: Disable
+    112              uint8 Zero_Cross_Start_Found                            : 1;    //!< Flag to indicate zero cross start when changing relay state.
+    113              uint8 Peak_Start_Found                                  : 1;    //!< Flag to indicate peak start when changing relay state.
+    114              MW_RELAY_SYNC_TYPE MW_Relay_On_Sync                     : 2;    //!< MW Relay on synchronization state.
+    115              MW_RELAY_SYNC_TYPE MW_Relay_Off_Sync                    : 2;    //!< MW Relay off synchronization state.
+    116              uint8 Error_Present                                     : 1;
+    117              uint8 Error_Changed                                     : 1;
+    118              uint8 Verifying_Delay_Time                              : 1;
+    119              uint8 Door_Open_Detected                                : 1;    //!< Flag to indicate if door open is detected or not.
+    120              uint8 Dynamic_Relay_On_Delay;                                   //!< Current calculated delay for relay on (in samples).
+    121              uint8 Relay_On_Counter;                                         //!< Counter to determine when to turn on relay.
+    122              uint8 Dynamic_Relay_Off_Delay;                                  //!< Current calculated delay for relay off (in samples).
+    123              uint8 Relay_Off_Counter;                                        //!< Counter to determine when to turn off relay.
+    124              uint8 Previous_Feedback_State;                                  //!< Previous feedback state.
+    125              uint8 Majority_Feedback_State;                                  //!< Majority feedback state.
+    126              uint8 Intend_Relay_Switch_Point;                                //!< Mains signal Counter used to determine error in frequency.
+    127              uint8 Error_Counter;
+    128              uint8 Relay_Stable_Delay;
+    129              uint8 Turbo_On_Off_Delay;                                       //!< Delay time between switching microwave and turbo relays.
+    130              uint8 Turbo_On_Off_Counter;
+    131              uint8 Door_GI_Index;                                            //!< Index of Door GI interacted with Magnetron Pilot.
+    132          
+    133              /** Local variables used by state machine during off with found delay.
+    134              *  The delay during off can not be detected in some cases and need to be verified
+    135              *  at regular intervals specified by VERIFICATION_COUNTER in the parameter file.
+    136              */
+    137              uint8 Ok_Off_Counter;
+    138              uint8 One_MS_Handler_Counter;
+    139          } RELAY_SYNC_DATA_TYPE;
+    140          
+    141          //! The name of this module for use by the Log module.
+    142          #define MODULE_NAME MODULE_MAGNETRON_PILOT_RELAY_SYNC
+    143          
+    144          //! A list of log message IDs that are generated by this module.
+    145          typedef enum MODULE_MAGNETRON_PILOT_RELAY_SYNC_LOG_MESSAGE_ID_ENUM
+    146          {
+    147              MW_RELAY_ON_DELAY_EXCEED_LIMITATION                 = 1,
+    148              MW_RELAY_OFF_DELAY_EXCEED_LIMITATION                = 2,
+    149              MW_RELAY_ERROR_PRESENT                              = 3,
+    150              MW_RELAY_ERROR_CANCEL                               = 4,
+    151          } MODULE_MAGNETRON_PILOT_RELAY_SYNC_LOG_MESSAGE_ID_TYPE;
+    152          
+    153          //  --- Private Definitions -------------------------------------------------------------------------------------------
+    154          //! Pilot index for current running magnetron state machine.
+    155          static uint8 Pilot_Index;
+    156          
+    157          //! Relay sync data array.
+    158          static RELAY_SYNC_DATA_TYPE Relay_Sync_Data[HBL_PILOT_NUM_MAGNETRON];
+    159          
+    160          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    161          static void MwRelayInitialize(void);
+    162          static uint8 MwRelayReadFeedbackSignal(void);
+    163          static void MwRelayOnSyncStart(void);
+    164          static void MwRelayOffSyncStart(void);
+    165          static void MWRelayOn(void);
+    166          static void MWRelayOff(void);
+    167          static BOOL_TYPE IsMWRelayOn(void);
+    168          static void TurboRelayOn(void);
+    169          static void TurboRelayOff(void);
+    170          static BOOL_TYPE IsTurboRelayOn(void);
+    171          
+    172          //=====================================================================================================================
+    173          //-------------------------------------- Public Functions -------------------------------------------------------------
+    174          //=====================================================================================================================
+    175          //---------------------------------------------------------------------------------------------------------------------
+    176          /**
+    177           *  @brief      It Initializes the module MagnetronPilotRelaySync and its variables
+    178           */
+    179          void MagnetronPilotRelaySync__Initialize(void)
+    180          {
+    181              Pilot_Index = 0;
+    182              memset(Relay_Sync_Data, 0, sizeof(Relay_Sync_Data));
+    183          }
+    184          
+    185          //---------------------------------------------------------------------------------------------------------------------
+    186          /**
+    187           *  @brief      Initialize magnetron pilot Relay Sync instance.
+    188           *
+    189           *  @param      uint8 Parent_Pilot_Index - Index to associated magnetron Pilot instance.
+    190           *              uint8 MW_Feedback_Pin - Index into virtual pin table to find the MW feedback signal.
+    191           *              uint8 MW_FB_Active_High - Flag to indicate MW feedback signal active high or low: True: Active High / False: Active Low
+    192           *              uint8 MW_Relay_Pin - Index into virtual pin table to find the MW relay signal.
+    193           *              uint8 Turbo_Enable - Flag to indicate Turbo enable or disable: True: Enable / False: Disable
+    194           *              uint8 Turbo_Relay_Pin - Index into virtual pin table to find the Turbo relay signal.
+    195           *              uint8 Turbo_On_Off_Delay - Delay time between switching microwave and turbo relays.
+    196           *
+    197           *  @return     void
+    198           */
+    199          void MagnetronPilotRelaySync__InitializeInstance(uint8 Parent_Pilot_Index, uint8 MW_Feedback_Pin, uint8 MW_FB_Active_High, uint8 MW_Relay_Pin, uint8 Turbo_Enable, uint8 Turbo_Relay_Pin, uint8 Turbo_On_Off_Delay, uint8 Door_GI_Index)
+    200          {
+    201              uint8 table_index;
+    202          
+    203              Pilot_Index = Parent_Pilot_Index;
+    204          
+    205              Relay_Sync_Data[Pilot_Index].MW_Feedback_Pin = MW_Feedback_Pin;
+    206              Relay_Sync_Data[Pilot_Index].MW_FB_Active_High = MW_FB_Active_High;
+    207              Relay_Sync_Data[Pilot_Index].MW_Relay_Pin = MW_Relay_Pin;
+    208              Relay_Sync_Data[Pilot_Index].Turbo_Enable = Turbo_Enable;
+    209              Relay_Sync_Data[Pilot_Index].Turbo_Relay_Pin = Turbo_Relay_Pin;
+    210              Relay_Sync_Data[Pilot_Index].Turbo_On_Off_Delay = Turbo_On_Off_Delay;
+    211              Relay_Sync_Data[Pilot_Index].Door_GI_Index = Door_GI_Index;
+    212          
+    213              //! Initialize MW feedback pin
+    214              table_index = Relay_Sync_Data[Pilot_Index].MW_Feedback_Pin;
+    215              if (VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    216              {
+    217                  Gpio__PinConfig(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, VIRTUALPIN_TABLE[table_index].pin_config);
+    218              }
+    219          
+    220              //! Initialize MW relay pin
+    221              table_index = Relay_Sync_Data[Pilot_Index].MW_Relay_Pin;
+    222              if (VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    223              {
+    224                  Gpio__PinConfig(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, VIRTUALPIN_TABLE[table_index].pin_config);
+    225              }
+    226          
+    227              //! Initialize MW relay parameter
+    228              Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay = COLD_START_ON_DELAY;
+    229              Relay_Sync_Data[Pilot_Index].Dynamic_Relay_Off_Delay = COLD_START_OFF_DELAY;
+    230              Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point = COUNTER_TWO_PERIODS;
+    231              Relay_Sync_Data[Pilot_Index].Zero_Cross_Start_Found = FALSE;
+    232              Relay_Sync_Data[Pilot_Index].Peak_Start_Found = FALSE;
+    233              Relay_Sync_Data[Pilot_Index].Previous_Feedback_State = 0;
+    234              Relay_Sync_Data[Pilot_Index].Majority_Feedback_State = 0;
+    235              Relay_Sync_Data[Pilot_Index].Door_Open_Detected = FALSE;
+    236              Relay_Sync_Data[Pilot_Index].One_MS_Handler_Counter = 0;
+    237              MwRelayInitialize();
+    238              Fault__ConditionRemoved(XCATEGORY_MAGNETRON_RELAY_FAILURE);
+    239              Fault__ConditionRemoved(XCATEGORY_MAGNETRON_RELAY_SYNCHRONIZATION_FAILURE);
+    240          
+    241              if(Relay_Sync_Data[Pilot_Index].Turbo_Enable == TRUE)
+    242              {
+    243                  //! Initialize turbo relay pin
+    244                  table_index = Relay_Sync_Data[Pilot_Index].Turbo_Relay_Pin;
+    245                  if (VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    246                  {
+    247                      Gpio__PinConfig(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, VIRTUALPIN_TABLE[table_index].pin_config);
+    248                  }
+    249          
+    250                  //! Initialize turbo relay parameter
+    251                  Relay_Sync_Data[Pilot_Index].Turbo_On_Off_Counter = 0;
+    252                  TurboRelayOff();
+    253              }
+    254          
+    255              //! Initialize Magnetron Pilot Relay Sync state machine
+    256              MagnetronPilotRelaySyncInitialize();
+    257          }
+    258          
+    259          //----------------------------------------------------------------------------------------------
+    260          /**
+    261          *    @brief    Execute function called at the same rate as main sampler.
+    262          *              Shall be called regularly at the same execution rate as mains sampler.
+    263          *              Main state machine for relay on and relay off handling. Waits for
+    264          *              a mains frequency peak and zero-cross to occur and executes the sample and
+    265          *              calculate functions when the time is deemed to be within the allowed window.
+    266          */
+    267          void MagnetronPilotRelaySync__200usHandler(uint8 Parent_Pilot_Index)
+    268          {
+    269              //! Save Pilot_Index before entering interrupt handler
+    270              uint8 Pilot_Index_Bak = Pilot_Index;
+    271          
+    272              Pilot_Index = Parent_Pilot_Index;
+    273          
+    274              MagnetronPilotRelaySyncExecute();
+    275          
+    276              //! Restore Pilot_Index before exiting interrupt handler
+    277              Pilot_Index = Pilot_Index_Bak;
+    278          }
+    279          
+    280          //---------------------------------------------------------------------------------------------------------------------
+    281          /**
+    282           * @brief      Handler called at every 5ms.
+    283           * @param      Parent_Pilot_Index, Pilot_Request
+    284           * @return
+    285           */
+    286          //---------------------------------------------------------------------------------------------------------------------
+    287          void MagnetronPilotRelaySync__AsynchHandler(uint8 Parent_Pilot_Index, MAGNETRON_PILOT_REQUEST_TYPE Pilot_Request)
+    288          {
+    289              Pilot_Index = Parent_Pilot_Index;
+    290          
+    291              //! Turbo_On_Off_Counter count down every 5ms
+    292              if(Relay_Sync_Data[Pilot_Index].Turbo_On_Off_Counter > 0)
+    293              {
+    294                  Relay_Sync_Data[Pilot_Index].Turbo_On_Off_Counter--;
+    295              }
+    296          
+    297              //! Turn on/off relay every 25ms
+    298              Relay_Sync_Data[Pilot_Index].One_MS_Handler_Counter++;
+    299              if((Relay_Sync_Data[Pilot_Index].One_MS_Handler_Counter >= 5) ||
+    300                 ((Pilot_Request == MAGNETRON_PILOT_REQUEST_OFF) && (MagnetronPilotMainsSampler__GetMainsFrequencyStatus(Pilot_Index) == MAINS_FREQ_ERROR)))
+    301              {
+    302                  Relay_Sync_Data[Pilot_Index].One_MS_Handler_Counter = 0;
+    303          
+    304                  if(Relay_Sync_Data[Pilot_Index].Turbo_Enable == TRUE)
+    305                  {
+    306                      switch(Pilot_Request)
+    307                      {
+    308                          case MAGNETRON_PILOT_REQUEST_OFF:
+    309                              MwRelayOffSyncStart();
+    310                              if(IsTurboRelayOn())
+    311                              {
+    312                                  if(Relay_Sync_Data[Pilot_Index].MW_Relay_State == STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF && !IsMWRelayOn())
+    313                                  {
+    314                                      TurboRelayOff();
+    315                                  }
+    316                              }
+    317          
+    318                              Fault__ConditionRemoved(XCATEGORY_MAGNETRON_RELAY_SYNCHRONIZATION_FAILURE);
+    319                              break;
+    320          
+    321                          case MAGNETRON_PILOT_REQUEST_ON:
+    322                              if(IsTurboRelayOn())
+    323                              {
+    324                                  MwRelayOffSyncStart();
+    325                                  if(Relay_Sync_Data[Pilot_Index].MW_Relay_State == STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF && !IsMWRelayOn())
+    326                                  {
+    327                                      TurboRelayOff();
+    328                                      Relay_Sync_Data[Pilot_Index].Turbo_On_Off_Counter = (Relay_Sync_Data[Pilot_Index].Turbo_On_Off_Delay) / 5;
+    329                                  }
+    330                              }
+    331                              else
+    332                              {
+    333                                  if(Relay_Sync_Data[Pilot_Index].Turbo_On_Off_Counter == 0)
+    334                                  {
+    335                                      MwRelayOnSyncStart();
+    336                                  }
+    337                              }
+    338                              break;
+    339          
+    340                          case MAGNETRON_PILOT_REQUEST_TURBO:
+    341                              if(!IsTurboRelayOn())
+    342                              {
+    343                                  TurboRelayOn();
+    344                                  Relay_Sync_Data[Pilot_Index].Turbo_On_Off_Counter = (Relay_Sync_Data[Pilot_Index].Turbo_On_Off_Delay) / 5;
+    345                              }
+    346                              else
+    347                              {
+    348                                  if(Relay_Sync_Data[Pilot_Index].Turbo_On_Off_Counter == 0)
+    349                                  {
+    350                                      MwRelayOnSyncStart();
+    351                                  }
+    352                              }
+    353                              break;
+    354                      }
+    355                  }
+    356                  else
+    357                  {
+    358                      if(Pilot_Request == MAGNETRON_PILOT_REQUEST_ON)
+    359                      {
+    360                          MwRelayOnSyncStart();
+    361                      }
+    362                      else
+    363                      {
+    364                          MwRelayOffSyncStart();
+    365          
+    366                          Fault__ConditionRemoved(XCATEGORY_MAGNETRON_RELAY_SYNCHRONIZATION_FAILURE);
+    367                      }
+    368                  }
+    369              }
+    370          
+    371              //! Read the new state of the door from door GI every 5ms.
+    372              Relay_Sync_Data[Pilot_Index].Door_Open_Detected = (uint8)(Hbl__GetGIDataConvertedByIndex(Relay_Sync_Data[Pilot_Index].Door_GI_Index) == 0);
+    373          
+    374              //! Check if there is relay error msg needed to be published
+    375              if (Relay_Sync_Data[Pilot_Index].Error_Present == TRUE)
+    376              {
+    377                  Fault__ConditionDetected(XCATEGORY_MAGNETRON_RELAY_FAILURE);
+    378                  if (Relay_Sync_Data[Pilot_Index].Error_Changed == TRUE)
+    379                  {
+    380                      LOG_ADD_EXCEPTION(MW_RELAY_ERROR_PRESENT, Pilot_Index);
+    381                  }
+    382              }
+    383              else
+    384              {
+    385                  Fault__ConditionRemoved(XCATEGORY_MAGNETRON_RELAY_FAILURE);
+    386                  if (Relay_Sync_Data[Pilot_Index].Error_Changed == TRUE)
+    387                  {
+    388                      LOG_ADD_EXCEPTION(MW_RELAY_ERROR_CANCEL, Pilot_Index);
+    389                  }
+    390              }
+    391              Relay_Sync_Data[Pilot_Index].Error_Changed = FALSE;
+    392          }
+    393          
+    394          //---------------------------------------------------------------------------------------------------------------------
+    395          /**
+    396           * @brief      Handler to sync the mains period
+    397           * @param      Parent_Pilot_Index, Period
+    398           * @return
+    399           */
+    400          //---------------------------------------------------------------------------------------------------------------------
+    401          void MagnetronPilotRelaySync__MainsPeriodSync(uint8 Parent_Pilot_Index, uint8 Period)
+    402          {
+    403              if ((Relay_Sync_Data[Parent_Pilot_Index].MW_Relay_State != STATE_MAGNETRON_PILOT_RELAY_SYNC_ON_PENDING) && (Relay_Sync_Data[Parent_Pilot_Index].MW_Relay_State != STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF_PENDING))
+    404              {
+    405                  Relay_Sync_Data[Parent_Pilot_Index].Intend_Relay_Switch_Point = (Period * 2);
+    406              }
+    407          }
+    408          
+    409          //---------------------------------------------------------------------------------------------------------------------
+    410          /**
+    411           * @brief      Handler to handle the mains angle 0,90,180,270 event
+    412           * @param      Parent_Pilot_Index, Event_Type
+    413           * @return
+    414           */
+    415          //---------------------------------------------------------------------------------------------------------------------
+    416          void MagnetronPilotRelaySync__MainsEventHandler(uint8 Parent_Pilot_Index, MAINS_EVENT_TYPE Event_Type)
+    417          {
+    418              //! Save Pilot_Index before entering interrupt handler
+    419              uint8 Pilot_Index_Bak = Pilot_Index;
+    420          
+    421              Pilot_Index = Parent_Pilot_Index;
+    422          
+    423              switch(Event_Type)
+    424              {
+    425                  case MAINS_ANGLE_0_EVENT:
+    426                      if (Relay_Sync_Data[Pilot_Index].MW_Relay_State == STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF_PENDING)
+    427                          Relay_Sync_Data[Pilot_Index].Zero_Cross_Start_Found = TRUE;
+    428                      else
+    429                          Relay_Sync_Data[Pilot_Index].Zero_Cross_Start_Found = FALSE;
+    430                      break;
+    431          
+    432                  case MAINS_ANGLE_90_EVENT:
+    433                      if (Relay_Sync_Data[Pilot_Index].MW_Relay_State == STATE_MAGNETRON_PILOT_RELAY_SYNC_ON_PENDING)
+    434                          Relay_Sync_Data[Pilot_Index].Peak_Start_Found = TRUE;
+    435                      else
+    436                          Relay_Sync_Data[Pilot_Index].Peak_Start_Found = FALSE;
+    437          
+    438                      //! Relay error detection
+    439                      if (Relay_Sync_Data[Pilot_Index].Relay_Stable_Delay > 0)
+    440                      {
+    441                          Relay_Sync_Data[Pilot_Index].Relay_Stable_Delay--;
+    442                      }
+    443                      else
+    444                      {
+    445                          if (Relay_Sync_Data[Pilot_Index].Door_Open_Detected == FALSE && !IsMWRelayOn())
+    446                          {
+    447                              if(MwRelayReadFeedbackSignal())
+    448                              {
+    449                                  if (Relay_Sync_Data[Pilot_Index].Error_Present == FALSE)
+    450                                  {
+    451                                      Relay_Sync_Data[Pilot_Index].Error_Counter++;
+    452                                      if(Relay_Sync_Data[Pilot_Index].Error_Counter > 16)
+    453                                      {
+    454                                          Relay_Sync_Data[Pilot_Index].Error_Counter = 16;
+    455                                          Relay_Sync_Data[Pilot_Index].Error_Present = TRUE;
+    456                                          Relay_Sync_Data[Pilot_Index].Error_Changed = TRUE;
+    457                                          EventOff();
+    458                                      }
+    459                                  }
+    460                              }
+    461                              else
+    462                              {
+    463                                  if (Relay_Sync_Data[Pilot_Index].Error_Present == TRUE)
+    464                                  {
+    465                                      Relay_Sync_Data[Pilot_Index].Error_Counter--;
+    466                                      if (Relay_Sync_Data[Pilot_Index].Error_Counter == 0)
+    467                                      {
+    468                                          Relay_Sync_Data[Pilot_Index].Error_Present = FALSE;
+    469                                          Relay_Sync_Data[Pilot_Index].Error_Changed = TRUE;
+    470                                      }
+    471                                  }
+    472                              }
+    473                          }
+    474                          else
+    475                          {
+    476                              if (Relay_Sync_Data[Pilot_Index].Error_Present == TRUE)
+    477                              {
+    478                                  Relay_Sync_Data[Pilot_Index].Error_Present = FALSE;
+    479                                  Relay_Sync_Data[Pilot_Index].Error_Changed = TRUE;
+    480                              }
+    481                              Relay_Sync_Data[Pilot_Index].Error_Counter = 0;
+    482                          }
+    483                      }
+    484                      break;
+    485          
+    486                  case MAINS_ANGLE_180_EVENT:
+    487                      break;
+    488          
+    489                  case MAINS_ANGLE_270_EVENT:
+    490                      break;
+    491          
+    492                  case MAINS_NO_EVENT:
+    493                      break;
+    494              }
+    495          
+    496              //! Restore Pilot_Index before exiting interrupt handler
+    497              Pilot_Index = Pilot_Index_Bak;
+    498          }
+    499          
+    500          //=====================================================================================================================
+    501          //-------------------------------------- Private Functions ------------------------------------------------------------
+    502          //=====================================================================================================================
+    503          
+    504          //---------------------------------------------------------------------------------------------------------------------
+    505          /**
+    506           *
+    507           */
+    508          static void OffEntry(void)
+    509          {
+    510              MWRelayOff();
+    511          }
+    512          
+    513          //---------------------------------------------------------------------------------------------------------------------
+    514          /**
+    515           *
+    516           */
+    517          static void OffPendingDo(void)
+    518          {
+    519              if (Relay_Sync_Data[Pilot_Index].Zero_Cross_Start_Found == TRUE)
+    520              {
+    521                  Relay_Sync_Data[Pilot_Index].Relay_Off_Counter++;
+    522          
+    523                  if (Relay_Sync_Data[Pilot_Index].Relay_Off_Counter == (Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point - Relay_Sync_Data[Pilot_Index].Dynamic_Relay_Off_Delay))
+    524                  {
+    525                      MWRelayOff();
+    526                  }
+    527          
+    528                  if ((Relay_Sync_Data[Pilot_Index].Relay_Off_Counter <= (Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point + WINDOW_END_OFF)) && (Relay_Sync_Data[Pilot_Index].Relay_Off_Counter >= (Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point + WINDOW_START_OFF)))
+    529                  {
+    530                      Relay_Sync_Data[Pilot_Index].Majority_Feedback_State += MwRelayReadFeedbackSignal();
+    531          
+    532                      /** Relay delay time during off is only evaluated at last sample in window. */
+    533                      if (Relay_Sync_Data[Pilot_Index].Relay_Off_Counter == Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point + WINDOW_END_OFF)
+    534                      {
+    535                          /** Regardless of relay delay size, relay stays off. */
+    536                          EventOff();
+    537          
+    538                          uint8 off_state_feedback;
+    539          
+    540                          if (Relay_Sync_Data[Pilot_Index].Majority_Feedback_State >= FEEDBACK_SAMPLE_SIZE)
+    541                          {
+    542                              off_state_feedback = TRUE;
+    543                          }
+    544                          else
+    545                          {
+    546                              off_state_feedback = FALSE;
+    547                          }
+    548          
+    549                          /** Relay delay time determined */
+    550                          if (Relay_Sync_Data[Pilot_Index].MW_Relay_Off_Sync == SYNC_FOUND)
+    551                          {
+    552                              if (off_state_feedback == TRUE)
+    553                              {
+    554                                  /** Relay off delay too short, not synchronized anymore? */
+    555                                  Relay_Sync_Data[Pilot_Index].Dynamic_Relay_Off_Delay += ADJUST_SHORT_OFF_DELAY;
+    556          
+    557                                  /** If verifying delay time, this is normal otherwise something is wrong */
+    558                                  if (Relay_Sync_Data[Pilot_Index].Verifying_Delay_Time == TRUE)
+    559                                  {
+    560                                      Relay_Sync_Data[Pilot_Index].Ok_Off_Counter = 0;
+    561                                      Relay_Sync_Data[Pilot_Index].Verifying_Delay_Time = FALSE;
+    562                                  }
+    563                                  else
+    564                                  {
+    565                                      Relay_Sync_Data[Pilot_Index].MW_Relay_Off_Sync = SYNC_NOT_FOUND;
+    566                                  }
+    567                              }
+    568                              else
+    569                              {
+    570                                  Relay_Sync_Data[Pilot_Index].Ok_Off_Counter++;
+    571                                  if (Relay_Sync_Data[Pilot_Index].Ok_Off_Counter > VERIFICATION_COUNTER)
+    572                                  {
+    573                                      /** Shorten relay delay and flag that we are verifying the time */
+    574                                      Relay_Sync_Data[Pilot_Index].Verifying_Delay_Time = TRUE;
+    575                                      Relay_Sync_Data[Pilot_Index].Dynamic_Relay_Off_Delay -= ADJUST_LONG_OFF_DELAY;
+    576                                  }
+    577                              }
+    578          
+    579                          }
+    580          
+    581                          /** Relay delay time not yet determined */
+    582                          if (Relay_Sync_Data[Pilot_Index].MW_Relay_Off_Sync == SYNC_NOT_FOUND)
+    583                          {
+    584                              /** Feedback on means too short relay delay */
+    585                              if (off_state_feedback == FALSE)
+    586                              {
+    587                                  /** Relay off delay too long */
+    588                                  Relay_Sync_Data[Pilot_Index].Dynamic_Relay_Off_Delay -= ADJUST_LONG_OFF_DELAY;
+    589          
+    590                                  if (Relay_Sync_Data[Pilot_Index].Previous_Feedback_State != 0)
+    591                                  {
+    592                                      /** In this case, we have found our delay time. */
+    593                                      Relay_Sync_Data[Pilot_Index].MW_Relay_Off_Sync = SYNC_FOUND;
+    594                                  }
+    595                              }
+    596                              /**  Feedback is off in window. Delay too short */
+    597                              else
+    598                              {
+    599                                  Relay_Sync_Data[Pilot_Index].Dynamic_Relay_Off_Delay += ADJUST_SHORT_OFF_DELAY;
+    600                              }
+    601                              Relay_Sync_Data[Pilot_Index].Previous_Feedback_State = off_state_feedback;
+    602                          }
+    603          
+    604                          Relay_Sync_Data[Pilot_Index].Majority_Feedback_State = 0;
+    605                      }
+    606                  }
+    607              }
+    608          }
+    609          
+    610          //---------------------------------------------------------------------------------------------------------------------
+    611          /**
+    612           *
+    613           */
+    614          static void OnEntry(void)
+    615          {
+    616              MWRelayOn();
+    617          }
+    618          
+    619          //---------------------------------------------------------------------------------------------------------------------
+    620          /**
+    621           *
+    622           */
+    623          static void OnPendingDo(void)
+    624          {
+    625              if (Relay_Sync_Data[Pilot_Index].Peak_Start_Found == TRUE)
+    626              {
+    627                  Relay_Sync_Data[Pilot_Index].Relay_On_Counter++;
+    628          
+    629                  if (Relay_Sync_Data[Pilot_Index].Relay_On_Counter == (Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point - Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay))
+    630                  {
+    631                      MWRelayOn();
+    632                  }
+    633          
+    634                  if ((Relay_Sync_Data[Pilot_Index].Relay_On_Counter <= (Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point + WINDOW_END_ON)) && (Relay_Sync_Data[Pilot_Index].Relay_On_Counter >= (Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point - WINDOW_START_ON)))
+    635                  {
+    636                      if (Relay_Sync_Data[Pilot_Index].MW_Relay_On_Sync == SYNC_NOT_FOUND)
+    637                      {
+    638                          MWRelayOff();
+    639                      }
+    640          
+    641                      if (MwRelayReadFeedbackSignal())
+    642                      {
+    643                          /** Feedback ok at first sample. Leave on and adjust */
+    644                          if (Relay_Sync_Data[Pilot_Index].Relay_On_Counter == Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point - WINDOW_START_ON)
+    645                          {
+    646                              EventOn();
+    647                              Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay = Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay - ADJUST_LONG_ON_DELAY;
+    648                              Relay_Sync_Data[Pilot_Index].MW_Relay_On_Sync = SYNC_NOT_FOUND;
+    649          
+    650                          }
+    651                          else
+    652                          {
+    653                              EventOn();
+    654                              /** Adjust for feedback on time relative to where in the allowed window the feedback is found */
+    655                              Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay = (Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay + (Relay_Sync_Data[Pilot_Index].Relay_On_Counter - Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point));
+    656                              Relay_Sync_Data[Pilot_Index].MW_Relay_On_Sync = SYNC_FOUND;
+    657                          }
+    658                      }
+    659                      else
+    660                      {
+    661                          if (Relay_Sync_Data[Pilot_Index].Relay_On_Counter == Relay_Sync_Data[Pilot_Index].Intend_Relay_Switch_Point + WINDOW_END_ON)
+    662                          {
+    663                              EventOff();
+    664                              Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay = Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay + ADJUST_SHORT_ON_DELAY;
+    665                              Relay_Sync_Data[Pilot_Index].MW_Relay_On_Sync = SYNC_NOT_FOUND;
+    666                          }
+    667                      }
+    668                  }
+    669              }
+    670          }
+    671          
+    672          //---------------------------------------------------------------------------------------------------------------------
+    673          /**
+    674           *  @brief      It Initializes the MW relay and it's variales
+    675           *
+    676           */
+    677          static void MwRelayInitialize(void)
+    678          {
+    679              MWRelayOff();
+    680          
+    681              /**
+    682              * @brief Cold start assumption.
+    683              *        Relay delay not synchronized.
+    684              *        Mains signal frequency not known.
+    685              */
+    686              Relay_Sync_Data[Pilot_Index].MW_Relay_On_Sync = SYNC_NOT_FOUND;
+    687              Relay_Sync_Data[Pilot_Index].MW_Relay_Off_Sync = SYNC_NOT_FOUND;
+    688              Relay_Sync_Data[Pilot_Index].Relay_On_Counter = 0;
+    689              Relay_Sync_Data[Pilot_Index].Relay_Off_Counter = 0;
+    690              Relay_Sync_Data[Pilot_Index].Error_Present = FALSE;
+    691              Relay_Sync_Data[Pilot_Index].Error_Changed = FALSE;
+    692              Relay_Sync_Data[Pilot_Index].Error_Counter = 0;
+    693              Relay_Sync_Data[Pilot_Index].Relay_Stable_Delay = 60;  //delay 1s for error detection after power on.
+    694              Relay_Sync_Data[Pilot_Index].Ok_Off_Counter = 0;
+    695              Relay_Sync_Data[Pilot_Index].Verifying_Delay_Time = FALSE;
+    696          }
+    697          
+    698          //----------------------------------------------------------------------------------------------
+    699          /**
+    700          *    @brief    Samples the feedback signal at a specified time decided by the
+    701          *              package MwRelaySync.
+    702          *    @details  Performs sampling of the MW Relay feedback signal in relation to the mains
+    703          *              signal. Decision of the feedback state is taken with majority that 2 of 3
+    704          *              samples is determined low state.
+    705          *    @param    void
+    706          *
+    707          *    @return   State of feedback signal.
+    708          *    @retval   0   Feedback signal not present
+    709          *    @retval   1   Feedback signal present
+    710          */
+    711          static uint8 MwRelayReadFeedbackSignal(void)
+    712          {
+    713              uint8 mw_fb_pinState = 0;
+    714          
+    715              uint8 table_index = Relay_Sync_Data[Pilot_Index].MW_Feedback_Pin;
+    716              if (VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    717              {
+    718                  mw_fb_pinState = Gpio__PinRead(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin);
+    719              }
+    720          
+    721              if (Relay_Sync_Data[Pilot_Index].MW_FB_Active_High == FALSE)
+    722              {
+    723                  mw_fb_pinState  ^= (BOOL_TYPE) 1;
+    724              }
+    725          
+    726              return (mw_fb_pinState);
+    727          }
+    728          
+    729          //----------------------------------------------------------------------------------------------
+    730          /**
+    731           *  @brief      It try to turn on MW Relay at proper timing.
+    732           */
+    733          static void MwRelayOnSyncStart(void)
+    734          {
+    735              if (Relay_Sync_Data[Pilot_Index].Error_Present == FALSE)
+    736              {
+    737                  if((Relay_Sync_Data[Pilot_Index].MW_Relay_State != STATE_MAGNETRON_PILOT_RELAY_SYNC_ON) && (Relay_Sync_Data[Pilot_Index].MW_Relay_State != STATE_MAGNETRON_PILOT_RELAY_SYNC_ON_PENDING))
+    738                  {
+    739                      if (MagnetronPilotMainsSampler__GetMainsFrequencyStatus(Pilot_Index) == MAINS_FREQ_OK)
+    740                      {
+    741                          if (Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay < RELAY_ON_LOW_LIMIT)
+    742                          {
+    743                              Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay = RELAY_ON_LOW_LIMIT;
+    744                              MwRelayInitialize();
+    745                          }
+    746          
+    747                          if (Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay > RELAY_ON_HIGH_LIMIT)
+    748                          {
+    749                              LOG_ADD_EXCEPTION(MW_RELAY_ON_DELAY_EXCEED_LIMITATION, Pilot_Index);
+    750                              Fault__ConditionDetected(XCATEGORY_MAGNETRON_RELAY_SYNCHRONIZATION_FAILURE);
+    751          
+    752                              Relay_Sync_Data[Pilot_Index].Dynamic_Relay_On_Delay = RELAY_ON_LOW_LIMIT;
+    753                              MwRelayInitialize();
+    754                          }
+    755          
+    756                          Relay_Sync_Data[Pilot_Index].Relay_On_Counter = 0;
+    757                          Relay_Sync_Data[Pilot_Index].Peak_Start_Found = FALSE;
+    758                          EventOnPending();
+    759                      }
+    760                  }
+    761              }
+    762          }
+    763          
+    764          //----------------------------------------------------------------------------------------------
+    765          /**
+    766           *  @brief      It try to turn off MW Relay at proper timing.
+    767           */
+    768          static void MwRelayOffSyncStart(void)
+    769          {
+    770              if(IsMWRelayOn())
+    771              {
+    772                  if(Relay_Sync_Data[Pilot_Index].Door_Open_Detected == TRUE)
+    773                  {
+    774                      EventOff();
+    775                  }
+    776                  else if (MagnetronPilotMainsSampler__GetMainsFrequencyStatus(Pilot_Index) == MAINS_FREQ_ERROR)
+    777                  {
+    778                      EventOff();
+    779                  }
+    780                  else
+    781                  {
+    782                      if((Relay_Sync_Data[Pilot_Index].MW_Relay_State != STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF) && (Relay_Sync_Data[Pilot_Index].MW_Relay_State != STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF_PENDING))
+    783                      {
+    784                          if (Relay_Sync_Data[Pilot_Index].Dynamic_Relay_Off_Delay < RELAY_OFF_LOW_LIMIT)
+    785                          {
+    786                              Relay_Sync_Data[Pilot_Index].Dynamic_Relay_Off_Delay = RELAY_OFF_LOW_LIMIT;
+    787                              MwRelayInitialize();
+    788                          }
+    789          
+    790                          if (Relay_Sync_Data[Pilot_Index].Dynamic_Relay_Off_Delay > RELAY_OFF_HIGH_LIMIT)
+    791                          {
+    792                              LOG_ADD_EXCEPTION(MW_RELAY_OFF_DELAY_EXCEED_LIMITATION, Pilot_Index);
+    793          
+    794                              Relay_Sync_Data[Pilot_Index].Dynamic_Relay_Off_Delay = RELAY_OFF_LOW_LIMIT;
+    795                              MwRelayInitialize();
+    796                          }
+    797          
+    798                          Relay_Sync_Data[Pilot_Index].Relay_Off_Counter = 0;
+    799                          Relay_Sync_Data[Pilot_Index].Zero_Cross_Start_Found = FALSE;
+    800                          EventOffPending();
+    801                      }
+    802                  }
+    803              }
+    804          }
+    805          
+    806          //----------------------------------------------------------------------------------------------
+    807          /**
+    808           *  @brief      It Turn on actual MW Relay
+    809           */
+    810          static void MWRelayOn(void)
+    811          {
+    812              Relay_Sync_Data[Pilot_Index].MW_Relay_Pin_State = ON;
+    813          
+    814              uint8 table_index = Relay_Sync_Data[Pilot_Index].MW_Relay_Pin;
+    815              if (VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    816              {
+    817                  Gpio__PinWrite(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, TRUE);
+    818              }
+    819          }
+    820          
+    821          //----------------------------------------------------------------------------------------------
+    822          /**
+    823           *  @brief      It Turn off actual MW Relay
+    824           */
+    825          static void MWRelayOff(void)
+    826          {
+    827              Relay_Sync_Data[Pilot_Index].MW_Relay_Pin_State = OFF;
+    828          
+    829              uint8 table_index = Relay_Sync_Data[Pilot_Index].MW_Relay_Pin;
+    830              if (VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    831              {
+    832                  Gpio__PinWrite(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, FALSE);
+    833              }
+    834          }
+    835          
+    836          //----------------------------------------------------------------------------------------------
+    837          /**
+    838           *  @brief      It return MW Relay state
+    839           */
+    840          static BOOL_TYPE IsMWRelayOn(void)
+    841          {
+    842              return ((Relay_Sync_Data[Pilot_Index].MW_Relay_Pin_State == ON) ? TRUE : FALSE);
+    843          }
+    844          
+    845          //----------------------------------------------------------------------------------------------
+    846          /**
+    847           *  @brief      It Turn on actual Turbo Relay
+    848           */
+    849          static void TurboRelayOn(void)
+    850          {
+    851              Relay_Sync_Data[Pilot_Index].Turbo_Relay_Pin_State = ON;
+    852          
+    853              uint8 table_index = Relay_Sync_Data[Pilot_Index].Turbo_Relay_Pin;
+    854              if (VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    855              {
+    856                  Gpio__PinWrite(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, TRUE);
+    857              }
+    858          }
+    859          
+    860          //----------------------------------------------------------------------------------------------
+    861          /**
+    862           *  @brief      It Turn off actual Turbo Relay
+    863           */
+    864          static void TurboRelayOff(void)
+    865          {
+    866              Relay_Sync_Data[Pilot_Index].Turbo_Relay_Pin_State = OFF;
+    867          
+    868              uint8 table_index = Relay_Sync_Data[Pilot_Index].Turbo_Relay_Pin;
+    869              if (VIRTUALPIN_TABLE[table_index].port != PORT_NULL)
+    870              {
+    871                  Gpio__PinWrite(VIRTUALPIN_TABLE[table_index].port, VIRTUALPIN_TABLE[table_index].pin, FALSE);
+    872              }
+    873          }
+    874          
+    875          //----------------------------------------------------------------------------------------------
+    876          /**
+    877           *  @brief      It return Turbo Relay state
+    878           */
+    879          static BOOL_TYPE IsTurboRelayOn(void)
+    880          {
+    881              return ((Relay_Sync_Data[Pilot_Index].Turbo_Relay_Pin_State == ON) ? TRUE : FALSE);
+    882          }
+    883          
+    884          
+    885          //=====================================================================================================================
+    886          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Magnetron Pilot Relay Sync State Machine
+    887          //=====================================================================================================================
+    888          // !! StateEngineCrank cannot update this code if you change the header !!
+    889          
+    890          
+    891          //---------------------------------------------------------------------------------------------------------------------
+    892          /**
+    893           * Process the Off Event for the Magnetron Pilot Relay Sync state machine.
+    894           *
+    895           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    896           *
+    897           * This function was auto-generated and must not be edited manually.
+    898           * Change the UML used to generate this function and regenerate the source code.
+    899           */
+    900          static void EventOff(void)
+    901          {
+    902              switch (Relay_Sync_Data[Pilot_Index].MW_Relay_State)
+    903              {
+    904                  case STATE_MAGNETRON_PILOT_RELAY_SYNC_ON_PENDING:
+    905                  case STATE_MAGNETRON_PILOT_RELAY_SYNC_ON:
+    906                  case STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF_PENDING:
+    907                      Relay_Sync_Data[Pilot_Index].MW_Relay_State = STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF;
+    908                      OffEntry();                             // Entry Function.
+    909                      break;
+    910          
+    911                  default:
+    912                      // Event is ignored for all other values of Relay_Sync_Data[Pilot_Index].MW_Relay_State.
+    913                      break;
+    914              }
+    915          }
+    916          
+    917          
+    918          //---------------------------------------------------------------------------------------------------------------------
+    919          /**
+    920           * Process the Off Pending Event for the Magnetron Pilot Relay Sync state machine.
+    921           *
+    922           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    923           *
+    924           * This function was auto-generated and must not be edited manually.
+    925           * Change the UML used to generate this function and regenerate the source code.
+    926           */
+    927          static void EventOffPending(void)
+    928          {
+    929              switch (Relay_Sync_Data[Pilot_Index].MW_Relay_State)
+    930              {
+    931                  case STATE_MAGNETRON_PILOT_RELAY_SYNC_ON_PENDING:
+    932                  case STATE_MAGNETRON_PILOT_RELAY_SYNC_ON:
+    933                      Relay_Sync_Data[Pilot_Index].MW_Relay_State = STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF_PENDING;
+    934                      break;
+    935          
+    936                  default:
+    937                      // Event is ignored for all other values of Relay_Sync_Data[Pilot_Index].MW_Relay_State.
+    938                      break;
+    939              }
+    940          }
+    941          
+    942          
+    943          //---------------------------------------------------------------------------------------------------------------------
+    944          /**
+    945           * Process the On Event for the Magnetron Pilot Relay Sync state machine.
+    946           *
+    947           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    948           *
+    949           * This function was auto-generated and must not be edited manually.
+    950           * Change the UML used to generate this function and regenerate the source code.
+    951           */
+    952          static void EventOn(void)
+    953          {
+    954              switch (Relay_Sync_Data[Pilot_Index].MW_Relay_State)
+    955              {
+    956                  case STATE_MAGNETRON_PILOT_RELAY_SYNC_ON_PENDING:
+    957                      Relay_Sync_Data[Pilot_Index].MW_Relay_State = STATE_MAGNETRON_PILOT_RELAY_SYNC_ON;
+    958                      OnEntry();                              // Entry Function.
+    959                      break;
+    960          
+    961                  default:
+    962                      // Event is ignored for all other values of Relay_Sync_Data[Pilot_Index].MW_Relay_State.
+    963                      break;
+    964              }
+    965          }
+    966          
+    967          
+    968          //---------------------------------------------------------------------------------------------------------------------
+    969          /**
+    970           * Process the On Pending Event for the Magnetron Pilot Relay Sync state machine.
+    971           *
+    972           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    973           *
+    974           * This function was auto-generated and must not be edited manually.
+    975           * Change the UML used to generate this function and regenerate the source code.
+    976           */
+    977          static void EventOnPending(void)
+    978          {
+    979              switch (Relay_Sync_Data[Pilot_Index].MW_Relay_State)
+    980              {
+    981                  case STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF:
+    982                  case STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF_PENDING:
+    983                      Relay_Sync_Data[Pilot_Index].MW_Relay_State = STATE_MAGNETRON_PILOT_RELAY_SYNC_ON_PENDING;
+    984                      break;
+    985          
+    986                  default:
+    987                      // Event is ignored for all other values of Relay_Sync_Data[Pilot_Index].MW_Relay_State.
+    988                      break;
+    989              }
+    990          }
+    991          
+    992          
+    993          //---------------------------------------------------------------------------------------------------------------------
+    994          /**
+    995           * The main execution function for the Magnetron Pilot Relay Sync state machine.
+    996           * This function should be called periodically while the state machine is running.
+    997           *
+    998           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    999           *
+   1000           * This function was auto-generated and must not be edited manually.
+   1001           * Change the UML used to generate this function and regenerate the source code.
+   1002           */
+   1003          static void MagnetronPilotRelaySyncExecute(void)
+   1004          {
+   1005              switch(Relay_Sync_Data[Pilot_Index].MW_Relay_State)
+   1006              {
+   1007                  case STATE_MAGNETRON_PILOT_RELAY_SYNC_ON_PENDING:
+   1008                      OnPendingDo();                          // Do function.
+   1009                      break;
+   1010          
+   1011                  case STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF_PENDING:
+   1012                      OffPendingDo();                         // Do function.
+   1013                      break;
+   1014          
+   1015                  default:
+   1016                      // There is nothing to do for all other values of Relay_Sync_Data[Pilot_Index].MW_Relay_State.
+   1017                      break;
+   1018              }
+   1019          }
+   1020          
+   1021          
+   1022          //---------------------------------------------------------------------------------------------------------------------
+   1023          /**
+   1024           * The initialization function for the Magnetron Pilot Relay Sync state machine.
+   1025           * This function resets the state machine to the initial state and executes the initial state's
+   1026           * entry function.
+   1027           *
+   1028           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1029           *
+   1030           * This function was auto-generated and must not be edited manually.
+   1031           * Change the UML used to generate this function and regenerate the source code.
+   1032           */
+   1033          static void MagnetronPilotRelaySyncInitialize(void)
+   1034          {
+   1035              Relay_Sync_Data[Pilot_Index].MW_Relay_State = STATE_MAGNETRON_PILOT_RELAY_SYNC_OFF;
+   1036              OffEntry();                                     // Entry Function.
+   1037          }
+   1038          
+   1039          
+   1040          // !! StateEngineCrank cannot update this code if you change the footer !!
+   1041          // End of StateEngineCrank Auto-Generated Code.
+   1042          
+   1043          #endif //(HBL_PILOT_NUM_MAGNETRON > 0)
+   1044          
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

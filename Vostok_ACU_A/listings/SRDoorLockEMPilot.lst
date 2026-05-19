@@ -1,0 +1,1239 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:40
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot/SRDoorLockEMPilot.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SRDoorLockEMPilot.lst
+#        -o obj\SRDoorLockEMPilot.obj
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot/SRDoorLockEMPilot.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SRDoorLockEMPilot.lst
+#    Object file  =  obj\SRDoorLockEMPilot.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\acuexpacu\ACUPilotHandler\SRDoorLockEMPilot\SRDoorLockEMPilot.c
+      1          /**
+      2           *  @file       SRDoorLockEMPilot.c
+      3           *
+      4           *  @brief      Pilot Handler for EM DoorLock device with Class B requirements
+      5           *
+      6           *  @details    This module performs locking and unlocking process of an electromagnetic Doorlock device.
+      7           *
+      8           *	@defgroup   CLASS_B
+      9           *
+     10           *  @section    Applicable_Documents
+     11           *                  List here all the applicable documents if needed. <tr>
+     12           *
+     13           *  $Header: $
+     14           *
+     15           *  @copyright  Copyright 2016-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     16           */
+     17          //---------------------------------------------------------------------------------------------------------------------
+     18          //---------------------------------------------------------------------------------------------------------------------
+     19          
+     20          //-------------------------------------- Include Files ----------------------------------------------------------------
+     21          #include "C_Extensions.h"
+     22          #include "SRSystemConfig.h"
+     23          #include "SRDoorLockEMPilot.h"
+     24          
+     25          #if (HBL_PILOT_NUM_SRDOORLOCKEM > 0)
+     26          #include "SRData.h"
+     27          #include "SRTaskSequence.h"
+     28          #include "SRException.h"
+     29          #include "Hbl.h"
+     30          #include "Gpio.h"
+     31          #include "VirtualPin.h"
+     32          #include "string.h"
+     33          
+     34          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     35          
+     36          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     37          
+     38          #define SRDOORLOCKEM_DEFAULT_PULSES           (3)
+     39          #define SRDOORLOCKEM_INITIAL_PERIOD           (18)
+     40          #define SRDOORLOCKEM_TIME_SPACING_UNIT_MS     (100)
+     41          #define SRDOORLOCKEM_FBK_TIMEOUT              (SRDOORLOCKEM_TIME_SPACING_UNIT_MS)
+     42          
+     43          #define ZC_ALLOWED_MIN_FREQUENCY            45
+     44          #define ZC_ALLOWED_MAX_FREQUENCY            65
+     45          
+     46          // Minimum and maximum period from ZeroCross frequency boundaries set - Round to near
+     47          #define SRDOORLOCKEM_MIN_PERIOD_MS		((2000+ZC_ALLOWED_MAX_FREQUENCY)/(ZC_ALLOWED_MAX_FREQUENCY*2))
+     48          #define SRDOORLOCKEM_MAX_PERIOD_MS		((2000+ZC_ALLOWED_MIN_FREQUENCY)/(ZC_ALLOWED_MIN_FREQUENCY*2))
+     49          
+     50          typedef enum SRDOORLOCKEM_STATUS_ENUM
+     51          {
+     52              SRDOORLOCKEM_STATUS_INIT,
+     53              SRDOORLOCKEM_STATUS_DOOR_UNLOCKED,
+     54              SRDOORLOCKEM_STATUS_DOOR_LOCKING,
+     55              SRDOORLOCKEM_STATUS_DOOR_LOCKING_FAILED,
+     56              SRDOORLOCKEM_STATUS_DOOR_LOCKED,
+     57              SRDOORLOCKEM_STATUS_DOOR_UNLOCKING,
+     58              SRDOORLOCKEM_STATUS_DOOR_UNLOCKING_FAILED
+     59          } SRDOORLOCKEM_STATUS_TYPE;
+     60          
+     61          PACKED typedef struct
+     62          {
+     63              uint16 Retries_Counter;
+     64              uint8 Fbk_Counter;
+     65              uint8 Fbk_Last_Counter;
+     66              uint8 Period;
+     67              uint8 Cycle_Counter;
+     68              uint8 Fbk_Last_Pin_Value;
+     69              uint8 Last_Pin_Out_Value;
+     70              uint8 Fbk_Pin;
+     71              uint8 Requested;
+     72              uint8 Processed;
+     73              HBL_LOAD_STATUS_TYPE PilotStatus;
+     74              SRDOORLOCKEM_STATUS_TYPE Status;
+     75              uint8 Request_Triac_On;
+     76              uint8 Process_Triac_On;
+     77              uint8 Keep_Triac_On;
+     78              uint8 Retries;
+     79          } SRDOORLOCKEMPILOT_DATA_TYPE;
+     80          
+     81          typedef struct
+     82          {
+     83              uint8 Max_Retries :4;
+     84              uint8 Num_Pulses  :4;
+     85              uint8 Time_Spacing;
+     86          } SRDOORLOCKEMPILOT_PARAM_TYPE;
+     87          
+     88          static uint8 SRDoorLockEMPilot_Allocation;
+     89          static SRDOORLOCKEMPILOT_DATA_TYPE SRDoorLockEMPilot_Data[HBL_PILOT_NUM_SRDOORLOCKEM];
+     90          static uint8 N_SRDoorLockEMPilot_Allocation;
+     91          static SRDOORLOCKEMPILOT_DATA_TYPE N_SRDoorLockEMPilot_Data[HBL_PILOT_NUM_SRDOORLOCKEM];
+     92          
+     93          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     94          static BOOL_TYPE CheckItem(uint8 index );
+     95          
+     96          //=====================================================================================================================
+     97          //-------------------------------------- Public Functions -------------------------------------------------------------
+     98          //=====================================================================================================================
+     99          
+    100          //---------------------------------------------------------------------------------------------------------------------
+    101          /**
+    102           *  @brief      It Initializes the module DoorLockEMPilot and its variables
+    103           *
+    104           */
+    105          void SRDoorLockEMPilot__Initialize(void )
+    106          {
+    107              SRData__UpdateByte(&SRDoorLockEMPilot_Allocation, &N_SRDoorLockEMPilot_Allocation, 0);
+    108              SRData__Fill(SRDoorLockEMPilot_Data, N_SRDoorLockEMPilot_Data, 0, sizeof(SRDoorLockEMPilot_Data));
+    109          
+    110          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    111              SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_INIT, SRTASKSEQUENCE_APPL_INIT_SRDOORLOCKEMPILOT);
+    112          #endif
+    113          
+    114          }
+    115          
+    116          //---------------------------------------------------------------------------------------------------------------------
+    117          /**
+    118           *  @brief      Allocate pilot instance for DoorlockEMPilot.
+    119           *
+    120           *  @return     uint8 result - Allocation result.
+    121           *  @retval     0-254 - Pilot allocation instance.
+    122           *  @retval     0xFF - Allocation failed.
+    123           */
+    124          uint8 SRDoorLockEMPilot__Allocate(void )
+    125          {
+    126              uint8 retval = 0xFF;
+    127          
+    128              if (SRData__CheckByte(&SRDoorLockEMPilot_Allocation, &N_SRDoorLockEMPilot_Allocation) == SRDATA_OK)
+    129              {
+    130                  if (SRDoorLockEMPilot_Allocation < HBL_PILOT_NUM_SRDOORLOCKEM)
+    131                  {
+    132                      retval = SRDoorLockEMPilot_Allocation;
+    133                      SRData__UpdateByte(&SRDoorLockEMPilot_Allocation, &N_SRDoorLockEMPilot_Allocation,
+    134                      SRDoorLockEMPilot_Allocation + 1);
+    135                  }
+    136              }
+    137              else
+    138              {
+    139                  SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, HBL_PILOT_IMPULSES_DOOR_LOCK, 0xFF);
+    140              }
+    141              return (retval);
+    142          }
+    143          
+    144          //---------------------------------------------------------------------------------------------------------------------
+    145          /**
+    146           *  @brief      Initialize DoorLockEMPilot instance.
+    147           *
+    148           *  @param      HBL_LOAD_TYPE *load - Pointer to associated digital output load instance.
+    149           *
+    150           *  @return     PASS_FAIL_TYPE result - Result of DoorLockEMPilot instance initialization.
+    151           *  @retval     PASS - Instance initialization succeeded.
+    152           *  @retval     FAIL - Instance initialization failed.
+    153           */
+    154          PASS_FAIL_TYPE SRDoorLockEMPilot__InitializeInstance(HBL_LOAD_TYPE * load )
+    155          {
+    156              PASS_FAIL_TYPE retval = FAIL;
+    157              uint8 index = load->Pilot_Data_Index;
+    158              SRDOORLOCKEMPILOT_PARAM_TYPE *param_ptr = (SRDOORLOCKEMPILOT_PARAM_TYPE *) (load->Parameter_Ptr.Data); //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    159              SRDOORLOCKEMPILOT_DATA_TYPE *ptr;
+    160              SRDOORLOCKEMPILOT_DATA_TYPE *n_ptr;
+    161              HBL_LOAD_STATUS_TYPE tmp_load;
+    162              BOOL_TYPE pin_val;
+    163              uint8 *ptr_pin_table;
+    164              uint8 fbk_index;
+    165              uint8 virtual_pin;
+    166          
+    167              if ((CheckItem(index)) && (param_ptr != NULL ))
+    168              {
+    169                  ptr = &SRDoorLockEMPilot_Data[index];
+    170                  n_ptr = &N_SRDoorLockEMPilot_Data[index];
+    171          
+    172                  SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, (uint8) SRDOORLOCKEM_STATUS_INIT); //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    173                  SRData__UpdateByte(&ptr->Period, &n_ptr->Period, (uint8) SRDOORLOCKEM_INITIAL_PERIOD);
+    174                  tmp_load.Load.Status = HBL_LOAD_STATUS_INITIALIZE;
+    175                  tmp_load.Load.Cur_Reg = 0;
+    176                  SRData__UpdateByte(&ptr->PilotStatus.Byte, &n_ptr->PilotStatus.Byte, tmp_load.Byte);
+    177                  SRData__UpdateShort(&ptr->Retries_Counter, &n_ptr->Retries_Counter, 0);
+    178          
+    179                  // Check if a SRFeedback LLI is configured for pin synchronization
+    180                  fbk_index = Hbl__GetLLIIndexByOwnLoadConsistencyType(load, HBL_LLI_SRFEEDBACK);
+    181                  if (fbk_index >= Hbl__GetNumLLI())
+    182                  {
+    183                      // Fallback for backward compatibility - Check that this LLI ID is handled by a class B module to use it!!
+    184                      fbk_index = Hbl__GetLLIIndexByOwnLoadConsistencyType(load, HBL_LLI_FEEDBACK);
+    185                  }
+    186                  ptr_pin_table = Hbl__GetLLIPinTabPtr(fbk_index);
+    187          
+    188                  if (ptr_pin_table == NULL)
+    189                  {
+    190                      virtual_pin = VirtualPin__GetNumOf();
+    191                  }
+    192                  else
+    193                  {
+    194                      virtual_pin = ptr_pin_table[0];
+    195                  }
+    196                  SRData__UpdateByte(&ptr->Fbk_Pin, &n_ptr->Fbk_Pin, virtual_pin);
+    197          
+    198                  virtual_pin = load->Pin_Ptr[0];
+    199                  if ((virtual_pin < VirtualPin__GetNumOf()) && (VIRTUALPIN_TABLE[virtual_pin].port != 0xFF))
+    200                  {
+    201                      pin_val = (BOOL_TYPE) ~load->Hi_Low_Activation_Bitmap;
+    202                      pin_val &= TRUE;
+    203                      Gpio__PinWrite(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin, pin_val);
+    204                      Gpio__PinConfig(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin,
+    205                      VIRTUALPIN_TABLE[virtual_pin].pin_config);
+    206                      SRData__UpdateByte(&ptr->Last_Pin_Out_Value, &n_ptr->Last_Pin_Out_Value, pin_val);
+    207          
+    208                      if (Gpio__CheckConfig(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin,
+    209                      VIRTUALPIN_TABLE[virtual_pin].pin_config, pin_val) == TRUE)
+    210                      {
+    211                          retval = PASS;
+    212                      }
+    213                  }
+    214          
+    215              }
+    216          
+    217              return (retval);
+    218          }
+    219          
+    220          //---------------------------------------------------------------------------------------------------------------------
+    221          /**
+    222           *  @brief      Set DoorLockEMPilot instance request.
+    223           *
+    224           *  @param      HBL_LOAD_TYPE *load - Pointer to associated DoorLockEMPilot instance.
+    225           *
+    226           *  @param      void *data - Pointer to request data. Pass argument as uint8 *.
+    227           *
+    228           *  @return     PASS_FAIL_TYPE result - Result of DoorLockEMPilot request.
+    229           *  @retval     PASS - Instance request succeeded.
+    230           *  @retval     FAIL - Instance request failed.
+    231           */
+    232          PASS_FAIL_TYPE SRDoorLockEMPilot__Request(HBL_LOAD_TYPE * load ,void * data )
+    233          {
+    234              PASS_FAIL_TYPE retval = FAIL;
+    235              uint8 index = load->Pilot_Data_Index;
+    236          
+    237              if (CheckItem(index))
+    238              {
+    239                  uint8 new_target = (*(uint8 *)data);
+    240                  uint8 new_triac_on = (new_target & SRDOORLOCKEM_PROCESSED_KEEP_PIN_MASK) ? TRUE : FALSE;
+    241                  new_target &= ~SRDOORLOCKEM_PROCESSED_KEEP_PIN_MASK;
+    242          
+    243                  SRData__UpdateByte(&SRDoorLockEMPilot_Data[index].Requested, &N_SRDoorLockEMPilot_Data[index].Requested,
+    244                      new_target);
+    245                  SRData__UpdateByte(&SRDoorLockEMPilot_Data[index].Request_Triac_On, &N_SRDoorLockEMPilot_Data[index].Request_Triac_On,
+    246                      new_triac_on);
+    247                  retval = PASS;
+    248              }
+    249          
+    250              return (retval);
+    251          }
+    252          
+    253          //---------------------------------------------------------------------------------------------------------------------
+    254          /**
+    255           *  @brief      Process DoorLockEMPilot instance.
+    256           *
+    257           *  @param      HBL_LOAD_TYPE *load - Pointer to DoorLockEMPilot instance.
+    258           *
+    259           *  @return     PASS_FAIL_TYPE result - Result of DoorLockEMPilot instance process.
+    260           *  @retval     PASS - Instance process succeeded.
+    261           *  @retval     FAIL - Instance process failed.
+    262           */
+    263          PASS_FAIL_TYPE SRDoorLockEMPilot__Process(HBL_LOAD_TYPE * load )
+    264          {
+    265              PASS_FAIL_TYPE retval = FAIL;
+    266              uint8 index = load->Pilot_Data_Index;
+    267          
+    268              if (CheckItem(index))
+    269              {
+    270                  SRDOORLOCKEMPILOT_PARAM_TYPE *param_ptr;
+    271                  SRDOORLOCKEMPILOT_DATA_TYPE *ptr;
+    272                  SRDOORLOCKEMPILOT_DATA_TYPE *n_ptr;
+    273          
+    274                  param_ptr = (SRDOORLOCKEMPILOT_PARAM_TYPE *) (load->Parameter_Ptr.Data); //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    275                  ptr = &SRDoorLockEMPilot_Data[index];
+    276                  n_ptr = &N_SRDoorLockEMPilot_Data[index];
+    277          
+    278          		// Prevent any state update if Time_Spacing time has not been elapsed
+    279                  if ((ptr->Retries_Counter >= (param_ptr->Time_Spacing * SRDOORLOCKEM_TIME_SPACING_UNIT_MS))
+    280                      && (ptr->Requested != ptr->Processed))
+    281                  {
+    282                      SRDOORLOCKEM_STATUS_TYPE new_status;
+    283                      HBL_LOAD_STATUS_TYPE tmp_load;
+    284                      HBL_CONSISTENCY_TYPE requested_consistency;
+    285          
+    286                      tmp_load.Load.Status = HBL_LOAD_STATUS_TARGET_COMPLETED;
+    287                      tmp_load.Load.Cur_Reg = ptr->Requested;
+    288                      requested_consistency.Byte = Hbl__GetOwnLoadConsistency(load, tmp_load.Byte);
+    289          
+    290                      if (ptr->Requested == (uint8) OFF)
+    291                      {
+    292                          switch (ptr->Status)
+    293                          {
+    294                              case SRDOORLOCKEM_STATUS_DOOR_LOCKED:
+    295                                  if (requested_consistency.Consistency.Value != HBL_CONSISTENCY_OK)
+    296                                  {
+    297                                      tmp_load.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+    298                                      tmp_load.Load.Cur_Reg = ptr->PilotStatus.Load.Cur_Reg;
+    299                                      new_status = SRDOORLOCKEM_STATUS_DOOR_UNLOCKING;
+    300                                      SRData__UpdateByte(&ptr->Retries, &n_ptr->Retries, param_ptr->Max_Retries);
+    301                                  }
+    302                                  else
+    303                                  {
+    304                                      // If current consistency related to Requested value already match, go directly to
+    305                                      // new status - this prevents to change door lock status
+    306                                      new_status = SRDOORLOCKEM_STATUS_DOOR_UNLOCKED;
+    307                                  }
+    308                                  SRData__UpdateByte(&ptr->PilotStatus.Byte, &n_ptr->PilotStatus.Byte, tmp_load.Byte);
+    309                                  SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    310                                  (uint8) new_status);
+    311                                  retval = PASS;
+    312                                  break;
+    313          
+    314                              case SRDOORLOCKEM_STATUS_DOOR_LOCKING_FAILED:
+    315                                  tmp_load.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+    316                                  tmp_load.Load.Cur_Reg = ptr->PilotStatus.Load.Cur_Reg;
+    317                                  SRData__UpdateByte(&ptr->PilotStatus.Byte, &n_ptr->PilotStatus.Byte, tmp_load.Byte);
+    318                                  SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    319                                      (uint8) SRDOORLOCKEM_STATUS_INIT);
+    320                                  retval = PASS;
+    321                                  break;
+    322          
+    323                              default:
+    324                                  break;
+    325                          }
+    326                      }
+    327                      // Everything else is considered Door Locked target
+    328                      else
+    329                      {
+    330                          switch (ptr->Status)
+    331                          {
+    332                              case SRDOORLOCKEM_STATUS_DOOR_UNLOCKED:
+    333                                  if (requested_consistency.Consistency.Value != HBL_CONSISTENCY_OK)
+    334                                  {
+    335                                      tmp_load.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+    336                                      tmp_load.Load.Cur_Reg = ptr->PilotStatus.Load.Cur_Reg;
+    337                                      new_status = SRDOORLOCKEM_STATUS_DOOR_LOCKING;
+    338                                      SRData__UpdateByte(&ptr->Retries, &n_ptr->Retries, param_ptr->Max_Retries);
+    339                                  }
+    340                                  else
+    341                                  {
+    342                                      // If current consistency related to Requested value already match, go directly to
+    343                                      // new status - this prevents to change door lock status
+    344                                      new_status = SRDOORLOCKEM_STATUS_DOOR_LOCKED;
+    345                                  }
+    346                                  SRData__UpdateByte(&ptr->PilotStatus.Byte, &n_ptr->PilotStatus.Byte, tmp_load.Byte);
+    347                                  SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    348                                  (uint8) new_status);
+    349                                  retval = PASS;
+    350                                  break;
+    351          
+    352                              case SRDOORLOCKEM_STATUS_DOOR_UNLOCKING_FAILED:
+    353                                  tmp_load.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+    354                                  tmp_load.Load.Cur_Reg = ptr->PilotStatus.Load.Cur_Reg;
+    355                                  SRData__UpdateByte(&ptr->PilotStatus.Byte, &n_ptr->PilotStatus.Byte, tmp_load.Byte);
+    356                                  SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    357                                      (uint8) SRDOORLOCKEM_STATUS_INIT);
+    358                                  retval = PASS;
+    359                                  break;
+    360          
+    361                              default:
+    362                                  break;
+    363                          }
+    364                      }
+    365                  }
+    366                  else if ((ptr->Status == SRDOORLOCKEM_STATUS_INIT) ||
+    367                      (ptr->Requested  == ptr->Processed))
+    368                  {
+    369                      retval = PASS;
+    370                  }
+    371          
+    372                  // Update Processed data only when status has been updated
+    373                  if (retval == PASS)
+    374                  {
+    375                      SRData__UpdateByte(&ptr->Processed, &n_ptr->Processed, ptr->Requested);
+    376                  }
+    377          
+    378                  // Check Request_Triac_On and Process_Triac_On changes
+    379                  if (ptr->Request_Triac_On != ptr->Process_Triac_On)
+    380                  {
+    381                      /* If Process_Triac_On was set, pin has been forced ON and this could alter Door lock device status regardless of
+    382                       * Status instance field value; in order to align it properly and initialize will be performed.
+    383                       */
+    384                      if(ptr->Process_Triac_On)
+    385                      {
+    386                          HBL_LOAD_STATUS_TYPE tmp_load;
+    387          
+    388                          tmp_load.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+    389                          tmp_load.Load.Cur_Reg = ptr->PilotStatus.Load.Cur_Reg;
+    390                          SRData__UpdateByte(&ptr->PilotStatus.Byte, &n_ptr->PilotStatus.Byte, tmp_load.Byte);
+    391                          SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    392                              (uint8) SRDOORLOCKEM_STATUS_INIT);
+    393                      }
+    394                      SRData__UpdateByte(&ptr->Process_Triac_On, &n_ptr->Process_Triac_On,
+    395                          ptr->Request_Triac_On);
+    396                      retval = PASS;
+    397                  }
+    398          
+    399              }
+    400          
+    401          
+    402              return (retval);
+    403          }
+    404          
+    405          //---------------------------------------------------------------------------------------------------------------------
+    406          /**
+    407           *  @brief      Get current DoorLockEMPilot instance request.
+    408           *
+    409           *  @param      HBL_LOAD_TYPE *load - Pointer to associated DoorLockEMPilot instance.
+    410           *
+    411           *  @return     void *requested - Requested instance data.
+    412           *  @retval     Address of requested instance data. Cast it using *((uint8 *)ptr) to get values.
+    413           *  @retval     NULL - Invalid load index.
+    414           */
+    415          void * SRDoorLockEMPilot__GetRequested(HBL_LOAD_TYPE * load )
+    416          {
+    417              void *ptr = NULL;
+    418          
+    419              if (load->Pilot_Data_Index < SRDoorLockEMPilot_Allocation)
+    420              {
+    421                  ptr = (void *) (&SRDoorLockEMPilot_Data[load->Pilot_Data_Index].Requested);
+    422              }
+    423          
+    424              return (ptr);
+    425          }
+    426          
+    427          //---------------------------------------------------------------------------------------------------------------------
+    428          /**
+    429           *  @brief      Get DoorLockEMPilot instance processed request.
+    430           *
+    431           *  @param      HBL_LOAD_TYPE *load - Pointer to associated DoorLockEMPilot instance.
+    432           *
+    433           *  @return     void * processed - Processed instance data.
+    434           *  @retval     Address of processed instance data. Cast it using *((uint8 *)ptr) to get values.
+    435           *  @retval     NULL - Invalid load index.
+    436           */
+    437          void * SRDoorLockEMPilot__GetProcessed(HBL_LOAD_TYPE * load )
+    438          {
+    439              void *ptr = NULL;
+    440          
+    441              if (load->Pilot_Data_Index < SRDoorLockEMPilot_Allocation)
+    442              {
+    443                  ptr = (void *) (&SRDoorLockEMPilot_Data[load->Pilot_Data_Index].Processed);
+    444              }
+    445          
+    446              return (ptr);
+    447          }
+    448          
+    449          //---------------------------------------------------------------------------------------------------------------------
+    450          /**
+    451           *  @brief      Get DoorLockEMPilot instance status.
+    452           *
+    453           *  @param      HBL_LOAD_TYPE *load - Pointer to DoorLockEMPilot instance.
+    454           *
+    455           *  @return     void *status - instance Status.
+    456           *  @retval     Address of instance Status. Cast it using *((HBL_LOAD_STATUS_TYPE *)ptr) to get the value.
+    457           *  @retval     NULL - Invalid load index.
+    458           */
+    459          void * SRDoorLockEMPilot__GetStatus(HBL_LOAD_TYPE * load )
+    460          {
+    461              void *ptr = NULL;
+    462          
+    463              if (load->Pilot_Data_Index < SRDoorLockEMPilot_Allocation)
+    464              {
+    465                  ptr = (void *) (&SRDoorLockEMPilot_Data[load->Pilot_Data_Index].PilotStatus);
+    466              }
+    467          
+    468              return (ptr);
+    469          }
+    470          
+    471          //---------------------------------------------------------------------------------------------------------------------
+    472          /**
+    473           *  @brief      Asynchronous process for DoorLockEMPilot.
+    474           *
+    475           *	@detail     Asynchronous process handles status transition and consistency check for door lock status
+    476           *
+    477           *  @param      HBL_LOAD_TYPE *load - Pointer to DoorLockEMPilot instance.
+    478           *
+    479           *  @return     PASS_FAIL_TYPE result - Result of DoorLockEMPilot asynch execution.
+    480           *  @retval     PASS - Execution succeeded.
+    481           *  @retval     FAIL - Execution failed.
+    482           */
+    483          PASS_FAIL_TYPE SRDoorLockEMPilot__AsynchProcess(HBL_LOAD_TYPE * load )
+    484          {
+    485              SRDOORLOCKEMPILOT_PARAM_TYPE *param_ptr;
+    486              SRDOORLOCKEMPILOT_DATA_TYPE *ptr;
+    487              SRDOORLOCKEMPILOT_DATA_TYPE *n_ptr;
+    488              HBL_LOAD_STATUS_TYPE tmp_load;
+    489              PASS_FAIL_TYPE retval;
+    490              BOOL_TYPE pin_val;
+    491              uint8 index;
+    492              HBL_CONSISTENCY_TYPE lock_feedback;
+    493              HBL_LOAD_STATUS_TYPE target_status;
+    494          
+    495              retval = FAIL;
+    496              pin_val = FALSE;
+    497              index = load->Pilot_Data_Index;
+    498          
+    499              if (CheckItem(index))
+    500              {
+    501                  param_ptr = (SRDOORLOCKEMPILOT_PARAM_TYPE *) (load->Parameter_Ptr.Data); //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    502                  ptr = &SRDoorLockEMPilot_Data[index];
+    503                  n_ptr = &N_SRDoorLockEMPilot_Data[index];
+    504          
+    505                  target_status.Load.Cur_Reg = ptr->Processed;
+    506                  // Prevent use of TRN table when DoorLock status is OFF;
+    507                  // during INITIALIZE consider Processed target like it has been already reached
+    508                  if ((ptr->Processed != 0) && (ptr->PilotStatus.Load.Status != HBL_LOAD_STATUS_INITIALIZE))
+    509                  {
+    510                      target_status.Load.Status = ptr->PilotStatus.Load.Status;
+    511                  }
+    512                  else
+    513                  {
+    514                      target_status.Load.Status = HBL_LOAD_STATUS_TARGET_COMPLETED;
+    515                  }
+    516                  lock_feedback.Byte = Hbl__GetOwnLoadConsistency(load, target_status.Byte);
+    517                  retval = PASS;
+    518          
+    519                  switch (ptr->Status)
+    520                  {
+    521                      case SRDOORLOCKEM_STATUS_DOOR_LOCKING:
+    522                          if ((lock_feedback.Consistency.Value == HBL_CONSISTENCY_OK)
+    523                          && (lock_feedback.Consistency.Table != HBL_CONSISTENCY_TABLE_OFF))
+    524                          {
+    525                              SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    526                              SRDOORLOCKEM_STATUS_DOOR_LOCKED);
+    527                              SRData__UpdateByte(&ptr->Retries, &n_ptr->Retries, 0);
+    528                          }
+    529                          else if ((ptr->Retries == 0) &&
+    530                              (ptr->Retries_Counter >= (param_ptr->Time_Spacing * SRDOORLOCKEM_TIME_SPACING_UNIT_MS)))
+    531                          {
+    532                              SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    533                              SRDOORLOCKEM_STATUS_DOOR_LOCKING_FAILED);
+    534                          }
+    535                          break;
+    536          
+    537                      case SRDOORLOCKEM_STATUS_DOOR_UNLOCKING:
+    538                          if ((   (lock_feedback.Consistency.Value == HBL_CONSISTENCY_OK) ||
+    539                                  (lock_feedback.Consistency.Value == HBL_CONSISTENCY_DISCONNECTED))
+    540                          && (lock_feedback.Consistency.Table != HBL_CONSISTENCY_TABLE_ON)
+    541                          && (lock_feedback.Consistency.Table != HBL_CONSISTENCY_TABLE_ON_ALTERNATE))
+    542                          {
+    543                              SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    544                              SRDOORLOCKEM_STATUS_DOOR_UNLOCKED);
+    545                              SRData__UpdateByte(&ptr->Retries, &n_ptr->Retries, 0);
+    546                          }
+    547                          else if ((ptr->Retries == 0) &&
+    548                              (ptr->Retries_Counter >= (param_ptr->Time_Spacing * SRDOORLOCKEM_TIME_SPACING_UNIT_MS)))
+    549                          {
+    550                              SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    551                              SRDOORLOCKEM_STATUS_DOOR_UNLOCKING_FAILED);
+    552                          }
+    553                          break;
+    554          
+    555                      case SRDOORLOCKEM_STATUS_DOOR_LOCKED:
+    556                      case SRDOORLOCKEM_STATUS_DOOR_UNLOCKED:
+    557                      case SRDOORLOCKEM_STATUS_DOOR_LOCKING_FAILED:
+    558                      case SRDOORLOCKEM_STATUS_DOOR_UNLOCKING_FAILED:
+    559                          break;
+    560          
+    561                      default:
+    562                          // Consistency detects door is locked/unlocked properly, according to acutal set point
+    563                          if ((ptr->Requested == ptr->Processed) &&
+    564                              (   (lock_feedback.Consistency.Value == HBL_CONSISTENCY_OK) ||
+    565                                  (lock_feedback.Consistency.Value == HBL_CONSISTENCY_DISCONNECTED)) )
+    566                          {
+    567                              uint16 duration = param_ptr->Num_Pulses;
+    568          
+    569                              if (duration == 0)
+    570                              {
+    571                                  duration = SRDOORLOCKEM_DEFAULT_PULSES;
+    572                              }
+    573                              duration *= ptr->Period;
+    574          
+    575                              if (lock_feedback.Consistency.Table == HBL_CONSISTENCY_TABLE_OFF)
+    576                              {
+    577                                  // Door already unlocked
+    578                                  SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    579                                  SRDOORLOCKEM_STATUS_DOOR_UNLOCKED);
+    580                                  if(ptr->Retries_Counter < duration)
+    581                                  {
+    582                                      SRData__UpdateShort(&ptr->Retries_Counter, &n_ptr->Retries_Counter, duration);
+    583                                  }
+    584                              }
+    585                              else if (lock_feedback.Consistency.Table == HBL_CONSISTENCY_TABLE_ON)
+    586                              {
+    587                                  // Door already locked
+    588                                  SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    589                                  SRDOORLOCKEM_STATUS_DOOR_LOCKED);
+    590                                  if(ptr->Retries_Counter < duration)
+    591                                  {
+    592                                      SRData__UpdateShort(&ptr->Retries_Counter, &n_ptr->Retries_Counter, duration);
+    593                                  }
+    594                              }
+    595                          }
+    596                          else
+    597                          {
+    598                              SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, SRDOORLOCKEM_STATUS_INIT); //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    599                              // Wait for Time between pulses
+    600                              if (ptr->Retries_Counter >= (param_ptr->Time_Spacing * SRDOORLOCKEM_TIME_SPACING_UNIT_MS))
+    601                              {
+    602                                  if (ptr->Processed == OFF)
+    603                                  {
+    604                                      // Door is assumed to be locked
+    605                                      SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    606                                      SRDOORLOCKEM_STATUS_DOOR_LOCKED);
+    607                                      SRData__UpdateByte((uint8 *) &ptr->Processed, (uint8 *) &n_ptr->Processed, ON); //lint !e926 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    608                                  }
+    609                                  else
+    610                                  {
+    611                                      // Door is assumed to be unlocked
+    612                                      SRData__UpdateByte((uint8 *) &ptr->Status, (uint8 *) &n_ptr->Status, //lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    613                                      SRDOORLOCKEM_STATUS_DOOR_UNLOCKED);
+    614                                      SRData__UpdateByte((uint8 *) &ptr->Processed, (uint8 *) &n_ptr->Processed, OFF); //lint !e926 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    615                                  }
+    616                              }
+    617                          }
+    618                          break;
+    619          
+    620                  }
+    621          
+    622                  switch (ptr->Status)
+    623                  {
+    624                      case SRDOORLOCKEM_STATUS_DOOR_LOCKED:
+    625                      case SRDOORLOCKEM_STATUS_DOOR_UNLOCKED:
+    626                          tmp_load.Load.Status = ((pin_val == TRUE) ? HBL_LOAD_STATUS_TARGET_ALT_TABLE : HBL_LOAD_STATUS_TARGET_COMPLETED);
+    627                          tmp_load.Load.Cur_Reg = ptr->Processed;
+    628                          SRData__UpdateByte(&ptr->PilotStatus.Byte, &n_ptr->PilotStatus.Byte, tmp_load.Byte);
+    629                          break;
+    630          
+    631                      case SRDOORLOCKEM_STATUS_DOOR_LOCKING_FAILED:
+    632                      case SRDOORLOCKEM_STATUS_DOOR_UNLOCKING_FAILED:
+    633                          tmp_load.Load.Status = HBL_LOAD_STATUS_FAILURE;
+    634                          tmp_load.Load.Cur_Reg = ptr->Processed;
+    635                          SRData__UpdateByte(&ptr->PilotStatus.Byte, &n_ptr->PilotStatus.Byte, tmp_load.Byte);
+    636                          break;
+    637          
+    638                      default:
+    639                          if (ptr->PilotStatus.Load.Status != HBL_LOAD_STATUS_INITIALIZE)
+    640                          {
+    641                              tmp_load.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+    642                              tmp_load.Load.Cur_Reg = ptr->PilotStatus.Load.Cur_Reg;
+    643                              SRData__UpdateByte(&ptr->PilotStatus.Byte, &n_ptr->PilotStatus.Byte, tmp_load.Byte);
+    644                          }
+    645                  }
+    646              }
+    647          
+    648              return (retval);
+    649          }
+    650          
+    651          //---------------------------------------------------------------------------------------------------------------------
+    652          /**
+    653           *  @brief      One millisecond process for DoorLockEMPilot.
+    654           *
+    655           *	@detail     Low level feedback probe to detect frequency and pin activation in sync with feedback
+    656           *
+    657           *  @param      HBL_LOAD_TYPE *load - Pointer to DoorLockEMPilot instance.
+    658           *
+    659           *  @return     PASS_FAIL_TYPE result - Result of DoorLockEMPilot 1ms execution.
+    660           *  @retval     PASS - Execution succeeded.
+    661           *  @retval     FAIL - Execution failed.
+    662           */
+    663          PASS_FAIL_TYPE SRDoorLockEMPilot__Handler1ms(HBL_LOAD_TYPE * load )
+    664          {
+    665              SRDOORLOCKEMPILOT_PARAM_TYPE *param_ptr;
+    666              SRDOORLOCKEMPILOT_DATA_TYPE *n_ptr;
+    667              SRDOORLOCKEMPILOT_DATA_TYPE *ptr;
+    668              PASS_FAIL_TYPE retval;
+    669              BOOL_TYPE pin_val;
+    670              BOOL_TYPE pin_fbk_val;
+    671              uint8 virtual_pin;
+    672              uint8 index;
+    673          
+    674              retval = FAIL;
+    675              pin_val = FALSE;
+    676              pin_fbk_val = FALSE;
+    677              index = load->Pilot_Data_Index;
+    678          
+    679              if (CheckItem(index))
+    680              {
+    681                  param_ptr = (SRDOORLOCKEMPILOT_PARAM_TYPE *) (load->Parameter_Ptr.Data); //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    682                  ptr = &SRDoorLockEMPilot_Data[index];
+    683                  n_ptr = &N_SRDoorLockEMPilot_Data[index];
+    684          
+    685                  if (ptr->Fbk_Pin < VirtualPin__GetNumOf())
+    686                  {
+    687                      pin_fbk_val = Gpio__PinRead(VIRTUALPIN_TABLE[ptr->Fbk_Pin].port, VIRTUALPIN_TABLE[ptr->Fbk_Pin].pin);
+    688                  }
+    689          
+    690                  if (pin_fbk_val != ptr->Fbk_Last_Pin_Value)
+    691                  {
+    692                      if (pin_fbk_val == TRUE)
+    693                      {
+    694                          if ((ptr->Fbk_Counter >= SRDOORLOCKEM_MIN_PERIOD_MS) &&
+    695                              (ptr->Fbk_Counter <= SRDOORLOCKEM_MAX_PERIOD_MS))
+    696                          {
+    697                              uint8 new_period = (ptr->Period + ptr->Fbk_Counter + 1) >> 1;
+    698                              sint8 tmp_offset = (ptr->Fbk_Counter - (2 * ptr->Fbk_Last_Counter )) / 4;
+    699                              if (tmp_offset < 0)
+    700                              {
+    701                                  tmp_offset += (ptr->Period / 2);
+    702                              }
+    703                              SRData__UpdateByte(&ptr->Period, &n_ptr->Period, new_period);
+    704                              SRData__UpdateByte((uint8 *) &ptr->Cycle_Counter, (uint8 *) &n_ptr->Cycle_Counter, (uint8) tmp_offset); //lint !e926 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    705                          }
+    706                          SRData__UpdateByte(&ptr->Fbk_Counter, &n_ptr->Fbk_Counter, 0);
+    707                      }
+    708                      else
+    709                      {
+    710                          SRData__UpdateByte(&ptr->Fbk_Last_Counter, &n_ptr->Fbk_Last_Counter, ptr->Fbk_Counter);
+    711                      }
+    712          
+    713                      SRData__UpdateByte(&ptr->Fbk_Last_Pin_Value, &n_ptr->Fbk_Last_Pin_Value, pin_fbk_val);
+    714                  }
+    715          
+    716                  if(ptr->Cycle_Counter >= ptr->Period)
+    717                  {
+    718                      SRData__UpdateByte(&ptr->Cycle_Counter, &n_ptr->Cycle_Counter, 0);
+    719                  }
+    720          
+    721                  if (ptr->Retries_Counter < (param_ptr->Time_Spacing * SRDOORLOCKEM_TIME_SPACING_UNIT_MS))
+    722                  {
+    723                      SRData__UpdateShort(&ptr->Retries_Counter, &n_ptr->Retries_Counter, ptr->Retries_Counter + 1);
+    724                  }
+    725          
+    726                  if (ptr->Status != SRDOORLOCKEM_STATUS_INIT)
+    727                  {
+    728                      uint16 pulse_duration;
+    729                      BOOL_TYPE force_pin = (BOOL_TYPE) ptr->Keep_Triac_On;
+    730                      uint8 num_pulses = param_ptr->Num_Pulses;
+    731          
+    732                      if (num_pulses == 0)
+    733                      {
+    734                          num_pulses = SRDOORLOCKEM_DEFAULT_PULSES;
+    735                      }
+    736          
+    737                      if ((ptr->Cycle_Counter == 0) ||
+    738                          (ptr->Cycle_Counter == (ptr->Period/2)))
+    739                      {
+    740                          if ((ptr->Retries > 0) &&
+    741                              (ptr->Retries_Counter >= (param_ptr->Time_Spacing * SRDOORLOCKEM_TIME_SPACING_UNIT_MS)))
+    742                          {
+    743                              SRData__UpdateShort(&ptr->Retries_Counter, &n_ptr->Retries_Counter, 0);
+    744                              SRData__UpdateByte(&ptr->Retries, &n_ptr->Retries, ptr->Retries-1);
+    745                          }
+    746                          else if (ptr->Process_Triac_On)
+    747                          {
+    748                              force_pin = TRUE;
+    749                          }
+    750                      }
+    751          
+    752                      if (!ptr->Process_Triac_On)
+    753                      {
+    754                          force_pin = FALSE;
+    755                      }
+    756                      SRData__UpdateByte(&ptr->Keep_Triac_On, &n_ptr->Keep_Triac_On, (uint8) force_pin);
+    757          
+    758                      pulse_duration = num_pulses * ptr->Period;
+    759                      pulse_duration /= 2;
+    760                      // Pulse duration is reduced by 1/4 period to ensure triac can switch OFF
+    761                      pulse_duration -= (ptr->Period/4);
+    762          
+    763                      if ((force_pin == TRUE) ||
+    764                          (ptr->Retries_Counter < pulse_duration))
+    765                      {
+    766                          pin_val = TRUE;
+    767                      }
+    768          
+    769                  }
+    770          
+    771                  virtual_pin = (*load->Pin_Ptr);
+    772          
+    773                  if ((Gpio__CheckConfig(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin,
+    774                  VIRTUALPIN_TABLE[virtual_pin].pin_config, (BOOL_TYPE) ptr->Last_Pin_Out_Value)) == TRUE)
+    775                  {
+    776                      pin_val ^= (BOOL_TYPE) ~load->Hi_Low_Activation_Bitmap;
+    777                      pin_val &= TRUE;
+    778                      Gpio__PinWrite(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin, pin_val);
+    779                      SRData__UpdateByte(&ptr->Last_Pin_Out_Value, &n_ptr->Last_Pin_Out_Value, pin_val);
+    780                      retval = PASS;
+    781                  }
+    782                  else
+    783                  {
+    784                      SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, HBL_PILOT_IMPULSES_DOOR_LOCK, index);
+    785                  }
+    786          
+    787                  SRData__UpdateByte(&ptr->Cycle_Counter, &n_ptr->Cycle_Counter, ptr->Cycle_Counter+1);
+    788                  if (ptr->Fbk_Counter < SRDOORLOCKEM_FBK_TIMEOUT)
+    789                  {
+    790                      SRData__UpdateByte(&ptr->Fbk_Counter, &n_ptr->Fbk_Counter, ptr->Fbk_Counter+1);
+    791                  }
+    792              }
+    793          
+    794              return (retval);
+    795          }
+    796          
+    797          //---------------------------------------------------------------------------------------------------------------------
+    798          /**
+    799           * @brief	Handler for DoorLockEMPilot execution
+    800           *
+    801           * It checks SRDoorLockEMPilot_Allocation integrity and all SRDoorLockEMPilot_Data instances allocated
+    802           * It sets SRTASKSEQUENCE_APPL_SRDOORLOCKEMPILOT_CHECKS step in SRTASKSEQUENCE_APPL_SAFETY_THREAD sequence
+    803           *
+    804           */
+    805          void SRDoorLockEMPilot__Handler(void )
+    806          {
+    807              if (SRData__CheckByte(&SRDoorLockEMPilot_Allocation, &N_SRDoorLockEMPilot_Allocation) != SRDATA_OK)
+    808              {
+    809                  SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, HBL_PILOT_IMPULSES_DOOR_LOCK, 0xFF);
+    810              }
+    811              else
+    812              {
+    813                  uint8 index;
+    814          
+    815                  for (index = 0; index < HBL_PILOT_NUM_SRDOORLOCKEM; index++)
+    816                  {
+    817                      if (SRData__CheckArray(&SRDoorLockEMPilot_Data[index], &N_SRDoorLockEMPilot_Data[index],
+    818                      sizeof(SRDOORLOCKEMPILOT_DATA_TYPE)) != SRDATA_OK)
+    819                      {
+    820                          SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, HBL_PILOT_IMPULSES_DOOR_LOCK, index);
+    821                          break;
+    822                      }
+    823                  }
+    824              }
+    825          
+    826          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    827              SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_THREAD, SRTASKSEQUENCE_APPL_SRDOORLOCKEMPILOT_CHECKS);
+    828          #endif
+    829          
+    830          }
+    831          
+    832          //=====================================================================================================================
+    833          //-------------------------------------- Private Functions ------------------------------------------------------------
+    834          //=====================================================================================================================
+    835          
+    836          /**
+    837           * @brief   Function to perform data integrity of a SRDoorlockEM instance
+    838           *
+    839           * It checks SRDoorLockEMPilot_Allocation integrity and all SRDoorLockEMPilot_Data instances allocated
+    840           * It sets SRTASKSEQUENCE_APPL_SRDOORLOCKEMPILOT_CHECKS step in SRTASKSEQUENCE_APPL_SAFETY_THREAD sequence
+    841           *
+    842           *  @param      uint8 index - Instance index
+    843           *
+    844           *  @return     BOOL_TYPE result - Result of DoorLockEMPilot instance data integrity check
+    845           *  @retval     TRUE - Data integrity check succeded
+    846           *  @retval     FAIL - Data integrity check failed
+    847           *
+    848           */
+    849          BOOL_TYPE CheckItem(uint8 index )
+    850          {
+    851              BOOL_TYPE retval = FALSE;
+    852          
+    853              if (SRData__CheckByte(&SRDoorLockEMPilot_Allocation, &N_SRDoorLockEMPilot_Allocation) != SRDATA_OK)
+    854              {
+    855                  SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, HBL_PILOT_IMPULSES_DOOR_LOCK, 0xFF);
+    856              }
+    857              else
+    858              {
+    859                  if (index < SRDoorLockEMPilot_Allocation)
+    860                  {
+    861                      if (SRData__CheckArray(&SRDoorLockEMPilot_Data[index], &N_SRDoorLockEMPilot_Data[index],
+    862                      sizeof(SRDOORLOCKEMPILOT_DATA_TYPE)) != SRDATA_OK)
+    863                      {
+    864                          SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, HBL_PILOT_IMPULSES_DOOR_LOCK, index);
+    865                      }
+    866                      else
+    867                      {
+    868                          retval = TRUE;
+    869                      }
+    870                  }
+    871              }
+    872          
+    873              return (retval);
+    874          }
+    875          
+    876          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

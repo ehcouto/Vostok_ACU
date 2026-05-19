@@ -1,0 +1,706 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:39
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/SRDigitalLLI/SRDigitalLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SRDigitalLLI.lst -o
+#        obj\SRDigitalLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/SRDigitalLLI/SRDigitalLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SRDigitalLLI.lst
+#    Object file  =  obj\SRDigitalLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\SRDigitalLLI\SRDigitalLLI.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Handles a Safety Relevant low level digital input.
+      5           *
+      6           *  @defgroup   CLASS_B
+      7           *
+      8          @startuml{SRDigitalLLI_Class_Diagram.png}
+      9          
+     10                  hide circle
+     11                  hide empty attributes
+     12                  hide empty methods
+     13                  skinparam classAttributeIconSize 0
+     14          
+     15              class SRDigitalLLI {
+     16                  + void SRDigitalLLI__Initialize(void);
+     17                  + uint8 SRDigitalLLI__Allocate(void);
+     18                  + PASS_FAIL_TYPE SRDigitalLLI__InitializeInstance(HBL_LLI_TYPE * input);
+     19                  + void * SRDigitalLLI__Get(HBL_LLI_TYPE * input);
+     20                  + BOOL_TYPE SRDigitalLLI__AsynchProcess(HBL_LLI_TYPE * input);
+     21                  }
+     22          
+     23              class SRSystemConfig {
+     24                  +SYSTEM_ENABLE_TASKSEQUENCE
+     25                  +HBL_LLI_NUM_SRDIGITAL
+     26              }
+     27          
+     28              class Micro_Defs {
+     29                  +MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL
+     30                  +MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL
+     31                  +MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL
+     32              }
+     33          
+     34              SRDigitalLLI ..> Gpio
+     35              SRDigitalLLI ..> VirtualPin
+     36              SRDigitalLLI ..> Micro_Defs
+     37              SRDigitalLLI ..> SRData
+     38              SRDigitalLLI ..> SRTaskSequence
+     39              SRDigitalLLI ..> SRException
+     40              SRDigitalLLI ..> SRSystemConfig
+     41          
+     42           @enduml
+     43           *  @copyright  Copyright 2017 Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     44           */
+     45          //---------------------------------------------------------------------------------------------------------------------
+     46          //---------------------------------------------------------------------------------------------------------------------
+     47          
+     48          //-------------------------------------- Include Files ----------------------------------------------------------------
+     49          #include "SRSystemConfig.h"
+     50          #include "SRDigitalLLI.h"
+     51          
+     52          #if (HBL_LLI_NUM_SRDIGITAL > 0)
+     53          #include "VirtualPin.h"
+     54          #include "Gpio.h"
+     55          #include "Micro_Defs.h"
+     56          #include "SRData.h"
+     57          #include "SRException.h"
+     58          #include "SRTaskSequence.h"
+     59          
+     60          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     61          
+     62          
+     63          //! Data for each SRDigital LLI
+     64          static SRDIGITALLLI_DATA_TYPE SRDigitalLLI_Data[HBL_LLI_NUM_SRDIGITAL];
+     65          //! Inverted memory for the Class B variable
+     66          static SRDIGITALLLI_DATA_TYPE N_SRDigitalLLI_Data[HBL_LLI_NUM_SRDIGITAL];
+     67          
+     68          //! Keeps track of how many SRDigital LLIs have been allocated by the application
+     69          static uint8 SRDigitalLLI_Allocation;
+     70          //! Inverted memory for the Class B variable
+     71          static uint8 N_SRDigitalLLI_Allocation;
+     72          
+     73          #define SRDIGITALLOWINPUT_CFG0_NREAD_MASK      0x07     //!< Mask to read the setting file configuration for the number of readings
+     74          
+     75          #define SRDIGITALLOWINPUT_CFG1_INVERT          0x80     //!< Mask to read the setting file configuration for the "Invert" flag, which inverts the value read from the input
+     76          #define SRDIGITALLOWINPUT_CFG1_PULLUP          0x20     //!< Mask to read the setting file configuration for the "Pullup" flag; 1 = internal pullup resistor enabled, else no internal pullup resistor used
+     77          
+     78          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     79          
+     80          //=====================================================================================================================
+     81          //-------------------------------------- Public Functions -------------------------------------------------------------
+     82          //=====================================================================================================================
+     83          
+     84          //---------------------------------------------------------------------------------------------------------------------
+     85          /**
+     86           *  @brief  Initializes the module SRDigitalLLI and its variables
+     87           */
+     88          void SRDigitalLLI__Initialize(void)
+     89          {
+     90              SRData__Fill(&SRDigitalLLI_Data, &N_SRDigitalLLI_Data, 0, sizeof(SRDigitalLLI_Data[0]) * HBL_LLI_NUM_SRDIGITAL);
+     91          
+     92              SR_SET_BYTE(SRDigitalLLI_Allocation, 0);
+     93          
+     94              #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+     95                  SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_INIT, SRTASKSEQUENCE_APPL_INIT_SRDIGITAL_LLI);
+     96              #endif
+     97          }
+     98          
+     99          //---------------------------------------------------------------------------------------------------------------------
+    100          /**
+    101           * @brief   Determines the destination of the data for the input.
+    102           * @return  Index to a local buffer where the data will reside.
+    103           */
+    104          uint8 SRDigitalLLI__Allocate(void)
+    105          {
+    106              uint8 retval = HBL_INDEX_INVALID;
+    107          
+    108              if ((SR_CHECK_BYTE(SRDigitalLLI_Allocation) == SRDATA_OK) &&
+    109                  (SRDigitalLLI_Allocation < HBL_LLI_NUM_SRDIGITAL))
+    110              {
+    111                  retval = SRDigitalLLI_Allocation;
+    112                  SR_SET_BYTE(SRDigitalLLI_Allocation, SRDigitalLLI_Allocation + 1);
+    113              }
+    114              return (retval);
+    115          }
+    116          
+    117          //---------------------------------------------------------------------------------------------------------------------
+    118          /**
+    119           * @brief   Initialize an instance of the input.
+    120           * @param   input: pointer to various data for the LLI, managed by the Hbl module
+    121           * @return  PASS if the instance of the LLI was successfully initialized, else FALSE
+    122           */
+    123          PASS_FAIL_TYPE SRDigitalLLI__InitializeInstance(HBL_LLI_TYPE * input)
+    124          {
+    125              GPIO_PIN_MODE_TYPE type;
+    126              uint8 digitalcfg1;
+    127              uint8 virtual_pin;
+    128              PASS_FAIL_TYPE retval = FAIL;
+    129          
+    130              if ((SR_CHECK_BYTE(SRDigitalLLI_Allocation) == SRDATA_OK) &&
+    131                  (input->Data_Index < SRDigitalLLI_Allocation))
+    132              {
+    133                  virtual_pin = input->Pin_Ptr[0];
+    134          
+    135                  // Initialize the protected variables for this instance of the SRDigital LLI
+    136                  SRData__UpdateByte((uint8 *)(void *)&SRDigitalLLI_Data[input->Data_Index].value, (uint8 *)(void *)&N_SRDigitalLLI_Data[input->Data_Index].value, FALSE);
+    137                  SRData__UpdateByte((uint8 *)(void *)&SRDigitalLLI_Data[input->Data_Index].index, (uint8 *)(void *)&N_SRDigitalLLI_Data[input->Data_Index].index, 0);
+    138                  SRData__UpdateByte((uint8 *)(void *)&SRDigitalLLI_Data[input->Data_Index].level_cnt, (uint8 *)(void *)&N_SRDigitalLLI_Data[input->Data_Index].level_cnt, 0);
+    139          
+    140                  // Grab the second byte of configuration data from the setting file
+    141                  if(input->Parameter_Ptr.Data != NULL)
+    142                  {
+    143                      digitalcfg1 = input->Parameter_Ptr.Data[1];
+    144                  }
+    145                  else
+    146                  {
+    147                      digitalcfg1 = 0;
+    148                  }
+    149          
+    150                  // Determine if the input has an internal pullup resistor enabled, else it is just floating
+    151                  if (digitalcfg1 & SRDIGITALLOWINPUT_CFG1_PULLUP)
+    152                  {
+    153                      type = INPUT_PULLUP;
+    154                  }
+    155                  else
+    156                  {
+    157                      type = INPUT_FLOAT;
+    158                  }
+    159          
+    160                  // Configure the gpio pin for the input
+    161                  Gpio__PinConfig(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin, type);
+    162          
+    163                  // Verify the configuration of the pin was set as expected
+    164                  if(Gpio__CheckConfig(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin, type, FALSE) == TRUE)
+    165                  {
+    166                      retval = PASS;
+    167                  }
+    168              }
+    169          
+    170              return (retval);
+    171          }
+    172          
+    173          //---------------------------------------------------------------------------------------------------------------------
+    174          /**
+    175           * @brief
+    176           */
+    177          void SRDigitalLLI__Handler(void)
+    178          {
+    179              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    180          
+    181              if (SR_CHECK_BYTE(SRDigitalLLI_Allocation) != SRDATA_OK)
+    182              {
+    183                  SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, 0x00, 0xAB);
+    184                  // System will reset after this exception occurs
+    185              }
+    186              else
+    187              {
+    188                  for (uint8 index = 0; index < HBL_LLI_NUM_SRDIGITAL; index++)
+    189                  {
+    190                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    191                      if (SRData__CheckArray((uint8 *)(void *)&SRDigitalLLI_Data[index], (uint8 *)(void *)&N_SRDigitalLLI_Data[index], sizeof(SRDigitalLLI_Data[0])) != SRDATA_OK)
+    192                      {
+    193                          SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, 0x01, index);
+    194                          // System will reset after this exception occurs
+    195                      }
+    196                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    197                  }
+    198              }
+    199          
+    200              #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    201                  SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_THREAD, SRTASKSEQUENCE_APPL_SRDIGITAL_CHECK);
+    202              #endif
+    203          
+    204          }
+    205          //---------------------------------------------------------------------------------------------------------------------
+    206          /**
+    207           * @brief   Gets the data for one instance of an input.
+    208           * @param   input: pointer to various data for the LLI, managed by the Hbl module
+    209           * @return  Pointer to the SRDigitalLLI_Data buffer that contains the current state of the instance of the SRDigital LLI.
+    210           */
+    211          void * SRDigitalLLI__Get(HBL_LLI_TYPE * input)
+    212          {
+    213              if ((SR_CHECK_BYTE(SRDigitalLLI_Allocation) == SRDATA_OK) &&
+    214                  (SRData__CheckArray((uint8 *)(void *)&SRDigitalLLI_Data[input->Data_Index], (uint8 *)(void *)&N_SRDigitalLLI_Data[input->Data_Index], sizeof(SRDigitalLLI_Data[0])) == SRDATA_OK) &&
+    215                  (input->Data_Index < SRDigitalLLI_Allocation))
+    216              {
+    217                  return ((void *)&SRDigitalLLI_Data[input->Data_Index].value);
+    218              }
+    219              else
+    220              {
+    221                  return (NULL);
+    222              }
+    223          }
+    224          
+    225          //---------------------------------------------------------------------------------------------------------------------
+    226          /**
+    227           * @brief   Processing of the input state.
+    228           * @param   input: pointer to various data for the LLI managed by the HblHmi module
+    229           * @return  Always TRUE
+    230           */
+    231          BOOL_TYPE SRDigitalLLI__AsynchProcess(HBL_LLI_TYPE * input)
+    232          {
+    233              SRDIGITALLLI_DATA_TYPE data;
+    234              BOOL_TYPE retval;
+    235              BOOL_TYPE pinval;
+    236              uint8 digitalcfg0;
+    237              uint8 digitalcfg1;
+    238              uint8 virtual_pin;
+    239              uint8 nsamples;
+    240              GPIO_PIN_MODE_TYPE gpio_type;
+    241          
+    242              retval = FALSE;
+    243              digitalcfg0 = 0;
+    244              digitalcfg1 = 0;
+    245          
+    246              if ((SR_CHECK_BYTE(SRDigitalLLI_Allocation) == SRDATA_OK) &&
+    247                  (input->Data_Index < SRDigitalLLI_Allocation))
+    248              {
+    249                  virtual_pin = input->Pin_Ptr[0];
+    250          
+    251                  // Grab the configuration from the setting file
+    252                  if(input->Parameter_Ptr.Data != NULL)
+    253                  {
+    254                      digitalcfg0 = input->Parameter_Ptr.Data[0];
+    255                      digitalcfg1 = input->Parameter_Ptr.Data[1];
+    256                  }
+    257          
+    258                  // Determine if the input has an internal pull up resistor enabled, else it is just floating
+    259                  if (digitalcfg1 & SRDIGITALLOWINPUT_CFG1_PULLUP)
+    260                  {
+    261                      gpio_type = INPUT_PULLUP;
+    262                  }
+    263                  else
+    264                  {
+    265                      gpio_type = INPUT_FLOAT;
+    266                  }
+    267          
+    268                  if (SRData__CheckArray(&SRDigitalLLI_Data[input->Data_Index], &N_SRDigitalLLI_Data[input->Data_Index],  sizeof(SRDigitalLLI_Data[0])) == SRDATA_OK)
+    269                  {
+    270                      data = SRDigitalLLI_Data[input->Data_Index];
+    271          
+    272                      // Verify the configuration of the pin has not been changed before reading the state of the pin
+    273                      if(Gpio__CheckConfig(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin, gpio_type, FALSE) == FALSE)
+    274                      {
+    275                          SRException__Queue(SREXCEPTION_GPIO_CONFIGURATION_CORRUPTION, VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin);
+    276                      }
+    277                      else
+    278                      {
+    279                          // Get the current state of the input from the gpio pin
+    280                          pinval = Gpio__PinRead(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin);
+    281          
+    282                          // Setup the number of samples that will be required before updating the current state of the SRDigital LLI
+    283                          nsamples = 1 << (digitalcfg0 & SRDIGITALLOWINPUT_CFG0_NREAD_MASK);
+    284          
+    285                          // Inverted logic flag enabled - swap TRUE to FALSE
+    286                          if (digitalcfg1 & SRDIGITALLOWINPUT_CFG1_INVERT)
+    287                          {
+    288          //                    pinval ^= TRUE;
+    289                              pinval = (BOOL_TYPE)(pinval ^ TRUE);
+    290                          }
+    291          
+    292                          if (nsamples == 1)                  // If only 1 sample is required, update the current state of the SRDigital LLI
+    293                          {
+    294                              data.value = pinval;
+    295                              retval = TRUE;
+    296                          }
+    297                          else                                // If more than 1 sample is required, manage multiple readings
+    298                          {
+    299                              data.index++;                   // Increment the index each time a new sample is taken
+    300          
+    301                              // Level detection
+    302                              if (pinval == TRUE)             // Increment the level counter each time the sample is high
+    303                              {
+    304                                  data.level_cnt++;
+    305                              }
+    306          
+    307                              if (data.index >= nsamples)     // Wait until the required number of samples has been taken before updating the current state of the SRDigital LLI
+    308                              {
+    309                                  if (data.level_cnt >= (nsamples - (nsamples / 4)))
+    310                                  {
+    311                                      data.value = TRUE;      // Update the current state of the SRDigital LLI to "TRUE" if at least 75% of the samples were high
+    312                                  }
+    313                                  else if (data.level_cnt <= (nsamples / 4))
+    314                                  {
+    315                                      data.value = FALSE;     // Update the current state of the SRDigital LLI to "FALSE" if 25% or less of the samples were low
+    316                                  }
+    317                                  else
+    318                                  {
+    319                                      /* Keep old state if the input signal is not steady based on the previous logic*/
+    320                                  }
+    321          
+    322                                  // Reset variables to manage multiple readings
+    323                                  data.level_cnt = 0;
+    324                                  data.index = 0;
+    325          
+    326                                  retval = TRUE;
+    327                              }
+    328                          }
+    329          
+    330                          // Update protected variables that holds the data for the input
+    331                          SRData__UpdateArray(&SRDigitalLLI_Data[input->Data_Index], &N_SRDigitalLLI_Data[input->Data_Index], &data, sizeof(SRDigitalLLI_Data[0]));
+    332                      }
+    333                  }
+    334              }
+    335          
+    336              return (retval);
+    337          }
+    338          
+    339          //=====================================================================================================================
+    340          //-------------------------------------- Private Functions ------------------------------------------------------------
+    341          //=====================================================================================================================
+    342          
+    343          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

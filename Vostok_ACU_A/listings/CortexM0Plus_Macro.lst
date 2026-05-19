@@ -1,0 +1,905 @@
+###############################################################################
+#                                                                             #
+#     IAR Assembler V7.70.1.11437/W32 for ARM 28/Feb/2025  14:17:04           #
+#     Copyright 1999-2016 IAR Systems AB.                                     #
+#                                                                             #
+#           Source file   =  C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Micros\STM32G0x\Driver\Micro\CortexM0Plus_Macro.s37#
+#           List file     =  C:\Data\Nucleus_Dev\Vostok_ACU_A\listings\CortexM0Plus_Macro.lst#
+#           Object file   =  C:\Data\Nucleus_Dev\Vostok_ACU_A\obj\CortexM0Plus_Macro.obj#
+#           Command line  =  --cpu Cortex-M0+ -S -r -f                        #
+#                            config\tmp\include_path.lnt                      #
+#                            (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\  #
+#                            -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\     #
+#                            -Isource/Category/Application/acu/CycleResume\   #
+#                            -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/DoorMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/FillValveStuckOn\ #
+#                            -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/HeatMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/LITTMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\ #
+#                            -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\ #
+#                            -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\ #
+#                            -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\ #
+#                            -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\ #
+#                            -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\ #
+#                            -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/OverfillMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/OWIMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/PORTimeMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/RinseAidMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/StandbyManager\ #
+#                            -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/VwiMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\ #
+#                            -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\ #
+#                            -Isource/Category/Application/acu/Processes/AlternateCtrl\ #
+#                            -Isource/Category/Application/acu/Processes/Fill\ #
+#                            -Isource/Category/Application/acu/Processes/Fill/ClassAFill\ #
+#                            -Isource/Category/Application/acu/Processes/Fill/Fill\ #
+#                            -Isource/Category/Application/acu/Processes/Fill/TankDrain\ #
+#                            -Isource/Category/Application/acu/Processes/Fill/TankFill\ #
+#                            -Isource/Category/Application/acu/Processes/Heat\ #
+#                            -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\ #
+#                            -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\ #
+#                            -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\ #
+#                            -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\ #
+#                            -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\ #
+#                            -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\ #
+#                            -Isource/Category/Application/acu/Processes/OWI\ #
+#                            -Isource/Category/Application/acu/Processes/OWI_VRO\ #
+#                            -Isource/Category/Application/acu/Processes/OWIOneShot\ #
+#                            -Isource/Category/Application/acu/Processes/PumpControl\ #
+#                            -Isource/Category/Application/acu/Processes/Regenerate\ #
+#                            -Isource/Category/Application/acu/Processes/RinseAidDispense\ #
+#                            -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\ #
+#                            -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\ #
+#                            -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\ #
+#                            -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\ #
+#                            -Isource/Category/Application/acu/Tasks/HeaterShadowing\ #
+#                            -Isource/Category/Application/acu/Tasks/MoisturePrevention\ #
+#                            -Isource/Category/Application/acu/Tasks/OWIContinousReading\ #
+#                            -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\ #
+#                            -Isource/Category/Application/acu/Tasks/Sanitization\ #
+#                            -Isource/Category/Application/acu/Tasks/StabilityControl\ #
+#                            -Isource/Category/Application/acu/Tasks/TimeElapse\ #
+#                            -Isource/Category/Application/acu/VWI\           #
+#                            -Isource/Category/Application/all/ActivePower\   #
+#                            -Isource/Category/Application/all/API007App\     #
+#                            -Isource/Category/Application/all/Config\        #
+#                            -Isource/Category/Common/acu/CommonDish/DishAuxVar\ #
+#                            -Isource/Category/Common/acu/CommonDish/PumpCommand\ #
+#                            -Isource/Category/Common/acu/CommonDish/StatisticsDish\ #
+#                            -Isource/Category/Common/all/BoardDebugging\     #
+#                            -Isource/Category/Common/all/Config\             #
+#                            -Isource/Category/Common/all/MasterCommander\    #
+#                            -Isource/Category/Common/all/MasterCommander/Source\ #
+#                            -Isource/Category/Common/all/MasterCommander/Source/HAL\ #
+#                            -Isource/Category/Common/all/SharedUtils\        #
+#                            -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\ #
+#                            -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\ #
+#                            -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\ #
+#                            -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\ #
+#                            -Isource/Category/Hbl/all/Config\                #
+#                            -Isource/Category/Hbl/all/Mci\                   #
+#                            -Isource/Category/Hbl/all/Mci/MciZeroCross\      #
+#                            -Isource/Category/Hbl/all/Mci/Slfac\             #
+#                            -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\ #
+#                            -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\ #
+#                            -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\ #
+#                            -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\ #
+#                            -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\ #
+#                            -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\ #
+#                            -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\ #
+#                            -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\ #
+#                            -Isource/Micros/STM32G0x/Driver/Atod\            #
+#                            -Isource/Micros/STM32G0x/Driver/DataFlash\       #
+#                            -Isource/Micros/STM32G0x/Driver/Dma\             #
+#                            -Isource/Micros/STM32G0x/Driver/Dtoa\            #
+#                            -Isource/Micros/STM32G0x/Driver/ExtInterrupt\    #
+#                            -Isource/Micros/STM32G0x/Driver/Flash\           #
+#                            -Isource/Micros/STM32G0x/Driver/Gpio\            #
+#                            -Isource/Micros/STM32G0x/Driver/I2c\             #
+#                            -Isource/Micros/STM32G0x/Driver/IntMgr\          #
+#                            -Isource/Micros/STM32G0x/Driver/Micro\           #
+#                            -Isource/Micros/STM32G0x/Driver/MicroExt\        #
+#                            -Isource/Micros/STM32G0x/Driver/Rtc\             #
+#                            -Isource/Micros/STM32G0x/Driver/RTCDriver\       #
+#                            -Isource/Micros/STM32G0x/Driver/Spi\             #
+#                            -Isource/Micros/STM32G0x/Driver/Timeout\         #
+#                            -Isource/Micros/STM32G0x/Driver/Timer\           #
+#                            -Isource/Micros/STM32G0x/Driver/TimerInterrupt\  #
+#                            -Isource/Micros/STM32G0x/Driver/Uart\            #
+#                            -Isource/ProjectSpecific/Application/acu/Config\ #
+#                            -Isource/ProjectSpecific/Application/acu/LowPower\ #
+#                            -Isource/ProjectSpecific/Application/acuexpacu/Config\ #
+#                            -Isource/ProjectSpecific/Application/all/Config\ #
+#                            -Isource/ProjectSpecific/Application/all/MCUDebug\ #
+#                            -Isource/ProjectSpecific/Application/all/ProductInfo\ #
+#                            -Isource/ProjectSpecific/Common/acu/Config\      #
+#                            -Isource/ProjectSpecific/Common/all/Config\      #
+#                            -Isource/ProjectSpecific/Common/all/Debug\       #
+#                            -Isource/ProjectSpecific/Common/all/SRConfig\    #
+#                            -Isource/ProjectSpecific/Driver/STM32G0x\        #
+#                            -Isource/ProjectSpecific/Hbl/acuexpacu/Config\   #
+#                            -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\ #
+#                            -Isource/ProjectSpecific/Hbl/all/Config\         #
+#                            -Isource/ProjectSpecific/Hbl/all/Config/Mci\     #
+#                            -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\ #
+#                            -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\ #
+#                            -Isource/ProjectSpecific/Hbl/all/SRConfig\       #
+#                            -Isource/XCategory/Application/acu/API221MotionCtrl\ #
+#                            -Isource/XCategory/Application/acu/Calibration\  #
+#                            -Isource/XCategory/Application/acu/Condition\    #
+#                            -Isource/XCategory/Application/acu/Estimator\    #
+#                            -Isource/XCategory/Application/acu/Interpreter\  #
+#                            -Isource/XCategory/Application/acu/Processes/ActivateTask\ #
+#                            -Isource/XCategory/Application/acu/Processes/JumpIf\ #
+#                            -Isource/XCategory/Application/acu/Processes/LoadsControl\ #
+#                            -Isource/XCategory/Application/acu/Processes/Maintain\ #
+#                            -Isource/XCategory/Application/acu/Processes/SetVariable\ #
+#                            -Isource/XCategory/Application/acu/RegulationAccept\ #
+#                            -Isource/XCategory/Application/acu/Selector\     #
+#                            -Isource/XCategory/Application/acu/SubCycle\     #
+#                            -Isource/XCategory/Application/acu/Supervisor\   #
+#                            -Isource/XCategory/Application/acu/TestMgr\      #
+#                            -Isource/XCategory/Application/acuexpacu/ApplianceMgr\ #
+#                            -Isource/XCategory/Application/acuhmi/CommunicationMonitor\ #
+#                            -Isource/XCategory/Application/acuhmi/Modifier\  #
+#                            -Isource/XCategory/Application/acuhmi/Regulations\ #
+#                            -Isource/XCategory/Application/acuhmi/Status\    #
+#                            -Isource/XCategory/Application/all/API007Data\   #
+#                            -Isource/XCategory/Application/all/API011AppCtr\ #
+#                            -Isource/XCategory/Application/all/API012Exp\    #
+#                            -Isource/XCategory/Application/all/API013RemoteFunction\ #
+#                            -Isource/XCategory/Application/all/API018Diagnostic\ #
+#                            -Isource/XCategory/Application/all/API220MotorControl\ #
+#                            -Isource/XCategory/Application/all/API220MotorControl/Api\ #
+#                            -Isource/XCategory/Application/all/Mode\         #
+#                            -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\ #
+#                            -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\ #
+#                            -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\ #
+#                            -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\ #
+#                            -Isource/XCategory/Application/all/Reveal_Basic/API009System\ #
+#                            -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\ #
+#                            -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\ #
+#                            -Isource/XCategory/Application/all/SFUpdater\    #
+#                            -Isource/XCategory/Application/all/SRAPI020Safety\ #
+#                            -Isource/XCategory/Application/all/StatusLed\    #
+#                            -Isource/XCategory/Common/acu/BrownOut\          #
+#                            -Isource/XCategory/Common/acu/Fault\             #
+#                            -Isource/XCategory/Common/acu/Statistics\        #
+#                            -Isource/XCategory/Common/all/Common/Callback\   #
+#                            -Isource/XCategory/Common/all/Common/Convert\    #
+#                            -Isource/XCategory/Common/all/Common/Crc16\      #
+#                            -Isource/XCategory/Common/all/Common/Crc32\      #
+#                            -Isource/XCategory/Common/all/Common/Crc8\       #
+#                            -Isource/XCategory/Common/all/Common/Equation\   #
+#                            -Isource/XCategory/Common/all/Common/Filter\     #
+#                            -Isource/XCategory/Common/all/Common/FITMgr\     #
+#                            -Isource/XCategory/Common/all/Common/I2cMgr\     #
+#                            -Isource/XCategory/Common/all/Common/IAPEmul\    #
+#                            -Isource/XCategory/Common/all/Common/Log\        #
+#                            -Isource/XCategory/Common/all/Common/Millis\     #
+#                            -Isource/XCategory/Common/all/Common/SeggerRTT\  #
+#                            -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\ #
+#                            -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\ #
+#                            -Isource/XCategory/Common/all/Common/SettingFile\ #
+#                            -Isource/XCategory/Common/all/Common/SFVersionCheck\ #
+#                            -Isource/XCategory/Common/all/Common/SystemConfig\ #
+#                            -Isource/XCategory/Common/all/Common/SystemTimers\ #
+#                            -Isource/XCategory/Common/all/Common/Utilities\  #
+#                            -Isource/XCategory/Common/all/Common/Variable\   #
+#                            -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\ #
+#                            -Isource/XCategory/Common/all/SRCommon/SRData\   #
+#                            -Isource/XCategory/Common/all/SRCommon/SRException\ #
+#                            -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\ #
+#                            -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\ #
+#                            -Isource/XCategory/Common/all/SRCommon/SRSignature\ #
+#                            -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\ #
+#                            -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\ #
+#                            -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\ #
+#                            -Isource/XCategory/Common/all/SRCommon/SRTimerReference\ #
+#                            -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\ #
+#                            -Isource/XCategory/Common/all/SRMain\            #
+#                            -Isource/XCategory/Common/all/SRMain/BackgroundThreads\ #
+#                            -Isource/XCategory/Common/all/SRMain/OsServices\ #
+#                            -Isource/XCategory/Common/all/SRMain/StackAnalysis\ #
+#                            -Isource/XCategory/Common/all/SRMain/TimingAnalysis\ #
+#                            -Isource/XCategory/Driver/APIs/Atod\             #
+#                            -Isource/XCategory/Driver/APIs/Comparator\       #
+#                            -Isource/XCategory/Driver/APIs/DataFlash\        #
+#                            -Isource/XCategory/Driver/APIs/Dma\              #
+#                            -Isource/XCategory/Driver/APIs/Dtc\              #
+#                            -Isource/XCategory/Driver/APIs/Dtoa\             #
+#                            -Isource/XCategory/Driver/APIs/EmbOS\            #
+#                            -Isource/XCategory/Driver/APIs/ExtInterrupt\     #
+#                            -Isource/XCategory/Driver/APIs/Flash\            #
+#                            -Isource/XCategory/Driver/APIs/Gpio\             #
+#                            -Isource/XCategory/Driver/APIs/I2c\              #
+#                            -Isource/XCategory/Driver/APIs/IntMgr\           #
+#                            -Isource/XCategory/Driver/APIs/Micro\            #
+#                            -Isource/XCategory/Driver/APIs/MicroExt\         #
+#                            -Isource/XCategory/Driver/APIs/Rtc\              #
+#                            -Isource/XCategory/Driver/APIs/RTCDriver\        #
+#                            -Isource/XCategory/Driver/APIs/Spi\              #
+#                            -Isource/XCategory/Driver/APIs/Timeout\          #
+#                            -Isource/XCategory/Driver/APIs/Timer\            #
+#                            -Isource/XCategory/Driver/APIs/TimerInterrupt\   #
+#                            -Isource/XCategory/Driver/APIs/Touch\            #
+#                            -Isource/XCategory/Driver/APIs/Uart\             #
+#                            -Isource/XCategory/Hbl/acu/FdmCounter\           #
+#                            -Isource/XCategory/Hbl/acu/FdmTimer\             #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/HblAcu\         #
+#                            -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\ #
+#                            -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\ #
+#                            -Isource/XCategory/Hbl/all/Hbl\                  #
+#                            -Isource/XCategory/Hbl/all/Hbl/DefaultPin\       #
+#                            -Isource/XCategory/Hbl/all/Hbl/HblCommon\        #
+#                            -Isource/XCategory/Hbl/all/Hbl/VirtualPin\       #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\ #
+#                            -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\ #
+#                            -Isource/XCategory/Service/all/NVData\           #
+#                            -Isource/XCategory/Service/all/Reveal\           #
+#                            -Isource/XCategory/Service/all/Win\) -l          #
+#                            listings\CortexM0Plus_Macro.lst -o               #
+#                            obj\CortexM0Plus_Macro.obj                       #
+#                            source/Micros/STM32G0x/Driver/Micro/CortexM0Plus_Macro.s37 #
+#                                                                             #
+###############################################################################
+
+    1                           ;/**
+    2                           ; *  @file
+    3                           ; *  @defgroup   CLASS_B
+    4                           ; *
+    5                           ; *  @brief      consists of API defination to
+                                 access the Cortex-M0+ core.
+    6                           ; *
+    7                           ; *  @section    Applicable_Documents
+    8                           ; *                  List here all the
+                                 applicable documents if needed. <tr>
+    9                           ; *
+   10                           ; *  $Header: $
+   11                           ; *
+   12                           ; *  @copyright  Copyright 2015-$Date$.
+                                 Whirlpool Corporation. All rights reserved -
+                                 CONFIDENTIAL
+   13                           ; */
+   14                           ;//-------------------------------------------
+                                -----------------------------------------------
+                                ---------------------------
+   15                             SECTION .bss:DATA
+   16                             
+   17                             PUBLIC 
+   18                            
+   19                             SECTION .text:CODE(2)
+   20                             
+   21                             ; Exported functions
+   22                             
+   23                             EXPORT __MSR_MSP
+   24                             EXPORT __WFI
+   25                             EXPORT __WFE
+   26                             EXPORT __SEV
+   27                             EXPORT __ISB
+   28                             EXPORT __DSB
+   29                             EXPORT __DMB
+   30                             EXPORT __SVC
+   31                             EXPORT __MSR_CONTROL
+   32                             EXPORT __MRS_PSP
+   33                             EXPORT __MSR_PSP
+   34                             EXPORT __MRS_MSP
+   35                             EXPORT __MSR_MSP
+   36                             EXPORT __RESETPRIMASK
+   37                             EXPORT __REV_HalfWord
+   38                             EXPORT __REV_Word  
+   39                             EXPORT __StartupRegisterTest
+   40                             EXPORT __RunRegisterTest
+   41                             
+   42                           ;*********************************************
+                                **********************************
+   43                           ; Function Name  : __WFI
+   44                           ; Description    : Assembler function for the
+                                 WFI instruction.
+   45                           ; Input          : None
+   46                           ; Return         : None
+   47                           ;*********************************************
+                                **********************************
+   48                           __WFI 
+   49                            
+   50    00000000 30BF              WFI
+   51    00000002 7047              BX r14
+   52                           
+   53                           ;*********************************************
+                                **********************************
+   54                           ; Function Name  : __WFE
+   55                           ; Description    : Assembler function for the
+                                 WFE instruction.
+   56                           ; Input          : None
+   57                           ; Return         : None
+   58                           ;*********************************************
+                                **********************************
+   59                           __WFE
+   60                           
+   61    00000004 20BF              WFE
+   62    00000006 7047              BX r14
+   63                           
+   64                           ;*********************************************
+                                **********************************
+   65                           ; Function Name  : __SEV
+   66                           ; Description    : Assembler function for the
+                                 SEV instruction.
+   67                           ; Input          : None
+   68                           ; Return         : None
+   69                           ;*********************************************
+                                **********************************
+   70                           __SEV
+   71                           
+   72    00000008 40BF              SEV
+   73    0000000A 7047              BX r14
+   74                           
+   75                           ;*********************************************
+                                **********************************
+   76                           ; Function Name  : __ISB
+   77                           ; Description    : Assembler function for the
+                                 ISB instruction.
+   78                           ; Input          : None
+   79                           ; Return         : None
+   80                           ;*********************************************
+                                **********************************
+   81                           __ISB
+   82                           
+   83    0000000C BFF36F8F          ISB
+   84    00000010 7047              BX r14
+   85                           
+   86                           ;*********************************************
+                                **********************************
+   87                           ; Function Name  : __DSB
+   88                           ; Description    : Assembler function for the
+                                 DSB instruction.
+   89                           ; Input          : None
+   90                           ; Return         : None
+   91                           ;*********************************************
+                                **********************************
+   92                           __DSB
+   93                           
+   94    00000012 BFF34F8F          DSB
+   95    00000016 7047              BX r14
+   96                           
+   97                           ;*********************************************
+                                **********************************
+   98                           ; Function Name  : __DMB
+   99                           ; Description    : Assembler function for the
+                                 DMB instruction.
+  100                           ; Input          : None
+  101                           ; Return         : None
+  102                           ;*********************************************
+                                **********************************
+  103                           __DMB
+  104                           
+  105    00000018 BFF35F8F          DMB
+  106    0000001C 7047              BX r14
+  107                           
+  108                           ;*********************************************
+                                **********************************
+  109                           ; Function Name  : __SVC
+  110                           ; Description    : Assembler function for the
+                                 SVC instruction.
+  111                           ; Input          : None
+  112                           ; Return         : None
+  113                           ;*********************************************
+                                **********************************
+  114                           __SVC
+  115                           
+  116    0000001E 01DF              SVC 0x01
+  117    00000020 7047              BX r14
+  118                           
+  119                           ;*********************************************
+                                **********************************
+  120                           ; Function Name  : __MSR_CONTROL
+  121                           ; Description    : Assembler function for the
+                                 MSR instruction.
+  122                           ; Input          : - r0 : Cortex-M0 CONTROL
+                                 register new value.  
+  123                           ; Return         : None
+  124                           ;*********************************************
+                                **********************************
+  125                           __MSR_CONTROL
+  126                           
+  127    00000022 80F31488        MSR CONTROL, r0
+  128    00000026 BFF36F8F        ISB
+  129    0000002A 7047            BX r14
+  130                           
+  131                           ;*********************************************
+                                **********************************
+  132                           ; Function Name  : __MRS_PSP
+  133                           ; Description    : Assembler function for the
+                                 MRS instruction.
+  134                           ; Input          : None
+  135                           ; Return         : - r0 : Process Stack
+                                 value.
+  136                           ;*********************************************
+                                **********************************
+  137                           __MRS_PSP
+  138                           
+  139    0000002C EFF30980        MRS r0, PSP
+  140    00000030 7047            BX r14
+  141                           
+  142                           ;*********************************************
+                                **********************************
+  143                           ; Function Name  : __MSR_PSP
+  144                           ; Description    : Assembler function for the
+                                 MSR instruction.
+  145                           ; Input          : - r0 : Process Stack new
+                                 value.  
+  146                           ; Return         : None
+  147                           ;*********************************************
+                                **********************************
+  148                           __MSR_PSP 
+  149                            
+  150    00000032 80F30988          MSR PSP, r0 ; set Process Stack value
+  151    00000036 7047              BX r14
+  152                           
+  153                           ;*********************************************
+                                **********************************
+  154                           ; Function Name  : __MRS_MSP
+  155                           ; Description    : Assembler function for the
+                                 MRS instruction.
+  156                           ; Input          : None
+  157                           ; Return         : - r0 : Main Stack
+                                 value.
+  158                           ;*********************************************
+                                **********************************
+  159                           __MRS_MSP
+  160                           
+  161    00000038 EFF30880        MRS r0, MSP
+  162    0000003C 7047            BX r14
+  163                           
+  164                           ;*********************************************
+                                **********************************
+  165                           ; Function Name  : __MSR_MSP
+  166                           ; Description    : Assembler function for the
+                                 MSR instruction.
+  167                           ; Input          : - r0 : Main Stack new
+                                 value.  
+  168                           ; Return         : None
+  169                           ;*********************************************
+                                **********************************
+  170                           __MSR_MSP 
+  171                            
+  172    0000003E 80F30888          MSR MSP, r0 ; set Main Stack value
+  173    00000042 7047              BX r14
+  174                                       
+  175                           ;*********************************************
+                                **********************************
+  176                           ; Function Name  : __RESETPRIMASK
+  177                           ; Description    : Assembler function to reset
+                                 the PRIMASK.
+  178                           ; Input          : None 
+  179                           ; Return         : None
+  180                           ;*********************************************
+                                **********************************
+  181                           __RESETPRIMASK
+  182                           
+  183    00000044 62B6            CPSIE i
+  184    00000046 7047            BX r14
+  185                           
+  186                           ;*********************************************
+                                **********************************
+  187                           ; Function Name  : __REV_HalfWord
+  188                           ; Description    : Reverses the byte order in
+                                 HalfWord(16-bit) input variable.
+  189                           ; Input          : - r0 : specifies the input
+                                 variable
+  190                           ; Return         : - r0 : holds tve variable
+                                 value after byte reversing.
+  191                           ;*********************************************
+                                **********************************
+  192                           __REV_HalfWord 
+  193                            
+  194    00000048 40BA            REV16 r0, r0
+  195    0000004A 7047            BX r14
+  196                           
+  197                           ;*********************************************
+                                **********************************
+  198                           ; Function Name  : __REV_Word
+  199                           ; Description    : Reverses the byte order in
+                                 Word(32-bit) input variable.
+  200                           ; Input          : - r0 : specifies the input
+                                 variable
+  201                           ; Return         : - r0 : holds tve variable
+                                 value after byte reversing.
+  202                           ;*********************************************
+                                **********************************
+  203                           __REV_Word 
+  204                            
+  205    0000004C 00BA            REV r0, r0
+  206    0000004E 7047            BX r14
+  207                             
+  208                           
+  209                           ;*********************************************
+                                **********************************
+  210                           ; Function Name  : StartupRegisterTest
+  211                           ; Description    : Full Cortex-M0 CPU test at
+                                 start-up
+  212                           ;                  Note: when possible, BRANCH
+                                 are 16-bit only (depending on
+  213                           ;                  relative offset to final BL
+                                 instruction)
+  214                           ; Input          : None.
+  215                           ; Output         : Branch directly to a Fail
+                                 Safe routine in case of failure
+  216                           ; Return         : TRUE (=1)
+  217                           ;*********************************************
+                                **********************************/
+  218                           __StartupRegisterTest:
+  219                                   ;save the register value to be
+                                 tested
+  220    00000050 12B5                  PUSH     {R1, R4, LR}
+  221                                   
+  222    00000052 0020              MOVS R0, #0x00000000                ; Set
+                                          Z(ero) Flag
+  223    00000054 0FD1              BNE srt_fail                        ; Fails
+                                          if Z clear
+  224    00000056 0138              SUBS R0,#1                          ; Set
+                                          N(egative) Flag
+  225    00000058 0DD5              BPL srt_fail                        ; Fails
+                                          if N clear
+  226    0000005A 0230              ADDS R0,#2                          ; Set
+                                          C(arry) Flag and do not set
+                                          Z
+  227    0000005C 0BD3              BCC srt_fail                        ; Fails
+                                          if C clear
+  228    0000005E 4148              LDR R0, = 0x80000000                       
+                                         ; Prepares Overflow test
+  229    00000060 0018              ADDS R0, R0, R0                     ; Set
+                                          V(overflow) Flag
+  230    00000062 08D7              BVC srt_fail                               
+                                          ; Fails if V clear
+  231    00000064 EFF30080          MRS R0, APSR                        ; Get
+                                         Status register
+  232    00000068 3F49              LDR R1, = 0x70000000                       
+                                         ; Prepares Overflow test
+  233    0000006A 8842              CMP R0, R1                                 
+                                                 ; Verifies that Z=C=V=1
+  234    0000006C 03D1              BNE srt_fail                               
+                                          ; Fails if Q+N+C=V clear
+  235                               
+  236                               srt_pass:
+  237    0000006E 00F005F8          BL __RunRegisterTest
+  238                               ;restore the register value
+  239    00000072 12BD                  POP      {R1, R4, PC}
+  240    00000074 7047              BX LR               ; return to the
+                                                         caller
+  241                           
+  242                               srt_fail:
+  243                               ;restore the register value
+  244    00000076 12BD                  POP      {R1, R4, PC}
+  245                                   
+  246    00000078 0020                  MOVS R0, #0x0
+  247    0000007A 7047                  BX LR               ; return to the
+                                                             caller
+  248                                   
+  249                           ;*********************************************
+                                **********************************
+  250                           ; Function Name  : RunRegisterTest
+  251                           ; Description    : Full Cortex-M0 CPU test
+                                 during run-time
+  252                           ;                  Note: when possible, BRANCH
+                                 are 16-bit only (depending on
+  253                           ;                  relative offset to final BL
+                                 instruction)
+  254                           ; Input          : None.
+  255                           ; Output         : Branch directly to a Fail
+                                 Safe routine in case of failure
+  256                           ; Return         : TRUE (=1) if test is
+                                 ok
+  257                           ;*********************************************
+                                **********************************/
+  258                           __RunRegisterTest:
+  259                           
+  260    0000007C FEB4              PUSH     {R1, R2, R3, R4, R5, R6,
+                                              R7}
+  261                               ; Register R0 (holds value returned by the
+                                 function)
+  262                               
+  263                               ; Register R0 and R1
+  264    0000007E 3B48              LDR R0,=0xAAAAAAAA
+  265    00000080 3A49              LDR R1,=0xAAAAAAAA
+  266    00000082 8842              CMP R0, R1
+  267    00000084 6AD1              BNE rrt_fail
+  268    00000086 3A48              LDR R0,=0x55555555
+  269    00000088 3949              LDR R1,=0x55555555
+  270    0000008A 8842              CMP R0, R1
+  271    0000008C 66D1              BNE rrt_fail
+  272    0000008E 0121              MOVS R1, #0x01            ; For ramp
+                                                               test
+  273                           
+  274                               ; Link register (Register R14)
+  275                               ;LDR R0,=0xAAAAAAAA
+  276                               ;LDR R14,=0xAAAAAAAA
+  277                               ;CMP R0, R14
+  278                               ;BNE rrt_fail
+  279                               ;LDR R0,=0x55555555
+  280                               ;LDR R14,=0x55555555
+  281                               ;CMP R0, R14
+  282                               ;BNE rrt_fail
+  283                           
+  284                               ; Register R2
+  285    00000090 3648              LDR R0,=0xAAAAAAAA
+  286    00000092 364A              LDR R2,=0xAAAAAAAA
+  287    00000094 9042              CMP R0, R2
+  288    00000096 61D1              BNE rrt_fail
+  289    00000098 3548              LDR R0,=0x55555555
+  290    0000009A 354A              LDR R2,=0x55555555
+  291    0000009C 9042              CMP R0, R2
+  292    0000009E 5DD1              BNE rrt_fail
+  293    000000A0 0222              MOVS R2, #0x02            ; For ramp
+                                                               test
+  294                           
+  295                               ; Register R3
+  296    000000A2 3248              LDR R0,=0xAAAAAAAA
+  297    000000A4 314B              LDR R3,=0xAAAAAAAA
+  298    000000A6 9842              CMP R0, R3
+  299    000000A8 58D1              BNE rrt_fail
+  300    000000AA 3148              LDR R0,=0x55555555
+  301    000000AC 304B              LDR R3,=0x55555555
+  302    000000AE 9842              CMP R0, R3
+  303    000000B0 54D1              BNE rrt_fail
+  304    000000B2 0323              MOVS R3, #0x03            ; For ramp
+                                                               test
+  305                           
+  306                               ; Register R4
+  307    000000B4 2D48              LDR R0,=0xAAAAAAAA
+  308    000000B6 2D4C              LDR R4,=0xAAAAAAAA
+  309    000000B8 A042              CMP R0, R4
+  310    000000BA 4FD1              BNE rrt_fail
+  311    000000BC 2C48              LDR R0,=0x55555555
+  312    000000BE 2C4C              LDR R4,=0x55555555
+  313    000000C0 A042              CMP R0, R4
+  314    000000C2 4BD1              BNE rrt_fail
+  315    000000C4 0424              MOVS R4, #0x04            ; For ramp
+                                                               test
+  316                           
+  317                               ; Register R5
+  318    000000C6 2948              LDR R0,=0xAAAAAAAA
+  319    000000C8 284D              LDR R5,=0xAAAAAAAA
+  320    000000CA A842              CMP R0, R5
+  321    000000CC 46D1              BNE rrt_fail
+  322    000000CE 2848              LDR R0,=0x55555555
+  323    000000D0 274D              LDR R5,=0x55555555
+  324    000000D2 A842              CMP R0, R5
+  325    000000D4 42D1              BNE rrt_fail
+  326    000000D6 0525              MOVS R5, #0x05            ; For ramp
+                                                               test
+  327                           
+  328                               ; Register R6
+  329    000000D8 2448              LDR R0,=0xAAAAAAAA
+  330    000000DA 244E              LDR R6,=0xAAAAAAAA
+  331    000000DC B042              CMP R0, R6
+  332    000000DE 3DD1              BNE rrt_fail
+  333    000000E0 2348              LDR R0,=0x55555555
+  334    000000E2 234E              LDR R6,=0x55555555
+  335    000000E4 B042              CMP R0, R6
+  336    000000E6 39D1              BNE rrt_fail
+  337    000000E8 0626              MOVS R6, #0x06            ; For ramp
+                                                               test
+  338                           
+  339                               ; Register R7
+  340    000000EA 2048              LDR R0,=0xAAAAAAAA
+  341    000000EC 1F4F              LDR R7,=0xAAAAAAAA
+  342    000000EE B842              CMP R0, R7
+  343    000000F0 34D1              BNE rrt_fail
+  344    000000F2 1F48              LDR R0,=0x55555555
+  345    000000F4 1E4F              LDR R7,=0x55555555
+  346    000000F6 B842              CMP R0, R7
+  347    000000F8 30D1              BNE rrt_fail
+  348    000000FA 0727              MOVS R7, #0x07            ; For ramp
+                                                               test
+  349                           
+  350    000000FC 0020              MOVS R0, #0x00            ; For ramp
+                                                               test
+  351                           
+  352                               ; Ramp pattern verification
+  353    000000FE 0028              CMP R0, #0x00
+  354    00000100 2CD1              BNE rrt_fail
+  355    00000102 0129              CMP R1, #0x01
+  356    00000104 2AD1              BNE rrt_fail
+  357    00000106 022A              CMP R2, #0x02
+  358    00000108 28D1              BNE rrt_fail
+  359    0000010A 032B              CMP R3, #0x03
+  360    0000010C 26D1              BNE rrt_fail
+  361    0000010E 042C              CMP R4, #0x04
+  362    00000110 24D1              BNE rrt_fail
+  363    00000112 052D              CMP R5, #0x05
+  364    00000114 22D1              BNE rrt_fail
+  365    00000116 062E              CMP R6, #0x06
+  366    00000118 20D1              BNE rrt_fail
+  367    0000011A 072F              CMP R7, #0x07
+  368    0000011C 1ED1              BNE rrt_fail
+  369                           
+  370                               ; Process Stack pointer (banked Register
+                                 R13)
+  371    0000011E EFF30980          MRS R0, PSP         ; Save process stack
+                                                         value
+  372    00000122 1449              LDR R1, =0xAAAAAAA8     ; Test is different
+                                                             (PSP is word
+                                                             aligned)
+  373    00000124 81F30988          MSR PSP, R1         ; load process stack
+                                                         value
+  374    00000128 EFF30982          MRS R2, PSP         ; Get back process
+                                                         stack value
+  375    0000012C 8A42              CMP R2, R1          ; Verify value
+  376    0000012E 15D1              BNE rrt_fail
+  377    00000130 1149              LDR R1, =0x55555554     ; Test is different
+                                                             (PSP is word
+                                                             aligned)
+  378    00000132 81F30988          MSR PSP, R1         ; load process stack
+                                                         value
+  379    00000136 EFF30982          MRS R2, PSP         ; Get back process
+                                                         stack value
+  380    0000013A 8A42              CMP R2, R1          ; Verify value
+  381    0000013C 0ED1              BNE rrt_fail
+  382    0000013E 80F30988          MSR PSP, R0         ; Restore process stack
+                                                         value
+  383                           
+  384                               ; Stack pointer (Register R13)
+  385    00000142 EC46              MOV R12, R13            ; Contains the
+                                                             return address and
+                                                             must be saved
+  386    00000144 0B49              LDR R1, =0xAAAAAAA8     ; It must be loaded
+                                                             half-word by
+                                                             half-word
+  387    00000146 8D46              MOV R13, R1             ; Contains the
+                                                             return address and
+                                                             must be saved
+  388    00000148 8D45              CMP R13, R1             ; and compared with
+                                                             another register
+  389    0000014A 07D1              BNE rrt_fail
+  390    0000014C 0A49              LDR R1, =0x55555554     ; It must be loaded
+                                                             half-word by
+                                                             half-word
+  391    0000014E 8D46              MOV R13, R1             ; Contains the
+                                                             return address and
+                                                             must be saved
+  392    00000150 8D45              CMP R13, R1             ; and compared with
+                                                             another register
+  393    00000152 03D1              BNE rrt_fail
+  394    00000154 E546              MOV R13, R12
+  395                           
+  396                               rrt_pass:   
+  397                               ;restore the register value
+  398    00000156 FEBC              POP      {R1, R2, R3, R4, R5, R6,
+                                              R7}
+  399                           
+  400    00000158 0120              MOVS R0, #0x1
+  401    0000015A 7047              BX LR               ; return to the
+                                                         caller
+  402                           
+  403                               rrt_fail:
+  404                               ;restore the register value
+  405    0000015C FEBC              POP      {R1, R2, R3, R4, R5, R6,
+                                              R7}
+  406                           
+  407    0000015E 0020              MOVS R0, #0x0
+  408    00000160 7047              BX LR               ; return to the
+                                                         caller
+  409                           
+  409.1                                  TABLE
+  409.2  00000164 00000080              Reference on line 228
+  409.3  00000168 00000070              Reference on line 232
+  409.4  0000016C AAAAAAAA              Reference on line 264,265,285,286,296,2
+                                        97,307,308,318,319,329,330,340,341
+  409.5  00000170 55555555              Reference on line 268,269,289,290,300,3
+                                        01,311,312,322,323,333,334,344,345
+  409.6  00000174 A8AAAAAA              Reference on line 372,386
+  409.7  00000178 54555555              Reference on line 377,390
+  410                            END
+##############################
+#           CRC:0            #
+#        Errors:   0         #
+#        Warnings: 0         #
+#         Bytes: 380         #
+##############################
+
+
+
+

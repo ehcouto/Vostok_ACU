@@ -1,0 +1,1856 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:22
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH/LISxDH.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\LISxDH.lst -o
+#        obj\LISxDH.obj
+#        source/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH/LISxDH.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\LISxDH.lst
+#    Object file  =  obj\LISxDH.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\AccelerometerLLI\LISxDH\LISxDH.c
+      1          /**
+      2           * @file
+      3           * @brief       Low-level control to acquire XYZ acceleration data from an accelerometer.
+      4           *
+      5           * @details     This module will work for both the LIS2DH and LIS3DH accelerometer from ST.
+      6           *              There are some features of the LIS3DH that are not supported
+      7           *              (Ex. ADC output registers)
+      8           *
+      9              @startuml{LISXDH_sm.png}
+     10                  title LISXDH State-Machine
+     11                  ' Suppress transition checks
+     12          
+     13                  [*] --> BootDelay
+     14          
+     15                  BootDelay : entry / AccelHwInit()
+     16                  BootDelay : do / WaitForBootComplete()
+     17                  BootDelay --> LowPowerMode : evBootComplete
+     18          
+     19                  LowPowerMode : entry / AccelDisable()
+     20                  LowPowerMode : do / CheckForEnable()
+     21                  LowPowerMode --> Restart : evEnable\n/ LISxDH__FlushData()
+     22          
+     23                  Restart : entry / StartTimer()\n\t AccelHwInit()\n\t AccelEnable()
+     24                  Restart : do / WaitForI2cReady()
+     25                  Restart --> HighResMode : evI2cReady
+     26                  Restart --> LowPowerMode : evTimeout\n[IsDisableRequested()]
+     27                  Restart --> Restart : evTimeout
+     28          
+     29                  HighResMode : entry / StartTimer()
+     30                  HighResMode : do / WaitForDataReady()
+     31                  HighResMode --> ReadData : evDataReady
+     32                  HighResMode -u-> LowPowerMode : evDisable
+     33                  HighResMode -r-> Restart : evTimeout
+     34          
+     35                  ReadData : entry / AccelReadOneShot()
+     36                  ReadData : do / WaitForData()
+     37                  ReadData --> LowPowerMode : evDataReady\n[IsDisableRequested()]
+     38                  ReadData --> ReadData : evDataReady\n/ StartTimer()
+     39                  ReadData -u-> ReadTemp : evReadComplete \n[ReadTemp]
+     40                  ReadData -u-> HighResMode : evReadComplete
+     41                  ReadData --> AppBufferFull : evAppBufferFull
+     42                  ReadData --> Restart : evTimeout
+     43          
+     44                  ReadTemp : entry / StartTimer()\n\t AccelReadTemp()
+     45                  ReadTemp : do / WaitForTempData()
+     46                  ReadTemp -u-> HighResMode : evReadComplete
+     47                  ReadTemp --> Restart : evTimeout
+     48          
+     49                  AppBufferFull : entry / ReportTooMuchData()
+     50                  AppBufferFull : do / CheckAppBuffer()
+     51                  AppBufferFull -r-> HighResMode : evBufferHasSpace
+     52                  AppBufferFull -u-> LowPowerMode : evDisable
+     53              @enduml
+     54           *
+     55           * @copyright   Copyright 2017 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     56           */
+     57          
+     58          //  --- Include Files -------------------------------------------------------------------------------------------------
+     59          
+     60          // -- This Module --
+     61          #include "SystemConfig.h"
+     62          
+     63          #if (HBL_LLI_NUM_ACCELEROMETER > 0)
+     64          #include "LISxDH.h"
+     65          #include "LISxDH_prv.h"
+     66          
+     67          // -- Other Modules --
+     68          #include "Log.h"
+     69          #include "Micro.h"
+     70          #if (SPI_ENABLED == 1)
+     71          #include "Gpio.h"
+     72          #include "Spi.h"
+     73          #endif
+     74          #include <string.h>
+     75          
+     76          //=====================================================================================================================
+     77          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Lisxdh State Machine
+     78          //=====================================================================================================================
+     79          // !! StateEngineCrank cannot update this code if you change the header !!
+     80          
+     81          
+     82          //! Unique names used to identify states of the Lisxdh state machine.
+     83          typedef enum LISXDH_STATE_ENUM
+     84          {
+     85              STATE_LISXDH_NONE            = 0,
+     86          
+     87              STATE_LISXDH_BOOT_DELAY      = 1,               //!< (initial_state)
+     88              STATE_LISXDH_LOW_POWER_MODE  = 2,
+     89              STATE_LISXDH_RESTART         = 3,
+     90              STATE_LISXDH_HIGH_RES_MODE   = 4,
+     91              STATE_LISXDH_READ_DATA       = 5,
+     92              STATE_LISXDH_READ_TEMP       = 6,
+     93              STATE_LISXDH_APP_BUFFER_FULL = 7,
+     94          
+     95              STATE_LISXDH_END             = 8
+     96          } LISXDH_STATE_TYPE;
+     97          
+     98          //! The state variable for the Lisxdh state machine.
+     99          //! State machines with a history pseudostate may write to this variable during initialization.
+    100          //! Other state machines must only write to this variable through auto-generated functions.
+    101          static LISXDH_STATE_TYPE Lisxdh_State;
+    102          
+    103          // -- Private Function Prototypes used by the state machine for customization functions --
+    104          static void AccelDisable(void);
+    105          static void AccelEnable(void);
+    106          static void AccelHwInit(void);
+    107          static void AccelReadOneShot(void);
+    108          static void AccelReadTemp(void);
+    109          static void CheckAppBuffer(void);
+    110          static void CheckForEnable(void);
+    111          static BOOL_TYPE IsDisableRequested(void);
+    112          static BOOL_TYPE ReadTemp(void);
+    113          static void ReportTooMuchData(void);
+    114          static void StartTimer(void);
+    115          static void WaitForBootComplete(void);
+    116          static void WaitForData(void);
+    117          static void WaitForDataReady(void);
+    118          static void WaitForI2cReady(void);
+    119          static void WaitForTempData(void);
+    120          
+    121          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+    122          static void EventAppBufferFull(void);
+    123          static void EventBootComplete(void);
+    124          static void EventBufferHasSpace(void);
+    125          static void EventDataReady(void);
+    126          static void EventDisable(void);
+    127          static void EventEnable(void);
+    128          static void EventI2cReady(void);
+    129          static void EventReadComplete(void);
+    130          static void EventTimeout(void);
+    131          static void LisxdhExecute(void);
+    132          static void LisxdhInitialize(void);
+    133          
+    134          // !! StateEngineCrank cannot update this code if you change the footer !!
+    135          // End of StateEngineCrank Auto-Generated Code.
+    136          
+    137          
+    138          //  --- Private Declarations ------------------------------------------------------------------------------------------
+    139          
+    140          
+    141          // -- Private Constant Declarations --
+    142          
+    143          #if (SPI_ENABLED == 1)
+    144          //! RW bit of the Spi command used to read a register.
+    145          //! For write commands, the bit is 0.
+    146          #define RW_READ                     0x80U
+    147          
+    148          //! MS bit of the Spi command used to auto increment the register address in multiple read/write commands.
+    149          //! To read/write to a single register, the bit is 0.
+    150          #define MS_MULTIPLE                 0x40U
+    151          
+    152          #endif
+    153          
+    154          //! A bit mask used to request that the Accelerometer auto-increment the sub-address when reading
+    155          //! and writing multiple bytes. Refer to section 6.1.1 of the LIS3DH datasheet.
+    156          #define ACCEL_MULTIPLE_BYTES        0x80U
+    157          
+    158          //! The first Accelerometer register written that controls configuration (temperature reading enabled).
+    159          #define ACCEL_REG_TEMP_CFG          0x1FU
+    160          
+    161          //! The first Accelerometer register written that controls configuration (temperature reading disabled).
+    162          #define ACCEL_REG_CTRL_1            0x20U
+    163          
+    164          //! The first Accelerometer register read to get the temperature data (there are 2 adjacent registers that must be read)
+    165          #define ACCEL_REG_OUT_TEMP_L        0x0CU
+    166          
+    167          //! The Accelerometer register to get the device identification data
+    168          #define ACCEL_REG_WHO_AM_I          0x0FU
+    169          
+    170          //! The first Accelerometer register read to get the XYZ acceleration data.
+    171          #define ACCEL_REG_OUT_X_L           0x28U
+    172          
+    173          //! The first Accelerometer register read to get the Status and XYZ acceleration data.
+    174          #define ACCEL_REG_STATUS            0x27U
+    175          
+    176          //! The time required for the Accelerometer to initialize itself.
+    177          //! NOTE: This value is based on the call rate of LISxDH__Background()
+    178          #define ACCEL_TIME_BOOT_UP          25U  // 25 * 200us = 5ms
+    179          
+    180          //! The timeout after which the module decides that no XYZ data will ever be received.
+    181          //! NOTE: This value is based on the call rate of LISxDH__Background()
+    182          #define ACCEL_TIMEOUT_NO_DATA       100U // 100 * 200us = 20ms
+    183          
+    184          //! The timeout after which the module decides that the I2C bus will never become available.
+    185          //! NOTE: This value is based on the call rate of LISxDH__Background()
+    186          #define I2C_TIMEOUT_READY           100U // 100 * 200us = 20ms
+    187          
+    188          //! The name of this module for use by the Log module.
+    189          #define MODULE_NAME                 MODULE_LISxDH
+    190          
+    191          
+    192          // -- Private Macro Declarations --
+    193          
+    194          // -- Private Enumerated Constant Declarations --
+    195          
+    196          //! A list of log message IDs that are generated by this module.
+    197          typedef enum MODULE_LISxDH_LOG_MESSAGE_ID_ENUM
+    198          {
+    199              I2C_APPEARS_STUCK   = 1, //!< I2C_APPEARS_STUCK
+    200              ACCEL_NOT_RESPONDING,    //!< ACCEL_NOT_RESPONDING
+    201              NO_DATA_TIMEOUT,         //!< NO_DATA_TIMEOUT
+    202              TOO_MUCH_DATA,           //!< TOO_MUCH_DATA
+    203              DETECTED_OVERRUN,        //!< DETECTED_OVERRUN
+    204              INVALID_AXIS_MAPPING,    //!< INVALID_AXIS_MAPPING
+    205              TRACE_STATE         = 128//!< TRACE_STATE
+    206          } MODULE_LISxDH_LOG_MESSAGE_ID_TYPE;
+    207          
+    208          
+    209          // -- Private Structure Type Declarations --
+    210          
+    211          //! The data structure read from the Accelerometer that includes XYZ acceleration data.
+    212          #if (SPI_ENABLED == 1)
+    213          typedef PACKED struct ACCEL_READ_REGISTERS_STRUCT
+    214          {
+    215              uint8 Junk;                 // Return data from the byte of command data (can be ignored)
+    216              uint8 Available     : 4;
+    217              uint8 Overrun       : 4;
+    218              sint16 Points[3];
+    219          } ACCEL_READ_REGISTERS_TYPE;
+    220          #else // I2C communication
+    221          typedef PACKED struct ACCEL_READ_REGISTERS_STRUCT
+    222          {
+    223              uint8 Available     : 4;
+    224              uint8 Overrun       : 4;
+    225              sint16 Points[3];
+    226          } ACCEL_READ_REGISTERS_TYPE;
+    227          #endif
+    228          
+    229          // The temperature sensor can be used to measure temperature variations. The output value represents a difference with respect to an unspecified reference value.
+    230          // Calibration is required to determine the reference temperature.
+    231          #if (SPI_ENABLED == 1)
+    232          typedef struct ACCEL_READ_TEMPERATURE_STRUCT
+    233          {
+    234              uint8 Junk;                 // Return data from the byte of command data (can be ignored)
+    235              uint8 Temp_LSB;             // Temperature data is left justified, two's complement. It is 10 bits unless LPen bit of CTRL_REG1 is 1 (Low Power Enabled).
+    236              uint8 Temp_MSB;
+    237          } ACCEL_READ_TEMPERATURE_TYPE;
+    238          #else // I2C communication
+    239          typedef struct ACCEL_READ_TEMPERATURE_STRUCT
+    240          {
+    241              uint8 Temp_LSB;             // Temperature data is left justified. It is 10 bits unless LPen bit of CTRL_REG1 is 1 (Low Power Enabled).
+    242              uint8 Temp_MSB;
+    243          } ACCEL_READ_TEMPERATURE_TYPE;
+    244          #endif
+    245          
+    246          //! The variables used by this module.
+    247          typedef struct LISxDH_VARS_STRUCT
+    248          {
+    249              #if (ACCEL_COMM_TEST == ENABLED)
+    250                  //! A count of the number of failures that have been detected since reset.
+    251                  uint32 Failure_Indicator_Counter;
+    252          
+    253                  //! A count of the number of accelerometer points that have been successfully read since reset.
+    254                  uint32 XYZ_Point_Counter;
+    255          
+    256                  //! A count that measures time in increments of 250 microseconds.
+    257                  //! It can measure up to about 12.4 days then it will restart at 0.
+    258                  //! It can be used to verify that the slot is running correctly.
+    259                  uint32 Reference_Counter;
+    260              #endif
+    261          
+    262              //! The array of points that have been read from the Accelerometer.
+    263              //! The array is a circular buffer.
+    264              sint16 Points[LISXDH_MAX_POINTS][3];
+    265          
+    266              #if (ACCEL_COMM_TEST == ENABLED)
+    267                  //! A timer used to measure the time that the comm failure indicator is set.
+    268                  uint16 Failure_Indicator_Timer;
+    269              #endif
+    270          
+    271              //! A timer used to measure time and create timeout events.
+    272              uint16 Timer;
+    273          
+    274              //! The temperature sensor can be used to measure temperature variations. The output value represents a difference with respect to an unspecified reference value.
+    275              //! Calibration is required to determine the reference temperature.
+    276              sint8  Temperature_Delta;
+    277          
+    278              //! The current requested mode of the module.
+    279              LISXDH_MODE_TYPE Mode_Requested;
+    280          
+    281              //! The currently active mode of the module.
+    282              LISXDH_MODE_TYPE Mode_Processed;
+    283          
+    284              //! An index into the Points[] array for the next point that will be read by the application.
+    285              uint8 Read;
+    286          
+    287              //! The number of points in the Points[] array that the application has not yet read.
+    288              uint8 Number_Of_Points;
+    289          
+    290              //! Counter used to read the temperature sensor only every 1 second
+    291              uint8 Temperature_Read_Delay_Count;
+    292          
+    293              //! Amount to de-scale the resulting acceleration values to keep the values in units of 1mg/digit
+    294              uint8 Scale_Factor;
+    295          
+    296              //! Counts the number of communication failures before publishing a fault over API 18
+    297              uint8 Failure_Counter;
+    298          
+    299              LISXDH_SF_PARAM_TYPE * SF_Param_Ptr;
+    300          } LISxDH_VARS_TYPE;
+    301          
+    302          
+    303          //  --- Private Definitions -------------------------------------------------------------------------------------------
+    304          
+    305          
+    306          // -- Private Flash-Based Constant Definitions --
+    307          
+    308          //! The command sent to the accelerometer to request data starting at register ACCEL_STATUS_REG.
+    309          #if (SPI_ENABLED == 1)
+    310          static const uint8 ACCEL_CMD_DISABLE[] =
+    311          {
+    312              ACCEL_REG_CTRL_1,                               //! Register address for the first register required for SPI commands
+    313              0x00                                            //! CTRL_REG1: Put accelerometer in low power mode
+    314          };
+    315          #else
+    316          static const uint8 ACCEL_CMD_DISABLE[] =
+    317          {
+    318              0x00                                            //! CTRL_REG1: Put accelerometer in low power mode
+    319          };
+    320          #endif
+    321          
+    322          //! An array of the 4-byte command sequences that can be sent to the accelerometer for the Self Test feature.
+    323          #if (SPI_ENABLED == 1)
+    324          static const uint8 ACCEL_CMD_SELF_TEST_ENABLE[][6] =
+    325          {
+    326              // LISXDH_MODE_ST_REF: Activate self-test reference
+    327              {
+    328                  MS_MULTIPLE | ACCEL_REG_TEMP_CFG,           //!< Register address for the first register required for SPI commands
+    329                  0x00,                                       //!< TEMP_CFG_REG: Temperature reading disabled
+    330                  0x77,                                       //!< CTRL_REG1: 400Hz sampling on all axes
+    331                  0x00,                                       //!< CTRL_REG2: Disable hardware high-pass filter
+    332                  0x10,                                       //!< CTRL_REG3: INT1 pin set when XYZ data is ready
+    333                  0xA8                                        //!< CTRL_REG4: Block data update, +/-8g, 12-bit, no self-test
+    334              },
+    335              // LISXDH_MODE_ST_0: Activate self-test 0
+    336              {
+    337                  MS_MULTIPLE | ACCEL_REG_TEMP_CFG,           //!< Register address for the first register required for SPI commands
+    338                  0x00,                                       //!< TEMP_CFG_REG: Temperature reading disabled
+    339                  0x77,                                       //!< CTRL_REG1: 400Hz sampling on all axes
+    340                  0x00,                                       //!< CTRL_REG2: Disable hardware high-pass filter
+    341                  0x10,                                       //!< CTRL_REG3: INT1 pin set when XYZ data is ready
+    342                  0xAA                                        //!< CTRL_REG4: Block data update, +/-8g, 12-bit, self-test 0
+    343              },
+    344              // LISXDH_MODE_ST_1: Activate self-test 1
+    345              {
+    346                  MS_MULTIPLE | ACCEL_REG_TEMP_CFG,           //!< Register address for the first register required for SPI commands
+    347                  0x00,                                       //!< TEMP_CFG_REG: Temperature reading disabled
+    348                  0x77,                                       //!< CTRL_REG1: 400Hz sampling on all axes
+    349                  0x00,                                       //!< CTRL_REG2: Disable hardware high-pass filter
+    350                  0x10,                                       //!< CTRL_REG3: INT1 pin set when XYZ data is ready
+    351                  0xAC                                        //!< CTRL_REG4: Block data update, +/-8g, 12-bit, self-test 1
+    352              }
+    353          };
+    354          #else
+    355          static const uint8 ACCEL_CMD_SELF_TEST_ENABLE[][4] =
+    356          {
+    357              // LISXDH_MODE_ST_REF: Activate self-test reference
+    358              {
+    359                  0x77,                                       //!< CTRL_REG1: 400Hz sampling on all axes
+    360                  0x00,                                       //!< CTRL_REG2: Disable hardware high-pass filter
+    361                  0x10,                                       //!< CTRL_REG3: INT1 pin set when XYZ data is ready
+    362                  0xA8                                        //!< CTRL_REG4: Block data update, +/-8g, 12-bit, no self-test
+    363              },
+    364              // LISXDH_MODE_ST_0: Activate self-test 0
+    365              {
+    366                  0x77,                                       //!< CTRL_REG1: 400Hz sampling on all axes
+    367                  0x00,                                       //!< CTRL_REG2: Disable hardware high-pass filter
+    368                  0x10,                                       //!< CTRL_REG3: INT1 pin set when XYZ data is ready
+    369                  0xAA                                        //!< CTRL_REG4: Block data update, +/-8g, 12-bit, self-test 0
+    370              },
+    371              // LISXDH_MODE_ST_1: Activate self-test 1
+    372              {
+    373                  0x77,                                       //!< CTRL_REG1: 400Hz sampling on all axes
+    374                  0x00,                                       //!< CTRL_REG2: Disable hardware high-pass filter
+    375                  0x10,                                       //!< CTRL_REG3: INT1 pin set when XYZ data is ready
+    376                  0xAC                                        //!< CTRL_REG4: Block data update, +/-8g, 12-bit, self-test 1
+    377              }
+    378          };
+    379          #endif
+    380          
+    381          //! The command sent to the accelerometer to request data starting at register ACCEL_STATUS_REG.
+    382          #if (SPI_ENABLED == 1)
+    383          // RW bit shall be 1 for a read command; MS bit shall be 1 to auto-increment the register address
+    384          static const uint8 ACCEL_CMD_READ[] =
+    385          {
+    386              RW_READ | MS_MULTIPLE | ACCEL_REG_STATUS,
+    387              0x00,   /* Dummy byte for reading the status register */
+    388              0x00,   /* Dummy byte for reading the X_Low  register */
+    389              0x00,   /* Dummy byte for reading the X_High register */
+    390              0x00,   /* Dummy byte for reading the Y_Low  register */
+    391              0x00,   /* Dummy byte for reading the Y_High register */
+    392              0x00,   /* Dummy byte for reading the Z_Low  register */
+    393              0x00    /* Dummy byte for reading the Z_High register */
+    394          };
+    395          #else
+    396          static const uint8 ACCEL_CMD_READ[] =
+    397          {
+    398              ACCEL_MULTIPLE_BYTES | ACCEL_REG_STATUS
+    399          };
+    400          #endif
+    401          
+    402          //! The command sent to the accelerometer to request the device temperature data (must read both temperature registers; only High register contains useful data)
+    403          #if (SPI_ENABLED == 1)
+    404          // RW bit shall be 1 for a read command; MS bit shall be 1 to auto-increment the register address
+    405          static const uint8 ACCEL_CMD_READ_TEMPERATURE[] =
+    406          {
+    407              RW_READ | MS_MULTIPLE | ACCEL_REG_OUT_TEMP_L,
+    408              0x00,   /* Dummy byte for reading the TEMP_L register */
+    409              0x00    /* Dummy byte for reading the TEMP_H register */
+    410          };
+    411          #else
+    412          static const uint8 ACCEL_CMD_READ_TEMPERATURE[] =
+    413          {
+    414              ACCEL_MULTIPLE_BYTES | ACCEL_REG_OUT_TEMP_L
+    415          };
+    416          #endif
+    417          
+    418          
+    419          // -- Private Variable Definitions --
+    420          
+    421          //! The variables used by this module.
+    422          static LISxDH_VARS_TYPE LISxDH;
+    423          
+    424          static LISXDH_SF_PARAM_TYPE ACCELEROMETERLLI_DEFAULT_SF_PARAM = {0, ACCELEROMETER_DEVICE_LISxDH, 0, I2C0, 2, 0, 0x18, I2C_400KHZ, 0, 0, 0, 1, 1, 1, 1, 9, 0, 0, 1, 1, 1, 2, 1, 0};
+    425          
+    426          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    427          
+    428          
+    429          //=====================================================================================================================
+    430          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    431          //=====================================================================================================================
+    432          
+    433          
+    434          //---------------------------------------------------------------------------------------------------------------------
+    435          /**
+    436           * Initialize the Accelerometer variables.
+    437           */
+    438          void LISxDH__Initialize(LISXDH_SF_PARAM_TYPE * param_ptr)
+    439          {
+    440          #if ACCELEROMETER_ENABLED == 1
+    441              // Clear all module RAM variables.
+    442              memset(&LISxDH, 0, sizeof(LISxDH));
+    443          
+    444              #if (ACCEL_COMM_TEST == ENABLED)
+    445                  // Clear the failure indicator.
+    446                  ACCEL_FAILURE_INDICATOR_OFF();
+    447                  ACCEL_FAILURE_INDICATOR_CONFIG();
+    448                  LISxDH.Mode_Requested = LISXDH_MODE_400HZ;
+    449              #endif
+    450          
+    451              if (param_ptr == NULL)
+    452              {
+    453                  LISxDH.SF_Param_Ptr = &ACCELEROMETERLLI_DEFAULT_SF_PARAM;
+    454              }
+    455              else
+    456              {
+    457                  LISxDH.SF_Param_Ptr = param_ptr;
+    458              }
+    459          
+    460              // Configure the chip select pin
+    461              Gpio__PinConfig(SPI_CS_PORT, SPI_CS_PIN, OUTPUT_PUSHPULL);
+    462          #if (SPI_ENABLED == 0)
+    463              // For I2C, the chip select line must be tied high (per the datasheet)
+    464              Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, TRUE);
+    465          #endif
+    466          
+    467              // Start the state machine.
+    468              LisxdhInitialize();
+    469          #endif
+    470          }
+    471          
+    472          
+    473          //---------------------------------------------------------------------------------------------------------------------
+    474          /**
+    475           * Execute the background function for the LISxDH module.
+    476           */
+    477          void LISxDH__Background(void)
+    478          {
+    479          #if ACCELEROMETER_ENABLED == 1
+    480              // Update the local time keeping variable.
+    481              LISxDH.Timer++;
+    482          
+    483              // Run the state machine.
+    484              LisxdhExecute();
+    485          
+    486              #if (ACCEL_COMM_TEST == ENABLED)
+    487                  if (LISxDH.Failure_Indicator_Timer > 0)
+    488                  {
+    489                      LISxDH.Failure_Indicator_Timer--;
+    490                      ACCEL_FAILURE_INDICATOR_ON();
+    491                  }
+    492                  else
+    493                  {
+    494                      ACCEL_FAILURE_INDICATOR_OFF();
+    495                  }
+    496          
+    497                  LISxDH.Reference_Counter++;
+    498              #endif
+    499          #endif
+    500          }
+    501          
+    502          
+    503          //---------------------------------------------------------------------------------------------------------------------
+    504          /**
+    505           * Request that the accelerometer be disabled.
+    506           */
+    507          void LISxDH__Disable(void)
+    508          {
+    509          #if ((ACCELEROMETER_ENABLED == 1) && (ACCEL_COMM_TEST == DISABLED))
+    510              LISxDH.Mode_Requested = LISXDH_MODE_DISABLED;
+    511          #endif
+    512          }
+    513          
+    514          
+    515          //---------------------------------------------------------------------------------------------------------------------
+    516          /**
+    517           * Request that the accelerometer be enabled.
+    518           * @param mode = The type of operation that is desired.
+    519           */
+    520          void LISxDH__Enable(LISXDH_MODE_TYPE mode)
+    521          {
+    522          #if ACCELEROMETER_ENABLED == 1
+    523              // Save the requested state. The state machine will react if necessary.
+    524              if (mode < LISXDH_MODE_COUNT)
+    525              {
+    526                  LISxDH.Mode_Requested = mode;
+    527              }
+    528          #endif
+    529          }
+    530          
+    531          
+    532          //---------------------------------------------------------------------------------------------------------------------
+    533          /**
+    534           * Flush any data currently in the Points[] queue.
+    535           */
+    536          void LISxDH__FlushData(void)
+    537          {
+    538          #if ACCELEROMETER_ENABLED == 1
+    539              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    540              MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();       // Save and disable interrupts
+    541              uint8 read_index = LISxDH.Read + LISxDH.Number_Of_Points;
+    542              if (read_index >= LISXDH_MAX_POINTS)
+    543              {
+    544                  read_index -= LISXDH_MAX_POINTS;
+    545              }
+    546              LISxDH.Read = read_index;
+    547              LISxDH.Number_Of_Points = 0;
+    548              MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();    // Restore interrupts
+    549          #endif
+    550          }
+    551          
+    552          
+    553          //---------------------------------------------------------------------------------------------------------------------
+    554          /**
+    555           * Get the status of the LISxDH module.
+    556           * @return The status of the LISxDH module.
+    557           */
+    558          ACCELEROMETER_STATUS_TYPE LISxDH__GetStatus(void)
+    559          {
+    560          #if ACCELEROMETER_ENABLED == 1
+    561              switch (Lisxdh_State)
+    562              {
+    563                  case STATE_LISXDH_BOOT_DELAY:
+    564                  case STATE_LISXDH_RESTART:
+    565                      return ACCELEROMETER_INITIALIZING;
+    566          
+    567                  case STATE_LISXDH_LOW_POWER_MODE:
+    568                      return ACCELEROMETER_DISABLED;
+    569          
+    570                  case STATE_LISXDH_APP_BUFFER_FULL:
+    571                      return ACCELEROMETER_BUFFER_FULL;
+    572          
+    573                  case STATE_LISXDH_HIGH_RES_MODE:
+    574                  case STATE_LISXDH_READ_DATA:
+    575                  case STATE_LISXDH_READ_TEMP:
+    576                      return ACCELEROMETER_ACQUIRING;
+    577          
+    578                  case STATE_LISXDH_NONE:
+    579                  default:
+    580                      return ACCELEROMETER_UNKNOWN;
+    581              }
+    582          #else
+    583              return ACCELEROMETER_DISABLED;
+    584          #endif
+    585          }
+    586          
+    587          
+    588          //---------------------------------------------------------------------------------------------------------------------
+    589          /**
+    590           *
+    591           * @return  Temperature variation from a reference temperature in Celsius
+    592           */
+    593          sint8 LISxDH__GetTemperatureDelta(void)
+    594          {
+    595              return(LISxDH.Temperature_Delta);
+    596          }
+    597          
+    598          
+    599          //---------------------------------------------------------------------------------------------------------------------
+    600          /**
+    601           * Read a single XYZ acceleration vector from the Accelerometer module's buffer.
+    602           * @param vector = Pointer to an array of three signed 16-bit values for the XYZ data.
+    603           *                 Each point is stored as a signed Q4.8 fixed-point value.
+    604           * @return TRUE if vector was updated with a single XYZ point. FALSE if the buffer is empty.
+    605           */
+    606          BOOL_TYPE LISxDH__Read(sint16* vector)
+    607          {
+    608              BOOL_TYPE retval = FALSE;
+    609          #if ACCELEROMETER_ENABLED == 1
+    610              MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    611          
+    612              if (LISxDH.Number_Of_Points > 0U)
+    613              {
+    614                  memcpy(vector, LISxDH.Points[LISxDH.Read], 6);
+    615          
+    616                  // Adjust the read pointer and the number of accelerometer points.
+    617                  MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();       // Save and disable interrupts
+    618                  LISxDH.Read++;
+    619                  if (LISxDH.Read >= LISXDH_MAX_POINTS)
+    620                  {
+    621                      LISxDH.Read = 0;
+    622                  }
+    623                  LISxDH.Number_Of_Points--;
+    624                  //Restore Interrupts
+    625                  MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();    // Restore interrupts
+    626                  retval = TRUE;
+    627              }
+    628          #endif
+    629              return(retval);
+    630          }
+    631          
+    632          
+    633          //=====================================================================================================================
+    634          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    635          //=====================================================================================================================
+    636          
+    637          
+    638          //=====================================================================================================================
+    639          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    640          //=====================================================================================================================
+    641          
+    642          
+    643          //---------------------------------------------------------------------------------------------------------------------
+    644          /**
+    645           * Send configuration data to the accelerometer to disable it.
+    646           */
+    647          static void AccelDisable(void)
+    648          {
+    649              if (LISxDH.Mode_Requested == LISXDH_MODE_DISABLED)
+    650              {
+    651                  // Send disable command to the accelerometer.
+    652          #if (SPI_ENABLED == 1)
+    653                  Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, FALSE);     // Pull chip select low during transmission
+    654                  (void)Spi__Write((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, (void*)ACCEL_CMD_DISABLE, sizeof(ACCEL_CMD_DISABLE));
+    655          #else
+    656                  I2c__Write((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port, ACCEL_MULTIPLE_BYTES | ACCEL_REG_CTRL_1,
+    657                             (void*)ACCEL_CMD_DISABLE, sizeof(ACCEL_CMD_DISABLE));
+    658          #endif
+    659                  LISxDH.Mode_Processed = LISXDH_MODE_DISABLED;
+    660              }
+    661              LISxDH.Number_Of_Points = 0;
+    662          }
+    663          
+    664          
+    665          //---------------------------------------------------------------------------------------------------------------------
+    666          /**
+    667           * Send configuration data to the accelerometer to enable it.
+    668           */
+    669          static void AccelEnable(void)
+    670          {
+    671              if (LISxDH.Mode_Requested == LISXDH_MODE_NORMAL)
+    672              {
+    673                  #if (SPI_ENABLED == 1)
+    674                      Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, FALSE);       // Pull chip select low during transmission
+    675                  #endif
+    676          
+    677                  // Send enable commands to the accelerometer.
+    678                  StartTimer();
+    679          
+    680                  // Determine the value to de-scale the reading so that the units are always 1mg/digit
+    681          
+    682                  const uint8 SCALE_FACTOR[] = {1, 2, 4, 8};       /* Scale = 0 (2g), Scale = 1 (4g), Scale = 2 (8g), Scale = 3 (16g) */
+    683                  const uint8 RESOLUTION_FACTOR[] = {16, 4, 1};    /* Res = 0 (8 bits), Res = 1 (10 bits), Res = 2 (12 bits) */
+    684                  LISxDH.Scale_Factor = SCALE_FACTOR[LISxDH.SF_Param_Ptr->Scale] * RESOLUTION_FACTOR[LISxDH.SF_Param_Ptr->Resolution];
+    685          
+    686                  LISXDH_SF_PARAM_TYPE * ptr;                 // Create local variable to make code more readable
+    687                  ptr = LISxDH.SF_Param_Ptr;
+    688                  uint8 enable_command[6] = {0,0,0,0,0,0};    // 6 registers: TEMP_CFG_REG + CTRL_REG1 to CTRL_REG5
+    689          
+    690                  // Set configuration for TEMP_CFG_REG
+    691                  enable_command[0] = 0xC0;                   // Enable Temperature reading
+    692          
+    693                  // Set configuration for CTRL_REG1
+    694                  enable_command[1] = ((uint8)ptr->Data_Rate << 4) | ((uint8)ptr->Z_Axis_Enabled << 2) | ((uint8)ptr->Y_Axis_Enabled << 1) | ((uint8)ptr->X_Axis_Enabled);
+    695          
+    696                  // Set configuration for CTRL_REG3
+    697                  if ((uint8)ptr->Trigger_Source == 0U)       // INT1
+    698                  {
+    699                      enable_command[3] = 0x10;               // Use Data Ready 1 interrupt
+    700                  }
+    701          
+    702                  // Set configuration for CTRL_REG4
+    703                  enable_command[4] = ((uint8)ptr->Block_Update << 7U) | ((uint8)ptr->Big_Endian << 6U) | ((uint8)ptr->Scale << 4U);
+    704          
+    705                  if (ptr->Resolution == 2U)
+    706                  {
+    707                      enable_command[4] |= (1U << 3U);          // Set High Resolution bit
+    708                  }
+    709          
+    710                  // Set configuration for CTRL_REG5
+    711                  if (ptr->Fifo_Mode == 1U)
+    712                  {
+    713                      enable_command[5] = (1U << 6U);
+    714                  }
+    715          
+    716                  // NOTE: The FIFO_CTRL_REG (2Eh) register is not configured
+    717                  // Default behavior will be Bypass mode for the FIFO and a trigger event using INT1
+    718                  // FM1-FM0 bits should be set based on the Fifo_Mode parameter
+    719                  // TR bit should be set based on the Trigger_Source parameter
+    720          
+    721          #if (SPI_ENABLED == 1)
+    722                  // Need to add the register address to the data for SPI as there is no argument in Spi__Write that automatically appends this
+    723                  uint8 spi_command[7];
+    724                  spi_command[0] = MS_MULTIPLE | ACCEL_REG_TEMP_CFG;
+    725                  for (uint8 index = 0; index < 6U; index++)
+    726                  {
+    727                      spi_command[index + 1U] = enable_command[index];
+    728                  }
+    729                  (void)Spi__Write((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, (void*)spi_command, sizeof(spi_command));
+    730          #else
+    731                  I2c__Write((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port, ACCEL_MULTIPLE_BYTES | ACCEL_REG_TEMP_CFG,
+    732                             (void*)enable_command, sizeof(enable_command));
+    733          #endif
+    734                  LISxDH.Mode_Processed = LISxDH.Mode_Requested;
+    735              }
+    736              else if ((LISxDH.Mode_Requested == LISXDH_MODE_ST_REF) ||
+    737                       (LISxDH.Mode_Requested == LISXDH_MODE_ST_0) ||
+    738                       (LISxDH.Mode_Requested == LISXDH_MODE_ST_1))
+    739              {
+    740                  // Send enable commands to the accelerometer.
+    741                  StartTimer();
+    742                  uint8 index = (uint8)LISxDH.Mode_Requested - 2U; // Adjust index into ACCEL_CMD_SELF_TEST_ENABLE table based on LISXDH_MODE_TYPE
+    743          
+    744                  // No scaling during self test
+    745                  LISxDH.Scale_Factor = 1;
+    746          
+    747          #if (SPI_ENABLED == 1)
+    748                  Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, FALSE);     // Pull chip select low during transmission
+    749                  (void)Spi__Write((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, (void*)ACCEL_CMD_SELF_TEST_ENABLE[index], sizeof(ACCEL_CMD_SELF_TEST_ENABLE[index]));
+    750          #else
+    751                  I2c__Write((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port, ACCEL_MULTIPLE_BYTES | ACCEL_REG_CTRL_1,
+    752                             (void*)ACCEL_CMD_SELF_TEST_ENABLE[index], sizeof(ACCEL_CMD_SELF_TEST_ENABLE[index]));
+    753          #endif
+    754                  LISxDH.Mode_Processed = LISxDH.Mode_Requested;
+    755              }
+    756          }
+    757          
+    758          
+    759          //---------------------------------------------------------------------------------------------------------------------
+    760          /**
+    761           * Initialize the microcontroller peripherals used by the Accelerometer module.
+    762           */
+    763          static void AccelHwInit(void)
+    764          {
+    765          #if (SPI_ENABLED == 1)
+    766              Spi__Initialize((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port);
+    767              Spi__SetConfiguration((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, SPI_POLARITY_SCK_IDLE_1, SPI_EDGE_SECOND, SPI_ODER_MSB_FIRST);
+    768              Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, TRUE);           // Pull chip select high (reset CS)
+    769          #else
+    770              // Setup the I2C peripheral.
+    771              // NOTE: The I2C module includes the I2C R/W bit as part of the address.
+    772              I2c__Initialize((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port, (I2C_SPEED_TYPE)LISxDH.SF_Param_Ptr->I2C_Speed, I2C_ADDR_7BITS, (LISxDH.SF_Param_Ptr->I2C_Address << 1));
+    773          
+    774          #endif
+    775          
+    776              // Perform any necessary custom configuration.
+    777              LISXDH_CUSTOM_CONFIGURATION();
+    778          }
+    779          
+    780          
+    781          //---------------------------------------------------------------------------------------------------------------------
+    782          /**
+    783           * Send a command to the accelerometer to read a single XYZ data point.
+    784           */
+    785          static void AccelReadOneShot(void)
+    786          {
+    787          #if (SPI_ENABLED == 1)
+    788          
+    789              Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, FALSE);       // Pull chip select low during transmission
+    790              (void)Spi__Write((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, (void*)ACCEL_CMD_READ, sizeof(ACCEL_CMD_READ));
+    791          #else
+    792              I2c__WriteThenRead((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port,
+    793                                 (void*)ACCEL_CMD_READ, sizeof(ACCEL_CMD_READ),
+    794                                 sizeof(ACCEL_READ_REGISTERS_TYPE));
+    795          #endif
+    796          }
+    797          
+    798          
+    799          //---------------------------------------------------------------------------------------------------------------------
+    800          /**
+    801           *
+    802           */
+    803          static void AccelReadTemp(void)
+    804          {
+    805          #if (SPI_ENABLED == 1)
+    806              Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, FALSE);       // Pull chip select low during transmission
+    807              (void)Spi__Write((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, (void*)ACCEL_CMD_READ_TEMPERATURE, sizeof(ACCEL_CMD_READ_TEMPERATURE));
+    808          #else
+    809              I2c__WriteThenRead((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port,
+    810                                 (void*)ACCEL_CMD_READ_TEMPERATURE, sizeof(ACCEL_CMD_READ_TEMPERATURE),
+    811                                 sizeof(ACCEL_READ_TEMPERATURE_TYPE));
+    812          #endif
+    813          }
+    814          
+    815          
+    816          //---------------------------------------------------------------------------------------------------------------------
+    817          /**
+    818           * Determine if the application buffer is full.
+    819           */
+    820          static void CheckAppBuffer(void)
+    821          {
+    822              if (LISxDH.Mode_Processed != LISxDH.Mode_Requested)
+    823              {
+    824                  EventDisable();
+    825              }
+    826              else if (LISxDH.Number_Of_Points < LISXDH_MAX_POINTS)
+    827              {
+    828                  EventBufferHasSpace();
+    829              }
+    830          }
+    831          
+    832          
+    833          //---------------------------------------------------------------------------------------------------------------------
+    834          /**
+    835           * Enable the accelerometer if requested by the application.
+    836           */
+    837          static void CheckForEnable(void)
+    838          {
+    839              if (LISxDH.Mode_Requested != LISXDH_MODE_DISABLED)
+    840              {
+    841          #if (SPI_ENABLED == 1)
+    842                  Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, TRUE);           // Pull chip select high to prepare for future messages
+    843          #endif
+    844                  EventEnable();
+    845              }
+    846          }
+    847          
+    848          
+    849          //---------------------------------------------------------------------------------------------------------------------
+    850          /**
+    851           * Determine if a request has been made to disable the module.
+    852           * @return TRUE if a request has been made to disable the module; otherwise FALSE.
+    853           */
+    854          static BOOL_TYPE IsDisableRequested(void)
+    855          {
+    856              return (BOOL_TYPE)(LISxDH.Mode_Requested == LISXDH_MODE_DISABLED);
+    857          }
+    858          
+    859          
+    860          //---------------------------------------------------------------------------------------------------------------------
+    861          /**
+    862           *
+    863           * @return
+    864           */
+    865          static BOOL_TYPE ReadTemp(void)
+    866          {
+    867              LISxDH.Temperature_Read_Delay_Count++;
+    868          
+    869              if (LISxDH.Temperature_Read_Delay_Count >= 5U)
+    870              {
+    871                  LISxDH.Temperature_Read_Delay_Count = 0;
+    872                  return(TRUE);
+    873              }
+    874              else
+    875              {
+    876                  return(FALSE);
+    877              }
+    878          }
+    879          
+    880          
+    881          //---------------------------------------------------------------------------------------------------------------------
+    882          /**
+    883           * Send a log message to indicate that at least one XYZ data point was lost.
+    884           * This message will occur when the data is received faster than the application can process it.
+    885           */
+    886          static void ReportTooMuchData(void)
+    887          {
+    888              LOG_ADD_EXCEPTION(TOO_MUCH_DATA, LISXDH_MAX_POINTS);
+    889              ACCELEROMETER_DATA_OVERFLOW();
+    890          }
+    891          
+    892          
+    893          //---------------------------------------------------------------------------------------------------------------------
+    894          /**
+    895           * Start the timer to measure a potential timeout.
+    896           */
+    897          static void StartTimer(void)
+    898          {
+    899              LISxDH.Timer = 0;
+    900          }
+    901          
+    902          
+    903          //---------------------------------------------------------------------------------------------------------------------
+    904          /**
+    905           * Wait the necessary boot up time for the accelerometer hardware.
+    906           */
+    907          static void WaitForBootComplete(void)
+    908          {
+    909              if (LISxDH.Timer > ACCEL_TIME_BOOT_UP)
+    910              {
+    911                  EventBootComplete();
+    912              }
+    913          }
+    914          
+    915          
+    916          //---------------------------------------------------------------------------------------------------------------------
+    917          /**
+    918           * Wait for the read process to complete on the I2C bus and then capture the acceleration data.
+    919           */
+    920          static void WaitForData(void)
+    921          {
+    922              // Check if the accelerometer data has been received.
+    923          #if (SPI_ENABLED == 1)
+    924              if (Spi__GetStatus((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, SPI_STATUS_STATE) == (uint16)SPI_STATE_IDLE)    // Bus is ready when there are 0 bytes to be processed (read or write)
+    925              {
+    926                  Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, TRUE);           // Pull chip select high now that transmission is complete
+    927          #else
+    928              if (I2c__GetStatus((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port, I2C_STATUS_STATE) == I2C_STATE_IDLE)
+    929              {
+    930          #endif
+    931                  // Verify that there is space remaining in the application buffer for the new data.
+    932                  #if (ACCEL_COMM_TEST == ENABLED)
+    933                      if (LISxDH.Number_Of_Points >= LISXDH_MAX_POINTS)
+    934                      {
+    935                          LISxDH.Number_Of_Points = 0;
+    936                      }
+    937                  #endif
+    938                  if (LISxDH.Number_Of_Points < LISXDH_MAX_POINTS)
+    939                  {
+    940                      // Read the data that was received
+    941                      ACCEL_READ_REGISTERS_TYPE data;
+    942          #if (SPI_ENABLED == 1)
+    943                      (void)Spi__Read((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, (void*)&data, sizeof(ACCEL_READ_REGISTERS_TYPE));
+    944          #else
+    945                      if (I2c__Read((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port, (void*)&data, sizeof(ACCEL_READ_REGISTERS_TYPE)) == TRUE)
+    946          #endif
+    947                      {
+    948                          if (data.Overrun != 0U)
+    949                          {
+    950                              LOG_ADD_EXCEPTION(DETECTED_OVERRUN, COMBINE_NIBBLES(data.Overrun, data.Available));
+    951                              ACCELEROMETER_DATA_OVERWRITTEN();
+    952                          }
+    953          
+    954                          // Move the write_index to the next point in the circular buffer.
+    955                          uint8 write_index = LISxDH.Read + LISxDH.Number_Of_Points;
+    956                          if (write_index >= LISXDH_MAX_POINTS)
+    957                          {
+    958                              write_index -= LISXDH_MAX_POINTS;
+    959                          }
+    960          
+    961                          // Copy the acceleration measurements for the application to use
+    962                          // Transform the position of the axis data and the sign to match the orientation of the PCB
+    963                          LISxDH.Points[write_index][TRANSFORM_AXIS(MAP_AXIS_X)] = (TRANSFORM_MULTIPLIER(MAP_AXIS_X) * (data.Points[0] >> 4)) * LISxDH.Scale_Factor;
+    964                          LISxDH.Points[write_index][TRANSFORM_AXIS(MAP_AXIS_Y)] = (TRANSFORM_MULTIPLIER(MAP_AXIS_Y) * (data.Points[1] >> 4)) * LISxDH.Scale_Factor;
+    965                          LISxDH.Points[write_index][TRANSFORM_AXIS(MAP_AXIS_Z)] = (TRANSFORM_MULTIPLIER(MAP_AXIS_Z) * (data.Points[2] >> 4)) * LISxDH.Scale_Factor;
+    966                          LISxDH.Number_Of_Points++;
+    967          
+    968                          #if (ACCEL_COMM_TEST == ENABLED)
+    969                              LISxDH.XYZ_Point_Counter++;
+    970                          #endif
+    971          
+    972                          LISxDH.Failure_Counter = 0;     // Reset failure counter
+    973                      }
+    974          
+    975                      // Check if there is new data available from the accelerometer.
+    976                      if (LISXDH_IS_DATA_READY())
+    977                      {
+    978                          EventDataReady();
+    979                          return;
+    980                      }
+    981                      else
+    982                      {
+    983                          EventReadComplete();
+    984                          return;
+    985                      }
+    986                  }
+    987                  else
+    988                  {
+    989                      // There is no space remaining in the application buffer.
+    990                      EventAppBufferFull();
+    991                      return;
+    992                  }
+    993              }
+    994          
+    995              if (LISxDH.Timer > I2C_TIMEOUT_READY)
+    996              {
+    997                  #if (ACCEL_COMM_TEST == ENABLED)
+    998                      LISxDH.Failure_Indicator_Timer = ACCEL_FAILURE_INDICATOR_TIME;
+    999                      LISxDH.Failure_Indicator_Counter++;
+   1000                  #endif
+   1001                  LOG_ADD_EXCEPTION(ACCEL_NOT_RESPONDING, 0);
+   1002                  LISxDH.Failure_Counter++;
+   1003                  if (LISxDH.Failure_Counter >= LISXDH_MAX_FAILURES)
+   1004                  {
+   1005                      LISxDH.Failure_Counter = 0;
+   1006                      ACCELEROMETER_NOT_RESPONDING();
+   1007                  }
+   1008                  EventTimeout();
+   1009              }
+   1010          }
+   1011          
+   1012          
+   1013          //---------------------------------------------------------------------------------------------------------------------
+   1014          /**
+   1015           * Wait for the accelerometer to indicate that at least one XYZ data point is ready.
+   1016           */
+   1017          static void WaitForDataReady(void)
+   1018          {
+   1019          #if (SPI_ENABLED == 1)
+   1020              if (Spi__GetStatus((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, SPI_STATUS_STATE) == (uint16)SPI_STATE_IDLE)    // Bus is ready when there are 0 bytes to be processed (read or write)
+   1021          #else
+   1022              if (I2c__GetStatus((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port, I2C_STATUS_STATE) == I2C_STATE_IDLE)
+   1023          #endif
+   1024              {
+   1025                  if (LISxDH.Mode_Processed != LISxDH.Mode_Requested)
+   1026                  {
+   1027                      EventDisable();
+   1028                      return;
+   1029                  }
+   1030                  else if (LISXDH_IS_DATA_READY())
+   1031                  {
+   1032                      EventDataReady();
+   1033                      return;
+   1034                  }
+   1035              }
+   1036          
+   1037              if (LISxDH.Timer > ACCEL_TIMEOUT_NO_DATA)
+   1038              {
+   1039                  #if (ACCEL_COMM_TEST == ENABLED)
+   1040                      LISxDH.Failure_Indicator_Timer = ACCEL_FAILURE_INDICATOR_TIME;
+   1041                      LISxDH.Failure_Indicator_Counter++;
+   1042                  #endif
+   1043                  LOG_ADD_EXCEPTION(NO_DATA_TIMEOUT, 0);
+   1044                  LISxDH.Failure_Counter++;
+   1045                  if (LISxDH.Failure_Counter >= LISXDH_MAX_FAILURES)
+   1046                  {
+   1047                      LISxDH.Failure_Counter = 0;
+   1048                      ACCELEROMETER_OLD_DATA();
+   1049                  }
+   1050                  EventTimeout();
+   1051              }
+   1052          }
+   1053          
+   1054          
+   1055          //---------------------------------------------------------------------------------------------------------------------
+   1056          /**
+   1057           * Wait for the I2C bus to become idle.
+   1058           */
+   1059          static void WaitForI2cReady(void)
+   1060          {
+   1061          #if (SPI_ENABLED == 1)
+   1062              if (Spi__GetStatus((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, SPI_STATUS_STATE) == (uint16)SPI_STATE_IDLE)    // Bus is ready when there are 0 bytes to be processed (read or write)
+   1063              {        
+   1064                  Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, TRUE);       // Pull chip select high after transmission
+   1065          #else
+   1066              if (I2c__GetStatus((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port, I2C_STATUS_STATE) == I2C_STATE_IDLE)
+   1067              {
+   1068          #endif
+   1069          
+   1070                  EventI2cReady();
+   1071              }
+   1072              else if (LISxDH.Timer > I2C_TIMEOUT_READY)
+   1073              {
+   1074                  #if (ACCEL_COMM_TEST == ENABLED)
+   1075                      LISxDH.Failure_Indicator_Timer = ACCEL_FAILURE_INDICATOR_TIME;
+   1076                      LISxDH.Failure_Indicator_Counter++;
+   1077                  #endif
+   1078                  LOG_ADD_EXCEPTION(I2C_APPEARS_STUCK, Lisxdh_State);
+   1079                  LISxDH.Failure_Counter++;
+   1080                  if (LISxDH.Failure_Counter >= LISXDH_MAX_FAILURES)
+   1081                  {
+   1082                      LISxDH.Failure_Counter = 0;
+   1083                      ACCELEROMETER_NOT_RESPONDING();
+   1084                  }
+   1085                  EventTimeout();
+   1086              }
+   1087          }
+   1088          
+   1089          
+   1090          //---------------------------------------------------------------------------------------------------------------------
+   1091          /**
+   1092           * Wait for the read process to complete on the I2C bus and then capture the temperature data.
+   1093           */
+   1094          static void WaitForTempData(void)
+   1095          {
+   1096              // Check if the temperature data has been received.
+   1097          #if (SPI_ENABLED == 1)
+   1098              if (Spi__GetStatus((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, SPI_STATUS_STATE) == (uint16)SPI_STATE_IDLE)    // Bus is ready when there are 0 bytes to be processed (read or write)
+   1099              {
+   1100                  Gpio__PinWrite(SPI_CS_PORT, SPI_CS_PIN, TRUE);           // Pull chip select high now that transmission is complete
+   1101          #else
+   1102              if (I2c__GetStatus((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port, I2C_STATUS_STATE) == I2C_STATE_IDLE)
+   1103              {
+   1104          #endif
+   1105                  // Read the temperature data that was received from the I2C module.
+   1106                  ACCEL_READ_TEMPERATURE_TYPE data;
+   1107          #if (SPI_ENABLED == 1)
+   1108                  (void)Spi__Read((SPI_ENUM_DEF)LISxDH.SF_Param_Ptr->Port, (void*)&data, sizeof(ACCEL_CMD_READ_TEMPERATURE));
+   1109          #else
+   1110                  if (I2c__Read((I2C_ENUM_TYPE)LISxDH.SF_Param_Ptr->Port, (void*)&data, sizeof(data)) == TRUE)
+   1111          #endif
+   1112                  {
+   1113                      // Only need to use the data from the MSB register
+   1114                      // Data size is 10 bits, but at 8 bit resolution 1 digit = 1 degree C so the data is divided by 4 (2^10 bits/ 2^8 bits) to get it into units of Celsius
+   1115                      LISxDH.Temperature_Delta = (sint8)(data.Temp_MSB);
+   1116          
+   1117                      LISxDH.Failure_Counter = 0;     // Reset failure counter
+   1118          
+   1119                      EventReadComplete();
+   1120                  }
+   1121              }
+   1122          
+   1123              if (LISxDH.Timer > (uint16)I2C_TIMEOUT_READY)
+   1124              {
+   1125                  #if (ACCEL_COMM_TEST == ENABLED)
+   1126                      LISxDH.Failure_Indicator_Timer = ACCEL_FAILURE_INDICATOR_TIME;
+   1127                      LISxDH.Failure_Indicator_Counter++;
+   1128                  #endif
+   1129                  LOG_ADD_EXCEPTION(ACCEL_NOT_RESPONDING, 1);
+   1130                  LISxDH.Failure_Counter++;
+   1131                  if (LISxDH.Failure_Counter >= LISXDH_MAX_FAILURES)
+   1132                  {
+   1133                      LISxDH.Failure_Counter = 0;
+   1134                      ACCELEROMETER_NOT_RESPONDING();
+   1135                  }
+   1136                  EventTimeout();
+   1137              }
+   1138          }
+   1139          
+   1140          
+   1141          //=====================================================================================================================
+   1142          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Lisxdh State Machine
+   1143          //=====================================================================================================================
+   1144          // !! StateEngineCrank cannot update this code if you change the header !!
+   1145          
+   1146          
+   1147          //---------------------------------------------------------------------------------------------------------------------
+   1148          /**
+   1149           * Process the App Buffer Full Event for the Lisxdh state machine.
+   1150           *
+   1151           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1152           *
+   1153           * This function was auto-generated and must not be edited manually.
+   1154           * Change the UML used to generate this function and regenerate the source code.
+   1155           */
+   1156          static void EventAppBufferFull(void)
+   1157          {
+   1158              switch (Lisxdh_State)
+   1159              {
+   1160                  case STATE_LISXDH_READ_DATA:
+   1161                      Lisxdh_State = STATE_LISXDH_APP_BUFFER_FULL;
+   1162                      ReportTooMuchData();                    // Entry Function.
+   1163                      break;
+   1164          
+   1165                  default:
+   1166                      // Event is ignored for all other values of Lisxdh_State.
+   1167                      break;
+   1168              }
+   1169          }
+   1170          
+   1171          
+   1172          //---------------------------------------------------------------------------------------------------------------------
+   1173          /**
+   1174           * Process the Boot Complete Event for the Lisxdh state machine.
+   1175           *
+   1176           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1177           *
+   1178           * This function was auto-generated and must not be edited manually.
+   1179           * Change the UML used to generate this function and regenerate the source code.
+   1180           */
+   1181          static void EventBootComplete(void)
+   1182          {
+   1183              switch (Lisxdh_State)
+   1184              {
+   1185                  case STATE_LISXDH_BOOT_DELAY:
+   1186                      Lisxdh_State = STATE_LISXDH_LOW_POWER_MODE;
+   1187                      AccelDisable();                         // Entry Function.
+   1188                      break;
+   1189          
+   1190                  default:
+   1191                      // Event is ignored for all other values of Lisxdh_State.
+   1192                      break;
+   1193              }
+   1194          }
+   1195          
+   1196          
+   1197          //---------------------------------------------------------------------------------------------------------------------
+   1198          /**
+   1199           * Process the Buffer Has Space Event for the Lisxdh state machine.
+   1200           *
+   1201           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1202           *
+   1203           * This function was auto-generated and must not be edited manually.
+   1204           * Change the UML used to generate this function and regenerate the source code.
+   1205           */
+   1206          static void EventBufferHasSpace(void)
+   1207          {
+   1208              switch (Lisxdh_State)
+   1209              {
+   1210                  case STATE_LISXDH_APP_BUFFER_FULL:
+   1211                      Lisxdh_State = STATE_LISXDH_HIGH_RES_MODE;
+   1212                      StartTimer();                           // Entry Function.
+   1213                      break;
+   1214          
+   1215                  default:
+   1216                      // Event is ignored for all other values of Lisxdh_State.
+   1217                      break;
+   1218              }
+   1219          }
+   1220          
+   1221          
+   1222          //---------------------------------------------------------------------------------------------------------------------
+   1223          /**
+   1224           * Process the Data Ready Event for the Lisxdh state machine.
+   1225           *
+   1226           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1227           *
+   1228           * This function was auto-generated and must not be edited manually.
+   1229           * Change the UML used to generate this function and regenerate the source code.
+   1230           */
+   1231          static void EventDataReady(void)
+   1232          {
+   1233              switch (Lisxdh_State)
+   1234              {
+   1235                  case STATE_LISXDH_HIGH_RES_MODE:
+   1236                      Lisxdh_State = STATE_LISXDH_READ_DATA;
+   1237                      AccelReadOneShot();                     // Entry Function.
+   1238                      break;
+   1239          
+   1240                  case STATE_LISXDH_READ_DATA:
+   1241                      if (IsDisableRequested() == TRUE)
+   1242                      {
+   1243                          Lisxdh_State = STATE_LISXDH_LOW_POWER_MODE;
+   1244                          AccelDisable();                     // Entry Function.
+   1245                      }
+   1246                      else
+   1247                      {
+   1248                          StartTimer();                       // Transition action function.
+   1249                          Lisxdh_State = STATE_LISXDH_READ_DATA;
+   1250                          AccelReadOneShot();                 // Entry Function.
+   1251                      }
+   1252                      break;
+   1253          
+   1254                  default:
+   1255                      // Event is ignored for all other values of Lisxdh_State.
+   1256                      break;
+   1257              }
+   1258          }
+   1259          
+   1260          
+   1261          //---------------------------------------------------------------------------------------------------------------------
+   1262          /**
+   1263           * Process the Disable Event for the Lisxdh state machine.
+   1264           *
+   1265           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1266           *
+   1267           * This function was auto-generated and must not be edited manually.
+   1268           * Change the UML used to generate this function and regenerate the source code.
+   1269           */
+   1270          static void EventDisable(void)
+   1271          {
+   1272              switch (Lisxdh_State)
+   1273              {
+   1274                  case STATE_LISXDH_HIGH_RES_MODE:
+   1275                  case STATE_LISXDH_APP_BUFFER_FULL:
+   1276                      Lisxdh_State = STATE_LISXDH_LOW_POWER_MODE;
+   1277                      AccelDisable();                         // Entry Function.
+   1278                      break;
+   1279          
+   1280                  default:
+   1281                      // Event is ignored for all other values of Lisxdh_State.
+   1282                      break;
+   1283              }
+   1284          }
+   1285          
+   1286          
+   1287          //---------------------------------------------------------------------------------------------------------------------
+   1288          /**
+   1289           * Process the Enable Event for the Lisxdh state machine.
+   1290           *
+   1291           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1292           *
+   1293           * This function was auto-generated and must not be edited manually.
+   1294           * Change the UML used to generate this function and regenerate the source code.
+   1295           */
+   1296          static void EventEnable(void)
+   1297          {
+   1298              switch (Lisxdh_State)
+   1299              {
+   1300                  case STATE_LISXDH_LOW_POWER_MODE:
+   1301                      LISxDH__FlushData();                    // Transition action function.
+   1302                      Lisxdh_State = STATE_LISXDH_RESTART;
+   1303                      StartTimer();                           // Entry Function.
+   1304                      AccelHwInit();                          // Entry Function.
+   1305                      AccelEnable();                          // Entry Function.
+   1306                      break;
+   1307          
+   1308                  default:
+   1309                      // Event is ignored for all other values of Lisxdh_State.
+   1310                      break;
+   1311              }
+   1312          }
+   1313          
+   1314          
+   1315          //---------------------------------------------------------------------------------------------------------------------
+   1316          /**
+   1317           * Process the I2c Ready Event for the Lisxdh state machine.
+   1318           *
+   1319           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1320           *
+   1321           * This function was auto-generated and must not be edited manually.
+   1322           * Change the UML used to generate this function and regenerate the source code.
+   1323           */
+   1324          static void EventI2cReady(void)
+   1325          {
+   1326              switch (Lisxdh_State)
+   1327              {
+   1328                  case STATE_LISXDH_RESTART:
+   1329                      Lisxdh_State = STATE_LISXDH_HIGH_RES_MODE;
+   1330                      StartTimer();                           // Entry Function.
+   1331                      break;
+   1332          
+   1333                  default:
+   1334                      // Event is ignored for all other values of Lisxdh_State.
+   1335                      break;
+   1336              }
+   1337          }
+   1338          
+   1339          
+   1340          //---------------------------------------------------------------------------------------------------------------------
+   1341          /**
+   1342           * Process the Read Complete Event for the Lisxdh state machine.
+   1343           *
+   1344           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1345           *
+   1346           * This function was auto-generated and must not be edited manually.
+   1347           * Change the UML used to generate this function and regenerate the source code.
+   1348           */
+   1349          static void EventReadComplete(void)
+   1350          {
+   1351              switch (Lisxdh_State)
+   1352              {
+   1353                  case STATE_LISXDH_READ_DATA:
+   1354                      if (ReadTemp() == TRUE)
+   1355                      {
+   1356                          Lisxdh_State = STATE_LISXDH_READ_TEMP;
+   1357                          StartTimer();                       // Entry Function.
+   1358                          AccelReadTemp();                    // Entry Function.
+   1359                      }
+   1360                      else
+   1361                      {
+   1362                          Lisxdh_State = STATE_LISXDH_HIGH_RES_MODE;
+   1363                          StartTimer();                       // Entry Function.
+   1364                      }
+   1365                      break;
+   1366          
+   1367                  case STATE_LISXDH_READ_TEMP:
+   1368                      Lisxdh_State = STATE_LISXDH_HIGH_RES_MODE;
+   1369                      StartTimer();                           // Entry Function.
+   1370                      break;
+   1371          
+   1372                  default:
+   1373                      // Event is ignored for all other values of Lisxdh_State.
+   1374                      break;
+   1375              }
+   1376          }
+   1377          
+   1378          
+   1379          //---------------------------------------------------------------------------------------------------------------------
+   1380          /**
+   1381           * Process the Timeout Event for the Lisxdh state machine.
+   1382           *
+   1383           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1384           *
+   1385           * This function was auto-generated and must not be edited manually.
+   1386           * Change the UML used to generate this function and regenerate the source code.
+   1387           */
+   1388          static void EventTimeout(void)
+   1389          {
+   1390              switch (Lisxdh_State)
+   1391              {
+   1392                  case STATE_LISXDH_RESTART:
+   1393                      if (IsDisableRequested() == TRUE)
+   1394                      {
+   1395                          Lisxdh_State = STATE_LISXDH_LOW_POWER_MODE;
+   1396                          AccelDisable();                     // Entry Function.
+   1397                      }
+   1398                      else
+   1399                      {
+   1400                          Lisxdh_State = STATE_LISXDH_RESTART;
+   1401                          StartTimer();                       // Entry Function.
+   1402                          AccelHwInit();                      // Entry Function.
+   1403                          AccelEnable();                      // Entry Function.
+   1404                      }
+   1405                      break;
+   1406          
+   1407                  case STATE_LISXDH_HIGH_RES_MODE:
+   1408                  case STATE_LISXDH_READ_DATA:
+   1409                  case STATE_LISXDH_READ_TEMP:
+   1410                      Lisxdh_State = STATE_LISXDH_RESTART;
+   1411                      StartTimer();                           // Entry Function.
+   1412                      AccelHwInit();                          // Entry Function.
+   1413                      AccelEnable();                          // Entry Function.
+   1414                      break;
+   1415          
+   1416                  default:
+   1417                      // Event is ignored for all other values of Lisxdh_State.
+   1418                      break;
+   1419              }
+   1420          }
+   1421          
+   1422          
+   1423          //---------------------------------------------------------------------------------------------------------------------
+   1424          /**
+   1425           * The main execution function for the Lisxdh state machine.
+   1426           * This function should be called periodically while the state machine is running.
+   1427           *
+   1428           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1429           *
+   1430           * This function was auto-generated and must not be edited manually.
+   1431           * Change the UML used to generate this function and regenerate the source code.
+   1432           */
+   1433          static void LisxdhExecute(void)
+   1434          {
+   1435              switch(Lisxdh_State)
+   1436              {
+   1437                  case STATE_LISXDH_BOOT_DELAY:
+   1438                      WaitForBootComplete();                  // Do function.
+   1439                      break;
+   1440          
+   1441                  case STATE_LISXDH_LOW_POWER_MODE:
+   1442                      CheckForEnable();                       // Do function.
+   1443                      break;
+   1444          
+   1445                  case STATE_LISXDH_RESTART:
+   1446                      WaitForI2cReady();                      // Do function.
+   1447                      break;
+   1448          
+   1449                  case STATE_LISXDH_HIGH_RES_MODE:
+   1450                      WaitForDataReady();                     // Do function.
+   1451                      break;
+   1452          
+   1453                  case STATE_LISXDH_READ_DATA:
+   1454                      WaitForData();                          // Do function.
+   1455                      break;
+   1456          
+   1457                  case STATE_LISXDH_READ_TEMP:
+   1458                      WaitForTempData();                      // Do function.
+   1459                      break;
+   1460          
+   1461                  case STATE_LISXDH_APP_BUFFER_FULL:
+   1462                      CheckAppBuffer();                       // Do function.
+   1463                      break;
+   1464          
+   1465                  default:
+   1466                      // There is nothing to do for all other values of Lisxdh_State.
+   1467                      break;
+   1468              }
+   1469          }
+   1470          
+   1471          
+   1472          //---------------------------------------------------------------------------------------------------------------------
+   1473          /**
+   1474           * The initialization function for the Lisxdh state machine.
+   1475           * This function resets the state machine to the initial state and executes the initial state's
+   1476           * entry function.
+   1477           *
+   1478           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1479           *
+   1480           * This function was auto-generated and must not be edited manually.
+   1481           * Change the UML used to generate this function and regenerate the source code.
+   1482           */
+   1483          static void LisxdhInitialize(void)
+   1484          {
+   1485              Lisxdh_State = STATE_LISXDH_BOOT_DELAY;
+   1486              AccelHwInit();                                  // Entry Function.
+   1487          }
+   1488          
+   1489          
+   1490          // !! StateEngineCrank cannot update this code if you change the footer !!
+   1491          // End of StateEngineCrank Auto-Generated Code.
+   1492          
+   1493          #endif // (HBL_LLI_NUM_ACCELEROMETER > 0)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

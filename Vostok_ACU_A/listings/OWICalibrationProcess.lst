@@ -1,0 +1,1061 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:31
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/OWICalibrationProcess.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\OWICalibrationProcess.lst -o obj\OWICalibrationProcess.obj
+#        source/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/OWICalibrationProcess.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\OWICalibrationProcess.lst
+#    Object file  =  obj\OWICalibrationProcess.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Processes\ModelProcesses\OWICalibrationModel\OWICalibrationProcess.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Model Based Control Design code integration wrapper template for a Nucleus Process.
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8           *  @section    Applicable_Documents
+      9           *					List here all the applicable documents if needed. <tr>	
+     10           *
+     11           *
+     12           *
+     13           *  @copyright  Copyright 2017-2018. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     14           */
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          //---------------------------------------------------------------------------------------------------------------------
+     17          
+     18          
+     19          //-------------------------------------- Include Files ----------------------------------------------------------------
+     20          
+     21          
+     22          #include "OWICalibrationProcess.h"
+     23          
+     24          #include "DishAuxVar.h"
+     25          #include "Micro.h"
+     26          #include "StatisticsDish.h"
+     27          
+     28          
+     29          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     30          
+     31          // -- Private System Variable Definitions --
+     32          
+     33          
+     34          
+     35          // -- Private Variable Definitions --
+     36          
+
+   \                                 In section .bss, align 4
+     37          static PROCESS_RESULT_TYPE Result;
+   \                     Result:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 1
+   \   00000002                      DS8 1
+   \   00000003                      DS8 1
+   \   00000004                      DS8 1
+   \   00000005                      DS8 3
+     38          
+     39          //! Pointer to the "Variable" data in the setting file.
+     40          SF_DATA_TYPE* Sf_OWICalibration_Config;
+   \                     Sf_OWICalibration_Config:
+   \   00000008                      DS8 4
+     41          
+     42          PROCESS_CONTROL_TYPE* OWICalibration_Control;
+   \                     OWICalibration_Control:
+   \   0000000C                      DS8 4
+   \   00000010                      DS8 4
+   \   00000014                      DS8 4
+   \   00000018                      DS8 20
+   \   0000002C                      DS8 20
+     43          
+
+   \                                 In section .bss, align 4
+     44          static float32 TurbidityVoltage;
+   \                     TurbidityVoltage:
+   \   00000000                      DS8 4
+     45          
+     46          static SYSTEMTIMER_NV_TIMER_TYPE NV_Timer_Handle_OWI_Calibration_Timeout;
+     47          
+     48          static SYSTEMTIMER_NV_TIMER_TYPE NV_Timer_Handle_OWI_Calibration_DelayTime;
+     49          
+     50          static uint32 OWI_Timeout_Timer;
+     51          
+
+   \                                 In section .bss, align 1
+     52          static BOOL_TYPE OWICalibration_isRunningFlag = FALSE;
+   \                     OWICalibration_isRunningFlag:
+   \   00000000                      DS8 1
+     53          
+     54          static uint32 OWI_Delaytimer;
+     55          
+     56          static SYSTEMTIMERS_STATE_TYPE TimeoutState;
+     57          
+     58          static SYSTEMTIMERS_STATE_TYPE DelayTimeState;
+     59          
+     60          static BOOL_TYPE Process_Completed;
+     61          
+     62          static BOOL_TYPE OWICalibration_Process_Initialized;
+     63          
+     64          #pragma location = "_appliance_segment"
+
+   \                                 In section _appliance_segment, align 4
+     65          static MODEL_DATA_TYPE  ModelRecoveryData;
+   \                     ModelRecoveryData:
+   \   00000000                      DS8 4
+     66          
+     67          
+     68          //-------------------------------------- Settings Files Loader --------------------------------------------------------
+     69          
+     70          static void ReadParameters(PROCESS_CONTROL_TYPE* control);
+     71          
+     72          //-------------------------------------- PUBLIC (Get/Set Functions) ----------------------------------------
+     73          
+
+   \                                 In section .text, align 2, keep-with-next
+     74          void OWICalibration__SetProcessResult(PROCESS_RESULT_TYPE modelresult)
+     75          {
+     76          	Result = modelresult;
+   \                     OWICalibration__SetProcessResult: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable19
+   \   00000002   0x7008             STRB     R0,[R1, #+0]
+     77          }
+   \   00000004   0x4770             BX       LR               ;; return
+     78          
+     79          
+
+   \                                 In section .text, align 2, keep-with-next
+     80          void OWICalibration__SetState(OWI_CALIB_STATE_TYPE owicalibration_state)
+     81          {
+     82          	OWICalibration_State = owicalibration_state;
+   \                     OWICalibration__SetState: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable19_1
+   \   00000002   0x7008             STRB     R0,[R1, #+0]
+     83          }
+   \   00000004   0x4770             BX       LR               ;; return
+     84          
+
+   \                                 In section .text, align 2, keep-with-next
+     85          void OWICalibration__SetTurbidityVoltageReading(float32 OWI_Calibration_Turbidity_Voltage_Reading)
+     86          {
+     87          	OWICalibration_Turbidity_Voltage_Reading = OWI_Calibration_Turbidity_Voltage_Reading;
+   \                     OWICalibration__SetTurbidityVoltageReading: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable19_2
+   \   00000002   0x6008             STR      R0,[R1, #+0]
+     88          }
+   \   00000004   0x4770             BX       LR               ;; return
+     89          
+     90          
+
+   \                                 In section .text, align 2, keep-with-next
+     91          void OWICalibration__SetStatus(PASS_FAIL_TYPE OWI_Calib_Pass_Fail)
+     92          {
+     93          	OWICalibration_Status = OWI_Calib_Pass_Fail;
+   \                     OWICalibration__SetStatus: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable19_3
+   \   00000002   0x7008             STRB     R0,[R1, #+0]
+     94          }
+   \   00000004   0x4770             BX       LR               ;; return
+     95          
+
+   \                                 In section .text, align 2, keep-with-next
+     96          void OWICalibration__SetDutyCycle(uint16 owi_calib_drive_dutycycle)
+     97          {
+   \                     OWICalibration__SetDutyCycle: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0005             MOVS     R5,R0
+     98          	HBL_PILOT_ENUM_TYPE owi_pilot_type = Hbl__GetPilotIDByIndex(Hbl__GetLoadIndexByLoadID(HBL_LOAD_OWI));
+     99          	if (owi_pilot_type == HBL_PILOT_PWM_HI_RES)
+   \   00000004   0x2072             MOVS     R0,#+114
+   \   00000006   0x.... 0x....      BL       Hbl__GetLoadIndexByLoadID
+   \   0000000A   0x....             LDR      R4,??DataTable19_4
+   \   0000000C   0x.... 0x....      BL       Hbl__GetPilotIDByIndex
+   \   00000010   0x280B             CMP      R0,#+11
+   \   00000012   0xD104             BNE      ??OWICalibration__SetDutyCycle_0
+    100          	{
+    101          		// Nucleus HI Resolution PRM - from 0 to 10000
+    102          		OWI_Calibration_Drive_Duty_Cycle = (uint16)((owi_calib_drive_dutycycle * 10000U)/(uint16)32768);
+   \   00000014   0x....             LDR      R0,??DataTable19_5  ;; 0x2710
+   \   00000016   0x4368             MULS     R0,R5,R0
+   \   00000018   0x0BC0             LSRS     R0,R0,#+15
+   \   0000001A   0x8020             STRH     R0,[R4, #+0]
+   \   0000001C   0xE000             B        ??OWICalibration__SetDutyCycle_1
+    103          	}
+    104          	else
+    105          	{
+    106          		// Legacy PWM OWI Pilot - from 0 to 32768
+    107          		OWI_Calibration_Drive_Duty_Cycle = owi_calib_drive_dutycycle;
+   \                     ??OWICalibration__SetDutyCycle_0: (+1)
+   \   0000001E   0x8025             STRH     R5,[R4, #+0]
+    108          	}
+    109          
+    110          	(void)Hbl__SetLoadRequestByLoadID(HBL_LOAD_OWI, HBL_PRIORITY_APPLICATION_HI, (uint8 *) &OWI_Calibration_Drive_Duty_Cycle);
+   \                     ??OWICalibration__SetDutyCycle_1: (+1)
+   \   00000020   0x0022             MOVS     R2,R4
+   \   00000022   0x2103             MOVS     R1,#+3
+   \   00000024   0x2072             MOVS     R0,#+114
+   \   00000026   0x.... 0x....      BL       Hbl__SetLoadRequestByLoadID
+    111          }
+   \   0000002A   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    112          
+
+   \                                 In section .text, align 2, keep-with-next
+    113          void OWICalibration__SetTimeoutMs(uint32 OWI_Timeout)
+    114          {
+   \                     OWICalibration__SetTimeoutMs: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    115          	OWI_Timeout_Timer = OWI_Timeout;
+   \   00000002   0x....             LDR      R3,??DataTable19
+   \   00000004   0x6118             STR      R0,[R3, #+16]
+    116          	(void)SystemTimers__NVSetTimerMS(&NV_Timer_Handle_OWI_Calibration_Timeout, OWI_Timeout_Timer ,SYSTEMTIMERS_TYPE_DOWN_COUNTER);
+   \   00000006   0x2200             MOVS     R2,#+0
+   \   00000008   0x4601             MOV      R1,R0
+   \   0000000A   0x0018             MOVS     R0,R3
+   \   0000000C   0x3018             ADDS     R0,R0,#+24
+   \   0000000E   0x.... 0x....      BL       SystemTimers__NVSetTimerMS
+    117          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+    118          
+
+   \                                 In section .text, align 2, keep-with-next
+    119          void OWICalibration__SetDelayTimeMs(uint32 OWI_DelayTime)
+    120          {
+   \                     OWICalibration__SetDelayTimeMs: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    121          	OWI_Delaytimer = OWI_DelayTime;
+   \   00000002   0x....             LDR      R3,??DataTable19
+   \   00000004   0x6158             STR      R0,[R3, #+20]
+    122          	(void)SystemTimers__NVSetTimerMS(&NV_Timer_Handle_OWI_Calibration_DelayTime, OWI_Delaytimer ,SYSTEMTIMERS_TYPE_DOWN_COUNTER);
+   \   00000006   0x2200             MOVS     R2,#+0
+   \   00000008   0x4601             MOV      R1,R0
+   \   0000000A   0x0018             MOVS     R0,R3
+   \   0000000C   0x302C             ADDS     R0,R0,#+44
+   \   0000000E   0x.... 0x....      BL       SystemTimers__NVSetTimerMS
+    123          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+    124          
+
+   \                                 In section .text, align 2, keep-with-next
+    125           void OWICalibration__SetModelData(MODEL_DATA_TYPE ModelData)
+    126          {
+    127          	ModelRecoveryData = ModelData;
+   \                     OWICalibration__SetModelData: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable19_6
+   \   00000002   0x6008             STR      R0,[R1, #+0]
+    128          }
+   \   00000004   0x4770             BX       LR               ;; return
+    129          
+
+   \                                 In section .text, align 2, keep-with-next
+    130           void OWICalibration__SetRunningFlag (BOOL_TYPE isRunning)
+    131           {
+    132           	OWICalibration_isRunningFlag = isRunning;
+   \                     OWICalibration__SetRunningFlag: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable19_7
+   \   00000002   0x7008             STRB     R0,[R1, #+0]
+    133           }
+   \   00000004   0x4770             BX       LR               ;; return
+    134          
+    135          
+    136          // -- GET Function prototypes --
+    137          
+    138          
+
+   \                                 In section .text, align 2, keep-with-next
+    139          OWI_CALIB_STATE_TYPE OWICalibration__GetState(void)
+    140          {
+    141          	return OWICalibration_State;
+   \                     OWICalibration__GetState: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable19_1
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+    142          }
+    143          
+
+   \                                 In section .text, align 2, keep-with-next
+    144          float32 OWICalibration__GetTurbidityVoltage(void)
+    145          {
+   \                     OWICalibration__GetTurbidityVoltage: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    146          	TurbidityVoltage = (float32)Hbl__GetGIDataConvertedByIndex(Hbl__GetGIIndexByGIID(HBL_GI_TURBIDITY_SENSOR_OWI));
+   \   00000002   0x2030             MOVS     R0,#+48
+   \   00000004   0x.... 0x....      BL       Hbl__GetGIIndexByGIID
+   \   00000008   0x....             LDR      R4,??DataTable19_8
+   \   0000000A   0x.... 0x....      BL       Hbl__GetGIDataConvertedByIndex
+   \   0000000E   0x.... 0x....      BL       __aeabi_i2f
+   \   00000012   0x6020             STR      R0,[R4, #+0]
+    147          	return TurbidityVoltage;
+   \   00000014   0xBD10             POP      {R4,PC}          ;; return
+    148          }
+    149          
+
+   \                                 In section .text, align 2, keep-with-next
+    150          PASS_FAIL_TYPE OWICalibration__GetStatus(void)
+    151          {
+    152          	return OWICalibration_Status;
+   \                     OWICalibration__GetStatus: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable19_3
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+    153          }
+    154          
+
+   \                                 In section .text, align 2, keep-with-next
+    155          SYSTEMTIMERS_STATE_TYPE OWICalibration__GetTimeoutState(void)
+    156          {
+   \                     OWICalibration__GetTimeoutState: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    157          	TimeoutState = SystemTimers__NVCheckTimer(&NV_Timer_Handle_OWI_Calibration_Timeout);
+   \   00000002   0x....             LDR      R4,??DataTable19
+   \   00000004   0x0020             MOVS     R0,R4
+   \   00000006   0x3018             ADDS     R0,R0,#+24
+   \   00000008   0x.... 0x....      BL       SystemTimers__NVCheckTimer
+   \   0000000C   0x7060             STRB     R0,[R4, #+1]
+    158          	return TimeoutState;
+   \   0000000E   0xBD10             POP      {R4,PC}          ;; return
+    159          }
+    160          
+
+   \                                 In section .text, align 2, keep-with-next
+    161          SYSTEMTIMERS_STATE_TYPE OWICalibration__GetDelayTimeState(void)
+    162          {
+   \                     OWICalibration__GetDelayTimeState: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    163          	DelayTimeState = SystemTimers__NVCheckTimer(&NV_Timer_Handle_OWI_Calibration_DelayTime);
+   \   00000002   0x....             LDR      R4,??DataTable19
+   \   00000004   0x0020             MOVS     R0,R4
+   \   00000006   0x302C             ADDS     R0,R0,#+44
+   \   00000008   0x.... 0x....      BL       SystemTimers__NVCheckTimer
+   \   0000000C   0x70A0             STRB     R0,[R4, #+2]
+    164          	return DelayTimeState;
+   \   0000000E   0xBD10             POP      {R4,PC}          ;; return
+    165          }
+    166          
+
+   \                                 In section .text, align 2, keep-with-next
+    167          PROCESS_RESULT_TYPE OWICalibration__GetProcessResult(void)
+    168          {
+    169          
+    170          	return Result;
+   \                     OWICalibration__GetProcessResult: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable19
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+    171          }
+    172          
+
+   \                                 In section .text, align 2, keep-with-next
+    173          MODEL_DATA_TYPE OWICalibration__GetModelData(void)
+    174          {
+    175          
+    176          	return ModelRecoveryData;
+   \                     OWICalibration__GetModelData: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable19_6
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+    177          }
+    178          
+
+   \                                 In section .text, align 2, keep-with-next
+    179          BOOL_TYPE OWICalibration__GetRunningFlag (void)
+    180          {
+    181          	return OWICalibration_isRunningFlag;
+   \                     OWICalibration__GetRunningFlag: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable19_7
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+    182          }
+    183          
+    184          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    185          //=====================================================================================================================
+    186          //-------------------------------------- Public Functions -------------------------------------------------------------
+    187          //=====================================================================================================================
+    188          
+    189          //---------------------------------------------------------------------------------------------------------------------
+    190          
+    191          //---------------------------------------------------------------------------------------------------------------------
+    192          /**
+    193           * The (Myprocess) process.
+    194           *
+    195           * @brief
+    196           *
+    197           * @param control = The control parameters provided by the Interpreter.
+    198           * @retval PROCESS_COMPLETE = The process is ready for the Interpreter to proceed to the next step.
+    199           * @retval PROCESS_BUSY = The process is not ready for the Interpreter to proceed to the next step.
+    200           */
+    201          
+    202          
+
+   \                                 In section .text, align 2, keep-with-next
+    203          PROCESS_RESULT_TYPE OWICalibration__Process(PROCESS_CONTROL_TYPE* control)
+    204          {
+   \                     OWICalibration__Process: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0006             MOVS     R6,R0
+    205          
+    206          	OWICalibration_Control = control;
+   \   00000004   0x....             LDR      R4,??DataTable19
+   \   00000006   0x60E6             STR      R6,[R4, #+12]
+    207          
+    208          	if (((uint8)control->Step_Initializing == (uint8)TRUE) ||
+    209          		((uint8)control->Resume_From_Reset == (uint8)TRUE) ||
+    210          		(((uint8)control->Resume_From_Pause == (uint8)TRUE) && (OWICalibration_Process_Initialized == FALSE)))// && control->F1_F0_Flags == 0 && control->Resume_From_Pause == FALSE && control->Resume_From_Reset == FALSE)
+   \   00000008   0x7970             LDRB     R0,[R6, #+5]
+   \   0000000A   0x2501             MOVS     R5,#+1
+   \   0000000C   0x2105             MOVS     R1,#+5
+   \   0000000E   0x4208             TST      R0,R1
+   \   00000010   0xD105             BNE      ??OWICalibration__Process_0
+   \   00000012   0x0840             LSRS     R0,R0,#+1
+   \   00000014   0x4228             TST      R0,R5
+   \   00000016   0xD026             BEQ      ??OWICalibration__Process_1
+   \   00000018   0x7920             LDRB     R0,[R4, #+4]
+   \   0000001A   0x2800             CMP      R0,#+0
+   \   0000001C   0xD123             BNE      ??OWICalibration__Process_1
+    211          	{
+    212          		// Initialize Process Variables
+    213          		OWICalibration_Status = FAIL;
+   \                     ??OWICalibration__Process_0: (+1)
+   \   0000001E   0x2000             MOVS     R0,#+0
+   \   00000020   0x0001             MOVS     R1,R0
+   \   00000022   0x....             LDR      R2,??DataTable19_3
+   \   00000024   0x7011             STRB     R1,[R2, #+0]
+    214          		Result = PROCESS_BUSY;
+   \   00000026   0x7025             STRB     R5,[R4, #+0]
+    215          
+    216          		Process_Completed = FALSE;
+   \   00000028   0x70E0             STRB     R0,[R4, #+3]
+    217          
+    218          		// Initialize Model States
+    219          		memset(&OWICalibrationModel_DW_GLOBAL, 0, sizeof(DW_OWICalibrationModel_TYPE));
+   \   0000002A   0x4602             MOV      R2,R0
+   \   0000002C   0x2110             MOVS     R1,#+16
+   \   0000002E   0x....             LDR      R0,??DataTable19_9
+   \   00000030   0x.... 0x....      BL       __aeabi_memset4
+    220          
+    221          		// Initialize Model Data
+    222          		ModelRecoveryData.OWICalibration_Drive_Initial_Duty_Cycle = 16384;
+   \   00000034   0x....             LDR      R0,??DataTable19_6
+   \   00000036   0x03A9             LSLS     R1,R5,#+14
+   \   00000038   0x8001             STRH     R1,[R0, #+0]
+    223          		ModelRecoveryData.OWICalibration_Drive_Duty_Cycle = 16384;
+   \   0000003A   0x8041             STRH     R1,[R0, #+2]
+    224          
+    225          
+    226          		// Read data from Setting File
+    227          		ReadParameters(control);
+   \   0000003C   0x0030             MOVS     R0,R6
+   \   0000003E   0x.... 0x....      BL       ReadParameters
+    228          
+    229              	SystemTimers__NVResetTimer(&NV_Timer_Handle_OWI_Calibration_Timeout);
+   \   00000042   0x0020             MOVS     R0,R4
+   \   00000044   0x3018             ADDS     R0,R0,#+24
+   \   00000046   0x.... 0x....      BL       SystemTimers__NVResetTimer
+    230              	SystemTimers__NVResetTimer(&NV_Timer_Handle_OWI_Calibration_DelayTime);
+   \   0000004A   0x0020             MOVS     R0,R4
+   \   0000004C   0x302C             ADDS     R0,R0,#+44
+   \   0000004E   0x.... 0x....      BL       SystemTimers__NVResetTimer
+    231          
+    232              	if (Sf_OWICalibration_Config != NULL)
+   \   00000052   0x68A0             LDR      R0,[R4, #+8]
+   \   00000054   0x2800             CMP      R0,#+0
+   \   00000056   0xD004             BEQ      ??OWICalibration__Process_2
+    233          		{
+    234          			OWICalibration__SetTimeoutMs(Sf_OWICalibration_Config->OWICalibration_Max_Time * (uint32)60000);
+   \   00000058   0x7980             LDRB     R0,[R0, #+6]
+   \   0000005A   0x....             LDR      R1,??DataTable19_10  ;; 0xea60
+   \   0000005C   0x4348             MULS     R0,R1,R0
+   \   0000005E   0x.... 0x....      BL       OWICalibration__SetTimeoutMs
+    235          		}
+    236          
+    237          		OWICalibration_State = OWICALIBRATION_STATE_STABILIZE;
+   \                     ??OWICalibration__Process_2: (+1)
+   \   00000062   0x....             LDR      R0,??DataTable19_1
+   \   00000064   0x7005             STRB     R5,[R0, #+0]
+    238          	}
+    239          
+    240          	if (Sf_OWICalibration_Config != NULL)
+   \                     ??OWICalibration__Process_1: (+1)
+   \   00000066   0x68A0             LDR      R0,[R4, #+8]
+   \   00000068   0x2800             CMP      R0,#+0
+   \   0000006A   0xD002             BEQ      ??OWICalibration__Process_3
+    241          	{
+    242          		OWICalibration__Model();
+   \   0000006C   0x.... 0x....      BL       OWICalibration__Model
+   \   00000070   0xE001             B        ??OWICalibration__Process_4
+    243          	}
+    244          	else
+    245          	{
+    246          		Result = PROCESS_COMPLETE;
+   \                     ??OWICalibration__Process_3: (+1)
+   \   00000072   0x2000             MOVS     R0,#+0
+   \   00000074   0x7020             STRB     R0,[R4, #+0]
+    247          	}
+    248          
+    249          	if(Result == PROCESS_COMPLETE)
+   \                     ??OWICalibration__Process_4: (+1)
+   \   00000076   0x7820             LDRB     R0,[R4, #+0]
+   \   00000078   0x2800             CMP      R0,#+0
+   \   0000007A   0xD105             BNE      ??OWICalibration__Process_5
+    250          	{
+    251          		if(Process_Completed == FALSE)
+   \   0000007C   0x78E0             LDRB     R0,[R4, #+3]
+   \   0000007E   0x2800             CMP      R0,#+0
+   \   00000080   0xD102             BNE      ??OWICalibration__Process_5
+    252          		{
+    253          			Process_Completed = TRUE;
+   \   00000082   0x70E5             STRB     R5,[R4, #+3]
+    254          			StatisticsDish__UpdateOWICalibrationDutyCycle();
+   \   00000084   0x.... 0x....      BL       StatisticsDish__UpdateOWICalibrationDutyCycle
+    255          		}
+    256          	}
+    257          
+    258          	return Result;
+   \                     ??OWICalibration__Process_5: (+1)
+   \   00000088   0x7820             LDRB     R0,[R4, #+0]
+   \   0000008A   0xBD70             POP      {R4-R6,PC}       ;; return
+    259          }
+    260          	
+    261          
+    262          
+
+   \                                 In section .text, align 2, keep-with-next
+    263          void OWICalibration__Initialize(void)
+    264          {
+    265             	OWICalibration_Process_Initialized = FALSE;
+   \                     OWICalibration__Initialize: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR      R1,??DataTable19
+   \   00000004   0x7108             STRB     R0,[R1, #+4]
+    266          }
+   \   00000006   0x4770             BX       LR               ;; return
+    267          
+    268          //=====================================================================================================================
+    269          //-------------------------------------- Private Functions ------------------------------------------------------------
+    270          //=====================================================================================================================
+    271          
+    272          //BOOL_TYPE
+
+   \                                 In section .text, align 2, keep-with-next
+    273          static void ReadParameters(PROCESS_CONTROL_TYPE* control)
+    274          {
+   \                     ReadParameters: (+1)
+   \   00000000   0xB51C             PUSH     {R2-R4,LR}
+    275          	SETTINGFILE_LOADER_TYPE loader;
+    276          
+    277          	// Initialize SF data pointer
+    278          	Sf_OWICalibration_Config = (SF_DATA_TYPE*)NULL;
+   \   00000002   0x....             LDR      R4,??DataTable19
+   \   00000004   0x2100             MOVS     R1,#+0
+   \   00000006   0x60A1             STR      R1,[R4, #+8]
+    279          
+    280          	if((SettingFile__MSettingBasicLoader(control->Setting_File_Index, SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_OWI_CALIBRATION, &loader) == PASS))
+   \   00000008   0x466B             MOV      R3,SP
+   \   0000000A   0x2205             MOVS     R2,#+5
+   \   0000000C   0x2127             MOVS     R1,#+39
+   \   0000000E   0x7880             LDRB     R0,[R0, #+2]
+   \   00000010   0x.... 0x....      BL       SettingFile__MSettingBasicLoader
+   \   00000014   0x2801             CMP      R0,#+1
+   \   00000016   0xD103             BNE      ??ReadParameters_0
+    281          	{
+    282          		Sf_OWICalibration_Config = (SF_DATA_TYPE*)(void*)(loader.Data);
+   \   00000018   0x9800             LDR      R0,[SP, #+0]
+   \   0000001A   0x60A0             STR      R0,[R4, #+8]
+    283          
+    284          		OWICalibration_Process_Initialized = TRUE;
+   \   0000001C   0x2001             MOVS     R0,#+1
+   \   0000001E   0x7120             STRB     R0,[R4, #+4]
+    285          	}
+    286          }
+   \                     ??ReadParameters_0: (+1)
+   \   00000020   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19:
+   \   00000000   0x........         DC32     Result
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_1:
+   \   00000000   0x........         DC32     OWICalibration_State
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_2:
+   \   00000000   0x........         DC32     OWICalibration_Turbidity_Voltage_Reading
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_3:
+   \   00000000   0x........         DC32     OWICalibration_Status
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_4:
+   \   00000000   0x........         DC32     OWI_Calibration_Drive_Duty_Cycle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_5:
+   \   00000000   0x00002710         DC32     0x2710
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_6:
+   \   00000000   0x........         DC32     ModelRecoveryData
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_7:
+   \   00000000   0x........         DC32     OWICalibration_isRunningFlag
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_8:
+   \   00000000   0x........         DC32     TurbidityVoltage
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_9:
+   \   00000000   0x........         DC32     OWICalibrationModel_DW_GLOBAL
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable19_10:
+   \   00000000   0x0000EA60         DC32     0xea60
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   OWICalibration__GetDelayTimeState
+         8   -> SystemTimers__NVCheckTimer
+       0   OWICalibration__GetModelData
+       0   OWICalibration__GetProcessResult
+       0   OWICalibration__GetRunningFlag
+       0   OWICalibration__GetState
+       0   OWICalibration__GetStatus
+       8   OWICalibration__GetTimeoutState
+         8   -> SystemTimers__NVCheckTimer
+       8   OWICalibration__GetTurbidityVoltage
+         8   -> Hbl__GetGIDataConvertedByIndex
+         8   -> Hbl__GetGIIndexByGIID
+         8   -> __aeabi_i2f
+       0   OWICalibration__Initialize
+      16   OWICalibration__Process
+        16   -> OWICalibration__Model
+        16   -> OWICalibration__SetTimeoutMs
+        16   -> ReadParameters
+        16   -> StatisticsDish__UpdateOWICalibrationDutyCycle
+        16   -> SystemTimers__NVResetTimer
+        16   -> __aeabi_memset4
+       8   OWICalibration__SetDelayTimeMs
+         8   -> SystemTimers__NVSetTimerMS
+      16   OWICalibration__SetDutyCycle
+        16   -> Hbl__GetLoadIndexByLoadID
+        16   -> Hbl__GetPilotIDByIndex
+        16   -> Hbl__SetLoadRequestByLoadID
+       0   OWICalibration__SetModelData
+       0   OWICalibration__SetProcessResult
+       0   OWICalibration__SetRunningFlag
+       0   OWICalibration__SetState
+       0   OWICalibration__SetStatus
+       8   OWICalibration__SetTimeoutMs
+         8   -> SystemTimers__NVSetTimerMS
+       0   OWICalibration__SetTurbidityVoltageReading
+      16   ReadParameters
+        16   -> SettingFile__MSettingBasicLoader
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable19
+       4  ??DataTable19_1
+       4  ??DataTable19_10
+       4  ??DataTable19_2
+       4  ??DataTable19_3
+       4  ??DataTable19_4
+       4  ??DataTable19_5
+       4  ??DataTable19_6
+       4  ??DataTable19_7
+       4  ??DataTable19_8
+       4  ??DataTable19_9
+       4  ModelRecoveryData
+      16  OWICalibration__GetDelayTimeState
+       6  OWICalibration__GetModelData
+       6  OWICalibration__GetProcessResult
+       6  OWICalibration__GetRunningFlag
+       6  OWICalibration__GetState
+       6  OWICalibration__GetStatus
+      16  OWICalibration__GetTimeoutState
+      22  OWICalibration__GetTurbidityVoltage
+       8  OWICalibration__Initialize
+     140  OWICalibration__Process
+      20  OWICalibration__SetDelayTimeMs
+      44  OWICalibration__SetDutyCycle
+       6  OWICalibration__SetModelData
+       6  OWICalibration__SetProcessResult
+       6  OWICalibration__SetRunningFlag
+       6  OWICalibration__SetState
+       6  OWICalibration__SetStatus
+      20  OWICalibration__SetTimeoutMs
+       6  OWICalibration__SetTurbidityVoltageReading
+       1  OWICalibration_isRunningFlag
+      34  ReadParameters
+      64  Result
+          TimeoutState
+          DelayTimeState
+          Process_Completed
+          OWICalibration_Process_Initialized
+          Sf_OWICalibration_Config
+          OWICalibration_Control
+          OWI_Timeout_Timer
+          OWI_Delaytimer
+          NV_Timer_Handle_OWI_Calibration_Timeout
+          NV_Timer_Handle_OWI_Calibration_DelayTime
+       4  TurbidityVoltage
+
+ 
+  69 bytes in section .bss
+ 430 bytes in section .text
+   4 bytes in section _appliance_segment
+ 
+ 430 bytes of CODE memory
+  73 bytes of DATA memory
+
+Errors: none
+Warnings: none

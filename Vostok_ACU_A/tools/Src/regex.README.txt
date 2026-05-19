@@ -1,0 +1,4 @@
+
+Firmware for Regex.exe can be found at:
+    https://github.whirlpool.com/ferranj/Regex
+

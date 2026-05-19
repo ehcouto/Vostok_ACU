@@ -1,0 +1,1427 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:42
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot/SRUMRelayPilot.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SRUMRelayPilot.lst -o
+#        obj\SRUMRelayPilot.obj
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot/SRUMRelayPilot.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SRUMRelayPilot.lst
+#    Object file  =  obj\SRUMRelayPilot.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\acuexpacu\ACUPilotHandler\SRUMRelayPilot\SRUMRelayPilot.c
+      1          /**
+      2           *  @file       SRUMRelayPilot.c
+      3           *
+      4           *  @brief      Pilot for Universal Motor driven with Triac + Relays
+      5           *
+      6           *  @defgroup   CLASS_B
+      7           *
+      8           *  @details    This module implements all feature to use a Triac + 2 Relay + Tap field relay circuit to drive an
+      9           *              Universal Motor
+     10           *
+     11           *              Optional parameters:
+     12           *              - SRUMRELAYPILOT_FORCE_OC - Set to ENABLED to use Output Compare to drive triac gate when ZC_HANDLER_TIMING_US != 0
+     13           *              - SRUMRELAYPILOT_FALLBACK_SF_PARAMS - Macro to define fallback SF Params should be set if Parameter_Ptr is NULL
+     14           *                  If not set, InitializeInstance will return FAIL
+     15           *
+     16           *              Function macros to define in SRUMRelayPilot_prv.h
+     17           *              - PASS_FAIL_TYPE SRUMRELAYPILOT__CONTROL_INITIALIZE(HBL_LOAD_TYPE* load);
+     18           *              Initialize the motor control module; returns PASS if process completed, FAIL if there were errors
+     19           *
+     20           *              - PASS_FAIL_TYPE SRUMRELAYPILOT__CONTROL_HANDLER(HBL_LOAD_TYPE* load, SRUMRELAYPILOT_CONTROL_PARAM_TYPE *param_ptr, SRUMRELAYPILOT_CONTROL_STATUS_TYPE *status_ptr);
+     21           *              Motor control handler; it gets data from param_ptr and returns status in status_ptr variables.
+     22           *              PASS if handler works properly; FAIL if there are errors (failures are not included on FAIL condition!)
+     23           *
+     24           *              - uint8 SRUMRELAYPILOT__GET_CSTM_TACHO_INDEX(HBL_LOAD_TYPE* load);              (Optional)
+     25           *              Provides LLI index for tacho signal if no Setting file parameters are available
+     26           *
+     27           *              - SRUMRELAYPILOT_FALLBACK_SF_PARAMS                                             (Optional)
+     28           *              Contains default Setting file parameters when no parameters are set; if not defined, initialization fails
+     29           *
+     30           *              - BOOL_TYPE SRUMRELAYPILOT__ISCONSISTENCYOK_ADDITIONAL_CHECK()                  (Optional)
+     31           *              Adds an additional consistency check to be satisfied - e.g. ZeroCross signal is present
+     32           *
+     33           *              - BOOL_TYPE SRUMRELAYPILOT__ISSTOPCONDITION_ADDITIONAL_CHECK()
+     34           *              Adds an additional condition to force motor stop - e.g. ZeroCross signal is lost
+     35           *
+     36           *  @section    Applicable_Documents
+     37           *					List here all the applicable documents if needed. <tr>	
+     38           *
+     39           *  @copyright  Copyright 2019. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     40           */
+     41          //---------------------------------------------------------------------------------------------------------------------
+     42          //---------------------------------------------------------------------------------------------------------------------
+     43          
+     44          //-------------------------------------- Include Files ----------------------------------------------------------------
+     45          #include "SRUMRelayPilot.h"
+     46          #if (HBL_PILOT_NUM_SRUMRELAY > 0)
+     47          #include "SRUMRelayPilot_prv.h"
+     48          #include "SRException.h"
+     49          #include "SRData.h"
+     50          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+     51              #include "SRTaskSequence.h"
+     52          #endif
+     53          #include "Hbl.h"
+     54          #include "Gpio.h"
+     55          #include "VirtualPin.h"
+     56          #include "string.h"
+     57          
+     58          #if (ZC_HANDLER_TIMING_US == 0) || (ZC_NUM_GPIO_REQUESTS == 0) || (SRUMRELAYPILOT_FORCE_OC == ENABLED)
+     59          #include "Timer.h"
+     60          #endif
+     61          
+     62          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     63          
+     64          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     65          #define     PULSE_WIDTH_US                      500
+     66          #define     MAX_ANGLE_VALUE                     ((1 << 15) - 1)
+     67          #define     MIN_ANGLE                           (15 * (1 << 15) / 1000)
+     68          #define     MAX_ANGLE                           (850 * (1 << 15) / 1000)
+     69          #define     THRES_ANGLE                         (300 * (1 << 15) / 1000)
+     70          #define     TACHO_TIMING_SCALE                  (100/5)
+     71          
+     72          #ifndef     SRUMRELAYPILOT_FORCE_OC
+     73          #define     SRUMRELAYPILOT_FORCE_OC             DISABLED
+     74          #endif
+     75          
+     76          #ifndef     SRUMRELAYPILOT_TRIAC_DEBOUNCE_CNT
+     77          #define     SRUMRELAYPILOT_TRIAC_DEBOUNCE_CNT   3
+     78          #endif
+     79          
+     80          #ifndef     SRUMRELAYPILOT__ISCONSISTENCYOK_ADDITIONAL_CHECK
+     81          #define     SRUMRELAYPILOT__ISCONSISTENCYOK_ADDITIONAL_CHECK()      TRUE
+     82          #endif
+     83          
+     84          #ifndef     SRUMRELAYPILOT__ISSTOPCONDITION_ADDITIONAL_CHECK
+     85          #define     SRUMRELAYPILOT__ISSTOPCONDITION_ADDITIONAL_CHECK()      FALSE
+     86          #endif
+     87          
+     88          typedef PACKED struct UNIVERSALMOTORPILOT_SF_PARAM_STRUCT
+     89          {
+     90              uint8 Tacho_Fb_Index;
+     91              uint8 Fbk_Debounce_Time;
+     92              uint8 Tapfield_Suspend_Time;
+     93              uint8 Tacho_Timeout;
+     94              uint16 Angle_Fbk_Threshold;         // Q15 format
+     95          } SRUMRELAYPILOT_SF_PARAM_TYPE;
+     96          
+     97          #ifdef      SRUMRELAYPILOT_FALLBACK_SF_PARAMS
+     98          	static SRUMRELAYPILOT_SF_PARAM_TYPE const SRUMRelayPilot_Default_SF_Params = SRUMRELAYPILOT_FALLBACK_SF_PARAMS;
+     99          #endif
+    100          
+    101          typedef PACKED struct SRUMRELAYPILOT_DATA_STRUCT
+    102          {
+    103              SRUMRELAYPILOT_PARAM_TYPE Requested;
+    104              SRUMRELAYPILOT_PARAM_TYPE Processed;
+    105              #if (ZC_HANDLER_TIMING_US > 0) && (ZC_NUM_GPIO_REQUESTS > 0) && (SRUMRELAYPILOT_FORCE_OC == DISABLED)
+    106                  uint16 Triac_Id;
+    107              #else
+    108                  TIMER_PARAMETER_TYPE OC_Timer_Config;
+    109              #endif
+    110              uint16 Time_Cnt;
+    111              uint16 Tacho_Cnt;
+    112              uint8 Tacho_Seq_Id;
+    113              uint8 ZeroCross_Sequence;
+    114              uint8 Enable_Triac;
+    115              uint8 Triac_Check_Debounce;
+    116              SRUMRELAYPILOT_STATE_TYPE State;
+    117              SRUMRELAYPILOT_STATUS_TYPE Status;
+    118          } SRUMRELAYPILOT_DATA_TYPE;
+    119          
+    120          static uint8 SRUMRelayPilot_Allocation;
+    121          SRUMRELAYPILOT_DATA_TYPE PACKED SRUMRelayPilot_Data[HBL_PILOT_NUM_SRUMRELAY];
+    122          
+    123          static uint8 N_SRUMRelayPilot_Allocation;
+    124          SRUMRELAYPILOT_DATA_TYPE PACKED N_SRUMRelayPilot_Data[HBL_PILOT_NUM_SRUMRELAY];
+    125          
+    126          
+    127          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    128          static PASS_FAIL_TYPE CheckPin(uint8 pin, uint8 value, uint8 active_value, uint8 debounce_counter);
+    129          static BOOL_TYPE IsConsistencyOK(HBL_CONSISTENCY_TYPE consistency);
+    130          static BOOL_TYPE IsStopCommand(SRUMRELAYPILOT_DATA_TYPE *data_ptr);
+    131          static void StopMotor(SRUMRELAYPILOT_DATA_TYPE *data_ptr, SRUMRELAYPILOT_DATA_TYPE *n_data_ptr, SRUMRELAYPILOT_SF_PARAM_TYPE *param);
+    132          static void UpdatePin(uint8 pin, uint8 value, uint8 active_value);
+    133          
+    134          //=====================================================================================================================
+    135          //-------------------------------------- Public Functions -------------------------------------------------------------
+    136          //=====================================================================================================================
+    137          
+    138          //---------------------------------------------------------------------------------------------------------------------
+    139          /**
+    140           * @brief   Initializes the SRUMRelayPilot module and its variables
+    141           */
+    142          void SRUMRelayPilot__Initialize(void)
+    143          {
+    144              SRData__UpdateByte((void *) &SRUMRelayPilot_Allocation, (void *) &N_SRUMRelayPilot_Allocation, 0);
+    145              SRData__Fill((void *) SRUMRelayPilot_Data, (void *) N_SRUMRelayPilot_Data, 0, sizeof(SRUMRelayPilot_Data));
+    146              #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    147                  SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_INIT, SRTASKSEQUENCE_APPL_INIT_SRUMRELAY_PILOT);
+    148              #endif
+    149          }
+    150          
+    151          //---------------------------------------------------------------------------------------------------------------------
+    152          /**
+    153           * @brief   Checks if there is free space and reserve a new instance
+    154           * @return  index of SRUMRelayPilot instance, HBL_INDEX_INVALID if all HBL_PILOT_NUM_SRUMRELAY are already allocated
+    155           */
+    156          uint8 SRUMRelayPilot__Allocate(void)
+    157          {
+    158              uint8 retval = HBL_INDEX_INVALID;
+    159          
+    160              if ((SRDATA_OK == SRData__CheckByte((void *)&SRUMRelayPilot_Allocation,(void *)&N_SRUMRelayPilot_Allocation)) &&
+    161                  (SRUMRelayPilot_Allocation < HBL_PILOT_NUM_SRUMRELAY))
+    162              {
+    163                  retval = SRUMRelayPilot_Allocation;
+    164                  SRData__UpdateByte((void *)&SRUMRelayPilot_Allocation, (void *)&N_SRUMRelayPilot_Allocation, SRUMRelayPilot_Allocation+1);
+    165              }
+    166          
+    167              return (retval);
+    168          
+    169          }
+    170          
+    171          //---------------------------------------------------------------------------------------------------------------------
+    172          /**
+    173           * @brief      Initializes a new instance of SRUMRelayPilot
+    174           * @param      load     pointer to HBL_LOAD_TYPE structure reserved for that instance
+    175           * @retval     PASS      if instance initialization succeeded
+    176           * @retval     FAIL      if there were errors
+    177           */
+    178          PASS_FAIL_TYPE  SRUMRelayPilot__InitializeInstance(HBL_LOAD_TYPE *load)
+    179          {
+    180              PASS_FAIL_TYPE ret_val = FAIL;
+    181          
+    182              if((SRDATA_OK == SRData__CheckByte((void *)&SRUMRelayPilot_Allocation,(void *)&N_SRUMRelayPilot_Allocation)) &&
+    183                  (load->Pilot_Data_Index < SRUMRelayPilot_Allocation))
+    184              {
+    185                  SRUMRELAYPILOT_DATA_TYPE *data_ptr = &SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    186                  SRUMRELAYPILOT_DATA_TYPE *n_data_ptr = &N_SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    187                  HBL_LOAD_STATUS_TYPE load_value;
+    188                  uint8 *pin_ptr = load->Pin_Ptr;
+    189                  uint8 hi_lo_bitmap = load->Hi_Low_Activation_Bitmap;
+    190                  uint8 pin_value = 0;
+    191                  ret_val = PASS;
+    192          
+    193                  if (SRDATA_OK != SRData__CheckArrayNonBlocking(data_ptr, n_data_ptr, sizeof(SRUMRELAYPILOT_DATA_TYPE)))
+    194                  {
+    195                      ret_val = FAIL;
+    196                  }
+    197          
+    198          
+    199                  if (load->Pin_Ptr == NULL)
+    200                  {
+    201                      ret_val = FAIL;
+    202                  }
+    203          
+    204                  #ifndef SRUMRELAYPILOT_FALLBACK_SF_PARAMS
+    205                      if (load->Parameter_Ptr.Data == NULL)
+    206                      {
+    207                          ret_val = FAIL;
+    208                      }
+    209                  #endif
+    210                  SRData__UpdateByte((void *) &data_ptr->State, (void *) &n_data_ptr->State, SRUMRELAYPILOT_INITALIZE);
+    211                  load_value = data_ptr->Status.Load;
+    212                  load_value.Load.Status = HBL_LOAD_STATUS_INITIALIZE;
+    213                  SRData__UpdateByte(&data_ptr->Status.Load.Byte, &n_data_ptr->Status.Load.Byte, load_value.Byte);
+    214                  SRData__UpdateByte(&data_ptr->ZeroCross_Sequence, &n_data_ptr->ZeroCross_Sequence, 0);
+    215          
+    216                  // Initialize Motor Control
+    217                  ret_val &= SRUMRELAYPILOT__CONTROL_INITIALIZE(load);
+    218                  // Check Triac pin, Cw Pin, Ccw_Pin, Tap Field pin
+    219                  ret_val &= (PASS_FAIL_TYPE) (pin_ptr[0] < VirtualPin__GetNumOf());
+    220                  ret_val &= (PASS_FAIL_TYPE) (pin_ptr[1] < VirtualPin__GetNumOf());
+    221                  ret_val &= (PASS_FAIL_TYPE) (pin_ptr[2] < VirtualPin__GetNumOf());
+    222                  ret_val &= (PASS_FAIL_TYPE) (pin_ptr[3] < VirtualPin__GetNumOf());
+    223          
+    224                  if (ret_val == PASS)
+    225                  {
+    226                      VIRTUALPIN_TYPE *virtual_pin_ptr = (void *) &VIRTUALPIN_TABLE[pin_ptr[0]];
+    227          
+    228                      // Configure Triac
+    229                      #if (ZC_HANDLER_TIMING_US > 0) && (ZC_NUM_GPIO_REQUESTS > 0) && (SRUMRELAYPILOT_FORCE_OC == DISABLED)
+    230                      SRData__UpdateByte((void *) &data_ptr->Triac_Id, (void *) &n_data_ptr->Triac_Id,
+    231                              ZeroCross__RegisterGpioActivity(virtual_pin_ptr->port, virtual_pin_ptr->pin));
+    232                          ret_val &= (data_ptr->Triac_Id != ZEROCROSS_ID_INVALID);
+    233                      #else
+    234                          // Output Compare
+    235                          SRData__UpdateByte((void *) &data_ptr->OC_Timer_Config.Port, (void *) &n_data_ptr->OC_Timer_Config.Port, virtual_pin_ptr->port);
+    236                          SRData__UpdateByte((void *) &data_ptr->OC_Timer_Config.Pin, (void *) &n_data_ptr->OC_Timer_Config.Pin, virtual_pin_ptr->pin);
+    237                          SRData__UpdateByte((void *) &data_ptr->OC_Timer_Config.Polarity, (void *) &n_data_ptr->OC_Timer_Config.Polarity,
+    238                              (hi_lo_bitmap & 0x01) ? TIMER_POLARITY_ACTIVE_HIGH : TIMER_POLARITY_ACTIVE_LOW);
+    239                          SRData__UpdateByte((void *) &data_ptr->OC_Timer_Config.Timer, (void *) &n_data_ptr->OC_Timer_Config.Timer, virtual_pin_ptr->device);
+    240                          SRData__UpdateByte((void *) &data_ptr->OC_Timer_Config.Channel, (void *) &n_data_ptr->OC_Timer_Config.Channel, virtual_pin_ptr->param0);
+    241                          SRData__UpdateByte((void *) &data_ptr->OC_Timer_Config.Mode, (void *) &n_data_ptr->OC_Timer_Config.Mode, TIMER_MODE_DISABLE);
+    242                          ret_val = Timer__Config(&data_ptr->OC_Timer_Config);
+    243                      #endif
+    244          
+    245                          // Configure Pins
+    246                          UpdatePin(pin_ptr[0], pin_value, hi_lo_bitmap & 0x01);
+    247                          UpdatePin(pin_ptr[1], pin_value, (hi_lo_bitmap >> 1) & 0x01);
+    248                          UpdatePin(pin_ptr[2], pin_value, (hi_lo_bitmap >> 2) & 0x01);
+    249                          UpdatePin(pin_ptr[3], pin_value, (hi_lo_bitmap >> 3) & 0x01);
+    250          
+    251                          // Check pin configuration
+    252                          ret_val &= CheckPin(pin_ptr[0], pin_value, hi_lo_bitmap & 0x01, SRUMRELAYPILOT_TRIAC_DEBOUNCE_CNT);
+    253                          ret_val &= CheckPin(pin_ptr[1], pin_value, (hi_lo_bitmap >> 1) & 0x01, SRUMRELAYPILOT_TRIAC_DEBOUNCE_CNT);
+    254                          ret_val &= CheckPin(pin_ptr[2], pin_value, (hi_lo_bitmap >> 2) & 0x01, SRUMRELAYPILOT_TRIAC_DEBOUNCE_CNT);
+    255                          ret_val &= CheckPin(pin_ptr[3], pin_value, (hi_lo_bitmap >> 3) & 0x01, SRUMRELAYPILOT_TRIAC_DEBOUNCE_CNT);
+    256          
+    257                          SRData__UpdateByte((void *) &data_ptr->State, (void *) &n_data_ptr->State, SRUMRELAYPILOT_IDLE);
+    258                  }
+    259                  else
+    260                  {
+    261                      load_value = data_ptr->Status.Load;
+    262                      load_value.Load.Status = HBL_LOAD_STATUS_FAILURE;
+    263                      SRData__UpdateByte((void *) &data_ptr->Status.Load.Byte, (void *) &n_data_ptr->Status.Load.Byte, load_value.Byte);
+    264                  }
+    265              }
+    266          
+    267              return(ret_val);
+    268          }
+    269          
+    270          //---------------------------------------------------------------------------------------------------------------------
+    271          /**
+    272           *  @brief      Set SRUMRelayPilot instance request.
+    273           *
+    274           *  @param      load - Pointer to associated DoorLockEMPilot instance.
+    275           *  @param      data - Pointer to request data. Pass argument as uint8 *.
+    276           *
+    277           *  @return     PASS_FAIL_TYPE result - Result of SRUMRelayPilot request.
+    278           *  @retval     PASS - Instance request succeeded.
+    279           *  @retval     FAIL - Instance request failed.
+    280           */
+    281          PASS_FAIL_TYPE  SRUMRelayPilot__Request(HBL_LOAD_TYPE *load, void *data)
+    282          {
+    283              PASS_FAIL_TYPE result = FAIL;
+    284          
+    285              if ((SRDATA_OK == SRData__CheckByte(&SRUMRelayPilot_Allocation, &N_SRUMRelayPilot_Allocation)) &&
+    286                  (load->Pilot_Data_Index < SRUMRelayPilot_Allocation))
+    287              {
+    288                  SRUMRELAYPILOT_DATA_TYPE *data_ptr = &SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    289                  SRUMRELAYPILOT_DATA_TYPE *n_data_ptr = &N_SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    290                  if ((SRDATA_OK == SRData__CheckArrayNonBlocking((void *)data_ptr,(void *)n_data_ptr, sizeof(SRUMRELAYPILOT_DATA_TYPE))) &&
+    291                      (data_ptr->State != SRUMRELAYPILOT_INITALIZE))
+    292                  {
+    293                      SRData__UpdateArray((void *) &data_ptr->Requested, (void *) &n_data_ptr->Requested,
+    294                          (void *)data, sizeof(SRUMRELAYPILOT_PARAM_TYPE));
+    295                      result = PASS;
+    296                  }
+    297              }
+    298          
+    299              return (result);
+    300          }
+    301          
+    302          //---------------------------------------------------------------------------------------------------------------------
+    303          /**
+    304           *  @brief      Process SRUMRelayPilot instance.
+    305           *
+    306           *  @param      load - Pointer to SRUMRelayPilot instance.
+    307           *
+    308           *  @return     PASS_FAIL_TYPE result - Result of SRUMRelayPilot instance process.
+    309           *  @retval     PASS - Instance process succeeded.
+    310           *  @retval     FAIL - Instance process failed.
+    311           */
+    312          PASS_FAIL_TYPE  SRUMRelayPilot__Process(HBL_LOAD_TYPE *load)
+    313          {
+    314              PASS_FAIL_TYPE result = FAIL;
+    315          
+    316              if ((SRDATA_OK == SRData__CheckByte((void *)&SRUMRelayPilot_Allocation,(void *)&N_SRUMRelayPilot_Allocation)) &&
+    317                  (load->Pilot_Data_Index < SRUMRelayPilot_Allocation))
+    318              {
+    319                  SRUMRELAYPILOT_DATA_TYPE *data_ptr = &SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    320                  SRUMRELAYPILOT_DATA_TYPE *n_data_ptr = &N_SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    321                  if ((SRDATA_OK == SRData__CheckArrayNonBlocking((void *)data_ptr,(void *)n_data_ptr, sizeof(SRUMRELAYPILOT_DATA_TYPE))) &&
+    322                      (SRUMRelayPilot_Data[load->Pilot_Data_Index].State != SRUMRELAYPILOT_INITALIZE))
+    323                  {
+    324                      SRData__UpdateArray((void *) &data_ptr->Processed, (void *) &n_data_ptr->Processed,
+    325                          (void *) &data_ptr->Requested, sizeof(SRUMRELAYPILOT_PARAM_TYPE));
+    326                      result = PASS;
+    327                  }
+    328              }
+    329          
+    330              return (result);
+    331          }
+    332          
+    333          
+    334          //---------------------------------------------------------------------------------------------------------------------
+    335          /**
+    336           * @brief   Class B Data Integrity check handler
+    337           * It should be run on Application thread before SRHbl__Process()
+    338           * It checks SRUMRelayPilot_Allocation and SRUMRelayPilot_Data integrity
+    339           * It marks SRTASKSEQUENCE_APPL_SRUMRELAYPILOT_CHECK step on SRTASKSEQUENCE_APPL_SAFETY_THREAD sequence
+    340           */
+    341          void SRUMRelayPilot__Handler(void)
+    342          {
+    343          
+    344              if (SRDATA_OK != SRData__CheckByte((void *)&SRUMRelayPilot_Allocation,(void *)&N_SRUMRelayPilot_Allocation))
+    345              {
+    346                  SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, 0x00, 0xAB);
+    347                  // System will reset after this exception occurs
+    348              }
+    349              else
+    350              {
+    351                  for (uint8 index = 0; index < HBL_PILOT_NUM_SRUMRELAY; index++)
+    352                  {
+    353                      if (SRData__CheckArrayNonBlocking((uint8 *)(void *)&SRUMRelayPilot_Data[index],
+    354                          (uint8 *)(void *)&N_SRUMRelayPilot_Data[index], sizeof(SRUMRELAYPILOT_DATA_TYPE)) != SRDATA_OK)
+    355                      {
+    356                          SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, 0x01, index);
+    357                          // System will reset after this exception occurs
+    358                      }
+    359                  }
+    360              }
+    361          
+    362              #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    363                  SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_THREAD, SRTASKSEQUENCE_APPL_SRUMRELAYPILOT_CHECK);
+    364              #endif
+    365          
+    366          }
+    367          
+    368          //---------------------------------------------------------------------------------------------------------------------
+    369          /**
+    370           *  @brief      ZeroCross event processing for SRUMRelayPilot.
+    371           *
+    372           *  @details     ZeroCross process handles Triac activation (if requested) and ZeroCross sequence counter
+    373           *
+    374           *  @param      load - Pointer to SRUMRelayPilot instance.
+    375           *
+    376           *  @return     PASS_FAIL_TYPE result - Result of SRUMRelayPilot asynch execution.
+    377           *  @retval     PASS - Execution succeeded.
+    378           *  @retval     FAIL - Execution failed.
+    379           */
+    380          PASS_FAIL_TYPE  SRUMRelayPilot__ZcProcess(HBL_LOAD_TYPE *load)
+    381          {
+    382              PASS_FAIL_TYPE ret_val = FAIL;
+    383          
+    384              if ((SRDATA_OK == SRData__CheckByte((void *)&SRUMRelayPilot_Allocation,(void *)&N_SRUMRelayPilot_Allocation)) &&
+    385                  (load->Pilot_Data_Index < SRUMRelayPilot_Allocation))
+    386              {
+    387                  SRUMRELAYPILOT_DATA_TYPE *data_ptr = &SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    388                  SRUMRELAYPILOT_DATA_TYPE *n_data_ptr = &N_SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    389          
+    390                  if ((SRDATA_OK == SRData__CheckArrayNonBlocking((void *)data_ptr,(void *)n_data_ptr, sizeof(SRUMRELAYPILOT_DATA_TYPE))) &&
+    391                      (data_ptr->State != SRUMRELAYPILOT_INITALIZE))
+    392                  {
+    393                      ZEROCROSS_EVENT_TYPE last_event = ZeroCross__GetLastEvent();
+    394                      BOOL_TYPE firing_triac = FALSE;
+    395          
+    396                      // Update ZeroCross_Sequence
+    397                      if(last_event != ZEROCROSS_BLACKOUT_EVENT)
+    398                      {
+    399                          uint8 zc_next_seq = data_ptr->ZeroCross_Sequence + 1;
+    400                          if (zc_next_seq == 0)
+    401                          {
+    402                              zc_next_seq++;
+    403                          }
+    404                          SRData__UpdateByte(&data_ptr->ZeroCross_Sequence, &n_data_ptr->ZeroCross_Sequence, zc_next_seq);
+    405                      }
+    406          
+    407                      if((last_event != ZEROCROSS_BLACKOUT_EVENT) &&
+    408                          (data_ptr->Enable_Triac == TRUE))
+    409                      {
+    410                          uint32 zc_half_period = ZeroCross__GetCycleCount()/2;
+    411                          uint16 zc_latency = ZeroCross__GetTimeFromLastEvent();
+    412                          ret_val = PASS;
+    413          
+    414                          #if (ZC_HANDLER_TIMING_US > 0) && (ZC_NUM_GPIO_REQUESTS > 0) && (SRUMRELAYPILOT_FORCE_OC == DISABLED)
+    415                              uint16 angle = (data_ptr->Status.Firing_Angle_S15 * zc_half_period) >> 15;
+    416                              ZEROCROSS_GPIO_REQUEST_TYPE triac_req;
+    417          
+    418                              angle -= zc_latency;
+    419                              triac_req.Active_Degree = (uint8) ((angle * ZEROCROSS_HALF_WAVE_ANGLE) / zc_half_period);
+    420                              angle += PULSE_WIDTH_US;
+    421                              triac_req.Deactive_Degree = (uint8) ((angle * ZEROCROSS_HALF_WAVE_ANGLE) / zc_half_period);
+    422                              triac_req.Active_value = (BOOL_TYPE) (load->Hi_Low_Activation_Bitmap & 0x01);
+    423                              triac_req.Gpio_Id = data_ptr->Triac_Id;
+    424                              ZeroCross__RequestGpioActivity(&triac_req);
+    425                          #else
+    426                              sint32 oc_timeout = (zc_half_period * data_ptr->Status.Firing_Angle_S15  + 16384) >> 15;
+    427                              TIMER_ONCOMPARE_TYPE oc_type = (load->Hi_Low_Activation_Bitmap & 0x01) ? TIMER_ONCOMPARE_PIN_HIGH_INTERRUPT : TIMER_ONCOMPARE_PIN_LOW_INTERRUPT;
+    428          
+    429                              if ((data_ptr->Status.Firing_Angle_S15 < MIN_ANGLE) ||
+    430                                  (oc_timeout < zc_latency))
+    431                              {
+    432                                  oc_timeout =  (zc_half_period*MIN_ANGLE)>>15;
+    433                              }
+    434                              else
+    435                              {
+    436                                  if (data_ptr->Status.Firing_Angle_S15 > MAX_ANGLE)
+    437                                  {
+    438                                      oc_timeout = (zc_half_period * MAX_ANGLE)>>15;
+    439                                  }
+    440                                  oc_timeout -= zc_latency;
+    441                              }
+    442          
+    443                              ret_val &= Timer__ConfigCheck(&data_ptr->OC_Timer_Config);
+    444                              SRData__UpdateByte((void *) &data_ptr->OC_Timer_Config.Mode,
+    445                                  (void *) &n_data_ptr->OC_Timer_Config.Mode, TIMER_MODE_OUTPUT_COMPARE);
+    446                              ret_val &= Timer__Config(&data_ptr->OC_Timer_Config);
+    447                              Timer__OutputCompareStart(&data_ptr->OC_Timer_Config, oc_type, oc_timeout);
+    448                          #endif
+    449                          firing_triac = TRUE;
+    450                      }
+    451                      else
+    452                      {
+    453                          uint8 *pin_ptr = load->Pin_Ptr;
+    454                          uint8 hi_lo_bitmap = load->Hi_Low_Activation_Bitmap;
+    455                          uint8 new_debounce_counter = data_ptr->Triac_Check_Debounce+1;
+    456          
+    457                          ret_val = CheckPin(pin_ptr[0], OFF, hi_lo_bitmap & 0x01, new_debounce_counter);
+    458                          if (ret_val == PASS)
+    459                          {
+    460                              #if (ZC_HANDLER_TIMING_US == 0) || (ZC_NUM_GPIO_REQUESTS == 0) || (SRUMRELAYPILOT_FORCE_OC == ENABLED)
+    461                                  // Keep Timer disabled
+    462                                  ret_val &= Timer__ConfigCheck(&data_ptr->OC_Timer_Config);
+    463                                  if(data_ptr->OC_Timer_Config.Mode != TIMER_MODE_DISABLE)
+    464                                  {
+    465                                      SRData__UpdateByte((void *) &data_ptr->OC_Timer_Config.Mode,
+    466                                          (void *) &n_data_ptr->OC_Timer_Config.Mode, TIMER_MODE_DISABLE);
+    467                                      ret_val &= Timer__Config(&data_ptr->OC_Timer_Config);
+    468                                  }
+    469                              #endif
+    470                              UpdatePin(pin_ptr[0], OFF, hi_lo_bitmap & 0x01);
+    471                              new_debounce_counter = 0;
+    472                          }
+    473          
+    474                          SRData__UpdateByte((void *) &data_ptr->Triac_Check_Debounce,
+    475                              (void *) &n_data_ptr->Triac_Check_Debounce, new_debounce_counter);
+    476                      }
+    477          
+    478                      SRData__UpdateByte((void *) &data_ptr->Status.Is_Triac_Firing,
+    479                          (void *) &n_data_ptr->Status.Is_Triac_Firing, firing_triac);
+    480                  }
+    481              }
+    482              return(ret_val);
+    483          }
+    484          
+    485          //---------------------------------------------------------------------------------------------------------------------
+    486          /**
+    487           *  @brief      Asynchronous process for SRUMRelayPilot.
+    488           *
+    489           *  @details    Asynchronous process handles motor pilot state machine and sequences between Relays and Triac
+    490           *
+    491           *  @param      load - Pointer to SRUMRelayPilot instance.
+    492           *
+    493           *  @return     PASS_FAIL_TYPE result - Result of SRUMRelayPilot asynch execution.
+    494           *  @retval     PASS - Execution succeeded.
+    495           *  @retval     FAIL - Execution failed.
+    496           */
+    497          PASS_FAIL_TYPE  SRUMRelayPilot__AsyncProcess(HBL_LOAD_TYPE *load)
+    498          {
+    499              PASS_FAIL_TYPE ret_val = FAIL;
+    500          
+    501              if ((SRDATA_OK == SRData__CheckByte((void *)&SRUMRelayPilot_Allocation,(void *)&N_SRUMRelayPilot_Allocation)) &&
+    502                  (load->Pilot_Data_Index < SRUMRelayPilot_Allocation))
+    503              {
+    504                  SRUMRELAYPILOT_DATA_TYPE *data_ptr = &SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    505                  SRUMRELAYPILOT_DATA_TYPE *n_data_ptr = &N_SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    506          
+    507                  if (SRDATA_OK == SRData__CheckArrayNonBlocking((void *)data_ptr,(void *)n_data_ptr, sizeof(SRUMRELAYPILOT_DATA_TYPE)))
+    508                  {
+    509                      SRUMRELAYPILOT_SF_PARAM_TYPE *param_ptr = (void *)load->Parameter_Ptr.Data;
+    510                      uint8 hi_lo_bitmap = load->Hi_Low_Activation_Bitmap;
+    511                      uint8 *pin_ptr = load->Pin_Ptr;
+    512                      BOOL_TYPE enable_triac = FALSE;
+    513                      SRUMRELAYPILOT_CONTROL_STATUS_TYPE control_status;
+    514                      SRUMRELAYPILOT_CONTROL_PARAM_TYPE control_param;
+    515                      HBL_LOAD_STATUS_TYPE current_load_status;
+    516                      HBL_CONSISTENCY_TYPE own_consistency;
+    517          
+    518                      // Initialize local variables
+    519                      current_load_status.Load.Cur_Reg = OFF;
+    520                      current_load_status.Load.Status = HBL_LOAD_STATUS_TARGET_COMPLETED;
+    521                      own_consistency.Consistency.Table = HBL_CONSISTENCY_TABLE_INVALID;
+    522                      own_consistency.Consistency.Value = HBL_CONSISTENCY_INVALID_VALUE;
+    523                      memset(&control_status, 0, sizeof(control_status));
+    524          
+    525                      #ifdef SRUMRELAYPILOT_FALLBACK_SF_PARAMS
+    526                          if (param_ptr == NULL)
+    527                          {
+    528                              param_ptr = (void *) &SRUMRelayPilot_Default_SF_Params;
+    529                          }
+    530                      #endif
+    531                      if((data_ptr->State != SRUMRELAYPILOT_INITALIZE) &&
+    532                          (PASS == CheckPin(pin_ptr[1], data_ptr->Status.Cw_Relay, (hi_lo_bitmap >> 1) & 0x01, SRUMRELAYPILOT_TRIAC_DEBOUNCE_CNT)) &&
+    533                          (PASS == CheckPin(pin_ptr[2], data_ptr->Status.Ccw_Relay, (hi_lo_bitmap >> 2) & 0x01, SRUMRELAYPILOT_TRIAC_DEBOUNCE_CNT)) &&
+    534                          (PASS == CheckPin(pin_ptr[3], data_ptr->Status.Tapped_Field_Relay, (hi_lo_bitmap >> 3) & 0x01, SRUMRELAYPILOT_TRIAC_DEBOUNCE_CNT)))
+    535                      {
+    536                          uint16 tacho_cnt = data_ptr->Tacho_Cnt;
+    537                          uint8 tacho_index = param_ptr->Tacho_Fb_Index;
+    538                          uint8 tacho_seq_id;
+    539          
+    540                          #ifdef SRUMRELAYPILOT__GET_CSTM_TACHO_INDEX
+    541                              if (tacho_index >= Hbl__GetNumLLI())
+    542                              {
+    543                                  tacho_index = SRUMRELAYPILOT__GET_CSTM_TACHO_INDEX(load);
+    544                              }
+    545                          #endif
+    546          
+    547                          // Decrement Feedback / Suspend time counter
+    548                          if (data_ptr->Time_Cnt > 0)
+    549                          {
+    550                              SRData__UpdateShort((void *)&data_ptr->Time_Cnt,
+    551                                  (void *)&n_data_ptr->Time_Cnt, data_ptr->Time_Cnt-1);
+    552                          }
+    553          
+    554                          // Check Tacho signal
+    555                          tacho_seq_id = Hbl__GetLLISequenceIDByIndex(tacho_index);
+    556                          if(data_ptr->Tacho_Seq_Id == tacho_seq_id)
+    557                          {
+    558                              if (tacho_cnt > 0)
+    559                              {
+    560                                  tacho_cnt--;
+    561                              }
+    562                          }
+    563                          else
+    564                          {
+    565                              tacho_cnt = param_ptr->Tacho_Timeout * TACHO_TIMING_SCALE;
+    566                              SRData__UpdateByte(&data_ptr->Tacho_Seq_Id, &n_data_ptr->Tacho_Seq_Id, tacho_seq_id);
+    567                          }
+    568                          SRData__UpdateShort(&data_ptr->Tacho_Cnt, &n_data_ptr->Tacho_Cnt, tacho_cnt);
+    569          
+    570                          if ((data_ptr->State != SRUMRELAYPILOT_IDLE) &&
+    571                              (data_ptr->State != SRUMRELAYPILOT_STOP))
+    572                          {
+    573                              current_load_status.Load.Cur_Reg = ON;
+    574                              if ((data_ptr->State == SRUMRELAYPILOT_RUN) &&
+    575                                  (data_ptr->Status.Firing_Angle_S15 < param_ptr->Angle_Fbk_Threshold))
+    576                              {
+    577                                  current_load_status.Load.Status = HBL_LOAD_STATUS_TARGET_ALT_TABLE;
+    578                              }
+    579                          }
+    580                          own_consistency.Byte = Hbl__GetOwnLoadConsistency(load, current_load_status.Byte);
+    581          
+    582                          // Execute Control Handler
+    583                          control_param.Processed = data_ptr->Processed;
+    584                          control_param.State = data_ptr->State;
+    585                          control_param.Tacho_Index = tacho_index;
+    586                          control_param.ZeroCross_Sequence = data_ptr->ZeroCross_Sequence;
+    587                          control_param.Is_Triac_Firing = data_ptr->Status.Is_Triac_Firing;
+    588                          control_param.Is_Running = data_ptr->Status.Is_Running;
+    589                          control_param.Is_Tacho_Signal = (BOOL_TYPE) (data_ptr->Tacho_Cnt != 0);
+    590          
+    591                          if(SRUMRELAYPILOT__CONTROL_HANDLER(load, &control_param, &control_status) == PASS)
+    592                          {
+    593                              SRData__UpdateLong((void *)&data_ptr->Status.Motor_Speed_S15,
+    594                                  (void *)&n_data_ptr->Status.Motor_Speed_S15, control_status.Motor_Speed_S15);
+    595                              SRData__UpdateLong((void *)&data_ptr->Status.Motor_Speed_Ref_S15,
+    596                                  (void *)&n_data_ptr->Status.Motor_Speed_Ref_S15, control_status.Motor_Speed_Ref_S15);
+    597                              SRData__UpdateByte((void *) &data_ptr->Status.Fault,
+    598                                  (void *)  &n_data_ptr->Status.Fault, control_status.Fault);
+    599                              SRData__UpdateByte((void *) &data_ptr->Status.Has_Start_Failed,
+    600                                  (void *) &n_data_ptr->Status.Has_Start_Failed, control_status.Has_Start_Failed);
+    601                              SRData__UpdateByte((void *) &data_ptr->Status.Is_Speed_Reached,
+    602                                  (void *) &n_data_ptr->Status.Is_Speed_Reached, control_status.Is_Speed_Reached);
+    603                              SRData__UpdateByte((void *) &data_ptr->Status.Is_Running,
+    604                                  (void *) &n_data_ptr->Status.Is_Running, control_status.Is_Running);
+    605          
+    606                              if (data_ptr->Processed.Custom_Param.Data.Force_Tap_Field_On == ON)
+    607                              {
+    608                                  control_status.Tapped_Field_Relay = ON;
+    609                              }
+    610                          }
+    611                          else
+    612                          {
+    613                              SRData__UpdateLong((void *)&data_ptr->Status.Motor_Speed_S15,
+    614                                  (void *)&n_data_ptr->Status.Motor_Speed_S15, 0);
+    615                              SRData__UpdateLong((void *)&data_ptr->Status.Motor_Speed_Ref_S15,
+    616                                  (void *)&n_data_ptr->Status.Motor_Speed_Ref_S15, 0);
+    617                              SRData__UpdateByte((void *) &data_ptr->Status.Fault,
+    618                                  (void *) &n_data_ptr->Status.Fault, TRUE);
+    619                              SRData__UpdateByte((void *) &data_ptr->Status.Has_Start_Failed,
+    620                                  (void *) &n_data_ptr->Status.Has_Start_Failed, FALSE);
+    621                              SRData__UpdateByte((void *) &data_ptr->Status.Is_Speed_Reached,
+    622                                  (void *) &n_data_ptr->Status.Is_Speed_Reached, TRUE);
+    623                              SRData__UpdateByte((void *) &data_ptr->Status.Is_Running,
+    624                                  (void *) &data_ptr->Status.Is_Running, FALSE);
+    625                              StopMotor(data_ptr, n_data_ptr, param_ptr);
+    626                          }
+    627          
+    628                          ret_val = PASS;
+    629                      }
+    630                      else
+    631                      {
+    632                          HBL_LOAD_STATUS_TYPE load_status;
+    633                          load_status.Load.Cur_Reg = OFF;
+    634                          load_status.Load.Status = HBL_LOAD_STATUS_FAILURE;
+    635                          SRData__UpdateByte((void *) &data_ptr->Status.Load.Byte,
+    636                              (void *) &n_data_ptr->Status.Load.Byte, load_status.Byte);
+    637                      }
+    638          
+    639                      switch (data_ptr->State)
+    640                      {
+    641                          case SRUMRELAYPILOT_IDLE:
+    642                              current_load_status.Load.Cur_Reg = OFF;
+    643                              SRData__UpdateByte((void *)&data_ptr->Status.Tapped_Field_Relay,
+    644                                  (void *)&n_data_ptr->Status.Tapped_Field_Relay, OFF);
+    645                              SRData__UpdateByte((void *)&data_ptr->Status.Is_Triac_Firing,
+    646                                  (void *)&n_data_ptr->Status.Is_Triac_Firing, FALSE);
+    647                              SRData__UpdateByte((void *)&data_ptr->Status.Is_Running,
+    648                                  (void *)&n_data_ptr->Status.Is_Running, FALSE);
+    649          
+    650                              if (IsConsistencyOK(own_consistency) != TRUE)
+    651                              {
+    652                                  SRData__UpdateShort((void *)&data_ptr->Time_Cnt,
+    653                                      (void *)&n_data_ptr->Time_Cnt, param_ptr->Fbk_Debounce_Time);
+    654                              }
+    655          
+    656                              // New command will start if Consistency is OK, one direction relay is set and tacho is lost
+    657                              if ((control_status.Cw_Relay != control_status.Ccw_Relay) &&
+    658                                  (control_status.Firing_Angle_S15 >= param_ptr->Angle_Fbk_Threshold) &&
+    659                                  (data_ptr->Time_Cnt == 0) &&
+    660                                  (data_ptr->Tacho_Cnt == 0))
+    661                              {
+    662                                  SRData__UpdateByte((void *)&data_ptr->Status.Cw_Relay,
+    663                                      (void *)&n_data_ptr->Status.Cw_Relay, control_status.Cw_Relay);
+    664                                  SRData__UpdateByte((void *)&data_ptr->Status.Ccw_Relay,
+    665                                      (void *)&n_data_ptr->Status.Ccw_Relay, control_status.Ccw_Relay);
+    666                                  SRData__UpdateByte((void *)&data_ptr->State, (void *)&n_data_ptr->State, SRUMRELAYPILOT_START);
+    667                                  current_load_status.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+    668                                  SRData__UpdateShort((void *)&data_ptr->Time_Cnt,
+    669                                      (void *)&n_data_ptr->Time_Cnt, param_ptr->Fbk_Debounce_Time);
+    670                                  SRData__UpdateByte((void *) &data_ptr->Status.Is_Speed_Reached,
+    671                                      (void *) &n_data_ptr->Status.Is_Speed_Reached, FALSE);
+    672                              }
+    673                              else
+    674                              {
+    675                                  SRData__UpdateByte((void *)&data_ptr->Status.Cw_Relay,
+    676                                      (void *)&n_data_ptr->Status.Cw_Relay, data_ptr->Processed.Custom_Param.Data.Idle_Relays_On);
+    677                                  SRData__UpdateByte((void *)&data_ptr->Status.Ccw_Relay,
+    678                                      (void *)&n_data_ptr->Status.Ccw_Relay, data_ptr->Processed.Custom_Param.Data.Idle_Relays_On);
+    679                                  SRData__UpdateByte((void *)&data_ptr->Status.Is_Speed_Reached,
+    680                                      (void *)&n_data_ptr->Status.Is_Speed_Reached, (BOOL_TYPE)((data_ptr->Status.Fault == 0) &&
+    681                                          (data_ptr->Tacho_Cnt == 0)));
+    682                                  current_load_status.Load.Status = HBL_LOAD_STATUS_TARGET_COMPLETED;
+    683                              }
+    684                              SRData__UpdateByte((void *)&data_ptr->Status.Load.Byte,
+    685                                  (void *)&n_data_ptr->Status.Load.Byte, current_load_status.Byte);
+    686                              break;
+    687          
+    688                          case SRUMRELAYPILOT_START:
+    689                             if(IsStopCommand(data_ptr) ||
+    690                                 (control_status.Firing_Angle_S15 < param_ptr->Angle_Fbk_Threshold) ||
+    691                                 (control_status.Cw_Relay != data_ptr->Status.Cw_Relay) ||
+    692                                 (control_status.Ccw_Relay != data_ptr->Status.Ccw_Relay))
+    693                              {
+    694                                  StopMotor(data_ptr, n_data_ptr, param_ptr);
+    695                              }
+    696                             else if (IsConsistencyOK(own_consistency) == TRUE)
+    697                             {
+    698                                  if ((data_ptr->Time_Cnt == 0) &&
+    699                                      (data_ptr->Tacho_Cnt == 0))
+    700                                  {
+    701                                      enable_triac = TRUE;
+    702                                      SRData__UpdateByte((void *)&data_ptr->State, (void *)&n_data_ptr->State, SRUMRELAYPILOT_RUN);
+    703                                  }
+    704                             }
+    705                             else
+    706                             {
+    707                                 SRData__UpdateShort((void *)&data_ptr->Time_Cnt,
+    708                                     (void *)&n_data_ptr->Time_Cnt, param_ptr->Fbk_Debounce_Time);
+    709                             }
+    710                             break;
+    711          
+    712                          case SRUMRELAYPILOT_RUN:
+    713                              if(IsStopCommand(data_ptr) ||
+    714                                   (control_status.Cw_Relay != data_ptr->Status.Cw_Relay) ||
+    715                                   (control_status.Ccw_Relay != data_ptr->Status.Ccw_Relay))
+    716                              {
+    717                                  StopMotor(data_ptr, n_data_ptr, param_ptr);
+    718                              }
+    719                              else if (data_ptr->Status.Tapped_Field_Relay != control_status.Tapped_Field_Relay)
+    720                              {
+    721                                  if (data_ptr->Status.Is_Triac_Firing == TRUE)
+    722                                  {
+    723                                      SRData__UpdateByte((void *)&data_ptr->State, (void *)&n_data_ptr->State, SRUMRELAYPILOT_SUSPEND);
+    724                                      SRData__UpdateShort((void *)&data_ptr->Time_Cnt,
+    725                                          (void *)&n_data_ptr->Time_Cnt, param_ptr->Tapfield_Suspend_Time);
+    726                                  }
+    727                                  else
+    728                                  {
+    729                                      SRData__UpdateByte((void *)&data_ptr->Status.Tapped_Field_Relay,
+    730                                          (void *)&n_data_ptr->Status.Tapped_Field_Relay, control_status.Tapped_Field_Relay);
+    731                                  }
+    732                              }
+    733                              else
+    734                              {
+    735                                  enable_triac = TRUE;
+    736                                  current_load_status.Load.Cur_Reg = ON;
+    737                                  SRData__UpdateByte((void *)&data_ptr->Status.Load.Byte,
+    738                                      (void *)&n_data_ptr->Status.Load.Byte, current_load_status.Byte);
+    739                              }
+    740                              break;
+    741          
+    742                          case SRUMRELAYPILOT_SUSPEND:
+    743                              if(IsStopCommand(data_ptr) ||
+    744                                  (control_status.Cw_Relay != data_ptr->Status.Cw_Relay) ||
+    745                                  (control_status.Ccw_Relay != data_ptr->Status.Ccw_Relay))
+    746                              {
+    747                                  StopMotor(data_ptr, n_data_ptr, param_ptr);
+    748                              }
+    749                              else if ((data_ptr->Status.Tapped_Field_Relay == control_status.Tapped_Field_Relay) &&
+    750                                  (IsConsistencyOK(own_consistency) == FALSE))
+    751                              {
+    752                                  SRData__UpdateShort((void *)&data_ptr->Time_Cnt,
+    753                                      (void *)&n_data_ptr->Time_Cnt, param_ptr->Fbk_Debounce_Time);
+    754                              }
+    755                              else if (data_ptr->Time_Cnt == 0)
+    756                              {
+    757                                  if ((data_ptr->Status.Is_Triac_Firing == FALSE) &&
+    758                                      (data_ptr->Status.Tapped_Field_Relay != control_status.Tapped_Field_Relay))
+    759                                  {
+    760                                      SRData__UpdateByte((void *)&data_ptr->Status.Tapped_Field_Relay,
+    761                                          (void *)&n_data_ptr->Status.Tapped_Field_Relay, control_status.Tapped_Field_Relay);
+    762                                      SRData__UpdateShort((void *)&data_ptr->Time_Cnt,
+    763                                          (void *)&n_data_ptr->Time_Cnt, param_ptr->Tapfield_Suspend_Time);
+    764                                  }
+    765                                  else
+    766                                  {
+    767                                      enable_triac = TRUE;
+    768                                      SRData__UpdateByte((void *)&data_ptr->State, (void *)&n_data_ptr->State, SRUMRELAYPILOT_RUN);
+    769                                  }
+    770                              }
+    771                              break;
+    772          
+    773                          case SRUMRELAYPILOT_STOP:
+    774                              if ((data_ptr->Time_Cnt == 0) &&
+    775                                  (data_ptr->Status.Is_Triac_Firing == FALSE))
+    776                              {
+    777                                  SRData__UpdateByte((void *)&data_ptr->State, (void *)&n_data_ptr->State, SRUMRELAYPILOT_IDLE);
+    778                                  SRData__UpdateShort((void *)&data_ptr->Time_Cnt, (void *)&n_data_ptr->Time_Cnt, param_ptr->Fbk_Debounce_Time);
+    779                              }
+    780                              break;
+    781          
+    782                          default:
+    783                              ret_val = FAIL;
+    784                              break;
+    785                      }
+    786          
+    787                      if (ret_val == PASS)
+    788                      {
+    789                          // Configure Relay Pin status
+    790                          UpdatePin(pin_ptr[1], data_ptr->Status.Cw_Relay, (hi_lo_bitmap >> 1) & 0x01);
+    791                          UpdatePin(pin_ptr[2], data_ptr->Status.Ccw_Relay, (hi_lo_bitmap >> 2) & 0x01);
+    792                          UpdatePin(pin_ptr[3], data_ptr->Status.Tapped_Field_Relay, (hi_lo_bitmap >> 3) & 0x01);
+    793          
+    794                          // Set Triac Firing
+    795                          if((data_ptr->Processed.Custom_Param.Data.Disable_Triac != OFF) ||
+    796                              (control_status.Firing_Angle_S15 >= MAX_ANGLE_VALUE))
+    797                          {
+    798                              enable_triac = FALSE;
+    799                          }
+    800                          SRData__UpdateByte((void *)&data_ptr->Enable_Triac, (void *)&n_data_ptr->Enable_Triac, enable_triac);
+    801                          SRData__UpdateShort((void *)&data_ptr->Status.Firing_Angle_S15, (void *)&n_data_ptr->Status.Firing_Angle_S15,
+    802                              ((enable_triac == TRUE) ? control_status.Firing_Angle_S15 : MAX_ANGLE_VALUE));
+    803                      }
+    804                  }
+    805              }
+    806          
+    807          
+    808              return(ret_val);
+    809          }
+    810          
+    811          //---------------------------------------------------------------------------------------------------------------------
+    812          /**
+    813           *  @brief      Output compare event processing for SRUMRelayPilot.
+    814           *
+    815           *  @details    Output compare process handles Triac deactivation (if it has been activated)
+    816           *
+    817           *  @param      load - Pointer to SRUMRelayPilot instance.
+    818           *
+    819           *  @return     PASS_FAIL_TYPE result - Result of SRUMRelayPilot asynch execution.
+    820           *  @retval     PASS - Execution succeeded.
+    821           *  @retval     FAIL - Execution failed.
+    822           */
+    823          PASS_FAIL_TYPE  SRUMRelayPilot__OCProcess(HBL_LOAD_TYPE *load)
+    824          {
+    825              PASS_FAIL_TYPE ret_val = FAIL;
+    826          
+    827          #if (ZC_HANDLER_TIMING_US == 0) || (ZC_NUM_GPIO_REQUESTS == 0) || (SRUMRELAYPILOT_FORCE_OC == ENABLED)
+    828              if ((SRDATA_OK == SRData__CheckByte((void *)&SRUMRelayPilot_Allocation,(void *)&N_SRUMRelayPilot_Allocation)) &&
+    829                  (load->Pilot_Data_Index < SRUMRelayPilot_Allocation))
+    830              {
+    831                  SRUMRELAYPILOT_DATA_TYPE *data_ptr = &SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    832                  SRUMRELAYPILOT_DATA_TYPE *n_data_ptr = &N_SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    833          
+    834                  if ((SRDATA_OK == SRData__CheckArrayNonBlocking((void *)data_ptr,(void *)n_data_ptr, sizeof(SRUMRELAYPILOT_DATA_TYPE))) &&
+    835                      (data_ptr->State != SRUMRELAYPILOT_INITALIZE))
+    836                  {
+    837                      uint8 *pin_ptr = load->Pin_Ptr;
+    838                      uint8 hi_lo_bitmap = load->Hi_Low_Activation_Bitmap;
+    839                      uint8 new_debounce_counter = data_ptr->Triac_Check_Debounce + 1;
+    840          
+    841                      if (PASS == CheckPin(pin_ptr[0], ON, hi_lo_bitmap & 0x01, new_debounce_counter))
+    842                      {
+    843                          uint32 zc_half_period = ZeroCross__GetCycleCount()/2;
+    844                          sint32 angle_us = (zc_half_period * data_ptr->Status.Firing_Angle_S15  + 16384) >> 15;
+    845                          uint32 pulse = PULSE_WIDTH_US;
+    846          
+    847                          if(angle_us < zc_half_period/2)
+    848                          {
+    849                              pulse = zc_half_period/2 - angle_us + PULSE_WIDTH_US;
+    850                          }
+    851          
+    852                          uint8 hi_lo_bitmap = load->Hi_Low_Activation_Bitmap;
+    853                          TIMER_ONCOMPARE_TYPE oc_type;
+    854          
+    855                          (void) Timer__ConfigCheck(&data_ptr->OC_Timer_Config);
+    856                          oc_type = (hi_lo_bitmap & 0x01) ? TIMER_ONCOMPARE_PIN_LOW : TIMER_ONCOMPARE_PIN_HIGH;
+    857                          Timer__Config(&data_ptr->OC_Timer_Config);
+    858                          Timer__OutputCompareStart(&data_ptr->OC_Timer_Config, oc_type, pulse);
+    859                          new_debounce_counter = 0;
+    860                          ret_val = PASS;
+    861                      }
+    862                      SRData__UpdateByte((void *) &data_ptr->Triac_Check_Debounce,
+    863                          (void *) &n_data_ptr->Triac_Check_Debounce, new_debounce_counter);
+    864                  }
+    865              }
+    866          #endif
+    867              return(ret_val);
+    868          }
+    869          
+    870          //---------------------------------------------------------------------------------------------------------------------
+    871          /**
+    872           *  @brief      Get current SRUMRelayPilot instance request.
+    873           *
+    874           *  @param      load - Pointer to associated SRUMRelayPilot instance.
+    875           *
+    876           *  @return     void *requested - Requested instance data.
+    877           *  @retval     Address of requested instance data. Cast it using *((uint8 *)ptr) to get values.
+    878           *  @retval     NULL - Invalid load index.
+    879           */
+    880          void *SRUMRelayPilot__GetRequested(HBL_LOAD_TYPE *load)
+    881          {
+    882              void *requested = NULL;
+    883          
+    884              if ((SRDATA_OK == SRData__CheckByte((void *)&SRUMRelayPilot_Allocation,(void *)&N_SRUMRelayPilot_Allocation)) &&
+    885                  (load->Pilot_Data_Index < SRUMRelayPilot_Allocation))
+    886              {
+    887                  SRUMRELAYPILOT_DATA_TYPE *data_ptr = &SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    888                  SRUMRELAYPILOT_DATA_TYPE *n_data_ptr = &N_SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    889                  if (SRDATA_OK == SRData__CheckArrayNonBlocking((void *)data_ptr, (void *)n_data_ptr, sizeof(SRUMRELAYPILOT_DATA_TYPE)))
+    890                  {
+    891                      requested =  &data_ptr->Requested;
+    892                  }
+    893              }
+    894          
+    895              return (requested);
+    896          }
+    897          
+    898          //---------------------------------------------------------------------------------------------------------------------
+    899          /**
+    900           *  @brief      Get SRUMRelayPilot instance processed request.
+    901           *
+    902           *  @param      load - Pointer to associated SRUMRelayPilot instance.
+    903           *
+    904           *  @return     void * processed - Processed instance data.
+    905           *  @retval     Address of processed instance data. Cast it using *((uint8 *)ptr) to get values.
+    906           *  @retval     NULL - Invalid load index.
+    907           */
+    908          void *SRUMRelayPilot__GetProcessed(HBL_LOAD_TYPE *load)
+    909          {
+    910              void * processed = NULL;
+    911          
+    912              if ((SRDATA_OK == SRData__CheckByte((void *)&SRUMRelayPilot_Allocation,(void *)&N_SRUMRelayPilot_Allocation)) &&
+    913                  (load->Pilot_Data_Index < SRUMRelayPilot_Allocation))
+    914              {
+    915                  SRUMRELAYPILOT_DATA_TYPE *data_ptr = &SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    916                  SRUMRELAYPILOT_DATA_TYPE *n_data_ptr = &N_SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    917                  if (SRDATA_OK == SRData__CheckArrayNonBlocking((void *)data_ptr, (void *)n_data_ptr, sizeof(SRUMRELAYPILOT_DATA_TYPE)))
+    918                  {
+    919                      processed =  &data_ptr->Processed;
+    920                  }
+    921              }
+    922          
+    923              return (processed);
+    924          }
+    925          
+    926          //---------------------------------------------------------------------------------------------------------------------
+    927          /**
+    928           *  @brief      Get SRUMRelayPilot instance status.
+    929           *
+    930           *  @param      load - Pointer to SRUMRelayPilot instance.
+    931           *
+    932           *  @return     void *status - instance Status.
+    933           *  @retval     Address of instance Status. Cast it using *((HBL_LOAD_STATUS_TYPE *)ptr) to get the value.
+    934           *  @retval     NULL - Invalid load index.
+    935           */
+    936          void *SRUMRelayPilot__GetStatus(HBL_LOAD_TYPE *load)
+    937          {
+    938              void *status_ptr = NULL;
+    939          
+    940              if ((SRDATA_OK == SRData__CheckByte((void *)&SRUMRelayPilot_Allocation,(void *)&N_SRUMRelayPilot_Allocation)) &&
+    941                  (load->Pilot_Data_Index < SRUMRelayPilot_Allocation))
+    942              {
+    943                  SRUMRELAYPILOT_DATA_TYPE *data_ptr = &SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    944                  SRUMRELAYPILOT_DATA_TYPE *n_data_ptr = &N_SRUMRelayPilot_Data[load->Pilot_Data_Index];
+    945                  if (SRDATA_OK == SRData__CheckArrayNonBlocking((void *)data_ptr, (void *)n_data_ptr, sizeof(SRUMRELAYPILOT_DATA_TYPE)))
+    946                  {
+    947                      status_ptr =  &data_ptr->Status;
+    948                  }
+    949              }
+    950          
+    951              return (status_ptr);
+    952          }
+    953          
+    954          //=====================================================================================================================
+    955          //-------------------------------------- Private Functions ------------------------------------------------------------
+    956          //=====================================================================================================================
+    957          
+    958          //---------------------------------------------------------------------------------------------------------------------
+    959          /**
+    960           *  @brief      Performs pin check according to value and active_value (from SF).
+    961           *
+    962           *  @param      pin - pin index on VirtualPin Table.
+    963           *  @param      value - ON/OFF value to be set
+    964           *  @param      active_value - Real pin value to set if ON
+    965           *  @return     Pin check result: PASS if check passed
+    966           */
+    967          PASS_FAIL_TYPE CheckPin(uint8 pin, uint8 value, uint8 active_value, uint8 debounce_counter)
+    968          {
+    969              PASS_FAIL_TYPE result = FAIL;
+    970              VIRTUALPIN_TYPE *virtual_pin_ptr = (VIRTUALPIN_TYPE *) &VIRTUALPIN_TABLE[pin]; //lint !e929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    971              BOOL_TYPE pin_value_read = Gpio__PinRead(virtual_pin_ptr->port, virtual_pin_ptr->pin);
+    972              uint8 pin_value = value ^ ~active_value;
+    973              pin_value &= 0x01;
+    974          
+    975              if( (pin_value == pin_value_read) ||
+    976                  (debounce_counter >= SRUMRELAYPILOT_TRIAC_DEBOUNCE_CNT))
+    977              {
+    978                  if (TRUE == Gpio__CheckConfig(virtual_pin_ptr->port, virtual_pin_ptr->pin, virtual_pin_ptr->pin_config, (BOOL_TYPE) pin_value))
+    979                  {
+    980                      result = PASS;
+    981                  }
+    982              }
+    983              return(result);
+    984          }
+    985          
+    986          //---------------------------------------------------------------------------------------------------------------------
+    987          /**
+    988           *  @brief      Performs pin update according to value and active_value (from SF).
+    989           *
+    990           *  @param      pin - pin index on VirtualPin Table.
+    991           *  @param      value - ON/OFF value to be set
+    992           *  @param      active_value - Real pin value to set if ON
+    993           */
+    994          void UpdatePin(uint8 pin, uint8 value, uint8 active_value)
+    995          {
+    996              VIRTUALPIN_TYPE *virtual_pin_ptr = (VIRTUALPIN_TYPE *) &VIRTUALPIN_TABLE[pin]; //lint !e929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    997              uint8 pin_value = value ^ ~active_value;
+    998              pin_value &= 0x01;
+    999              Gpio__PinWrite(virtual_pin_ptr->port, virtual_pin_ptr->pin, (BOOL_TYPE) pin_value);
+   1000              Gpio__PinConfig(virtual_pin_ptr->port, virtual_pin_ptr->pin, virtual_pin_ptr->pin_config);
+   1001          }
+   1002          
+   1003          //---------------------------------------------------------------------------------------------------------------------
+   1004          /**
+   1005           *  @brief      Returns if consistency value can be considered good
+   1006           *              HBL_CONSISTENCY_TABLE_INVALID allows to bypass this check if no consistency table is set - for tests only!
+   1007           *
+   1008           *  @param      consistency - Consistency value to check
+   1009           *  @return     TRUE/FALSE if Consistency is considered good or not
+   1010           */
+   1011          BOOL_TYPE IsConsistencyOK(HBL_CONSISTENCY_TYPE consistency)
+   1012          {
+   1013              BOOL_TYPE consistency_ok = (BOOL_TYPE) SRUMRELAYPILOT__ISCONSISTENCYOK_ADDITIONAL_CHECK();
+   1014              consistency_ok &= (BOOL_TYPE) ((consistency.Consistency.Value == HBL_CONSISTENCY_OK) ||
+   1015                  (consistency.Consistency.Table == HBL_CONSISTENCY_TABLE_INVALID));
+   1016              return(consistency_ok);
+   1017          }
+   1018          
+   1019          //---------------------------------------------------------------------------------------------------------------------
+   1020          /**
+   1021           *  @brief      Returns if a stop command has been detected
+   1022           *              Stop command can be both Target_Speed and Acceleration 0 or both Cw and Ccw Relay at same status
+   1023           *
+   1024           *  @param      data_ptr - Pointer to instance data to check
+   1025           *  @return     TRUE/FALSE if a stop command has been detected or not
+   1026           */
+   1027          BOOL_TYPE IsStopCommand(SRUMRELAYPILOT_DATA_TYPE *data_ptr)
+   1028          {
+   1029              BOOL_TYPE stop_check = (BOOL_TYPE) SRUMRELAYPILOT__ISSTOPCONDITION_ADDITIONAL_CHECK();
+   1030          
+   1031              stop_check |= (BOOL_TYPE) (((data_ptr->Processed.Target_Speed == 0) &&
+   1032                              (data_ptr->Processed.Acceleration == 0)));
+   1033              stop_check |= (BOOL_TYPE) (data_ptr->Status.Cw_Relay == data_ptr->Status.Ccw_Relay);
+   1034          
+   1035              return(stop_check);
+   1036          }
+   1037          
+   1038          //---------------------------------------------------------------------------------------------------------------------
+   1039          /**
+   1040           *  @brief      Execute transition to Stop or Idle status
+   1041           *
+   1042           *  @param      data_ptr - Pointer to instance data to check
+   1043           */
+   1044          void StopMotor(SRUMRELAYPILOT_DATA_TYPE *data_ptr, SRUMRELAYPILOT_DATA_TYPE *n_data_ptr, SRUMRELAYPILOT_SF_PARAM_TYPE *param)
+   1045          {
+   1046              if (data_ptr->State == SRUMRELAYPILOT_START)
+   1047              {
+   1048                  SRData__UpdateByte((void *)&data_ptr->State, (void *)&n_data_ptr->State, SRUMRELAYPILOT_IDLE);
+   1049              }
+   1050              else if((data_ptr->State != SRUMRELAYPILOT_IDLE) &&
+   1051                  (data_ptr->State != SRUMRELAYPILOT_STOP))
+   1052              {
+   1053                  HBL_LOAD_STATUS_TYPE load_status = data_ptr->Status.Load;
+   1054                  load_status.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+   1055                  load_status.Load.Cur_Reg = OFF;
+   1056                  SRData__UpdateByte((void *)&data_ptr->Status.Load.Byte, (void *)&n_data_ptr->Status.Load.Byte, load_status.Byte);
+   1057                  SRData__UpdateByte((void *)&data_ptr->State, (void *)&n_data_ptr->State, SRUMRELAYPILOT_STOP);
+   1058              }
+   1059              SRData__UpdateShort((void *)&data_ptr->Time_Cnt, (void *)&n_data_ptr->Time_Cnt, param->Fbk_Debounce_Time);
+   1060              SRData__UpdateByte((void *)&data_ptr->Enable_Triac, (void *)&n_data_ptr->Enable_Triac, OFF);
+   1061          }
+   1062          
+   1063          
+   1064          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

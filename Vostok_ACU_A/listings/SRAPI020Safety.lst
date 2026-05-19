@@ -1,0 +1,845 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:38
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Application/all/SRAPI020Safety/SRAPI020Safety.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SRAPI020Safety.lst -o
+#        obj\SRAPI020Safety.obj
+#        source/XCategory/Application/all/SRAPI020Safety/SRAPI020Safety.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SRAPI020Safety.lst
+#    Object file  =  obj\SRAPI020Safety.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Application\all\SRAPI020Safety\SRAPI020Safety.c
+      1          /**
+      2           * @file
+      3           * @defgroup    CLASS_B
+      4           * @brief       API020 Safety is used to transfer Class B data over a Class A communication bus.
+      5           *
+      6           * @details     The strategy of this module is to define receive (RX) and transmit (TX) Class B
+      7           *              data channels through the configuration files.
+      8           *
+      9           *              Receive (RX) Channels:
+     10           *
+     11           *                  The SRAPI020Safety module keeps track of the received messages on the
+     12           *                  communications bus and ensures that the received data is valid. A Class B
+     13           *                  module can call SRAPI020Safety__GetRxValue() at any time to check if there is
+     14           *                  any valid data from the remote node.
+     15           *
+     16           *                  The SRAPI020Safety module considers the RX channel valid when the following
+     17           *                  conditions are met:
+     18           *                      - The last message was received within the timeout period.
+     19           *                      - The time between the last two received messages was less than the
+     20           *                          timeout period.
+     21           *                      - The last two received messages were sequential messages.
+     22           *
+     23           *              Transmit (TX) Channels:
+     24           *
+     25           *                  The SRAPI020Safety module manages the sequence and timing for transmitted
+     26           *                  messages. A Class B module must call SRAPI020Safety__SetTxValue() periodically
+     27           *                  in order to maintain a valid sequence of messages. The time between calls must
+     28           *                  be less than the timeout specified in the configuration.
+     29           *
+     30           *                  The SRAPI020Safety module sends the messages with valid sequence numbers as
+     31           *                  long as the SRAPI020Safety__SetTxValue() function is called with the
+     32           *                  appropriate timing.
+     33           *
+     34           *              The receiver will not consider the value valid until two sequential message have
+     35           *              been received. The sender can send two sequential messages in rapid succession to
+     36           *              force this condition.
+     37           *
+     38           * @copyright   Copyright 2017 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     39           */
+     40          
+     41          //  --- Include Files -------------------------------------------------------------------------------------------------
+     42          
+     43          // -- This Module --
+     44          #include "SRSystemConfig.h"
+     45          
+     46          #ifndef API020SAFETY_FEATURE
+     47              // API020SAFETY_FEATURE should be ENABLED for applications that must transfer Class B data over Reveal.
+     48              #error API020SAFETY_FEATURE must be defined via SystemConfig.h as ENABLED or DISABLED.
+     49          #endif
+     50          
+     51          #if (API020SAFETY_FEATURE == ENABLED)
+     52          
+     53          #include "SRAPI020Safety.h"
+     54          #include "SRAPI020Safety_prv.h"
+     55          
+     56          // -- Other Modules --
+     57          #include "Crc8.h"
+     58          #include <limits.h>
+     59          #include "Micro_Defs.h"
+     60          #include "SRData.h"
+     61          #include "SRTimerReference.h"
+     62          #include <string.h>
+     63          #include "Win.h"
+     64          
+     65          
+     66          #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+     67              // The number of receive channels specified must match the number defined in API020_RX_CHANNEL.
+     68              CT_ASSERT(API020_NUMBER_OF_RX_CHANNELS == ELEMENTS_IN_ARRAY(API020_RX_CHANNEL));
+     69          #endif
+     70          #if (API020_NUMBER_OF_TX_CHANNELS > 0)
+     71              // The number of transmit channels specified must match the number defined in API020_TX_CHANNEL.
+     72              CT_ASSERT(API020_NUMBER_OF_TX_CHANNELS == ELEMENTS_IN_ARRAY(API020_TX_CHANNEL));
+     73          #endif
+     74          #ifndef WIN_TOOL_ADDRESS
+     75              #define WIN_TOOL_ADDRESS 14
+     76          #endif
+     77          
+     78          
+     79          //  --- Private Declarations ------------------------------------------------------------------------------------------
+     80          
+     81          
+     82          // -- Private Constant Declarations --
+     83          
+     84          //! The number of bytes that each API020 payload consumes as overhead when transferring safety data.
+     85          #define API020_PACKET_OVERHEAD (sizeof(API020_SAFETY_PACKET_TYPE) - MAX_CLASSB_DATA_SIZE)
+     86          
+     87          //! The maximum size of Class B Safety Data on a single Transmit Channel or Receive Channel.
+     88          #define MAX_CLASSB_DATA_SIZE 11
+     89          
+     90          //! The first Sequence Number used on a Transmit Channel after a reset.
+     91          #define SEQUENCE_RESET 0
+     92          
+     93          //! The Sequence Number that sequentially follows the SEQUENCE_LAST Sequence Number.
+     94          //! This is also the first Sequence Number that represents a potentially valid sequence.
+     95          #define SEQUENCE_FIRST 1
+     96          
+     97          //! The last Sequence Number before having to restart counting at a lower value.
+     98          #define SEQUENCE_LAST 253
+     99          
+    100          //! A Sequence Number that represents that the Transmit Channel did not satisfy the timing requirements.
+    101          #define SEQUENCE_LOST 254
+    102          
+    103          //! A Sequence Number used internally to represent an invalid Sequence Number.
+    104          //! This Sequence Number is not expected in the API020 messages.
+    105          #define SEQUENCE_INVALID 255
+    106          
+    107          
+    108          // -- Private Structure Type Declarations --
+    109          
+    110          //! The format of a data packet.
+    111          typedef struct API020_SAFETY_PACKET_STRUCT
+    112          {
+    113              uint8 Sequence;
+    114              uint8 Src_Addr;
+    115              uint8 Dst_Addr;
+    116              uint8 Data[MAX_CLASSB_DATA_SIZE + sizeof(uint8) /* sizeof(Crc8) */];
+    117          } API020_SAFETY_PACKET_TYPE;
+    118          
+    119          //! A structure that declares all the variables used by this module.
+    120          typedef struct API020_DATA_STRUCT
+    121          {
+    122              #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    123                  // The time of the last received message for each Receive Channel.
+    124                  uint32 Rx_Time[API020_NUMBER_OF_RX_CHANNELS];
+    125          
+    126                  // The expected sequence number for the next received message on each Receive Channel.
+    127                  uint8 Rx_Expected_Sequence[API020_NUMBER_OF_RX_CHANNELS];
+    128          
+    129                  // A flag that indicates that the Receive Channel has satisfied all sequence requirements.
+    130                  uint8 Rx_Sequence_Valid[API020_NUMBER_OF_RX_CHANNELS];
+    131              #endif
+    132              #if (API020_NUMBER_OF_TX_CHANNELS > 0)
+    133                  // The time of the last transmitted message for each Transmit Channel.
+    134                  uint32 Tx_Time[API020_NUMBER_OF_TX_CHANNELS];
+    135          
+    136                  // The expected sequence number for the next transmitted message on each Transmit Channel.
+    137                  uint8 Tx_Next_Sequence[API020_NUMBER_OF_TX_CHANNELS];
+    138              #endif
+    139          } API020_DATA_TYPE;
+    140          
+    141          
+    142          //  --- Private Definitions -------------------------------------------------------------------------------------------
+    143          
+    144          
+    145          // -- Private Variable Definitions --
+    146          
+    147          //! The variables used by this module.
+    148          static API020_DATA_TYPE Api020;
+    149          
+    150          //! Inverted memory for the variables used by this module.
+    151          static API020_DATA_TYPE N_Api020;
+    152          
+    153          
+    154          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    155          
+    156          #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    157              static void SaveSafetyData(uint8 rx_channel, uint8 sequence, void* data);
+    158          #endif
+    159          
+    160          
+    161          //=====================================================================================================================
+    162          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    163          //=====================================================================================================================
+    164          
+    165          
+    166          //---------------------------------------------------------------------------------------------------------------------
+    167          /**
+    168           * Initialize the module's variables.
+    169           */
+    170          void SRAPI020Safety__Initialize(void)
+    171          {
+    172              memset(&Api020, 0, sizeof(Api020));
+    173              memset(&N_Api020, ~0, sizeof(N_Api020));
+    174              #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    175                  memset(&Api020.Rx_Expected_Sequence, ~0, sizeof(Api020.Rx_Expected_Sequence));
+    176                  memset(&N_Api020.Rx_Expected_Sequence, 0, sizeof(N_Api020.Rx_Expected_Sequence));
+    177              #endif      // #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    178          
+    179              API020_INIT_TASK_SEQUENCE();
+    180          }
+    181          
+    182          
+    183          //---------------------------------------------------------------------------------------------------------------------
+    184          /**
+    185           * This method parses API020 feedbacks sent to a broadcast or exclusively to this node.
+    186           * The function will ignore messages that do not satisfy the stringent Class B requirements:
+    187           *      - The opcode of the message must match the opcode used by the Receive Channel
+    188           *      - The sequence number must match the expected sequence number based on the previously received sequence number
+    189           *      - The message must have originated from the expected source address for the Receive Channel
+    190           *      - The source address in the message must match the expected source address for the Receive Channel
+    191           *      - The destination address must match this node's bus address.
+    192           *      - The safety data must be 0 to 11 bytes
+    193           *      - The CRC at the end of the payload must be correct.
+    194           * The function will only accept the data as valid if:
+    195           *      - The last two messages were sequential (no lost message)
+    196           *      - The time between the last two messages was less than the Receive Channel's timeout period.
+    197           * @param fbk = Pointer to the received feedback message.
+    198           */
+    199          void SRAPI020Safety__FeedbackParser(REVEAL_MSG_TYPE * fbk)
+    200          {
+    201              #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    202                  uint8 size = fbk->size;
+    203                  if ((API020_PACKET_OVERHEAD <= size) && (size <= sizeof(API020_SAFETY_PACKET_TYPE)))
+    204                  {
+    205                      // Check for a correct CRC, a potentially valid Sequence Number, and a correct destination node.
+    206                      uint8 crc8 = Crc8(UCHAR_MAX, fbk->payload, size - 1);
+    207                      API020_SAFETY_PACKET_TYPE* packet = (API020_SAFETY_PACKET_TYPE*)(void*)fbk->payload;
+    208                      if ((fbk->payload[size - 1] == crc8) &&         // if CRC is valid, and...
+    209                          (packet->Sequence != SEQUENCE_INVALID) &&   // if sequence is potentially valid, and...
+    210                          (packet->Dst_Addr == WIN_NODE_DEF))         // if message is intended for this bus address
+    211                      {
+    212                          // Look for the RX channel used to receive this Class B data.
+    213                          for (uint8 rx_channel = 0; rx_channel < API020_NUMBER_OF_RX_CHANNELS; rx_channel++)
+    214                          {
+    215                              API020_RX_CONFIG_TYPE const* config = &API020_RX_CHANNEL[rx_channel];
+    216                              if (((fbk->node_id == config->Node) ||
+    217                                   (fbk->node_id == WIN_TOOL_ADDRESS)) &&                     // if received from expected node, and...
+    218                                  (fbk->op_code == config->Op_Code) &&                        // if received expected opcode, and...
+    219                                  (fbk->size == API020_PACKET_OVERHEAD + config->Length) &&   // if received expected number of bytes, and...
+    220                                  ((packet->Src_Addr == config->Node) ||
+    221                                   (packet->Src_Addr == WIN_TOOL_ADDRESS)))                   // if source node in the message matches expected source node.
+    222                              {
+    223                                  SaveSafetyData(rx_channel, packet->Sequence, packet->Data);
+    224                                  break;                      // Break out of the for() loop.
+    225                              }
+    226                          }
+    227                      }
+    228                  }
+    229              #endif      // #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    230          }
+    231          
+    232          
+    233          #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    234          //---------------------------------------------------------------------------------------------------------------------
+    235          /**
+    236           * Get the most recently received Class B Safety Data if it's validity has been maintained.
+    237           * @param rx_channel = The Receive Channel whose Class B Safety Data is requested.
+    238           * @param data = Pointer to a buffer to fill with the secure Class B Safety Data.
+    239           * @return TRUE if and only if the Receive Channel messages have preserved the sequence.
+    240           */
+    241          BOOL_TYPE SRAPI020Safety__GetRxValue(API020_RX_CHANNEL_INDEX_TYPE rx_channel, void* data)
+    242          {
+    243              uint8 sequence;
+    244              BOOL_TYPE updated;
+    245              return SRAPI020Safety__GetRxValueAndUpdatedFlag(rx_channel, data, &sequence, &updated);
+    246          }
+    247          
+    248          
+    249          //---------------------------------------------------------------------------------------------------------------------
+    250          /**
+    251           * Get the most recently received Class B Safety Data if it's validity has been maintained.
+    252           *
+    253           *	@startuml{SRAPI020Safety_Sequence_Use_Case_For_Reading_New_Data.jpg}
+    254           *		title SRAPI020Safety__GetRxValueAndUpdatedFlag Use Case For Reading New Data
+    255           *
+    256           *		participant Application
+    257           *		participant SRAPI020Safety
+    258           *
+    259           *		== Initialize the Application defined *sequence variable ==
+    260           *		Application -> SRAPI020Safety : SRAPI020Safety__GetRxValueAndUpdatedFlag(rx_channel, * data, * sequence, * updated)
+    261           *		activate Application
+    262           *		activate SRAPI020Safety
+    263           *		deactivate Application
+    264           *		deactivate SRAPI020Safety
+    265           *
+    266           *		== Application periodically polls the SRAPI020Safety module for new data ==
+    267           *		loop periodically called
+    268           *			Application -> SRAPI020Safety : SRAPI020Safety__GetRxValueAndUpdatedFlag(rx_channel, * data, * sequence, * updated)
+    269           *			activate SRAPI020Safety
+    270           *			alt sequence preserved
+    271           *				Application <-- SRAPI020Safety : TRUE
+    272           *				deactivate SRAPI020Safety
+    273           *				activate Application
+    274           *				alt *updated == TRUE
+    275           *					Application --> Application : "*data" contains new values that need to be processed
+    276           *				end
+    277           *				deactivate Application
+    278           *			end
+    279           *		end
+    280           *	@enduml
+    281           *
+    282           * NOTE: this function is written to be thread safe.
+    283           * @param rx_channel = The Receive Channel whose Class B Safety Data is requested.
+    284           * @param data = Pointer to a buffer to fill with the secure Class B Safety Data.
+    285           * @param sequence = Pointer to a byte that is used by this function. No application use.
+    286           * @param updated = Pointer to a value that this function sets.
+    287           *                  Set to FALSE if the data returned is not from a new API020 message.
+    288           *                  Set to TRUE if the data returned is from a new API020 message.
+    289           * @return TRUE if and only if the Receive Channel messages have preserved the sequence.
+    290           */
+    291          BOOL_TYPE SRAPI020Safety__GetRxValueAndUpdatedFlag(API020_RX_CHANNEL_INDEX_TYPE rx_channel, void* data, uint8* sequence, BOOL_TYPE* updated)
+    292          {
+    293              *updated = FALSE;
+    294              if (( rx_channel < API020_NUMBER_OF_RX_CHANNELS ) &&
+    295              	( API020_RX_CHANNEL[rx_channel].Length <= MAX_CLASSB_DATA_SIZE ))	// prevent overflow of the stack variable data_copy
+    296          	{
+    297              	// create a copy of all the data from RAM on the stack to minimize the amount of time interrupts are disabled
+    298              	MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    299              	MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    300          
+    301                  uint8 rx_sequence_valid = Api020.Rx_Sequence_Valid[rx_channel];
+    302                  uint8 n_rx_sequence_valid = N_Api020.Rx_Sequence_Valid[rx_channel];
+    303          
+    304                  uint32 rx_time = Api020.Rx_Time[rx_channel];
+    305                  uint32 n_rx_time = N_Api020.Rx_Time[rx_channel];
+    306          
+    307          		API020_RX_CONFIG_TYPE const* config = &API020_RX_CHANNEL[rx_channel];
+    308          		uint8 data_copy[MAX_CLASSB_DATA_SIZE];
+    309          		memcpy(&data_copy, config->Address, config->Length);
+    310          		uint8 n_data_copy[MAX_CLASSB_DATA_SIZE];
+    311          		memcpy(&n_data_copy, config->N_Address, config->Length);
+    312          
+    313          		uint8 rx_expected_sequence = Api020.Rx_Expected_Sequence[rx_channel];
+    314          		uint8 n_rx_expected_sequence = N_Api020.Rx_Expected_Sequence[rx_channel];
+    315          
+    316          		MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    317          
+    318          		// check the integrity of the SR variables
+    319          		(void)SRData__CheckByte(&rx_sequence_valid, &n_rx_sequence_valid);
+    320          
+    321                  // Check whether the RX channel has preserved the required message sequence.
+    322          		if ( rx_sequence_valid == TRUE )
+    323          		{
+    324          
+    325                      // Determine how long it has been since the last received message.
+    326          			(void)SRData__CheckLong(&rx_time, &n_rx_time);
+    327                      uint32 milliseconds = SRTimerReference__GetTimer() - rx_time;
+    328          
+    329                      // Check whether the most recently received message is still valid.
+    330                      if (milliseconds < config->Period)
+    331                      {
+    332          				(void)SRData__CheckByte(&rx_expected_sequence, &n_rx_expected_sequence);
+    333                          if (*sequence != rx_expected_sequence)
+    334                          {
+    335                              *updated = TRUE;
+    336                              *sequence = rx_expected_sequence;
+    337                          }
+    338                          // Return the recently received data.
+    339          				(void)SRData__CheckArray(data_copy, n_data_copy, config->Length);
+    340                          memcpy(data, data_copy, config->Length);
+    341                          return TRUE;
+    342                      }
+    343          		}
+    344              }
+    345          	
+    346              *sequence = SEQUENCE_LOST;
+    347              return FALSE;
+    348          }
+    349          #endif      // #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    350          
+    351          
+    352          
+    353          
+    354          
+    355          
+    356          #if (API020_NUMBER_OF_TX_CHANNELS > 0)
+    357          //---------------------------------------------------------------------------------------------------------------------
+    358          /**
+    359           * Transmit the next sequential message on the specified Transmit Channel.
+    360           * @param tx_channel = The Transmit Channel on which the message should be transmitted.
+    361           * @param data = Pointer to the data to send on the transmit channel.
+    362           * @return TRUE if and only if Reveal was able to build and queue the message.
+    363           */
+    364          BOOL_TYPE SRAPI020Safety__SetTxValue(API020_TX_CHANNEL_INDEX_TYPE tx_channel, void* data)
+    365          {
+    366              BOOL_TYPE result = FALSE;
+    367              if (tx_channel < API020_NUMBER_OF_TX_CHANNELS)
+    368              {
+    369                  // Determine the next Sequence Number value.
+    370                  (void)SR_CHECK_BYTE(Api020.Tx_Next_Sequence[tx_channel]);
+    371                  uint8 sequence = Api020.Tx_Next_Sequence[tx_channel];
+    372          
+    373                  // Determine the time since the last message was sent.
+    374                  (void)SR_CHECK_LONG(Api020.Tx_Time[tx_channel]);
+    375                  uint32 now = SRTimerReference__GetTimer();
+    376          
+    377                  // If it has been too long since the last message, then break the sequence.
+    378                  API020_TX_CONFIG_TYPE const* config = &API020_TX_CHANNEL[tx_channel];
+    379                  if (sequence != SEQUENCE_RESET)
+    380                  {
+    381                      uint32 milliseconds = now - Api020.Tx_Time[tx_channel];
+    382                      if (milliseconds >= config->Period)
+    383                      {
+    384                          sequence = SEQUENCE_LOST;
+    385                      }
+    386                  }
+    387          
+    388                  // Transmit the packet.
+    389                  if (config->Node == WIN_NODE_DEF)
+    390                  {
+    391                      #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    392                          // Find the receive channel that receives this safety data.
+    393                          for (uint8 rx_channel = 0; rx_channel < API020_NUMBER_OF_RX_CHANNELS; rx_channel++)
+    394                          {
+    395                              if ((API020_RX_CHANNEL[rx_channel].Node == WIN_NODE_DEF) &&
+    396                                  (API020_RX_CHANNEL[rx_channel].Op_Code == config->Op_Code) &&
+    397                                  (API020_RX_CHANNEL[rx_channel].Length == config->Length))
+    398                              {
+    399                                  SaveSafetyData(rx_channel, sequence, data);
+    400                                  result = TRUE;
+    401                                  break;                      // Break out of the for() loop.
+    402                              }
+    403                          }
+    404                      #endif      // #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    405                  }
+    406                  else
+    407                  {
+    408                      // Build the packet for this transmit channel.
+    409                      API020_SAFETY_PACKET_TYPE packet;
+    410                      packet.Sequence = sequence;
+    411                      packet.Src_Addr = WIN_NODE_DEF;
+    412                      packet.Dst_Addr = config->Node;
+    413                      memcpy(&packet.Data, data, config->Length);
+    414                      uint8 size = API020_PACKET_OVERHEAD + config->Length;
+    415                      packet.Data[config->Length] = Crc8(UCHAR_MAX, (uint8*)(void*)&packet, size - 1);
+    416          
+    417                      REVEAL_COMMAND_TYPE* msg = Reveal__PriorityNewFeedback(API020SAFETY_NUM, config->Op_Code, config->Node, size);
+    418                      if ((Reveal__AddDataU8Buffer(msg, (uint8*)(void*)&packet, size) == PASS) &&
+    419                          (Reveal__QueueCommand(msg) == TRUE))
+    420                      {
+    421                          result = TRUE;
+    422                      }
+    423                  }
+    424                  if (result == TRUE)
+    425                  {
+    426                      // Successfully passed to receiving node, so update transmit variables.
+    427                      sequence = (sequence < SEQUENCE_LAST) ? sequence + 1 : SEQUENCE_FIRST;
+    428                      SR_SET_BYTE(Api020.Tx_Next_Sequence[tx_channel], sequence);
+    429                      SR_SET_LONG(Api020.Tx_Time[tx_channel], now);
+    430                  }
+    431              }
+    432              return result;
+    433          }
+    434          #endif      // #if (API020_NUMBER_OF_TX_CHANNELS > 0)
+    435          
+    436          
+    437          //=====================================================================================================================
+    438          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    439          //=====================================================================================================================
+    440          
+    441          
+    442          #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    443          //---------------------------------------------------------------------------------------------------------------------
+    444          /**
+    445           * Save the received safety data.
+    446           * @param rx_channel = The receive channel to which the safety data is related.
+    447           *                     Used as an index into the API020_RX_CHANNEL[rx_channel] array.
+    448           * @param sequence = The sequence of the newly received data.
+    449           * @param data = The safety data that was received.
+    450           */
+    451          static void SaveSafetyData(uint8 rx_channel, uint8 sequence, void* data)
+    452          {
+    453              // Get the time since the last message.
+    454              (void)SR_CHECK_LONG(Api020.Rx_Time[rx_channel]);
+    455              uint32 now = SRTimerReference__GetTimer();
+    456              uint32 milliseconds = now - Api020.Rx_Time[rx_channel];
+    457          
+    458              // Determine if the Class B packet sequence was preserved by this message.
+    459              (void)SR_CHECK_BYTE(Api020.Rx_Expected_Sequence[rx_channel]);
+    460              API020_RX_CONFIG_TYPE const* config = &API020_RX_CHANNEL[rx_channel];
+    461              uint8 sequence_preserved = ((milliseconds <= config->Period) &&
+    462                                          (sequence == Api020.Rx_Expected_Sequence[rx_channel]));
+    463              if (sequence_preserved)
+    464              {
+    465                  // This is a valid packet received in the expected sequence.
+    466                  // Save the received data.
+    467                  SRData__UpdateArray(config->Address, config->N_Address, data, config->Length);
+    468              }
+    469          
+    470              // Determine the next expected Sequence Number for this RX channel.
+    471              sequence = (sequence < SEQUENCE_LAST) ? sequence + 1 : SEQUENCE_FIRST;
+    472          
+    473              // Save the RX channel status information.
+    474              SR_SET_BYTE(Api020.Rx_Expected_Sequence[rx_channel], sequence);
+    475              SR_SET_LONG(Api020.Rx_Time[rx_channel], now);
+    476              SR_SET_BYTE(Api020.Rx_Sequence_Valid[rx_channel], sequence_preserved);
+    477          }
+    478          #endif      // #if (API020_NUMBER_OF_RX_CHANNELS > 0)
+    479          
+    480          
+    481          #endif      // #if (API020SAFETY_FEATURE == ENABLED)
+    482          
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

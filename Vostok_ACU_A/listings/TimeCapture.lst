@@ -1,0 +1,965 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:51
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Hbl/all/MCUDrivers/TimeCapture/TimeCapture.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Oh --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\TimeCapture.lst -o
+#        obj\TimeCapture.obj
+#        source/Category/Hbl/all/MCUDrivers/TimeCapture/TimeCapture.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\TimeCapture.lst
+#    Object file  =  obj\TimeCapture.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Hbl\all\MCUDrivers\TimeCapture\TimeCapture.c
+      1          /**
+      2           *  @file
+      3           *  @brief      Capture time between consecutive digital input signal states.
+      4           *
+      5           *  @details    Specific implementation for time measurement dedicated to the Triac Control
+      6           *  			TIMx CHx is used to generate a time based signal that will interrupt the
+      7           *  			Application when the triac shall be triggered.
+      8           *
+      9           *  @Module_Owner {Eduardo H Couto}
+     10           *  $Revision: 1.00 $
+     11           *
+     12           *  Copyright 2010 Whirlpool Corporation. All rights reserved - CONFIDENTIAL.
+     13           *
+     14           */
+     15          
+     16          //-------------------------------------- Include Files ----------------------------------------------------------------
+     17          #include "C_Extensions.h"
+     18          #include "TimeCapture.h"
+     19          #include "Gpio.h"
+     20          #include "TimeCapture_prv.h"
+     21          #include "Micro.h"
+     22          
+     23          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     24          
+     25          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     26          //---------------------------------------------------------------------------------------------------------------------
+     27          
+     28          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     29          static uint32 GetTIMFreq(void);
+     30          //=====================================================================================================================
+     31          //-------------------------------------- Public Functions -------------------------------------------------------------
+     32          //=====================================================================================================================
+     33          
+     34          //---------------------------------------------------------------------------------------------------------------------
+     35          /**
+     36           *  @brief      It Initializes the module time capture and its variables
+     37           *
+     38           */
+
+   \                                 In section .text, align 2, keep-with-next
+     39          void TimeCapture__Initialize(void)
+     40          {
+     41          
+     42          }
+   \                     TimeCapture__Initialize: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+     43          
+     44          
+     45          
+     46          
+     47          
+     48          //---------------------------------------------------------------------------------------------------------------------
+     49          /**
+     50           *  @brief  Initialize/configure selected timer and channel.
+     51           *
+     52           *  @param  input_number    : Selected channel number - specified time capture channel
+     53           *  @param  event           : Capture time on specified/defined event
+     54           *  @param  frequency       :
+     55           */
+
+   \                                 In section .text, align 2, keep-with-next
+     56          void TimeCapture__ChannelConfig(TIME_CAPTURE_INPUT_TYPE input_number,CHANNEL_EVENT_TYPE event, uint32 frequency)
+     57          {
+   \                     TimeCapture__ChannelConfig: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0017             MOVS     R7,R2
+     58          #if (TIM_USED == TIM14_BASE)
+     59              TIM_DEF_TYPE * tim;
+     60              tim = (TIM_DEF_TYPE *) TIM_USED;
+     61          
+     62              //Enable the clock for TIM14 module
+     63              RCC.APBENR2 |= RCC_APBENR2_TIM14EN;
+   \   00000004   0x....             LDR      R6,??DataTable8  ;; 0x40021008
+   \   00000006   0x6BB0             LDR      R0,[R6, #+56]
+   \   00000008   0x2180             MOVS     R1,#+128
+   \   0000000A   0x0209             LSLS     R1,R1,#+8        ;; #+32768
+   \   0000000C   0x4301             ORRS     R1,R1,R0
+   \   0000000E   0x63B1             STR      R1,[R6, #+56]
+     64          
+     65              tim->ARR = (uint16)(0xFFFF);
+   \   00000010   0x....             LDR      R4,??DataTable8_1  ;; 0x40002000
+   \   00000012   0x....             LDR      R5,??DataTable8_2  ;; 0xffff
+   \   00000014   0x62E5             STR      R5,[R4, #+44]
+     66              tim->PSC = (uint16)((GetTIMFreq() / frequency) - 1);
+   \   00000016   0x.... 0x....      BL       Micro__GetClock
+   \   0000001A   0x6880             LDR      R0,[R0, #+8]
+   \   0000001C   0x6831             LDR      R1,[R6, #+0]
+   \   0000001E   0x22E0             MOVS     R2,#+224
+   \   00000020   0x01D2             LSLS     R2,R2,#+7        ;; #+28672
+   \   00000022   0x400A             ANDS     R2,R2,R1
+   \   00000024   0xD000             BEQ      ??TimeCapture__ChannelConfig_0
+   \   00000026   0x0040             LSLS     R0,R0,#+1
+   \                     ??TimeCapture__ChannelConfig_0: (+1)
+   \   00000028   0x0039             MOVS     R1,R7
+   \   0000002A   0x.... 0x....      BL       __aeabi_uidiv
+   \   0000002E   0x1940             ADDS     R0,R0,R5
+   \   00000030   0xB280             UXTH     R0,R0
+   \   00000032   0x62A0             STR      R0,[R4, #+40]
+     67          
+     68              //Up-counter , edge-aligned
+     69              tim->CR1 = (uint16)0x0000; //Clear CR1 Register
+   \   00000034   0x2000             MOVS     R0,#+0
+   \   00000036   0x6020             STR      R0,[R4, #+0]
+     70              tim->CR1  |= TIM_CR1_ARPE; //Enable the auto reload feature
+   \   00000038   0x6820             LDR      R0,[R4, #+0]
+   \   0000003A   0x2180             MOVS     R1,#+128
+   \   0000003C   0x4301             ORRS     R1,R1,R0
+   \   0000003E   0x6021             STR      R1,[R4, #+0]
+     71              tim->CR1  |= TIM_CR1_CEN;  //Enable the Timer
+   \   00000040   0x6820             LDR      R0,[R4, #+0]
+   \   00000042   0x2101             MOVS     R1,#+1
+   \   00000044   0x4301             ORRS     R1,R1,R0
+   \   00000046   0x6021             STR      R1,[R4, #+0]
+     72          #endif
+     73          }
+   \   00000048   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+     74          
+     75          
+     76          
+     77          
+     78          
+     79          //---------------------------------------------------------------------------------------------------------------------
+     80          /**
+     81           *  @brief  Intialize hardware Timer ISR delayed after capture event.
+     82           *
+     83           */
+
+   \                                 In section .text, align 2, keep-with-next
+     84          void TimeCapture__EnableEventInterrupt(TIME_CAPTURE_INPUT_TYPE input_number)
+     85          {
+     86          
+     87          }
+   \                     TimeCapture__EnableEventInterrupt: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+     88          
+     89          
+     90          
+     91          
+     92          
+     93          //---------------------------------------------------------------------------------------------------------------------
+     94          /**
+     95           *  @brief  Intialize hardware Timer ISR delayed after capture event.
+     96           *
+     97           *  @param  input_number    : Selected channel number - specified time capture channel
+     98           */
+
+   \                                 In section .text, align 2, keep-with-next
+     99          void TimeCapture__EnablePostEventInterrupt(TIME_CAPTURE_INPUT_TYPE input_number)
+    100          {
+    101          #if (TIM_USED == TIM14_BASE)
+    102              TIM_DEF_TYPE * tim;
+    103              tim = (TIM_DEF_TYPE *) TIM_USED;
+    104          
+    105              if(IC00 == input_number)
+   \                     TimeCapture__EnablePostEventInterrupt: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD000             BEQ      ??TimeCapture__EnablePostEventInterrupt_0
+   \   00000004   0x4770             BX       LR
+    106              {
+    107                  //Configure TIM1 for interrupt in which Triac will be fired
+    108                  tim->CCMR1 &= ~(TIM_CCMR1_OC1M | TIM_CCMR1_OC1PE);
+   \                     ??TimeCapture__EnablePostEventInterrupt_0: (+1)
+   \   00000006   0xB510             PUSH     {R4,LR}
+   \   00000008   0x....             LDR      R4,??DataTable8_3  ;; 0x4000200c
+   \   0000000A   0x89A0             LDRH     R0,[R4, #+12]
+   \   0000000C   0x....             LDR      R1,??DataTable8_4  ;; 0xff87
+   \   0000000E   0x4001             ANDS     R1,R1,R0
+   \   00000010   0x81A1             STRH     R1,[R4, #+12]
+    109                  tim->CCR[0] = (uint16)(0xFFFF); //Force it high during initalization. MCI will manage it accordingly.
+   \   00000012   0x....             LDR      R0,??DataTable8_2  ;; 0xffff
+   \   00000014   0x62A0             STR      R0,[R4, #+40]
+    110          
+    111                  Micro__NVICEnableIRQ(TIM14_IRQ_CHANNEL, 0); //Set always as the maximum priority.
+   \   00000016   0x2100             MOVS     R1,#+0
+   \   00000018   0x2013             MOVS     R0,#+19
+   \   0000001A   0x.... 0x....      BL       Micro__NVICEnableIRQ
+    112                  tim->DIER |= TIM_DIER_CC1IE;        //Interrupt enabled
+   \   0000001E   0x8820             LDRH     R0,[R4, #+0]
+   \   00000020   0x2102             MOVS     R1,#+2
+   \   00000022   0x4301             ORRS     R1,R1,R0
+   \   00000024   0x8021             STRH     R1,[R4, #+0]
+    113              }
+    114          #endif
+    115          }
+   \   00000026   0xBD10             POP      {R4,PC}          ;; return
+    116          
+    117          
+    118          
+    119          
+    120          
+    121          
+    122          //---------------------------------------------------------------------------------------------------------------------
+    123          /**
+    124           *  @brief  Start/enable time capture for selected timer channel
+    125           *
+    126           *  @param  input_number    : Defines the specific Time capture channel
+    127           */
+
+   \                                 In section .text, align 2, keep-with-next
+    128          void TimeCapture__Start(TIME_CAPTURE_INPUT_TYPE input_number)
+    129          {
+    130          #if (TIM_USED == TIM14_BASE)
+    131              TIM_DEF_TYPE * tim;
+    132              tim = (TIM_DEF_TYPE *) TIM_USED;
+    133          
+    134              switch (input_number)
+   \                     TimeCapture__Start: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD104             BNE      ??TimeCapture__Start_0
+    135              {
+    136                  #if (IC00_ENABLED == ENABLED)
+    137                  case IC00:
+    138                  	tim->CCER |= TIM_CCER_CC1E;        //Capture enabled
+   \   00000004   0x....             LDR      R0,??DataTable8_5  ;; 0x40002020
+   \   00000006   0x6801             LDR      R1,[R0, #+0]
+   \   00000008   0x2201             MOVS     R2,#+1
+   \   0000000A   0x430A             ORRS     R2,R2,R1
+   \   0000000C   0x6002             STR      R2,[R0, #+0]
+    139                      break;
+    140                  #endif //(IC00_ENABLED == ENABLED)
+    141          
+    142                  default :
+    143                      break;
+    144              }
+    145          #endif
+    146          }
+   \                     ??TimeCapture__Start_0: (+1)
+   \   0000000E   0x4770             BX       LR               ;; return
+    147          
+    148          
+    149          
+    150          
+    151          
+    152          
+    153          //---------------------------------------------------------------------------------------------------------------------
+    154          /**
+    155           *  @brief Stop time capture for selected timer channel
+    156           *
+    157           *  @param  input_number    : Defines the specific Time capture channel
+    158           */
+
+   \                                 In section .text, align 2, keep-with-next
+    159          void TimeCapture__Stop( TIME_CAPTURE_INPUT_TYPE input_number)
+    160          {
+    161          #if (TIM_USED == TIM14_BASE)
+    162              TIM_DEF_TYPE * tim;
+    163              tim = (TIM_DEF_TYPE *) TIM_USED;
+    164          
+    165              switch (input_number)
+   \                     TimeCapture__Stop: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD103             BNE      ??TimeCapture__Stop_0
+    166              {
+    167                  #if (IC00_ENABLED == ENABLED)
+    168                  case IC00:
+    169                  	tim->CCER = 0;        //Capture disabled
+   \   00000004   0x....             LDR      R0,??DataTable8_3  ;; 0x4000200c
+   \   00000006   0x2100             MOVS     R1,#+0
+   \   00000008   0x6141             STR      R1,[R0, #+20]
+    170                  	tim->DIER = 0;
+   \   0000000A   0x8001             STRH     R1,[R0, #+0]
+    171                      break;
+    172                  #endif //(IC00_ENABLED == ENABLED)
+    173          
+    174                  default :
+    175                      break;
+    176              }
+    177          #endif
+    178          }
+   \                     ??TimeCapture__Stop_0: (+1)
+   \   0000000C   0x4770             BX       LR               ;; return
+    179          
+    180          
+    181          
+    182          
+    183          
+    184          
+    185          //---------------------------------------------------------------------------------------------------------------------
+    186          /**
+    187           *  @brief  Last measure event time in time tick
+    188           *
+    189           *  @param  input_number    : Defines the specific Time capture channel
+    190           *
+    191           *  @retval Last capture time in timer tick
+    192           */
+
+   \                                 In section .text, align 2, keep-with-next
+    193          uint16  TimeCapture__ReadEventTime( TIME_CAPTURE_INPUT_TYPE input_number)
+    194          {
+   \                     TimeCapture__ReadEventTime: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    195              uint16  retval_time_capture;
+    196          
+    197              retval_time_capture = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+    198          #if (TIM_USED == TIM14_BASE)
+    199          
+    200              TIM_DEF_TYPE * tim;
+    201          	tim = (TIM_DEF_TYPE *) TIM_USED;
+    202          
+    203              switch (input_number)
+   \   00000004   0x2900             CMP      R1,#+0
+   \   00000006   0xD101             BNE      ??TimeCapture__ReadEventTime_0
+    204              {
+    205                  #if (IC00_ENABLED == ENABLED)
+    206                  case IC00:
+    207                      retval_time_capture = tim->CCR[0];
+   \   00000008   0x....             LDR      R0,??DataTable8_6  ;; 0x40002034
+   \   0000000A   0x6800             LDR      R0,[R0, #+0]
+    208                      break;
+    209                  #endif //(IC00_ENABLED == ENABLED)
+    210          
+    211                  default :
+    212                      break;
+    213              }
+    214          #endif
+    215              return retval_time_capture;
+   \                     ??TimeCapture__ReadEventTime_0: (+1)
+   \   0000000C   0xB280             UXTH     R0,R0
+   \   0000000E   0x4770             BX       LR               ;; return
+    216          }
+    217          
+    218          
+    219          
+    220          
+    221          
+    222          
+    223          //---------------------------------------------------------------------------------------------------------------------
+    224          /**
+    225           *  @brief  Get Current timer tick value
+    226           *
+    227           *  @param  input_number    : Defines the specific Time capture channel
+    228           *
+    229           *  @retval Current time value in timer tick
+    230           */
+
+   \                                 In section .text, align 2, keep-with-next
+    231          uint16 TimeCapture__ReadTimerCnt( TIME_CAPTURE_INPUT_TYPE input_number)
+    232          {
+   \                     TimeCapture__ReadTimerCnt: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    233              uint16  retval_time;
+    234          
+    235              retval_time = 0;
+    236          #if (TIM_USED == TIM14_BASE)
+    237              TIM_DEF_TYPE * tim;
+    238              tim = (TIM_DEF_TYPE *) TIM_USED;
+    239          
+    240              retval_time = tim->CNT;
+   \   00000002   0x....             LDR      R2,??DataTable8_7  ;; 0x40002024
+   \   00000004   0x6810             LDR      R0,[R2, #+0]
+    241              if (input_number == IC15)          //TIM14
+   \   00000006   0x290F             CMP      R1,#+15
+   \   00000008   0xD101             BNE      ??TimeCapture__ReadTimerCnt_0
+    242              {
+    243                  //Read and Reset the Counter (Shall be executed when a ZC event is detected)
+    244                  tim->CNT = 0;
+   \   0000000A   0x2100             MOVS     R1,#+0
+   \   0000000C   0x6011             STR      R1,[R2, #+0]
+    245              }
+    246          
+    247          #endif
+    248              return retval_time;
+   \                     ??TimeCapture__ReadTimerCnt_0: (+1)
+   \   0000000E   0xB280             UXTH     R0,R0
+   \   00000010   0x4770             BX       LR               ;; return
+    249          }
+    250          
+    251          
+    252          
+    253          
+    254          
+    255          //---------------------------------------------------------------------------------------------------------------------
+    256          /**
+    257           *  @brief  Get basic timer tick frequency - value in MHz
+    258           *
+    259           *  @param  input_number    : Defines the specific Time capture channel
+    260           *
+    261           *  @retval Basic timer tick frequency in MHz unit
+    262           */
+
+   \                                 In section .text, align 2, keep-with-next
+    263          uint32  TimeCapture__GetTimerTickFreq( TIME_CAPTURE_INPUT_TYPE input_number)
+    264          {
+   \                     TimeCapture__GetTimerTickFreq: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    265              TIM_DEF_TYPE * tim;
+    266              tim = (TIM_DEF_TYPE *) TIM_USED;
+    267          
+    268              uint32 bus_freq;
+    269          
+    270              bus_freq = GetTIMFreq() / (uint32)(tim->PSC+1);
+   \   00000002   0x.... 0x....      BL       Micro__GetClock
+   \   00000006   0x6880             LDR      R0,[R0, #+8]
+   \   00000008   0x....             LDR      R1,??DataTable8  ;; 0x40021008
+   \   0000000A   0x6809             LDR      R1,[R1, #+0]
+   \   0000000C   0x22E0             MOVS     R2,#+224
+   \   0000000E   0x01D2             LSLS     R2,R2,#+7        ;; #+28672
+   \   00000010   0x400A             ANDS     R2,R2,R1
+   \   00000012   0xD000             BEQ      ??TimeCapture__GetTimerTickFreq_0
+   \   00000014   0x0040             LSLS     R0,R0,#+1
+   \                     ??TimeCapture__GetTimerTickFreq_0: (+1)
+   \   00000016   0x....             LDR      R1,??DataTable8_8  ;; 0x40002028
+   \   00000018   0x6809             LDR      R1,[R1, #+0]
+    271          
+    272              return bus_freq;
+   \   0000001A   0x1C49             ADDS     R1,R1,#+1
+   \   0000001C   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000020   0xBD02             POP      {R1,PC}          ;; return
+    273          }
+    274          
+    275          
+    276          
+    277          
+    278          //---------------------------------------------------------------------------------------------------------------------
+    279          /**
+    280           *  @brief  Get TIMxx Frequency
+    281           *
+    282           *  @param  input_number    : Defines the specific Time capture channel
+    283           *
+    284           *  @retval Basic timer tick frequency in MHz unit
+    285           */
+    286          uint32 GetTIMFreq(void)
+    287          {
+    288              uint32 bus_freq;
+    289          
+    290              bus_freq = Micro__GetClock()->PCLK1_Frequency;
+    291          
+    292              // 1. If the APB prescaler is set to 1, TIMPCLK frequency is equal to PCLK frequency.
+    293              // 2. Otherwise, the TIMPCLK frequency is set to twice the PCLK frequency.
+    294              if ((RCC.CFGR & RCC_CFGR_PPRE) != 0)
+    295              {
+    296                  bus_freq = bus_freq * 2;
+    297              }
+    298          
+    299              return bus_freq;
+    300          }
+    301          
+    302          
+    303          
+    304          
+    305          
+    306          //---------------------------------------------------------------------------------------------------------------------
+    307          /**
+    308           * Configure hardware timer interrupt by specyfying time after last capture event
+    309           */
+
+   \                                 In section .text, align 2, keep-with-next
+    310          void TimeCapture__SetPostEventInterruptDelay(TIME_CAPTURE_INPUT_TYPE input_number, uint16 delay_ticks)
+    311          {
+    312          #if (TIM_USED == TIM14_BASE)
+    313              TIM_DEF_TYPE * tim;
+    314              tim = (TIM_DEF_TYPE *) TIM_USED;
+    315          
+    316          	tim->CCR[0] = delay_ticks;
+   \                     TimeCapture__SetPostEventInterruptDelay: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable8_6  ;; 0x40002034
+   \   00000002   0x6001             STR      R1,[R0, #+0]
+    317          #endif
+    318          }
+   \   00000004   0x4770             BX       LR               ;; return
+    319          
+    320          
+    321          
+    322          
+    323          
+    324          //---------------------------------------------------------------------------------------------------------------------
+    325          /**
+    326           * Handler called every capture event
+    327           *
+    328           * It debounces input signal state 5 times and then stores time between previous input state change
+    329           */
+
+   \                                 In section .text, align 2, keep-with-next
+    330          void TimeCapture__InterruptHandler(void)
+    331          {
+    332          #if (TIM_USED == TIM14_BASE)
+    333              TIM_DEF_TYPE * tim;
+    334              tim = (TIM_DEF_TYPE *) TIM_USED;
+    335          
+    336              uint16 sr_status;
+    337          
+    338              sr_status = tim->SR;
+   \                     TimeCapture__InterruptHandler: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable8_9  ;; 0x40002010
+   \   00000002   0x8801             LDRH     R1,[R0, #+0]
+    339              // Output Compare interrupt for Mci
+    340              if((sr_status & TIM_SR_CC1IF) != FALSE)
+   \   00000004   0x0789             LSLS     R1,R1,#+30
+   \   00000006   0xD400             BMI      ??TimeCapture__InterruptHandler_0
+   \   00000008   0x4770             BX       LR
+    341              {
+    342              	tim->SR &= ~(TIM_SR_CC1IF); //Clear the Interrupt Flag
+   \                     ??TimeCapture__InterruptHandler_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x8801             LDRH     R1,[R0, #+0]
+   \   0000000E   0x....             LDR      R2,??DataTable8_10  ;; 0xfffd
+   \   00000010   0x400A             ANDS     R2,R2,R1
+   \   00000012   0x8002             STRH     R2,[R0, #+0]
+    343                  INTERRUPT_CALLBACK_C01(); //Callback to the application
+   \   00000014   0x.... 0x....      BL       Mci__TriacFireHandler
+    344              }
+    345          #endif
+    346          }
+   \   00000018   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \   00000000   0x40021008         DC32     0x40021008
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_1:
+   \   00000000   0x40002000         DC32     0x40002000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_2:
+   \   00000000   0x0000FFFF         DC32     0xffff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_3:
+   \   00000000   0x4000200C         DC32     0x4000200c
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_4:
+   \   00000000   0x0000FF87         DC32     0xff87
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_5:
+   \   00000000   0x40002020         DC32     0x40002020
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_6:
+   \   00000000   0x40002034         DC32     0x40002034
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_7:
+   \   00000000   0x40002024         DC32     0x40002024
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_8:
+   \   00000000   0x40002028         DC32     0x40002028
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_9:
+   \   00000000   0x40002010         DC32     0x40002010
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_10:
+   \   00000000   0x0000FFFD         DC32     0xfffd
+    347          
+    348          //=====================================================================================================================
+    349          //-------------------------------------- Private Functions ------------------------------------------------------------
+    350          //=====================================================================================================================
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   TimeCapture__ChannelConfig
+        24   -> Micro__GetClock
+        24 __aeabi_uidiv
+       0   TimeCapture__EnableEventInterrupt
+       8   TimeCapture__EnablePostEventInterrupt
+         8   -> Micro__NVICEnableIRQ
+       8   TimeCapture__GetTimerTickFreq
+         8   -> Micro__GetClock
+         8 __aeabi_uidiv
+       0   TimeCapture__Initialize
+       8   TimeCapture__InterruptHandler
+         8   -> Mci__TriacFireHandler
+       0   TimeCapture__ReadEventTime
+       0   TimeCapture__ReadTimerCnt
+       0   TimeCapture__SetPostEventInterruptDelay
+       0   TimeCapture__Start
+       0   TimeCapture__Stop
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable8
+       4  ??DataTable8_1
+       4  ??DataTable8_10
+       4  ??DataTable8_2
+       4  ??DataTable8_3
+       4  ??DataTable8_4
+       4  ??DataTable8_5
+       4  ??DataTable8_6
+       4  ??DataTable8_7
+       4  ??DataTable8_8
+       4  ??DataTable8_9
+      74  TimeCapture__ChannelConfig
+       2  TimeCapture__EnableEventInterrupt
+      40  TimeCapture__EnablePostEventInterrupt
+      34  TimeCapture__GetTimerTickFreq
+       2  TimeCapture__Initialize
+      26  TimeCapture__InterruptHandler
+      16  TimeCapture__ReadEventTime
+      18  TimeCapture__ReadTimerCnt
+       6  TimeCapture__SetPostEventInterruptDelay
+      16  TimeCapture__Start
+      14  TimeCapture__Stop
+
+ 
+ 292 bytes in section .text
+ 
+ 292 bytes of CODE memory
+
+Errors: none
+Warnings: none

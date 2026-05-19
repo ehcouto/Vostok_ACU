@@ -1,0 +1,2586 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:20
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Tasks/HeaterShadowing/HeaterShadowing.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\HeaterShadowing.lst
+#        -o obj\HeaterShadowing.obj
+#        source/Category/Application/acu/Tasks/HeaterShadowing/HeaterShadowing.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\HeaterShadowing.lst
+#    Object file  =  obj\HeaterShadowing.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Tasks\HeaterShadowing\HeaterShadowing.c
+      1          /**
+      2           *  @file		HeaterShadowing.c
+      3           *
+      4           *  @brief		A task that implements the Heater Shadowing Detection algorithm
+      5           *
+      6           *  @details	The configuration of loads inside the dishwasher can cause some "dry spots" in the heater when washing
+      7           *  			using certain spray arms. If heater is turned on for some time with one or multiple dry spots, it can
+      8           *  			dramatically increase its temperature to levels that could shorten the heater life. The objective of this
+      9           *  			algorithm is to detect when the heater has a dry spot by monitoring the heater current sensor.
+     10           *
+     11             @startuml{HeaterShadowing State Machine.jpg}
+     12                  title Heater Shadowing State Machine
+     13          
+     14          		[*] --> INITIALIZE
+     15          
+     16          		INITIALIZE : entry / InitializeEntry()
+     17          		INITIALIZE --> HOLD : evStartHeaterShadowingAlgorithm
+     18                  INITIALIZE -r-> [*] : evHeaterShadowingNotActive \n/ SetAlgorithmNotActive()
+     19          
+     20          		HOLD: entry / HoldEntry()
+     21          		HOLD: do / HoldDo()
+     22          		HOLD --> HOLD : eventCycleResume
+     23          		HOLD --> HEATER_OFF : eventHoldTimeExpired \n[!HeaterIsOn()]
+     24          		HOLD --> UNKNOWN_POSITION : eventHoldTimeExpired \n[HeaterIsOn() && (!DiverterInLSAOrMSA())]
+     25          		HOLD --> WAITING_DELAY : eventHoldTimeExpired \n[HeaterIsOn() && DiverterInLSAOrMSA()]
+     26          
+     27          		HEATER_OFF : entry / HeaterOffEntry()
+     28          		HEATER_OFF : do / HeaterOffDo()
+     29          		HEATER_OFF --> HOLD : eventCycleResume
+     30          		HEATER_OFF --> UNKNOWN_POSITION : evHeaterOn \n[!DiverterInLSAOrMSA()]
+     31          		HEATER_OFF --> WAITING_DELAY : evHeaterOn \n[DiverterInLSAOrMSA()]
+     32          
+     33          		UNKNOWN_POSITION : entry / UnknownPositionEntry()
+     34          		UNKNOWN_POSITION : do / UnknownPositionDo()
+     35          		UNKNOWN_POSITION --> HOLD : eventCycleResume
+     36          		UNKNOWN_POSITION --> HEATER_OFF : evHeaterOff
+     37          		UNKNOWN_POSITION --> WAITING_DELAY : evDiverterPositionChanged
+     38          
+     39          		WAITING_DELAY : entry / WaitingDelayEntry()
+     40          		WAITING_DELAY : do / WaitingDelayDo()
+     41          		WAITING_DELAY --> HOLD : eventCycleResume
+     42          		WAITING_DELAY --> HEATER_OFF : evHeaterOff
+     43          		WAITING_DELAY --> UNKNOWN_POSITION : evDiverterPositionUnknown
+     44          		WAITING_DELAY --> WAITING_DELAY : evDiverterPositionChanged
+     45          		WAITING_DELAY --> CHECK_DELTA : evDelayExpired \n/ SaveCurrentBaseline()
+     46          
+     47          		CHECK_DELTA : entry / CheckDeltaEntry()
+     48          		CHECK_DELTA : do / CheckDeltaDo()
+     49          		CHECK_DELTA --> HOLD : eventCycleResume
+     50          		CHECK_DELTA --> HEATER_OFF : evHeaterOff
+     51          		CHECK_DELTA --> UNKNOWN_POSITION : evDiverterPositionUnknown
+     52          		CHECK_DELTA --> WAITING_DELAY : evDiverterPositionChanged
+     53          		CHECK_DELTA --> TIMEOUT : evTimeoutExpired
+     54          
+     55          		TIMEOUT : entry / TimeoutEntry()
+     56          		TIMEOUT : do / TimeoutDo()
+     57          		TIMEOUT --> HOLD : eventCycleResume
+     58          		TIMEOUT --> HEATER_OFF : evHeaterOff
+     59          		TIMEOUT --> UNKNOWN_POSITION : evDiverterPositionUnknown
+     60          		TIMEOUT --> WAITING_DELAY : evDiverterPositionChanged
+     61          
+     62          
+     63              @enduml
+     64           *
+     65           *  @copyright  Copyright 2017-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     66           */
+     67          //---------------------------------------------------------------------------------------------------------------------
+     68          //---------------------------------------------------------------------------------------------------------------------
+     69          
+     70          
+     71          //-------------------------------------- Include Files ----------------------------------------------------------------
+     72          // -- This Module --
+     73          #include "SystemConfig.h"
+     74          #include "HeaterShadowing.h"
+     75          
+     76          // -- Other Modules --
+     77          #include "DishAuxVar.h"
+     78          #include "Fault.h"
+     79          #include "Hbl.h"
+     80          #include "HeatMonitor.h"
+     81          #include "Log.h"
+     82          #include "Micro.h"
+     83          #include "Selector.h"
+     84          #include "SettingFile.h"
+     85          #include <string.h>
+     86          #include "SystemTimers.h"
+     87          #include "WashHeaterFaultMonitor.h"
+     88          
+     89          
+     90          //=====================================================================================================================
+     91          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Heater Shadowing State Machine
+     92          //=====================================================================================================================
+     93          // !! StateEngineCrank cannot update this code if you change the header !!
+     94          
+     95          
+     96          //! Unique names used to identify states of the Heater Shadowing state machine.
+     97          typedef enum HEATER_SHADOWING_STATE_ENUM
+     98          {
+     99              STATE_HEATER_SHADOWING_NONE             = 0,
+    100          
+    101              STATE_HEATER_SHADOWING_INITIALIZE       = 1,    //!< (initial_state)
+    102              STATE_HEATER_SHADOWING_HOLD             = 2,
+    103              STATE_HEATER_SHADOWING_HEATER_OFF       = 3,
+    104              STATE_HEATER_SHADOWING_UNKNOWN_POSITION = 4,
+    105              STATE_HEATER_SHADOWING_WAITING_DELAY    = 5,
+    106              STATE_HEATER_SHADOWING_CHECK_DELTA      = 6,
+    107              STATE_HEATER_SHADOWING_TIMEOUT          = 7,
+    108          
+    109              STATE_HEATER_SHADOWING_END              = 8
+    110          } HEATER_SHADOWING_STATE_TYPE;
+    111          
+    112          //! The state variable for the Heater Shadowing state machine.
+    113          //! State machines with a history pseudostate may write to this variable during initialization.
+    114          //! Other state machines must only write to this variable through auto-generated functions.
+
+   \                                 In section .bss, align 1
+    115          static HEATER_SHADOWING_STATE_TYPE Heater_Shadowing_State;
+   \                     Heater_Shadowing_State:
+   \   00000000                      DS8 1
+    116          
+    117          // -- Private Function Prototypes used by the state machine for customization functions --
+    118          static void CheckDeltaDo(void);
+    119          static void CheckDeltaEntry(void);
+    120          static BOOL_TYPE DiverterInLSAOrMSA(void);
+    121          static BOOL_TYPE HeaterIsOn(void);
+    122          static void HeaterOffDo(void);
+    123          static void HeaterOffEntry(void);
+    124          static void HoldDo(void);
+    125          static void HoldEntry(void);
+    126          static void InitializeEntry(void);
+    127          static void SaveCurrentBaseline(void);
+    128          static void SetAlgorithmNotActive(void);
+    129          static void TimeoutDo(void);
+    130          static void TimeoutEntry(void);
+    131          static void UnknownPositionDo(void);
+    132          static void UnknownPositionEntry(void);
+    133          static void WaitingDelayDo(void);
+    134          static void WaitingDelayEntry(void);
+    135          
+    136          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+    137          static void EventCycleResume(void);
+    138          static void EventDelayExpired(void);
+    139          static void EventDiverterPositionChanged(void);
+    140          static void EventDiverterPositionUnknown(void);
+    141          static void EventHeaterOff(void);
+    142          static void EventHeaterOn(void);
+    143          static void EventHeaterShadowingNotActive(void);
+    144          static void EventHoldTimeExpired(void);
+    145          static void EventStartHeaterShadowingAlgorithm(void);
+    146          static void EventTimeoutExpired(void);
+    147          static void HeaterShadowingExecute(void);
+    148          static void HeaterShadowingInitialize(void);
+    149          static void HeaterShadowingTerminate(void);
+    150          
+    151          // !! StateEngineCrank cannot update this code if you change the footer !!
+    152          // End of StateEngineCrank Auto-Generated Code.
+    153          
+    154          
+    155          
+    156          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+
+   \                                 In section .bss, align 1
+    157          HEATER_SHADOWING_STATUS_TYPE HeaterShadowing_Status;
+   \                     HeaterShadowing_Status:
+   \   00000000                      DS8 1
+    158          
+    159          
+    160          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    161          //! The name of this module to be used by the Log module.
+    162          #define MODULE_NAME MODULE_HEATER_SHADOWING
+    163          
+    164          //! A list of log message IDs that are generated by this module.
+    165          typedef enum MODULE_HEATER_SHADOWING_LOG_MESSAGE_ID_ENUM
+    166          {
+    167          	ERROR_MISSING_COMPONENTS  = 1,
+    168          	ERROR_MISSING_PARAMETERS
+    169          } MODULE_HEATER_SHADOWING_LOG_MESSAGE_ID_TYPE;
+    170          
+    171          //! Possible values of the variable HS_Diverter_Status
+    172          typedef enum HS_DIVERTER_STATUS_ENUM
+    173          {
+    174          	DIVERTER_STATUS_UNKNOWN = 0,
+    175          	DIVERTER_STATUS_LSA,
+    176          	DIVERTER_STATUS_MSA
+    177          
+    178          } HS_DIVERTER_STATUS_TYPE;
+    179          
+    180          //! Setting file data structure for pointer SF_PTR_ACU_PRODUCT_CONFIGURATION_DATA, displacement DSPL_HEATER_SHADOWING_PARAMS
+    181          typedef PACKED struct HEATER_SHADOWING_SF_PARAMS_STRUCT
+    182          {
+    183          	uint16 LSA_Rise_Threshold;
+    184          	uint16 MSA_Drop_Threshold;
+    185          	uint16 Timeout;
+    186          	uint8 LSA_Delay;
+    187          	uint8 LSA_Position_Value :4;
+    188          	uint8 MSA_Position_Value :4;
+    189          	uint8 MSA_Delay;
+    190          	uint8 Stability_Time;
+    191          	uint16 Algorithm_Hold_Time;
+    192          } HEATER_SHADOWING_SF_PARAMS_TYPE;
+    193          
+    194          //! Macros to manage setting file parameters
+    195          #define LSA_RISE_THRESHOLD 		ENDIANU16_STON(Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr->LSA_Rise_Threshold)
+    196          #define MSA_DROP_THRESHOLD 		ENDIANU16_STON(Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr->MSA_Drop_Threshold)
+    197          #define CHECK_TIMEOUT_MS		((uint32)ENDIANU16_STON(Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr->Timeout) * (uint16)1000)
+    198          #define LSA_DELAY_MS			((uint32)Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr->LSA_Delay * (uint16)1000)
+    199          #define MSA_DELAY_MS			((uint32)Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr->MSA_Delay * (uint16)1000)
+    200          #define STABILITY_TIME_MS		((uint32)Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr->Stability_Time * (uint16)1000)
+    201          #define ALGORITHM_HOLD_TIME_MS 	((uint32)ENDIANU16_STON(Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr->Algorithm_Hold_Time) * (uint16)1000)
+    202          
+    203          
+    204          typedef struct HEATERS_SHADOWING_DATA_STRUCT
+    205          {
+    206          	const HEATER_SHADOWING_SF_PARAMS_TYPE *SF_Heater_Shadowing_Params_Ptr; //! Pointer to the setting file parameters
+    207          	SYSTEMTIMER_NV_TIMER_TYPE NV_Timer_Heater_Shadowing; //! Timer used to manage hold time, delay time and timeout
+    208          	SYSTEMTIMER_NV_TIMER_TYPE NV_Timer_HS_Stability;	 //! Timer used to detect if the shadowed condition is stable
+    209          	ON_OFF_TYPE Heater_Status;		//! Status of the heater
+    210          	HS_DIVERTER_STATUS_TYPE Diverter_Status;			//! Status (position) of the diverter
+    211          	HS_DIVERTER_STATUS_TYPE Previous_Diverter_Status;	//! Status (position) of the diverter in the previous iteration
+    212          	uint16 Heater_Current; 			//! The current on the heater as measured by the Heater Current Sensing circuit (units mA)
+    213          	uint16 Current_Baseline_Value;	//! The Current value stored when the delay has expired. It is used to be compared to current readings to determine if heater is shadowed or not (units mA)
+    214          	uint16 AC_Line_Lower_Threshold;	//! A threshold against which the current AC Line value is compared to know if the Zero Crossing signal is reliable
+    215          } HEATERS_SHADOWING_DATA_TYPE;
+    216          
+    217          //! Data structure for the algorithm's management
+
+   \                                 In section .bss, align 4
+    218          static HEATERS_SHADOWING_DATA_TYPE Heater_Shadowing_Data;
+   \                     Heater_Shadowing_Data:
+   \   00000000                      DS8 56
+    219          
+    220          
+    221          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    222          void UpdateAlgorithmInputs(void);
+    223          
+    224          //=====================================================================================================================
+    225          //-------------------------------------- Public Functions -------------------------------------------------------------
+    226          //=====================================================================================================================
+    227          
+    228          //----------------------------------------------------------------------------
+    229          /**
+    230           * It initializes the Heater Shadowing Detection task and its data.
+    231           *
+    232           * @param  compartment = compartment inside which the task is running
+    233           * @param  sf_index = the index of the setting file from which to load the task data
+    234           * @param  displacement = the displacement for the task data in the setting file (unused, since all the instances
+    235           * 		   of the Door Opening System Push Task use the same data table).
+    236           * @return the status of the task (ACTIVE or INACTIVE)
+    237           *
+    238           */
+
+   \                                 In section .text, align 2, keep-with-next
+    239          ACTIVE_TYPE HeaterShadowing__Initialize(uint8 compartment, uint8 sf_index, uint8 displacement)
+    240          {
+   \                     HeaterShadowing__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    241          	HeaterShadowingInitialize();
+   \   00000002   0x.... 0x....      BL       HeaterShadowingInitialize
+    242          
+    243              return (ACTIVE);
+   \   00000006   0x2001             MOVS     R0,#+1
+   \   00000008   0xBD02             POP      {R1,PC}          ;; return
+    244          }
+    245          
+    246          
+    247          //---------------------------------------------------------------------------------------------------------------------
+    248          /**
+    249           * Function called during the execution of the Heater Shadowing Detection task.
+    250           *
+    251           * @param  compartment = compartment inside which the task is running
+    252           * @return the status of the task (ACTIVE or INACTIVE)
+    253           */
+
+   \                                 In section .text, align 2, keep-with-next
+    254          ACTIVE_TYPE HeaterShadowing__Task(uint8 compartment)
+    255          {
+   \                     HeaterShadowing__Task: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    256          	UpdateAlgorithmInputs();
+   \   00000002   0x.... 0x....      BL       UpdateAlgorithmInputs
+    257          	HeaterShadowingExecute();
+   \   00000006   0x.... 0x....      BL       HeaterShadowingExecute
+    258          	Heater_Shadowing_Data.Previous_Diverter_Status = Heater_Shadowing_Data.Diverter_Status;
+   \   0000000A   0x....             LDR      R0,??DataTable10
+   \   0000000C   0x7801             LDRB     R1,[R0, #+0]
+   \   0000000E   0x7041             STRB     R1,[R0, #+1]
+    259          
+    260              return (ACTIVE);
+   \   00000010   0x2001             MOVS     R0,#+1
+   \   00000012   0xBD02             POP      {R1,PC}          ;; return
+    261          }
+    262          
+    263          
+    264          /**
+    265           * It is called at the initialization of the task after NVdata restore.
+    266           * It restarts the Heater Shadowing Detection algorithm.
+    267           *
+    268           * @param  compartment = compartment inside which the task is running
+    269           *
+    270           * @return  None
+    271           */
+
+   \                                 In section .text, align 2, keep-with-next
+    272          void HeaterShadowing__NVDataRestore(uint8 compartment)
+    273          {
+   \                     HeaterShadowing__NVDataRestore: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    274          	// The algorithm has to be reinitialized in case of power loss
+    275          	HeaterShadowingInitialize();
+   \   00000002   0x.... 0x....      BL       HeaterShadowingInitialize
+    276          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    277          
+    278          
+    279          /**
+    280           * It is called when the task ends
+    281           *
+    282           * @param  compartment = compartment inside which the task is running
+    283           *
+    284           * @return  None
+    285           */
+
+   \                                 In section .text, align 2, keep-with-next
+    286          void HeaterShadowing__Terminate(uint8 compartment)
+    287          {
+   \                     HeaterShadowing__Terminate: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    288          	SetAlgorithmNotActive();
+   \   00000002   0x.... 0x....      BL       SetAlgorithmNotActive
+    289          	HeaterShadowingTerminate();
+   \   00000006   0x.... 0x....      BL       HeaterShadowingTerminate
+    290          }
+   \   0000000A   0xBD01             POP      {R0,PC}          ;; return
+    291          
+    292          
+    293          /**
+    294           * It is called after a reset. It sets HeaterShadowing_Status to its default value ALGORITHM_NOT_ACTIVE.
+    295           * If the task is active, it will be overwritten by HeaterShadowing__NVDataRestore().
+    296           *
+    297           * @return  None
+    298           */
+
+   \                                 In section .text, align 2, keep-with-next
+    299          void HeaterShadowing__StatusInitialize(void)
+    300          {
+   \                     HeaterShadowing__StatusInitialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    301          	if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+   \   00000002   0x.... 0x....      BL       Micro__GetResetMode
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD101             BNE      ??HeaterShadowing__StatusInitialize_0
+    302          	{
+    303          		SetAlgorithmNotActive();
+   \   0000000A   0x.... 0x....      BL       SetAlgorithmNotActive
+    304          	}
+    305          }
+   \                     ??HeaterShadowing__StatusInitialize_0: (+1)
+   \   0000000E   0xBD01             POP      {R0,PC}          ;; return
+    306          
+    307          
+    308          /**
+    309           * It is called when the cycle resumes from PAUSE state.
+    310           * If the algorithm is running (Heater_Shadowing_State != STATE_HEATER_SHADOWING_NONE) it reinitializes it.
+    311           *
+    312           * @return  None
+    313           */
+
+   \                                 In section .text, align 2, keep-with-next
+    314          void HeaterShadowing__ResumeCycle(void)
+    315          {
+   \                     HeaterShadowing__ResumeCycle: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    316          	EventCycleResume();
+   \   00000002   0x.... 0x....      BL       EventCycleResume
+    317          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    318          
+    319          /**
+    320           * It is called when a subcycle ends.
+    321           * If the ended subcycle is Cycle Resume, it reinitializes the Heater Shadowing Detection algorithm.
+    322           *
+    323           * @param  compartment = the compartment inside which the subcycle was running.
+    324           * @param  subcycle_id = the sub-cycle that has finished or was cancelled.
+    325           *
+    326           * @return  None
+    327           */
+
+   \                                 In section .text, align 2, keep-with-next
+    328          void HeaterShadowing__CycleResumeEnd(uint8 compartment,uint8 subcycle_id)
+    329          {
+   \                     HeaterShadowing__CycleResumeEnd: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    330          	if (Selector__GetCycleNameId(0, compartment , subcycle_id) == CYCLE_NAME_SPECIFIC_CYCLE_RESUME)
+   \   00000002   0x000A             MOVS     R2,R1
+   \   00000004   0x0001             MOVS     R1,R0
+   \   00000006   0x2000             MOVS     R0,#+0
+   \   00000008   0x.... 0x....      BL       Selector__GetCycleNameId
+   \   0000000C   0x2801             CMP      R0,#+1
+   \   0000000E   0xD101             BNE      ??HeaterShadowing__CycleResumeEnd_0
+    331          	{
+    332          		EventCycleResume();
+   \   00000010   0x.... 0x....      BL       EventCycleResume
+    333          	}
+    334          }
+   \                     ??HeaterShadowing__CycleResumeEnd_0: (+1)
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+    335          
+    336          
+    337          //=====================================================================================================================
+    338          //-------------------------------------- Private Functions ------------------------------------------------------------
+    339          //=====================================================================================================================
+    340          
+    341          /**
+    342           * It updates the inputs to the algorithm: Heater_Status, Diverter_Status, Heater_Current.
+    343           * It is called before the state machine execution.
+    344           *
+    345           * @return  None
+    346           */
+
+   \                                 In section .text, align 2, keep-with-next
+    347          void UpdateAlgorithmInputs(void)
+    348          {
+   \                     UpdateAlgorithmInputs: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    349          	// Heater status
+    350          	{
+    351          		HBL_LOAD_STATUS_TYPE *heater_status_ptr = (HBL_LOAD_STATUS_TYPE *)Hbl__GetLoadStatusByIndex(Hbl__GetLoadIndexByLoadID(HBL_LOAD_WASHING_HEATER));
+   \   00000002   0x2010             MOVS     R0,#+16
+   \   00000004   0x.... 0x....      BL       Hbl__GetLoadIndexByLoadID
+   \   00000008   0x.... 0x....      BL       Hbl__GetLoadStatusByIndex
+    352          		if (heater_status_ptr != NULL)
+   \   0000000C   0x....             LDR      R4,??DataTable11
+   \   0000000E   0x0025             MOVS     R5,R4
+   \   00000010   0x352C             ADDS     R5,R5,#+44
+   \   00000012   0x2800             CMP      R0,#+0
+   \   00000014   0xD00D             BEQ      ??UpdateAlgorithmInputs_0
+    353          		{
+    354          			if ((heater_status_ptr->Load.Status == (HBL_LOAD_STATUS_ENUM_TYPE)HBL_LOAD_STATUS_TARGET_COMPLETED) && (heater_status_ptr->Load.Cur_Reg != (uint8)OFF))
+   \   00000016   0x7800             LDRB     R0,[R0, #+0]
+   \   00000018   0x0001             MOVS     R1,R0
+   \   0000001A   0x0909             LSRS     R1,R1,#+4
+   \   0000001C   0xD107             BNE      ??UpdateAlgorithmInputs_1
+   \   0000001E   0x0700             LSLS     R0,R0,#+28
+   \   00000020   0x0F00             LSRS     R0,R0,#+28
+   \   00000022   0x1E41             SUBS     R1,R0,#+1
+   \   00000024   0x4189             SBCS     R1,R1,R1
+   \   00000026   0x43C9             MVNS     R1,R1
+   \   00000028   0x0FC9             LSRS     R1,R1,#+31
+   \   0000002A   0x7029             STRB     R1,[R5, #+0]
+   \   0000002C   0xE001             B        ??UpdateAlgorithmInputs_0
+    355          			{
+    356          				Heater_Shadowing_Data.Heater_Status = ON;
+    357          			}
+    358          			else
+    359          			{
+    360          				Heater_Shadowing_Data.Heater_Status = OFF;
+   \                     ??UpdateAlgorithmInputs_1: (+1)
+   \   0000002E   0x2000             MOVS     R0,#+0
+   \   00000030   0x7028             STRB     R0,[R5, #+0]
+    361          			}
+    362          		}
+    363          	}
+    364          
+    365          	// Diverter Status
+    366          	if (((uint8)Fault__IsInFaultState(FAULT_ID_DIVERTER_CANNOT_FIND_POSITIONS) == (uint8)TRUE) ||
+    367          		((uint8)Fault__IsInFaultState(FAULT_ID_DIVERTER_LEAK) == (uint8)TRUE) ||
+    368          		((uint8)Fault__IsInFaultState(FAULT_ID_DIVERTER_TRIAC_SHORTED) == (uint8)TRUE) ||
+    369          		((DishAuxVar__GetACLine() <= Heater_Shadowing_Data.AC_Line_Lower_Threshold) || (Hbl__IsZeroCrossPresent() == FALSE)))
+   \                     ??UpdateAlgorithmInputs_0: (+1)
+   \   00000032   0x2017             MOVS     R0,#+23
+   \   00000034   0x.... 0x....      BL       Fault__IsInFaultState
+   \   00000038   0x2801             CMP      R0,#+1
+   \   0000003A   0xD012             BEQ      ??UpdateAlgorithmInputs_2
+   \   0000003C   0x2018             MOVS     R0,#+24
+   \   0000003E   0x.... 0x....      BL       Fault__IsInFaultState
+   \   00000042   0x2801             CMP      R0,#+1
+   \   00000044   0xD00D             BEQ      ??UpdateAlgorithmInputs_2
+   \   00000046   0x2011             MOVS     R0,#+17
+   \   00000048   0x.... 0x....      BL       Fault__IsInFaultState
+   \   0000004C   0x2801             CMP      R0,#+1
+   \   0000004E   0xD008             BEQ      ??UpdateAlgorithmInputs_2
+   \   00000050   0x.... 0x....      BL       DishAuxVar__GetACLine
+   \   00000054   0x8929             LDRH     R1,[R5, #+8]
+   \   00000056   0x4281             CMP      R1,R0
+   \   00000058   0xD203             BCS      ??UpdateAlgorithmInputs_2
+   \   0000005A   0x.... 0x....      BL       Hbl__IsZeroCrossPresent
+   \   0000005E   0x2800             CMP      R0,#+0
+   \   00000060   0xD102             BNE      ??UpdateAlgorithmInputs_3
+    370          	{
+    371          		// As per requirements, if a fault has been detected regarding the diverter, the algorithm
+    372          		// shall manage the situation as if the diverter's position was unknown.
+    373          		// Moreover, the heater's current can't be read if the Zero Crossing signal is absent (since
+    374          		// peak-to-peak signals are read in synchronization with the Zero Crossing), and again this
+    375          		// case is managed as if the diverter position was unknown.
+    376          		Heater_Shadowing_Data.Diverter_Status = DIVERTER_STATUS_UNKNOWN;
+   \                     ??UpdateAlgorithmInputs_2: (+1)
+   \   00000062   0x2000             MOVS     R0,#+0
+   \   00000064   0x7068             STRB     R0,[R5, #+1]
+   \   00000066   0xE021             B        ??UpdateAlgorithmInputs_4
+    377          	}
+    378          	else
+    379          	{
+    380          		if (Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr != NULL)
+   \                     ??UpdateAlgorithmInputs_3: (+1)
+   \   00000068   0x6820             LDR      R0,[R4, #+0]
+   \   0000006A   0x2800             CMP      R0,#+0
+   \   0000006C   0xD01E             BEQ      ??UpdateAlgorithmInputs_4
+    381          		{
+    382          			Diverter_Position_Type diverter_position = DishAuxVar__GetDiverterPosition();
+   \   0000006E   0x.... 0x....      BL       DishAuxVar__GetDiverterPosition
+   \   00000072   0x9000             STR      R0,[SP, #+0]
+    383          
+    384          			if ((uint8)diverter_position.Is_Stable == (uint8)TRUE)
+   \   00000074   0x4668             MOV      R0,SP
+   \   00000076   0x7840             LDRB     R0,[R0, #+1]
+   \   00000078   0x2801             CMP      R0,#+1
+   \   0000007A   0xD115             BNE      ??UpdateAlgorithmInputs_5
+   \   0000007C   0x6820             LDR      R0,[R4, #+0]
+   \   0000007E   0x79C0             LDRB     R0,[R0, #+7]
+   \   00000080   0x4669             MOV      R1,SP
+   \   00000082   0x7809             LDRB     R1,[R1, #+0]
+   \   00000084   0x0702             LSLS     R2,R0,#+28
+   \   00000086   0x0F12             LSRS     R2,R2,#+28
+   \   00000088   0x4291             CMP      R1,R2
+   \   0000008A   0xD102             BNE      ??UpdateAlgorithmInputs_6
+    385          			{
+    386          				// Diverter has reached the requested position
+    387          				if (diverter_position.Position == Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr->LSA_Position_Value)
+    388          				{
+    389          					Heater_Shadowing_Data.Diverter_Status = DIVERTER_STATUS_LSA;
+   \   0000008C   0x2001             MOVS     R0,#+1
+   \   0000008E   0x7068             STRB     R0,[R5, #+1]
+   \   00000090   0xE00C             B        ??UpdateAlgorithmInputs_4
+    390          				}
+    391          				else if (diverter_position.Position == Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr->MSA_Position_Value)
+   \                     ??UpdateAlgorithmInputs_6: (+1)
+   \   00000092   0x4669             MOV      R1,SP
+   \   00000094   0x7809             LDRB     R1,[R1, #+0]
+   \   00000096   0x0900             LSRS     R0,R0,#+4
+   \   00000098   0x4281             CMP      R1,R0
+   \   0000009A   0xD102             BNE      ??UpdateAlgorithmInputs_7
+    392          				{
+    393          					Heater_Shadowing_Data.Diverter_Status = DIVERTER_STATUS_MSA;
+   \   0000009C   0x2002             MOVS     R0,#+2
+   \   0000009E   0x7068             STRB     R0,[R5, #+1]
+   \   000000A0   0xE004             B        ??UpdateAlgorithmInputs_4
+    394          				}
+    395          				else
+    396          				{
+    397          					Heater_Shadowing_Data.Diverter_Status = DIVERTER_STATUS_UNKNOWN;
+   \                     ??UpdateAlgorithmInputs_7: (+1)
+   \   000000A2   0x2000             MOVS     R0,#+0
+   \   000000A4   0x7068             STRB     R0,[R5, #+1]
+   \   000000A6   0xE001             B        ??UpdateAlgorithmInputs_4
+    398          				}
+    399          			}
+    400          			else
+    401          			{
+    402          				Heater_Shadowing_Data.Diverter_Status = DIVERTER_STATUS_UNKNOWN;
+   \                     ??UpdateAlgorithmInputs_5: (+1)
+   \   000000A8   0x2000             MOVS     R0,#+0
+   \   000000AA   0x7068             STRB     R0,[R5, #+1]
+    403          			}
+    404          		}
+    405          	}
+    406          
+    407          	// Heater Current
+    408          	{
+    409          		uint8 heater_current_index;
+    410          		uint8 heater_current_sequence_id;
+    411          
+    412          		heater_current_index = Hbl__GetGIIndexByGIID(HBL_GI_I_HEATER);
+   \                     ??UpdateAlgorithmInputs_4: (+1)
+   \   000000AC   0x2049             MOVS     R0,#+73
+   \   000000AE   0x.... 0x....      BL       Hbl__GetGIIndexByGIID
+   \   000000B2   0x0004             MOVS     R4,R0
+    413          		heater_current_sequence_id = Hbl__GetGISequenceIDByIndex(heater_current_index);
+    414          
+    415          		if (heater_current_sequence_id > (uint8)0)
+   \   000000B4   0x.... 0x....      BL       Hbl__GetGISequenceIDByIndex
+   \   000000B8   0x2800             CMP      R0,#+0
+   \   000000BA   0xD003             BEQ      ??UpdateAlgorithmInputs_8
+    416          		{
+    417          			Heater_Shadowing_Data.Heater_Current = (uint16)Hbl__GetGIDataConvertedByIndex(heater_current_index);
+   \   000000BC   0x0020             MOVS     R0,R4
+   \   000000BE   0x.... 0x....      BL       Hbl__GetGIDataConvertedByIndex
+   \   000000C2   0x80A8             STRH     R0,[R5, #+4]
+    418          		}
+    419          	}
+    420          }
+   \                     ??UpdateAlgorithmInputs_8: (+1)
+   \   000000C4   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    421          
+    422          
+    423          
+    424          //=====================================================================================================================
+    425          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    426          //=====================================================================================================================
+    427          
+    428          
+    429          //---------------------------------------------------------------------------------------------------------------------
+    430          /**
+    431           *
+    432           */
+
+   \                                 In section .text, align 2, keep-with-next
+    433          static void InitializeEntry(void)
+    434          {
+   \                     InitializeEntry: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+    435              SETTINGFILE_LOADER_TYPE loader;
+    436              BOOL_TYPE activate_algorithm;
+    437          
+    438              activate_algorithm = FALSE;
+   \   00000004   0x2400             MOVS     R4,#+0
+    439          
+    440              memset(&Heater_Shadowing_Data, 0, sizeof(Heater_Shadowing_Data));
+   \   00000006   0x....             LDR      R5,??DataTable11
+   \   00000008   0x4622             MOV      R2,R4
+   \   0000000A   0x2138             MOVS     R1,#+56
+   \   0000000C   0x0028             MOVS     R0,R5
+   \   0000000E   0x.... 0x....      BL       __aeabi_memset4
+    441              Heater_Shadowing_Data.AC_Line_Lower_Threshold = 0xFFFF;
+   \   00000012   0x....             LDR      R0,??DataTable15  ;; 0xffff
+   \   00000014   0x86A8             STRH     R0,[R5, #+52]
+    442          	SystemTimers__NVResetTimer(&Heater_Shadowing_Data.NV_Timer_Heater_Shadowing);
+   \   00000016   0x1D28             ADDS     R0,R5,#+4
+   \   00000018   0x.... 0x....      BL       SystemTimers__NVResetTimer
+    443          	SystemTimers__NVResetTimer(&Heater_Shadowing_Data.NV_Timer_HS_Stability);
+   \   0000001C   0x0028             MOVS     R0,R5
+   \   0000001E   0x3018             ADDS     R0,R0,#+24
+   \   00000020   0x.... 0x....      BL       SystemTimers__NVResetTimer
+    444          
+    445          	if ((Hbl__GetLoadIndexByLoadID(HBL_LOAD_WASHING_HEATER) != (uint8)HBL_INDEX_INVALID) &&
+    446          		(Hbl__GetLoadIndexByLoadID(HBL_LOAD_DIVERTER) != (uint8)HBL_INDEX_INVALID) &&
+    447          		(Hbl__GetGIIndexByGIID(HBL_GI_I_HEATER) != (uint8)HBL_INDEX_INVALID) &&
+    448          		(Hbl__GetGIIndexByGIID(HBL_GI_AC_LINE) != (uint8)HBL_INDEX_INVALID))
+   \   00000024   0x2010             MOVS     R0,#+16
+   \   00000026   0x.... 0x....      BL       Hbl__GetLoadIndexByLoadID
+   \   0000002A   0x28FF             CMP      R0,#+255
+   \   0000002C   0xD047             BEQ      ??InitializeEntry_0
+   \   0000002E   0x2040             MOVS     R0,#+64
+   \   00000030   0x.... 0x....      BL       Hbl__GetLoadIndexByLoadID
+   \   00000034   0x28FF             CMP      R0,#+255
+   \   00000036   0xD042             BEQ      ??InitializeEntry_0
+   \   00000038   0x2049             MOVS     R0,#+73
+   \   0000003A   0x.... 0x....      BL       Hbl__GetGIIndexByGIID
+   \   0000003E   0x28FF             CMP      R0,#+255
+   \   00000040   0xD03D             BEQ      ??InitializeEntry_0
+   \   00000042   0x2040             MOVS     R0,#+64
+   \   00000044   0x.... 0x....      BL       Hbl__GetGIIndexByGIID
+   \   00000048   0x28FF             CMP      R0,#+255
+   \   0000004A   0xD038             BEQ      ??InitializeEntry_0
+    449          	{
+    450          		// Get the Heat Monitor process parameters from the setting file, to read the heater's type.
+    451          		if (SettingFile__BasicLoader(SF_PTR_ACU_PRODUCT_CONFIGURATION_DATA,	DISPL_HEATER_DEACTIVATION_CONDITIONS_PARAM, &loader) == PASS)
+   \   0000004C   0x466A             MOV      R2,SP
+   \   0000004E   0x4621             MOV      R1,R4
+   \   00000050   0x2004             MOVS     R0,#+4
+   \   00000052   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000056   0x2801             CMP      R0,#+1
+   \   00000058   0xD12A             BNE      ??InitializeEntry_1
+    452          		{
+    453          			if (((HEAT_MONITOR_INSTANCE_TYPE *)(void*)loader.Data)->Heater_Type == (uint8)CALROD_HEATER) 
+   \   0000005A   0x9800             LDR      R0,[SP, #+0]
+   \   0000005C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000005E   0x2800             CMP      R0,#+0
+   \   00000060   0xD133             BNE      ??InitializeEntry_2
+    454          			{
+    455          				// Calrod Heater type
+    456          
+    457          				if (SettingFile__BasicLoader(SF_PTR_ACU_PRODUCT_CONFIGURATION_DATA, DSPL_HEATER_CURRENT_SENSING_PARAMS, &loader) == PASS)
+   \   00000062   0x466A             MOV      R2,SP
+   \   00000064   0x2106             MOVS     R1,#+6
+   \   00000066   0x2004             MOVS     R0,#+4
+   \   00000068   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   0000006C   0x2801             CMP      R0,#+1
+   \   0000006E   0xD118             BNE      ??InitializeEntry_3
+    458          				{
+    459          					Heater_Shadowing_Data.AC_Line_Lower_Threshold = ENDIANU16_STON(((HEATER_CURRENT_SENSING_PARAMS_TYPE *)(void*)loader.Data)->AC_Line_Lower_Threshold); 
+   \   00000070   0x9900             LDR      R1,[SP, #+0]
+   \   00000072   0x7A08             LDRB     R0,[R1, #+8]
+   \   00000074   0x7A4A             LDRB     R2,[R1, #+9]
+   \   00000076   0x0612             LSLS     R2,R2,#+24
+   \   00000078   0x0C12             LSRS     R2,R2,#+16
+   \   0000007A   0x4310             ORRS     R0,R0,R2
+   \   0000007C   0x86A8             STRH     R0,[R5, #+52]
+    460          					// Get the Heater Shadowing parameters from the setting file.
+    461          					if (SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DSPL_HEATER_SHADOWING, &loader) == PASS)
+   \   0000007E   0x466A             MOV      R2,SP
+   \   00000080   0x2109             MOVS     R1,#+9
+   \   00000082   0x2027             MOVS     R0,#+39
+   \   00000084   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000088   0x2801             CMP      R0,#+1
+   \   0000008A   0xD103             BNE      ??InitializeEntry_4
+    462          					{
+    463          						Heater_Shadowing_Data.SF_Heater_Shadowing_Params_Ptr = (HEATER_SHADOWING_SF_PARAMS_TYPE *)(void*)loader.Data; 
+   \   0000008C   0x9800             LDR      R0,[SP, #+0]
+   \   0000008E   0x6028             STR      R0,[R5, #+0]
+    464          
+    465          					    activate_algorithm = TRUE;
+   \   00000090   0x2401             MOVS     R4,#+1
+   \   00000092   0xE01A             B        ??InitializeEntry_2
+    466          					}
+    467          					else
+    468          					{
+    469          						// Algorithm parameters missing
+    470          						LOG_ADD_EXCEPTION(ERROR_MISSING_PARAMETERS, DSPL_HEATER_SHADOWING);
+   \                     ??InitializeEntry_4: (+1)
+   \   00000094   0x2309             MOVS     R3,#+9
+   \   00000096   0x2201             MOVS     R2,#+1
+   \   00000098   0x2102             MOVS     R1,#+2
+   \   0000009A   0x2028             MOVS     R0,#+40
+   \   0000009C   0x.... 0x....      BL       Log__AddMessage
+   \   000000A0   0xE013             B        ??InitializeEntry_2
+    471          					}
+    472          				}
+    473          				else
+    474          				{
+    475          					// It is not possible to know, through the AC Line input, whether the Zero Crossing signal is reliable or not
+    476          					LOG_ADD_EXCEPTION(ERROR_MISSING_PARAMETERS, DSPL_HEATER_CURRENT_SENSING_PARAMS);
+   \                     ??InitializeEntry_3: (+1)
+   \   000000A2   0x2306             MOVS     R3,#+6
+   \   000000A4   0x2201             MOVS     R2,#+1
+   \   000000A6   0x2102             MOVS     R1,#+2
+   \   000000A8   0x2028             MOVS     R0,#+40
+   \   000000AA   0x.... 0x....      BL       Log__AddMessage
+   \   000000AE   0xE00C             B        ??InitializeEntry_2
+    477          				}
+    478          			}
+    479          			else
+    480          			{
+    481          				// Heater shadowing algorithm doesn't apply to Integrated Type Heater.
+    482          			}
+    483          		}
+    484          		else
+    485          		{
+    486          			// It is not possible to know the heater's type
+    487          			LOG_ADD_EXCEPTION(ERROR_MISSING_PARAMETERS, DISPL_HEATER_DEACTIVATION_CONDITIONS_PARAM);
+   \                     ??InitializeEntry_1: (+1)
+   \   000000B0   0x4623             MOV      R3,R4
+   \   000000B2   0x2201             MOVS     R2,#+1
+   \   000000B4   0x2102             MOVS     R1,#+2
+   \   000000B6   0x2028             MOVS     R0,#+40
+   \   000000B8   0x.... 0x....      BL       Log__AddMessage
+   \   000000BC   0xE005             B        ??InitializeEntry_2
+    488          		}
+    489          	}
+    490          	else
+    491          	{
+    492          		// One or more of the input on which the algorithm depends are not configured in setting file:
+    493          		// - Washing Heater state, Diverter position and Heater Current are directly used by the algorithm.
+    494          		// - AC Line is used because it is a robust feedback to know if Zero Crossing signal (without which
+    495          		//   the reading of the Heater Current is not reliable) is reliable. It is not safe to just check the
+    496          		//   Zero Crossing presence, because it could be due to the effect of disturbances even if the pilot
+    497          		//   relay is open.
+    498          		LOG_ADD_EXCEPTION (ERROR_MISSING_COMPONENTS, 0);
+   \                     ??InitializeEntry_0: (+1)
+   \   000000BE   0x4623             MOV      R3,R4
+   \   000000C0   0x2201             MOVS     R2,#+1
+   \   000000C2   0x4611             MOV      R1,R2
+   \   000000C4   0x2028             MOVS     R0,#+40
+   \   000000C6   0x.... 0x....      BL       Log__AddMessage
+    499          	}
+    500          
+    501          	if ((uint8)activate_algorithm == (uint8)TRUE)
+   \                     ??InitializeEntry_2: (+1)
+   \   000000CA   0x2C01             CMP      R4,#+1
+   \   000000CC   0xD102             BNE      ??InitializeEntry_5
+    502          	{
+    503          		EventStartHeaterShadowingAlgorithm();
+   \   000000CE   0x.... 0x....      BL       EventStartHeaterShadowingAlgorithm
+   \   000000D2   0xBD37             POP      {R0-R2,R4,R5,PC}
+    504          	}
+    505          	else
+    506          	{
+    507          		EventHeaterShadowingNotActive();
+   \                     ??InitializeEntry_5: (+1)
+   \   000000D4   0x.... 0x....      BL       EventHeaterShadowingNotActive
+    508          	}
+    509          }
+   \   000000D8   0xBD37             POP      {R0-R2,R4,R5,PC}  ;; return
+    510          
+    511          
+    512          //---------------------------------------------------------------------------------------------------------------------
+    513          /**
+    514           *
+    515           */
+
+   \                                 In section .text, align 2, keep-with-next
+    516          static void HoldEntry(void)
+    517          {
+   \                     HoldEntry: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    518          	HeaterShadowing_Status = ALGORITHM_ON_HOLD;
+   \   00000002   0x2001             MOVS     R0,#+1
+   \   00000004   0x....             LDR      R1,??DataTable23
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+    519          	(void)SystemTimers__NVSetTimerMS(&Heater_Shadowing_Data.NV_Timer_Heater_Shadowing, ALGORITHM_HOLD_TIME_MS, SYSTEMTIMERS_TYPE_UP_COUNTER);
+   \   00000008   0x....             LDR      R0,??DataTable11
+   \   0000000A   0x6801             LDR      R1,[R0, #+0]
+   \   0000000C   0x7A8B             LDRB     R3,[R1, #+10]
+   \   0000000E   0x7ACA             LDRB     R2,[R1, #+11]
+   \   00000010   0x0612             LSLS     R2,R2,#+24
+   \   00000012   0x0C12             LSRS     R2,R2,#+16
+   \   00000014   0x4313             ORRS     R3,R3,R2
+   \   00000016   0x2201             MOVS     R2,#+1
+   \   00000018   0x21FA             MOVS     R1,#+250
+   \   0000001A   0x0089             LSLS     R1,R1,#+2        ;; #+1000
+   \   0000001C   0x4359             MULS     R1,R3,R1
+   \   0000001E   0x1D00             ADDS     R0,R0,#+4
+   \   00000020   0x.... 0x....      BL       SystemTimers__NVSetTimerMS
+    520          }
+   \   00000024   0xBD01             POP      {R0,PC}          ;; return
+    521          
+    522          
+    523          //---------------------------------------------------------------------------------------------------------------------
+    524          /**
+    525           *
+    526           */
+
+   \                                 In section .text, align 2, keep-with-next
+    527          static void HoldDo(void)
+    528          {
+   \                     HoldDo: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    529          	if (SystemTimers__NVCheckTimer(&Heater_Shadowing_Data.NV_Timer_Heater_Shadowing) == SYSTEMTIMERS_STATE_DONE)
+   \   00000002   0x....             LDR      R0,??DataTable23_1
+   \   00000004   0x.... 0x....      BL       SystemTimers__NVCheckTimer
+   \   00000008   0x2802             CMP      R0,#+2
+   \   0000000A   0xD101             BNE      ??HoldDo_0
+    530          	{
+    531          		EventHoldTimeExpired();
+   \   0000000C   0x.... 0x....      BL       EventHoldTimeExpired
+    532          	}
+    533          }
+   \                     ??HoldDo_0: (+1)
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+    534          
+    535          
+    536          //---------------------------------------------------------------------------------------------------------------------
+    537          /**
+    538           *
+    539           */
+
+   \                                 In section .text, align 2, keep-with-next
+    540          static void HeaterOffEntry(void)
+    541          {
+    542          	HeaterShadowing_Status = HEATER_OFF;
+   \                     HeaterOffEntry: (+1)
+   \   00000000   0x2002             MOVS     R0,#+2
+   \   00000002   0x....             LDR      R1,??DataTable23
+   \   00000004   0x7008             STRB     R0,[R1, #+0]
+    543          }
+   \   00000006   0x4770             BX       LR               ;; return
+    544          
+    545          
+    546          //---------------------------------------------------------------------------------------------------------------------
+    547          /**
+    548           *
+    549           */
+
+   \                                 In section .text, align 2, keep-with-next
+    550          static void HeaterOffDo(void)
+    551          {
+    552          	if (Heater_Shadowing_Data.Heater_Status == ON)
+   \                     HeaterOffDo: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable25
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x2801             CMP      R0,#+1
+   \   00000006   0xD000             BEQ      ??HeaterOffDo_0
+   \   00000008   0x4770             BX       LR
+    553          	{
+    554          		// Heater on
+    555          		EventHeaterOn();
+   \                     ??HeaterOffDo_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x.... 0x....      BL       EventHeaterOn
+    556          	}
+    557          }
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+    558          
+    559          
+    560          //---------------------------------------------------------------------------------------------------------------------
+    561          /**
+    562           *
+    563           */
+
+   \                                 In section .text, align 2, keep-with-next
+    564          static void UnknownPositionEntry(void)
+    565          {
+    566          	HeaterShadowing_Status = UNKNOWN_DIVERTER_POSITION;
+   \                     UnknownPositionEntry: (+1)
+   \   00000000   0x2005             MOVS     R0,#+5
+   \   00000002   0x....             LDR      R1,??DataTable23
+   \   00000004   0x7008             STRB     R0,[R1, #+0]
+    567          }
+   \   00000006   0x4770             BX       LR               ;; return
+    568          
+    569          
+    570          //---------------------------------------------------------------------------------------------------------------------
+    571          /**
+    572           *
+    573           */
+
+   \                                 In section .text, align 2, keep-with-next
+    574          static void UnknownPositionDo(void)
+    575          {
+   \                     UnknownPositionDo: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    576          	if (Heater_Shadowing_Data.Heater_Status == OFF)
+   \   00000002   0x....             LDR      R0,??DataTable25
+   \   00000004   0x7800             LDRB     R0,[R0, #+0]
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD102             BNE      ??UnknownPositionDo_0
+    577          	{
+    578          		// Heater off
+    579          		EventHeaterOff();
+   \   0000000A   0x.... 0x....      BL       EventHeaterOff
+   \   0000000E   0xBD01             POP      {R0,PC}
+    580          	}
+    581          	else if ((uint8)DiverterInLSAOrMSA() == (uint8)TRUE)
+   \                     ??UnknownPositionDo_0: (+1)
+   \   00000010   0x.... 0x....      BL       DiverterInLSAOrMSA
+   \   00000014   0x2801             CMP      R0,#+1
+   \   00000016   0xD101             BNE      ??UnknownPositionDo_1
+    582          	{
+    583          		EventDiverterPositionChanged();
+   \   00000018   0x.... 0x....      BL       EventDiverterPositionChanged
+    584          	}
+    585          
+    586          }
+   \                     ??UnknownPositionDo_1: (+1)
+   \   0000001C   0xBD01             POP      {R0,PC}          ;; return
+    587          
+    588          
+    589          //---------------------------------------------------------------------------------------------------------------------
+    590          /**
+    591           *
+    592           */
+
+   \                                 In section .text, align 2, keep-with-next
+    593          static void WaitingDelayEntry(void)
+    594          {
+   \                     WaitingDelayEntry: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    595          	HeaterShadowing_Status = HEATER_NOT_SHADOWED;
+   \   00000002   0x2003             MOVS     R0,#+3
+   \   00000004   0x....             LDR      R1,??DataTable23
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+    596          	(void)SystemTimers__NVSetTimerMS(&Heater_Shadowing_Data.NV_Timer_Heater_Shadowing, CHECK_TIMEOUT_MS, SYSTEMTIMERS_TYPE_UP_COUNTER);
+   \   00000008   0x....             LDR      R0,??DataTable11
+   \   0000000A   0x6801             LDR      R1,[R0, #+0]
+   \   0000000C   0x790B             LDRB     R3,[R1, #+4]
+   \   0000000E   0x794A             LDRB     R2,[R1, #+5]
+   \   00000010   0x0612             LSLS     R2,R2,#+24
+   \   00000012   0x0C12             LSRS     R2,R2,#+16
+   \   00000014   0x4313             ORRS     R3,R3,R2
+   \   00000016   0x2201             MOVS     R2,#+1
+   \   00000018   0x21FA             MOVS     R1,#+250
+   \   0000001A   0x0089             LSLS     R1,R1,#+2        ;; #+1000
+   \   0000001C   0x4359             MULS     R1,R3,R1
+   \   0000001E   0x1D00             ADDS     R0,R0,#+4
+   \   00000020   0x.... 0x....      BL       SystemTimers__NVSetTimerMS
+    597          }
+   \   00000024   0xBD01             POP      {R0,PC}          ;; return
+    598          
+    599          
+    600          //---------------------------------------------------------------------------------------------------------------------
+    601          /**
+    602           *
+    603           */
+
+   \                                 In section .text, align 2, keep-with-next
+    604          static void WaitingDelayDo(void)
+    605          {
+   \                     WaitingDelayDo: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    606          	if (Heater_Shadowing_Data.Heater_Status == OFF)
+   \   00000002   0x....             LDR      R5,??DataTable11
+   \   00000004   0x002C             MOVS     R4,R5
+   \   00000006   0x342C             ADDS     R4,R4,#+44
+   \   00000008   0x7820             LDRB     R0,[R4, #+0]
+   \   0000000A   0x2800             CMP      R0,#+0
+   \   0000000C   0xD102             BNE      ??WaitingDelayDo_0
+    607          	{
+    608          		// Heater off
+    609          		EventHeaterOff();
+   \   0000000E   0x.... 0x....      BL       EventHeaterOff
+   \   00000012   0xBD31             POP      {R0,R4,R5,PC}
+    610          	}
+    611          	else if (DiverterInLSAOrMSA() == FALSE)
+   \                     ??WaitingDelayDo_0: (+1)
+   \   00000014   0x.... 0x....      BL       DiverterInLSAOrMSA
+   \   00000018   0x2800             CMP      R0,#+0
+   \   0000001A   0xD102             BNE      ??WaitingDelayDo_1
+    612          	{
+    613          		EventDiverterPositionUnknown();
+   \   0000001C   0x.... 0x....      BL       EventDiverterPositionUnknown
+   \   00000020   0xBD31             POP      {R0,R4,R5,PC}
+    614          	}
+    615          	else if (Heater_Shadowing_Data.Previous_Diverter_Status != Heater_Shadowing_Data.Diverter_Status)
+   \                     ??WaitingDelayDo_1: (+1)
+   \   00000022   0x78A0             LDRB     R0,[R4, #+2]
+   \   00000024   0x7861             LDRB     R1,[R4, #+1]
+   \   00000026   0x4288             CMP      R0,R1
+   \   00000028   0xD002             BEQ      ??WaitingDelayDo_2
+    616          	{
+    617          		EventDiverterPositionChanged();
+   \   0000002A   0x.... 0x....      BL       EventDiverterPositionChanged
+   \   0000002E   0xBD31             POP      {R0,R4,R5,PC}
+    618          	}
+    619          	else
+    620          	{
+    621          		if (SystemTimers__NVGetTimerMs(&Heater_Shadowing_Data.NV_Timer_Heater_Shadowing) >=	((Heater_Shadowing_Data.Diverter_Status == DIVERTER_STATUS_LSA) ? (LSA_DELAY_MS) : (MSA_DELAY_MS)))
+   \                     ??WaitingDelayDo_2: (+1)
+   \   00000030   0x1D28             ADDS     R0,R5,#+4
+   \   00000032   0x.... 0x....      BL       SystemTimers__NVGetTimerMs
+   \   00000036   0x6829             LDR      R1,[R5, #+0]
+   \   00000038   0x22FA             MOVS     R2,#+250
+   \   0000003A   0x0092             LSLS     R2,R2,#+2        ;; #+1000
+   \   0000003C   0x7863             LDRB     R3,[R4, #+1]
+   \   0000003E   0x2B01             CMP      R3,#+1
+   \   00000040   0xD102             BNE      ??WaitingDelayDo_3
+   \   00000042   0x7989             LDRB     R1,[R1, #+6]
+   \   00000044   0x4351             MULS     R1,R2,R1
+   \   00000046   0xE001             B        ??WaitingDelayDo_4
+   \                     ??WaitingDelayDo_3: (+1)
+   \   00000048   0x7A09             LDRB     R1,[R1, #+8]
+   \   0000004A   0x4351             MULS     R1,R2,R1
+   \                     ??WaitingDelayDo_4: (+1)
+   \   0000004C   0x4288             CMP      R0,R1
+   \   0000004E   0xD308             BCC      ??WaitingDelayDo_5
+    622          		{
+    623          			if (Hbl__GetGISequenceIDByIndex(Hbl__GetGIIndexByGIID(HBL_GI_I_HEATER)) > (uint8)0) // To avoid saving an inconsistent value into Current_Baseline_Value
+   \   00000050   0x2049             MOVS     R0,#+73
+   \   00000052   0x.... 0x....      BL       Hbl__GetGIIndexByGIID
+   \   00000056   0x.... 0x....      BL       Hbl__GetGISequenceIDByIndex
+   \   0000005A   0x2800             CMP      R0,#+0
+   \   0000005C   0xD001             BEQ      ??WaitingDelayDo_5
+    624          			{
+    625          				EventDelayExpired();
+   \   0000005E   0x.... 0x....      BL       EventDelayExpired
+    626          			}
+    627          		}
+    628          	}
+    629          
+    630          }
+   \                     ??WaitingDelayDo_5: (+1)
+   \   00000062   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    631          
+    632          
+    633          //---------------------------------------------------------------------------------------------------------------------
+    634          /**
+    635           *
+    636           */
+
+   \                                 In section .text, align 2, keep-with-next
+    637          static void CheckDeltaEntry(void)
+    638          {
+   \                     CheckDeltaEntry: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    639          	(void)SystemTimers__NVSetTimerMS(&Heater_Shadowing_Data.NV_Timer_HS_Stability, STABILITY_TIME_MS, SYSTEMTIMERS_TYPE_DOWN_COUNTER);
+   \   00000002   0x....             LDR      R0,??DataTable11
+   \   00000004   0x2200             MOVS     R2,#+0
+   \   00000006   0x6801             LDR      R1,[R0, #+0]
+   \   00000008   0x7A49             LDRB     R1,[R1, #+9]
+   \   0000000A   0x23FA             MOVS     R3,#+250
+   \   0000000C   0x009B             LSLS     R3,R3,#+2        ;; #+1000
+   \   0000000E   0x4359             MULS     R1,R3,R1
+   \   00000010   0x3018             ADDS     R0,R0,#+24
+   \   00000012   0x.... 0x....      BL       SystemTimers__NVSetTimerMS
+    640          }
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    641          
+    642          
+    643          //---------------------------------------------------------------------------------------------------------------------
+    644          /**
+    645           *
+    646           */
+
+   \                                 In section .text, align 2, keep-with-next
+    647          static void CheckDeltaDo(void)
+    648          {
+   \                     CheckDeltaDo: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+    649          	if (Heater_Shadowing_Data.Heater_Status == OFF)
+   \   00000002   0x....             LDR      R4,??DataTable31
+   \   00000004   0x0026             MOVS     R6,R4
+   \   00000006   0x362C             ADDS     R6,R6,#+44
+   \   00000008   0x7830             LDRB     R0,[R6, #+0]
+   \   0000000A   0x2800             CMP      R0,#+0
+   \   0000000C   0xD102             BNE      ??CheckDeltaDo_0
+    650          	{
+    651          		// Heater off
+    652          		EventHeaterOff();
+   \   0000000E   0x.... 0x....      BL       EventHeaterOff
+   \   00000012   0xBD70             POP      {R4-R6,PC}
+    653          	}
+    654          	else if (DiverterInLSAOrMSA() == FALSE)
+   \                     ??CheckDeltaDo_0: (+1)
+   \   00000014   0x.... 0x....      BL       DiverterInLSAOrMSA
+   \   00000018   0x2800             CMP      R0,#+0
+   \   0000001A   0xD102             BNE      ??CheckDeltaDo_1
+    655          	{
+    656          		EventDiverterPositionUnknown();
+   \   0000001C   0x.... 0x....      BL       EventDiverterPositionUnknown
+   \   00000020   0xBD70             POP      {R4-R6,PC}
+    657          	}
+    658          	else if (Heater_Shadowing_Data.Previous_Diverter_Status != Heater_Shadowing_Data.Diverter_Status)
+   \                     ??CheckDeltaDo_1: (+1)
+   \   00000022   0x78B0             LDRB     R0,[R6, #+2]
+   \   00000024   0x7871             LDRB     R1,[R6, #+1]
+   \   00000026   0x4288             CMP      R0,R1
+   \   00000028   0xD002             BEQ      ??CheckDeltaDo_2
+    659          	{
+    660          		EventDiverterPositionChanged();
+   \   0000002A   0x.... 0x....      BL       EventDiverterPositionChanged
+   \   0000002E   0xBD70             POP      {R4-R6,PC}
+    661          	}
+    662          	else if (SystemTimers__NVCheckTimer(&Heater_Shadowing_Data.NV_Timer_Heater_Shadowing) == SYSTEMTIMERS_STATE_DONE)
+   \                     ??CheckDeltaDo_2: (+1)
+   \   00000030   0x1D20             ADDS     R0,R4,#+4
+   \   00000032   0x.... 0x....      BL       SystemTimers__NVCheckTimer
+   \   00000036   0x2802             CMP      R0,#+2
+   \   00000038   0xD102             BNE      ??CheckDeltaDo_3
+    663          	{
+    664          		EventTimeoutExpired();
+   \   0000003A   0x.... 0x....      BL       EventTimeoutExpired
+   \   0000003E   0xBD70             POP      {R4-R6,PC}
+    665          	}
+    666          	else
+    667          	{
+    668          		if (Heater_Shadowing_Data.Diverter_Status == DIVERTER_STATUS_LSA)
+   \                     ??CheckDeltaDo_3: (+1)
+   \   00000040   0x6821             LDR      R1,[R4, #+0]
+   \   00000042   0x....             LDR      R5,??DataTable23
+   \   00000044   0x7870             LDRB     R0,[R6, #+1]
+   \   00000046   0x2801             CMP      R0,#+1
+   \   00000048   0xD122             BNE      ??CheckDeltaDo_4
+    669          		{
+    670          			if ((Heater_Shadowing_Data.Heater_Current - Heater_Shadowing_Data.Current_Baseline_Value) >= LSA_RISE_THRESHOLD)
+   \   0000004A   0x7808             LDRB     R0,[R1, #+0]
+   \   0000004C   0x784A             LDRB     R2,[R1, #+1]
+   \   0000004E   0x0612             LSLS     R2,R2,#+24
+   \   00000050   0x0C12             LSRS     R2,R2,#+16
+   \   00000052   0x4310             ORRS     R0,R0,R2
+   \   00000054   0x88B1             LDRH     R1,[R6, #+4]
+   \   00000056   0x88F2             LDRH     R2,[R6, #+6]
+   \   00000058   0x1A89             SUBS     R1,R1,R2
+   \   0000005A   0x4281             CMP      R1,R0
+   \   0000005C   0xDB0B             BLT      ??CheckDeltaDo_5
+    671          			{
+    672          				if (SystemTimers__NVCheckTimer(&Heater_Shadowing_Data.NV_Timer_HS_Stability) == SYSTEMTIMERS_STATE_DONE)
+   \   0000005E   0x0020             MOVS     R0,R4
+   \   00000060   0x3018             ADDS     R0,R0,#+24
+   \   00000062   0x.... 0x....      BL       SystemTimers__NVCheckTimer
+   \   00000066   0x2802             CMP      R0,#+2
+   \   00000068   0xD102             BNE      ??CheckDeltaDo_6
+    673          				{
+    674          					HeaterShadowing_Status = HEATER_SHADOWED;
+   \   0000006A   0x2004             MOVS     R0,#+4
+   \   0000006C   0x7028             STRB     R0,[R5, #+0]
+   \   0000006E   0xBD70             POP      {R4-R6,PC}
+    675          				}
+    676          				else
+    677          				{
+    678          					HeaterShadowing_Status = HEATER_SHADOWED_RISK;
+   \                     ??CheckDeltaDo_6: (+1)
+   \   00000070   0x2006             MOVS     R0,#+6
+   \   00000072   0x7028             STRB     R0,[R5, #+0]
+   \   00000074   0xBD70             POP      {R4-R6,PC}
+    679          				}
+    680          			}
+    681          			else
+    682          			{
+    683          				(void)SystemTimers__NVSetTimerMS(&Heater_Shadowing_Data.NV_Timer_HS_Stability, STABILITY_TIME_MS, SYSTEMTIMERS_TYPE_DOWN_COUNTER);
+   \                     ??CheckDeltaDo_5: (+1)
+   \   00000076   0x2200             MOVS     R2,#+0
+   \   00000078   0x6820             LDR      R0,[R4, #+0]
+   \   0000007A   0x7A41             LDRB     R1,[R0, #+9]
+   \   0000007C   0x20FA             MOVS     R0,#+250
+   \   0000007E   0x0080             LSLS     R0,R0,#+2        ;; #+1000
+   \   00000080   0x4341             MULS     R1,R0,R1
+   \   00000082   0x0020             MOVS     R0,R4
+   \   00000084   0x3018             ADDS     R0,R0,#+24
+   \   00000086   0x.... 0x....      BL       SystemTimers__NVSetTimerMS
+    684          				HeaterShadowing_Status = HEATER_NOT_SHADOWED;
+   \   0000008A   0x2003             MOVS     R0,#+3
+   \   0000008C   0x7028             STRB     R0,[R5, #+0]
+   \   0000008E   0xBD70             POP      {R4-R6,PC}
+    685          			}
+    686          		}
+    687          		else
+    688          		{	// HS_Diverter_Status == DIVERTER_STATUS_MSA
+    689          
+    690          			if ((Heater_Shadowing_Data.Current_Baseline_Value - Heater_Shadowing_Data.Heater_Current) >= MSA_DROP_THRESHOLD)
+   \                     ??CheckDeltaDo_4: (+1)
+   \   00000090   0x7888             LDRB     R0,[R1, #+2]
+   \   00000092   0x78CA             LDRB     R2,[R1, #+3]
+   \   00000094   0x0612             LSLS     R2,R2,#+24
+   \   00000096   0x0C12             LSRS     R2,R2,#+16
+   \   00000098   0x4310             ORRS     R0,R0,R2
+   \   0000009A   0x88F1             LDRH     R1,[R6, #+6]
+   \   0000009C   0x88B2             LDRH     R2,[R6, #+4]
+   \   0000009E   0x1A89             SUBS     R1,R1,R2
+   \   000000A0   0x4281             CMP      R1,R0
+   \   000000A2   0xDB0B             BLT      ??CheckDeltaDo_7
+    691          			{
+    692          				if (SystemTimers__NVCheckTimer(&Heater_Shadowing_Data.NV_Timer_HS_Stability) == SYSTEMTIMERS_STATE_DONE)
+   \   000000A4   0x0020             MOVS     R0,R4
+   \   000000A6   0x3018             ADDS     R0,R0,#+24
+   \   000000A8   0x.... 0x....      BL       SystemTimers__NVCheckTimer
+   \   000000AC   0x2802             CMP      R0,#+2
+   \   000000AE   0xD102             BNE      ??CheckDeltaDo_8
+    693          				{
+    694          					HeaterShadowing_Status = HEATER_SHADOWED;
+   \   000000B0   0x2004             MOVS     R0,#+4
+   \   000000B2   0x7028             STRB     R0,[R5, #+0]
+   \   000000B4   0xBD70             POP      {R4-R6,PC}
+    695          				}
+    696          				else
+    697          				{
+    698          					HeaterShadowing_Status = HEATER_SHADOWED_RISK;
+   \                     ??CheckDeltaDo_8: (+1)
+   \   000000B6   0x2006             MOVS     R0,#+6
+   \   000000B8   0x7028             STRB     R0,[R5, #+0]
+   \   000000BA   0xBD70             POP      {R4-R6,PC}
+    699          				}
+    700          			}
+    701          			else
+    702          			{
+    703          				(void)SystemTimers__NVSetTimerMS(&Heater_Shadowing_Data.NV_Timer_HS_Stability, STABILITY_TIME_MS, SYSTEMTIMERS_TYPE_DOWN_COUNTER);
+   \                     ??CheckDeltaDo_7: (+1)
+   \   000000BC   0x2200             MOVS     R2,#+0
+   \   000000BE   0x6820             LDR      R0,[R4, #+0]
+   \   000000C0   0x7A41             LDRB     R1,[R0, #+9]
+   \   000000C2   0x20FA             MOVS     R0,#+250
+   \   000000C4   0x0080             LSLS     R0,R0,#+2        ;; #+1000
+   \   000000C6   0x4341             MULS     R1,R0,R1
+   \   000000C8   0x0020             MOVS     R0,R4
+   \   000000CA   0x3018             ADDS     R0,R0,#+24
+   \   000000CC   0x.... 0x....      BL       SystemTimers__NVSetTimerMS
+    704          				HeaterShadowing_Status = HEATER_NOT_SHADOWED;
+   \   000000D0   0x2003             MOVS     R0,#+3
+   \   000000D2   0x7028             STRB     R0,[R5, #+0]
+    705          			}
+    706          		}
+    707          	}
+    708          }
+   \   000000D4   0xBD70             POP      {R4-R6,PC}       ;; return
+    709          
+    710          
+    711          //---------------------------------------------------------------------------------------------------------------------
+    712          /**
+    713           *
+    714           */
+
+   \                                 In section .text, align 2, keep-with-next
+    715          static void TimeoutEntry(void)
+    716          {
+    717          	HeaterShadowing_Status = HEATER_NOT_SHADOWED;
+   \                     TimeoutEntry: (+1)
+   \   00000000   0x2003             MOVS     R0,#+3
+   \   00000002   0x....             LDR      R1,??DataTable23
+   \   00000004   0x7008             STRB     R0,[R1, #+0]
+    718          }
+   \   00000006   0x4770             BX       LR               ;; return
+    719          
+    720          
+    721          //---------------------------------------------------------------------------------------------------------------------
+    722          /**
+    723           *
+    724           */
+
+   \                                 In section .text, align 2, keep-with-next
+    725          static void TimeoutDo(void)
+    726          {
+   \                     TimeoutDo: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    727          	if (Heater_Shadowing_Data.Heater_Status == OFF)
+   \   00000002   0x....             LDR      R4,??DataTable25
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD102             BNE      ??TimeoutDo_0
+    728          	{
+    729          		// Heater off
+    730          		EventHeaterOff();
+   \   0000000A   0x.... 0x....      BL       EventHeaterOff
+   \   0000000E   0xBD10             POP      {R4,PC}
+    731          	}
+    732          	else if (DiverterInLSAOrMSA() == FALSE)
+   \                     ??TimeoutDo_0: (+1)
+   \   00000010   0x.... 0x....      BL       DiverterInLSAOrMSA
+   \   00000014   0x2800             CMP      R0,#+0
+   \   00000016   0xD102             BNE      ??TimeoutDo_1
+    733          	{
+    734          		EventDiverterPositionUnknown();
+   \   00000018   0x.... 0x....      BL       EventDiverterPositionUnknown
+   \   0000001C   0xBD10             POP      {R4,PC}
+    735          	}
+    736          	else if (Heater_Shadowing_Data.Previous_Diverter_Status != Heater_Shadowing_Data.Diverter_Status)
+   \                     ??TimeoutDo_1: (+1)
+   \   0000001E   0x78A0             LDRB     R0,[R4, #+2]
+   \   00000020   0x7861             LDRB     R1,[R4, #+1]
+   \   00000022   0x4288             CMP      R0,R1
+   \   00000024   0xD001             BEQ      ??TimeoutDo_2
+    737          	{
+    738          		EventDiverterPositionChanged();
+   \   00000026   0x.... 0x....      BL       EventDiverterPositionChanged
+    739          	}
+    740          }
+   \                     ??TimeoutDo_2: (+1)
+   \   0000002A   0xBD10             POP      {R4,PC}          ;; return
+    741          
+    742          
+    743          //---------------------------------------------------------------------------------------------------------------------
+    744          /**
+    745           *
+    746           * @return
+    747           */
+
+   \                                 In section .text, align 2, keep-with-next
+    748          static BOOL_TYPE HeaterIsOn(void)
+    749          {
+    750          	return ((Heater_Shadowing_Data.Heater_Status == ON) ? (TRUE) : (FALSE));
+   \                     HeaterIsOn: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable25
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x2801             CMP      R0,#+1
+   \   00000006   0xD101             BNE      ??HeaterIsOn_0
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x4770             BX       LR
+   \                     ??HeaterIsOn_0: (+1)
+   \   0000000C   0x2000             MOVS     R0,#+0
+   \   0000000E   0x4770             BX       LR               ;; return
+    751          }
+    752          
+    753          
+    754          //---------------------------------------------------------------------------------------------------------------------
+    755          /**
+    756           *
+    757           * @return
+    758           */
+
+   \                                 In section .text, align 2, keep-with-next
+    759          static BOOL_TYPE DiverterInLSAOrMSA(void)
+   \                     DiverterInLSAOrMSA: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable31_1
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x2801             CMP      R0,#+1
+   \   00000006   0xD001             BEQ      ??DiverterInLSAOrMSA_0
+   \   00000008   0x2802             CMP      R0,#+2
+   \   0000000A   0xD101             BNE      ??DiverterInLSAOrMSA_1
+   \                     ??DiverterInLSAOrMSA_0: (+1)
+   \   0000000C   0x2001             MOVS     R0,#+1
+   \   0000000E   0x4770             BX       LR
+   \                     ??DiverterInLSAOrMSA_1: (+1)
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x4770             BX       LR               ;; return
+    760          {
+    761          	return (((Heater_Shadowing_Data.Diverter_Status == DIVERTER_STATUS_LSA) || (Heater_Shadowing_Data.Diverter_Status == DIVERTER_STATUS_MSA)) ? (TRUE):(FALSE));
+    762          }
+    763          
+    764          
+    765          //---------------------------------------------------------------------------------------------------------------------
+    766          /**
+    767           *
+    768           */
+
+   \                                 In section .text, align 2, keep-with-next
+    769          static void SaveCurrentBaseline(void)
+    770          {
+    771          	Heater_Shadowing_Data.Current_Baseline_Value = Heater_Shadowing_Data.Heater_Current;
+   \                     SaveCurrentBaseline: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable31
+   \   00000002   0x8E01             LDRH     R1,[R0, #+48]
+   \   00000004   0x8641             STRH     R1,[R0, #+50]
+    772          }
+   \   00000006   0x4770             BX       LR               ;; return
+    773          
+    774          
+    775          //---------------------------------------------------------------------------------------------------------------------
+    776          /**
+    777           *
+    778           */
+
+   \                                 In section .text, align 2, keep-with-next
+    779          static void SetAlgorithmNotActive(void)
+    780          {
+    781              HeaterShadowing_Status = ALGORITHM_NOT_ACTIVE;
+   \                     SetAlgorithmNotActive: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR      R1,??DataTable23
+   \   00000004   0x7008             STRB     R0,[R1, #+0]
+    782          }
+   \   00000006   0x4770             BX       LR               ;; return
+    783          
+    784          
+    785          //=====================================================================================================================
+    786          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Heater Shadowing State Machine
+    787          //=====================================================================================================================
+    788          // !! StateEngineCrank cannot update this code if you change the header !!
+    789          
+    790          
+    791          //---------------------------------------------------------------------------------------------------------------------
+    792          /**
+    793           * Process the Cycle Resume Event for the Heater Shadowing state machine.
+    794           *
+    795           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    796           *
+    797           * This function was auto-generated and must not be edited manually.
+    798           * Change the UML used to generate this function and regenerate the source code.
+    799           */
+
+   \                                 In section .text, align 2, keep-with-next
+    800          static void EventCycleResume(void)
+    801          {
+    802              switch (Heater_Shadowing_State)
+   \                     EventCycleResume: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable31_2
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x1E89             SUBS     R1,R1,#+2
+   \   00000006   0x2905             CMP      R1,#+5
+   \   00000008   0xD900             BLS      ??EventCycleResume_0
+   \   0000000A   0x4770             BX       LR
+    803              {
+    804                  case STATE_HEATER_SHADOWING_HOLD:
+    805                  case STATE_HEATER_SHADOWING_HEATER_OFF:
+    806                  case STATE_HEATER_SHADOWING_UNKNOWN_POSITION:
+    807                  case STATE_HEATER_SHADOWING_WAITING_DELAY:
+    808                  case STATE_HEATER_SHADOWING_CHECK_DELTA:
+    809                  case STATE_HEATER_SHADOWING_TIMEOUT:
+    810                      Heater_Shadowing_State = STATE_HEATER_SHADOWING_HOLD;
+   \                     ??EventCycleResume_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x2102             MOVS     R1,#+2
+   \   00000010   0x7001             STRB     R1,[R0, #+0]
+    811                      HoldEntry();                            // Entry Function.
+   \   00000012   0x.... 0x....      BL       HoldEntry
+    812                      break;
+    813          
+    814                  default:
+    815                      // Event is ignored for all other values of Heater_Shadowing_State.
+    816                      break;
+    817              }
+    818          }
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    819          
+    820          
+    821          //---------------------------------------------------------------------------------------------------------------------
+    822          /**
+    823           * Process the Delay Expired Event for the Heater Shadowing state machine.
+    824           *
+    825           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    826           *
+    827           * This function was auto-generated and must not be edited manually.
+    828           * Change the UML used to generate this function and regenerate the source code.
+    829           */
+
+   \                                 In section .text, align 2, keep-with-next
+    830          static void EventDelayExpired(void)
+    831          {
+   \                     EventDelayExpired: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    832              switch (Heater_Shadowing_State)
+   \   00000002   0x....             LDR      R4,??DataTable31_2
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2805             CMP      R0,#+5
+   \   00000008   0xD105             BNE      ??EventDelayExpired_0
+    833              {
+    834                  case STATE_HEATER_SHADOWING_WAITING_DELAY:
+    835                      SaveCurrentBaseline();                  // Transition action function.
+   \   0000000A   0x.... 0x....      BL       SaveCurrentBaseline
+    836                      Heater_Shadowing_State = STATE_HEATER_SHADOWING_CHECK_DELTA;
+   \   0000000E   0x2006             MOVS     R0,#+6
+   \   00000010   0x7020             STRB     R0,[R4, #+0]
+    837                      CheckDeltaEntry();                      // Entry Function.
+   \   00000012   0x.... 0x....      BL       CheckDeltaEntry
+    838                      break;
+    839          
+    840                  default:
+    841                      // Event is ignored for all other values of Heater_Shadowing_State.
+    842                      break;
+    843              }
+    844          }
+   \                     ??EventDelayExpired_0: (+1)
+   \   00000016   0xBD10             POP      {R4,PC}          ;; return
+    845          
+    846          
+    847          //---------------------------------------------------------------------------------------------------------------------
+    848          /**
+    849           * Process the Diverter Position Changed Event for the Heater Shadowing state machine.
+    850           *
+    851           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    852           *
+    853           * This function was auto-generated and must not be edited manually.
+    854           * Change the UML used to generate this function and regenerate the source code.
+    855           */
+
+   \                                 In section .text, align 2, keep-with-next
+    856          static void EventDiverterPositionChanged(void)
+    857          {
+    858              switch (Heater_Shadowing_State)
+   \                     EventDiverterPositionChanged: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable31_2
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x1F09             SUBS     R1,R1,#+4
+   \   00000006   0x2903             CMP      R1,#+3
+   \   00000008   0xD900             BLS      ??EventDiverterPositionChanged_0
+   \   0000000A   0x4770             BX       LR
+    859              {
+    860                  case STATE_HEATER_SHADOWING_UNKNOWN_POSITION:
+    861                  case STATE_HEATER_SHADOWING_WAITING_DELAY:
+    862                  case STATE_HEATER_SHADOWING_CHECK_DELTA:
+    863                  case STATE_HEATER_SHADOWING_TIMEOUT:
+    864                      Heater_Shadowing_State = STATE_HEATER_SHADOWING_WAITING_DELAY;
+   \                     ??EventDiverterPositionChanged_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x2105             MOVS     R1,#+5
+   \   00000010   0x7001             STRB     R1,[R0, #+0]
+    865                      WaitingDelayEntry();                    // Entry Function.
+   \   00000012   0x.... 0x....      BL       WaitingDelayEntry
+    866                      break;
+    867          
+    868                  default:
+    869                      // Event is ignored for all other values of Heater_Shadowing_State.
+    870                      break;
+    871              }
+    872          }
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    873          
+    874          
+    875          //---------------------------------------------------------------------------------------------------------------------
+    876          /**
+    877           * Process the Diverter Position Unknown Event for the Heater Shadowing state machine.
+    878           *
+    879           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    880           *
+    881           * This function was auto-generated and must not be edited manually.
+    882           * Change the UML used to generate this function and regenerate the source code.
+    883           */
+
+   \                                 In section .text, align 2, keep-with-next
+    884          static void EventDiverterPositionUnknown(void)
+    885          {
+    886              switch (Heater_Shadowing_State)
+   \                     EventDiverterPositionUnknown: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable31_2
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x1F49             SUBS     R1,R1,#+5
+   \   00000006   0x2902             CMP      R1,#+2
+   \   00000008   0xD900             BLS      ??EventDiverterPositionUnknown_0
+   \   0000000A   0x4770             BX       LR
+    887              {
+    888                  case STATE_HEATER_SHADOWING_WAITING_DELAY:
+    889                  case STATE_HEATER_SHADOWING_CHECK_DELTA:
+    890                  case STATE_HEATER_SHADOWING_TIMEOUT:
+    891                      Heater_Shadowing_State = STATE_HEATER_SHADOWING_UNKNOWN_POSITION;
+   \                     ??EventDiverterPositionUnknown_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x2104             MOVS     R1,#+4
+   \   00000010   0x7001             STRB     R1,[R0, #+0]
+    892                      UnknownPositionEntry();                 // Entry Function.
+   \   00000012   0x.... 0x....      BL       UnknownPositionEntry
+    893                      break;
+    894          
+    895                  default:
+    896                      // Event is ignored for all other values of Heater_Shadowing_State.
+    897                      break;
+    898              }
+    899          }
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    900          
+    901          
+    902          //---------------------------------------------------------------------------------------------------------------------
+    903          /**
+    904           * Process the Heater Off Event for the Heater Shadowing state machine.
+    905           *
+    906           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    907           *
+    908           * This function was auto-generated and must not be edited manually.
+    909           * Change the UML used to generate this function and regenerate the source code.
+    910           */
+
+   \                                 In section .text, align 2, keep-with-next
+    911          static void EventHeaterOff(void)
+    912          {
+    913              switch (Heater_Shadowing_State)
+   \                     EventHeaterOff: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable31_2
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x1F09             SUBS     R1,R1,#+4
+   \   00000006   0x2903             CMP      R1,#+3
+   \   00000008   0xD900             BLS      ??EventHeaterOff_0
+   \   0000000A   0x4770             BX       LR
+    914              {
+    915                  case STATE_HEATER_SHADOWING_UNKNOWN_POSITION:
+    916                  case STATE_HEATER_SHADOWING_WAITING_DELAY:
+    917                  case STATE_HEATER_SHADOWING_CHECK_DELTA:
+    918                  case STATE_HEATER_SHADOWING_TIMEOUT:
+    919                      Heater_Shadowing_State = STATE_HEATER_SHADOWING_HEATER_OFF;
+   \                     ??EventHeaterOff_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x2103             MOVS     R1,#+3
+   \   00000010   0x7001             STRB     R1,[R0, #+0]
+    920                      HeaterOffEntry();                       // Entry Function.
+   \   00000012   0x.... 0x....      BL       HeaterOffEntry
+    921                      break;
+    922          
+    923                  default:
+    924                      // Event is ignored for all other values of Heater_Shadowing_State.
+    925                      break;
+    926              }
+    927          }
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    928          
+    929          
+    930          //---------------------------------------------------------------------------------------------------------------------
+    931          /**
+    932           * Process the Heater On Event for the Heater Shadowing state machine.
+    933           *
+    934           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    935           *
+    936           * This function was auto-generated and must not be edited manually.
+    937           * Change the UML used to generate this function and regenerate the source code.
+    938           */
+
+   \                                 In section .text, align 2, keep-with-next
+    939          static void EventHeaterOn(void)
+    940          {
+   \                     EventHeaterOn: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    941              switch (Heater_Shadowing_State)
+   \   00000002   0x....             LDR      R4,??DataTable31_2
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2803             CMP      R0,#+3
+   \   00000008   0xD110             BNE      ??EventHeaterOn_0
+    942              {
+    943                  case STATE_HEATER_SHADOWING_HEATER_OFF:
+    944                      if (DiverterInLSAOrMSA() == FALSE)
+   \   0000000A   0x.... 0x....      BL       DiverterInLSAOrMSA
+   \   0000000E   0x2800             CMP      R0,#+0
+   \   00000010   0xD104             BNE      ??EventHeaterOn_1
+    945                      {
+    946                          Heater_Shadowing_State = STATE_HEATER_SHADOWING_UNKNOWN_POSITION;
+   \   00000012   0x2004             MOVS     R0,#+4
+   \   00000014   0x7020             STRB     R0,[R4, #+0]
+    947                          UnknownPositionEntry();             // Entry Function.
+   \   00000016   0x.... 0x....      BL       UnknownPositionEntry
+   \   0000001A   0xBD10             POP      {R4,PC}
+    948                      }
+    949                      else if ((uint8)DiverterInLSAOrMSA() == (uint8)TRUE)
+   \                     ??EventHeaterOn_1: (+1)
+   \   0000001C   0x.... 0x....      BL       DiverterInLSAOrMSA
+   \   00000020   0x2801             CMP      R0,#+1
+   \   00000022   0xD103             BNE      ??EventHeaterOn_0
+    950                      {
+    951                          Heater_Shadowing_State = STATE_HEATER_SHADOWING_WAITING_DELAY;
+   \   00000024   0x2005             MOVS     R0,#+5
+   \   00000026   0x7020             STRB     R0,[R4, #+0]
+    952                          WaitingDelayEntry();                // Entry Function.
+   \   00000028   0x.... 0x....      BL       WaitingDelayEntry
+    953                      }
+    954                      break;
+    955          
+    956                  default:
+    957                      // Event is ignored for all other values of Heater_Shadowing_State.
+    958                      break;
+    959              }
+    960          }
+   \                     ??EventHeaterOn_0: (+1)
+   \   0000002C   0xBD10             POP      {R4,PC}          ;; return
+    961          
+    962          
+    963          //---------------------------------------------------------------------------------------------------------------------
+    964          /**
+    965           * Process the Heater Shadowing Not Active Event for the Heater Shadowing state machine.
+    966           *
+    967           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    968           *
+    969           * This function was auto-generated and must not be edited manually.
+    970           * Change the UML used to generate this function and regenerate the source code.
+    971           */
+
+   \                                 In section .text, align 2, keep-with-next
+    972          static void EventHeaterShadowingNotActive(void)
+    973          {
+   \                     EventHeaterShadowingNotActive: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    974              switch (Heater_Shadowing_State)
+   \   00000002   0x....             LDR      R4,??DataTable31_2
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD103             BNE      ??EventHeaterShadowingNotActive_0
+    975              {
+    976                  case STATE_HEATER_SHADOWING_INITIALIZE:
+    977                      SetAlgorithmNotActive();                // Transition action function.
+   \   0000000A   0x.... 0x....      BL       SetAlgorithmNotActive
+    978                      Heater_Shadowing_State = STATE_HEATER_SHADOWING_NONE; // Terminate Heater Shadowing state machine execution.
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x7020             STRB     R0,[R4, #+0]
+    979                      break;
+    980          
+    981                  default:
+    982                      // Event is ignored for all other values of Heater_Shadowing_State.
+    983                      break;
+    984              }
+    985          }
+   \                     ??EventHeaterShadowingNotActive_0: (+1)
+   \   00000012   0xBD10             POP      {R4,PC}          ;; return
+    986          
+    987          
+    988          //---------------------------------------------------------------------------------------------------------------------
+    989          /**
+    990           * Process the Hold Time Expired Event for the Heater Shadowing state machine.
+    991           *
+    992           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    993           *
+    994           * This function was auto-generated and must not be edited manually.
+    995           * Change the UML used to generate this function and regenerate the source code.
+    996           */
+
+   \                                 In section .text, align 2, keep-with-next
+    997          static void EventHoldTimeExpired(void)
+    998          {
+   \                     EventHoldTimeExpired: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    999              switch (Heater_Shadowing_State)
+   \   00000002   0x....             LDR      R4,??DataTable31_2
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2802             CMP      R0,#+2
+   \   00000008   0xD121             BNE      ??EventHoldTimeExpired_0
+   1000              {
+   1001                  case STATE_HEATER_SHADOWING_HOLD:
+   1002                      if (HeaterIsOn() == FALSE)
+   \   0000000A   0x.... 0x....      BL       HeaterIsOn
+   \   0000000E   0x2800             CMP      R0,#+0
+   \   00000010   0xD104             BNE      ??EventHoldTimeExpired_1
+   1003                      {
+   1004                          Heater_Shadowing_State = STATE_HEATER_SHADOWING_HEATER_OFF;
+   \   00000012   0x2003             MOVS     R0,#+3
+   \   00000014   0x7020             STRB     R0,[R4, #+0]
+   1005                          HeaterOffEntry();                   // Entry Function.
+   \   00000016   0x.... 0x....      BL       HeaterOffEntry
+   \   0000001A   0xBD10             POP      {R4,PC}
+   1006                      }
+   1007                      else if (((uint8)HeaterIsOn() == (uint8)TRUE) &&
+   1008                               (DiverterInLSAOrMSA() == FALSE))
+   \                     ??EventHoldTimeExpired_1: (+1)
+   \   0000001C   0x.... 0x....      BL       HeaterIsOn
+   \   00000020   0x2801             CMP      R0,#+1
+   \   00000022   0xD108             BNE      ??EventHoldTimeExpired_2
+   \   00000024   0x.... 0x....      BL       DiverterInLSAOrMSA
+   \   00000028   0x2800             CMP      R0,#+0
+   \   0000002A   0xD104             BNE      ??EventHoldTimeExpired_2
+   1009                      {
+   1010                          Heater_Shadowing_State = STATE_HEATER_SHADOWING_UNKNOWN_POSITION;
+   \   0000002C   0x2004             MOVS     R0,#+4
+   \   0000002E   0x7020             STRB     R0,[R4, #+0]
+   1011                          UnknownPositionEntry();             // Entry Function.
+   \   00000030   0x.... 0x....      BL       UnknownPositionEntry
+   \   00000034   0xBD10             POP      {R4,PC}
+   1012                      }
+   1013                      else if (((uint8)HeaterIsOn() == (uint8)TRUE) &&
+   1014                               ((uint8)DiverterInLSAOrMSA() == (uint8)TRUE))
+   \                     ??EventHoldTimeExpired_2: (+1)
+   \   00000036   0x.... 0x....      BL       HeaterIsOn
+   \   0000003A   0x2801             CMP      R0,#+1
+   \   0000003C   0xD107             BNE      ??EventHoldTimeExpired_0
+   \   0000003E   0x.... 0x....      BL       DiverterInLSAOrMSA
+   \   00000042   0x2801             CMP      R0,#+1
+   \   00000044   0xD103             BNE      ??EventHoldTimeExpired_0
+   1015                      {
+   1016                          Heater_Shadowing_State = STATE_HEATER_SHADOWING_WAITING_DELAY;
+   \   00000046   0x2005             MOVS     R0,#+5
+   \   00000048   0x7020             STRB     R0,[R4, #+0]
+   1017                          WaitingDelayEntry();                // Entry Function.
+   \   0000004A   0x.... 0x....      BL       WaitingDelayEntry
+   1018                      }
+   1019                      break;
+   1020          
+   1021                  default:
+   1022                      // Event is ignored for all other values of Heater_Shadowing_State.
+   1023                      break;
+   1024              }
+   1025          }
+   \                     ??EventHoldTimeExpired_0: (+1)
+   \   0000004E   0xBD10             POP      {R4,PC}          ;; return
+   1026          
+   1027          
+   1028          //---------------------------------------------------------------------------------------------------------------------
+   1029          /**
+   1030           * Process the Start Heater Shadowing Algorithm Event for the Heater Shadowing state machine.
+   1031           *
+   1032           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1033           *
+   1034           * This function was auto-generated and must not be edited manually.
+   1035           * Change the UML used to generate this function and regenerate the source code.
+   1036           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1037          static void EventStartHeaterShadowingAlgorithm(void)
+   1038          {
+   1039              switch (Heater_Shadowing_State)
+   \                     EventStartHeaterShadowingAlgorithm: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable31_2
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2901             CMP      R1,#+1
+   \   00000006   0xD000             BEQ      ??EventStartHeaterShadowingAlgorithm_0
+   \   00000008   0x4770             BX       LR
+   1040              {
+   1041                  case STATE_HEATER_SHADOWING_INITIALIZE:
+   1042                      Heater_Shadowing_State = STATE_HEATER_SHADOWING_HOLD;
+   \                     ??EventStartHeaterShadowingAlgorithm_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2102             MOVS     R1,#+2
+   \   0000000E   0x7001             STRB     R1,[R0, #+0]
+   1043                      HoldEntry();                            // Entry Function.
+   \   00000010   0x.... 0x....      BL       HoldEntry
+   1044                      break;
+   1045          
+   1046                  default:
+   1047                      // Event is ignored for all other values of Heater_Shadowing_State.
+   1048                      break;
+   1049              }
+   1050          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+   1051          
+   1052          
+   1053          //---------------------------------------------------------------------------------------------------------------------
+   1054          /**
+   1055           * Process the Timeout Expired Event for the Heater Shadowing state machine.
+   1056           *
+   1057           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1058           *
+   1059           * This function was auto-generated and must not be edited manually.
+   1060           * Change the UML used to generate this function and regenerate the source code.
+   1061           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1062          static void EventTimeoutExpired(void)
+   1063          {
+   1064              switch (Heater_Shadowing_State)
+   \                     EventTimeoutExpired: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable31_2
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2906             CMP      R1,#+6
+   \   00000006   0xD000             BEQ      ??EventTimeoutExpired_0
+   \   00000008   0x4770             BX       LR
+   1065              {
+   1066                  case STATE_HEATER_SHADOWING_CHECK_DELTA:
+   1067                      Heater_Shadowing_State = STATE_HEATER_SHADOWING_TIMEOUT;
+   \                     ??EventTimeoutExpired_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2107             MOVS     R1,#+7
+   \   0000000E   0x7001             STRB     R1,[R0, #+0]
+   1068                      TimeoutEntry();                         // Entry Function.
+   \   00000010   0x.... 0x....      BL       TimeoutEntry
+   1069                      break;
+   1070          
+   1071                  default:
+   1072                      // Event is ignored for all other values of Heater_Shadowing_State.
+   1073                      break;
+   1074              }
+   1075          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+   1076          
+   1077          
+   1078          //---------------------------------------------------------------------------------------------------------------------
+   1079          /**
+   1080           * The main execution function for the Heater Shadowing state machine.
+   1081           * This function should be called periodically while the state machine is running.
+   1082           *
+   1083           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1084           *
+   1085           * This function was auto-generated and must not be edited manually.
+   1086           * Change the UML used to generate this function and regenerate the source code.
+   1087           */
+
+   \                                 In section .text, align 4, keep-with-next
+   1088          static void HeaterShadowingExecute(void)
+   1089          {
+   1090              switch(Heater_Shadowing_State)
+   \                     HeaterShadowingExecute: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable31_2
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x1E80             SUBS     R0,R0,#+2
+   \   00000006   0x2805             CMP      R0,#+5
+   \   00000008   0xD900             BLS      ??HeaterShadowingExecute_1
+   \   0000000A   0x4770             BX       LR
+   \                     ??HeaterShadowingExecute_1: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0xA101             ADR      R1,??HeaterShadowingExecute_0
+   \   00000010   0x5C09             LDRB     R1,[R1, R0]
+   \   00000012   0x448F             ADD      PC,PC,R1
+   \                     ??HeaterShadowingExecute_0:
+   \   00000014   0x04 0x0A          DC8      0x4,0xA,0x10,0x16
+   \              0x10 0x16    
+   \   00000018   0x1C 0x22          DC8      0x1C,0x22
+   1091              {
+   1092                  case STATE_HEATER_SHADOWING_HOLD:
+   1093                      HoldDo();                               // Do function.
+   \                     ??HeaterShadowingExecute_2: (+1)
+   \   0000001A   0x.... 0x....      BL       HoldDo
+   1094                      break;
+   \   0000001E   0xBD01             POP      {R0,PC}
+   1095          
+   1096                  case STATE_HEATER_SHADOWING_HEATER_OFF:
+   1097                      HeaterOffDo();                          // Do function.
+   \                     ??HeaterShadowingExecute_3: (+1)
+   \   00000020   0x.... 0x....      BL       HeaterOffDo
+   1098                      break;
+   \   00000024   0xBD01             POP      {R0,PC}
+   1099          
+   1100                  case STATE_HEATER_SHADOWING_UNKNOWN_POSITION:
+   1101                      UnknownPositionDo();                    // Do function.
+   \                     ??HeaterShadowingExecute_4: (+1)
+   \   00000026   0x.... 0x....      BL       UnknownPositionDo
+   1102                      break;
+   \   0000002A   0xBD01             POP      {R0,PC}
+   1103          
+   1104                  case STATE_HEATER_SHADOWING_WAITING_DELAY:
+   1105                      WaitingDelayDo();                       // Do function.
+   \                     ??HeaterShadowingExecute_5: (+1)
+   \   0000002C   0x.... 0x....      BL       WaitingDelayDo
+   1106                      break;
+   \   00000030   0xBD01             POP      {R0,PC}
+   1107          
+   1108                  case STATE_HEATER_SHADOWING_CHECK_DELTA:
+   1109                      CheckDeltaDo();                         // Do function.
+   \                     ??HeaterShadowingExecute_6: (+1)
+   \   00000032   0x.... 0x....      BL       CheckDeltaDo
+   1110                      break;
+   \   00000036   0xBD01             POP      {R0,PC}
+   1111          
+   1112                  case STATE_HEATER_SHADOWING_TIMEOUT:
+   1113                      TimeoutDo();                            // Do function.
+   \                     ??HeaterShadowingExecute_7: (+1)
+   \   00000038   0x.... 0x....      BL       TimeoutDo
+   1114                      break;
+   1115          
+   1116                  default:
+   1117                      // There is nothing to do for all other values of Heater_Shadowing_State.
+   1118                      break;
+   1119              }
+   1120          }
+   \                     ??HeaterShadowingExecute_8: (+1)
+   \   0000003C   0xBD01             POP      {R0,PC}          ;; return
+   1121          
+   1122          
+   1123          //---------------------------------------------------------------------------------------------------------------------
+   1124          /**
+   1125           * The initialization function for the Heater Shadowing state machine.
+   1126           * This function resets the state machine to the initial state and executes the initial state's
+   1127           * entry function.
+   1128           *
+   1129           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1130           *
+   1131           * This function was auto-generated and must not be edited manually.
+   1132           * Change the UML used to generate this function and regenerate the source code.
+   1133           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1134          static void HeaterShadowingInitialize(void)
+   1135          {
+   \                     HeaterShadowingInitialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+   1136              Heater_Shadowing_State = STATE_HEATER_SHADOWING_INITIALIZE;
+   \   00000002   0x2001             MOVS     R0,#+1
+   \   00000004   0x....             LDR      R1,??DataTable31_2
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+   1137              InitializeEntry();                              // Entry Function.
+   \   00000008   0x.... 0x....      BL       InitializeEntry
+   1138          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+   1139          
+   1140          
+   1141          //---------------------------------------------------------------------------------------------------------------------
+   1142          /**
+   1143           * The termination function for the Heater Shadowing state machine.
+   1144           * This function disables the state machine. Calls to StateMachineExecute() will have no effect.
+   1145           * The StateMachineInitialize() function must be called again to restart the state machine.
+   1146           * If the current state has an exit function, it will be called.
+   1147           *
+   1148           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1149           *
+   1150           * This function was auto-generated and must not be edited manually.
+   1151           * Change the UML used to generate this function and regenerate the source code.
+   1152           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1153          static void HeaterShadowingTerminate(void)
+   1154          {
+   1155              // None of the states have an Exit function.
+   1156              Heater_Shadowing_State = STATE_HEATER_SHADOWING_NONE;
+   \                     HeaterShadowingTerminate: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR      R1,??DataTable31_2
+   \   00000004   0x7008             STRB     R0,[R1, #+0]
+   1157          }
+   \   00000006   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10:
+   \   00000000   0x........         DC32     Heater_Shadowing_Data+0x2D
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11:
+   \   00000000   0x........         DC32     Heater_Shadowing_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15:
+   \   00000000   0x0000FFFF         DC32     0xffff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable23:
+   \   00000000   0x........         DC32     HeaterShadowing_Status
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable23_1:
+   \   00000000   0x........         DC32     Heater_Shadowing_Data+0x4
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable25:
+   \   00000000   0x........         DC32     Heater_Shadowing_Data+0x2C
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable31:
+   \   00000000   0x........         DC32     Heater_Shadowing_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable31_1:
+   \   00000000   0x........         DC32     Heater_Shadowing_Data+0x2D
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable31_2:
+   \   00000000   0x........         DC32     Heater_Shadowing_State
+   1158          
+   1159          
+   1160          // !! StateEngineCrank cannot update this code if you change the footer !!
+   1161          // End of StateEngineCrank Auto-Generated Code.
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   CheckDeltaDo
+        16   -> DiverterInLSAOrMSA
+        16   -> EventDiverterPositionChanged
+        16   -> EventDiverterPositionUnknown
+        16   -> EventHeaterOff
+        16   -> EventTimeoutExpired
+        16   -> SystemTimers__NVCheckTimer
+        16   -> SystemTimers__NVSetTimerMS
+       8   CheckDeltaEntry
+         8   -> SystemTimers__NVSetTimerMS
+       0   DiverterInLSAOrMSA
+       8   EventCycleResume
+         8   -> HoldEntry
+       8   EventDelayExpired
+         8   -> CheckDeltaEntry
+         8   -> SaveCurrentBaseline
+       8   EventDiverterPositionChanged
+         8   -> WaitingDelayEntry
+       8   EventDiverterPositionUnknown
+         8   -> UnknownPositionEntry
+       8   EventHeaterOff
+         8   -> HeaterOffEntry
+       8   EventHeaterOn
+         8   -> DiverterInLSAOrMSA
+         8   -> UnknownPositionEntry
+         8   -> WaitingDelayEntry
+       8   EventHeaterShadowingNotActive
+         8   -> SetAlgorithmNotActive
+       8   EventHoldTimeExpired
+         8   -> DiverterInLSAOrMSA
+         8   -> HeaterIsOn
+         8   -> HeaterOffEntry
+         8   -> UnknownPositionEntry
+         8   -> WaitingDelayEntry
+       8   EventStartHeaterShadowingAlgorithm
+         8   -> HoldEntry
+       8   EventTimeoutExpired
+         8   -> TimeoutEntry
+       0   HeaterIsOn
+       8   HeaterOffDo
+         8   -> EventHeaterOn
+       0   HeaterOffEntry
+       8   HeaterShadowingExecute
+         8   -> CheckDeltaDo
+         8   -> HeaterOffDo
+         8   -> HoldDo
+         8   -> TimeoutDo
+         8   -> UnknownPositionDo
+         8   -> WaitingDelayDo
+       8   HeaterShadowingInitialize
+         8   -> InitializeEntry
+       0   HeaterShadowingTerminate
+       8   HeaterShadowing__CycleResumeEnd
+         8   -> EventCycleResume
+         8   -> Selector__GetCycleNameId
+       8   HeaterShadowing__Initialize
+         8   -> HeaterShadowingInitialize
+       8   HeaterShadowing__NVDataRestore
+         8   -> HeaterShadowingInitialize
+       8   HeaterShadowing__ResumeCycle
+         8   -> EventCycleResume
+       8   HeaterShadowing__StatusInitialize
+         8   -> Micro__GetResetMode
+         8   -> SetAlgorithmNotActive
+       8   HeaterShadowing__Task
+         8   -> HeaterShadowingExecute
+         8   -> UpdateAlgorithmInputs
+       8   HeaterShadowing__Terminate
+         8   -> HeaterShadowingTerminate
+         8   -> SetAlgorithmNotActive
+       8   HoldDo
+         8   -> EventHoldTimeExpired
+         8   -> SystemTimers__NVCheckTimer
+       8   HoldEntry
+         8   -> SystemTimers__NVSetTimerMS
+      24   InitializeEntry
+        24   -> EventHeaterShadowingNotActive
+        24   -> EventStartHeaterShadowingAlgorithm
+        24   -> Hbl__GetGIIndexByGIID
+        24   -> Hbl__GetLoadIndexByLoadID
+        24   -> Log__AddMessage
+        24   -> SettingFile__BasicLoader
+        24   -> SystemTimers__NVResetTimer
+        24   -> __aeabi_memset4
+       0   SaveCurrentBaseline
+       0   SetAlgorithmNotActive
+       8   TimeoutDo
+         8   -> DiverterInLSAOrMSA
+         8   -> EventDiverterPositionChanged
+         8   -> EventDiverterPositionUnknown
+         8   -> EventHeaterOff
+       0   TimeoutEntry
+       8   UnknownPositionDo
+         8   -> DiverterInLSAOrMSA
+         8   -> EventDiverterPositionChanged
+         8   -> EventHeaterOff
+       0   UnknownPositionEntry
+      16   UpdateAlgorithmInputs
+        16   -> DishAuxVar__GetACLine
+        16   -> DishAuxVar__GetDiverterPosition
+        16   -> Fault__IsInFaultState
+        16   -> Hbl__GetGIDataConvertedByIndex
+        16   -> Hbl__GetGIIndexByGIID
+        16   -> Hbl__GetGISequenceIDByIndex
+        16   -> Hbl__GetLoadIndexByLoadID
+        16   -> Hbl__GetLoadStatusByIndex
+        16   -> Hbl__IsZeroCrossPresent
+      16   WaitingDelayDo
+        16   -> DiverterInLSAOrMSA
+        16   -> EventDelayExpired
+        16   -> EventDiverterPositionChanged
+        16   -> EventDiverterPositionUnknown
+        16   -> EventHeaterOff
+        16   -> Hbl__GetGIIndexByGIID
+        16   -> Hbl__GetGISequenceIDByIndex
+        16   -> SystemTimers__NVGetTimerMs
+       8   WaitingDelayEntry
+         8   -> SystemTimers__NVSetTimerMS
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable11
+       4  ??DataTable15
+       4  ??DataTable23
+       4  ??DataTable23_1
+       4  ??DataTable25
+       4  ??DataTable31
+       4  ??DataTable31_1
+       4  ??DataTable31_2
+     214  CheckDeltaDo
+      24  CheckDeltaEntry
+      20  DiverterInLSAOrMSA
+      24  EventCycleResume
+      24  EventDelayExpired
+      24  EventDiverterPositionChanged
+      24  EventDiverterPositionUnknown
+      24  EventHeaterOff
+      46  EventHeaterOn
+      20  EventHeaterShadowingNotActive
+      80  EventHoldTimeExpired
+      22  EventStartHeaterShadowingAlgorithm
+      22  EventTimeoutExpired
+      16  HeaterIsOn
+      18  HeaterOffDo
+       8  HeaterOffEntry
+      62  HeaterShadowingExecute
+      14  HeaterShadowingInitialize
+       8  HeaterShadowingTerminate
+       1  HeaterShadowing_Status
+      22  HeaterShadowing__CycleResumeEnd
+      10  HeaterShadowing__Initialize
+       8  HeaterShadowing__NVDataRestore
+       8  HeaterShadowing__ResumeCycle
+      16  HeaterShadowing__StatusInitialize
+      20  HeaterShadowing__Task
+      12  HeaterShadowing__Terminate
+      56  Heater_Shadowing_Data
+       1  Heater_Shadowing_State
+      18  HoldDo
+      38  HoldEntry
+     218  InitializeEntry
+       8  SaveCurrentBaseline
+       8  SetAlgorithmNotActive
+      44  TimeoutDo
+       8  TimeoutEntry
+      30  UnknownPositionDo
+       8  UnknownPositionEntry
+     198  UpdateAlgorithmInputs
+     100  WaitingDelayDo
+      38  WaitingDelayEntry
+
+ 
+    58 bytes in section .bss
+ 1 542 bytes in section .text
+ 
+ 1 542 bytes of CODE memory
+    58 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,2252 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:17
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/HeaterCalcificationDetectionMonitor.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\HeaterCalcificationDetectionMonitor.lst -o
+#        obj\HeaterCalcificationDetectionMonitor.obj
+#        source/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/HeaterCalcificationDetectionMonitor.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\HeaterCalcificationDetectionMonitor.lst
+#    Object file  =  obj\HeaterCalcificationDetectionMonitor.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Monitors\ModelMonitors\HeaterCalcificationDetectionModel\HeaterCalcificationDetectionMonitor.c
+      1          /**
+      2           *  @file		HeaterCalcificationDetectionMonitor.c
+      3           *
+      4           *  @brief      Wrapper for the code generated HeaterCalcificationDetection
+      5           *
+      6           *  @details
+      7           *
+      8           *  @section    Applicable_Documents
+      9           *					List here all the applicable documents if needed. <tr>
+     10           *
+     11           *  $Header: $
+     12           *
+     13           *  @copyright  Copyright 2018-2019. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     14           */
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          //---------------------------------------------------------------------------------------------------------------------
+     17          
+     18          
+     19          //-------------------------------------- Include Files ----------------------------------------------------------------
+     20          #include "HeaterCalcificationDetectionMonitor.h"
+     21          
+     22          // -- Other Modules --
+     23          #include "Hbl.h"
+     24          #include "Log.h"
+     25          #include "HeatMonitor.h"
+     26          #include "Micro.h"
+     27          #include "NVData.h"
+     28          #include "Regulations.h"
+     29          #include "SaltSensingMonitor.h"
+     30          #include "StatisticsDish.h"
+     31          #include "SettingFile.h"
+     32          #include "string.h"
+     33          #include "Variable.h"
+     34          #include "Vwi.h"
+     35          #include "WashHeaterFaultMonitor.h"
+     36          
+     37          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     38          
+     39          //! Heater Calcification Bitmap
+     40          #pragma location = "_appliance_segment"
+
+   \                                 In section _appliance_segment, align 4
+     41          HCD_BITMAP_TYPE HCD_Bitmap;
+     42          
+     43          //! Data to be shared with HMI
+     44          #pragma location = "_appliance_segment"
+     45          HCD_HMI_DATA_TYPE HCD_HMI_Data;
+     46          
+     47          //! Heater Calcification Level
+     48          #pragma location = "_appliance_segment"
+     49          uint8 HCD_Calcification_Level;
+     50          
+     51          //! Amount of clicks occurred in water stable condition
+     52          uint16 HCD_Heater_Clicks;
+     53          
+     54          //! Exported model data
+     55          #pragma location = "_appliance_segment"
+     56          HCD_MODELDATA_TYPE HCD_ModelData;
+     57          
+     58          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     59          
+     60          //! The name of this module for use by the Log module.
+     61          #define MODULE_NAME MODULE_HCD_MONITOR
+     62          
+     63          //! A list of log message IDs that are generated by this module.
+     64          typedef enum MODULE_HCD_MONITOR_LOG_MESSAGE_ID_ENUM
+     65          {
+     66          	ERROR_LOADING_PARAMETERS       = 1,
+     67          	ERROR_MISSING_PARAMETERS
+     68          } MODULE_HCD_MONITOR_LOG_MESSAGE_ID_TYPE;
+     69          
+     70          //! Maximum allowed number of Heater Calcification levels
+     71          #define MAX_CALCIFICATION_LEVELS_NUM	(uint8)7
+     72          
+     73          //! Number of heater current thresholds in setting file
+     74          #define HEATER_CURRENT_THRESHOLDS_NUM	(uint8)6
+     75          
+     76          //! A structure definition for the counters used by the algorithm
+     77          typedef struct HCD_COUNTERS_STRUCT
+     78          {
+     79              uint8 Alarm_Counter;
+     80              uint8 Reduction_Counter;
+     81              uint8 Lockout_Counter;
+     82              uint8 Periodic_HT_Counter;
+     83              uint8 Cycles_Remaining;
+     84          } HCD_COUNTERS_TYPE;
+     85          
+     86          //! Boolean variable to enable and disable Heater Calcification Detection execution
+     87          #pragma location = "_appliance_segment"
+     88          static BOOL_TYPE HCD_Enable;
+     89          
+     90          //! Start of cycle indicator
+     91          static BOOL_TYPE HCD_Cycle_Started;
+     92          
+     93          //! Boolean indicating if the Heater Calcification Detection is active or not
+     94          static BOOL_TYPE HCD_Is_Active;
+     95          
+     96          //! Position of the Water Hardness function
+     97          static uint8 WHS_Function_Position;
+     98          
+     99          //! Amount of increase of Water Hardness regulation
+    100          #pragma location = "_appliance_segment"
+    101          static uint8 HCD_WHS_Increased_By;
+    102          
+    103          //! Number of rows in the array
+    104          static uint8 SF_Calcification_Levels_Number;
+    105          
+    106          //! Pointer to setting file parameters
+    107          static HEATER_CALCIFICATION_PARAMS_TYPE *SF_HCD_Parameters;
+    108          //! Pointer to setting file level dependent parameters
+    109          static HEATER_CALCIFICATION_LEVEL_DIP_PARAMS_TYPE *SF_HCD_Lvl_Parameters;
+    110          //! Pointer to the Heater Sensing parameters in Setting File
+    111          static HEATER_CURRENT_SENSING_PARAMS_TYPE *Heater_Sensing_Paramters_Ptr;
+    112          
+    113          //! Fixed heater current threshold for Heater Click detection
+    114          static uint16 HCD_Heater_Current_Threshold;
+    115          
+    116          //! The highest Calcification Level with "0" set as Lockout Threshold.
+    117          static uint8 HCD_Highest_CL_Without_Lockout;
+    118          
+    119          //! The lowest non-zero Lockout Threshold (or 0 if such a value does not exist).
+    120          static uint8 HCD_Lowest_Lockout_Thr;
+    121          
+    122          //! Array of temperature thresholds interpolated for HCD_Lowest_Click_Current (static for debug purpose)
+    123          static uint16 HCD_Lowest_Click_Current_Thresholds[MAX_CALCIFICATION_LEVELS_NUM];
+    124          
+    125          //! Array of temperature thresholds interpolated for HCD_Reduction_Current (static for debug purpose)
+    126          static uint16 HCD_Reduction_Current_Thresholds[MAX_CALCIFICATION_LEVELS_NUM];
+    127          
+    128          static uint16 HCD_Lowest_Click_Temperature;
+    129          static uint16 HCD_Lowest_Click_Current;
+    130          static uint16 HCD_Lowest_Click_Power;
+    131          static uint16 HCD_Reduction_Temperature;
+    132          static uint16 HCD_Reduction_Current;
+    133          static uint16 HCD_Reduction_Power;
+    134          
+    135          //! A structure for the counters used by the algorithm
+    136          #pragma location = "_appliance_segment"
+    137          static HCD_COUNTERS_TYPE HCD_Counters;
+   \                     HCD_Counters:
+   \   00000000                      DS8 8
+   \                     HCD_HMI_Data:
+   \   00000008                      DS8 4
+   \                     HCD_Calcification_Level:
+   \   0000000C                      DS8 1
+   \   0000000D                      DS8 1
+   \   0000000E                      DS8 1
+   \   0000000F                      DS8 1
+   \                     HCD_Bitmap:
+   \   00000010                      DS8 4
+   \                     HCD_ModelData:
+   \   00000014                      DS8 20
+   \   00000028                      DS8 1
+
+   \                                 In section .bss, align 4
+   \                     HCD_Cycle_Started:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 1
+   \   00000002                      DS8 1
+   \   00000003                      DS8 1
+   \   00000004                      DS8 1
+   \   00000005                      DS8 1
+   \   00000006                      DS8 2
+   \   00000008                      DS8 16
+   \                     HCD_Heater_Clicks:
+   \   00000018                      DS8 2
+   \   0000001A                      DS8 2
+   \   0000001C                      DS8 2
+   \   0000001E                      DS8 2
+   \   00000020                      DS8 2
+   \   00000022                      DS8 2
+   \   00000024                      DS8 2
+   \   00000026                      DS8 2
+   \   00000028                      DS8 16
+   \   00000038                      DS8 4
+   \   0000003C                      DS8 4
+   \   00000040                      DS8 4
+   \   00000044                      DS8 4
+   \   00000048                      DS8 24
+    138          
+    139          //! Current/last model state
+    140          #pragma location = "_appliance_segment"
+    141          static HCD_MONITORSTATE_TYPE HCD_Monitoring_States;
+    142          
+    143          //! Model Data
+    144          static RT_MODELHEATERCALCIFICATIO_TYPE HeaterCalcificationDetection_RTModelData_;
+    145          static RT_MODELHEATERCALCIFICATIO_TYPE *const HeaterCalcificationDetection_RTModelData = &HeaterCalcificationDetection_RTModelData_;/* Real-time model */
+    146          /*#pragma location = "_appliance_segment"*/
+    147          static DWHEATERCALCIFICATIONDETEC_TYPE HeaterCalcificationDetection_ObservableStates;/* Observable states */
+    148          
+    149          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    150          
+    151          static void HeaterCalcificationDetectionModelSetup(void);
+    152          static void TemperatureThresholdsInterpolation(uint16 input_current, uint16 *interpolated_thresholds);
+    153          static void UpdateParamsPointerAndAlignCountersToThresholds(const HEATER_CALCIFICATION_LEVEL_DIP_PARAMS_TYPE **current_level_params_ptr);
+    154          
+    155          //=====================================================================================================================
+    156          //-------------------------------------- Public Functions -------------------------------------------------------------
+    157          //=====================================================================================================================
+    158          
+    159          // General Set functions
+
+   \                                 In section .text, align 2, keep-with-next
+    160          uint16 HeaterCalcificationDetectionMonitor__GetHeaterClicks(void)
+    161          {
+    162          	return HCD_Heater_Clicks;
+   \                     HeaterCalcificationDetectionMonitor__GetHeaterClicks: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x8B00             LDRH     R0,[R0, #+24]
+   \   00000004   0x4770             BX       LR               ;; return
+    163          }
+    164          
+
+   \                                 In section .text, align 2, keep-with-next
+    165          void HeaterCalcificationDetectionMonitor__SetHeaterClicks(uint16 heaterClicks)
+    166          {
+    167              HCD_Heater_Clicks = heaterClicks;
+   \                     HeaterCalcificationDetectionMonitor__SetHeaterClicks: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable7
+   \   00000002   0x8308             STRH     R0,[R1, #+24]
+    168          }
+   \   00000004   0x4770             BX       LR               ;; return
+    169          
+    170          //----------------------------------------------------------------------------
+    171          /**
+    172           *  @brief      HeaterCalcificationDetectionMonitor__Initialize
+    173           *  @details    Function used to initialize the monitor.
+    174           *
+    175           */
+
+   \                                 In section .text, align 2, keep-with-next
+    176          void HeaterCalcificationDetectionMonitor__Initialize()
+    177          {
+   \                     HeaterCalcificationDetectionMonitor__Initialize: (+1)
+   \   00000000   0xB5F0             PUSH     {R4-R7,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+    178              uint8 heater_current_gi_index;
+    179          	uint8 wash_heater_index;
+    180          	SETTINGFILE_LOADER_TYPE loader;
+    181          	//HCD_MODELDATA_TYPE hcd_backup_memory;
+    182              
+    183              Heater_Sensing_Paramters_Ptr = (HEATER_CURRENT_SENSING_PARAMS_TYPE *)NULL;
+   \   00000004   0x2500             MOVS     R5,#+0
+   \   00000006   0x....             LDR      R4,??DataTable7
+   \   00000008   0x6425             STR      R5,[R4, #+64]
+    184          
+    185          	if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+   \   0000000A   0x.... 0x....      BL       Micro__GetResetMode
+   \   0000000E   0x2800             CMP      R0,#+0
+   \   00000010   0xD000             BEQ      .+4
+   \   00000012   0xE0C6             B        ??HeaterCalcificationDetectionMonitor__Initiali_0
+    186          	{
+    187          		HCD_Is_Active = FALSE;
+   \   00000014   0x0028             MOVS     R0,R5
+   \   00000016   0x7060             STRB     R0,[R4, #+1]
+    188          		SF_Calcification_Levels_Number = 0;
+   \   00000018   0x70E0             STRB     R0,[R4, #+3]
+    189          		HCD_Lowest_Lockout_Thr = 0;
+   \   0000001A   0x7160             STRB     R0,[R4, #+5]
+    190          		HCD_Highest_CL_Without_Lockout = 0;
+   \   0000001C   0x7120             STRB     R0,[R4, #+4]
+    191          
+    192          		memset(&HCD_Lowest_Click_Current_Thresholds[0], 0, sizeof(HCD_Lowest_Click_Current_Thresholds));
+   \   0000001E   0x4602             MOV      R2,R0
+   \   00000020   0x210E             MOVS     R1,#+14
+   \   00000022   0x0020             MOVS     R0,R4
+   \   00000024   0x3008             ADDS     R0,R0,#+8
+   \   00000026   0x.... 0x....      BL       __aeabi_memset4
+    193          		memset(&HCD_Reduction_Current_Thresholds[0], 0, sizeof(HCD_Reduction_Current_Thresholds));
+   \   0000002A   0x462A             MOV      R2,R5
+   \   0000002C   0x210E             MOVS     R1,#+14
+   \   0000002E   0x0020             MOVS     R0,R4
+   \   00000030   0x3028             ADDS     R0,R0,#+40
+   \   00000032   0x.... 0x....      BL       __aeabi_memset4
+    194          
+    195          		SF_HCD_Parameters = NULL;
+   \   00000036   0x63A5             STR      R5,[R4, #+56]
+    196          		SF_HCD_Lvl_Parameters = NULL;
+   \   00000038   0x63E5             STR      R5,[R4, #+60]
+    197          
+    198          		// Load parameters from setting file
+    199          		if (SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_HEATER_CALCIFICATION, &loader) == PASS)
+   \   0000003A   0x466A             MOV      R2,SP
+   \   0000003C   0x2110             MOVS     R1,#+16
+   \   0000003E   0x2027             MOVS     R0,#+39
+   \   00000040   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000044   0x2801             CMP      R0,#+1
+   \   00000046   0xD163             BNE      ??HeaterCalcificationDetectionMonitor__Initiali_1
+    200          		{
+    201          			SF_HCD_Parameters = (HEATER_CALCIFICATION_PARAMS_TYPE*)(void*)(loader.Data); // Read the data from the setting file
+   \   00000048   0x9800             LDR      R0,[SP, #+0]
+   \   0000004A   0x63A0             STR      R0,[R4, #+56]
+    202          
+    203          			if(SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_HEATER_CALCIFICATION_LEVEL_DIP_PARAMS, &loader) == PASS)
+   \   0000004C   0x466A             MOV      R2,SP
+   \   0000004E   0x2114             MOVS     R1,#+20
+   \   00000050   0x2027             MOVS     R0,#+39
+   \   00000052   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000056   0x2801             CMP      R0,#+1
+   \   00000058   0xD153             BNE      ??HeaterCalcificationDetectionMonitor__Initiali_2
+    204          			{
+    205          				uint8 i;
+    206          				const HEATER_CALCIFICATION_LEVEL_DIP_PARAMS_TYPE *current_level_params_ptr;
+    207          
+    208          				SF_HCD_Lvl_Parameters = (HEATER_CALCIFICATION_LEVEL_DIP_PARAMS_TYPE*)(void*)(loader.Data);
+   \   0000005A   0x9800             LDR      R0,[SP, #+0]
+   \   0000005C   0x63E0             STR      R0,[R4, #+60]
+    209          
+    210          				SF_Calcification_Levels_Number = (uint8)(loader.Length / sizeof(HEATER_CALCIFICATION_LEVEL_DIP_PARAMS_TYPE));
+   \   0000005E   0x4668             MOV      R0,SP
+   \   00000060   0x8880             LDRH     R0,[R0, #+4]
+   \   00000062   0x0900             LSRS     R0,R0,#+4
+   \   00000064   0x70E0             STRB     R0,[R4, #+3]
+    211          
+    212          				if (SF_Calcification_Levels_Number > MAX_CALCIFICATION_LEVELS_NUM)
+   \   00000066   0x78E0             LDRB     R0,[R4, #+3]
+   \   00000068   0x2808             CMP      R0,#+8
+   \   0000006A   0xDB01             BLT      ??HeaterCalcificationDetectionMonitor__Initiali_3
+    213          				{
+    214          					// This is the maximum number of calcification levels managed by the algorithm
+    215          					SF_Calcification_Levels_Number = MAX_CALCIFICATION_LEVELS_NUM;
+   \   0000006C   0x2007             MOVS     R0,#+7
+   \   0000006E   0x70E0             STRB     R0,[R4, #+3]
+    216          				}
+    217          
+    218          
+    219          				for (i = 0; i < SF_Calcification_Levels_Number; i++)
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_3: (+1)
+   \   00000070   0x0028             MOVS     R0,R5
+   \   00000072   0xE001             B        ??HeaterCalcificationDetectionMonitor__Initiali_4
+    220          				{
+    221          					current_level_params_ptr = SF_HCD_Lvl_Parameters + i;
+    222          
+    223          					if (current_level_params_ptr->Lockout_Threshold == (uint8)0)
+    224          					{
+    225          						// Highest_CL_With_No_Lockout is defined as the highest Calcification Level with "0" set as Lockout Threshold.
+    226          						HCD_Highest_CL_Without_Lockout = i;
+    227          					}
+    228          					else
+    229          					{
+    230          						// HCD_Lowest_Lockout_Thr is defined as the lowest non-zero Lockout Threshold, or 0 if such a value does not exist,
+    231          						// in other words it is the Lockout_Threshold for the highest Calcification Level.
+    232          						HCD_Lowest_Lockout_Thr = current_level_params_ptr->Lockout_Threshold;
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_5: (+1)
+   \   00000074   0x7161             STRB     R1,[R4, #+5]
+    233          					}
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_6: (+1)
+   \   00000076   0x1C40             ADDS     R0,R0,#+1
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_4: (+1)
+   \   00000078   0x0001             MOVS     R1,R0
+   \   0000007A   0x78E2             LDRB     R2,[R4, #+3]
+   \   0000007C   0xB2C9             UXTB     R1,R1
+   \   0000007E   0x4291             CMP      R1,R2
+   \   00000080   0xD208             BCS      ??HeaterCalcificationDetectionMonitor__Initiali_7
+   \   00000082   0x6BE1             LDR      R1,[R4, #+60]
+   \   00000084   0xB2C0             UXTB     R0,R0
+   \   00000086   0x0102             LSLS     R2,R0,#+4
+   \   00000088   0x1889             ADDS     R1,R1,R2
+   \   0000008A   0x7B89             LDRB     R1,[R1, #+14]
+   \   0000008C   0x000A             MOVS     R2,R1
+   \   0000008E   0xD1F1             BNE      ??HeaterCalcificationDetectionMonitor__Initiali_5
+   \   00000090   0x7120             STRB     R0,[R4, #+4]
+   \   00000092   0xE7F0             B        ??HeaterCalcificationDetectionMonitor__Initiali_6
+    234          				}
+    235          
+    236          				heater_current_gi_index = Hbl__GetGIIndexByGIID(HBL_GI_I_HEATER);
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_7: (+1)
+   \   00000094   0x2049             MOVS     R0,#+73
+   \   00000096   0x.... 0x....      BL       Hbl__GetGIIndexByGIID
+   \   0000009A   0x0006             MOVS     R6,R0
+    237          				wash_heater_index = Hbl__GetLoadIndexByLoadID(HBL_LOAD_WASHING_HEATER);
+   \   0000009C   0x2010             MOVS     R0,#+16
+   \   0000009E   0x.... 0x....      BL       Hbl__GetLoadIndexByLoadID
+    238          
+    239          				if((heater_current_gi_index != (uint8)HBL_INDEX_INVALID) && (wash_heater_index != (uint8)HBL_INDEX_INVALID))
+   \   000000A2   0x2EFF             CMP      R6,#+255
+   \   000000A4   0xD03A             BEQ      ??HeaterCalcificationDetectionMonitor__Initiali_8
+   \   000000A6   0x28FF             CMP      R0,#+255
+   \   000000A8   0xD038             BEQ      ??HeaterCalcificationDetectionMonitor__Initiali_8
+    240          				{
+    241          					if (SettingFile__BasicLoader(SF_PTR_ACU_PRODUCT_CONFIGURATION_DATA,	DISPL_HEATER_DEACTIVATION_CONDITIONS_PARAM, &loader) == PASS)
+   \   000000AA   0x466A             MOV      R2,SP
+   \   000000AC   0x4629             MOV      R1,R5
+   \   000000AE   0x2004             MOVS     R0,#+4
+   \   000000B0   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   000000B4   0x2801             CMP      R0,#+1
+   \   000000B6   0xD106             BNE      ??HeaterCalcificationDetectionMonitor__Initiali_9
+    242          					{
+    243          						if (((HEAT_MONITOR_INSTANCE_TYPE *)(void*)loader.Data)->Heater_Type == (uint8)INTEGRATED_HEATER)
+   \   000000B8   0x9800             LDR      R0,[SP, #+0]
+   \   000000BA   0x7800             LDRB     R0,[R0, #+0]
+   \   000000BC   0x2801             CMP      R0,#+1
+   \   000000BE   0xD108             BNE      ??HeaterCalcificationDetectionMonitor__Initiali_10
+    244          						{
+    245                                      // Integrated Heater type - run the algorithm
+    246          							HCD_Is_Active = TRUE;
+   \   000000C0   0x2001             MOVS     R0,#+1
+   \   000000C2   0x7060             STRB     R0,[R4, #+1]
+   \   000000C4   0xE005             B        ??HeaterCalcificationDetectionMonitor__Initiali_10
+    247          						}
+    248          						else
+    249          						{
+    250          							// HCD algorithm doesn't apply to Calrod Heater type.
+    251          						}
+    252          					}
+    253          					else
+    254          					{
+    255          						// It is not possible to know the heater's type
+    256          						LOG_ADD_EXCEPTION(ERROR_MISSING_PARAMETERS, DISPL_HEATER_DEACTIVATION_CONDITIONS_PARAM);
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_9: (+1)
+   \   000000C6   0x462B             MOV      R3,R5
+   \   000000C8   0x2201             MOVS     R2,#+1
+   \   000000CA   0x2102             MOVS     R1,#+2
+   \   000000CC   0x2024             MOVS     R0,#+36
+   \   000000CE   0x.... 0x....      BL       Log__AddMessage
+    257          					}
+    258                              if (SettingFile__BasicLoader(SF_PTR_ACU_PRODUCT_CONFIGURATION_DATA, DSPL_HEATER_CURRENT_SENSING_PARAMS, &loader) == PASS)
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_10: (+1)
+   \   000000D2   0x466A             MOV      R2,SP
+   \   000000D4   0x2106             MOVS     R1,#+6
+   \   000000D6   0x2004             MOVS     R0,#+4
+   \   000000D8   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   000000DC   0x2801             CMP      R0,#+1
+   \   000000DE   0xD109             BNE      ??HeaterCalcificationDetectionMonitor__Initiali_11
+    259                              {
+    260                                  Heater_Sensing_Paramters_Ptr = (HEATER_CURRENT_SENSING_PARAMS_TYPE *)loader.Data; //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \   000000E0   0x9800             LDR      R0,[SP, #+0]
+   \   000000E2   0x6420             STR      R0,[R4, #+64]
+    261                                  HCD_Heater_Current_Threshold = Heater_Sensing_Paramters_Ptr->Heater_Off_Threshold;
+   \   000000E4   0x4601             MOV      R1,R0
+   \   000000E6   0x7808             LDRB     R0,[R1, #+0]
+   \   000000E8   0x784A             LDRB     R2,[R1, #+1]
+   \   000000EA   0x0612             LSLS     R2,R2,#+24
+   \   000000EC   0x0C12             LSRS     R2,R2,#+16
+   \   000000EE   0x4310             ORRS     R0,R0,R2
+   \   000000F0   0x8360             STRH     R0,[R4, #+26]
+   \   000000F2   0xE013             B        ??HeaterCalcificationDetectionMonitor__Initiali_8
+    262                              }
+    263                              else
+    264                              {
+    265                                  LOG_ADD_EXCEPTION (ERROR_MISSING_PARAMETERS, 0);
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_11: (+1)
+   \   000000F4   0x462B             MOV      R3,R5
+   \   000000F6   0x2201             MOVS     R2,#+1
+   \   000000F8   0x2102             MOVS     R1,#+2
+   \   000000FA   0x2024             MOVS     R0,#+36
+   \   000000FC   0x.... 0x....      BL       Log__AddMessage
+   \   00000100   0xE00C             B        ??HeaterCalcificationDetectionMonitor__Initiali_8
+    266                              }
+    267                          }
+    268          			}
+    269          			else
+    270          			{
+    271          				// There is no Heater Calcification Level Parameters section in SF
+    272          				LOG_ADD_EXCEPTION(ERROR_LOADING_PARAMETERS, SF_PTR_ACU_PRODUCT_CONFIGURATION_DATA);
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_2: (+1)
+   \   00000102   0x2304             MOVS     R3,#+4
+   \   00000104   0x2201             MOVS     R2,#+1
+   \   00000106   0x4611             MOV      R1,R2
+   \   00000108   0x2024             MOVS     R0,#+36
+   \   0000010A   0x.... 0x....      BL       Log__AddMessage
+   \   0000010E   0xE005             B        ??HeaterCalcificationDetectionMonitor__Initiali_8
+    273          			}
+    274          		}
+    275          		else
+    276          		{
+    277          			// There is no Heater Calcification Parameters section in SF
+    278          			LOG_ADD_EXCEPTION(ERROR_LOADING_PARAMETERS, SF_PTR_ACU_ALGORITHM_PARAMETERS);
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_1: (+1)
+   \   00000110   0x2327             MOVS     R3,#+39
+   \   00000112   0x2201             MOVS     R2,#+1
+   \   00000114   0x4611             MOV      R1,R2
+   \   00000116   0x2024             MOVS     R0,#+36
+   \   00000118   0x.... 0x....      BL       Log__AddMessage
+    279          		}
+    280             
+    281          		HCD_Cycle_Started = FALSE;
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_8: (+1)
+   \   0000011C   0x0028             MOVS     R0,R5
+   \   0000011E   0x7020             STRB     R0,[R4, #+0]
+    282                  HCD_Heater_Clicks = 0;
+   \   00000120   0x8320             STRH     R0,[R4, #+24]
+    283          		HCD_Lowest_Click_Temperature = FIXED_POINT_99C;
+   \   00000122   0x....             LDR      R6,??DataTable7_1  ;; 0x3f5c
+   \   00000124   0x83A6             STRH     R6,[R4, #+28]
+    284          		HCD_Lowest_Click_Current = 0;
+   \   00000126   0x83E0             STRH     R0,[R4, #+30]
+    285          		HCD_Lowest_Click_Power = 0;
+   \   00000128   0x8420             STRH     R0,[R4, #+32]
+    286          		HCD_Reduction_Temperature = 0;
+   \   0000012A   0x8460             STRH     R0,[R4, #+34]
+    287          		HCD_Reduction_Current = 0;
+   \   0000012C   0x84A0             STRH     R0,[R4, #+36]
+    288          		HCD_Reduction_Power = 0;
+   \   0000012E   0x84E0             STRH     R0,[R4, #+38]
+    289          
+    290          		WHS_Function_Position = Regulations__GetPositionByFunctionID(FUNC_ID_WATER_HARDNESS_LEVEL, COMPARTMENT_DEFAULT);
+   \   00000130   0x4601             MOV      R1,R0
+   \   00000132   0x203C             MOVS     R0,#+60
+   \   00000134   0x.... 0x....      BL       Regulations__GetPositionByFunctionID
+   \   00000138   0x70A0             STRB     R0,[R4, #+2]
+    291          
+    292          		if (NVData__GetLastRestoreStatus()->Bit.Appliance_Data_Recovered != (NVDATA_RESTORE_TYPE)NVDATA_RESTORE_OKAY)
+   \   0000013A   0x.... 0x....      BL       NVData__GetLastRestoreStatus
+   \   0000013E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000140   0x0780             LSLS     R0,R0,#+30
+   \   00000142   0x0F80             LSRS     R0,R0,#+30
+   \   00000144   0x2801             CMP      R0,#+1
+   \   00000146   0xD01D             BEQ      ??HeaterCalcificationDetectionMonitor__Initiali_12
+    293          		{
+    294          			memset(&HCD_HMI_Data, 0, sizeof(HCD_HMI_Data));
+   \   00000148   0x....             LDR      R7,??DataTable7_2
+   \   0000014A   0x462A             MOV      R2,R5
+   \   0000014C   0x2102             MOVS     R1,#+2
+   \   0000014E   0x0038             MOVS     R0,R7
+   \   00000150   0x3008             ADDS     R0,R0,#+8
+   \   00000152   0x.... 0x....      BL       __aeabi_memset4
+    295          			HCD_Bitmap.All = 0;
+   \   00000156   0x0028             MOVS     R0,R5
+   \   00000158   0x7438             STRB     R0,[R7, #+16]
+    296          
+    297          			memset(&HCD_Counters, 0, sizeof(HCD_Counters));
+   \   0000015A   0x4602             MOV      R2,R0
+   \   0000015C   0x2105             MOVS     R1,#+5
+   \   0000015E   0x0038             MOVS     R0,R7
+   \   00000160   0x.... 0x....      BL       __aeabi_memset4
+    298          
+    299          			HCD_Calcification_Level = 0;
+   \   00000164   0x0028             MOVS     R0,R5
+   \   00000166   0x81B8             STRH     R0,[R7, #+12]
+    300          			HCD_Enable = FALSE;
+    301          			HCD_WHS_Increased_By = 0;
+   \   00000168   0x73BD             STRB     R5,[R7, #+14]
+    302                      
+    303          			memset(&HCD_ModelData, 0, sizeof(HCD_ModelData));
+   \   0000016A   0x4602             MOV      R2,R0
+   \   0000016C   0x2112             MOVS     R1,#+18
+   \   0000016E   0x0038             MOVS     R0,R7
+   \   00000170   0x3014             ADDS     R0,R0,#+20
+   \   00000172   0x.... 0x....      BL       __aeabi_memset4
+    304          			HCD_ModelData.Lowest_Click_Temperature = FIXED_POINT_99C;
+   \   00000176   0x82BE             STRH     R6,[R7, #+20]
+    305          			memset(&HCD_Monitoring_States, 0, sizeof(HCD_Monitoring_States));
+   \   00000178   0x462A             MOV      R2,R5
+   \   0000017A   0x2101             MOVS     R1,#+1
+   \   0000017C   0x0038             MOVS     R0,R7
+   \   0000017E   0x3028             ADDS     R0,R0,#+40
+   \   00000180   0x.... 0x....      BL       __aeabi_memset4
+    306          		}
+    307          		else
+    308          		{
+    309          /** Part of previous structure - no more applicable            
+    310           			//! Backup of the model data before memory reset
+    311           			hcd_backup_memory = HeaterCalcificationDetection_ObservableStates.hcd_mastermodel_instancedata.rtdw.hcd_modeldata;
+    312           */
+    313          		}
+    314          
+    315          		// Reset all state machine states
+    316          		memset(&HeaterCalcificationDetection_ObservableStates,0,sizeof(HeaterCalcificationDetection_ObservableStates));
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_12: (+1)
+   \   00000184   0x462A             MOV      R2,R5
+   \   00000186   0x2118             MOVS     R1,#+24
+   \   00000188   0x0020             MOVS     R0,R4
+   \   0000018A   0x3048             ADDS     R0,R0,#+72
+   \   0000018C   0x.... 0x....      BL       __aeabi_memset4
+    317          
+    318          /** Part of previous structure - no more applicable
+    319          		// Restore the model data backup
+    320          		HeaterCalcificationDetection_ObservableStates.hcd_mastermodel_instancedata.rtdw.hcd_modeldata = hcd_backup_memory;
+    321           */
+    322          
+    323          		if ((uint8)HCD_Is_Active == (uint8)TRUE)
+   \   00000190   0x7860             LDRB     R0,[R4, #+1]
+   \   00000192   0x2801             CMP      R0,#+1
+   \   00000194   0xD102             BNE      ??HeaterCalcificationDetectionMonitor__Initiali_13
+    324          		{
+    325          			HeaterCalcificationDetectionModelSetup();
+   \   00000196   0x.... 0x....      BL       HeaterCalcificationDetectionModelSetup
+   \   0000019A   0xBDF7             POP      {R0-R2,R4-R7,PC}
+    326          		}
+    327          		else
+    328          		{
+    329          			HeaterCalcificationDetection_RTModelData->dwork = &HeaterCalcificationDetection_ObservableStates;
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_13: (+1)
+   \   0000019C   0x0020             MOVS     R0,R4
+   \   0000019E   0x3048             ADDS     R0,R0,#+72
+   \   000001A0   0x6460             STR      R0,[R4, #+68]
+    330          		}
+    331          	}
+    332          }
+   \                     ??HeaterCalcificationDetectionMonitor__Initiali_0: (+1)
+   \   000001A2   0xBDF7             POP      {R0-R2,R4-R7,PC}  ;; return
+    333          
+    334          //----------------------------------------------------------------------------
+    335          /**
+    336           *  @brief      HeaterCalcificationDetectionMonitor__Execution
+    337           *  @details    Function used to perform the monitor.
+    338           *
+    339           */
+
+   \                                 In section .text, align 2, keep-with-next
+    340          void HeaterCalcificationDetectionMonitor__Execution(void)
+    341          {
+   \                     HeaterCalcificationDetectionMonitor__Execution: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0xB088             SUB      SP,SP,#+32
+    342              if ((uint8)HCD_Is_Active == (uint8)TRUE)
+   \   00000004   0x....             LDR      R4,??DataTable7
+   \   00000006   0x7860             LDRB     R0,[R4, #+1]
+   \   00000008   0x2801             CMP      R0,#+1
+   \   0000000A   0xD11E             BNE      ??HeaterCalcificationDetectionMonitor__Executio_0
+    343          	{
+    344                  HeaterCalcificationDetectionMaster__Execute(HeaterCalcificationDetection_RTModelData,HCD_Enable,HCD_Heater_Current_Threshold,SF_HCD_Parameters,HCD_Cycle_Started,
+    345          					&HCD_Lowest_Click_Temperature,&HCD_Lowest_Click_Current,&HCD_Lowest_Click_Power,&HCD_Reduction_Temperature,&HCD_Reduction_Current,&HCD_Reduction_Power,&HCD_Monitoring_States);
+   \   0000000C   0x....             LDR      R0,??DataTable7_2
+   \   0000000E   0x0001             MOVS     R1,R0
+   \   00000010   0x3128             ADDS     R1,R1,#+40
+   \   00000012   0x9107             STR      R1,[SP, #+28]
+   \   00000014   0x0021             MOVS     R1,R4
+   \   00000016   0x3126             ADDS     R1,R1,#+38
+   \   00000018   0x9106             STR      R1,[SP, #+24]
+   \   0000001A   0x0021             MOVS     R1,R4
+   \   0000001C   0x3124             ADDS     R1,R1,#+36
+   \   0000001E   0x9105             STR      R1,[SP, #+20]
+   \   00000020   0x0021             MOVS     R1,R4
+   \   00000022   0x3122             ADDS     R1,R1,#+34
+   \   00000024   0x9104             STR      R1,[SP, #+16]
+   \   00000026   0x0021             MOVS     R1,R4
+   \   00000028   0x3120             ADDS     R1,R1,#+32
+   \   0000002A   0x9103             STR      R1,[SP, #+12]
+   \   0000002C   0x0021             MOVS     R1,R4
+   \   0000002E   0x311E             ADDS     R1,R1,#+30
+   \   00000030   0x9102             STR      R1,[SP, #+8]
+   \   00000032   0x0021             MOVS     R1,R4
+   \   00000034   0x311C             ADDS     R1,R1,#+28
+   \   00000036   0x9101             STR      R1,[SP, #+4]
+   \   00000038   0x7821             LDRB     R1,[R4, #+0]
+   \   0000003A   0x9100             STR      R1,[SP, #+0]
+   \   0000003C   0x6BA3             LDR      R3,[R4, #+56]
+   \   0000003E   0x8B62             LDRH     R2,[R4, #+26]
+   \   00000040   0x7B41             LDRB     R1,[R0, #+13]
+   \   00000042   0x0020             MOVS     R0,R4
+   \   00000044   0x3044             ADDS     R0,R0,#+68
+   \   00000046   0x.... 0x....      BL       HeaterCalcificationDetectionMaster__Execute
+    346              }
+    347              
+    348          	if ((WHS_Function_Position != (uint8)REGULATION_INVALID) && ((uint8)Regulations__IsRegulationChanged(WHS_Function_Position) == (uint8)TRUE))
+   \                     ??HeaterCalcificationDetectionMonitor__Executio_0: (+1)
+   \   0000004A   0x78A0             LDRB     R0,[R4, #+2]
+   \   0000004C   0x28FF             CMP      R0,#+255
+   \   0000004E   0xD00F             BEQ      ??HeaterCalcificationDetectionMonitor__Executio_1
+   \   00000050   0x.... 0x....      BL       Regulations__IsRegulationChanged
+   \   00000054   0x2801             CMP      R0,#+1
+   \   00000056   0xD10B             BNE      ??HeaterCalcificationDetectionMonitor__Executio_1
+    349          	{
+    350          		if ((uint8)HCD_HMI_Data.Flags.Increase_WHS != (uint8)0)
+   \   00000058   0x....             LDR      R0,??DataTable7_2
+   \   0000005A   0x7A01             LDRB     R1,[R0, #+8]
+   \   0000005C   0x000A             MOVS     R2,R1
+   \   0000005E   0x0952             LSRS     R2,R2,#+5
+   \   00000060   0x07D2             LSLS     R2,R2,#+31
+   \   00000062   0xD503             BPL      ??HeaterCalcificationDetectionMonitor__Executio_2
+    351          		{
+    352          			HCD_HMI_Data.Flags.Increase_WHS = FALSE;
+   \   00000064   0x22DF             MOVS     R2,#+223
+   \   00000066   0x400A             ANDS     R2,R2,R1
+   \   00000068   0x7202             STRB     R2,[R0, #+8]
+   \   0000006A   0xE001             B        ??HeaterCalcificationDetectionMonitor__Executio_1
+    353          		}
+    354          		else
+    355          		{
+    356          			HCD_WHS_Increased_By = 0;
+   \                     ??HeaterCalcificationDetectionMonitor__Executio_2: (+1)
+   \   0000006C   0x2100             MOVS     R1,#+0
+   \   0000006E   0x7381             STRB     R1,[R0, #+14]
+    357          		}
+    358          	}
+    359          }
+   \                     ??HeaterCalcificationDetectionMonitor__Executio_1: (+1)
+   \   00000070   0xB008             ADD      SP,SP,#+32
+   \   00000072   0xBD10             POP      {R4,PC}          ;; return
+    360          
+    361          //----------------------------------------------------------------------------
+    362          /**
+    363           *  @brief      HeaterCalcificationDetectionMonitor__Start
+    364           *  @details    Function used to enable the Heater Calcification Detection monitor.
+    365           *
+    366           */
+
+   \                                 In section .text, align 2, keep-with-next
+    367          void HeaterCalcificationDetectionMonitor__Start(void)
+    368          {
+    369          	if((uint8)HCD_Is_Active == (uint8)TRUE)
+   \                     HeaterCalcificationDetectionMonitor__Start: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x7840             LDRB     R0,[R0, #+1]
+   \   00000004   0x2801             CMP      R0,#+1
+   \   00000006   0xD102             BNE      ??HeaterCalcificationDetectionMonitor__Start_0
+    370          	{
+    371                  HCD_Enable = TRUE;
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x....             LDR      R1,??DataTable7_2
+   \   0000000C   0x7348             STRB     R0,[R1, #+13]
+    372              }
+    373          }
+   \                     ??HeaterCalcificationDetectionMonitor__Start_0: (+1)
+   \   0000000E   0x4770             BX       LR               ;; return
+    374          
+    375          //----------------------------------------------------------------------------
+    376          /**
+    377           *  @brief      HeaterCalcificationDetectionMonitor__Stop
+    378           *  @details    Function used to disable the Heater Calcification Detection monitor.
+    379           *
+    380           */
+
+   \                                 In section .text, align 2, keep-with-next
+    381          void HeaterCalcificationDetectionMonitor__Stop(void)
+    382          {
+    383          	HCD_Enable = FALSE;
+   \                     HeaterCalcificationDetectionMonitor__Stop: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR      R1,??DataTable7_2
+   \   00000004   0x7348             STRB     R0,[R1, #+13]
+    384          }
+   \   00000006   0x4770             BX       LR               ;; return
+    385          
+    386          //----------------------------------------------------------------------------
+    387          /**
+    388           *  @brief      HeaterCalcificationDetectionMonitor__Reset
+    389           *  @details    Function used to reset the Heater Calcification Detection monitor.
+    390           *
+    391           */
+
+   \                                 In section .text, align 2, keep-with-next
+    392          void HeaterCalcificationDetectionMonitor__Reset(void)
+    393          {
+   \                     HeaterCalcificationDetectionMonitor__Reset: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    394          	if((uint8)HCD_Is_Active == (uint8)TRUE)
+   \   00000002   0x....             LDR      R4,??DataTable7
+   \   00000004   0x7860             LDRB     R0,[R4, #+1]
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD103             BNE      ??HeaterCalcificationDetectionMonitor__Reset_0
+    395          	{
+    396          		HeaterCalcificationDetectionModelSetup();
+   \   0000000A   0x.... 0x....      BL       HeaterCalcificationDetectionModelSetup
+    397                  
+    398          		HCD_Cycle_Started = FALSE;
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x7020             STRB     R0,[R4, #+0]
+    399          	}
+    400          }
+   \                     ??HeaterCalcificationDetectionMonitor__Reset_0: (+1)
+   \   00000012   0xBD10             POP      {R4,PC}          ;; return
+    401          
+    402          //----------------------------------------------------------------------------
+    403          /**
+    404           *  @brief      HeaterCalcificationDetectionMonitor__CycleStarted
+    405           *  @details    Function used to reset the local parameters inside Heater Calcification Detection model
+    406           *				when a new cycle is started.
+    407           */
+
+   \                                 In section .text, align 2, keep-with-next
+    408          void HeaterCalcificationDetectionMonitor__CycleStarted(void)
+    409          {
+    410          	if((uint8)HCD_Is_Active == (uint8)TRUE)
+   \                     HeaterCalcificationDetectionMonitor__CycleStarted: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x7841             LDRB     R1,[R0, #+1]
+   \   00000004   0x2901             CMP      R1,#+1
+   \   00000006   0xD106             BNE      ??HeaterCalcificationDetectionMonitor__CycleSta_0
+    411          	{
+    412          		HCD_Cycle_Started = TRUE;
+   \   00000008   0x2101             MOVS     R1,#+1
+   \   0000000A   0x7001             STRB     R1,[R0, #+0]
+    413          
+    414          		HCD_HMI_Data.Flags.Increase_WHS = FALSE;
+   \   0000000C   0x....             LDR      R0,??DataTable7_2
+   \   0000000E   0x7A01             LDRB     R1,[R0, #+8]
+   \   00000010   0x22DF             MOVS     R2,#+223
+   \   00000012   0x400A             ANDS     R2,R2,R1
+   \   00000014   0x7202             STRB     R2,[R0, #+8]
+    415          	}
+    416          }
+   \                     ??HeaterCalcificationDetectionMonitor__CycleSta_0: (+1)
+   \   00000016   0x4770             BX       LR               ;; return
+    417          
+    418          //----------------------------------------------------------------------------
+    419          /**
+    420           *  @brief      HeaterCalcificationDetectionMonitor__CycleEnded
+    421           *  @details    Function used to perform the actions required by Heater Calcification Detection algorithm
+    422           *				when a cycle ends.
+    423           */
+
+   \                                 In section .text, align 2, keep-with-next
+    424          void HeaterCalcificationDetectionMonitor__CycleEnded(void)
+    425          {
+   \                     HeaterCalcificationDetectionMonitor__CycleEnded: (+1)
+   \   00000000   0xB5FE             PUSH     {R1-R7,LR}
+    426          	if((uint8)HCD_Is_Active == (uint8)TRUE)
+   \   00000002   0x....             LDR      R5,??DataTable8
+   \   00000004   0x7868             LDRB     R0,[R5, #+1]
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD000             BEQ      .+4
+   \   0000000A   0xE179             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_0
+    427              {
+    428          		uint8 max_calcification_level;
+    429          		BOOL_TYPE calcification_level_increased = FALSE;
+   \   0000000C   0x2700             MOVS     R7,#+0
+   \   0000000E   0x003E             MOVS     R6,R7
+    430          		const HEATER_CALCIFICATION_LEVEL_DIP_PARAMS_TYPE *current_level_params_ptr;
+    431          		BOOL_TYPE manage_consistent_lockout_countdown = FALSE;
+   \   00000010   0x0038             MOVS     R0,R7
+   \   00000012   0x4669             MOV      R1,SP
+   \   00000014   0x8108             STRH     R0,[R1, #+8]
+    432          		BOOL_TYPE increase_WHS = FALSE;
+    433          
+    434          	    // Calculate max allowed value for HCD_Calcification_Level, based on setting file parameters.
+    435          	    if (SF_Calcification_Levels_Number > (uint8)0)
+   \   00000016   0x78E8             LDRB     R0,[R5, #+3]
+   \   00000018   0x0001             MOVS     R1,R0
+   \   0000001A   0xD003             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_1
+    436          	    {
+    437          	    	max_calcification_level = SF_Calcification_Levels_Number - (uint8)1;
+   \   0000001C   0x1E40             SUBS     R0,R0,#+1
+   \   0000001E   0xB2C0             UXTB     R0,R0
+   \   00000020   0x9001             STR      R0,[SP, #+4]
+   \   00000022   0xE000             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_2
+    438          	    }
+    439          	    else
+    440          	    {
+    441          	    	max_calcification_level = 0;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_1: (+1)
+   \   00000024   0x9701             STR      R7,[SP, #+4]
+    442          	    }
+    443          
+    444          		// Reset interpolated thresholds
+    445          	    memset(&HCD_Lowest_Click_Current_Thresholds[0], 0, sizeof(HCD_Lowest_Click_Current_Thresholds));
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_2: (+1)
+   \   00000026   0x4632             MOV      R2,R6
+   \   00000028   0x210E             MOVS     R1,#+14
+   \   0000002A   0x0028             MOVS     R0,R5
+   \   0000002C   0x3008             ADDS     R0,R0,#+8
+   \   0000002E   0x.... 0x....      BL       __aeabi_memset
+    446          		memset(&HCD_Reduction_Current_Thresholds[0], 0, sizeof(HCD_Reduction_Current_Thresholds));
+   \   00000032   0x4632             MOV      R2,R6
+   \   00000034   0x210E             MOVS     R1,#+14
+   \   00000036   0x0028             MOVS     R0,R5
+   \   00000038   0x3028             ADDS     R0,R0,#+40
+   \   0000003A   0x.... 0x....      BL       __aeabi_memset
+    447          
+    448          		// ********************************************************************************
+    449          	    // Start of end of cycle calculations for Heater Calcification detection algorithm
+    450          	    // ********************************************************************************
+    451          
+    452          	    if (HCD_Heater_Clicks > ENDIANU16_STON(SF_HCD_Parameters->Allowed_Clicks_Num))
+   \   0000003E   0x6BA9             LDR      R1,[R5, #+56]
+   \   00000040   0x7808             LDRB     R0,[R1, #+0]
+   \   00000042   0x784A             LDRB     R2,[R1, #+1]
+   \   00000044   0x0612             LSLS     R2,R2,#+24
+   \   00000046   0x0C12             LSRS     R2,R2,#+16
+   \   00000048   0x4310             ORRS     R0,R0,R2
+   \   0000004A   0x....             LDR      R4,??DataTable10
+   \   0000004C   0x8B29             LDRH     R1,[R5, #+24]
+   \   0000004E   0x4288             CMP      R0,R1
+   \   00000050   0xD217             BCS      ??HeaterCalcificationDetectionMonitor__CycleEnd_3
+    453          		{
+    454          	    	// *** Full Increase ***
+    455          
+    456          	    	// Calculate interpolated temperature thresholds for Lowest Click Current
+    457          	    	TemperatureThresholdsInterpolation(HCD_Lowest_Click_Current, HCD_Lowest_Click_Current_Thresholds);
+   \   00000052   0x0029             MOVS     R1,R5
+   \   00000054   0x3108             ADDS     R1,R1,#+8
+   \   00000056   0x8BE8             LDRH     R0,[R5, #+30]
+   \   00000058   0x.... 0x....      BL       TemperatureThresholdsInterpolation
+   \   0000005C   0xE004             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_4
+    458          
+    459          			// HCD_Calcification_Level update
+    460          	    	while ((HCD_Calcification_Level < max_calcification_level) && (HCD_Lowest_Click_Temperature <= HCD_Lowest_Click_Current_Thresholds[HCD_Calcification_Level + (uint8)1]))
+    461          			{
+    462          				HCD_Calcification_Level ++;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_5: (+1)
+   \   0000005E   0x1C40             ADDS     R0,R0,#+1
+   \   00000060   0x7320             STRB     R0,[R4, #+12]
+    463          				HCD_Counters.Lockout_Counter = 0;
+   \   00000062   0x0038             MOVS     R0,R7
+   \   00000064   0x70A0             STRB     R0,[R4, #+2]
+    464          				calcification_level_increased = TRUE;
+   \   00000066   0x2601             MOVS     R6,#+1
+    465          			}
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_4: (+1)
+   \   00000068   0x7B20             LDRB     R0,[R4, #+12]
+   \   0000006A   0x0001             MOVS     R1,R0
+   \   0000006C   0x9A01             LDR      R2,[SP, #+4]
+   \   0000006E   0x4291             CMP      R1,R2
+   \   00000070   0xDA05             BGE      ??HeaterCalcificationDetectionMonitor__CycleEnd_6
+   \   00000072   0x0049             LSLS     R1,R1,#+1
+   \   00000074   0x1869             ADDS     R1,R5,R1
+   \   00000076   0x8949             LDRH     R1,[R1, #+10]
+   \   00000078   0x8BAA             LDRH     R2,[R5, #+28]
+   \   0000007A   0x4291             CMP      R1,R2
+   \   0000007C   0xD2EF             BCS      ??HeaterCalcificationDetectionMonitor__CycleEnd_5
+    466          
+    467          			HCD_Counters.Reduction_Counter = 0;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_6: (+1)
+   \   0000007E   0x0038             MOVS     R0,R7
+   \   00000080   0x7060             STRB     R0,[R4, #+1]
+    468          		}
+    469          
+    470                  // Update pointer to the set of parameters correspondent to the current HCD_Calcification_Level
+    471          	    UpdateParamsPointerAndAlignCountersToThresholds(&current_level_params_ptr);
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_3: (+1)
+   \   00000082   0x4668             MOV      R0,SP
+   \   00000084   0x.... 0x....      BL       UpdateParamsPointerAndAlignCountersToThresholds
+    472          
+    473          		if (HCD_Heater_Clicks <= SF_HCD_Parameters->Allowed_Clicks_To_Reduce)
+   \   00000088   0x6BA8             LDR      R0,[R5, #+56]
+   \   0000008A   0x7880             LDRB     R0,[R0, #+2]
+   \   0000008C   0x8B29             LDRH     R1,[R5, #+24]
+   \   0000008E   0x4288             CMP      R0,R1
+   \   00000090   0xD33A             BCC      ??HeaterCalcificationDetectionMonitor__CycleEnd_7
+    474          		{
+    475          	    	// *** Limited Reduction ***
+    476          
+    477          			if(current_level_params_ptr->Calcification_Reduction_Threshold > (uint8)0)
+   \   00000092   0x9800             LDR      R0,[SP, #+0]
+   \   00000094   0x7B00             LDRB     R0,[R0, #+12]
+   \   00000096   0x213F             MOVS     R1,#+63
+   \   00000098   0x4208             TST      R0,R1
+   \   0000009A   0xD01D             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_8
+    478          			{
+    479          				// Increase Reduction Counter
+    480          				if (HCD_Counters.Reduction_Counter < current_level_params_ptr->Calcification_Reduction_Threshold)
+   \   0000009C   0x7862             LDRB     R2,[R4, #+1]
+   \   0000009E   0x0013             MOVS     R3,R2
+   \   000000A0   0x4008             ANDS     R0,R0,R1
+   \   000000A2   0x4283             CMP      R3,R0
+   \   000000A4   0xD201             BCS      ??HeaterCalcificationDetectionMonitor__CycleEnd_9
+    481          				{
+    482          					HCD_Counters.Reduction_Counter ++;
+   \   000000A6   0x1C52             ADDS     R2,R2,#+1
+   \   000000A8   0x7062             STRB     R2,[R4, #+1]
+    483          				}
+    484          
+    485          				if (HCD_Counters.Reduction_Counter >= current_level_params_ptr->Calcification_Reduction_Threshold)
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_9: (+1)
+   \   000000AA   0x7860             LDRB     R0,[R4, #+1]
+   \   000000AC   0x9A00             LDR      R2,[SP, #+0]
+   \   000000AE   0x7B12             LDRB     R2,[R2, #+12]
+   \   000000B0   0x4011             ANDS     R1,R1,R2
+   \   000000B2   0x4288             CMP      R0,R1
+   \   000000B4   0xD310             BCC      ??HeaterCalcificationDetectionMonitor__CycleEnd_8
+    486          				{
+    487          					if (HCD_Calcification_Level > (uint8)0)
+   \   000000B6   0x7B20             LDRB     R0,[R4, #+12]
+   \   000000B8   0x0001             MOVS     R1,R0
+   \   000000BA   0xD00B             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_10
+    488          					{
+    489          						if (current_level_params_ptr->Lockout_Threshold == (uint8)0)
+   \   000000BC   0x9900             LDR      R1,[SP, #+0]
+   \   000000BE   0x7B89             LDRB     R1,[R1, #+14]
+   \   000000C0   0x2900             CMP      R1,#+0
+   \   000000C2   0xD102             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_11
+    490          						{
+    491          							HCD_Calcification_Level --;
+   \   000000C4   0x1E40             SUBS     R0,R0,#+1
+   \   000000C6   0x7320             STRB     R0,[R4, #+12]
+   \   000000C8   0xE001             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_12
+    492          						}
+    493          						else
+    494          						{
+    495          							HCD_Calcification_Level = HCD_Highest_CL_Without_Lockout;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_11: (+1)
+   \   000000CA   0x7928             LDRB     R0,[R5, #+4]
+   \   000000CC   0x7320             STRB     R0,[R4, #+12]
+    496          						}
+    497          
+    498          						// Update pointer to the set of parameters correspondent to the current HCD_Calcification_Level
+    499          						UpdateParamsPointerAndAlignCountersToThresholds(&current_level_params_ptr);
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_12: (+1)
+   \   000000CE   0x4668             MOV      R0,SP
+   \   000000D0   0x.... 0x....      BL       UpdateParamsPointerAndAlignCountersToThresholds
+    500          					}
+    501          
+    502          					// Reset Reduction Counter
+    503          					HCD_Counters.Reduction_Counter = 0;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_10: (+1)
+   \   000000D4   0x0038             MOVS     R0,R7
+   \   000000D6   0x7060             STRB     R0,[R4, #+1]
+    504          				}
+    505          			}
+    506          			else
+    507          			{
+    508          		    	// If a particular threshold equals zero, then any counter relying on this threshold should be kept at 0
+    509          		    	// and no events related to that threshold should be triggered.
+    510          			}
+    511          
+    512          	    	// *** Full Reduction ***
+    513          
+    514          	    	// Calculate interpolated temperature thresholds for Reduction Current
+    515          			TemperatureThresholdsInterpolation(HCD_Reduction_Current, HCD_Reduction_Current_Thresholds);
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_8: (+1)
+   \   000000D8   0x0029             MOVS     R1,R5
+   \   000000DA   0x3128             ADDS     R1,R1,#+40
+   \   000000DC   0x8CA8             LDRH     R0,[R5, #+36]
+   \   000000DE   0x.... 0x....      BL       TemperatureThresholdsInterpolation
+   \   000000E2   0xE001             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_13
+    516          
+    517          			while ((HCD_Calcification_Level > (uint8)0) && (HCD_Reduction_Temperature > HCD_Reduction_Current_Thresholds[HCD_Calcification_Level]))
+    518          			{
+    519          				HCD_Calcification_Level --;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_14: (+1)
+   \   000000E4   0x1E40             SUBS     R0,R0,#+1
+   \   000000E6   0x7320             STRB     R0,[R4, #+12]
+    520          
+    521          				// Don't update current_level_params_ptr, keep the current one
+    522          			}
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_13: (+1)
+   \   000000E8   0x7B20             LDRB     R0,[R4, #+12]
+   \   000000EA   0x0001             MOVS     R1,R0
+   \   000000EC   0xD005             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_15
+   \   000000EE   0x0041             LSLS     R1,R0,#+1
+   \   000000F0   0x1869             ADDS     R1,R5,R1
+   \   000000F2   0x8D09             LDRH     R1,[R1, #+40]
+   \   000000F4   0x8C6A             LDRH     R2,[R5, #+34]
+   \   000000F6   0x4291             CMP      R1,R2
+   \   000000F8   0xD3F4             BCC      ??HeaterCalcificationDetectionMonitor__CycleEnd_14
+    523          
+    524          			if (HCD_Calcification_Level > HCD_Highest_CL_Without_Lockout)
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_15: (+1)
+   \   000000FA   0x7929             LDRB     R1,[R5, #+4]
+   \   000000FC   0x4281             CMP      R1,R0
+   \   000000FE   0xD217             BCS      ??HeaterCalcificationDetectionMonitor__CycleEnd_16
+    525          			{
+    526          				manage_consistent_lockout_countdown = TRUE;
+   \   00000100   0x2001             MOVS     R0,#+1
+   \   00000102   0x4669             MOV      R1,SP
+   \   00000104   0x7208             STRB     R0,[R1, #+8]
+   \   00000106   0xE013             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_16
+    527          			}
+    528          		}
+    529          		else
+    530          		{
+    531          			// Increase Lockout Counter if it is lower than its	Threshold
+    532          			if (HCD_Counters.Lockout_Counter < current_level_params_ptr->Lockout_Threshold)
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_7: (+1)
+   \   00000108   0x78A0             LDRB     R0,[R4, #+2]
+   \   0000010A   0x0001             MOVS     R1,R0
+   \   0000010C   0x9A00             LDR      R2,[SP, #+0]
+   \   0000010E   0x7B92             LDRB     R2,[R2, #+14]
+   \   00000110   0x4291             CMP      R1,R2
+   \   00000112   0xD201             BCS      ??HeaterCalcificationDetectionMonitor__CycleEnd_17
+    533          			{
+    534          				HCD_Counters.Lockout_Counter ++;
+   \   00000114   0x1C40             ADDS     R0,R0,#+1
+   \   00000116   0x70A0             STRB     R0,[R4, #+2]
+    535          			}
+    536          
+    537          	    	// *** Limited Increase ***
+    538          
+    539          			if (HCD_Calcification_Level == (uint8)0)
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_17: (+1)
+   \   00000118   0x7B20             LDRB     R0,[R4, #+12]
+   \   0000011A   0x2800             CMP      R0,#+0
+   \   0000011C   0xD105             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_18
+    540          			{
+    541          				if (max_calcification_level > (uint8)0) // Protection
+   \   0000011E   0x9801             LDR      R0,[SP, #+4]
+   \   00000120   0x2800             CMP      R0,#+0
+   \   00000122   0xD002             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_18
+    542          				{
+    543          					HCD_Calcification_Level ++;
+   \   00000124   0x2001             MOVS     R0,#+1
+   \   00000126   0x7320             STRB     R0,[R4, #+12]
+    544          					calcification_level_increased = TRUE;
+   \   00000128   0x4606             MOV      R6,R0
+    545          
+    546          					// Don't update current_level_params_ptr, keep the current one
+    547          				}
+    548          			}
+    549          
+    550          			manage_consistent_lockout_countdown = TRUE;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_18: (+1)
+   \   0000012A   0x2001             MOVS     R0,#+1
+   \   0000012C   0x4669             MOV      R1,SP
+   \   0000012E   0x7208             STRB     R0,[R1, #+8]
+    551          		}
+    552          
+    553          
+    554           		// *** Consistent Lockout Countdown ***
+    555          
+    556          		if ((uint8)manage_consistent_lockout_countdown == (uint8)TRUE)
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_16: (+1)
+   \   00000130   0x4668             MOV      R0,SP
+   \   00000132   0x7A00             LDRB     R0,[R0, #+8]
+   \   00000134   0x2801             CMP      R0,#+1
+   \   00000136   0xD117             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_19
+    557          		{
+    558          			uint8 cycles_remaining;
+    559          
+    560          			// Calculate current value of cycles remaining
+    561          			if (HCD_Counters.Lockout_Counter < current_level_params_ptr->Lockout_Threshold)
+   \   00000138   0x9800             LDR      R0,[SP, #+0]
+   \   0000013A   0x7B80             LDRB     R0,[R0, #+14]
+   \   0000013C   0x78A1             LDRB     R1,[R4, #+2]
+   \   0000013E   0x000A             MOVS     R2,R1
+   \   00000140   0x0003             MOVS     R3,R0
+   \   00000142   0x429A             CMP      R2,R3
+   \   00000144   0xD201             BCS      ??HeaterCalcificationDetectionMonitor__CycleEnd_20
+    562          			{
+    563          				cycles_remaining = current_level_params_ptr->Lockout_Threshold - HCD_Counters.Lockout_Counter;
+   \   00000146   0x1A41             SUBS     R1,R0,R1
+   \   00000148   0xE000             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_21
+    564          			}
+    565          			else
+    566          			{
+    567          				cycles_remaining = 0;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_20: (+1)
+   \   0000014A   0x0039             MOVS     R1,R7
+    568          			}
+    569          
+    570          			if ((current_level_params_ptr->Lockout_Threshold > (uint8)0) && (cycles_remaining <= HCD_Lowest_Lockout_Thr))
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_21: (+1)
+   \   0000014C   0x2800             CMP      R0,#+0
+   \   0000014E   0xD00B             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_19
+   \   00000150   0x7968             LDRB     R0,[R5, #+5]
+   \   00000152   0xB2C9             UXTB     R1,R1
+   \   00000154   0x4288             CMP      R0,R1
+   \   00000156   0xD307             BCC      ??HeaterCalcificationDetectionMonitor__CycleEnd_19
+    571          			{
+    572          				if (HCD_Calcification_Level < max_calcification_level)
+   \   00000158   0x7B20             LDRB     R0,[R4, #+12]
+   \   0000015A   0x9901             LDR      R1,[SP, #+4]
+   \   0000015C   0x4288             CMP      R0,R1
+   \   0000015E   0xDA03             BGE      ??HeaterCalcificationDetectionMonitor__CycleEnd_19
+    573          				{
+    574          					// Reset Lockout Counter if	CL != Max CL
+    575          					HCD_Counters.Lockout_Counter = 0;
+   \   00000160   0x0038             MOVS     R0,R7
+   \   00000162   0x70A0             STRB     R0,[R4, #+2]
+    576          					HCD_Calcification_Level = max_calcification_level;
+   \   00000164   0x9801             LDR      R0,[SP, #+4]
+   \   00000166   0x7320             STRB     R0,[R4, #+12]
+    577          					// Do not consider this HCD_Calcification_Level change to trigger WHS increase
+    578          				}
+    579          			}
+    580          		}
+    581          
+    582                  // Update pointer to the set of parameters correspondent to the current HCD_Calcification_Level
+    583          		UpdateParamsPointerAndAlignCountersToThresholds(&current_level_params_ptr);
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_19: (+1)
+   \   00000168   0x4668             MOV      R0,SP
+   \   0000016A   0x.... 0x....      BL       UpdateParamsPointerAndAlignCountersToThresholds
+    584          
+    585          		// Update HCD_Counters.HCD_Counters.Cycles_Remaining with the last thresholds.
+    586          		if (HCD_Counters.Lockout_Counter < current_level_params_ptr->Lockout_Threshold)
+   \   0000016E   0x9800             LDR      R0,[SP, #+0]
+   \   00000170   0x7B80             LDRB     R0,[R0, #+14]
+   \   00000172   0x78A1             LDRB     R1,[R4, #+2]
+   \   00000174   0x000A             MOVS     R2,R1
+   \   00000176   0x0003             MOVS     R3,R0
+   \   00000178   0x429A             CMP      R2,R3
+   \   0000017A   0xD202             BCS      ??HeaterCalcificationDetectionMonitor__CycleEnd_22
+    587          		{
+    588          			HCD_Counters.Cycles_Remaining = current_level_params_ptr->Lockout_Threshold - HCD_Counters.Lockout_Counter;
+   \   0000017C   0x1A40             SUBS     R0,R0,R1
+   \   0000017E   0x7120             STRB     R0,[R4, #+4]
+   \   00000180   0xE001             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_23
+    589          		}
+    590          		else
+    591          		{
+    592          			HCD_Counters.Cycles_Remaining = 0;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_22: (+1)
+   \   00000182   0x0038             MOVS     R0,R7
+   \   00000184   0x7120             STRB     R0,[R4, #+4]
+    593          		}
+    594          
+    595          		// Manage Alarm Counter
+    596          	    if (current_level_params_ptr->Descale_Alarm_Threshold > (uint8)0)
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_23: (+1)
+   \   00000186   0x9800             LDR      R0,[SP, #+0]
+   \   00000188   0x7B40             LDRB     R0,[R0, #+13]
+   \   0000018A   0x0001             MOVS     R1,R0
+   \   0000018C   0xD008             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_24
+    597          	    {
+    598          			if (HCD_Counters.Alarm_Counter < current_level_params_ptr->Descale_Alarm_Threshold)
+   \   0000018E   0x7821             LDRB     R1,[R4, #+0]
+   \   00000190   0x000A             MOVS     R2,R1
+   \   00000192   0x4282             CMP      R2,R0
+   \   00000194   0xD202             BCS      ??HeaterCalcificationDetectionMonitor__CycleEnd_25
+    599          			{
+    600          		    	// Increase Alarm Counter
+    601          				HCD_Counters.Alarm_Counter ++;
+   \   00000196   0x1C49             ADDS     R1,R1,#+1
+   \   00000198   0x7021             STRB     R1,[R4, #+0]
+   \   0000019A   0xE001             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_24
+    602          			}
+    603          			else
+    604          			{
+    605          				// Set Alarm Counter to 1 if it exceeds current Threshold
+    606          				HCD_Counters.Alarm_Counter = 1;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_25: (+1)
+   \   0000019C   0x2001             MOVS     R0,#+1
+   \   0000019E   0x7020             STRB     R0,[R4, #+0]
+    607          			}
+    608          	    }
+    609          	    else
+    610          	    {
+    611          	    	// If a particular threshold equals zero, then any counter relying on this threshold should be kept at 0
+    612          	    	// and no events related to that threshold should be triggered.
+    613          	    }
+    614          
+    615          	    // *** Periodic_HT Management ***
+    616          		if ((SF_HCD_Parameters->Periodic_HT_Threshold == (uint8)0) || (HCD_Counters.Periodic_HT_Counter > SF_HCD_Parameters->Periodic_HT_Threshold))
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_24: (+1)
+   \   000001A0   0x6BA8             LDR      R0,[R5, #+56]
+   \   000001A2   0x7902             LDRB     R2,[R0, #+4]
+   \   000001A4   0x217F             MOVS     R1,#+127
+   \   000001A6   0x420A             TST      R2,R1
+   \   000001A8   0xD00B             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_26
+   \   000001AA   0x400A             ANDS     R2,R2,R1
+   \   000001AC   0x78E3             LDRB     R3,[R4, #+3]
+   \   000001AE   0x429A             CMP      R2,R3
+   \   000001B0   0xD307             BCC      ??HeaterCalcificationDetectionMonitor__CycleEnd_26
+    617          		{
+    618          			HCD_Counters.Periodic_HT_Counter = 0;
+    619          			HCD_Bitmap.Periodic_HT_Required = FALSE;
+    620          		}
+    621          		else
+    622          		{
+    623          			if (HCD_Reduction_Temperature >= ENDIANU16_STON(SF_HCD_Parameters->Periodic_HT_Min_Temperature))
+   \   000001B2   0x7982             LDRB     R2,[R0, #+6]
+   \   000001B4   0x79C3             LDRB     R3,[R0, #+7]
+   \   000001B6   0x061B             LSLS     R3,R3,#+24
+   \   000001B8   0x0C1B             LSRS     R3,R3,#+16
+   \   000001BA   0x431A             ORRS     R2,R2,R3
+   \   000001BC   0x8C6B             LDRH     R3,[R5, #+34]
+   \   000001BE   0x4293             CMP      R3,R2
+   \   000001C0   0xD306             BCC      ??HeaterCalcificationDetectionMonitor__CycleEnd_27
+    624          			{
+    625          				HCD_Counters.Periodic_HT_Counter = 0;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_26: (+1)
+   \   000001C2   0x0038             MOVS     R0,R7
+   \   000001C4   0x70E0             STRB     R0,[R4, #+3]
+    626          				HCD_Bitmap.Periodic_HT_Required = FALSE;
+   \   000001C6   0x7C20             LDRB     R0,[R4, #+16]
+   \   000001C8   0x21FE             MOVS     R1,#+254
+   \   000001CA   0x4001             ANDS     R1,R1,R0
+   \   000001CC   0x7421             STRB     R1,[R4, #+16]
+   \   000001CE   0xE018             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_28
+    627          			}
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_27: (+1)
+   \   000001D0   0x78E2             LDRB     R2,[R4, #+3]
+   \   000001D2   0x7903             LDRB     R3,[R0, #+4]
+   \   000001D4   0x400B             ANDS     R3,R3,R1
+   \   000001D6   0x429A             CMP      R2,R3
+   \   000001D8   0xD105             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_29
+    628          			else
+    629          			{
+    630          				if (HCD_Counters.Periodic_HT_Counter == SF_HCD_Parameters->Periodic_HT_Threshold)
+    631          				{
+    632          					if ((uint8)HCD_Bitmap.Periodic_HT_Required == (uint8)0)
+   \   000001DA   0x7C20             LDRB     R0,[R4, #+16]
+   \   000001DC   0x07C0             LSLS     R0,R0,#+31
+   \   000001DE   0xD410             BMI      ??HeaterCalcificationDetectionMonitor__CycleEnd_28
+    633          					{
+    634          						HCD_Counters.Periodic_HT_Counter = 0;
+   \   000001E0   0x0038             MOVS     R0,R7
+   \   000001E2   0x70E0             STRB     R0,[R4, #+3]
+   \   000001E4   0xE00D             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_28
+    635          					}
+    636          				}
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_29: (+1)
+   \   000001E6   0x1C52             ADDS     R2,R2,#+1
+   \   000001E8   0x70E2             STRB     R2,[R4, #+3]
+   \   000001EA   0x7C23             LDRB     R3,[R4, #+16]
+   \   000001EC   0x22FE             MOVS     R2,#+254
+   \   000001EE   0x401A             ANDS     R2,R2,R3
+   \   000001F0   0x7422             STRB     R2,[R4, #+16]
+    637          				else
+    638          				{
+    639          					HCD_Counters.Periodic_HT_Counter ++;
+    640          					HCD_Bitmap.Periodic_HT_Required = FALSE;
+    641          
+    642          					if (HCD_Counters.Periodic_HT_Counter == SF_HCD_Parameters->Periodic_HT_Threshold)
+   \   000001F2   0x78E3             LDRB     R3,[R4, #+3]
+   \   000001F4   0x7900             LDRB     R0,[R0, #+4]
+   \   000001F6   0x4001             ANDS     R1,R1,R0
+   \   000001F8   0x428B             CMP      R3,R1
+   \   000001FA   0xD102             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_28
+    643          					{
+    644          						HCD_Bitmap.Periodic_HT_Required = TRUE;
+   \   000001FC   0x2001             MOVS     R0,#+1
+   \   000001FE   0x4310             ORRS     R0,R0,R2
+   \   00000200   0x7420             STRB     R0,[R4, #+16]
+    645          					}
+    646          				}
+    647          			}
+    648          		}
+    649          
+    650          
+    651          		// *** Setup data for HMI ***
+    652                  HCD_HMI_Data.Flags.Descale_Icon_Mode = current_level_params_ptr->Descale_Icon_Mode;
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_28: (+1)
+   \   00000202   0x9800             LDR      R0,[SP, #+0]
+   \   00000204   0x7B00             LDRB     R0,[R0, #+12]
+   \   00000206   0x0980             LSRS     R0,R0,#+6
+   \   00000208   0x7A21             LDRB     R1,[R4, #+8]
+   \   0000020A   0x22FC             MOVS     R2,#+252
+   \   0000020C   0x400A             ANDS     R2,R2,R1
+   \   0000020E   0x4310             ORRS     R0,R0,R2
+   \   00000210   0x7220             STRB     R0,[R4, #+8]
+    653                  HCD_HMI_Data.Flags.Show_Descale = ((current_level_params_ptr->Descale_Alarm_Threshold > (uint8)0) &&
+    654                                                     ((current_level_params_ptr->Descale_Alarm_Threshold == (uint8)1) || (HCD_Counters.Alarm_Counter == (uint8)2))) ? (TRUE) : (FALSE);
+   \   00000212   0x9900             LDR      R1,[SP, #+0]
+   \   00000214   0x7B49             LDRB     R1,[R1, #+13]
+   \   00000216   0x000A             MOVS     R2,R1
+   \   00000218   0xD006             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_30
+   \   0000021A   0x2901             CMP      R1,#+1
+   \   0000021C   0xD002             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_31
+   \   0000021E   0x7821             LDRB     R1,[R4, #+0]
+   \   00000220   0x2902             CMP      R1,#+2
+   \   00000222   0xD101             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_30
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_31: (+1)
+   \   00000224   0x2201             MOVS     R2,#+1
+   \   00000226   0xE000             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_32
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_30: (+1)
+   \   00000228   0x003A             MOVS     R2,R7
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_32: (+1)
+   \   0000022A   0x21FB             MOVS     R1,#+251
+   \   0000022C   0x4001             ANDS     R1,R1,R0
+   \   0000022E   0x0090             LSLS     R0,R2,#+2
+   \   00000230   0x2204             MOVS     R2,#+4
+   \   00000232   0x4010             ANDS     R0,R0,R2
+   \   00000234   0x4308             ORRS     R0,R0,R1
+   \   00000236   0x7220             STRB     R0,[R4, #+8]
+    655                  HCD_HMI_Data.Flags.Lockout = ((current_level_params_ptr->Lockout_Threshold > (uint8)0) && (HCD_Counters.Lockout_Counter >= current_level_params_ptr->Lockout_Threshold)) ? (TRUE) : (FALSE);
+   \   00000238   0x9900             LDR      R1,[SP, #+0]
+   \   0000023A   0x7B89             LDRB     R1,[R1, #+14]
+   \   0000023C   0x000A             MOVS     R2,R1
+   \   0000023E   0xD005             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_33
+   \   00000240   0x78A3             LDRB     R3,[R4, #+2]
+   \   00000242   0x428B             CMP      R3,R1
+   \   00000244   0x4192             SBCS     R2,R2,R2
+   \   00000246   0x43D2             MVNS     R2,R2
+   \   00000248   0x0FD2             LSRS     R2,R2,#+31
+   \   0000024A   0xE000             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_34
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_33: (+1)
+   \   0000024C   0x003A             MOVS     R2,R7
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_34: (+1)
+   \   0000024E   0x21F7             MOVS     R1,#+247
+   \   00000250   0x4001             ANDS     R1,R1,R0
+   \   00000252   0x00D0             LSLS     R0,R2,#+3
+   \   00000254   0x2208             MOVS     R2,#+8
+   \   00000256   0x4010             ANDS     R0,R0,R2
+   \   00000258   0x4308             ORRS     R0,R0,R1
+   \   0000025A   0x7220             STRB     R0,[R4, #+8]
+    656                  HCD_HMI_Data.Cycles_Remaining = HCD_Counters.Cycles_Remaining;
+   \   0000025C   0x7921             LDRB     R1,[R4, #+4]
+   \   0000025E   0x7261             STRB     R1,[R4, #+9]
+    657                  HCD_HMI_Data.Flags.Show_Countdown = (((uint8)HCD_HMI_Data.Flags.Show_Descale != (uint8)0) &&
+    658                                                     (HCD_HMI_Data.Cycles_Remaining > (uint8)0) && (HCD_HMI_Data.Cycles_Remaining <= HCD_Lowest_Lockout_Thr)) ? (TRUE) : (FALSE);
+   \   00000260   0x7A20             LDRB     R0,[R4, #+8]
+   \   00000262   0x0002             MOVS     R2,R0
+   \   00000264   0x0892             LSRS     R2,R2,#+2
+   \   00000266   0x07D2             LSLS     R2,R2,#+31
+   \   00000268   0xD507             BPL      ??HeaterCalcificationDetectionMonitor__CycleEnd_35
+   \   0000026A   0x000A             MOVS     R2,R1
+   \   0000026C   0xD005             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_35
+   \   0000026E   0x796B             LDRB     R3,[R5, #+5]
+   \   00000270   0x428B             CMP      R3,R1
+   \   00000272   0x4192             SBCS     R2,R2,R2
+   \   00000274   0x43D2             MVNS     R2,R2
+   \   00000276   0x0FD2             LSRS     R2,R2,#+31
+   \   00000278   0xE000             B        ??HeaterCalcificationDetectionMonitor__CycleEnd_36
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_35: (+1)
+   \   0000027A   0x003A             MOVS     R2,R7
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_36: (+1)
+   \   0000027C   0x21EF             MOVS     R1,#+239
+   \   0000027E   0x4001             ANDS     R1,R1,R0
+   \   00000280   0x0110             LSLS     R0,R2,#+4
+   \   00000282   0x2210             MOVS     R2,#+16
+   \   00000284   0x4010             ANDS     R0,R0,R2
+   \   00000286   0x4308             ORRS     R0,R0,R1
+   \   00000288   0x7220             STRB     R0,[R4, #+8]
+    659          
+    660                  if ((uint8)calcification_level_increased == (uint8)TRUE)
+   \   0000028A   0x2E01             CMP      R6,#+1
+   \   0000028C   0xD127             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_37
+    661                  {
+    662                      sint32 salt_alarm_led;
+    663                      REGULATIONS_CONFIG_TYPE *reg_config_ptr = Regulations__GetRegulationConfig(WHS_Function_Position);
+   \   0000028E   0x78A8             LDRB     R0,[R5, #+2]
+   \   00000290   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   00000294   0x0006             MOVS     R6,R0
+    664          
+    665                      if (((uint8)Variable__GetValue(VARIABLE_SALT_ALARM_LED, 0, &salt_alarm_led) == (uint8)TRUE) && (reg_config_ptr != NULL) &&
+    666                          (Regulations__IsRegulationChanged(WHS_Function_Position) == FALSE))
+   \   00000296   0xAA01             ADD      R2,SP,#+4
+   \   00000298   0x4639             MOV      R1,R7
+   \   0000029A   0x203E             MOVS     R0,#+62
+   \   0000029C   0x.... 0x....      BL       Variable__GetValue
+   \   000002A0   0x2801             CMP      R0,#+1
+   \   000002A2   0xD11C             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_37
+   \   000002A4   0x2E00             CMP      R6,#+0
+   \   000002A6   0xD01A             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_37
+   \   000002A8   0x78A8             LDRB     R0,[R5, #+2]
+   \   000002AA   0x.... 0x....      BL       Regulations__IsRegulationChanged
+   \   000002AE   0x2800             CMP      R0,#+0
+   \   000002B0   0xD115             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_37
+    667                      {
+    668          
+    669                          if ((salt_alarm_led == (SALT_ALARM_LED_STATE_TYPE)SALT_ALARM_LED_STATE_OFF) && (HCD_WHS_Increased_By < SF_HCD_Parameters->WHS_Max_Increase) &&
+    670                                  (Regulations__GetIndexValueByPosition(WHS_Function_Position) < reg_config_ptr->Num_Regulations))
+   \   000002B2   0x9801             LDR      R0,[SP, #+4]
+   \   000002B4   0x2800             CMP      R0,#+0
+   \   000002B6   0xD112             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_37
+   \   000002B8   0x7BA0             LDRB     R0,[R4, #+14]
+   \   000002BA   0x6BA9             LDR      R1,[R5, #+56]
+   \   000002BC   0x78C9             LDRB     R1,[R1, #+3]
+   \   000002BE   0x0709             LSLS     R1,R1,#+28
+   \   000002C0   0x0F09             LSRS     R1,R1,#+28
+   \   000002C2   0x4288             CMP      R0,R1
+   \   000002C4   0xD20B             BCS      ??HeaterCalcificationDetectionMonitor__CycleEnd_37
+   \   000002C6   0x78A8             LDRB     R0,[R5, #+2]
+   \   000002C8   0x.... 0x....      BL       Regulations__GetIndexValueByPosition
+   \   000002CC   0x79B1             LDRB     R1,[R6, #+6]
+   \   000002CE   0x4288             CMP      R0,R1
+   \   000002D0   0xD205             BCS      ??HeaterCalcificationDetectionMonitor__CycleEnd_37
+    671                          {
+    672                              increase_WHS = TRUE;
+   \   000002D2   0x2001             MOVS     R0,#+1
+   \   000002D4   0x4669             MOV      R1,SP
+   \   000002D6   0x7248             STRB     R0,[R1, #+9]
+    673                              HCD_WHS_Increased_By ++;
+   \   000002D8   0x7BA0             LDRB     R0,[R4, #+14]
+   \   000002DA   0x1C40             ADDS     R0,R0,#+1
+   \   000002DC   0x73A0             STRB     R0,[R4, #+14]
+    674                          }
+    675                      }
+    676                      else
+    677                      {
+    678                          // Do nothing in any of the following cases:
+    679                          // 1. it is not possible to retrieve the Salt Alarm Led status;
+    680                          // 2. it is not possible to retrieve the WHS function configuration (e.g.: the function is not present in setting file);
+    681                          // 3. there is a pending regulation change on WHS function: in this cases priority is given to the HMI request.
+    682                      }
+    683                  }
+    684          
+    685                  HCD_HMI_Data.Flags.Increase_WHS = ((uint8)increase_WHS == (uint8)TRUE) ? (TRUE) : (FALSE);
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_37: (+1)
+   \   000002DE   0x4668             MOV      R0,SP
+   \   000002E0   0x7A40             LDRB     R0,[R0, #+9]
+   \   000002E2   0x2801             CMP      R0,#+1
+   \   000002E4   0xD100             BNE      ??HeaterCalcificationDetectionMonitor__CycleEnd_38
+   \   000002E6   0x2701             MOVS     R7,#+1
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_38: (+1)
+   \   000002E8   0x7A20             LDRB     R0,[R4, #+8]
+   \   000002EA   0x21DF             MOVS     R1,#+223
+   \   000002EC   0x4001             ANDS     R1,R1,R0
+   \   000002EE   0x0178             LSLS     R0,R7,#+5
+   \   000002F0   0x2220             MOVS     R2,#+32
+   \   000002F2   0x4010             ANDS     R0,R0,R2
+   \   000002F4   0x4308             ORRS     R0,R0,R1
+   \   000002F6   0x7220             STRB     R0,[R4, #+8]
+    686          
+    687                  if (HCD_HMI_Data.Flags.Descale_Icon_Mode != (uint8)0)
+   \   000002F8   0x0780             LSLS     R0,R0,#+30
+   \   000002FA   0xD001             BEQ      ??HeaterCalcificationDetectionMonitor__CycleEnd_0
+    688                  {
+    689                      StatisticsDish__IncreaseCyclesWithLimescale();
+   \   000002FC   0x.... 0x....      BL       StatisticsDish__IncreaseCyclesWithLimescale
+    690                  }
+    691              }
+    692          }
+   \                     ??HeaterCalcificationDetectionMonitor__CycleEnd_0: (+1)
+   \   00000300   0xBDF7             POP      {R0-R2,R4-R7,PC}  ;; return
+    693          
+    694          
+
+   \                                 In section .text, align 2, keep-with-next
+    695          BOOL_TYPE HeaterCalcificationDetectionMonitor__GetLockoutStatus(void)
+    696          {
+    697          	return (((uint8)HCD_HMI_Data.Flags.Lockout == (uint8)0) ? (FALSE) : (TRUE));
+   \                     HeaterCalcificationDetectionMonitor__GetLockoutStatus: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable12
+   \   00000002   0x7A00             LDRB     R0,[R0, #+8]
+   \   00000004   0x0001             MOVS     R1,R0
+   \   00000006   0x08C9             LSRS     R1,R1,#+3
+   \   00000008   0x0008             MOVS     R0,R1
+   \   0000000A   0x07C0             LSLS     R0,R0,#+31
+   \   0000000C   0x0FC0             LSRS     R0,R0,#+31
+   \   0000000E   0x4770             BX       LR               ;; return
+    698          }
+    699          
+    700          //=====================================================================================================================
+    701          //-------------------------------------- Private Functions ------------------------------------------------------------
+    702          //=====================================================================================================================
+    703          
+    704          //----------------------------------------------------------------------------
+    705          /**
+    706           *  @brief      HeaterCalcificationDetectionModelSetup
+    707           *  @details    Function used to initialize and setup the model.
+    708           *
+    709           */
+
+   \                                 In section .text, align 2, keep-with-next
+    710          static void HeaterCalcificationDetectionModelSetup(void)
+    711          {    
+   \                     HeaterCalcificationDetectionModelSetup: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    712              /* Pack model data into RTM */
+    713          	HeaterCalcificationDetection_RTModelData->dwork = &HeaterCalcificationDetection_ObservableStates;
+   \   00000002   0x....             LDR      R0,??DataTable12_1
+   \   00000004   0x0001             MOVS     R1,R0
+   \   00000006   0x3148             ADDS     R1,R1,#+72
+   \   00000008   0x6441             STR      R1,[R0, #+68]
+    714                      
+    715          	// Initialize model
+    716          	HeaterCalcificationDetectionMaster__Initialize(HeaterCalcificationDetection_RTModelData);
+   \   0000000A   0x3044             ADDS     R0,R0,#+68
+   \   0000000C   0x.... 0x....      BL       HeaterCalcificationDetectionMaster__Initialize
+    717          }
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+    718          
+    719          
+    720          /*
+    721           * Calculates temperature thresholds array (one element for each Calcification Level) using linear interpolation between the values in setting file.
+    722           *
+    723           * @param input_current = value of heater current used as input for the interpolation
+    724           * @param interpolated_thresholds = pointer to the array of interpolated thresholds
+    725          
+    726           */
+
+   \                                 In section .text, align 2, keep-with-next
+    727          static void TemperatureThresholdsInterpolation(uint16 input_current, uint16 *interpolated_thresholds)
+    728          {
+   \                     TemperatureThresholdsInterpolation: (+1)
+   \   00000000   0xB5F2             PUSH     {R1,R4-R7,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+   \   00000004   0x0006             MOVS     R6,R0
+    729          	uint8 heater_current_index;
+    730          	uint8 level_index;
+    731          
+    732          	heater_current_index = 0;
+   \   00000006   0x2000             MOVS     R0,#+0
+   \   00000008   0x0005             MOVS     R5,R0
+   \   0000000A   0x....             LDR      R4,??DataTable12_1
+   \   0000000C   0xE001             B        ??TemperatureThresholdsInterpolation_0
+    733          
+    734          	while ((heater_current_index < HEATER_CURRENT_THRESHOLDS_NUM) && (input_current > ENDIANU16_STON(SF_HCD_Parameters->Heater_Current_i[heater_current_index])))
+    735          	{
+    736          		heater_current_index ++;
+   \                     ??TemperatureThresholdsInterpolation_1: (+1)
+   \   0000000E   0x1C6D             ADDS     R5,R5,#+1
+   \   00000010   0xB2ED             UXTB     R5,R5
+    737          	}
+   \                     ??TemperatureThresholdsInterpolation_0: (+1)
+   \   00000012   0x2D06             CMP      R5,#+6
+   \   00000014   0xDA0A             BGE      ??TemperatureThresholdsInterpolation_2
+   \   00000016   0x6BA1             LDR      R1,[R4, #+56]
+   \   00000018   0x006A             LSLS     R2,R5,#+1
+   \   0000001A   0x188A             ADDS     R2,R1,R2
+   \   0000001C   0x7B11             LDRB     R1,[R2, #+12]
+   \   0000001E   0x7B53             LDRB     R3,[R2, #+13]
+   \   00000020   0x061B             LSLS     R3,R3,#+24
+   \   00000022   0x0C1B             LSRS     R3,R3,#+16
+   \   00000024   0x4319             ORRS     R1,R1,R3
+   \   00000026   0x0032             MOVS     R2,R6
+   \   00000028   0x4291             CMP      R1,R2
+   \   0000002A   0xD3F0             BCC      ??TemperatureThresholdsInterpolation_1
+    738          
+    739          	if (heater_current_index == (uint8)0)
+   \                     ??TemperatureThresholdsInterpolation_2: (+1)
+   \   0000002C   0x2D00             CMP      R5,#+0
+   \   0000002E   0xD107             BNE      ??TemperatureThresholdsInterpolation_3
+    740          	{
+    741          		// Special case: input_current <= SF_HCD_Parameters->Heater_Current_i[0]
+    742          		heater_current_index = 1;
+   \   00000030   0x2501             MOVS     R5,#+1
+    743          		input_current = ENDIANU16_STON(SF_HCD_Parameters->Heater_Current_i[0]);
+   \   00000032   0x6BA1             LDR      R1,[R4, #+56]
+   \   00000034   0x7B0E             LDRB     R6,[R1, #+12]
+   \   00000036   0x7B4A             LDRB     R2,[R1, #+13]
+   \   00000038   0x0612             LSLS     R2,R2,#+24
+   \   0000003A   0x0C12             LSRS     R2,R2,#+16
+   \   0000003C   0x4316             ORRS     R6,R6,R2
+   \   0000003E   0xE008             B        ??TemperatureThresholdsInterpolation_4
+    744          	}
+    745          	else if (heater_current_index == HEATER_CURRENT_THRESHOLDS_NUM)
+   \                     ??TemperatureThresholdsInterpolation_3: (+1)
+   \   00000040   0x2D06             CMP      R5,#+6
+   \   00000042   0xD106             BNE      ??TemperatureThresholdsInterpolation_4
+    746          	{
+    747          		// Special case: input_current > SF_HCD_Parameters->Heater_Current_i[5]
+    748          		heater_current_index = 5;
+   \   00000044   0x2505             MOVS     R5,#+5
+    749          		input_current = ENDIANU16_STON(SF_HCD_Parameters->Heater_Current_i[5]);
+   \   00000046   0x6BA1             LDR      R1,[R4, #+56]
+   \   00000048   0x7D8E             LDRB     R6,[R1, #+22]
+   \   0000004A   0x7DCA             LDRB     R2,[R1, #+23]
+   \   0000004C   0x0612             LSLS     R2,R2,#+24
+   \   0000004E   0x0C12             LSRS     R2,R2,#+16
+   \   00000050   0x4316             ORRS     R6,R6,R2
+    750          	}
+    751          	else
+    752          	{
+    753          		// Do nothing
+    754          	}
+    755          
+    756          	for (level_index = 0; level_index < SF_Calcification_Levels_Number; level_index ++)
+   \                     ??TemperatureThresholdsInterpolation_4: (+1)
+   \   00000052   0x9000             STR      R0,[SP, #+0]
+   \   00000054   0xE005             B        ??TemperatureThresholdsInterpolation_5
+    757          	{
+    758          		const HEATER_CALCIFICATION_LEVEL_DIP_PARAMS_TYPE *current_level_params_ptr = SF_HCD_Lvl_Parameters + level_index;;
+    759          		uint16 temp_thresh_min = ENDIANU16_STON(current_level_params_ptr->Temperature_for_Heater_Power[heater_current_index - (uint8)1]);
+    760          		uint16 temp_thresh_max = ENDIANU16_STON(current_level_params_ptr->Temperature_for_Heater_Power[heater_current_index]);
+    761          		uint16 current_thres_min = ENDIANU16_STON(SF_HCD_Parameters->Heater_Current_i[heater_current_index - (uint8)1]);
+    762          		uint16 current_thres_max = ENDIANU16_STON(SF_HCD_Parameters->Heater_Current_i[heater_current_index]);
+    763          
+    764          		if ((current_thres_max - current_thres_min) != (uint16)0)
+    765          		{
+    766          			*(interpolated_thresholds + level_index) = (uint16)(temp_thresh_min + (((temp_thresh_max - temp_thresh_min) * (input_current - current_thres_min)) /(current_thres_max - current_thres_min)));
+    767          		}
+    768          		else
+    769          		{
+    770          			*(interpolated_thresholds + level_index) = temp_thresh_min;
+   \                     ??TemperatureThresholdsInterpolation_6: (+1)
+   \   00000056   0x9801             LDR      R0,[SP, #+4]
+   \   00000058   0x8007             STRH     R7,[R0, #+0]
+    771          		}
+   \                     ??TemperatureThresholdsInterpolation_7: (+1)
+   \   0000005A   0x9800             LDR      R0,[SP, #+0]
+   \   0000005C   0x1C40             ADDS     R0,R0,#+1
+   \   0000005E   0xB2C0             UXTB     R0,R0
+   \   00000060   0x9000             STR      R0,[SP, #+0]
+   \                     ??TemperatureThresholdsInterpolation_5: (+1)
+   \   00000062   0x9800             LDR      R0,[SP, #+0]
+   \   00000064   0x78E1             LDRB     R1,[R4, #+3]
+   \   00000066   0x4288             CMP      R0,R1
+   \   00000068   0xDA31             BGE      ??TemperatureThresholdsInterpolation_8
+   \   0000006A   0x0068             LSLS     R0,R5,#+1
+   \   0000006C   0x6BE1             LDR      R1,[R4, #+60]
+   \   0000006E   0x9A00             LDR      R2,[SP, #+0]
+   \   00000070   0x0112             LSLS     R2,R2,#+4
+   \   00000072   0x1889             ADDS     R1,R1,R2
+   \   00000074   0x1809             ADDS     R1,R1,R0
+   \   00000076   0x1E8A             SUBS     R2,R1,#+2
+   \   00000078   0x7817             LDRB     R7,[R2, #+0]
+   \   0000007A   0x7853             LDRB     R3,[R2, #+1]
+   \   0000007C   0x061B             LSLS     R3,R3,#+24
+   \   0000007E   0x0C1B             LSRS     R3,R3,#+16
+   \   00000080   0x431F             ORRS     R7,R7,R3
+   \   00000082   0x780A             LDRB     R2,[R1, #+0]
+   \   00000084   0x784B             LDRB     R3,[R1, #+1]
+   \   00000086   0x061B             LSLS     R3,R3,#+24
+   \   00000088   0x0C1B             LSRS     R3,R3,#+16
+   \   0000008A   0x431A             ORRS     R2,R2,R3
+   \   0000008C   0x4669             MOV      R1,SP
+   \   0000008E   0x810A             STRH     R2,[R1, #+8]
+   \   00000090   0x6BA1             LDR      R1,[R4, #+56]
+   \   00000092   0x1809             ADDS     R1,R1,R0
+   \   00000094   0x7A8A             LDRB     R2,[R1, #+10]
+   \   00000096   0x7AC8             LDRB     R0,[R1, #+11]
+   \   00000098   0x0600             LSLS     R0,R0,#+24
+   \   0000009A   0x0C00             LSRS     R0,R0,#+16
+   \   0000009C   0x4302             ORRS     R2,R2,R0
+   \   0000009E   0x7B08             LDRB     R0,[R1, #+12]
+   \   000000A0   0x7B4B             LDRB     R3,[R1, #+13]
+   \   000000A2   0x061B             LSLS     R3,R3,#+24
+   \   000000A4   0x0C1B             LSRS     R3,R3,#+16
+   \   000000A6   0x4318             ORRS     R0,R0,R3
+   \   000000A8   0x9903             LDR      R1,[SP, #+12]
+   \   000000AA   0x9B00             LDR      R3,[SP, #+0]
+   \   000000AC   0x005B             LSLS     R3,R3,#+1
+   \   000000AE   0x18C9             ADDS     R1,R1,R3
+   \   000000B0   0x9101             STR      R1,[SP, #+4]
+   \   000000B2   0x1A81             SUBS     R1,R0,R2
+   \   000000B4   0xD0CF             BEQ      ??TemperatureThresholdsInterpolation_6
+   \   000000B6   0x4668             MOV      R0,SP
+   \   000000B8   0x8900             LDRH     R0,[R0, #+8]
+   \   000000BA   0x003B             MOVS     R3,R7
+   \   000000BC   0x1AC0             SUBS     R0,R0,R3
+   \   000000BE   0x1AB2             SUBS     R2,R6,R2
+   \   000000C0   0x4350             MULS     R0,R2,R0
+   \   000000C2   0x.... 0x....      BL       __aeabi_idiv
+   \   000000C6   0x1838             ADDS     R0,R7,R0
+   \   000000C8   0x9901             LDR      R1,[SP, #+4]
+   \   000000CA   0x8008             STRH     R0,[R1, #+0]
+   \   000000CC   0xE7C5             B        ??TemperatureThresholdsInterpolation_7
+    772          	}
+    773          }
+   \                     ??TemperatureThresholdsInterpolation_8: (+1)
+   \   000000CE   0xBDFF             POP      {R0-R7,PC}       ;; return
+    774          
+    775          
+    776          /*
+    777           * Update the pointer to the set of parameters correspondent to the current HCD_Calcification_Level
+    778           * If HCD_Counters.Alarm_Counter, HCD_Counters.Reduction_Counter or HCD_Counters.Lockout_Counter exceeds their respective
+    779           * thresholds, the counters are aligned to the threshold' value. It implies resetting the counter if threshold equals 0.
+    780           *
+    781           * @param current_level_params_ptr = pointer to the set of parameters correspondent to the current HCD_Calcification_Level
+    782          
+    783           */
+
+   \                                 In section .text, align 2, keep-with-next
+    784          static void UpdateParamsPointerAndAlignCountersToThresholds(const HEATER_CALCIFICATION_LEVEL_DIP_PARAMS_TYPE **current_level_params_ptr)
+    785          {
+   \                     UpdateParamsPointerAndAlignCountersToThresholds: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    786              // Update pointer to the set of parameters correspondent to the current HCD_Calcification_Level
+    787             *current_level_params_ptr = SF_HCD_Lvl_Parameters + HCD_Calcification_Level;
+   \   00000002   0x....             LDR      R1,??DataTable12
+   \   00000004   0x....             LDR      R2,??DataTable12_1
+   \   00000006   0x6BD2             LDR      R2,[R2, #+60]
+   \   00000008   0x7B0B             LDRB     R3,[R1, #+12]
+   \   0000000A   0x011B             LSLS     R3,R3,#+4
+   \   0000000C   0x18D2             ADDS     R2,R2,R3
+   \   0000000E   0x6002             STR      R2,[R0, #+0]
+    788          
+    789              if (HCD_Counters.Alarm_Counter > (*current_level_params_ptr)->Descale_Alarm_Threshold)
+   \   00000010   0x7B52             LDRB     R2,[R2, #+13]
+   \   00000012   0x0013             MOVS     R3,R2
+   \   00000014   0x780C             LDRB     R4,[R1, #+0]
+   \   00000016   0x42A3             CMP      R3,R4
+   \   00000018   0xD200             BCS      ??UpdateParamsPointerAndAlignCountersToThreshol_0
+    790          	{
+    791          		HCD_Counters.Alarm_Counter = (*current_level_params_ptr)->Descale_Alarm_Threshold;
+   \   0000001A   0x700A             STRB     R2,[R1, #+0]
+   \                     ??UpdateParamsPointerAndAlignCountersToThreshol_0: (+1)
+   \   0000001C   0x6802             LDR      R2,[R0, #+0]
+   \   0000001E   0x7B12             LDRB     R2,[R2, #+12]
+   \   00000020   0x0692             LSLS     R2,R2,#+26
+   \   00000022   0x0E92             LSRS     R2,R2,#+26
+   \   00000024   0x0013             MOVS     R3,R2
+   \   00000026   0x784C             LDRB     R4,[R1, #+1]
+   \   00000028   0x42A3             CMP      R3,R4
+   \   0000002A   0xD200             BCS      ??UpdateParamsPointerAndAlignCountersToThreshol_1
+    792          	}
+    793          
+    794          	if (HCD_Counters.Reduction_Counter > (*current_level_params_ptr)->Calcification_Reduction_Threshold)
+    795          	{
+    796          		HCD_Counters.Reduction_Counter = (*current_level_params_ptr)->Calcification_Reduction_Threshold;
+   \   0000002C   0x704A             STRB     R2,[R1, #+1]
+   \                     ??UpdateParamsPointerAndAlignCountersToThreshol_1: (+1)
+   \   0000002E   0x6800             LDR      R0,[R0, #+0]
+   \   00000030   0x7B80             LDRB     R0,[R0, #+14]
+   \   00000032   0x0002             MOVS     R2,R0
+   \   00000034   0x788B             LDRB     R3,[R1, #+2]
+   \   00000036   0x429A             CMP      R2,R3
+   \   00000038   0xD200             BCS      ??UpdateParamsPointerAndAlignCountersToThreshol_2
+    797          	}
+    798          
+    799          	if (HCD_Counters.Lockout_Counter > (*current_level_params_ptr)->Lockout_Threshold)
+    800          	{
+    801          		HCD_Counters.Lockout_Counter = (*current_level_params_ptr)->Lockout_Threshold;
+   \   0000003A   0x7088             STRB     R0,[R1, #+2]
+    802          	}
+    803          }
+   \                     ??UpdateParamsPointerAndAlignCountersToThreshol_2: (+1)
+   \   0000003C   0xBC10             POP      {R4}
+   \   0000003E   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \   00000000   0x........         DC32     HCD_Cycle_Started
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_1:
+   \   00000000   0x00003F5C         DC32     0x3f5c
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_2:
+   \   00000000   0x........         DC32     HCD_Counters
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \   00000000   0x........         DC32     HCD_Cycle_Started
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10:
+   \   00000000   0x........         DC32     HCD_Counters
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12:
+   \   00000000   0x........         DC32     HCD_Counters
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable12_1:
+   \   00000000   0x........         DC32     HCD_Cycle_Started
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   HeaterCalcificationDetectionModelSetup
+         8   -> HeaterCalcificationDetectionMaster__Initialize
+      32   HeaterCalcificationDetectionMonitor__CycleEnded
+        32   -> Regulations__GetIndexValueByPosition
+        32   -> Regulations__GetRegulationConfig
+        32   -> Regulations__IsRegulationChanged
+        32   -> StatisticsDish__IncreaseCyclesWithLimescale
+        32   -> TemperatureThresholdsInterpolation
+        32   -> UpdateParamsPointerAndAlignCountersToThresholds
+        32   -> Variable__GetValue
+        32   -> __aeabi_memset
+       0   HeaterCalcificationDetectionMonitor__CycleStarted
+      40   HeaterCalcificationDetectionMonitor__Execution
+        40   -> HeaterCalcificationDetectionMaster__Execute
+        40   -> Regulations__IsRegulationChanged
+       0   HeaterCalcificationDetectionMonitor__GetHeaterClicks
+       0   HeaterCalcificationDetectionMonitor__GetLockoutStatus
+      32   HeaterCalcificationDetectionMonitor__Initialize
+        32   -> Hbl__GetGIIndexByGIID
+        32   -> Hbl__GetLoadIndexByLoadID
+        32   -> HeaterCalcificationDetectionModelSetup
+        32   -> Log__AddMessage
+        32   -> Micro__GetResetMode
+        32   -> NVData__GetLastRestoreStatus
+        32   -> Regulations__GetPositionByFunctionID
+        32   -> SettingFile__BasicLoader
+        32   -> __aeabi_memset4
+       8   HeaterCalcificationDetectionMonitor__Reset
+         8   -> HeaterCalcificationDetectionModelSetup
+       0   HeaterCalcificationDetectionMonitor__SetHeaterClicks
+       0   HeaterCalcificationDetectionMonitor__Start
+       0   HeaterCalcificationDetectionMonitor__Stop
+      36   TemperatureThresholdsInterpolation
+        36 __aeabi_idiv
+       4   UpdateParamsPointerAndAlignCountersToThresholds
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable12
+       4  ??DataTable12_1
+       4  ??DataTable7
+       4  ??DataTable7_1
+       4  ??DataTable7_2
+       4  ??DataTable8
+      41  HCD_Counters
+          HCD_HMI_Data
+          HCD_Calcification_Level
+          HCD_Enable
+          HCD_WHS_Increased_By
+          HCD_Bitmap
+          HCD_ModelData
+          HCD_Monitoring_States
+      96  HCD_Cycle_Started
+          HCD_Is_Active
+          WHS_Function_Position
+          SF_Calcification_Levels_Number
+          HCD_Highest_CL_Without_Lockout
+          HCD_Lowest_Lockout_Thr
+          HCD_Lowest_Click_Current_Thresholds
+          HCD_Heater_Clicks
+          HCD_Heater_Current_Threshold
+          HCD_Lowest_Click_Temperature
+          HCD_Lowest_Click_Current
+          HCD_Lowest_Click_Power
+          HCD_Reduction_Temperature
+          HCD_Reduction_Current
+          HCD_Reduction_Power
+          HCD_Reduction_Current_Thresholds
+          SF_HCD_Parameters
+          SF_HCD_Lvl_Parameters
+          Heater_Sensing_Paramters_Ptr
+          HeaterCalcificationDetection_RTModelData_
+          HeaterCalcificationDetection_ObservableStates
+      18  HeaterCalcificationDetectionModelSetup
+     770  HeaterCalcificationDetectionMonitor__CycleEnded
+      24  HeaterCalcificationDetectionMonitor__CycleStarted
+     116  HeaterCalcificationDetectionMonitor__Execution
+       6  HeaterCalcificationDetectionMonitor__GetHeaterClicks
+      16  HeaterCalcificationDetectionMonitor__GetLockoutStatus
+     420  HeaterCalcificationDetectionMonitor__Initialize
+      20  HeaterCalcificationDetectionMonitor__Reset
+       6  HeaterCalcificationDetectionMonitor__SetHeaterClicks
+      16  HeaterCalcificationDetectionMonitor__Start
+       8  HeaterCalcificationDetectionMonitor__Stop
+     208  TemperatureThresholdsInterpolation
+      64  UpdateParamsPointerAndAlignCountersToThresholds
+
+ 
+    96 bytes in section .bss
+ 1 720 bytes in section .text
+    41 bytes in section _appliance_segment
+ 
+ 1 720 bytes of CODE memory
+   137 bytes of DATA memory
+
+Errors: none
+Warnings: none

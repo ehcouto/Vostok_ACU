@@ -1,0 +1,2152 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:16:59
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Application/all/API018Diagnostic/API018Diagnostic.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\API018Diagnostic.lst
+#        -o obj\API018Diagnostic.obj
+#        source/XCategory/Application/all/API018Diagnostic/API018Diagnostic.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\API018Diagnostic.lst
+#    Object file  =  obj\API018Diagnostic.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Application\all\API018Diagnostic\API018Diagnostic.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      API Responsible to Expose Fault Codes and Statistics information.
+      5           *
+      6           *  @copyright  Copyright 2015-2016 Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+      7           */
+      8          
+      9          
+     10          //  --- Include Files -------------------------------------------------------------------------------------------------
+     11          
+     12          // -- This Module --
+     13          #include "SystemConfig.h"
+     14          
+     15          #if ((API018_CLIENT_FEATURE == ENABLED) || (API018_SERVER_FEATURE == ENABLED))
+     16          
+     17          #include "API018Diagnostic.h"
+     18          #include "API018Diagnostic_prv.h"
+
+   \                                 In section .text, align 4, keep-with-next
+   \   static __absolute API018_FAULT_KEY_ID_PAIR_TYPE const MAP_FAULT_KEYS_TO_FAULT_IDS[6]
+   \                     MAP_FAULT_KEYS_TO_FAULT_IDS:
+   \   00000000   0x0110             DC16 272
+   \   00000002   0x04 0x19          DC8 4, 25
+   \   00000004   0x0111             DC16 273
+   \   00000006   0x04 0x1A          DC8 4, 26
+   \   00000008   0x0101             DC16 257
+   \   0000000A   0x04 0x21          DC8 4, 33
+   \   0000000C   0x0106             DC16 262
+   \   0000000E   0x04 0x4C          DC8 4, 76
+   \   00000010   0x0107             DC16 263
+   \   00000012   0x04 0x4D          DC8 4, 77
+   \   00000014   0x0108             DC16 264
+   \   00000016   0x04 0x4E          DC8 4, 78
+     19          
+     20          // -- Other Modules --
+     21          #include <limits.h>
+     22          #include <string.h>
+     23          #include "Utilities.h"
+     24          #if (API018_SERVER_FEATURE == ENABLED)
+     25              #include "Statistics.h"
+     26          #endif
+     27          #if (API018_CLIENT_FEATURE == ENABLED)
+     28              #include "HmiFaultMgr.h"
+     29          #endif
+     30          
+     31          
+     32          // -- Compile-Time Assertions --
+     33          
+     34          
+     35          //  --- Private Declarations ------------------------------------------------------------------------------------------
+     36          
+     37          
+     38          // -- Private Constant Declarations --
+     39          
+     40          //! The bit that represents a request for version numbers in the payload of the
+     41          //! API018_CMD_REQUEST_STATISTICS OpCode.
+     42          #define API018_USE_VERSION_NUMBERS 7
+     43          
+     44          #ifndef REVEAL_MMP_BIT
+     45              //! An OpCode bit indicating that more Reveal messages are expected after the current message.
+     46              #define REVEAL_MMP_BIT          ((uint8)0x80)
+     47          #endif
+     48          
+     49          #if (API018_SERVER_FEATURE == DISABLED)
+     50              #ifndef API018_MAX_STORED_FAULTS
+     51                  //! The maximum number of fault error codes that the API018_CLIENT will hold.
+     52                  //! These fault error codes are transferred from the API018_SERVER at run-time.
+     53                  #define API018_MAX_STORED_FAULTS    5
+     54              #endif
+     55          #endif
+     56          
+     57          #ifndef STATISTICS_CROSS_PLATFORM_VERSION
+     58              #define STATISTICS_CROSS_PLATFORM_VERSION 0
+     59          #endif
+     60          #ifndef STATISTICS_PLATFORM_SPECIFIC_VERSION
+     61              #define STATISTICS_PLATFORM_SPECIFIC_VERSION 0
+     62          #endif
+     63          
+     64          
+     65          // -- Private Enumerated Constant Declarations --
+     66          
+     67          //! All the API018 command and feedback OpCodes.
+     68          typedef enum API018DIAGNOSTIC_OPCODE_ENUM
+     69          {
+     70              API018_CMD_REQUEST_STATISITCS_VERSION   = 1,    //!< Request the Statistics version numbers.
+     71              API018_FBK_PUBLISH_STATISTICS_VERSION   = 1,    //!< Publish the Statistics version numbers.
+     72              API018_CMD_GENERATE_FAULT               = 2,    //!< Generate a fault.
+     73              API018_CMD_CLEAR_SAVED_FAULTS           = 3,    //!< Clear all fault information.
+     74              API018_CMD_REMOVE_FAULT                 = 4,    //!< Remove an active fault.
+     75              API018_CMD_REQUEST_FAULT_CODES          = 5,    //!< Request fault codes for all recorded faults.
+     76              API018_FBK_PUBLISH_FAULT_CODES          = 5,    //!< Publish fault codes for all recorded faults.
+     77              API018_CMD_REQUEST_STATISTICS           = 6,    //!< Request statistics data.
+     78              API018_FBK_PUBLISH_STATISTICS           = 6,    //!< Publish statistics data.
+     79              API018_CMD_REQUEST_COMMON_LIFETIME_DATA = 7,    //!< Request cycle data.
+     80              API018_FBK_PUBLISH_COMMON_LIFETIME_DATA = 7,    //!< Publish cycle data.
+     81          
+     82              API018_CMD_REQUEST_DIAGNOSTIC_CONFIG    = 30,   //!< Request diagnostic configuration information.
+     83              API018_FBK_PUBLISH_DIAGNOSTIC_CONFIG    = 30    //!< Publish diagnostic configuration information.
+     84          } API018DIAGNOSTIC_OPCODE_TYPE;
+     85          
+     86          //! Enumerated list of the sections of the Statistics data.
+     87          //! The order of these sections must match the order of the sections in the Statistics structure.
+     88          typedef enum API018_SECTION_ENUM
+     89          {
+     90              API018_INACTIVE                     = 0,
+     91              API018_SECTION_HEADER               = 0,
+     92          
+     93              API018_SECTION_FIRST                = 1,
+     94          
+     95              API018_SECTION_LIFETIME             = 1,
+     96              API018_SECTION_CYCLES               = 2,
+     97              API018_SECTION_FAULTS               = 3,
+     98              API018_SECTION_PRE_FAULTS           = 4,
+     99              API018_SECTION_LAST_CYCLES          = 5,
+    100              API018_SECTION_FAULTS_BLACK_BOX     = 6,
+    101              API018_SECTION_PRE_FAULTS_BLACK_BOX = 7,
+    102          
+    103              API018_SECTION_LAST                 = 7,
+    104          
+    105              API018_SECTION_NONE_REMAINING       = 0x20,
+    106          
+    107              API018_SECTION_ALL                  = 0x40,     //!< Request for all statistics sections.
+    108          } API018_SECTION_TYPE;
+    109          
+    110          
+    111          // -- Private Structure Type Declarations --
+    112          
+    113          //! Data structure for the variables required by the API018Diagnostic module.
+    114          typedef struct API018_DIAGNOSTIC_DATA_STRUCT
+    115          {
+    116              #if (API018_SERVER_FEATURE == ENABLED)
+    117                  //! The offset into the section of the statistics data being sent.
+    118                  //! This value is used to remember at what position (mid structure) the next statistics data packet should start.
+    119                  uint16 Sending_Section_Offset;
+    120          
+    121                  //! The offset into the full set of statistics data being sent.
+    122                  //! This value is used as the 2nd & 3rd bytes (big-endian) of every statistics data packet.
+    123                  uint16 Sending_Total_Offset;
+    124          
+    125                  //! This is the section of the statistics data that was requested.
+    126                  //! A value of 255 indicates that all sections were requested.
+    127                  //! Refer to API018_SECTION_TYPE for section numbers.
+    128                  //! This value is used as the first byte of every statistics data packet.
+    129                  API018_SECTION_TYPE Requested_Sections;
+    130          
+    131                  //! These are the sections of the statistics data that are being published.
+    132                  //! Each bit represents a section. Refer to API018_SECTION_TYPE for bit values.
+    133                  //! As the sections are sent out, the bits are cleared.
+    134                  uint8 Sending_Sections_Mask;
+    135          
+    136                  //! The node that requested the statistics data.
+    137                  uint8 Requesting_Node;
+    138              #else   /* if only API018_CLIENT_FEATURE is ENABLED */
+    139                  //! An array of error codes that have occurred on the server.
+    140                  API018_ERROR_CODE_TYPE Error_Codes[API018_MAX_STORED_FAULTS];
+    141                  //! A structure that holds the common lifetime data
+    142                  API018_COMMON_LIFETIME_TYPE Common_Lifetime_Data;
+    143              #endif
+    144              #if (API018_CLIENT_FEATURE == ENABLED)
+    145                  //! The number of error codes received and stored in the Error_Codes[] array.
+    146                  uint8 Number_Of_Error_Codes;
+    147              #endif
+    148          } API018_DIAGNOSTIC_DATA_TYPE;
+    149          
+    150          //! The data structure repeated for each statistics section in the header section.
+    151          typedef struct API018_HEADER_ENTRY_STRUCT
+    152          {
+    153              uint8 Number_Of_Elements;
+    154              uint8 Size_Of_Elements;
+    155          } API018_HEADER_ENTRY_TYPE;
+    156          
+    157          
+    158          //  --- Private Definitions -------------------------------------------------------------------------------------------
+    159          
+    160          
+    161          // -- Private Flash-Based Constant Definitions --
+    162          
+    163          #if (API018_SERVER_FEATURE == ENABLED)
+    164          //! A packet that conveys platform-specific information about diagnostic information.
+    165          //! This is the payload of the API018_FBK_PUBLISH_DIAGNOSTIC_CONFIG message.
+
+   \                                 In section .text, align 4, keep-with-next
+    166          static const PACKED API018_HEADER_ENTRY_TYPE API018_HEADER_PACKET[] =
+   \                     API018_HEADER_PACKET:
+   \   00000000   0x01 0x88          DC8 1, 136, 10, 55, 5, 6, 5, 6, 0, 0, 2, 6, 2, 6, 0, 0
+   \              0x0A 0x37    
+   \              0x05 0x06    
+   \              0x05 0x06    
+   \              0x00 0x00    
+   \              0x02 0x06    
+   \              0x02 0x06    
+   \              0x00 0x00    
+    167          {
+    168              {
+    169                  1,                                          // Number of lifetime data elements
+    170                  sizeof(STATISTICS_LIFETIME_TYPE)            // Size of each lifetime data element
+    171              },
+    172              {
+    173                  STATISTICS_SAVED_CYCLES,                    // Number of saved cycle data elements
+    174                  #if (STATISTICS_SAVED_CYCLES > 0)
+    175                      sizeof(STATISTICS_CYCLE_TYPE)           // Size of each saved cycle data element
+    176                  #else
+    177                      0
+    178                  #endif
+    179              },
+    180              {
+    181                  STATISTICS_SAVED_FAULTS,                    // Number of fault data elements
+    182                  sizeof(STATISTICS_FAULT_TYPE)               // Size of each fault data element
+    183              },
+    184              {
+    185                  STATISTICS_SAVED_PRE_FAULTS,                // Number of pre-fault data elements
+    186                  sizeof(STATISTICS_FAULT_TYPE)               // Size of each pre-fault data element
+    187              },
+    188              {
+    189                  STATISTICS_SAVED_LAST_CYCLES,               // Number of saved last cycle data elements
+    190                  #if (STATISTICS_SAVED_LAST_CYCLES > 0)
+    191                      sizeof(PLATFORM_LAST_CYCLE_TYPE)        // Size of each saved last cycle data element
+    192                  #else
+    193                      0
+    194                  #endif
+    195              },
+    196              {
+    197                  STATISTICS_SAVED_FAULT_BLACK_BOX,           // Number of black box data elements for faults
+    198                  #if (STATISTICS_SAVED_FAULT_BLACK_BOX > 0)
+    199                      sizeof(PLATFORM_BLACK_BOX_TYPE)         // Size of each saved black box data element
+    200                  #else
+    201                      0
+    202                  #endif
+    203              },
+    204              {
+    205                  STATISTICS_SAVED_PRE_FAULT_BLACK_BOX,       // Number of black box data elements for pre-faults
+    206                  #if (STATISTICS_SAVED_PRE_FAULT_BLACK_BOX > 0)
+    207                      sizeof(PLATFORM_BLACK_BOX_TYPE)         // Size of each saved black box data element
+    208                  #else
+    209                      0
+    210                  #endif
+    211              }
+    212          };
+    213          CT_ASSERT(ELEMENTS_IN_ARRAY(API018_HEADER_PACKET) == (API018_SECTION_LAST - API018_SECTION_FIRST) + 1);
+    214          #endif      // #if (API018_SERVER_FEATURE == ENABLED)
+    215          
+    216          
+    217          // -- Private Variable Definitions --
+    218          
+    219          //! The variables required by the API018Diagnostic module.
+
+   \                                 In section .bss, align 4
+    220          static API018_DIAGNOSTIC_DATA_TYPE Api018;
+   \                     Api018:
+   \   00000000                      DS8 8
+    221          
+    222          
+    223          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    224          
+    225          #if (API018_SERVER_FEATURE == ENABLED)
+    226              static BOOL_TYPE GenerateFault(uint8 node, API018_FAULT_KEY_TYPE fault_key);
+    227              static API018_SECTION_TYPE GetNextSectionID(uint8 requested);
+    228              static void* GetSectionAddress(API018_SECTION_TYPE requested);
+    229              static uint16 GetSectionSize(API018_SECTION_TYPE section);
+    230              static BOOL_TYPE RemoveFault(uint8 node, API018_FAULT_KEY_TYPE fault_key);
+    231          #endif      // #if (API018_SERVER_FEATURE == ENABLED)
+    232          
+    233          
+    234          //=====================================================================================================================
+    235          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    236          //=====================================================================================================================
+    237          
+    238          
+    239          //---------------------------------------------------------------------------------------------------------------------
+    240          /**
+    241           * Initialize the API018Diagnostic module variables.
+    242           */
+
+   \                                 In section .text, align 2, keep-with-next
+    243          void API018Diagnostic__Initialize(void)
+    244          {
+   \                     API018Diagnostic__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    245              #if (API018_SERVER_FEATURE == ENABLED)
+    246                  memset(&Api018, 0, sizeof(Api018));
+   \   00000002   0x2200             MOVS     R2,#+0
+   \   00000004   0x2108             MOVS     R1,#+8
+   \   00000006   0x....             LDR      R0,??DataTable3
+   \   00000008   0x.... 0x....      BL       __aeabi_memset4
+    247              #else   /* if only API018_CLIENT_FEATURE is ENABLED */
+    248                  memset(&Api018, UCHAR_MAX, sizeof(Api018));
+    249              #endif
+    250              #if (API018_CLIENT_FEATURE == ENABLED)
+    251                  Api018.Number_Of_Error_Codes = 0;
+    252              #endif
+    253          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+    254          
+    255          
+    256          //---------------------------------------------------------------------------------------------------------------------
+    257          /**
+    258           * Background function for the API018Diagnostic module.
+    259           */
+
+   \                                 In section .text, align 2, keep-with-next
+    260          void API018Diagnostic__Handler25ms(void)
+    261          {
+   \                     API018Diagnostic__Handler25ms: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable3
+   \   00000002   0x7900             LDRB     R0,[R0, #+4]
+   \   00000004   0x2800             CMP      R0,#+0
+   \   00000006   0xD100             BNE      ??API018Diagnostic__Handler25ms_0
+   \   00000008   0x4770             BX       LR
+    262              #if (API018_SERVER_FEATURE == ENABLED)
+    263                  if (Api018.Requested_Sections != API018_INACTIVE)
+    264                  {
+    265                      // Setup local variables to build the transmission packet.
+    266                      // If any failures are detected, the static variables are unchanged and we can try again after 25ms.
+    267                      uint8  sending_sections       = Api018.Sending_Sections_Mask ;
+   \                     ??API018Diagnostic__Handler25ms_0: (+1)
+   \   0000000A   0xB5F0             PUSH     {R4-R7,LR}
+   \   0000000C   0xB085             SUB      SP,SP,#+20
+   \   0000000E   0x....             LDR      R0,??DataTable3
+   \   00000010   0x7940             LDRB     R0,[R0, #+5]
+   \   00000012   0x4669             MOV      R1,SP
+   \   00000014   0x7008             STRB     R0,[R1, #+0]
+    268                      uint16 sending_section_offset = Api018.Sending_Section_Offset;
+   \   00000016   0x....             LDR      R0,??DataTable3
+   \   00000018   0x8805             LDRH     R5,[R0, #+0]
+    269                      uint16 sending_total_offset   = Api018.Sending_Total_Offset  ;
+   \   0000001A   0x8840             LDRH     R0,[R0, #+2]
+   \   0000001C   0x9004             STR      R0,[SP, #+16]
+    270          
+    271                      // Setup a message packet for transmission with the requested sections and the buffer offset.
+    272                      REVEAL_COMMAND_TYPE* msg = Reveal__NewFeedback(API018DIAGNOSTIC_NUM, API018_FBK_PUBLISH_STATISTICS, Api018.Requesting_Node, REVEAL_PAYLOAD_SIZE);
+   \   0000001E   0x2341             MOVS     R3,#+65
+   \   00000020   0x....             LDR      R0,??DataTable3
+   \   00000022   0x7982             LDRB     R2,[R0, #+6]
+   \   00000024   0x2106             MOVS     R1,#+6
+   \   00000026   0x2012             MOVS     R0,#+18
+   \   00000028   0x.... 0x....      BL       Reveal__NewFeedback
+   \   0000002C   0x9001             STR      R0,[SP, #+4]
+    273                      uint8 payload_remaining = REVEAL_PAYLOAD_SIZE;
+   \   0000002E   0x2041             MOVS     R0,#+65
+   \   00000030   0x9002             STR      R0,[SP, #+8]
+   \   00000032   0x2601             MOVS     R6,#+1
+    274                      PASS_FAIL_TYPE success = PASS;
+    275                      if (Api018.Sending_Total_Offset == 0)
+   \   00000034   0x....             LDR      R0,??DataTable3
+   \   00000036   0x8840             LDRH     R0,[R0, #+2]
+   \   00000038   0x2800             CMP      R0,#+0
+   \   0000003A   0xD12F             BNE      ??API018Diagnostic__Handler25ms_1
+    276                      {
+    277                          // This is the first packet. Include the section(s) and the size of the section(s).
+    278                          success = Reveal__AddDataU8(msg, Api018.Requested_Sections);
+   \   0000003C   0x....             LDR      R0,??DataTable3
+   \   0000003E   0x7901             LDRB     R1,[R0, #+4]
+   \   00000040   0x9801             LDR      R0,[SP, #+4]
+   \   00000042   0x.... 0x....      BL       Reveal__AddDataU8
+   \   00000046   0x0006             MOVS     R6,R0
+    279                          payload_remaining -= sizeof(uint8);
+   \   00000048   0x2440             MOVS     R4,#+64
+    280                          BOOL_TYPE use_version_numbers = (BOOL_TYPE)BIT_TEST(Api018.Requested_Sections, API018_USE_VERSION_NUMBERS);
+    281                          if (use_version_numbers)
+   \   0000004A   0x....             LDR      R0,??DataTable3
+   \   0000004C   0x7900             LDRB     R0,[R0, #+4]
+   \   0000004E   0x09C0             LSRS     R0,R0,#+7
+   \   00000050   0xD00D             BEQ      ??API018Diagnostic__Handler25ms_2
+    282                          {
+    283                              success &= Reveal__AddDataU8(msg, STATISTICS_CROSS_PLATFORM_VERSION);
+   \   00000052   0x2101             MOVS     R1,#+1
+   \   00000054   0x9801             LDR      R0,[SP, #+4]
+   \   00000056   0x.... 0x....      BL       Reveal__AddDataU8
+   \   0000005A   0x4030             ANDS     R0,R0,R6
+    284                              success &= Reveal__AddDataU8(msg, STATISTICS_PLATFORM_SPECIFIC_VERSION);
+   \   0000005C   0x0004             MOVS     R4,R0
+   \   0000005E   0x2106             MOVS     R1,#+6
+   \   00000060   0x9801             LDR      R0,[SP, #+4]
+   \   00000062   0x.... 0x....      BL       Reveal__AddDataU8
+   \   00000066   0x0006             MOVS     R6,R0
+   \   00000068   0x0020             MOVS     R0,R4
+   \   0000006A   0x4006             ANDS     R6,R6,R0
+    285                              payload_remaining -= 2 * sizeof(uint8);
+   \   0000006C   0x243E             MOVS     R4,#+62
+    286                          }
+    287                          API018_SECTION_TYPE section = (API018_SECTION_TYPE)(Api018.Requested_Sections & ~(1 << API018_USE_VERSION_NUMBERS));
+    288                          uint16 total_size = GetSectionSize(section);
+   \                     ??API018Diagnostic__Handler25ms_2: (+1)
+   \   0000006E   0x....             LDR      R0,??DataTable3
+   \   00000070   0x7900             LDRB     R0,[R0, #+4]
+   \   00000072   0x0640             LSLS     R0,R0,#+25
+   \   00000074   0x0E40             LSRS     R0,R0,#+25
+   \   00000076   0x.... 0x....      BL       GetSectionSize
+    289                          success &= Reveal__AddDataU16(msg, total_size);
+   \   0000007A   0x0001             MOVS     R1,R0
+   \   0000007C   0x9801             LDR      R0,[SP, #+4]
+   \   0000007E   0x.... 0x....      BL       Reveal__AddDataU16
+   \   00000082   0x4030             ANDS     R0,R0,R6
+   \   00000084   0x0006             MOVS     R6,R0
+    290                          payload_remaining -= sizeof(uint16);
+   \   00000086   0x1EA0             SUBS     R0,R4,#+2
+   \   00000088   0xB2C0             UXTB     R0,R0
+   \   0000008A   0x9002             STR      R0,[SP, #+8]
+   \   0000008C   0xE006             B        ??API018Diagnostic__Handler25ms_1
+    291                      }
+    292          
+    293                      // Add data to the message until the payload is full or there are no more statistics sections.
+    294                      while ((success == PASS) && (payload_remaining > 0) && (sending_sections > 0))
+    295                      {
+    296                          // Get information on the next section that must be sent.
+    297                          API018_SECTION_TYPE section = GetNextSectionID(sending_sections);
+    298                          uint8* section_address = GetSectionAddress(section);
+    299                          uint16 section_size = 0;
+    300                          if (section != API018_SECTION_NONE_REMAINING)
+    301                          {
+    302                              section_size = API018_HEADER_PACKET[section - 1].Number_Of_Elements * API018_HEADER_PACKET[section - 1].Size_Of_Elements;
+    303                          }
+    304                          if ((section_address == NULL) || (section_size == 0))
+    305                          {
+    306                              // Empty section was passed successfully.
+    307                              BIT_CLR(sending_sections, section);
+   \                     ??API018Diagnostic__Handler25ms_3: (+1)
+   \   0000008E   0x4668             MOV      R0,SP
+   \   00000090   0x7800             LDRB     R0,[R0, #+0]
+   \   00000092   0x2101             MOVS     R1,#+1
+   \   00000094   0x40B9             LSLS     R1,R1,R7
+   \   00000096   0x4388             BICS     R0,R0,R1
+   \   00000098   0x4669             MOV      R1,SP
+   \   0000009A   0x7008             STRB     R0,[R1, #+0]
+    308                          }
+   \                     ??API018Diagnostic__Handler25ms_1: (+1)
+   \   0000009C   0x2E01             CMP      R6,#+1
+   \   0000009E   0xD145             BNE      ??API018Diagnostic__Handler25ms_4
+   \   000000A0   0x9802             LDR      R0,[SP, #+8]
+   \   000000A2   0x2800             CMP      R0,#+0
+   \   000000A4   0xD042             BEQ      ??API018Diagnostic__Handler25ms_4
+   \   000000A6   0x4668             MOV      R0,SP
+   \   000000A8   0x7800             LDRB     R0,[R0, #+0]
+   \   000000AA   0x2800             CMP      R0,#+0
+   \   000000AC   0xD03E             BEQ      ??API018Diagnostic__Handler25ms_4
+   \   000000AE   0x4668             MOV      R0,SP
+   \   000000B0   0x7800             LDRB     R0,[R0, #+0]
+   \   000000B2   0x.... 0x....      BL       GetNextSectionID
+   \   000000B6   0x0007             MOVS     R7,R0
+   \   000000B8   0x.... 0x....      BL       GetSectionAddress
+   \   000000BC   0x2100             MOVS     R1,#+0
+   \   000000BE   0x2F20             CMP      R7,#+32
+   \   000000C0   0xD006             BEQ      ??API018Diagnostic__Handler25ms_5
+   \   000000C2   0x....             LDR      R1,??DataTable4
+   \   000000C4   0x007A             LSLS     R2,R7,#+1
+   \   000000C6   0x188A             ADDS     R2,R1,R2
+   \   000000C8   0x1E92             SUBS     R2,R2,#+2
+   \   000000CA   0x7811             LDRB     R1,[R2, #+0]
+   \   000000CC   0x7852             LDRB     R2,[R2, #+1]
+   \   000000CE   0x4351             MULS     R1,R2,R1
+   \                     ??API018Diagnostic__Handler25ms_5: (+1)
+   \   000000D0   0x2800             CMP      R0,#+0
+   \   000000D2   0xD0DC             BEQ      ??API018Diagnostic__Handler25ms_3
+   \   000000D4   0x000A             MOVS     R2,R1
+   \   000000D6   0xD0DA             BEQ      ??API018Diagnostic__Handler25ms_3
+    309                          else
+    310                          {
+    311                              // Determine what part of the section fits in the payload.
+    312                              uint16 section_remaining = section_size - sending_section_offset;
+   \   000000D8   0x002A             MOVS     R2,R5
+   \   000000DA   0x1A89             SUBS     R1,R1,R2
+   \   000000DC   0xB289             UXTH     R1,R1
+   \   000000DE   0x9103             STR      R1,[SP, #+12]
+    313                              uint8 section_transmit = ((section_remaining <= payload_remaining) ? section_remaining : payload_remaining);
+   \   000000E0   0x9C02             LDR      R4,[SP, #+8]
+   \   000000E2   0x428C             CMP      R4,R1
+   \   000000E4   0xDD00             BLE      ??API018Diagnostic__Handler25ms_6
+   \   000000E6   0x000C             MOVS     R4,R1
+    314          
+    315                              // Send part (or all) of the next section.
+    316                              success = Reveal__AddDataU8Buffer(msg, &section_address[sending_section_offset], section_transmit);
+   \                     ??API018Diagnostic__Handler25ms_6: (+1)
+   \   000000E8   0x0022             MOVS     R2,R4
+   \   000000EA   0xB2D2             UXTB     R2,R2
+   \   000000EC   0x1941             ADDS     R1,R0,R5
+   \   000000EE   0x9801             LDR      R0,[SP, #+4]
+   \   000000F0   0x.... 0x....      BL       Reveal__AddDataU8Buffer
+   \   000000F4   0x0006             MOVS     R6,R0
+    317                              if (success == PASS)
+   \   000000F6   0x2E01             CMP      R6,#+1
+   \   000000F8   0xD113             BNE      ??API018Diagnostic__Handler25ms_7
+    318                              {
+    319                                  if (section_transmit == section_remaining)
+   \   000000FA   0x9803             LDR      R0,[SP, #+12]
+   \   000000FC   0x4284             CMP      R4,R0
+   \   000000FE   0xD108             BNE      ??API018Diagnostic__Handler25ms_8
+    320                                  {
+    321                                      // All of the statistics section was sent.
+    322                                      BIT_CLR(sending_sections, section);
+   \   00000100   0x4668             MOV      R0,SP
+   \   00000102   0x7800             LDRB     R0,[R0, #+0]
+   \   00000104   0x2101             MOVS     R1,#+1
+   \   00000106   0x40B9             LSLS     R1,R1,R7
+   \   00000108   0x4388             BICS     R0,R0,R1
+   \   0000010A   0x4669             MOV      R1,SP
+   \   0000010C   0x7008             STRB     R0,[R1, #+0]
+    323                                      sending_section_offset = 0;
+   \   0000010E   0x2500             MOVS     R5,#+0
+   \   00000110   0xE002             B        ??API018Diagnostic__Handler25ms_9
+    324                                  }
+    325                                  else
+    326                                  {
+    327                                      // Only part of the statistics section was sent.
+    328                                      sending_section_offset += section_transmit;
+   \                     ??API018Diagnostic__Handler25ms_8: (+1)
+   \   00000112   0x0020             MOVS     R0,R4
+   \   00000114   0x182D             ADDS     R5,R5,R0
+   \   00000116   0xB2AD             UXTH     R5,R5
+    329                                  }
+    330                                  sending_total_offset += section_transmit;
+   \                     ??API018Diagnostic__Handler25ms_9: (+1)
+   \   00000118   0x9804             LDR      R0,[SP, #+16]
+   \   0000011A   0x0021             MOVS     R1,R4
+   \   0000011C   0x1840             ADDS     R0,R0,R1
+   \   0000011E   0xB280             UXTH     R0,R0
+   \   00000120   0x9004             STR      R0,[SP, #+16]
+    331                              }
+    332                              payload_remaining -= section_transmit;
+   \                     ??API018Diagnostic__Handler25ms_7: (+1)
+   \   00000122   0x9802             LDR      R0,[SP, #+8]
+   \   00000124   0x1B00             SUBS     R0,R0,R4
+   \   00000126   0xB2C0             UXTB     R0,R0
+   \   00000128   0x9002             STR      R0,[SP, #+8]
+   \   0000012A   0xE7B7             B        ??API018Diagnostic__Handler25ms_1
+    333                          }
+    334                      }
+    335          
+    336                      if (success == PASS)
+   \                     ??API018Diagnostic__Handler25ms_4: (+1)
+   \   0000012C   0x2E01             CMP      R6,#+1
+   \   0000012E   0xD11E             BNE      ??API018Diagnostic__Handler25ms_10
+    337                      {
+    338                          if (sending_sections > 0)
+   \   00000130   0x4668             MOV      R0,SP
+   \   00000132   0x7800             LDRB     R0,[R0, #+0]
+   \   00000134   0x2800             CMP      R0,#+0
+   \   00000136   0xD005             BEQ      ??API018Diagnostic__Handler25ms_11
+    339                          {
+    340                              msg->opcode |= REVEAL_MMP_BIT;
+   \   00000138   0x9801             LDR      R0,[SP, #+4]
+   \   0000013A   0x7840             LDRB     R0,[R0, #+1]
+   \   0000013C   0x2180             MOVS     R1,#+128
+   \   0000013E   0x4301             ORRS     R1,R1,R0
+   \   00000140   0x9801             LDR      R0,[SP, #+4]
+   \   00000142   0x7041             STRB     R1,[R0, #+1]
+    341                          }
+    342                          if (Reveal__QueueCommand(msg) == TRUE)
+   \                     ??API018Diagnostic__Handler25ms_11: (+1)
+   \   00000144   0x9801             LDR      R0,[SP, #+4]
+   \   00000146   0x.... 0x....      BL       Reveal__QueueCommand
+   \   0000014A   0x2801             CMP      R0,#+1
+   \   0000014C   0xD10F             BNE      ??API018Diagnostic__Handler25ms_10
+    343                          {
+    344                              if (sending_sections > 0)
+   \   0000014E   0x4668             MOV      R0,SP
+   \   00000150   0x7800             LDRB     R0,[R0, #+0]
+   \   00000152   0x2800             CMP      R0,#+0
+   \   00000154   0xD008             BEQ      ??API018Diagnostic__Handler25ms_12
+    345                              {
+    346                                  // Save status for the next statistics data packet.
+    347                                  Api018.Sending_Sections_Mask  = sending_sections      ;
+   \   00000156   0x4668             MOV      R0,SP
+   \   00000158   0x7800             LDRB     R0,[R0, #+0]
+   \   0000015A   0x....             LDR      R1,??DataTable3
+   \   0000015C   0x7148             STRB     R0,[R1, #+5]
+    348                                  Api018.Sending_Section_Offset = sending_section_offset;
+   \   0000015E   0x4608             MOV      R0,R1
+   \   00000160   0x8005             STRH     R5,[R0, #+0]
+    349                                  Api018.Sending_Total_Offset   = sending_total_offset  ;
+   \   00000162   0x9804             LDR      R0,[SP, #+16]
+   \   00000164   0x8048             STRH     R0,[R1, #+2]
+   \   00000166   0xE002             B        ??API018Diagnostic__Handler25ms_10
+    350                              }
+    351                              else
+    352                              {
+    353                                  Api018.Requested_Sections = API018_INACTIVE;
+   \                     ??API018Diagnostic__Handler25ms_12: (+1)
+   \   00000168   0x2000             MOVS     R0,#+0
+   \   0000016A   0x....             LDR      R1,??DataTable3
+   \   0000016C   0x7108             STRB     R0,[R1, #+4]
+    354                              }
+    355                          }
+    356                      }
+    357                  }
+    358              #endif      // #if (API018_SERVER_FEATURE == ENABLED)
+    359          }
+   \                     ??API018Diagnostic__Handler25ms_10: (+1)
+   \   0000016E   0xB005             ADD      SP,SP,#+20
+   \   00000170   0xBDF0             POP      {R4-R7,PC}       ;; return
+    360          
+    361          
+    362          //---------------------------------------------------------------------------------------------------------------------
+    363          /**
+    364           * This method parses API018 commands sent to a broadcast node or exclusively to this node.
+    365           * @param cmd = Pointer to the received command message.
+    366           * @return REVEAL_RECIPE_STATUS_TYPE that expresses the result of the parsing.
+    367           */
+
+   \                                 In section .text, align 4, keep-with-next
+    368          REVEAL_RECIPE_STATUS_TYPE API018Diagnostic__CommandParser(REVEAL_MSG_TYPE* cmd)
+    369          {
+   \                     API018Diagnostic__CommandParser: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0005             MOVS     R5,R0
+    370              REVEAL_RECIPE_STATUS_TYPE reveal_response = NVO_RS_UNSUP_UNAVAILABLE;
+   \   00000004   0x2406             MOVS     R4,#+6
+    371          
+    372              switch ((API018DIAGNOSTIC_OPCODE_TYPE)cmd->op_code)
+   \   00000006   0x7928             LDRB     R0,[R5, #+4]
+   \   00000008   0x06C0             LSLS     R0,R0,#+27
+   \   0000000A   0x0EC0             LSRS     R0,R0,#+27
+   \   0000000C   0x2801             CMP      R0,#+1
+   \   0000000E   0xD00F             BEQ      ??API018Diagnostic__CommandParser_0
+   \   00000010   0x2802             CMP      R0,#+2
+   \   00000012   0xD02B             BEQ      ??API018Diagnostic__CommandParser_1
+   \   00000014   0x2803             CMP      R0,#+3
+   \   00000016   0xD03B             BEQ      ??API018Diagnostic__CommandParser_2
+   \   00000018   0x2804             CMP      R0,#+4
+   \   0000001A   0xD03F             BEQ      ??API018Diagnostic__CommandParser_3
+   \   0000001C   0x2805             CMP      R0,#+5
+   \   0000001E   0xD04F             BEQ      ??API018Diagnostic__CommandParser_4
+   \   00000020   0x2806             CMP      R0,#+6
+   \   00000022   0xD05A             BEQ      ??API018Diagnostic__CommandParser_5
+   \   00000024   0x2807             CMP      R0,#+7
+   \   00000026   0xD07D             BEQ      ??API018Diagnostic__CommandParser_6
+   \   00000028   0x281E             CMP      R0,#+30
+   \   0000002A   0xD100             BNE      .+4
+   \   0000002C   0xE0B1             B        ??API018Diagnostic__CommandParser_7
+   \   0000002E   0xE0C7             B        ??API018Diagnostic__CommandParser_8
+    373              {
+    374              #if (API018_SERVER_FEATURE == ENABLED)
+    375                  case API018_CMD_REQUEST_STATISITCS_VERSION:
+    376                      // No payload
+    377                      {
+    378                          REVEAL_COMMAND_TYPE* fbk = Reveal__NewFeedback(API018DIAGNOSTIC_NUM, API018_FBK_PUBLISH_STATISTICS_VERSION, cmd->node_id, 2);
+   \                     ??API018Diagnostic__CommandParser_0: (+1)
+   \   00000030   0x2302             MOVS     R3,#+2
+   \   00000032   0x7828             LDRB     R0,[R5, #+0]
+   \   00000034   0x0002             MOVS     R2,R0
+   \   00000036   0x0912             LSRS     R2,R2,#+4
+   \   00000038   0x2101             MOVS     R1,#+1
+   \   0000003A   0x2012             MOVS     R0,#+18
+   \   0000003C   0x.... 0x....      BL       Reveal__NewFeedback
+   \   00000040   0x0005             MOVS     R5,R0
+    379                          if ((Reveal__AddDataU8(fbk, STATISTICS_CROSS_PLATFORM_VERSION) == PASS) &&
+    380                              (Reveal__AddDataU8(fbk, STATISTICS_PLATFORM_SPECIFIC_VERSION) == PASS) &&
+    381                              (Reveal__QueueCommand(fbk) == TRUE))
+   \   00000042   0x2101             MOVS     R1,#+1
+   \   00000044   0x.... 0x....      BL       Reveal__AddDataU8
+   \   00000048   0x2801             CMP      R0,#+1
+   \   0000004A   0xD000             BEQ      .+4
+   \   0000004C   0xE0B9             B        ??API018Diagnostic__CommandParser_9
+   \   0000004E   0x4621             MOV      R1,R4
+   \   00000050   0x0028             MOVS     R0,R5
+   \   00000052   0x.... 0x....      BL       Reveal__AddDataU8
+   \   00000056   0x2801             CMP      R0,#+1
+   \   00000058   0xD000             BEQ      .+4
+   \   0000005A   0xE0B2             B        ??API018Diagnostic__CommandParser_9
+   \   0000005C   0x0028             MOVS     R0,R5
+   \   0000005E   0x.... 0x....      BL       Reveal__QueueCommand
+   \   00000062   0x2801             CMP      R0,#+1
+   \   00000064   0xD000             BEQ      .+4
+   \   00000066   0xE0AC             B        ??API018Diagnostic__CommandParser_9
+    382                          {
+    383                              reveal_response = NVO_RS_READY;
+   \   00000068   0x2400             MOVS     R4,#+0
+   \   0000006A   0xE0AA             B        ??API018Diagnostic__CommandParser_9
+    384                          }
+    385                      }
+    386                      break;
+    387          
+    388                  case API018_CMD_GENERATE_FAULT:
+    389                      // Client Fault Key (U16).
+    390                      if (cmd->size >= 2)
+   \                     ??API018Diagnostic__CommandParser_1: (+1)
+   \   0000006C   0x20FC             MOVS     R0,#+252
+   \   0000006E   0x5C28             LDRB     R0,[R5, R0]
+   \   00000070   0x2802             CMP      R0,#+2
+   \   00000072   0xDA00             BGE      .+4
+   \   00000074   0xE0A5             B        ??API018Diagnostic__CommandParser_9
+    391                      {
+    392                          API018_FAULT_KEY_TYPE fault_key = (API018_FAULT_KEY_TYPE)Utilities__ConvertArrayTo16bits(&cmd->payload[0]);
+   \   00000076   0x1D68             ADDS     R0,R5,#+5
+   \   00000078   0x.... 0x....      BL       Utilities__ConvertArrayTo16bits
+    393                          if (GenerateFault(cmd->node_id, fault_key) == TRUE)
+   \   0000007C   0x0001             MOVS     R1,R0
+   \   0000007E   0x7828             LDRB     R0,[R5, #+0]
+   \   00000080   0x0900             LSRS     R0,R0,#+4
+   \   00000082   0x.... 0x....      BL       GenerateFault
+   \   00000086   0x2801             CMP      R0,#+1
+   \   00000088   0xD000             BEQ      .+4
+   \   0000008A   0xE09A             B        ??API018Diagnostic__CommandParser_9
+    394                          {
+    395                              reveal_response = NVO_RS_READY;
+   \   0000008C   0x2400             MOVS     R4,#+0
+   \   0000008E   0xE098             B        ??API018Diagnostic__CommandParser_9
+    396                          }
+    397                      }
+    398                      break;
+    399          
+    400                  case API018_CMD_CLEAR_SAVED_FAULTS:
+    401                      // No payload.
+    402                      Fault__ResetAllObservers();
+   \                     ??API018Diagnostic__CommandParser_2: (+1)
+   \   00000090   0x.... 0x....      BL       Fault__ResetAllObservers
+    403                      Statistics__ClearFaultData();
+   \   00000094   0x.... 0x....      BL       Statistics__ClearFaultData
+    404                      reveal_response = NVO_RS_READY;
+   \   00000098   0x2400             MOVS     R4,#+0
+    405                      break;
+   \   0000009A   0xE092             B        ??API018Diagnostic__CommandParser_9
+    406          
+    407                  case API018_CMD_REMOVE_FAULT:
+    408                      // Client Fault Key (U16).
+    409                      if (cmd->size >= 2)
+   \                     ??API018Diagnostic__CommandParser_3: (+1)
+   \   0000009C   0x20FC             MOVS     R0,#+252
+   \   0000009E   0x5C28             LDRB     R0,[R5, R0]
+   \   000000A0   0x2802             CMP      R0,#+2
+   \   000000A2   0xDA00             BGE      .+4
+   \   000000A4   0xE08D             B        ??API018Diagnostic__CommandParser_9
+    410                      {
+    411                          API018_FAULT_KEY_TYPE fault_key = (API018_FAULT_KEY_TYPE)Utilities__ConvertArrayTo16bits(&cmd->payload[0]);
+   \   000000A6   0x1D68             ADDS     R0,R5,#+5
+   \   000000A8   0x.... 0x....      BL       Utilities__ConvertArrayTo16bits
+   \   000000AC   0x0001             MOVS     R1,R0
+    412                          if (RemoveFault(cmd->node_id, fault_key) == TRUE)
+   \   000000AE   0x7828             LDRB     R0,[R5, #+0]
+   \   000000B0   0x0900             LSRS     R0,R0,#+4
+   \   000000B2   0x.... 0x....      BL       RemoveFault
+   \   000000B6   0x2801             CMP      R0,#+1
+   \   000000B8   0xD000             BEQ      .+4
+   \   000000BA   0xE082             B        ??API018Diagnostic__CommandParser_9
+    413                          {
+    414                              reveal_response = NVO_RS_READY;
+   \   000000BC   0x2400             MOVS     R4,#+0
+   \   000000BE   0xE080             B        ??API018Diagnostic__CommandParser_9
+    415                          }
+    416                      }
+    417                      break;
+    418          
+    419                  case API018_CMD_REQUEST_FAULT_CODES:
+    420                      // No payload = Send all fault codes.
+    421                      // Or expect one parameter.
+    422                      //      Fault Index (U8) 0 = Most recently fault, 1 = Next most recent fault, ..., 255 = Send all fault codes.
+    423                      {
+    424                          uint8 index = ((cmd->size >= 1) ? cmd->payload[0] : 255);
+   \                     ??API018Diagnostic__CommandParser_4: (+1)
+   \   000000C0   0x20FC             MOVS     R0,#+252
+   \   000000C2   0x5C28             LDRB     R0,[R5, R0]
+   \   000000C4   0x2800             CMP      R0,#+0
+   \   000000C6   0xD001             BEQ      ??API018Diagnostic__CommandParser_10
+   \   000000C8   0x7968             LDRB     R0,[R5, #+5]
+   \   000000CA   0xE000             B        ??API018Diagnostic__CommandParser_11
+   \                     ??API018Diagnostic__CommandParser_10: (+1)
+   \   000000CC   0x20FF             MOVS     R0,#+255
+    425                          if (API018Diagnostic__PublishFaultBasic(index) == PASS)
+   \                     ??API018Diagnostic__CommandParser_11: (+1)
+   \   000000CE   0x.... 0x....      BL       API018Diagnostic__PublishFaultBasic
+   \   000000D2   0x2801             CMP      R0,#+1
+   \   000000D4   0xD175             BNE      ??API018Diagnostic__CommandParser_9
+    426                          {
+    427                              reveal_response = NVO_RS_READY;
+   \   000000D6   0x2400             MOVS     R4,#+0
+   \   000000D8   0xE073             B        ??API018Diagnostic__CommandParser_9
+    428                          }
+    429                      }
+    430                      break;
+    431          
+    432                  case API018_CMD_REQUEST_STATISTICS:
+    433                      // No payload = Send all statistics data.
+    434                      // Or expect one parameter with which section should be published.
+    435                      //      Section Number (U8) 1 = Section 1, 2 = Section 2, etc.
+    436                      if (Api018.Requested_Sections == API018_INACTIVE)
+   \                     ??API018Diagnostic__CommandParser_5: (+1)
+   \   000000DA   0x....             LDR      R0,??DataTable4_1
+   \   000000DC   0x7901             LDRB     R1,[R0, #+4]
+   \   000000DE   0x2900             CMP      R1,#+0
+   \   000000E0   0xD16F             BNE      ??API018Diagnostic__CommandParser_9
+    437                      {
+    438                          // Save the request byte to echo back in the response.
+    439                          // Valid values are [0x01..0x07,0x80..0x87]
+    440                          uint8 requested = ((cmd->size > 0) ? cmd->payload[0] : API018_SECTION_ALL);
+   \   000000E2   0x21FC             MOVS     R1,#+252
+   \   000000E4   0x5C69             LDRB     R1,[R5, R1]
+   \   000000E6   0x2900             CMP      R1,#+0
+   \   000000E8   0xD001             BEQ      ??API018Diagnostic__CommandParser_12
+   \   000000EA   0x7969             LDRB     R1,[R5, #+5]
+   \   000000EC   0xE000             B        ??API018Diagnostic__CommandParser_13
+   \                     ??API018Diagnostic__CommandParser_12: (+1)
+   \   000000EE   0x2140             MOVS     R1,#+64
+    441          
+    442                          // Determine which section is requested.
+    443                          uint8 section = requested;
+    444                          BIT_CLR(section, API018_USE_VERSION_NUMBERS);
+   \                     ??API018Diagnostic__CommandParser_13: (+1)
+   \   000000F0   0x064A             LSLS     R2,R1,#+25
+   \   000000F2   0x0E52             LSRS     R2,R2,#+25
+    445                          section = (section ? section : API018_SECTION_ALL);
+   \   000000F4   0xD100             BNE      ??API018Diagnostic__CommandParser_14
+   \   000000F6   0x2240             MOVS     R2,#+64
+    446          
+    447                          // Validate the request.
+    448                          if (((API018_SECTION_FIRST <= section) && (section <= API018_SECTION_LAST)) ||
+    449                              (section == API018_SECTION_ALL))
+   \                     ??API018Diagnostic__CommandParser_14: (+1)
+   \   000000F8   0x2A00             CMP      R2,#+0
+   \   000000FA   0xD001             BEQ      ??API018Diagnostic__CommandParser_15
+   \   000000FC   0x2A08             CMP      R2,#+8
+   \   000000FE   0xDB01             BLT      ??API018Diagnostic__CommandParser_16
+   \                     ??API018Diagnostic__CommandParser_15: (+1)
+   \   00000100   0x2A40             CMP      R2,#+64
+   \   00000102   0xD15E             BNE      ??API018Diagnostic__CommandParser_9
+    450                          {
+    451                              Api018.Requesting_Node = cmd->node_id;
+   \                     ??API018Diagnostic__CommandParser_16: (+1)
+   \   00000104   0x782B             LDRB     R3,[R5, #+0]
+   \   00000106   0x091B             LSRS     R3,R3,#+4
+   \   00000108   0x7183             STRB     R3,[R0, #+6]
+    452                              Api018.Requested_Sections = (API018_SECTION_TYPE)requested;
+   \   0000010A   0x7101             STRB     R1,[R0, #+4]
+    453                              if (section == API018_SECTION_ALL)
+   \   0000010C   0x2A40             CMP      R2,#+64
+   \   0000010E   0xD102             BNE      ??API018Diagnostic__CommandParser_17
+    454                              {
+    455                                  #define API018_SECTION_MASK_ALL ((1 << (API018_SECTION_LAST + 1)) - 2)
+    456                                  Api018.Sending_Sections_Mask = API018_SECTION_MASK_ALL;
+   \   00000110   0x21FE             MOVS     R1,#+254
+   \   00000112   0x7141             STRB     R1,[R0, #+5]
+   \   00000114   0xE002             B        ??API018Diagnostic__CommandParser_18
+    457                              }
+    458                              else
+    459                              {
+    460                                  Api018.Sending_Sections_Mask = (1 << section);
+   \                     ??API018Diagnostic__CommandParser_17: (+1)
+   \   00000116   0x2101             MOVS     R1,#+1
+   \   00000118   0x4091             LSLS     R1,R1,R2
+   \   0000011A   0x7141             STRB     R1,[R0, #+5]
+    461                              }
+    462                              Api018.Sending_Section_Offset = 0;
+   \                     ??API018Diagnostic__CommandParser_18: (+1)
+   \   0000011C   0x2400             MOVS     R4,#+0
+   \   0000011E   0x0021             MOVS     R1,R4
+   \   00000120   0x6001             STR      R1,[R0, #+0]
+    463                              Api018.Sending_Total_Offset = 0;
+    464                              reveal_response = NVO_RS_READY;
+   \   00000122   0xE04E             B        ??API018Diagnostic__CommandParser_9
+    465                          }
+    466                      }
+    467                      break;
+    468          
+    469                  case  API018_CMD_REQUEST_COMMON_LIFETIME_DATA:
+    470                      // No payload.
+    471                      {
+    472                          PASS_FAIL_TYPE result = PASS;
+   \                     ??API018Diagnostic__CommandParser_6: (+1)
+   \   00000124   0x2501             MOVS     R5,#+1
+    473                          #if (STATISTICS_SAVED_CYCLES > 0)
+    474                              REVEAL_COMMAND_TYPE* fbk = Reveal__NewFeedback(API018DIAGNOSTIC_NUM, API018_FBK_PUBLISH_COMMON_LIFETIME_DATA, REVEAL_BROADCAST_NODE, 10);
+   \   00000126   0x230A             MOVS     R3,#+10
+   \   00000128   0x220F             MOVS     R2,#+15
+   \   0000012A   0x2107             MOVS     R1,#+7
+   \   0000012C   0x2012             MOVS     R0,#+18
+   \   0000012E   0x.... 0x....      BL       Reveal__NewFeedback
+   \   00000132   0x0007             MOVS     R7,R0
+    475                          #else
+    476                              REVEAL_COMMAND_TYPE* fbk = Reveal__NewFeedback(API018DIAGNOSTIC_NUM, API018_FBK_PUBLISH_COMMON_LIFETIME_DATA, REVEAL_BROADCAST_NODE, 6);
+    477                          #endif
+    478                          STATISTICS_LIFETIME_TYPE* cycle_lifetime_data = Statistics__GetLifetimeData();
+   \   00000134   0x.... 0x....      BL       Statistics__GetLifetimeData
+   \   00000138   0x0006             MOVS     R6,R0
+    479                          #if (STATISTICS_SAVED_CYCLES > 0)
+    480                              // Get cycles started if it is available.
+    481                              uint16 cycle_count = cycle_lifetime_data->Cycles_Started;
+   \   0000013A   0x7AB0             LDRB     R0,[R6, #+10]
+   \   0000013C   0x7AF1             LDRB     R1,[R6, #+11]
+   \   0000013E   0x0609             LSLS     R1,R1,#+24
+   \   00000140   0x0C09             LSRS     R1,R1,#+16
+   \   00000142   0x4308             ORRS     R0,R0,R1
+   \   00000144   0x4669             MOV      R1,SP
+   \   00000146   0x8008             STRH     R0,[R1, #+0]
+    482                          #else
+    483                              // Get cycles completed if cycles started is not available.
+    484                              uint16 cycle_count = cycle_lifetime_data->Cycles_Completed;
+    485                          #endif
+    486                          // Send lifetime seconds and cycle count.
+    487                          if ((Reveal__AddDataU32(fbk, cycle_lifetime_data->Seconds) != PASS) ||
+    488                              (Reveal__AddDataU16(fbk, cycle_count) != PASS))
+   \   00000148   0x0030             MOVS     R0,R6
+   \   0000014A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000014E   0x0001             MOVS     R1,R0
+   \   00000150   0x0038             MOVS     R0,R7
+   \   00000152   0x.... 0x....      BL       Reveal__AddDataU32
+   \   00000156   0x2801             CMP      R0,#+1
+   \   00000158   0xD106             BNE      ??API018Diagnostic__CommandParser_19
+   \   0000015A   0x4668             MOV      R0,SP
+   \   0000015C   0x8801             LDRH     R1,[R0, #+0]
+   \   0000015E   0x0038             MOVS     R0,R7
+   \   00000160   0x.... 0x....      BL       Reveal__AddDataU16
+   \   00000164   0x2801             CMP      R0,#+1
+   \   00000166   0xD000             BEQ      ??API018Diagnostic__CommandParser_20
+    489                          {
+    490                              result = FAIL;
+   \                     ??API018Diagnostic__CommandParser_19: (+1)
+   \   00000168   0x2500             MOVS     R5,#+0
+    491                          }
+    492                          #if (STATISTICS_SAVED_CYCLES > 0)
+    493                              // Send cycle run-time if available.
+    494                              if (Reveal__AddDataU32(fbk, cycle_lifetime_data->Seconds_Running_Cycles) != PASS)
+   \                     ??API018Diagnostic__CommandParser_20: (+1)
+   \   0000016A   0x0030             MOVS     R0,R6
+   \   0000016C   0x300C             ADDS     R0,R0,#+12
+   \   0000016E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000172   0x0001             MOVS     R1,R0
+   \   00000174   0x0038             MOVS     R0,R7
+   \   00000176   0x.... 0x....      BL       Reveal__AddDataU32
+   \   0000017A   0x2801             CMP      R0,#+1
+   \   0000017C   0xD000             BEQ      ??API018Diagnostic__CommandParser_21
+    495                              {
+    496                                  result = FAIL;
+   \   0000017E   0x2500             MOVS     R5,#+0
+    497                              }
+    498                          #endif
+    499                          // Transmit the message.
+    500                          if (result == PASS)
+   \                     ??API018Diagnostic__CommandParser_21: (+1)
+   \   00000180   0x2D01             CMP      R5,#+1
+   \   00000182   0xD11E             BNE      ??API018Diagnostic__CommandParser_9
+    501                          {
+    502                              if (Reveal__QueueCommand(fbk) == TRUE)
+   \   00000184   0x0038             MOVS     R0,R7
+   \   00000186   0x.... 0x....      BL       Reveal__QueueCommand
+   \   0000018A   0x2801             CMP      R0,#+1
+   \   0000018C   0xD119             BNE      ??API018Diagnostic__CommandParser_9
+    503                              {
+    504                                  reveal_response = NVO_RS_READY;
+   \   0000018E   0x2400             MOVS     R4,#+0
+   \   00000190   0xE017             B        ??API018Diagnostic__CommandParser_9
+    505                              }
+    506                          }
+    507                      }
+    508                      break;
+    509          
+    510                  case API018_CMD_REQUEST_DIAGNOSTIC_CONFIG:
+    511                      // No payload.
+    512                      {
+    513                          REVEAL_COMMAND_TYPE* fbk = Reveal__NewFeedback(API018DIAGNOSTIC_NUM, API018_FBK_PUBLISH_DIAGNOSTIC_CONFIG, cmd->node_id, sizeof(API018_HEADER_PACKET));
+   \                     ??API018Diagnostic__CommandParser_7: (+1)
+   \   00000192   0x230E             MOVS     R3,#+14
+   \   00000194   0x7828             LDRB     R0,[R5, #+0]
+   \   00000196   0x0002             MOVS     R2,R0
+   \   00000198   0x0912             LSRS     R2,R2,#+4
+   \   0000019A   0x211E             MOVS     R1,#+30
+   \   0000019C   0x2012             MOVS     R0,#+18
+   \   0000019E   0x.... 0x....      BL       Reveal__NewFeedback
+   \   000001A2   0x0005             MOVS     R5,R0
+    514                          if ((Reveal__AddDataU8Buffer(fbk, (void*)API018_HEADER_PACKET, sizeof(API018_HEADER_PACKET)) == PASS) &&
+    515                              (Reveal__QueueCommand(fbk) == TRUE))
+   \   000001A4   0x220E             MOVS     R2,#+14
+   \   000001A6   0xBF00             Nop      
+   \   000001A8   0x....             ADR.N    R1,API018_HEADER_PACKET
+   \   000001AA   0x.... 0x....      BL       Reveal__AddDataU8Buffer
+   \   000001AE   0x2801             CMP      R0,#+1
+   \   000001B0   0xD107             BNE      ??API018Diagnostic__CommandParser_9
+   \   000001B2   0x0028             MOVS     R0,R5
+   \   000001B4   0x.... 0x....      BL       Reveal__QueueCommand
+   \   000001B8   0x2801             CMP      R0,#+1
+   \   000001BA   0xD102             BNE      ??API018Diagnostic__CommandParser_9
+    516                          {
+    517                              reveal_response = NVO_RS_READY;
+   \   000001BC   0x2400             MOVS     R4,#+0
+   \   000001BE   0xE000             B        ??API018Diagnostic__CommandParser_9
+    518                          }
+    519                      }
+    520                      break;
+    521              #endif      // #if (API018_SERVER_FEATURE == ENABLED)
+    522          
+    523                  default:
+    524                      reveal_response = NVO_RS_UNSUP_OP_CODE;
+   \                     ??API018Diagnostic__CommandParser_8: (+1)
+   \   000001C0   0x2405             MOVS     R4,#+5
+    525                      break;
+    526              }
+    527          
+    528              return (reveal_response);
+   \                     ??API018Diagnostic__CommandParser_9: (+1)
+   \   000001C2   0x0020             MOVS     R0,R4
+   \   000001C4   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    529          }
+    530          
+    531          
+    532          //---------------------------------------------------------------------------------------------------------------------
+    533          /**
+    534           * This method parses API018 feedbacks sent to a broadcast or exclusively to this node.
+    535           * @param fbk = Pointer to the received feedback message.
+    536           */
+
+   \                                 In section .text, align 2, keep-with-next
+    537          void API018Diagnostic__FeedbackParser(REVEAL_MSG_TYPE * fbk)
+    538          {
+    539              #if ((API018_SERVER_FEATURE == DISABLED) && (API018_CLIENT_FEATURE == ENABLED))
+    540                  switch ((API018DIAGNOSTIC_OPCODE_TYPE)fbk->op_code)
+    541                  {
+    542                      case API018_FBK_PUBLISH_FAULT_CODES:
+    543                          // 4 bytes repeated:
+    544                          //      Fault Index (U8) 0 = Most recently recorded fault, 1 = Next most recently recorded fault, etc.
+    545                          //      Fault Code (U8)
+    546                          //      Fault Sub-Code (U8)
+    547                          //      Engineering Code (U8)
+    548                          Api018.Number_Of_Error_Codes = 0;
+    549                          memset(Api018.Error_Codes, UCHAR_MAX, sizeof(Api018.Error_Codes));
+    550                          for (uint8 i = 0; i < fbk->size; i += 4)
+    551                          {
+    552                              uint8 fault_index = i / 4;
+    553                              if (fault_index < API018_MAX_STORED_FAULTS)
+    554                              {
+    555                                  API018_ERROR_CODE_TYPE* e = &Api018.Error_Codes[fault_index];
+    556                                  e->F_Code = fbk->payload[i + 1];
+    557                                  e->E_Code = fbk->payload[i + 2];
+    558                                  e->Eng_Code = fbk->payload[i + 3];
+    559                                  Api018.Number_Of_Error_Codes++;
+    560                              }
+    561                          }
+    562                          HmiFaultMgr__ReceiveFaultData();
+    563                          break;
+    564          
+    565                      case API018_FBK_PUBLISH_COMMON_LIFETIME_DATA:
+    566                          //Seconds-payload bytes 0 to 3
+    567                          //Cycles_Count-payload bytes 4 to 5
+    568                          //Seconds_Running_Cycle-payload bytes 6 to 9(When STATISTICS_SAVED_CYCLES>0)
+    569                          if (fbk->size >= 6)
+    570                          {
+    571                              Api018.Common_Lifetime_Data.Seconds=Utilities__ConvertArrayTo32bits(&fbk->payload[0]);
+    572                              Api018.Common_Lifetime_Data.Cycle_Count=Utilities__ConvertArrayTo16bits(&fbk->payload[4]);
+    573                              if (fbk->size >= 10)
+    574                              {
+    575                                  Api018.Common_Lifetime_Data.Seconds_Running_Cycles=Utilities__ConvertArrayTo32bits(&fbk->payload[6]);
+    576                              }
+    577                          }
+    578                          break;
+    579          
+    580                      default:
+    581                          break;
+    582                  }
+    583              #endif
+    584          }
+   \                     API018Diagnostic__FeedbackParser: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    585          
+    586          
+    587          //---------------------------------------------------------------------------------------------------------------------
+    588          /**
+    589           * Acknowledge parser for API018.
+    590           * @param node = Node address that acknowledged the command message.
+    591           * @param api = The API of the previously sent command message.
+    592           * @param opcode = The OpCode of the previously sent command message.
+    593           * @param reasoncode = The response sent in response to the previously sent command message.
+    594           */
+
+   \                                 In section .text, align 2, keep-with-next
+    595          void API018Diagnostic__AckParser(uint8 node, uint8 api, uint8 op_code, REVEAL_RECIPE_STATUS_TYPE reason_code)
+    596          {
+    597          }
+   \                     API018Diagnostic__AckParser: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    598          
+    599          
+    600          #if (API018_SERVER_FEATURE == ENABLED)
+    601          //---------------------------------------------------------------------------------------------------------------------
+    602          /**
+    603           * Publish the fault code for the indexed fault.
+    604           * @param requested_fault_index = Index into the list of stored faults.
+    605           *                                255 indicates that all faults are requested.
+    606           * @return PASS if the message was sent. Otherwise FAIL.
+    607           */
+
+   \                                 In section .text, align 2, keep-with-next
+    608          PASS_FAIL_TYPE API018Diagnostic__PublishFaultBasic(uint8 requested_fault_index)
+    609          {
+   \                     API018Diagnostic__PublishFaultBasic: (+1)
+   \   00000000   0xB5F1             PUSH     {R0,R4-R7,LR}
+   \   00000002   0xB084             SUB      SP,SP,#+16
+   \   00000004   0x2400             MOVS     R4,#+0
+    610              PASS_FAIL_TYPE result = FAIL;
+    611          
+    612              // Request a feedback message buffer with the maximum data that may be needed.
+    613              uint8 fault_count = Statistics__ApplyFaultAgeCutoff();
+   \   00000006   0x.... 0x....      BL       Statistics__ApplyFaultAgeCutoff
+   \   0000000A   0x9002             STR      R0,[SP, #+8]
+    614              REVEAL_COMMAND_TYPE* fbk = Reveal__NewFeedback(API018DIAGNOSTIC_NUM, API018_FBK_PUBLISH_FAULT_CODES, REVEAL_BROADCAST_NODE, fault_count * STATISTICS_SAVED_FAULTS);
+   \   0000000C   0x0081             LSLS     R1,R0,#+2
+   \   0000000E   0x180B             ADDS     R3,R1,R0
+   \   00000010   0xB2DB             UXTB     R3,R3
+   \   00000012   0x220F             MOVS     R2,#+15
+   \   00000014   0x2105             MOVS     R1,#+5
+   \   00000016   0x2012             MOVS     R0,#+18
+   \   00000018   0x.... 0x....      BL       Reveal__NewFeedback
+   \   0000001C   0x9000             STR      R0,[SP, #+0]
+    615              if (fbk != NULL)
+   \   0000001E   0x2800             CMP      R0,#+0
+   \   00000020   0xD050             BEQ      ??API018Diagnostic__PublishFaultBasic_0
+    616              {
+    617                  // Iterate through the fault data.
+    618                  result = (PASS_FAIL_TYPE)(requested_fault_index == 255);
+   \   00000022   0x4668             MOV      R0,SP
+   \   00000024   0x7C00             LDRB     R0,[R0, #+16]
+   \   00000026   0x9001             STR      R0,[SP, #+4]
+   \   00000028   0x28FF             CMP      R0,#+255
+   \   0000002A   0xD100             BNE      ??API018Diagnostic__PublishFaultBasic_1
+   \   0000002C   0x2401             MOVS     R4,#+1
+    619                  STATISTICS_FAULT_TYPE* faults = Statistics__GetFaultData(0);
+   \                     ??API018Diagnostic__PublishFaultBasic_1: (+1)
+   \   0000002E   0x2000             MOVS     R0,#+0
+   \   00000030   0x.... 0x....      BL       Statistics__GetFaultData
+   \   00000034   0x0005             MOVS     R5,R0
+    620                  for (uint8 fault_index = 0; fault_index < fault_count; fault_index++, faults++)
+   \   00000036   0x2600             MOVS     R6,#+0
+   \   00000038   0xE001             B        ??API018Diagnostic__PublishFaultBasic_2
+   \                     ??API018Diagnostic__PublishFaultBasic_3: (+1)
+   \   0000003A   0x1C76             ADDS     R6,R6,#+1
+   \   0000003C   0x1DAD             ADDS     R5,R5,#+6
+   \                     ??API018Diagnostic__PublishFaultBasic_2: (+1)
+   \   0000003E   0xB2F6             UXTB     R6,R6
+   \   00000040   0x9802             LDR      R0,[SP, #+8]
+   \   00000042   0x4286             CMP      R6,R0
+   \   00000044   0xDA36             BGE      ??API018Diagnostic__PublishFaultBasic_4
+    621                  {
+    622                      if ((requested_fault_index >= STATISTICS_SAVED_FAULTS) ||
+    623                          (requested_fault_index == fault_index))
+   \   00000046   0x9801             LDR      R0,[SP, #+4]
+   \   00000048   0x2805             CMP      R0,#+5
+   \   0000004A   0xDA04             BGE      ??API018Diagnostic__PublishFaultBasic_5
+   \   0000004C   0x4668             MOV      R0,SP
+   \   0000004E   0x7C00             LDRB     R0,[R0, #+16]
+   \   00000050   0x0031             MOVS     R1,R6
+   \   00000052   0x4288             CMP      R0,R1
+   \   00000054   0xD1F1             BNE      ??API018Diagnostic__PublishFaultBasic_3
+    624                      {
+    625                          result = PASS;
+   \                     ??API018Diagnostic__PublishFaultBasic_5: (+1)
+   \   00000056   0x2401             MOVS     R4,#+1
+    626                          if ((Reveal__AddDataU8(fbk, fault_index) != PASS) ||
+    627                              (Reveal__AddDataU8(fbk, faults->Fault_Code) != PASS) ||
+    628                              (Reveal__AddDataU8(fbk, faults->Fault_Sub_Code) != PASS) ||
+    629                              (Reveal__AddDataU8(fbk, faults->Fault_Eng_Code) != PASS))
+   \   00000058   0x0031             MOVS     R1,R6
+   \   0000005A   0x9800             LDR      R0,[SP, #+0]
+   \   0000005C   0x.... 0x....      BL       Reveal__AddDataU8
+   \   00000060   0x2801             CMP      R0,#+1
+   \   00000062   0xD126             BNE      ??API018Diagnostic__PublishFaultBasic_6
+   \   00000064   0x7828             LDRB     R0,[R5, #+0]
+   \   00000066   0x7869             LDRB     R1,[R5, #+1]
+   \   00000068   0x0609             LSLS     R1,R1,#+24
+   \   0000006A   0x0C09             LSRS     R1,R1,#+16
+   \   0000006C   0x4308             ORRS     R0,R0,R1
+   \   0000006E   0x270F             MOVS     R7,#+15
+   \   00000070   0x0001             MOVS     R1,R0
+   \   00000072   0x0A09             LSRS     R1,R1,#+8
+   \   00000074   0x4039             ANDS     R1,R1,R7
+   \   00000076   0x9800             LDR      R0,[SP, #+0]
+   \   00000078   0x.... 0x....      BL       Reveal__AddDataU8
+   \   0000007C   0x2801             CMP      R0,#+1
+   \   0000007E   0xD118             BNE      ??API018Diagnostic__PublishFaultBasic_6
+   \   00000080   0x7828             LDRB     R0,[R5, #+0]
+   \   00000082   0x7869             LDRB     R1,[R5, #+1]
+   \   00000084   0x0609             LSLS     R1,R1,#+24
+   \   00000086   0x0C09             LSRS     R1,R1,#+16
+   \   00000088   0x4308             ORRS     R0,R0,R1
+   \   0000008A   0x0001             MOVS     R1,R0
+   \   0000008C   0xB2C9             UXTB     R1,R1
+   \   0000008E   0x0909             LSRS     R1,R1,#+4
+   \   00000090   0x9800             LDR      R0,[SP, #+0]
+   \   00000092   0x.... 0x....      BL       Reveal__AddDataU8
+   \   00000096   0x2801             CMP      R0,#+1
+   \   00000098   0xD10B             BNE      ??API018Diagnostic__PublishFaultBasic_6
+   \   0000009A   0x7828             LDRB     R0,[R5, #+0]
+   \   0000009C   0x7869             LDRB     R1,[R5, #+1]
+   \   0000009E   0x0609             LSLS     R1,R1,#+24
+   \   000000A0   0x0C09             LSRS     R1,R1,#+16
+   \   000000A2   0x4308             ORRS     R0,R0,R1
+   \   000000A4   0x4007             ANDS     R7,R7,R0
+   \   000000A6   0x0039             MOVS     R1,R7
+   \   000000A8   0x9800             LDR      R0,[SP, #+0]
+   \   000000AA   0x.... 0x....      BL       Reveal__AddDataU8
+   \   000000AE   0x2801             CMP      R0,#+1
+   \   000000B0   0xD0C3             BEQ      ??API018Diagnostic__PublishFaultBasic_3
+    630                          {
+    631                              // Failed to build the Reveal packet.
+    632                              result = FAIL;
+   \                     ??API018Diagnostic__PublishFaultBasic_6: (+1)
+   \   000000B2   0x2400             MOVS     R4,#+0
+    633                              break;                              // Break out of the for() loop.
+    634                          }
+    635                      }
+    636                  }
+    637          
+    638                  // Transmit the message.
+    639                  if (result == PASS)
+   \                     ??API018Diagnostic__PublishFaultBasic_4: (+1)
+   \   000000B4   0x2C01             CMP      R4,#+1
+   \   000000B6   0xD105             BNE      ??API018Diagnostic__PublishFaultBasic_0
+    640                  {
+    641                      if (Reveal__QueueCommand(fbk) != TRUE)
+   \   000000B8   0x9800             LDR      R0,[SP, #+0]
+   \   000000BA   0x.... 0x....      BL       Reveal__QueueCommand
+   \   000000BE   0x2801             CMP      R0,#+1
+   \   000000C0   0xD000             BEQ      ??API018Diagnostic__PublishFaultBasic_0
+    642                      {
+    643                          result = FAIL;
+   \   000000C2   0x2400             MOVS     R4,#+0
+    644                      }
+    645                  }
+    646              }
+    647          
+    648              return result;
+   \                     ??API018Diagnostic__PublishFaultBasic_0: (+1)
+   \   000000C4   0x0020             MOVS     R0,R4
+   \   000000C6   0xB005             ADD      SP,SP,#+20
+   \   000000C8   0xBDF0             POP      {R4-R7,PC}       ;; return
+    649          }
+    650          
+    651          
+    652          #else       // if only API018_CLIENT_FEATURE is ENABLED
+    653          //---------------------------------------------------------------------------------------------------------------------
+    654          /**
+    655           * Called by the client to request lifetime data from the server.
+    656           * @param node = The API018 server node.
+    657           * @return PASS if the request was sent. Otherwise FAIL.
+    658           */
+    659          PASS_FAIL_TYPE API018Diagnostic__RequestCommonLifeTimeData(uint8 node)
+    660          {
+    661              return ((PASS_FAIL_TYPE)Reveal__QueueMessageNoData(API018DIAGNOSTIC_NUM, API018_CMD_REQUEST_COMMON_LIFETIME_DATA, node, TRUE, FALSE));
+    662          }
+    663          
+    664          
+    665          //---------------------------------------------------------------------------------------------------------------------
+    666          /**
+    667           * Called by the client to get lifetime data from the server.
+    668           * @param node = The API018 server node.
+    669           * @return addres if client feature enabled
+    670           */
+    671          API018_COMMON_LIFETIME_TYPE* API018Diagnostic__GetCommonLifeTimeData(void)
+    672          {
+    673              return (&Api018.Common_Lifetime_Data);
+    674          }
+    675          #endif      // #if (API018_SERVER_FEATURE == ENABLED)
+    676          
+    677          
+    678          #if (API018_CLIENT_FEATURE == ENABLED)
+    679          //---------------------------------------------------------------------------------------------------------------------
+    680          /**
+    681           * Called by the client to request that the server clear all fault data.
+    682           * @param node = The API018 server node.
+    683           * @return PASS if the request was sent. Otherwise FAIL.
+    684           */
+    685          PASS_FAIL_TYPE API018Diagnostic__ClearFaults(uint8 node)
+    686          {
+    687              #if (API018_SERVER_FEATURE == ENABLED)
+    688                  Statistics__ClearFaultData();
+    689                  return PASS;
+    690              #else   /* if only API018_CLIENT_FEATURE is ENABLED */
+    691                  API018Diagnostic__Initialize();
+    692                  return (PASS_FAIL_TYPE)Reveal__QueueMessageNoData(API018DIAGNOSTIC_NUM, API018_CMD_CLEAR_SAVED_FAULTS, node, TRUE, FALSE);
+    693              #endif
+    694          }
+    695          
+    696          
+    697          //---------------------------------------------------------------------------------------------------------------------
+    698          /**
+    699           * Generate a fault on the API018_SERVER.
+    700           * @param fault_key = The unique cross-category fault number.
+    701           * @return PASS if the message was successfully sent to the Main ACU.
+    702           */
+    703          PASS_FAIL_TYPE API018Diagnostic__GenerateFault(API018_FAULT_KEY_TYPE fault_key)
+    704          {
+    705              #if (API018_SERVER_FEATURE == ENABLED)
+    706                  return (PASS_FAIL_TYPE)((GenerateFault(WIN_ACU_ADDRESS, fault_key) == TRUE) ? PASS : FAIL);
+    707              #else   /* if only API018_CLIENT_FEATURE is ENABLED */
+    708                  return (PASS_FAIL_TYPE)Reveal__QueueMessageU16(API018DIAGNOSTIC_NUM, API018_CMD_GENERATE_FAULT, WIN_ACU_ADDRESS, TRUE, FALSE, fault_key);
+    709              #endif
+    710          }
+    711          
+    712          
+    713          //---------------------------------------------------------------------------------------------------------------------
+    714          /**
+    715           * Get the error code for the specified fault index.
+    716           * @param fault_index = The requested fault index. 0 = most recent fault.
+    717           * @return The error code for the specified fault index.
+    718           *         If there is no error code at the specified fault index, then return Fault Code UCHAR_MAX.
+    719           */
+    720          API018_ERROR_CODE_TYPE Api018Diagnostic__GetErrorCode(uint8 fault_index)
+    721          {
+    722              API018_ERROR_CODE_TYPE e = { UCHAR_MAX, UCHAR_MAX, UCHAR_MAX };
+    723              #if (API018_SERVER_FEATURE == ENABLED)
+    724                  uint8 fault_count = Statistics__ApplyFaultAgeCutoff();
+    725                  if (fault_index < fault_count)
+    726                  {
+    727                      STATISTICS_FAULT_TYPE* fault = Statistics__GetFaultData(fault_index);
+    728                      if ((fault != NULL) && (fault->Fault_Id != FAULT_ID_NONE))
+    729                      {
+    730                          FAULT_CONFIG_TYPE* fault_config = Fault__GetParameters((FAULT_ID_TYPE)fault->Fault_Id);
+    731                          if (fault_config != NULL)
+    732                          {
+    733                              e.F_Code = fault_config->Code;
+    734                              e.E_Code = fault_config->Sub_Code;
+    735                              e.Eng_Code = fault_config->Engineering_Code;
+    736                          }
+    737                      }
+    738                  }
+    739              #else   /* if only API018_CLIENT_FEATURE is ENABLED */
+    740                  if ((fault_index < API018_MAX_STORED_FAULTS) &&
+    741                      (fault_index < Api018.Number_Of_Error_Codes))
+    742                  {
+    743                      e = Api018.Error_Codes[fault_index];
+    744                  }
+    745              #endif
+    746              return e;
+    747          }
+    748          
+    749          
+    750          //---------------------------------------------------------------------------------------------------------------------
+    751          /**
+    752           * Get the number of faults that have been received from the API018_SERVER.
+    753           * @return The number of faults that have been received from the API018_SERVER.
+    754           */
+    755          uint8 Api018Diagnostic__GetNumberOfErrorCodes(void)
+    756          {
+    757              #if (API018_SERVER_FEATURE == ENABLED)
+    758                  return Statistics__GetFaultCount();
+    759              #else   /* if only API018_CLIENT_FEATURE is ENABLED */
+    760                  return Api018.Number_Of_Error_Codes;
+    761              #endif
+    762          }
+    763          
+    764          
+    765          //---------------------------------------------------------------------------------------------------------------------
+    766          /**
+    767           * Remove a fault on the API018_SERVER.
+    768           * @param fault_key = The unique cross-category fault number.
+    769           * @return PASS if the message was successfully sent to the Main ACU.
+    770           */
+    771          PASS_FAIL_TYPE API018Diagnostic__RemoveFault(API018_FAULT_KEY_TYPE fault_key)
+    772          {
+    773              #if (API018_SERVER_FEATURE == ENABLED)
+    774                  return (PASS_FAIL_TYPE)((RemoveFault(WIN_ACU_ADDRESS, fault_key) == TRUE) ? PASS : FAIL);
+    775              #else   /* if only API018_CLIENT_FEATURE is ENABLED */
+    776                  return (PASS_FAIL_TYPE)Reveal__QueueMessageU16(API018DIAGNOSTIC_NUM, API018_CMD_REMOVE_FAULT, WIN_ACU_ADDRESS, TRUE, FALSE, fault_key);
+    777              #endif
+    778          }
+    779          
+    780          
+    781          //---------------------------------------------------------------------------------------------------------------------
+    782          /**
+    783           * Called by the client to request all fault codes from the server.
+    784           * @param node = The API018 server node.
+    785           * @param fault_index = Parameter is ignored. Kept for backward compatibility.
+    786           * @return PASS if the request was sent. Otherwise FAIL.
+    787           */
+    788          PASS_FAIL_TYPE API018Diagnostic__RequestFaultBasic(uint8 node, uint8 fault_index)
+    789          {
+    790              #if (API018_SERVER_FEATURE == ENABLED)
+    791                  return PASS;
+    792              #else   /* if only API018_CLIENT_FEATURE is ENABLED */
+    793                  return ((PASS_FAIL_TYPE)Reveal__QueueMessageNoData(API018DIAGNOSTIC_NUM, API018_CMD_REQUEST_FAULT_CODES, node, TRUE, FALSE));
+    794              #endif
+    795          }
+    796          #endif      // #if (API018_CLIENT_FEATURE == ENABLED)
+    797          
+    798          
+    799          //=====================================================================================================================
+    800          //-------------------------------------- Private Functions ------------------------------------------------------------
+    801          //=====================================================================================================================
+    802          
+    803          
+    804          #if (API018_SERVER_FEATURE == ENABLED)
+    805          //---------------------------------------------------------------------------------------------------------------------
+    806          /**
+    807           * Generate a fault.
+    808           * @param node_id = The communication node that reported the fault.
+    809           * @param fault_key = The unique cross-category fault key to translate to a category-specific fault ID.
+    810           * @return TRUE if the fault was generated; otherwise FALSE.
+    811           */
+
+   \                                 In section .text, align 4, keep-with-next
+    812          static BOOL_TYPE GenerateFault(uint8 node_id, API018_FAULT_KEY_TYPE fault_key)
+    813          {
+   \                     GenerateFault: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    814              for (uint8 i = 0; i < ELEMENTS_IN_ARRAY(MAP_FAULT_KEYS_TO_FAULT_IDS); i++)
+   \   00000002   0x2300             MOVS     R3,#+0
+   \   00000004   0xE001             B        ??GenerateFault_0
+   \                     ??GenerateFault_1: (+1)
+   \   00000006   0x1C5B             ADDS     R3,R3,#+1
+   \   00000008   0xB2DB             UXTB     R3,R3
+   \                     ??GenerateFault_0: (+1)
+   \   0000000A   0x2B06             CMP      R3,#+6
+   \   0000000C   0xD213             BCS      ??GenerateFault_2
+    815              {
+    816                  if ((MAP_FAULT_KEYS_TO_FAULT_IDS[i].Node == node_id) && (MAP_FAULT_KEYS_TO_FAULT_IDS[i].Key == fault_key))
+   \   0000000E   0xBF00             Nop      
+   \   00000010   0x....             ADR.N    R2,MAP_FAULT_KEYS_TO_FAULT_IDS
+   \   00000012   0x009C             LSLS     R4,R3,#+2
+   \   00000014   0x1912             ADDS     R2,R2,R4
+   \   00000016   0x7894             LDRB     R4,[R2, #+2]
+   \   00000018   0x0005             MOVS     R5,R0
+   \   0000001A   0x42AC             CMP      R4,R5
+   \   0000001C   0xD1F3             BNE      ??GenerateFault_1
+   \   0000001E   0x8814             LDRH     R4,[R2, #+0]
+   \   00000020   0x000D             MOVS     R5,R1
+   \   00000022   0x42AC             CMP      R4,R5
+   \   00000024   0xD1EF             BNE      ??GenerateFault_1
+    817                  {
+    818                      FAULT_ID_TYPE fault_id = MAP_FAULT_KEYS_TO_FAULT_IDS[i].Fault_Id;
+   \   00000026   0x78D2             LDRB     R2,[R2, #+3]
+    819                      if (fault_id != FAULT_ID_NONE)
+   \   00000028   0x0014             MOVS     R4,R2
+   \   0000002A   0xD0EC             BEQ      ??GenerateFault_1
+    820                      {
+    821                          Fault__ConditionDetected(fault_id);
+   \   0000002C   0x0010             MOVS     R0,R2
+   \   0000002E   0x.... 0x....      BL       Fault__ConditionDetected
+    822                          return TRUE;
+   \   00000032   0x2001             MOVS     R0,#+1
+   \   00000034   0xBD32             POP      {R1,R4,R5,PC}
+    823                      }
+    824                  }
+    825              }
+    826              return FALSE;
+   \                     ??GenerateFault_2: (+1)
+   \   00000036   0x2000             MOVS     R0,#+0
+   \   00000038   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    827          }
+    828          
+    829          
+    830          //---------------------------------------------------------------------------------------------------------------------
+    831          /**
+    832           * Get the next statistics section ID based on the specified requested sections.
+    833           * @param requested = The statistics sections that are requested (one for each bit).
+    834           * @return The next statistics section ID based on the specified requested sections.
+    835           */
+
+   \                                 In section .text, align 2, keep-with-next
+    836          static API018_SECTION_TYPE GetNextSectionID(uint8 requested)
+    837          {
+   \                     GetNextSectionID: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    838              for (API018_SECTION_TYPE section = API018_SECTION_FIRST; section <= API018_SECTION_LAST; section++)
+   \   00000002   0x2201             MOVS     R2,#+1
+   \   00000004   0x0010             MOVS     R0,R2
+   \   00000006   0xE000             B        ??GetNextSectionID_0
+   \                     ??GetNextSectionID_1: (+1)
+   \   00000008   0x1C40             ADDS     R0,R0,#+1
+   \                     ??GetNextSectionID_0: (+1)
+   \   0000000A   0xB2C0             UXTB     R0,R0
+   \   0000000C   0x2808             CMP      R0,#+8
+   \   0000000E   0xDA04             BGE      ??GetNextSectionID_2
+    839              {
+    840                  if (BIT_TEST(requested, section) == 1)
+   \   00000010   0x000B             MOVS     R3,R1
+   \   00000012   0x40C3             LSRS     R3,R3,R0
+   \   00000014   0x4013             ANDS     R3,R3,R2
+   \   00000016   0xD0F7             BEQ      ??GetNextSectionID_1
+    841                  {
+    842                      return section;
+   \   00000018   0x4770             BX       LR
+    843                  }
+    844              }
+    845              return API018_SECTION_NONE_REMAINING;
+   \                     ??GetNextSectionID_2: (+1)
+   \   0000001A   0x2020             MOVS     R0,#+32
+   \   0000001C   0x4770             BX       LR               ;; return
+    846          }
+    847          
+    848          
+    849          //---------------------------------------------------------------------------------------------------------------------
+    850          /**
+    851           * Get a pointer to the requested statistics section.
+    852           * @param requested = The requested statistics section.
+    853           * @return A pointer to the requested statistics section.
+    854           */
+
+   \                                 In section .text, align 4, keep-with-next
+    855          static void* GetSectionAddress(API018_SECTION_TYPE requested)
+    856          {
+   \                     GetSectionAddress: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    857              switch (requested)
+   \   00000002   0x2807             CMP      R0,#+7
+   \   00000004   0xD81F             BHI      ??GetSectionAddress_1
+   \   00000006   0xA101             ADR      R1,??GetSectionAddress_0
+   \   00000008   0x5C09             LDRB     R1,[R1, R0]
+   \   0000000A   0x448F             ADD      PC,PC,R1
+   \                     ??GetSectionAddress_0:
+   \   0000000C   0x06 0x0A          DC8      0x6,0xA,0x10,0x18
+   \              0x10 0x18    
+   \   00000010   0x20 0x38          DC8      0x20,0x38,0x28,0x30
+   \              0x28 0x30    
+    858              {
+    859                  case API018_SECTION_HEADER:
+    860                      return (void*)API018_HEADER_PACKET;
+   \                     ??GetSectionAddress_2: (+1)
+   \   00000014   0x....             ADR.N    R0,API018_HEADER_PACKET
+   \   00000016   0xBD02             POP      {R1,PC}
+    861          
+    862                  case API018_SECTION_LIFETIME:
+    863                      return Statistics__GetLifetimeData();
+   \                     ??GetSectionAddress_3: (+1)
+   \   00000018   0x.... 0x....      BL       Statistics__GetLifetimeData
+   \   0000001C   0xBD02             POP      {R1,PC}
+    864          
+    865                  case API018_SECTION_CYCLES:
+    866                      #if (STATISTICS_SAVED_CYCLES > 0)
+    867                          return Statistics__GetCycleData(0);
+   \                     ??GetSectionAddress_4: (+1)
+   \   0000001E   0x2000             MOVS     R0,#+0
+   \   00000020   0x.... 0x....      BL       Statistics__GetCycleData
+   \   00000024   0xBD02             POP      {R1,PC}
+    868                      #else
+    869                          return NULL;
+    870                      #endif
+    871          
+    872                  case API018_SECTION_FAULTS:
+    873                      return Statistics__GetFaultData(0);
+   \                     ??GetSectionAddress_5: (+1)
+   \   00000026   0x2000             MOVS     R0,#+0
+   \   00000028   0x.... 0x....      BL       Statistics__GetFaultData
+   \   0000002C   0xBD02             POP      {R1,PC}
+    874          
+    875                  case API018_SECTION_PRE_FAULTS:
+    876                      return Statistics__GetPreFaultData(0);
+   \                     ??GetSectionAddress_6: (+1)
+   \   0000002E   0x2000             MOVS     R0,#+0
+   \   00000030   0x.... 0x....      BL       Statistics__GetPreFaultData
+   \   00000034   0xBD02             POP      {R1,PC}
+    877          
+    878                  case API018_SECTION_LAST_CYCLES:
+    879                      #if (STATISTICS_SAVED_LAST_CYCLES > 0)
+    880                          return Statistics__GetLastCycleData(0);
+    881                      #else
+    882                          return NULL;
+    883                      #endif
+    884          
+    885                  case API018_SECTION_FAULTS_BLACK_BOX:
+    886                      #if (STATISTICS_SAVED_FAULT_BLACK_BOX > 0)
+    887                          return Statistics__GetFaultBlackBoxData(0);
+   \                     ??GetSectionAddress_7: (+1)
+   \   00000036   0x2000             MOVS     R0,#+0
+   \   00000038   0x.... 0x....      BL       Statistics__GetFaultBlackBoxData
+   \   0000003C   0xBD02             POP      {R1,PC}
+    888                      #else
+    889                          return NULL;
+    890                      #endif
+    891          
+    892                  case API018_SECTION_PRE_FAULTS_BLACK_BOX:
+    893                      #if (STATISTICS_SAVED_PRE_FAULT_BLACK_BOX > 0)
+    894                          return Statistics__GetPreFaultBlackBoxData(0);
+   \                     ??GetSectionAddress_8: (+1)
+   \   0000003E   0x2000             MOVS     R0,#+0
+   \   00000040   0x.... 0x....      BL       Statistics__GetPreFaultBlackBoxData
+   \   00000044   0xBD02             POP      {R1,PC}
+    895                      #else
+    896                          return NULL;
+    897                      #endif
+    898          
+    899                  default:
+    900                      break;
+    901              }
+    902              return NULL;
+   \                     ??GetSectionAddress_1: (+1)
+   \   00000046   0x2000             MOVS     R0,#+0
+   \   00000048   0xBD02             POP      {R1,PC}          ;; return
+    903          }
+    904          
+    905          
+    906          //---------------------------------------------------------------------------------------------------------------------
+    907          /**
+    908           * Get the size of the specified statistics section.
+    909           * @param section = The specified statistics section.
+    910           *                  All sections are assumed if value is not a valid section number.
+    911           * @return The size of the specified statistics section.
+    912           */
+
+   \                                 In section .text, align 4, keep-with-next
+    913          static uint16 GetSectionSize(API018_SECTION_TYPE section)
+    914          {
+    915              uint16 size;
+    916              if ((API018_SECTION_FIRST <= section) && (section <= API018_SECTION_LAST))
+   \                     GetSectionSize: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+   \   00000002   0xD00A             BEQ      ??GetSectionSize_0
+   \   00000004   0x2808             CMP      R0,#+8
+   \   00000006   0xDA08             BGE      ??GetSectionSize_0
+    917              {
+    918                  uint8 index = section - 1;
+   \   00000008   0x1E40             SUBS     R0,R0,#+1
+   \   0000000A   0xB2C0             UXTB     R0,R0
+    919                  size = API018_HEADER_PACKET[index].Number_Of_Elements * API018_HEADER_PACKET[index].Size_Of_Elements;
+   \   0000000C   0x....             ADR.N    R1,API018_HEADER_PACKET
+   \   0000000E   0x0040             LSLS     R0,R0,#+1
+   \   00000010   0x1809             ADDS     R1,R1,R0
+   \   00000012   0x7808             LDRB     R0,[R1, #+0]
+   \   00000014   0x7849             LDRB     R1,[R1, #+1]
+   \   00000016   0x4348             MULS     R0,R1,R0
+   \   00000018   0x4770             BX       LR
+    920              }
+    921              else
+    922              {
+    923                  size = 0;
+   \                     ??GetSectionSize_0: (+1)
+   \   0000001A   0x2000             MOVS     R0,#+0
+    924                  for (uint8 section = API018_SECTION_FIRST; section <= API018_SECTION_LAST; section++)
+   \   0000001C   0x2201             MOVS     R2,#+1
+   \   0000001E   0xE00A             B        ??GetSectionSize_1
+    925                  {
+    926                      uint8 index = section - 1;
+   \                     ??GetSectionSize_2: (+1)
+   \   00000020   0x1E53             SUBS     R3,R2,#+1
+   \   00000022   0xB2DB             UXTB     R3,R3
+    927                      size += API018_HEADER_PACKET[index].Number_Of_Elements * API018_HEADER_PACKET[index].Size_Of_Elements;
+   \   00000024   0x....             ADR.N    R1,API018_HEADER_PACKET
+   \   00000026   0x005B             LSLS     R3,R3,#+1
+   \   00000028   0x18C9             ADDS     R1,R1,R3
+   \   0000002A   0x780B             LDRB     R3,[R1, #+0]
+   \   0000002C   0x7849             LDRB     R1,[R1, #+1]
+   \   0000002E   0x434B             MULS     R3,R1,R3
+   \   00000030   0x18C0             ADDS     R0,R0,R3
+   \   00000032   0xB280             UXTH     R0,R0
+    928                  }
+   \   00000034   0x1C52             ADDS     R2,R2,#+1
+   \                     ??GetSectionSize_1: (+1)
+   \   00000036   0x2A08             CMP      R2,#+8
+   \   00000038   0xDBF2             BLT      ??GetSectionSize_2
+    929              }
+    930              return size;
+   \   0000003A   0x4770             BX       LR               ;; return
+    931          }
+    932          
+    933          
+    934          //---------------------------------------------------------------------------------------------------------------------
+    935          /**
+    936           * Remove a fault.
+    937           * @param node_id = The communication node that is removing the fault.
+    938           * @param fault_key = The unique cross-category fault key to translate to a category-specific fault ID.
+    939           * @return TRUE if the fault was removed; otherwise FALSE.
+    940           */
+
+   \                                 In section .text, align 4, keep-with-next
+    941          static BOOL_TYPE RemoveFault(uint8 node_id, API018_FAULT_KEY_TYPE fault_key)
+    942          {
+   \                     RemoveFault: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    943              for (uint8 i = 0; i < ELEMENTS_IN_ARRAY(MAP_FAULT_KEYS_TO_FAULT_IDS); i++)
+   \   00000002   0x2300             MOVS     R3,#+0
+   \   00000004   0xE001             B        ??RemoveFault_0
+   \                     ??RemoveFault_1: (+1)
+   \   00000006   0x1C5B             ADDS     R3,R3,#+1
+   \   00000008   0xB2DB             UXTB     R3,R3
+   \                     ??RemoveFault_0: (+1)
+   \   0000000A   0x2B06             CMP      R3,#+6
+   \   0000000C   0xD213             BCS      ??RemoveFault_2
+    944              {
+    945                  if ((MAP_FAULT_KEYS_TO_FAULT_IDS[i].Node == node_id) && (MAP_FAULT_KEYS_TO_FAULT_IDS[i].Key == fault_key))
+   \   0000000E   0xBF00             Nop      
+   \   00000010   0x....             ADR.N    R2,MAP_FAULT_KEYS_TO_FAULT_IDS
+   \   00000012   0x009C             LSLS     R4,R3,#+2
+   \   00000014   0x1912             ADDS     R2,R2,R4
+   \   00000016   0x7894             LDRB     R4,[R2, #+2]
+   \   00000018   0x0005             MOVS     R5,R0
+   \   0000001A   0x42AC             CMP      R4,R5
+   \   0000001C   0xD1F3             BNE      ??RemoveFault_1
+   \   0000001E   0x8814             LDRH     R4,[R2, #+0]
+   \   00000020   0x000D             MOVS     R5,R1
+   \   00000022   0x42AC             CMP      R4,R5
+   \   00000024   0xD1EF             BNE      ??RemoveFault_1
+    946                  {
+    947                      FAULT_ID_TYPE fault_id = MAP_FAULT_KEYS_TO_FAULT_IDS[i].Fault_Id;
+   \   00000026   0x78D2             LDRB     R2,[R2, #+3]
+    948                      if (fault_id != FAULT_ID_NONE)
+   \   00000028   0x0014             MOVS     R4,R2
+   \   0000002A   0xD0EC             BEQ      ??RemoveFault_1
+    949                      {
+    950                          Fault__ConditionRemoved(fault_id);
+   \   0000002C   0x0010             MOVS     R0,R2
+   \   0000002E   0x.... 0x....      BL       Fault__ConditionRemoved
+    951                          return TRUE;
+   \   00000032   0x2001             MOVS     R0,#+1
+   \   00000034   0xBD32             POP      {R1,R4,R5,PC}
+    952                      }
+    953                  }
+    954              }
+    955              return FALSE;
+   \                     ??RemoveFault_2: (+1)
+   \   00000036   0x2000             MOVS     R0,#+0
+   \   00000038   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    956          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \   00000000   0x........         DC32     Api018
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4:
+   \   00000000   0x........         DC32     API018_HEADER_PACKET
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_1:
+   \   00000000   0x........         DC32     Api018
+    957          #endif      // #if (API018_SERVER_FEATURE == ENABLED)
+    958          
+    959          
+    960          #endif      // #if ((API018_CLIENT_FEATURE == ENABLED) || (API018_SERVER_FEATURE == ENABLED))
+    961          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   API018Diagnostic__AckParser
+      24   API018Diagnostic__CommandParser
+        24   -> API018Diagnostic__PublishFaultBasic
+        24   -> Fault__ResetAllObservers
+        24   -> GenerateFault
+        24   -> RemoveFault
+        24   -> Reveal__AddDataU16
+        24   -> Reveal__AddDataU32
+        24   -> Reveal__AddDataU8
+        24   -> Reveal__AddDataU8Buffer
+        24   -> Reveal__NewFeedback
+        24   -> Reveal__QueueCommand
+        24   -> Statistics__ClearFaultData
+        24   -> Statistics__GetLifetimeData
+        24   -> Utilities__ConvertArrayTo16bits
+        24 __aeabi_uread4
+       0   API018Diagnostic__FeedbackParser
+      40   API018Diagnostic__Handler25ms
+        40   -> GetNextSectionID
+        40   -> GetSectionAddress
+        40   -> GetSectionSize
+        40   -> Reveal__AddDataU16
+        40   -> Reveal__AddDataU8
+        40   -> Reveal__AddDataU8Buffer
+        40   -> Reveal__NewFeedback
+        40   -> Reveal__QueueCommand
+       8   API018Diagnostic__Initialize
+         8   -> __aeabi_memset4
+      40   API018Diagnostic__PublishFaultBasic
+        40   -> Reveal__AddDataU8
+        40   -> Reveal__NewFeedback
+        40   -> Reveal__QueueCommand
+        40   -> Statistics__ApplyFaultAgeCutoff
+        40   -> Statistics__GetFaultData
+      16   GenerateFault
+        16   -> Fault__ConditionDetected
+       0   GetNextSectionID
+       8   GetSectionAddress
+         8   -> Statistics__GetCycleData
+         8   -> Statistics__GetFaultBlackBoxData
+         8   -> Statistics__GetFaultData
+         8   -> Statistics__GetLifetimeData
+         8   -> Statistics__GetPreFaultBlackBoxData
+         8   -> Statistics__GetPreFaultData
+       0   GetSectionSize
+      16   RemoveFault
+        16   -> Fault__ConditionRemoved
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable4
+       4  ??DataTable4_1
+       2  API018Diagnostic__AckParser
+     454  API018Diagnostic__CommandParser
+       2  API018Diagnostic__FeedbackParser
+     370  API018Diagnostic__Handler25ms
+      14  API018Diagnostic__Initialize
+     202  API018Diagnostic__PublishFaultBasic
+      16  API018_HEADER_PACKET
+       8  Api018
+      58  GenerateFault
+      30  GetNextSectionID
+      74  GetSectionAddress
+      60  GetSectionSize
+      24  MAP_FAULT_KEYS_TO_FAULT_IDS
+      58  RemoveFault
+
+ 
+     8 bytes in section .bss
+ 1 376 bytes in section .text
+ 
+ 1 376 bytes of CODE memory
+     8 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,727 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:50
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Monitors/SupervisorExtMonitor/SupervisorExtMonitor.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\SupervisorExtMonitor.lst -o obj\SupervisorExtMonitor.obj
+#        source/Category/Application/acu/Monitors/SupervisorExtMonitor/SupervisorExtMonitor.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SupervisorExtMonitor.lst
+#    Object file  =  obj\SupervisorExtMonitor.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Monitors\SupervisorExtMonitor\SupervisorExtMonitor.c
+      1          /**
+      2           *  @file		SupervisorExtMonitor.c
+      3           *
+      4           *  @brief      Loads monitor module implementation
+      5           *
+      6           *  @details    This module checks the Loads that must be pilot from supervisor state.
+      7           *
+      8           *  @section    Applicable_Documents
+      9           *					List here all the applicable documents if needed. <tr>
+     10           *
+     11           *
+     12           *  @copyright  Copyright 2016. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     13           */
+     14          //---------------------------------------------------------------------------------------------------------------------
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          
+     17          //-------------------------------------- Include Files ----------------------------------------------------------------
+     18          // -- This Module --
+     19          #include "C_Extensions.h"
+     20          #include "SupervisorExtMonitor.h"
+     21          
+     22          // -- Other Modules --
+     23          #include "Hbl.h"
+     24          #include "Interpreter.h"
+     25          #include "Selector.h"
+     26          #include "SettingFile.h"
+     27          
+     28          
+     29          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     30          
+     31          //=====================================================================================================================
+     32          //-------------------------------------- PUBLIC (Function Prototypes) -------------------------------------------------
+     33          //=====================================================================================================================
+     34          
+     35          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+
+   \                                 In section .bss, align 4
+     36          static uint8* Ptr_Sup_Ext_Mon_Data;
+     37          static uint16 Num_Loads_Supervisor_Monitored;
+   \                     Num_Loads_Supervisor_Monitored:
+   \   00000000                      DS8 2
+   \   00000002                      DS8 2
+   \   00000004                      DS8 4
+     38          
+     39          #define NO_LOADS_TO_MANAGES		(uint16)0
+     40          #define OFFSET_HEAD_DATA		2
+     41          #define NO_SETTING_LOAD			0xFF
+     42          
+     43          typedef enum
+     44          {
+     45          	SUP_EXT_MON_STATE_NULL      		= 0,
+     46          	SUP_EXT_MON_STATE_PROGRAMMING   	= 1,
+     47          	SUP_EXT_MON_STATE_DELAY	   			= 2,
+     48          	SUP_EXT_MON_STATE_RUN          		= 3,
+     49          	SUP_EXT_MON_STATE_PAUSE				= 4,
+     50          	SUP_EXT_MON_STATE_END				= 5,
+     51          	SUP_EXT_MON_STATE_FAULT				= 6,
+     52          	SUP_EXT_MON_STATE_OFF 				= 7,
+     53          
+     54          	SUP_EXT_MON_NUM_STATES 				= 8
+     55          }SUPERVISOR_EXT_MON_TYPE;
+     56          
+     57          #define OFF_CYCLE	0
+     58          #define OFF_PHASE	0
+     59          
+     60          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     61          SUPERVISOR_EXT_MON_TYPE SupervisorExtMonitorGetState(void);
+     62          
+     63          //=====================================================================================================================
+     64          //-------------------------------------- Public Functions -------------------------------------------------------------
+     65          //=====================================================================================================================
+     66          
+     67          
+
+   \                                 In section .text, align 2, keep-with-next
+     68          void SupervisorExtMonitor__Initialize(void)
+     69          {
+   \                     SupervisorExtMonitor__Initialize: (+1)
+   \   00000000   0xB51C             PUSH     {R2-R4,LR}
+     70          	SETTINGFILE_LOADER_TYPE loader;
+     71          
+     72          	if (SettingFile__BasicLoader(SF_PTR_ACU_PRODUCT_CONFIGURATION_DATA, DSPL_LOADS_STATES_MNG, &loader) == PASS)
+   \   00000002   0x....             LDR      R4,??DataTable1
+   \   00000004   0x466A             MOV      R2,SP
+   \   00000006   0x2101             MOVS     R1,#+1
+   \   00000008   0x2004             MOVS     R0,#+4
+   \   0000000A   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   0000000E   0x2801             CMP      R0,#+1
+   \   00000010   0xD10B             BNE      ??SupervisorExtMonitor__Initialize_0
+     73          	{
+     74          		Num_Loads_Supervisor_Monitored = (loader.Length - (uint16)OFFSET_HEAD_DATA) / (uint8)(*loader.Data);
+   \   00000012   0x4668             MOV      R0,SP
+   \   00000014   0x8880             LDRH     R0,[R0, #+4]
+   \   00000016   0x1E80             SUBS     R0,R0,#+2
+   \   00000018   0x9900             LDR      R1,[SP, #+0]
+   \   0000001A   0x7809             LDRB     R1,[R1, #+0]
+   \   0000001C   0x.... 0x....      BL       __aeabi_idiv
+   \   00000020   0x8020             STRH     R0,[R4, #+0]
+     75          		Ptr_Sup_Ext_Mon_Data = (loader.Data + OFFSET_HEAD_DATA);
+   \   00000022   0x9800             LDR      R0,[SP, #+0]
+   \   00000024   0x1C80             ADDS     R0,R0,#+2
+   \   00000026   0x6060             STR      R0,[R4, #+4]
+   \   00000028   0xBD13             POP      {R0,R1,R4,PC}
+     76          	}
+     77          	else
+     78          	{
+     79          		// error
+     80          		Num_Loads_Supervisor_Monitored = NO_LOADS_TO_MANAGES;
+   \                     ??SupervisorExtMonitor__Initialize_0: (+1)
+   \   0000002A   0x2000             MOVS     R0,#+0
+   \   0000002C   0x0001             MOVS     R1,R0
+   \   0000002E   0x8021             STRH     R1,[R4, #+0]
+     81          		Ptr_Sup_Ext_Mon_Data = NULL;
+   \   00000030   0x6060             STR      R0,[R4, #+4]
+     82          	}
+     83          }
+   \   00000032   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+     84          
+     85          //---------------------------------------------------------------------------------------------------------------------
+     86          /**
+     87           *  @brief		Monitor Loads
+     88           *
+     89           */
+
+   \                                 In section .text, align 2, keep-with-next
+     90          void SupervisorExtMonitor__Execution(void)
+     91          {
+   \                     SupervisorExtMonitor__Execution: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+     92              if ((Ptr_Sup_Ext_Mon_Data != (uint8*)NULL) && (Num_Loads_Supervisor_Monitored != NO_LOADS_TO_MANAGES))
+   \   00000002   0x....             LDR      R5,??DataTable1
+   \   00000004   0x6868             LDR      R0,[R5, #+4]
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD023             BEQ      ??SupervisorExtMonitor__Execution_0
+   \   0000000A   0x8828             LDRH     R0,[R5, #+0]
+   \   0000000C   0x2800             CMP      R0,#+0
+   \   0000000E   0xD020             BEQ      ??SupervisorExtMonitor__Execution_0
+     93              {
+     94              	SUPERVISOR_EXT_MON_TYPE state_supervisor_monitor;
+     95                  uint8 numberbytes;
+     96                  uint16 index;
+     97          
+     98                  state_supervisor_monitor = SupervisorExtMonitorGetState();
+   \   00000010   0x.... 0x....      BL       SupervisorExtMonitorGetState
+   \   00000014   0x0006             MOVS     R6,R0
+     99                  numberbytes = (uint8)*(Ptr_Sup_Ext_Mon_Data - OFFSET_HEAD_DATA);
+   \   00000016   0x6868             LDR      R0,[R5, #+4]
+   \   00000018   0x1E80             SUBS     R0,R0,#+2
+   \   0000001A   0x7807             LDRB     R7,[R0, #+0]
+    100          
+    101          		for (index = 0; index < Num_Loads_Supervisor_Monitored; index++)
+   \   0000001C   0x2400             MOVS     R4,#+0
+   \   0000001E   0xE013             B        ??SupervisorExtMonitor__Execution_1
+    102          		{
+    103          			if ((state_supervisor_monitor > SUP_EXT_MON_STATE_NULL) && (state_supervisor_monitor < SUP_EXT_MON_NUM_STATES))
+   \                     ??SupervisorExtMonitor__Execution_2: (+1)
+   \   00000020   0x2E00             CMP      R6,#+0
+   \   00000022   0xD010             BEQ      ??SupervisorExtMonitor__Execution_3
+   \   00000024   0x2E08             CMP      R6,#+8
+   \   00000026   0xDA0E             BGE      ??SupervisorExtMonitor__Execution_3
+    104          			{
+    105          			    uint8 loadcmd;
+    106          			    uint8 *pntlocal;
+    107          
+    108          			    // Ptr_Sup_Ext_Mon_Data 	= pointer at first data = LoadID.
+    109          				// state_supervisor_monitor = index of states value.
+    110          				pntlocal = Ptr_Sup_Ext_Mon_Data + (index * numberbytes);
+   \   00000028   0x6869             LDR      R1,[R5, #+4]
+   \   0000002A   0xB2A4             UXTH     R4,R4
+   \   0000002C   0x4378             MULS     R0,R7,R0
+   \   0000002E   0x1808             ADDS     R0,R1,R0
+    111          				loadcmd = *(pntlocal + (uint8)state_supervisor_monitor);
+   \   00000030   0x5D81             LDRB     R1,[R0, R6]
+   \   00000032   0x466A             MOV      R2,SP
+   \   00000034   0x7011             STRB     R1,[R2, #+0]
+    112          
+    113          				// Control load
+    114          				if (loadcmd < (uint8)NO_SETTING_LOAD)
+   \   00000036   0x4669             MOV      R1,SP
+   \   00000038   0x7809             LDRB     R1,[R1, #+0]
+   \   0000003A   0x29FF             CMP      R1,#+255
+   \   0000003C   0xD003             BEQ      ??SupervisorExtMonitor__Execution_3
+    115          				{   // else we don't set nothing.
+    116          					// HBL_PRIORITY_APPLICATION_LOW in this way the LoadsControl by supervisor can take control of load.
+    117          					(void)(Hbl__SetLoadRequestByLoadID((HBL_LOAD_ENUM_TYPE)(*pntlocal), HBL_PRIORITY_SUPERVISOR_EXT_MONITOR, &loadcmd));
+   \   0000003E   0x2109             MOVS     R1,#+9
+   \   00000040   0x7800             LDRB     R0,[R0, #+0]
+   \   00000042   0x.... 0x....      BL       Hbl__SetLoadRequestByLoadID
+    118          				}
+    119          			}
+    120          		}
+   \                     ??SupervisorExtMonitor__Execution_3: (+1)
+   \   00000046   0x1C64             ADDS     R4,R4,#+1
+   \                     ??SupervisorExtMonitor__Execution_1: (+1)
+   \   00000048   0x0020             MOVS     R0,R4
+   \   0000004A   0x8829             LDRH     R1,[R5, #+0]
+   \   0000004C   0xB280             UXTH     R0,R0
+   \   0000004E   0x4288             CMP      R0,R1
+   \   00000050   0xD3E6             BCC      ??SupervisorExtMonitor__Execution_2
+    121              }
+    122          
+    123          
+    124          	(void)(Hbl__SetLoadRequestByLoadID(HBL_LOAD_DIVERTER, HBL_PRIORITY_APPLICATION_LOW, Hbl__GetProcessedLoad(Hbl__GetLoadIndexByLoadID(HBL_LOAD_DIVERTER))));
+   \                     ??SupervisorExtMonitor__Execution_0: (+1)
+   \   00000052   0x2040             MOVS     R0,#+64
+   \   00000054   0x.... 0x....      BL       Hbl__GetLoadIndexByLoadID
+   \   00000058   0x.... 0x....      BL       Hbl__GetProcessedLoad
+   \   0000005C   0x0002             MOVS     R2,R0
+   \   0000005E   0x2101             MOVS     R1,#+1
+   \   00000060   0x2040             MOVS     R0,#+64
+   \   00000062   0x.... 0x....      BL       Hbl__SetLoadRequestByLoadID
+    125          }
+   \   00000066   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+    126          
+    127          
+    128          //=====================================================================================================================
+    129          //-------------------------------------- Private Functions ------------------------------------------------------------
+    130          //=====================================================================================================================
+    131          
+    132          //---------------------------------------------------------------------------------------------------------------------
+    133          /**
+    134           *  @brief		Set Loads Request.
+    135           *
+    136           */
+
+   \                                 In section .text, align 4, keep-with-next
+    137          SUPERVISOR_EXT_MON_TYPE SupervisorExtMonitorGetState(void)
+    138          {
+   \                     SupervisorExtMonitorGetState: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0xB082             SUB      SP,SP,#+8
+    139          	SUPERVISOR_EXT_MON_TYPE ret_value;
+    140          	CYCLE_PHASE_STATEMENT_TYPE cps;
+    141          	CYCLE_STATE_TYPE cycle_state;
+    142          
+    143          	ret_value = SUP_EXT_MON_STATE_NULL;
+   \   00000004   0x2400             MOVS     R4,#+0
+    144          	cps = Interpreter__GetCurrentStatement(COMPARTMENT_DEFAULT);
+   \   00000006   0x4620             MOV      R0,R4
+   \   00000008   0x.... 0x....      BL       Interpreter__GetCurrentStatement
+   \   0000000C   0x9000             STR      R0,[SP, #+0]
+    145          	cycle_state = Selector__GetCycleState(Interpreter__GetCurrentSFIndex(COMPARTMENT_DEFAULT), COMPARTMENT_DEFAULT, cps.Cycle);
+    146          
+    147          	switch (cycle_state)
+   \   0000000E   0x4620             MOV      R0,R4
+   \   00000010   0x.... 0x....      BL       Interpreter__GetCurrentSFIndex
+   \   00000014   0x4669             MOV      R1,SP
+   \   00000016   0x780A             LDRB     R2,[R1, #+0]
+   \   00000018   0x4621             MOV      R1,R4
+   \   0000001A   0x.... 0x....      BL       Selector__GetCycleState
+   \   0000001E   0x2805             CMP      R0,#+5
+   \   00000020   0xD81A             BHI      ??SupervisorExtMonitorGetState_1
+   \   00000022   0xA101             ADR      R1,??SupervisorExtMonitorGetState_0
+   \   00000024   0x5C09             LDRB     R1,[R1, R0]
+   \   00000026   0x448F             ADD      PC,PC,R1
+   \                     ??SupervisorExtMonitorGetState_0:
+   \   00000028   0x04 0x1C          DC8      0x4,0x1C,0x20,0x24
+   \              0x20 0x24    
+   \   0000002C   0x28 0x2C          DC8      0x28,0x2C
+    148          	{
+    149          		case CYCLE_STATE_PROGRAMMING:
+    150          			if ((cps.Cycle == (uint8)OFF_CYCLE) && (cps.Phase == (uint8)OFF_PHASE))
+   \                     ??SupervisorExtMonitorGetState_2: (+1)
+   \   0000002E   0x4668             MOV      R0,SP
+   \   00000030   0x7800             LDRB     R0,[R0, #+0]
+   \   00000032   0x2800             CMP      R0,#+0
+   \   00000034   0xD105             BNE      ??SupervisorExtMonitorGetState_3
+   \   00000036   0x4668             MOV      R0,SP
+   \   00000038   0x7840             LDRB     R0,[R0, #+1]
+   \   0000003A   0x2800             CMP      R0,#+0
+   \   0000003C   0xD101             BNE      ??SupervisorExtMonitorGetState_3
+    151          			{
+    152          				ret_value = SUP_EXT_MON_STATE_OFF;
+   \   0000003E   0x2407             MOVS     R4,#+7
+   \   00000040   0xE00A             B        ??SupervisorExtMonitorGetState_1
+    153          			}
+    154          			else
+    155          			{
+    156          				ret_value = SUP_EXT_MON_STATE_PROGRAMMING;
+   \                     ??SupervisorExtMonitorGetState_3: (+1)
+   \   00000042   0x2401             MOVS     R4,#+1
+   \   00000044   0xE008             B        ??SupervisorExtMonitorGetState_1
+    157          			}
+    158          			break;
+    159          
+    160          		case CYCLE_STATE_RUN:
+    161          			ret_value = SUP_EXT_MON_STATE_RUN;
+   \                     ??SupervisorExtMonitorGetState_4: (+1)
+   \   00000046   0x2403             MOVS     R4,#+3
+    162          			break;
+   \   00000048   0xE006             B        ??SupervisorExtMonitorGetState_1
+    163          
+    164          		case CYCLE_STATE_DELAY:
+    165          			ret_value = SUP_EXT_MON_STATE_DELAY;
+   \                     ??SupervisorExtMonitorGetState_5: (+1)
+   \   0000004A   0x2402             MOVS     R4,#+2
+    166          			break;
+   \   0000004C   0xE004             B        ??SupervisorExtMonitorGetState_1
+    167          
+    168          		case CYCLE_STATE_END:
+    169          			ret_value = SUP_EXT_MON_STATE_END;
+   \                     ??SupervisorExtMonitorGetState_6: (+1)
+   \   0000004E   0x2405             MOVS     R4,#+5
+    170          			break;
+   \   00000050   0xE002             B        ??SupervisorExtMonitorGetState_1
+    171          
+    172          		case CYCLE_STATE_PAUSE:
+    173          			ret_value = SUP_EXT_MON_STATE_PAUSE;
+   \                     ??SupervisorExtMonitorGetState_7: (+1)
+   \   00000052   0x2404             MOVS     R4,#+4
+    174          			break;
+   \   00000054   0xE000             B        ??SupervisorExtMonitorGetState_1
+    175          
+    176          		case CYCLE_STATE_FAULT:
+    177          			ret_value = SUP_EXT_MON_STATE_FAULT;
+   \                     ??SupervisorExtMonitorGetState_8: (+1)
+   \   00000056   0x2406             MOVS     R4,#+6
+    178          			break;
+    179          
+    180          		default:
+    181          			//do nothing
+    182          			break;
+    183          	}
+    184          
+    185          	return ret_value;
+   \                     ??SupervisorExtMonitorGetState_1: (+1)
+   \   00000058   0x0020             MOVS     R0,R4
+   \   0000005A   0xBD16             POP      {R1,R2,R4,PC}    ;; return
+    186          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     Num_Loads_Supervisor_Monitored
+    187          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   SupervisorExtMonitorGetState
+        16   -> Interpreter__GetCurrentSFIndex
+        16   -> Interpreter__GetCurrentStatement
+        16   -> Selector__GetCycleState
+      24   SupervisorExtMonitor__Execution
+        24   -> Hbl__GetLoadIndexByLoadID
+        24   -> Hbl__GetProcessedLoad
+        24   -> Hbl__SetLoadRequestByLoadID
+        24   -> SupervisorExtMonitorGetState
+      16   SupervisorExtMonitor__Initialize
+        16   -> SettingFile__BasicLoader
+        16 __aeabi_idiv
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       8  Num_Loads_Supervisor_Monitored
+          Ptr_Sup_Ext_Mon_Data
+      92  SupervisorExtMonitorGetState
+     104  SupervisorExtMonitor__Execution
+      52  SupervisorExtMonitor__Initialize
+
+ 
+   8 bytes in section .bss
+ 252 bytes in section .text
+ 
+ 252 bytes of CODE memory
+   8 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,650 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:18:09
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Common/all/MasterCommander/Source/mc_scope.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Oh --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\mc_scope.lst -o
+#        obj\mc_scope.obj
+#        source/Category/Common/all/MasterCommander/Source/mc_scope.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\mc_scope.lst
+#    Object file  =  obj\mc_scope.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Common\all\MasterCommander\Source\mc_scope.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      MC Oscilloscope implementation.
+      5           *
+      6           *
+      7           *  $Header: $
+      8           *
+      9           *  @copyright  Copyright 2016-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     10           */
+     11          //---------------------------------------------------------------------------------------------------------------------
+     12          
+     13          //-------------------------------------- Include Files ----------------------------------------------------------------
+     14          #include "master_commander.h"
+     15          #include "mc_llmem.h"
+     16          #include "mc_private.h"
+     17          #include "mc_protocol.h"
+     18          
+     19          #if (MC_USE_SCOPE) && (!(MC_DISABLE))
+     20          
+     21          /***********************************
+     22          *  local variables 
+     23          ***********************************/
+     24          
+
+   \                                 In section .bss, align 4
+     25          static MC_U8  pcm_nScopeVarCount;        /* number of active scope variables */
+   \                     pcm_nScopeVarCount:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 3
+   \   00000004                      DS8 8
+   \   0000000C                      DS8 32
+     26          static MC_ADDR  pcm_pScopeVarAddr[MC_MAX_SCOPE_VARS]; /* addresses of scope variables */
+     27          static MC_SIZE8 pcm_pScopeVarSize[MC_MAX_SCOPE_VARS]; /* sizes of scope variables */
+     28          
+     29          /**************************************************************************//*!
+     30          *
+     31          * @brief    Scope Initialization
+     32          *
+     33          ******************************************************************************/
+     34          
+
+   \                                 In section .text, align 2, keep-with-next
+     35          void MC_InitScope(void)
+     36          {   
+     37          }
+   \                     MC_InitScope: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+     38          
+     39          /**************************************************************************//*!
+     40          *
+     41          * @brief    Handling SETUPSCOPE and SETUPSCOPE_EX command
+     42          *
+     43          * @param    pMessageIO - original command (in) and response buffer (out) 
+     44          *
+     45          * @return   As all command handlers, the return value should be the buffer 
+     46          *           pointer where the response output finished (except checksum)
+     47          *
+     48          ******************************************************************************/
+     49          
+
+   \                                 In section .text, align 2, keep-with-next
+     50          MC_BPTR MC_SetUpScope(MC_BPTR pMessageIO)
+     51          {
+   \                     MC_SetUpScope: (+1)
+   \   00000000   0xB5F0             PUSH     {R4-R7,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+     52              MC_BPTR pResponse = pMessageIO;
+   \   00000004   0x0007             MOVS     R7,R0
+   \   00000006   0x2100             MOVS     R1,#+0
+   \   00000008   0x....             LDR      R2,??DataTable1
+   \   0000000A   0x7011             STRB     R1,[R2, #+0]
+     53              MC_U8 i, sz, nVarCnt;
+     54          
+     55              /* uninitialize scope */
+     56              pcm_nScopeVarCount = 0U;
+     57          
+     58              /* seek the setup data */
+     59              pMessageIO = MC_SkipInBuffer(pMessageIO, 2U);
+     60              
+     61              /* scope variable count  */
+     62              pMessageIO = MC_ValueFromBuffer8(&nVarCnt, pMessageIO);
+   \   0000000C   0x7881             LDRB     R1,[R0, #+2]
+   \   0000000E   0x466A             MOV      R2,SP
+   \   00000010   0x7011             STRB     R1,[R2, #+0]
+   \   00000012   0x1CC0             ADDS     R0,R0,#+3
+     63          
+     64              /* scope variable information must fit into our buffers */
+     65              if(!nVarCnt || nVarCnt > (MC_U8)MC_MAX_SCOPE_VARS)
+   \   00000014   0x4669             MOV      R1,SP
+   \   00000016   0x7809             LDRB     R1,[R1, #+0]
+   \   00000018   0x2900             CMP      R1,#+0
+   \   0000001A   0xD003             BEQ      ??MC_SetUpScope_0
+   \   0000001C   0x4669             MOV      R1,SP
+   \   0000001E   0x7809             LDRB     R1,[R1, #+0]
+   \   00000020   0x2909             CMP      R1,#+9
+   \   00000022   0xDB01             BLT      ??MC_SetUpScope_1
+     66              {
+     67                  return MC_ConstToBuffer8(pResponse, MC_STC_INVBUFF);
+   \                     ??MC_SetUpScope_0: (+1)
+   \   00000024   0x2085             MOVS     R0,#+133
+   \   00000026   0xE01B             B        ??MC_SetUpScope_2
+     68              }
+   \                     ??MC_SetUpScope_1: (+1)
+   \   00000028   0x....             LDR      R4,??DataTable1_1
+   \   0000002A   0x....             LDR      R5,??DataTable1_2
+   \   0000002C   0x4669             MOV      R1,SP
+   \   0000002E   0x7809             LDRB     R1,[R1, #+0]
+   \   00000030   0x9101             STR      R1,[SP, #+4]
+     69              
+     70              /* get all addresses and sizes */
+     71              for(i=0U; i<nVarCnt; i++)
+     72              {
+     73                  /* variable size */
+     74                  pMessageIO = MC_ValueFromBuffer8(&sz, pMessageIO);
+   \                     ??MC_SetUpScope_3: (+1)
+   \   00000032   0x7806             LDRB     R6,[R0, #+0]
+   \   00000034   0x1C41             ADDS     R1,R0,#+1
+     75                  pcm_pScopeVarSize[i] = sz;
+   \   00000036   0x7026             STRB     R6,[R4, #+0]
+     76                  
+     77                  /* variable address */
+     78                  pMessageIO = MC_AddressFromBuffer(&pcm_pScopeVarAddr[i], pMessageIO);
+   \   00000038   0x0028             MOVS     R0,R5
+   \   0000003A   0x.... 0x....      BL       MC_AddressFromBuffer
+     79          
+     80                  /* valid numeric variable sizes only */
+     81                  if(sz == 0U || sz > 8U)
+   \   0000003E   0x0031             MOVS     R1,R6
+   \   00000040   0xD001             BEQ      ??MC_SetUpScope_4
+   \   00000042   0x2E09             CMP      R6,#+9
+   \   00000044   0xD301             BCC      ??MC_SetUpScope_5
+     82                  {
+     83                      return MC_ConstToBuffer8(pResponse, MC_STC_INVSIZE);
+   \                     ??MC_SetUpScope_4: (+1)
+   \   00000046   0x2086             MOVS     R0,#+134
+   \   00000048   0xE00A             B        ??MC_SetUpScope_2
+     84                  }
+     85                  
+     86          #if MC_CFG_BUS_WIDTH > 1U
+     87                  /* even sizes only */
+     88                  if(sz & 0x1)
+     89                  {
+     90                      return MC_ConstToBuffer8(pResponse, MC_STC_INVSIZE);
+     91                  }
+     92          #endif
+     93                  
+     94          #if MC_USE_TSA && MC_USE_TSA_SAFETY
+     95                  if(!MC_CheckTsaSpace(pcm_pScopeVarAddr[i], (MC_SIZE8) sz, 0U))
+     96                  {
+     97                      return MC_ConstToBuffer8(pResponse, MC_STC_EACCESS);
+     98                  }
+     99          #endif
+    100                  
+    101              }
+   \                     ??MC_SetUpScope_5: (+1)
+   \   0000004A   0x1D2D             ADDS     R5,R5,#+4
+   \   0000004C   0x1C64             ADDS     R4,R4,#+1
+   \   0000004E   0x9901             LDR      R1,[SP, #+4]
+   \   00000050   0x1E49             SUBS     R1,R1,#+1
+   \   00000052   0x9101             STR      R1,[SP, #+4]
+   \   00000054   0xD1ED             BNE      ??MC_SetUpScope_3
+    102          
+    103              /* activate scope */
+    104              pcm_nScopeVarCount = nVarCnt;
+   \   00000056   0x4668             MOV      R0,SP
+   \   00000058   0x7800             LDRB     R0,[R0, #+0]
+   \   0000005A   0x....             LDR      R1,??DataTable1
+   \   0000005C   0x7008             STRB     R0,[R1, #+0]
+    105          
+    106              /* return just a status */
+    107              return MC_ConstToBuffer8(pResponse, MC_STS_OK);
+   \   0000005E   0x2000             MOVS     R0,#+0
+   \                     ??MC_SetUpScope_2: (+1)
+   \   00000060   0x7038             STRB     R0,[R7, #+0]
+   \   00000062   0x1C78             ADDS     R0,R7,#+1
+   \   00000064   0xB003             ADD      SP,SP,#+12
+   \   00000066   0xBDF0             POP      {R4-R7,PC}       ;; return
+    108          }
+    109          
+    110          /**************************************************************************//*!
+    111          *
+    112          * @brief    Handling READSCOPE command
+    113          *
+    114          * @param    pMessageIO - original command (in) and response buffer (out) 
+    115          *
+    116          * @return   As all command handlers, the return value should be the buffer 
+    117          *           pointer where the response output finished (except checksum)
+    118          *
+    119          ******************************************************************************/
+    120          
+
+   \                                 In section .text, align 2, keep-with-next
+    121          MC_BPTR MC_ReadScope(MC_BPTR pMessageIO)
+    122          {
+   \                     MC_ReadScope: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    123              MC_U8 i;
+    124              
+    125              if(!pcm_nScopeVarCount)
+   \   00000002   0x....             LDR      R5,??DataTable1
+   \   00000004   0x7829             LDRB     R1,[R5, #+0]
+   \   00000006   0x2900             CMP      R1,#+0
+   \   00000008   0xD103             BNE      ??MC_ReadScope_0
+    126              {
+    127                  return MC_ConstToBuffer8(pMessageIO, MC_STC_NOTINIT);
+   \   0000000A   0x2188             MOVS     R1,#+136
+   \   0000000C   0x7001             STRB     R1,[R0, #+0]
+   \   0000000E   0x1C40             ADDS     R0,R0,#+1
+    128              }
+   \   00000010   0xBD32             POP      {R1,R4,R5,PC}
+    129              
+    130              /* success */
+    131              pMessageIO = MC_ConstToBuffer8(pMessageIO, MC_STS_OK);
+   \                     ??MC_ReadScope_0: (+1)
+   \   00000012   0x2400             MOVS     R4,#+0
+   \   00000014   0x7004             STRB     R4,[R0, #+0]
+   \   00000016   0x1C40             ADDS     R0,R0,#+1
+    132              
+    133              for (i=0U; i<pcm_nScopeVarCount; i++)
+   \   00000018   0xE008             B        ??MC_ReadScope_1
+    134              {
+    135                  pMessageIO = MC_CopyToBuffer(pMessageIO, pcm_pScopeVarAddr[i], pcm_pScopeVarSize[i]);
+   \                     ??MC_ReadScope_2: (+1)
+   \   0000001A   0x1929             ADDS     R1,R5,R4
+   \   0000001C   0x790A             LDRB     R2,[R1, #+4]
+   \   0000001E   0x00A1             LSLS     R1,R4,#+2
+   \   00000020   0x1869             ADDS     R1,R5,R1
+   \   00000022   0x68C9             LDR      R1,[R1, #+12]
+   \   00000024   0x.... 0x....      BL       MC_CopyToBuffer
+    136              } 
+   \   00000028   0x1C64             ADDS     R4,R4,#+1
+   \   0000002A   0xB2E4             UXTB     R4,R4
+   \                     ??MC_ReadScope_1: (+1)
+   \   0000002C   0x7829             LDRB     R1,[R5, #+0]
+   \   0000002E   0x428C             CMP      R4,R1
+   \   00000030   0xDBF3             BLT      ??MC_ReadScope_2
+    137                  
+    138              /* return end position */
+    139              return pMessageIO;  
+   \   00000032   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    140          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     pcm_nScopeVarCount
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x........         DC32     pcm_nScopeVarCount+0x4
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \   00000000   0x........         DC32     pcm_nScopeVarCount+0xC
+    141          
+    142          #else  /* (MC_USE_SCOPE) && !(MC_DISABLE) */
+    143          
+    144          /*lint -efile(766, mc_protocol.h) include file is not used in this case */
+    145          
+    146          #endif /* (MC_USE_SCOPE) && !(MC_DISABLE) */
+    147          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   MC_InitScope
+      16   MC_ReadScope
+        16   -> MC_CopyToBuffer
+      32   MC_SetUpScope
+        32   -> MC_AddressFromBuffer
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+       2  MC_InitScope
+      52  MC_ReadScope
+     104  MC_SetUpScope
+      44  pcm_nScopeVarCount
+          pcm_pScopeVarSize
+          pcm_pScopeVarAddr
+
+ 
+  44 bytes in section .bss
+ 170 bytes in section .text
+ 
+ 170 bytes of CODE memory
+  44 bytes of DATA memory
+
+Errors: none
+Warnings: none

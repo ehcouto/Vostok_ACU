@@ -1,0 +1,1151 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:35
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/PulseCounterLLI/PulseCounterLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\PulseCounterLLI.lst
+#        -o obj\PulseCounterLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/PulseCounterLLI/PulseCounterLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\PulseCounterLLI.lst
+#    Object file  =  obj\PulseCounterLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\PulseCounterLLI\PulseCounterLLI.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      Basic description of file contents
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8           *  @section    Applicable_Documents
+      9           *                  List here all the applicable documents if needed. <tr>
+     10           *
+     11           *  $Header:    PulseCounterLLI.c 1.9 2016/06/22 15:48:11EDT KAVEH RAZZAGHI (RAZZAK) Exp  $
+     12           *
+     13           *  @copyright  Copyright 2016-$Date: 2016/06/22 15:48:11EDT $. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     14           */
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          //---------------------------------------------------------------------------------------------------------------------
+     17          
+     18          
+     19          //-------------------------------------- Include Files ----------------------------------------------------------------
+     20          #include "PulseCounterLLI.h"
+     21          
+     22          #include "C_Extensions.h"
+     23          
+     24          #if (HBL_LLI_NUM_PULSECOUNTER > 0)
+     25          #include "VirtualPin.h"
+     26          #include "Gpio.h"
+     27          #include "string.h"
+     28          #include "SystemTimers.h"
+     29          #include "Timer.h"
+     30          
+     31          
+     32          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     33          
+     34          
+     35          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     36          
+     37          #define		NOISE_THRESHOLD				3
+     38          #define		MAX_PULSE_COUNTER			65535
+     39          
+     40          typedef enum
+     41          {
+     42              PULSECOUNTERLLI_POLARITY_POSITIVE,
+     43              PULSECOUNTERLLI_POLARITY_NEGATIVE
+     44          } PULSECOUNTERLLI_PULSE_POLARITY_TYPE;
+     45          
+     46          PACKED typedef struct
+     47          {
+     48              uint16      Unused                      : 15;
+     49              uint16      Inverted                    : 1 ;
+     50              uint16      Time_Base;
+     51              uint16      Maximum_Pulse_Duration;
+     52              uint16      Minimum_Pulse_Duration;
+     53          } PULSECOUNTERLLI_PARAMETERS_TYPE;
+     54          
+     55          PACKED typedef struct
+     56          {
+     57              uint16                  Pulse_Count;            //!< Roll-Back Valid Pulse Counter
+     58              uint16                  Pulse_Width;
+     59              uint16                  Invalid_Pulse_Count;
+     60              uint16                  Invalid_Pulse_Width;
+     61              uint16                  Total_Pulse_Count;
+     62              uint16					On_Counter;
+     63              uint8					Off_Counter;
+     64              BOOL_TYPE				OneMs_Handler_Enabled;
+     65              TIMER_PARAMETER_TYPE    Timer_Parameter;
+     66          } PULSECOUNTERLLI_DATA_TYPE;
+     67          
+
+   \                                 In section .bss, align 4
+     68          static PULSECOUNTERLLI_DATA_TYPE PulseCounterLLI_Data[HBL_LLI_NUM_PULSECOUNTER];
+   \                     PulseCounterLLI_Data:
+   \   00000000                      DS8 24
+   \   00000018                      DS8 1
+     69          static uint8 PulseCounterLLI_Allocation;
+     70          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     71          
+     72          //=====================================================================================================================
+     73          //-------------------------------------- Public Functions -------------------------------------------------------------
+     74          //=====================================================================================================================
+     75          
+     76          
+     77          //---------------------------------------------------------------------------------------------------------------------
+     78          /**
+     79           * @brief      It Initializes the module DigitalLowLevel and its variables
+     80           */
+
+   \                                 In section .text, align 2, keep-with-next
+     81          void PulseCounterLLI__Initialize(void)
+     82          {
+   \                     PulseCounterLLI__Initialize: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+     83              memset(&PulseCounterLLI_Data,0,sizeof(PulseCounterLLI_Data));
+   \   00000002   0x....             LDR      R4,??DataTable6
+   \   00000004   0x2200             MOVS     R2,#+0
+   \   00000006   0x2115             MOVS     R1,#+21
+   \   00000008   0x0020             MOVS     R0,R4
+   \   0000000A   0x.... 0x....      BL       __aeabi_memset4
+     84              PulseCounterLLI_Allocation = 0;
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x7620             STRB     R0,[R4, #+24]
+     85          }
+   \   00000012   0xBD10             POP      {R4,PC}          ;; return
+     86          
+     87          //---------------------------------------------------------------------------------------------------------------------
+     88          /**
+     89           * @brief
+     90           * @return
+     91           */
+
+   \                                 In section .text, align 2, keep-with-next
+     92          uint8 PulseCounterLLI__Allocate(void)
+     93          {
+     94              uint8 retval;
+     95          
+     96              retval = 0xFF;
+   \                     PulseCounterLLI__Allocate: (+1)
+   \   00000000   0x20FF             MOVS     R0,#+255
+     97          
+     98              if (PulseCounterLLI_Allocation < HBL_LLI_NUM_PULSECOUNTER)
+   \   00000002   0x....             LDR      R1,??DataTable6
+   \   00000004   0x7E0A             LDRB     R2,[R1, #+24]
+   \   00000006   0x2A00             CMP      R2,#+0
+   \   00000008   0xD102             BNE      ??PulseCounterLLI__Allocate_0
+     99              {
+    100                  retval = PulseCounterLLI_Allocation;
+   \   0000000A   0x2000             MOVS     R0,#+0
+    101                  PulseCounterLLI_Allocation++;
+   \   0000000C   0x2201             MOVS     R2,#+1
+   \   0000000E   0x760A             STRB     R2,[R1, #+24]
+    102          
+    103              }
+    104              return (retval);
+   \                     ??PulseCounterLLI__Allocate_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+    105          }
+    106          
+    107          //---------------------------------------------------------------------------------------------------------------------
+    108          /**
+    109           *  @brief      It Initializes the module DigitalLowLevel and its variables
+    110           *
+    111           */
+
+   \                                 In section .text, align 2, keep-with-next
+    112          PASS_FAIL_TYPE PulseCounterLLI__InitializeInstance(HBL_LLI_TYPE * input)
+    113          {
+   \                     PulseCounterLLI__InitializeInstance: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0006             MOVS     R6,R0
+    114          	PASS_FAIL_TYPE ret_val = FAIL;
+   \   00000004   0x2700             MOVS     R7,#+0
+   \   00000006   0x0038             MOVS     R0,R7
+    115          
+    116              if (input->Data_Index < PulseCounterLLI_Allocation)
+   \   00000008   0x7AB1             LDRB     R1,[R6, #+10]
+   \   0000000A   0x....             LDR      R2,??DataTable6
+   \   0000000C   0x000B             MOVS     R3,R1
+   \   0000000E   0x7E14             LDRB     R4,[R2, #+24]
+   \   00000010   0x42A3             CMP      R3,R4
+   \   00000012   0xD24D             BCS      ??PulseCounterLLI__InitializeInstance_0
+    117              {
+    118              	PULSECOUNTERLLI_DATA_TYPE *data_ptr = &PulseCounterLLI_Data[input->Data_Index];
+   \   00000014   0x2015             MOVS     R0,#+21
+   \   00000016   0x4341             MULS     R1,R0,R1
+   \   00000018   0x1854             ADDS     R4,R2,R1
+    119              	PULSECOUNTERLLI_PARAMETERS_TYPE *param_ptr = (PULSECOUNTERLLI_PARAMETERS_TYPE*)(input->Parameter_Ptr.Data); //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \   0000001A   0x1D30             ADDS     R0,R6,#+4
+   \   0000001C   0x.... 0x....      BL       __aeabi_uread4
+   \   00000020   0x0005             MOVS     R5,R0
+    120                  uint8 virtual_pin = input->Pin_Ptr[0];
+   \   00000022   0x0030             MOVS     R0,R6
+   \   00000024   0x.... 0x....      BL       __aeabi_uread4
+   \   00000028   0x7801             LDRB     R1,[R0, #+0]
+    121                  uint32 min_pulse_us = param_ptr->Minimum_Pulse_Duration * param_ptr->Time_Base;
+   \   0000002A   0x79A8             LDRB     R0,[R5, #+6]
+   \   0000002C   0x79EA             LDRB     R2,[R5, #+7]
+   \   0000002E   0x0612             LSLS     R2,R2,#+24
+   \   00000030   0x0C12             LSRS     R2,R2,#+16
+   \   00000032   0x4310             ORRS     R0,R0,R2
+   \   00000034   0x78AA             LDRB     R2,[R5, #+2]
+   \   00000036   0x78EB             LDRB     R3,[R5, #+3]
+   \   00000038   0x061B             LSLS     R3,R3,#+24
+   \   0000003A   0x0C1B             LSRS     R3,R3,#+16
+   \   0000003C   0x431A             ORRS     R2,R2,R3
+   \   0000003E   0x4350             MULS     R0,R2,R0
+    122          
+    123                  if (min_pulse_us >= 5000)
+   \   00000040   0x....             LDR      R2,??DataTable6_1  ;; 0x1388
+   \   00000042   0x4290             CMP      R0,R2
+   \   00000044   0xD30B             BCC      ??PulseCounterLLI__InitializeInstance_1
+    124                  {
+    125                      Gpio__PinConfig(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin, INPUT_FLOAT);
+   \   00000046   0x....             LDR      R0,??DataTable6_2
+   \   00000048   0x00C9             LSLS     R1,R1,#+3
+   \   0000004A   0x1840             ADDS     R0,R0,R1
+   \   0000004C   0x463A             MOV      R2,R7
+   \   0000004E   0x7841             LDRB     R1,[R0, #+1]
+   \   00000050   0x7800             LDRB     R0,[R0, #+0]
+   \   00000052   0x.... 0x....      BL       Gpio__PinConfig
+    126                      data_ptr->OneMs_Handler_Enabled = TRUE;
+   \   00000056   0x2001             MOVS     R0,#+1
+   \   00000058   0x0001             MOVS     R1,R0
+   \   0000005A   0x7361             STRB     R1,[R4, #+13]
+    127                      ret_val = PASS;
+   \   0000005C   0xBDF2             POP      {R1,R4-R7,PC}
+    128                  }
+    129                  else
+    130                  {
+    131                      TIMER_POLARITY_TYPE polarity = TIMER_POLARITY_ACTIVE_HIGH;
+   \                     ??PulseCounterLLI__InitializeInstance_1: (+1)
+   \   0000005E   0x003A             MOVS     R2,R7
+    132                      TIMER_CAPTURE_EDGE_TYPE edge = TIMER_CAPTUREON_RISING_EDGE;
+   \   00000060   0x003E             MOVS     R6,R7
+    133          
+    134                      data_ptr->OneMs_Handler_Enabled = FALSE;
+   \   00000062   0x7367             STRB     R7,[R4, #+13]
+    135          
+    136                      if (param_ptr->Inverted == PULSECOUNTERLLI_POLARITY_NEGATIVE)
+   \   00000064   0x7828             LDRB     R0,[R5, #+0]
+   \   00000066   0x786B             LDRB     R3,[R5, #+1]
+   \   00000068   0x061B             LSLS     R3,R3,#+24
+   \   0000006A   0x0C1B             LSRS     R3,R3,#+16
+   \   0000006C   0x4318             ORRS     R0,R0,R3
+   \   0000006E   0x0BC0             LSRS     R0,R0,#+15
+   \   00000070   0xD002             BEQ      ??PulseCounterLLI__InitializeInstance_2
+    137                      {
+    138                          polarity = TIMER_POLARITY_ACTIVE_LOW;
+   \   00000072   0x2001             MOVS     R0,#+1
+   \   00000074   0x0002             MOVS     R2,R0
+    139                          edge = TIMER_CAPTUREON_FALLING_EDGE;
+   \   00000076   0x0006             MOVS     R6,R0
+    140                      }
+    141          
+    142                      data_ptr->Timer_Parameter.Timer      = (TIMER_TYPE)VIRTUALPIN_TABLE[virtual_pin].device;
+   \                     ??PulseCounterLLI__InitializeInstance_2: (+1)
+   \   00000078   0x....             LDR      R0,??DataTable6_2
+   \   0000007A   0x00C9             LSLS     R1,R1,#+3
+   \   0000007C   0x1840             ADDS     R0,R0,R1
+   \   0000007E   0x78C1             LDRB     R1,[R0, #+3]
+   \   00000080   0x73A1             STRB     R1,[R4, #+14]
+    143                      data_ptr->Timer_Parameter.Channel    = (TIMER_CHANNEL_TYPE)VIRTUALPIN_TABLE[virtual_pin].param0;
+   \   00000082   0x7941             LDRB     R1,[R0, #+5]
+   \   00000084   0x73E1             STRB     R1,[R4, #+15]
+    144                      data_ptr->Timer_Parameter.Mode       = TIMER_MODE_INPUT_CAPTURE;
+   \   00000086   0x2103             MOVS     R1,#+3
+   \   00000088   0x7421             STRB     R1,[R4, #+16]
+    145                      data_ptr->Timer_Parameter.Port       = VIRTUALPIN_TABLE[virtual_pin].port;
+   \   0000008A   0x7801             LDRB     R1,[R0, #+0]
+   \   0000008C   0x7461             STRB     R1,[R4, #+17]
+    146                      data_ptr->Timer_Parameter.Pin        = VIRTUALPIN_TABLE[virtual_pin].pin;
+   \   0000008E   0x7841             LDRB     R1,[R0, #+1]
+   \   00000090   0x74A1             STRB     R1,[R4, #+18]
+    147                      data_ptr->Timer_Parameter.Pin_ReMap  = VIRTUALPIN_TABLE[virtual_pin].pin_remap;
+   \   00000092   0x7900             LDRB     R0,[R0, #+4]
+   \   00000094   0x74E0             STRB     R0,[R4, #+19]
+    148                      data_ptr->Timer_Parameter.Polarity   = polarity;
+   \   00000096   0x7522             STRB     R2,[R4, #+20]
+    149          
+    150                      ret_val = Timer__Config(&data_ptr->Timer_Parameter);
+   \   00000098   0x0020             MOVS     R0,R4
+   \   0000009A   0x300E             ADDS     R0,R0,#+14
+   \   0000009C   0x.... 0x....      BL       Timer__Config
+   \   000000A0   0x0005             MOVS     R5,R0
+    151                      ret_val &= Timer__CaptureStart(&data_ptr->Timer_Parameter,
+    152                                  TIMER_CAPTURE_PULSE,
+    153                                  edge);
+   \   000000A2   0x0032             MOVS     R2,R6
+   \   000000A4   0x4639             MOV      R1,R7
+   \   000000A6   0x0020             MOVS     R0,R4
+   \   000000A8   0x300E             ADDS     R0,R0,#+14
+   \   000000AA   0x.... 0x....      BL       Timer__CaptureStart
+   \   000000AE   0x4028             ANDS     R0,R0,R5
+    154                  }
+    155              }
+    156              return (ret_val);
+   \                     ??PulseCounterLLI__InitializeInstance_0: (+1)
+   \   000000B0   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    157          }
+    158          
+    159          //---------------------------------------------------------------------------------------------------------------------
+    160          /**
+    161           *
+    162           * @param input
+    163           * @param data
+    164           * @return
+    165           */
+
+   \                                 In section .text, align 2, keep-with-next
+    166          void * PulseCounterLLI__GetCount(HBL_LLI_TYPE * input)
+    167          {
+    168              if (input->Data_Index < PulseCounterLLI_Allocation)
+   \                     PulseCounterLLI__GetCount: (+1)
+   \   00000000   0x7A80             LDRB     R0,[R0, #+10]
+   \   00000002   0x....             LDR      R1,??DataTable6
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x7E0B             LDRB     R3,[R1, #+24]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD203             BCS      ??PulseCounterLLI__GetCount_0
+    169              {
+    170                  return ((void *)&PulseCounterLLI_Data[input->Data_Index].Pulse_Count);
+   \   0000000C   0x2215             MOVS     R2,#+21
+   \   0000000E   0x4350             MULS     R0,R2,R0
+   \   00000010   0x1808             ADDS     R0,R1,R0
+   \   00000012   0x4770             BX       LR
+    171              }
+    172              else
+    173              {
+    174                  return (NULL);
+   \                     ??PulseCounterLLI__GetCount_0: (+1)
+   \   00000014   0x2000             MOVS     R0,#+0
+   \   00000016   0x4770             BX       LR               ;; return
+    175              }
+    176          }
+    177          
+    178          //---------------------------------------------------------------------------------------------------------------------
+    179          /**
+    180           *
+    181           * @param input
+    182           * @param data
+    183           * @return
+    184           */
+
+   \                                 In section .text, align 2, keep-with-next
+    185          void * PulseCounterLLI__GetWidth(HBL_LLI_TYPE * input)
+    186          {
+    187              if (input->Data_Index < PulseCounterLLI_Allocation)
+   \                     PulseCounterLLI__GetWidth: (+1)
+   \   00000000   0x7A80             LDRB     R0,[R0, #+10]
+   \   00000002   0x....             LDR      R1,??DataTable6
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x7E0B             LDRB     R3,[R1, #+24]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD204             BCS      ??PulseCounterLLI__GetWidth_0
+    188              {
+    189                  return ((void *)&PulseCounterLLI_Data[input->Data_Index].Pulse_Width);
+   \   0000000C   0x2215             MOVS     R2,#+21
+   \   0000000E   0x4350             MULS     R0,R2,R0
+   \   00000010   0x1808             ADDS     R0,R1,R0
+   \   00000012   0x1C80             ADDS     R0,R0,#+2
+   \   00000014   0x4770             BX       LR
+    190              }
+    191              else
+    192              {
+    193                  return (NULL);
+   \                     ??PulseCounterLLI__GetWidth_0: (+1)
+   \   00000016   0x2000             MOVS     R0,#+0
+   \   00000018   0x4770             BX       LR               ;; return
+    194              }
+    195          }
+    196          
+    197          //---------------------------------------------------------------------------------------------------------------------
+    198          /**
+    199           * @brief This process gets detected pulse duration and checks if it matches valid pulse duration range
+    200           * @param input	- Hbl LLI instance data structure
+    201           * @return	TRUE if a new valid pulse is available, FALSE otherwise
+    202           */
+
+   \                                 In section .text, align 2, keep-with-next
+    203          BOOL_TYPE PulseCounterLLI__ICProcess(HBL_LLI_TYPE * input)
+    204          {
+   \                     PulseCounterLLI__ICProcess: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0006             MOVS     R6,R0
+    205          	PULSECOUNTERLLI_PARAMETERS_TYPE *param_ptr = (PULSECOUNTERLLI_PARAMETERS_TYPE*)(input->Parameter_Ptr.Data); //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \   00000004   0x1D30             ADDS     R0,R6,#+4
+   \   00000006   0x.... 0x....      BL       __aeabi_uread4
+   \   0000000A   0x9000             STR      R0,[SP, #+0]
+    206              BOOL_TYPE retval = FALSE;
+   \   0000000C   0x2700             MOVS     R7,#+0
+    207          
+    208              if ((input->Data_Index < PulseCounterLLI_Allocation)
+    209              	&& (PulseCounterLLI_Data[input->Data_Index].OneMs_Handler_Enabled == FALSE))
+   \   0000000E   0x7AB0             LDRB     R0,[R6, #+10]
+   \   00000010   0x....             LDR      R5,??DataTable6
+   \   00000012   0x0001             MOVS     R1,R0
+   \   00000014   0x7E2A             LDRB     R2,[R5, #+24]
+   \   00000016   0x4291             CMP      R1,R2
+   \   00000018   0xD24F             BCS      ??PulseCounterLLI__ICProcess_0
+   \   0000001A   0x2115             MOVS     R1,#+21
+   \   0000001C   0x4348             MULS     R0,R1,R0
+   \   0000001E   0x1828             ADDS     R0,R5,R0
+   \   00000020   0x7B40             LDRB     R0,[R0, #+13]
+   \   00000022   0x2800             CMP      R0,#+0
+   \   00000024   0xD149             BNE      ??PulseCounterLLI__ICProcess_0
+    210              {
+    211                  PULSECOUNTERLLI_DATA_TYPE *data_ptr = &PulseCounterLLI_Data[input->Data_Index];
+   \   00000026   0x7AB0             LDRB     R0,[R6, #+10]
+   \   00000028   0x4348             MULS     R0,R1,R0
+   \   0000002A   0x182C             ADDS     R4,R5,R0
+    212                  TIMER_CAPTURE_EDGE_TYPE edge = TIMER_CAPTUREON_RISING_EDGE;
+    213                  uint32 pulse_duration = Timer__GetCaptureDuration(&data_ptr->Timer_Parameter);
+   \   0000002C   0x0020             MOVS     R0,R4
+   \   0000002E   0x300E             ADDS     R0,R0,#+14
+   \   00000030   0x.... 0x....      BL       Timer__GetCaptureDuration
+    214          
+    215                  data_ptr->Total_Pulse_Count++;
+   \   00000034   0x7A21             LDRB     R1,[R4, #+8]
+   \   00000036   0x7A62             LDRB     R2,[R4, #+9]
+   \   00000038   0x0612             LSLS     R2,R2,#+24
+   \   0000003A   0x0C12             LSRS     R2,R2,#+16
+   \   0000003C   0x4311             ORRS     R1,R1,R2
+   \   0000003E   0x1C49             ADDS     R1,R1,#+1
+   \   00000040   0x7221             STRB     R1,[R4, #+8]
+   \   00000042   0x0A09             LSRS     R1,R1,#+8
+   \   00000044   0x7261             STRB     R1,[R4, #+9]
+    216                  pulse_duration /= ENDIANU16_STON(param_ptr->Time_Base);
+   \   00000046   0x9A00             LDR      R2,[SP, #+0]
+   \   00000048   0x7891             LDRB     R1,[R2, #+2]
+   \   0000004A   0x78D3             LDRB     R3,[R2, #+3]
+   \   0000004C   0x061B             LSLS     R3,R3,#+24
+   \   0000004E   0x0C1B             LSRS     R3,R3,#+16
+   \   00000050   0x4319             ORRS     R1,R1,R3
+   \   00000052   0x.... 0x....      BL       __aeabi_uidiv
+    217          
+    218                  //validate the pulse duration
+    219                  if ((pulse_duration >= ENDIANU16_STON(param_ptr->Minimum_Pulse_Duration)) &&
+    220                      (pulse_duration <= ENDIANU16_STON(param_ptr->Maximum_Pulse_Duration)) )
+   \   00000056   0x9A00             LDR      R2,[SP, #+0]
+   \   00000058   0x7991             LDRB     R1,[R2, #+6]
+   \   0000005A   0x79D3             LDRB     R3,[R2, #+7]
+   \   0000005C   0x061B             LSLS     R3,R3,#+24
+   \   0000005E   0x0C1B             LSRS     R3,R3,#+16
+   \   00000060   0x4319             ORRS     R1,R1,R3
+   \   00000062   0x4288             CMP      R0,R1
+   \   00000064   0xD314             BCC      ??PulseCounterLLI__ICProcess_1
+   \   00000066   0x7911             LDRB     R1,[R2, #+4]
+   \   00000068   0x7953             LDRB     R3,[R2, #+5]
+   \   0000006A   0x061B             LSLS     R3,R3,#+24
+   \   0000006C   0x0C1B             LSRS     R3,R3,#+16
+   \   0000006E   0x4319             ORRS     R1,R1,R3
+   \   00000070   0x4281             CMP      R1,R0
+   \   00000072   0xD30D             BCC      ??PulseCounterLLI__ICProcess_1
+    221                  {
+    222                      data_ptr->Pulse_Width = pulse_duration;
+   \   00000074   0x70A0             STRB     R0,[R4, #+2]
+   \   00000076   0x0A00             LSRS     R0,R0,#+8
+   \   00000078   0x70E0             STRB     R0,[R4, #+3]
+    223                      data_ptr->Pulse_Count++;
+   \   0000007A   0x7820             LDRB     R0,[R4, #+0]
+   \   0000007C   0x7861             LDRB     R1,[R4, #+1]
+   \   0000007E   0x0609             LSLS     R1,R1,#+24
+   \   00000080   0x0C09             LSRS     R1,R1,#+16
+   \   00000082   0x4308             ORRS     R0,R0,R1
+   \   00000084   0x1C40             ADDS     R0,R0,#+1
+   \   00000086   0x7020             STRB     R0,[R4, #+0]
+   \   00000088   0x0A00             LSRS     R0,R0,#+8
+   \   0000008A   0x7060             STRB     R0,[R4, #+1]
+    224                      retval = TRUE;
+   \   0000008C   0x2701             MOVS     R7,#+1
+   \   0000008E   0xE00B             B        ??PulseCounterLLI__ICProcess_2
+    225                  }
+    226                  else
+    227                  {
+    228                      data_ptr->Invalid_Pulse_Width = pulse_duration;
+   \                     ??PulseCounterLLI__ICProcess_1: (+1)
+   \   00000090   0x71A0             STRB     R0,[R4, #+6]
+   \   00000092   0x0A00             LSRS     R0,R0,#+8
+   \   00000094   0x71E0             STRB     R0,[R4, #+7]
+    229                      data_ptr->Invalid_Pulse_Count++;
+   \   00000096   0x7920             LDRB     R0,[R4, #+4]
+   \   00000098   0x7961             LDRB     R1,[R4, #+5]
+   \   0000009A   0x0609             LSLS     R1,R1,#+24
+   \   0000009C   0x0C09             LSRS     R1,R1,#+16
+   \   0000009E   0x4308             ORRS     R0,R0,R1
+   \   000000A0   0x1C40             ADDS     R0,R0,#+1
+   \   000000A2   0x7120             STRB     R0,[R4, #+4]
+   \   000000A4   0x0A00             LSRS     R0,R0,#+8
+   \   000000A6   0x7160             STRB     R0,[R4, #+5]
+    230                  }
+    231          
+    232              	edge = TIMER_CAPTUREON_FALLING_EDGE;
+    233          
+    234              	Timer__CaptureStart(&PulseCounterLLI_Data[input->Data_Index].Timer_Parameter, TIMER_CAPTURE_PULSE, edge);
+   \                     ??PulseCounterLLI__ICProcess_2: (+1)
+   \   000000A8   0x2201             MOVS     R2,#+1
+   \   000000AA   0x2100             MOVS     R1,#+0
+   \   000000AC   0x7AB0             LDRB     R0,[R6, #+10]
+   \   000000AE   0x2315             MOVS     R3,#+21
+   \   000000B0   0x4358             MULS     R0,R3,R0
+   \   000000B2   0x1828             ADDS     R0,R5,R0
+   \   000000B4   0x300E             ADDS     R0,R0,#+14
+   \   000000B6   0x.... 0x....      BL       Timer__CaptureStart
+    235              }
+    236          
+    237              return (retval);
+   \                     ??PulseCounterLLI__ICProcess_0: (+1)
+   \   000000BA   0x0038             MOVS     R0,R7
+   \   000000BC   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    238          }
+    239          
+    240          //---------------------------------------------------------------------------------------------------------------------
+    241          /**
+    242           * @brief This process polls Gpio to detect correct pulse, and validate against pulse range
+    243           * @param input	- Hbl LLI instance data structure
+    244           * @return	TRUE if a new valid pulse is available, FALSE otherwise
+    245           */
+
+   \                                 In section .text, align 2, keep-with-next
+    246          BOOL_TYPE PulseCounterLLI__OneMsProcess(HBL_LLI_TYPE * input)
+    247          {
+   \                     PulseCounterLLI__OneMsProcess: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0007             MOVS     R7,R0
+    248          	PULSECOUNTERLLI_PARAMETERS_TYPE *param_ptr = (PULSECOUNTERLLI_PARAMETERS_TYPE*)(input->Parameter_Ptr.Data); //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \   00000004   0x1D38             ADDS     R0,R7,#+4
+   \   00000006   0x.... 0x....      BL       __aeabi_uread4
+   \   0000000A   0x9000             STR      R0,[SP, #+0]
+    249              BOOL_TYPE retval = FALSE;
+   \   0000000C   0x2500             MOVS     R5,#+0
+   \   0000000E   0x002E             MOVS     R6,R5
+    250          
+    251              if ((input->Data_Index < PulseCounterLLI_Allocation)
+    252              	&& (PulseCounterLLI_Data[input->Data_Index].OneMs_Handler_Enabled == TRUE))
+   \   00000010   0x7AB8             LDRB     R0,[R7, #+10]
+   \   00000012   0x....             LDR      R1,??DataTable6
+   \   00000014   0x0002             MOVS     R2,R0
+   \   00000016   0x7E0B             LDRB     R3,[R1, #+24]
+   \   00000018   0x429A             CMP      R2,R3
+   \   0000001A   0xD300             BCC      .+4
+   \   0000001C   0xE08A             B        ??PulseCounterLLI__OneMsProcess_0
+   \   0000001E   0x2215             MOVS     R2,#+21
+   \   00000020   0x4350             MULS     R0,R2,R0
+   \   00000022   0x180C             ADDS     R4,R1,R0
+   \   00000024   0x7B60             LDRB     R0,[R4, #+13]
+   \   00000026   0x2801             CMP      R0,#+1
+   \   00000028   0xD000             BEQ      .+4
+   \   0000002A   0xE083             B        ??PulseCounterLLI__OneMsProcess_0
+    253              {
+    254                  PULSECOUNTERLLI_DATA_TYPE *data_ptr = &PulseCounterLLI_Data[input->Data_Index];
+    255                  uint8 virtual_pin = input->Pin_Ptr[0];
+   \   0000002C   0x0038             MOVS     R0,R7
+   \   0000002E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000032   0x7800             LDRB     R0,[R0, #+0]
+    256                  BOOL_TYPE pinval;
+    257          
+    258                  pinval = Gpio__PinRead(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin);
+   \   00000034   0x....             LDR      R1,??DataTable6_2
+   \   00000036   0x00C0             LSLS     R0,R0,#+3
+   \   00000038   0x1808             ADDS     R0,R1,R0
+   \   0000003A   0x7841             LDRB     R1,[R0, #+1]
+   \   0000003C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000003E   0x.... 0x....      BL       Gpio__PinRead
+    259          
+    260                  // Inverted logic flag enabled - swap TRUE to FALSE
+    261                  if (param_ptr->Inverted)
+   \   00000042   0x9A00             LDR      R2,[SP, #+0]
+   \   00000044   0x7811             LDRB     R1,[R2, #+0]
+   \   00000046   0x7853             LDRB     R3,[R2, #+1]
+   \   00000048   0x061B             LSLS     R3,R3,#+24
+   \   0000004A   0x0C1B             LSRS     R3,R3,#+16
+   \   0000004C   0x4319             ORRS     R1,R1,R3
+   \   0000004E   0x0BC9             LSRS     R1,R1,#+15
+   \   00000050   0xD002             BEQ      ??PulseCounterLLI__OneMsProcess_1
+    262                  {
+    263                      pinval ^= TRUE;
+   \   00000052   0x0001             MOVS     R1,R0
+   \   00000054   0x2001             MOVS     R0,#+1
+   \   00000056   0x4048             EORS     R0,R0,R1
+    264                  }
+    265          
+    266                  if (pinval)
+   \                     ??PulseCounterLLI__OneMsProcess_1: (+1)
+   \   00000058   0x2800             CMP      R0,#+0
+   \   0000005A   0x7AA0             LDRB     R0,[R4, #+10]
+   \   0000005C   0x7AE1             LDRB     R1,[R4, #+11]
+   \   0000005E   0xD00F             BEQ      ??PulseCounterLLI__OneMsProcess_2
+    267                  {
+    268                  	// Any Off (0) samples counted before will be considered noise
+    269                  	uint32 new_counter = data_ptr->On_Counter + data_ptr->Off_Counter + 1;
+   \   00000060   0x0609             LSLS     R1,R1,#+24
+   \   00000062   0x0C09             LSRS     R1,R1,#+16
+   \   00000064   0x4308             ORRS     R0,R0,R1
+   \   00000066   0x7B21             LDRB     R1,[R4, #+12]
+   \   00000068   0x1840             ADDS     R0,R0,R1
+   \   0000006A   0x1C40             ADDS     R0,R0,#+1
+    270                  	if (new_counter > MAX_PULSE_COUNTER)
+   \   0000006C   0x2180             MOVS     R1,#+128
+   \   0000006E   0x0249             LSLS     R1,R1,#+9        ;; #+65536
+   \   00000070   0x4288             CMP      R0,R1
+   \   00000072   0xD300             BCC      ??PulseCounterLLI__OneMsProcess_3
+    271                  	{
+    272                  		new_counter = MAX_PULSE_COUNTER;
+   \   00000074   0x1E48             SUBS     R0,R1,#+1
+    273                  	}
+    274                  	data_ptr->On_Counter = (uint16) new_counter;
+   \                     ??PulseCounterLLI__OneMsProcess_3: (+1)
+   \   00000076   0x72A0             STRB     R0,[R4, #+10]
+   \   00000078   0x0A00             LSRS     R0,R0,#+8
+   \   0000007A   0x72E0             STRB     R0,[R4, #+11]
+    275                  	data_ptr->Off_Counter = 0;
+   \   0000007C   0x7325             STRB     R5,[R4, #+12]
+   \   0000007E   0xE059             B        ??PulseCounterLLI__OneMsProcess_0
+    276                  }
+    277                  else if (data_ptr->On_Counter > 0)
+   \                     ??PulseCounterLLI__OneMsProcess_2: (+1)
+   \   00000080   0x0609             LSLS     R1,R1,#+24
+   \   00000082   0x0C09             LSRS     R1,R1,#+16
+   \   00000084   0x4308             ORRS     R0,R0,R1
+   \   00000086   0xD051             BEQ      ??PulseCounterLLI__OneMsProcess_4
+    278                  {
+    279              		data_ptr->Off_Counter++;
+   \   00000088   0x7B20             LDRB     R0,[R4, #+12]
+   \   0000008A   0x1C40             ADDS     R0,R0,#+1
+   \   0000008C   0x7320             STRB     R0,[R4, #+12]
+    280                  	if (data_ptr->Off_Counter > NOISE_THRESHOLD)
+   \   0000008E   0xB2C0             UXTB     R0,R0
+   \   00000090   0x2804             CMP      R0,#+4
+   \   00000092   0xDB4F             BLT      ??PulseCounterLLI__OneMsProcess_0
+    281                  	{
+    282                  		uint32 pulse_duration = (data_ptr->On_Counter * 1000) / param_ptr->Time_Base;
+   \   00000094   0x7AA2             LDRB     R2,[R4, #+10]
+   \   00000096   0x7AE0             LDRB     R0,[R4, #+11]
+   \   00000098   0x0600             LSLS     R0,R0,#+24
+   \   0000009A   0x0C00             LSRS     R0,R0,#+16
+   \   0000009C   0x4302             ORRS     R2,R2,R0
+   \   0000009E   0x9800             LDR      R0,[SP, #+0]
+   \   000000A0   0x7881             LDRB     R1,[R0, #+2]
+   \   000000A2   0x78C3             LDRB     R3,[R0, #+3]
+   \   000000A4   0x061B             LSLS     R3,R3,#+24
+   \   000000A6   0x0C1B             LSRS     R3,R3,#+16
+   \   000000A8   0x4319             ORRS     R1,R1,R3
+   \   000000AA   0x20FA             MOVS     R0,#+250
+   \   000000AC   0x0080             LSLS     R0,R0,#+2        ;; #+1000
+   \   000000AE   0x4350             MULS     R0,R2,R0
+   \   000000B0   0x.... 0x....      BL       __aeabi_idiv
+    283                      	data_ptr->On_Counter = 0;
+   \   000000B4   0x4629             MOV      R1,R5
+   \   000000B6   0x72A1             STRB     R1,[R4, #+10]
+   \   000000B8   0x72E1             STRB     R1,[R4, #+11]
+    284                      	data_ptr->Off_Counter = 0;
+   \   000000BA   0x7325             STRB     R5,[R4, #+12]
+    285                          data_ptr->Total_Pulse_Count++;
+   \   000000BC   0x7A21             LDRB     R1,[R4, #+8]
+   \   000000BE   0x7A62             LDRB     R2,[R4, #+9]
+   \   000000C0   0x0612             LSLS     R2,R2,#+24
+   \   000000C2   0x0C12             LSRS     R2,R2,#+16
+   \   000000C4   0x4311             ORRS     R1,R1,R2
+   \   000000C6   0x1C49             ADDS     R1,R1,#+1
+   \   000000C8   0x7221             STRB     R1,[R4, #+8]
+   \   000000CA   0x0A09             LSRS     R1,R1,#+8
+   \   000000CC   0x7261             STRB     R1,[R4, #+9]
+    286          
+    287                          if (pulse_duration > MAX_PULSE_COUNTER)
+   \   000000CE   0x2180             MOVS     R1,#+128
+   \   000000D0   0x0249             LSLS     R1,R1,#+9        ;; #+65536
+   \   000000D2   0x4288             CMP      R0,R1
+   \   000000D4   0xD300             BCC      ??PulseCounterLLI__OneMsProcess_5
+    288                          {
+    289                          	pulse_duration = MAX_PULSE_COUNTER;
+   \   000000D6   0x1E48             SUBS     R0,R1,#+1
+    290                          }
+    291          
+    292                          //validate the pulse duration
+    293                          if ((pulse_duration >= ENDIANU16_STON(param_ptr->Minimum_Pulse_Duration)) &&
+    294                              (pulse_duration <= ENDIANU16_STON(param_ptr->Maximum_Pulse_Duration)) )
+   \                     ??PulseCounterLLI__OneMsProcess_5: (+1)
+   \   000000D8   0x9A00             LDR      R2,[SP, #+0]
+   \   000000DA   0x7991             LDRB     R1,[R2, #+6]
+   \   000000DC   0x79D3             LDRB     R3,[R2, #+7]
+   \   000000DE   0x061B             LSLS     R3,R3,#+24
+   \   000000E0   0x0C1B             LSRS     R3,R3,#+16
+   \   000000E2   0x4319             ORRS     R1,R1,R3
+   \   000000E4   0x4288             CMP      R0,R1
+   \   000000E6   0xD314             BCC      ??PulseCounterLLI__OneMsProcess_6
+   \   000000E8   0x7911             LDRB     R1,[R2, #+4]
+   \   000000EA   0x7953             LDRB     R3,[R2, #+5]
+   \   000000EC   0x061B             LSLS     R3,R3,#+24
+   \   000000EE   0x0C1B             LSRS     R3,R3,#+16
+   \   000000F0   0x4319             ORRS     R1,R1,R3
+   \   000000F2   0x4281             CMP      R1,R0
+   \   000000F4   0xD30D             BCC      ??PulseCounterLLI__OneMsProcess_6
+    295                          {
+    296                              data_ptr->Pulse_Width = (uint16) pulse_duration;
+   \   000000F6   0x70A0             STRB     R0,[R4, #+2]
+   \   000000F8   0x0A00             LSRS     R0,R0,#+8
+   \   000000FA   0x70E0             STRB     R0,[R4, #+3]
+    297                              data_ptr->Pulse_Count++;
+   \   000000FC   0x7820             LDRB     R0,[R4, #+0]
+   \   000000FE   0x7861             LDRB     R1,[R4, #+1]
+   \   00000100   0x0609             LSLS     R1,R1,#+24
+   \   00000102   0x0C09             LSRS     R1,R1,#+16
+   \   00000104   0x4308             ORRS     R0,R0,R1
+   \   00000106   0x1C40             ADDS     R0,R0,#+1
+   \   00000108   0x7020             STRB     R0,[R4, #+0]
+   \   0000010A   0x0A00             LSRS     R0,R0,#+8
+   \   0000010C   0x7060             STRB     R0,[R4, #+1]
+    298                              retval = TRUE;
+   \   0000010E   0x2601             MOVS     R6,#+1
+   \   00000110   0xE010             B        ??PulseCounterLLI__OneMsProcess_0
+    299                          }
+    300                          else
+    301                          {
+    302                              data_ptr->Invalid_Pulse_Width = (uint16) pulse_duration;
+   \                     ??PulseCounterLLI__OneMsProcess_6: (+1)
+   \   00000112   0x71A0             STRB     R0,[R4, #+6]
+   \   00000114   0x0A00             LSRS     R0,R0,#+8
+   \   00000116   0x71E0             STRB     R0,[R4, #+7]
+    303                              data_ptr->Invalid_Pulse_Count++;
+   \   00000118   0x7920             LDRB     R0,[R4, #+4]
+   \   0000011A   0x7961             LDRB     R1,[R4, #+5]
+   \   0000011C   0x0609             LSLS     R1,R1,#+24
+   \   0000011E   0x0C09             LSRS     R1,R1,#+16
+   \   00000120   0x4308             ORRS     R0,R0,R1
+   \   00000122   0x1C40             ADDS     R0,R0,#+1
+   \   00000124   0x7120             STRB     R0,[R4, #+4]
+   \   00000126   0x0A00             LSRS     R0,R0,#+8
+   \   00000128   0x7160             STRB     R0,[R4, #+5]
+   \   0000012A   0xE003             B        ??PulseCounterLLI__OneMsProcess_0
+    304                          }
+    305                  	}
+    306                  }
+    307                  else
+    308                  {
+    309                  	data_ptr->On_Counter = 0;
+   \                     ??PulseCounterLLI__OneMsProcess_4: (+1)
+   \   0000012C   0x4628             MOV      R0,R5
+   \   0000012E   0x72A0             STRB     R0,[R4, #+10]
+   \   00000130   0x72E0             STRB     R0,[R4, #+11]
+    310                  	data_ptr->Off_Counter = 0;
+   \   00000132   0x7325             STRB     R5,[R4, #+12]
+    311                  }
+    312              }
+    313          
+    314              return (retval);
+   \                     ??PulseCounterLLI__OneMsProcess_0: (+1)
+   \   00000134   0x0030             MOVS     R0,R6
+   \   00000136   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    315          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6:
+   \   00000000   0x........         DC32     PulseCounterLLI_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_1:
+   \   00000000   0x00001388         DC32     0x1388
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_2:
+   \   00000000   0x........         DC32     VIRTUALPIN_TABLE
+    316          
+    317          //=====================================================================================================================
+    318          //-------------------------------------- Private Functions ------------------------------------------------------------
+    319          //=====================================================================================================================
+    320          
+    321          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   PulseCounterLLI__Allocate
+       0   PulseCounterLLI__GetCount
+       0   PulseCounterLLI__GetWidth
+      24   PulseCounterLLI__ICProcess
+        24   -> Timer__CaptureStart
+        24   -> Timer__GetCaptureDuration
+        24 __aeabi_uidiv
+        24 __aeabi_uread4
+       8   PulseCounterLLI__Initialize
+         8   -> __aeabi_memset4
+      24   PulseCounterLLI__InitializeInstance
+        24   -> Gpio__PinConfig
+        24   -> Timer__CaptureStart
+        24   -> Timer__Config
+        24 __aeabi_uread4
+      24   PulseCounterLLI__OneMsProcess
+        24   -> Gpio__PinRead
+        24 __aeabi_idiv
+        24 __aeabi_uread4
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable6
+       4  ??DataTable6_1
+       4  ??DataTable6_2
+      25  PulseCounterLLI_Data
+          PulseCounterLLI_Allocation
+      18  PulseCounterLLI__Allocate
+      24  PulseCounterLLI__GetCount
+      26  PulseCounterLLI__GetWidth
+     190  PulseCounterLLI__ICProcess
+      20  PulseCounterLLI__Initialize
+     178  PulseCounterLLI__InitializeInstance
+     312  PulseCounterLLI__OneMsProcess
+
+ 
+  25 bytes in section .bss
+ 780 bytes in section .text
+ 
+ 780 bytes of CODE memory
+  25 bytes of DATA memory
+
+Errors: none
+Warnings: none

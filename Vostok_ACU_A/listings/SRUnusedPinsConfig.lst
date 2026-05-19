@@ -1,0 +1,648 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:43
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Common/all/SRCommon/SRUnusedPinsConfig/SRUnusedPinsConfig.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\SRUnusedPinsConfig.lst -o obj\SRUnusedPinsConfig.obj
+#        source/XCategory/Common/all/SRCommon/SRUnusedPinsConfig/SRUnusedPinsConfig.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SRUnusedPinsConfig.lst
+#    Object file  =  obj\SRUnusedPinsConfig.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\SRCommon\SRUnusedPinsConfig\SRUnusedPinsConfig.c
+      1          /**
+      2           *  @file
+      3           *  @defgroup    CLASS_B
+      4           *  @brief            This module implements the interface to configuration, refresh and status
+      5           *                          check of Unused pins, with ClassB requirements.
+      6           *
+      7           *  @details         Handles a configuration, refresh and status check of Unused pins.
+      8           *                      It's adding Class B requirement.
+      9           *                      SRUnusedPinsConfig__Handler5ms running from Asynch task checks current
+     10           *                      status & configuration of pins. If any pin status configuration mismatched
+     11           *                      it will trigger SR Exception. Execution of SRUnusedPinsConfig__Handler5ms
+     12           *                      is monitored by SRUnusedPinsConfig__Monitor running at 100mS. If
+     13           *                      execution of SRUnusedPinsConfig__Handler5ms goes beyond expected
+     14           *                      limit it will trigger SR Exception.
+     15           *
+     16           *  @copyright    Copyright 2022 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     17           */
+     18          //---------------------------------------------------------------------------------------------------------------------
+     19          //---------------------------------------------------------------------------------------------------------------------
+     20          
+     21          
+     22          //-------------------------------------- Include Files ----------------------------------------------------------------
+     23          
+     24          #include "SRSystemConfig.h"
+     25          
+     26          #if (SR_UNUSED_PINS_CONFIG_FEATURE == ENABLED)
+     27          
+     28          // -- This Module --
+     29          #include "SRUnusedPinsConfig.h"
+     30          #include "SRUnusedPinsConfig_prv.h"
+     31          
+     32          // -- Other Modules --
+     33          #include "Gpio.h"
+     34          #include "SRData.h"
+     35          #include "SRException.h"
+     36          #include "SRTaskSequence.h"
+     37          #include "VirtualPin.h"
+     38          
+     39          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     40          
+     41          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     42          
+     43          //-------------------------------------- Default defines ---------------------------------------------------------------
+     44          
+     45          #ifndef SR_UNUSED_PINS_CONFIG_COUNT_ERROR_IN_PERCENTAGE
+     46              #define SR_UNUSED_PINS_CONFIG_COUNT_ERROR_IN_PERCENTAGE                    (10)
+     47          #endif
+     48          
+     49          // This option shows time by which SRUnusedpinsConfig Handler runs, Its in milliseconds.
+     50          // #define SR_UNUSED_PINS_CONFIG_HANDLER_TIME 5 is 5mS
+     51          #define SR_UNUSED_PINS_CONFIG_HANDLER_TIME                                                 (5)
+     52          
+     53          //---------------------------------------------------------------------------------------------------------------------
+     54          // its used to generate exception in case handler gets missed by certain percentage of count
+     55          // Mentioned in SRUnusedpinsConfig_prv.h file SR_UNUSED_PINS_CONFIG_COUNT_ERROR_IN_PERCENTAGE
+     56          // SRUnusedPinsConfig__Monitor used to check SRUnusedPinsConfig__Handler5ms is not getting missed
+     57          // and executing correct number of times.
+     58          //---------------------------------------------------------------------------------------------------------------------
+     59          
+     60          // This option shows time by which SRUnusedpinsConfig monitor runs, Its in milliseconds.
+     61          
+     62          #define SR_UNUSED_PINS_CONFIG_MONITOR_HANDLER_TIME                               (100)
+     63          
+     64          
+     65          // below Macros mainly used to calculate number if times Handler (5mS) will get executed before next
+     66          // run of SRUnusedPinsConfig__Monitor.
+     67          
+     68          #define SR_UNUSED_PINS_CONFIG_MONITOR_ABSOLUTE_COUNT    \
+     69                              (SR_UNUSED_PINS_CONFIG_MONITOR_HANDLER_TIME / SR_UNUSED_PINS_CONFIG_HANDLER_TIME)
+     70          
+     71          // This Macro calculates error count from percentage
+     72          
+     73          #define SR_UNUSED_PINS_CONFIG_MONITOR_ERROR_COUNT          \
+     74                              (( SR_UNUSED_PINS_CONFIG_MONITOR_ABSOLUTE_COUNT * SR_UNUSED_PINS_CONFIG_COUNT_ERROR_IN_PERCENTAGE ) / 100 )
+     75          
+     76          // This Macro calculates max allowed count of SRUnusedPinsConfig__Handler5ms execution before next
+     77          // SRUnusedPinsConfig__Monitor run / Max number of allowed times pins have been checked for configuration
+     78          
+     79          #define SR_UNUSED_PINS_CONFIG_HANDLER_MAX_COUNT                       \
+     80                              ( SR_UNUSED_PINS_CONFIG_MONITOR_ABSOLUTE_COUNT + SR_UNUSED_PINS_CONFIG_MONITOR_ERROR_COUNT )
+     81          
+     82          // This Macro calculates min allowed count of SRUnusedpinsConfig SRUnusedPinsConfig__Handler5ms execution before next
+     83          // SRUnusedPinsConfig__Monitor run / Min number of allowed times pins have been checked for configuration
+     84          
+     85          #define SR_UNUSED_PINS_CONFIG_HANDLER_MIN_COUNT                        \
+     86                              ( SR_UNUSED_PINS_CONFIG_MONITOR_ABSOLUTE_COUNT -  SR_UNUSED_PINS_CONFIG_MONITOR_ERROR_COUNT )
+     87          
+     88          
+     89          // typedef struct, format of Unused Pins parameters
+     90          typedef struct SR_UNUSED_PINS_PARAM_STRUCT
+     91          {
+     92              uint8   Virtual_Pin_Index;              /*  pin index from  VIRTUALPIN_LIST */
+     93              uint8   Gpio_Type:7;                        /* Enum of GPIO_PIN_MODE_TYPE */
+     94              uint8   Is_High:1;                            /* in status  should be high or low ( only if Pins are output ) */
+     95          } SR_UNUSED_PINS_PARAM_TYPE;
+     96          
+     97          //! definition of the unused pins configuration.
+     98          static const SR_UNUSED_PINS_PARAM_TYPE SR_UNUSED_PINS_TABLE[] = SR_UNUSED_PINS_CONFIG_LIST;
+     99          
+    100          //-------------------------------------- Variables ---------------------------------------------------------------
+    101          //! Keeps track of how many times pins have been checked for Configuration.
+    102          static uint8 Unused_Pins_Config_Count;
+    103          //! Flag to skip first time SRUnusedPinsConfig__Monitor.
+    104          static uint8 Skip_First_Monitor;
+    105          
+    106          //-------------------------------------- inverted Variables ---------------------------------------------------------------
+    107          //! Inverted memory for the Class B variable,  Keeps track of how many times pins have been checked
+    108          //!  for Configuration.
+    109          static uint8 N_Unused_Pins_Config_Count;
+    110          //! Inverted memory for the Class B variable,  Flag to skip first time SRUnusedPinsConfig__Monitor.
+    111          static uint8 N_Skip_First_Monitor;
+    112          
+    113          
+    114          //! Macro to calculate number of pin entries in SR_UNUSED_PINS_TABLE
+    115          #define NUMBER_OF_UNUSED_PINS_TO_CONFIG  ELEMENTS_IN_ARRAY(SR_UNUSED_PINS_TABLE)
+    116          
+    117          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    118          static void DoUnusedPinsUpdate( uint8 unused_pins_table_index );
+    119          static void ConfigUnusedPins( void );
+    120          
+    121          
+    122          
+    123          //=====================================================================================================================
+    124          //-------------------------------------- Public Functions -------------------------------------------------------------
+    125          //=====================================================================================================================
+    126          
+    127          //---------------------------------------------------------------------------------------------------------------------
+    128          /**
+    129           *  @brief      It Initializes the module SRUnusedPinsConfig and its variables.
+    130           *                    It also initializes / configures Unused pin status.
+    131           *
+    132           */
+    133          void SRUnusedPinsConfig__Initialize(void)
+    134          {
+    135              //Init variable and flags
+    136              SR_SET_BYTE(Unused_Pins_Config_Count, 0);
+    137              SR_SET_BYTE(Skip_First_Monitor, 1);
+    138          
+    139              //Configure and set Unused pin status in initialization. Pins not verified here as first time configuration.
+    140              ConfigUnusedPins();
+    141          
+    142              #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    143                  SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_INIT_PHASE, SRTASKSEQUENCE_INIT_SRCHECKUNUSEDPINS);
+    144              #endif
+    145          }
+    146          
+    147          
+    148          /**
+    149           *  @brief      It validates configuration, data integrity of pins and reconfigure unused pins
+    150           *                    This should run at 5mS handler
+    151           *
+    152           */
+    153          void SRUnusedPinsConfig__Handler5ms( void )
+    154          {
+    155              uint8 table_index;
+    156          
+    157              // Check configuration and status of each pin entry  in SR_UNUSED_PINS_TABLE
+    158              for( table_index = 0; table_index < NUMBER_OF_UNUSED_PINS_TO_CONFIG ; table_index++  )
+    159              {
+    160                  // Check Virtual Pin Index is within limit
+    161                  SR_UNUSED_PINS_PARAM_TYPE *cur_param_ptr =
+    162                              (SR_UNUSED_PINS_PARAM_TYPE *)&SR_UNUSED_PINS_TABLE[ table_index ];
+    163                 if(cur_param_ptr->Virtual_Pin_Index < VirtualPin__GetNumOf())
+    164                 {
+    165                     // Get Port and Pin from Virtual Pin Table
+    166                     VIRTUALPIN_TYPE *pin_ptr = (void *) &VIRTUALPIN_TABLE[cur_param_ptr->Virtual_Pin_Index];
+    167          
+    168                     // Check pin configuration & status of pins mentioned in SR_UNUSED_PINS_TABLE.
+    169                     // If Configuration or status is not changed reconfigure & refresh pin.
+    170                     // If there is difference in actual and expected Pins configuration or status of Pins, Gpio module
+    171                     // will generate Exception
+    172                     if(TRUE == Gpio__CheckConfig(pin_ptr->port, pin_ptr->pin,
+    173                                     (GPIO_PIN_MODE_TYPE)cur_param_ptr->Gpio_Type, (BOOL_TYPE)cur_param_ptr->Is_High))
+    174                     {
+    175                         // Update the pins.
+    176                         DoUnusedPinsUpdate( table_index );
+    177                     }
+    178                 }
+    179              }
+    180          
+    181              // Check data integrity & Increment count for number of times pins gets configured.
+    182              SR_CHECK_BYTE( Unused_Pins_Config_Count );
+    183              SR_SET_BYTE( Unused_Pins_Config_Count, Unused_Pins_Config_Count + 1 );
+    184              //If data overflow generate exception
+    185              if( 0xFF == Unused_Pins_Config_Count )
+    186              {
+    187                  SRException__Queue( SREXCEPTION_ASSYNCHRONOUS_TASK_OVERRUN, (uint32)Unused_Pins_Config_Count, 0 );
+    188              }
+    189          }
+    190          
+    191          
+    192          /**
+    193           *  @brief      Monitors @100mS
+    194           *                    It checks count of number of time pins got refreshed, tracks SRUnusedPinsConfig__Handler5ms
+    195           *                    with 100mS SRUnusedPinsConfig__Monitor.
+    196           *                    If Unused_Pins_Config_Count goes beyond error count this method will generate exception
+    197           *
+    198           */
+    199          void SRUnusedPinsConfig__Monitor( void )
+    200          {
+    201          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    202              SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_THREAD, SRTASKSEQUENCE_APPL_SRCHECKUNUSEDPINS_ENTER);
+    203          #endif
+    204          
+    205              // Check data Integrity
+    206              SR_CHECK_BYTE( Skip_First_Monitor );
+    207              // skip first time as Async task and App mgr task are not in sync which leads to
+    208              // error in Unused_Pins_Config_Count
+    209              if(0 == Skip_First_Monitor)
+    210              {
+    211                  SR_CHECK_BYTE( Unused_Pins_Config_Count );
+    212                  // Validate number of times pins refreshed is within limits if not generate exception
+    213                  if( ( SR_UNUSED_PINS_CONFIG_HANDLER_MAX_COUNT < Unused_Pins_Config_Count ) ||
+    214                  ( SR_UNUSED_PINS_CONFIG_HANDLER_MIN_COUNT > Unused_Pins_Config_Count ) )
+    215                  {
+    216                      SRException__Queue( SREXCEPTION_ASSYNCHRONOUS_TASK_OVERRUN, (uint32)Unused_Pins_Config_Count, 0 );
+    217                  }
+    218              }
+    219          
+    220              // Clear Flag and Count
+    221              SR_SET_BYTE( Unused_Pins_Config_Count, 0 );
+    222              SR_SET_BYTE( Skip_First_Monitor, 0 );
+    223          
+    224          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    225              SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_THREAD, SRTASKSEQUENCE_APPL_SRCHECKUNUSEDPINS_EXIT);
+    226          #endif
+    227          }
+    228          
+    229          
+    230          //=====================================================================================================================
+    231          //-------------------------------------- Private Functions ------------------------------------------------------------
+    232          //=====================================================================================================================
+    233          //---------------------------------------------------------------------------------------------------------------------
+    234          /**
+    235           * Update the output pin based on the requested value and change configuration
+    236           * @param unused_pins_table_index = SR_UNUSED_PINS_TABLE Table index
+    237           * @return None
+    238           */
+    239          static void DoUnusedPinsUpdate( uint8 unused_pins_table_index )
+    240          {
+    241              // Validate Virtual Pin Index is within VIRTUALPIN_TABLE limits.
+    242              SR_UNUSED_PINS_PARAM_TYPE *cur_param_ptr =
+    243                          (SR_UNUSED_PINS_PARAM_TYPE *)&SR_UNUSED_PINS_TABLE[ unused_pins_table_index ];
+    244              if(cur_param_ptr->Virtual_Pin_Index < VirtualPin__GetNumOf())
+    245              {
+    246                  VIRTUALPIN_TYPE *pin_ptr = (void *) &VIRTUALPIN_TABLE[cur_param_ptr->Virtual_Pin_Index];
+    247          
+    248                  // Check an entry where Port is not set
+    249                  if(pin_ptr->port != PORT_NULL)
+    250                  {
+    251                      // Set Pin value if an Output Type is set
+    252                      if((cur_param_ptr->Gpio_Type == OUTPUT_PUSHPULL) ||
+    253                          (cur_param_ptr->Gpio_Type == OUTPUT_OPEN_DRAIN) ||
+    254                          (cur_param_ptr->Gpio_Type == SPECIAL_FUNCTION_PUSH_PULL) ||
+    255                          (cur_param_ptr->Gpio_Type == SPECIAL_FUNCTION_OPEN_DRAIN))
+    256                      {
+    257                          Gpio__PinWrite(pin_ptr->port, pin_ptr->pin, (BOOL_TYPE)cur_param_ptr->Is_High);
+    258                      }
+    259                      // Configure Pin
+    260                      Gpio__PinConfig(pin_ptr->port, pin_ptr->pin, (GPIO_PIN_MODE_TYPE)cur_param_ptr->Gpio_Type);
+    261                  }
+    262              }
+    263          }
+    264          
+    265          
+    266          /**
+    267           * Update the output pin based on the requested value and change configuration
+    268           * This method doesn't validate previous pin configuration or data.
+    269           * It mainly used in Initialization Method or first time pin configuration.
+    270           * @param None
+    271           * @return None
+    272           */
+    273          static void ConfigUnusedPins( void )
+    274          {
+    275              uint8 table_index;
+    276          
+    277              // Check configuration and status of each pin entry  in SR_UNUSED_PINS_TABLE
+    278              for( table_index = 0; table_index < NUMBER_OF_UNUSED_PINS_TO_CONFIG ; table_index++  )
+    279              {
+    280                  // Update the pins.
+    281                  DoUnusedPinsUpdate( table_index );
+    282              }
+    283          }
+    284          
+    285          #endif  // #if (SR_UNUSED_PINS_CONFIG_FEATURE == ENABLED)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

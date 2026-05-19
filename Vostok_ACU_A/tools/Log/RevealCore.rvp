@@ -1,0 +1,395 @@
+###############################################################################
+[Nodes]
+F = BR          # Broadcast Node
+
+
+###############################################################################
+[Filters]
+
+#------------------------------------------------------------------------------
+# API001 Core OpCodes
+    01f01.00.U.U
+    ACK ({0:X2},{1:X2})
+    01f01.U(ACK_NAK_CODE).U.U
+    NAK {0} ({1:X2},{2:X2})
+
+    !01f02
+    Heartbeat
+
+    01c03.UU
+    Set Heartbeat Period = {0}s
+
+    01f04.R
+    Publish RAM Data: {0}
+
+    01c05.UUU.UU
+    Read {1} bytes of RAM starting at address 0x{0:X6}
+
+    01c06.UUU.UU
+    Read {1} bytes of EE Memory starting at address 0x{0:X6}
+
+    01c07.FF.FF
+    Send all API/OpCode events
+    01c07.U.FF
+    Send all API{0:D3} events
+    01c07.U.U
+    Send API{0:D3}/OpCode {1} event
+    01c07.U.R
+    Send API{0:D3} events for hex OpCodes {1}
+
+    01f08.R
+    Publish EE Memory Data: {0}
+
+    01c09.UUUU.UU
+    Read {1} bytes of RAM starting at address 0x{0:X8}
+
+    01f10.UU
+    Publish Heartbeat Period = {0}s
+
+    01f11.U
+    Max message size = {0}
+
+    01f1E
+    Hello World! I woke up.
+
+    01f1F.U
+    I see that node {0} woke up.
+
+
+#------------------------------------------------------------------------------
+# API002 DAQ OpCodes
+    02c01.UUU.U.U.U.U(CHANGE_OPERATOR).UU.U(?ACK'd:unACK'd)
+    DAQ: Create a {4} (Val=0x{5:X4}) numeric {6} event (API{2:D3},OpCode {3}) {1} bytes at address 0x{0:X6}
+
+    02c02.UUU.U.U.U.U(CHANGE_OPERATOR).UU.U(?ACK'd:unACK'd)
+    DAQ: Create a {4} (Val=0x{5:X4}) byte {6} event (API{2:D3},OpCode {3}) {1} bytes at address 0x{0:X6}
+
+    02c03.FF.FF
+    DAQ: Clear all events
+    #02c03.U.FF
+    #DAQ: Clear all API{0:D3} events
+    02c03.U.U
+    DAQ: Clear API{0:D3}/OpCode {1} event
+    02c03.U.R
+    DAQ: Clear API{0:D3} events for hex OpCodes {1}
+    02f03.FF.FF
+    DAQ: Cleared all events
+    #02f03.U.FF
+    #DAQ: Cleared all API{0:D3} events
+    02f03.U.U
+    DAQ: Cleared API{0:D3}/OpCode {1} event
+    02f03.U.R
+    DAQ: Cleared API{0:D3} events for hex OpCodes {1}
+
+    02c08
+    DAQ: Clear all events. Reinitialize all application-specific events.
+
+    02f09
+    DAQ: Cleared all events. Reinitialized all application-specific events.
+
+    02c0F.UUUU.U.U.U.U(CHANGE_OPERATOR).UU.U(?ACK'd:unACK'd)
+    DAQ: Create a {4} (Val=0x{5:X4}) numeric {6} event (API{2:D3},OpCode {3}) {1} bytes at address 0x{0:X6}
+
+    02c10.UUUU.U.U.U.U(CHANGE_OPERATOR).UU.U(?ACK'd:unACK'd)
+    DAQ: Create a {4} (Val=0x{5:X4}) byte {6} event (API{2:D3},OpCode {3}) {1} bytes at address 0x{0:X6}
+
+
+#------------------------------------------------------------------------------
+# API003 Discovery OpCodes
+    03c01
+    Discovery: Request Reveal nodes
+
+    03f02.UU
+    Discovery: Publish Reveal node (Password 0x{0:X4})
+
+    03c03
+    Discovery: Request list of APIs
+
+    03f04.R
+    Discovery: Supported APIs are {0}
+
+    03c05.FF
+    Discovery: Request info for all supported APIs
+    03c05.U
+    Discovery: Request info for API{0:D3}
+    03c05.R
+    Discovery: Request info for APIs {0}
+
+    03f06.U.UU.UU.U
+    Discovery: API{0:D3}, Type {1}, Version {2} ({3} Instance)
+
+    03c07.FF
+    Discovery: Request instances for all supported APIs
+    03c07.U
+    Discovery: Request instances for API{0:D3}
+    03c07.R
+    Discovery: Request instances for APIs {0}
+
+    03f08.U.U.UU.UU
+    Discovery: API{0:D3}, Instance {1} (Type {2}, Version {3})
+
+
+#------------------------------------------------------------------------------
+# API004 Debug OpCodes
+    04f0F.U(LOG_MODULE_ID_TYPE).U(41-46)-55.UU
+    Log Message:  <---  (Data=0x{2:X4}) {0} '{1:X}'
+    04f0F.U(LOG_MODULE_ID_TYPE).U(61-66)-87.UU
+    Log Message:  <---  (Data=0x{2:X4}) {0} '{1:x}'
+    04f0F.UU(LOG_MODULE_MESSAGE_ID_TYPE).UU
+    Log Message:  <---  (Data=0x{1:X4}) {0}
+
+
+#------------------------------------------------------------------------------
+# API006 Key Press OpCodes
+    06c01.U
+    Key Press: Press Key (index #{0})
+
+    06f02.U
+    Key Press: Publish Key (index #{0})
+
+
+#------------------------------------------------------------------------------
+# API007 Memory OpCodes
+    07c01.UUU.R
+    Memory: Write to RAM address 0x{0:X6}: {1}
+
+    07c02.UUU.R
+    Memory: Write to EE address 0x{0:X6}: {1}
+
+    07c0B
+    Request setting file info
+
+    07f0B.UU.UU
+    Publish setting file info: CRC = 0x{0:X4}, Size = {1}
+
+    07c0C.UUUU.U
+    Request {1} bytes of the setting file data starting at offset 0x{0:X8}
+
+    07f0C.UUUU.R
+    Publish setting file data at 0x{0:X8}: {1}
+
+    07c0F.UUUU.UUUU
+    Erase flash Range [0x{0:X8}..0x{1:X8}]
+
+    07c10.UUUU.R
+    Write flash to 0x{0:X8} = {1}
+
+    07c12
+    Request flash alignment
+
+    07c13.U(SF_ID_TYPE)
+    Request setting file info for {0}
+
+    07f13.U(SF_ID_TYPE).UU.UU
+    Setting file {0} info: CRC = 0x{1:X4}, Size = {2}
+
+    07c14.U(SF_ID_TYPE).UU.U
+    Request {2} bytes from the {0} setting file data starting at offset 0x{1:X4}
+
+    07f14.U(SF_ID_TYPE).UU.R
+    Publish {0} setting file data at 0x{1:X4}: {2}
+
+    07c15.UU.UU
+    Request setting file displacement info for Pointer 0x{0:X4} ({0}), Displacement 0x{1:X4} ({1})
+
+    07f15.UU.UU.UU.UU
+    Publish setting file displacement info for Pointer 0x{0:X4} ({0}), Displacement 0x{1:X4} ({1}): CRC = 0x{2:X4}, Size = {3}
+
+    07c16.UU.UU.UU.U
+    Request setting file displacement data for Pointer 0x{0:X4} ({0}), Displacement 0x{1:X4} ({1}), Offset 0x{2:X4} ({2}), Size {3}
+
+    07f16.UU.UU.UU.R
+    Publish setting file displacement data for Pointer 0x{0:X4} ({0}), Displacement 0x{1:X4} ({1}), Offset 0x{2:X4} ({2}): {3}
+
+
+#------------------------------------------------------------------------------
+# API009: System
+    09c01.UU
+    Request Cold Reset in {0} milliseconds
+    09c01.UU.U(RESET_TYPE)
+    Request {1} in {0} milliseconds
+    09f01.00
+    > > > > >  RESET  < < < < <
+    09f01.U(0(?Debugger : );1(?LVD : );2(?Clock : );3(?EMC : );4(?Illegal_Op : );5(?Watchdog : );6(?External : );7(?POR : ))
+    > > > > >  RESET ({0}{1}{2}{3}{4}{5}{6}{7})  < < < < <
+    09c02
+    Request endianess
+    09f02.U(ENDIANESS)
+    Publish endianess: {0}
+    09c03
+    Request low power mode
+    09c04
+    Who woke up the system?
+    09f04
+    I woke up the system
+    09f08.U(LOW_POWER_READINESS)
+    Low power readiness: {0}
+    09c1F
+    Force a watchdog reset
+
+
+#------------------------------------------------------------------------------
+# API011: Application Control
+    0Bc01
+    Request Ident Table
+    0Bf01.R
+    Publish Ident Table: {0}
+    0Bc03
+    Request Status
+    0Bf03.U.R
+    Publish Status (Product Type {0}): {1}
+    0Bc04
+    Request Regulations
+    0Bf04.U.R
+    Publish Regulations (Product Type {0}): {1}
+    0Bc05.U.R
+    Set Regulations (Product Type {0}): {1}
+    0Bc06
+    Request Mode
+    0Bf06.U(MODE_VALUE).U(SUB_MODE_VALUE)
+    Publish Mode: {0} / {1}
+    0Bc07.U(MODE_VALUE).U(SUB_MODE_VALUE)
+    Set Mode: {0} / {1}
+    0Bc08.AA
+    Stay in PC Control
+    0Bc09.U
+    Request Regulation for Function ID {0}
+    0Bf09.U.U
+    Publish Function ID {0}: {1}
+    0Bc0A
+    Request Number of Cycles
+    0Bf0A.U
+    Publish Number of Cycles: {0}
+    0Bc0B
+    Request Status Structure
+    0Bf0B.U.R
+    Publish Status Structure: {0} Variables\n\t\t\tVariable Sizes: {1}
+    0Bf1F.U
+    Publish Error: {0}
+
+
+#------------------------------------------------------------------------------
+# API221: Motion Control
+    DDc01.U
+    Request Failure Flags (Motor {0})
+    DDf01.U.UUUU
+    Publish Failure Flags (Motor {0}) 0x{1:X8}
+    DDc02.U
+    Clear Failure Flags (Motor {0})
+    DDf03.U.U(API221_MOTOR_EVENT_TYPE)
+    Motor Event (Motor {0}): {1}
+    DDc04.U.UU
+    Stop (Motor {0}) Deceleration = {1}
+    DDc05.U.SS.UU
+    Run (Motor {0}) Velocity = {1}, Acceleration = {2}
+    DDc06.U.R
+    Platform-Specific Motion (Motor {0}) Parameters = {1}
+    DDc08.U.U
+    Request Channel {1} Analog Data (Motor {0})
+    DDf08.U.U.U.U.U.U
+    Publish Analog Data (Motor {0}) Channel {1} = 0x{5:X2}{4:X2}{3:X2}{2:X2}
+    DDf09.U.U.U.U.U.U
+    Periodic Data\n\t\t\t (Motor {0}) C{1} = 0x{5:X2}{4:X2}{3:X2}{2:X2}
+    DDf09.U.U.U.U.U.U.U(7:4;3:0).U.U.U.U.U
+    Periodic Data\n\t\t\t (Motor {0}) C{1} = 0x{5:X2}{4:X2}{3:X2}{2:X2}\n\t\t\t (Motor {6}) C{7} = 0x{11:X2}{10:X2}{9:X2}{8:X2}
+    DDf09.R
+    Periodic Data (>2 data) {0}
+    DDc09.UU
+    Set Publication Period to {0} milliseconds
+    DDc0A.U.UUUU
+    Add channels (0x{1:X8}) to periodic data (Motor {0})
+    DDc0B.U(7:4;3:0).UUUU
+    Remove channels (0x{1:X8}) from periodic data (Motor {0})
+
+
+###############################################################################
+[Enums]
+
+ACK_NAK_CODE {
+	READY						= 0,
+	BUSY						= 1,
+	REJECTED					= 2,
+	ACK_EVENT					= 3,
+	UNSUPPORTED					= 4,
+	UNSUP_OP_CODE				= 5,
+	UNSUP_UNAVAILABLE			= 6,
+	UNSUP_INVALID_PARAM			= 7,
+	UNSUP_OUT_OF_MEMORY			= 8,
+	UNSUP_DOOR_OPEN				= 9,
+	UNSUP_BOUND_CMD_INCOMPLETE	= 10,
+	UNSUP_CANNOT_PAUSE_NOW		= 11,
+	TBD                         = 12,
+	DONT_SEND_ACK               = 13,
+	TIMEOUT                     = 14
+}
+
+API221_MOTOR_EVENT_TYPE {
+    API221_EVENT_NONE           = 0,
+    API221_EVENT_ERROR          = 1,
+    API221_EVENT_STOPPED        = 2,
+    API221_EVENT_RAMP_STARTED   = 3,
+    API221_EVENT_REACHED_TARGET = 4
+}
+
+CHANGE_OPERATOR {
+    ON_CHANGE                   = 0,
+    DEADBAND                    = 1,
+    CHECK_VALUE                 = 2,
+    CHECK_BOUNDARY              = 3,
+    PERIODIC_N_25MS             = 4,
+    PERIODIC_N_SECONDS          = 5,
+    PERIODIC_N_MINUTES          = 6,
+    RESERVED                    = 7,
+    BITMASK                     = 8,
+    ON_CHANGE_AFTER_TIME        = 9
+}
+
+ENDIANESS {
+    BIG_ENDIAN                  = 0,
+    LITTLE_ENDIAN               = 1
+}
+
+LOW_POWER_READINESS {
+    NOT_POSSIBLE_TO_GO_INTO_LOW_POWER = 0,
+    CONFIRM_GOING_INTO_LOW_POWER = 1
+}
+
+MODE_VALUE {
+    MODE_NORMAL                 = 0,
+    MODE_PROGRAMMING            = 1,
+    MODE_SETTINGFILE_NOT_CONSISTENT = 2,
+    MODE_LOW_POWER              = 3
+}
+
+RESET_TYPE {
+    COLD_RESET                  = 0,
+    WARM_RESET                  = 1,
+    IAP_RESET                   = 2
+}
+
+SUB_MODE_VALUE {
+    SUBMODE_NORMAL_INITIALIZE   = 0,
+    SUBMODE_NORMAL_SUPERVISOR   = 1,
+    SUBMODE_NORMAL_ERROR        = 2,
+    SUBMODE_NORMAL_EXT_CONTROL_ENTERING = 3,
+    SUBMODE_NORMAL_EXT_CONTROL_ENGAGED = 4
+}
+
+SF_ID_TYPE {
+    SF_ID_ACU                   = 0,
+    SF_ID_HMI                   = 1,
+    SF_ID_MCU                   = 2,
+    SF_ID_ACU_EXP_1             = 3,
+    SF_ID_ACU_EXP_2             = 4,
+    SF_ID_ACU_EXP_3             = 5,
+    SF_ID_ACU_EXP_4             = 6,
+    SF_ID_ACU_EXP_5             = 7,
+    SF_ID_HMI_EXP_1             = 8,
+    SF_ID_HMI_EXP_2             = 9,
+    SF_ID_HMI_EXP_3             = 10,
+    SF_ID_HMI_EXP_4             = 11,
+    SF_ID_HMI_EXP_5             = 12,
+    SF_ID_MAX                   = 13,
+    SF_ID_END                   = 255
+}
+

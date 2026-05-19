@@ -1,0 +1,412 @@
+;/**
+; *  @file
+; *  @defgroup   CLASS_B
+; *
+; *  @brief      consists of API defination to access the Cortex-M0+ core.
+; *
+; *  @section    Applicable_Documents
+; *                  List here all the applicable documents if needed. <tr>
+; *
+; *  $Header: $
+; *
+; *  @copyright  Copyright 2015-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+; */
+;//---------------------------------------------------------------------------------------------------------------------
+  SECTION .bss:DATA
+  
+  PUBLIC 
+ 
+  SECTION .text:CODE(2)
+  
+  ; Exported functions
+  
+  EXPORT __MSR_MSP
+  EXPORT __WFI
+  EXPORT __WFE
+  EXPORT __SEV
+  EXPORT __ISB
+  EXPORT __DSB
+  EXPORT __DMB
+  EXPORT __SVC
+  EXPORT __MSR_CONTROL
+  EXPORT __MRS_PSP
+  EXPORT __MSR_PSP
+  EXPORT __MRS_MSP
+  EXPORT __MSR_MSP
+  EXPORT __RESETPRIMASK
+  EXPORT __REV_HalfWord
+  EXPORT __REV_Word  
+  EXPORT __StartupRegisterTest
+  EXPORT __RunRegisterTest
+  
+;*******************************************************************************
+; Function Name  : __WFI
+; Description    : Assembler function for the WFI instruction.
+; Input          : None
+; Return         : None
+;*******************************************************************************
+__WFI 
+ 
+    WFI
+    BX r14
+
+;*******************************************************************************
+; Function Name  : __WFE
+; Description    : Assembler function for the WFE instruction.
+; Input          : None
+; Return         : None
+;*******************************************************************************
+__WFE
+
+    WFE
+    BX r14
+
+;*******************************************************************************
+; Function Name  : __SEV
+; Description    : Assembler function for the SEV instruction.
+; Input          : None
+; Return         : None
+;*******************************************************************************
+__SEV
+
+    SEV
+    BX r14
+
+;*******************************************************************************
+; Function Name  : __ISB
+; Description    : Assembler function for the ISB instruction.
+; Input          : None
+; Return         : None
+;*******************************************************************************
+__ISB
+
+    ISB
+    BX r14
+
+;*******************************************************************************
+; Function Name  : __DSB
+; Description    : Assembler function for the DSB instruction.
+; Input          : None
+; Return         : None
+;*******************************************************************************
+__DSB
+
+    DSB
+    BX r14
+
+;*******************************************************************************
+; Function Name  : __DMB
+; Description    : Assembler function for the DMB instruction.
+; Input          : None
+; Return         : None
+;*******************************************************************************
+__DMB
+
+    DMB
+    BX r14
+
+;*******************************************************************************
+; Function Name  : __SVC
+; Description    : Assembler function for the SVC instruction.
+; Input          : None
+; Return         : None
+;*******************************************************************************
+__SVC
+
+    SVC 0x01
+    BX r14
+
+;*******************************************************************************
+; Function Name  : __MSR_CONTROL
+; Description    : Assembler function for the MSR instruction.
+; Input          : - r0 : Cortex-M0 CONTROL register new value.  
+; Return         : None
+;*******************************************************************************
+__MSR_CONTROL
+
+  MSR CONTROL, r0
+  ISB
+  BX r14
+
+;*******************************************************************************
+; Function Name  : __MRS_PSP
+; Description    : Assembler function for the MRS instruction.
+; Input          : None
+; Return         : - r0 : Process Stack value.
+;*******************************************************************************
+__MRS_PSP
+
+  MRS r0, PSP
+  BX r14
+
+;*******************************************************************************
+; Function Name  : __MSR_PSP
+; Description    : Assembler function for the MSR instruction.
+; Input          : - r0 : Process Stack new value.  
+; Return         : None
+;*******************************************************************************
+__MSR_PSP 
+ 
+    MSR PSP, r0 ; set Process Stack value
+    BX r14
+
+;*******************************************************************************
+; Function Name  : __MRS_MSP
+; Description    : Assembler function for the MRS instruction.
+; Input          : None
+; Return         : - r0 : Main Stack value.
+;*******************************************************************************
+__MRS_MSP
+
+  MRS r0, MSP
+  BX r14
+
+;*******************************************************************************
+; Function Name  : __MSR_MSP
+; Description    : Assembler function for the MSR instruction.
+; Input          : - r0 : Main Stack new value.  
+; Return         : None
+;*******************************************************************************
+__MSR_MSP 
+ 
+    MSR MSP, r0 ; set Main Stack value
+    BX r14
+            
+;*******************************************************************************
+; Function Name  : __RESETPRIMASK
+; Description    : Assembler function to reset the PRIMASK.
+; Input          : None 
+; Return         : None
+;*******************************************************************************
+__RESETPRIMASK
+
+  CPSIE i
+  BX r14
+
+;*******************************************************************************
+; Function Name  : __REV_HalfWord
+; Description    : Reverses the byte order in HalfWord(16-bit) input variable.
+; Input          : - r0 : specifies the input variable
+; Return         : - r0 : holds tve variable value after byte reversing.
+;*******************************************************************************
+__REV_HalfWord 
+ 
+  REV16 r0, r0
+  BX r14
+
+;*******************************************************************************
+; Function Name  : __REV_Word
+; Description    : Reverses the byte order in Word(32-bit) input variable.
+; Input          : - r0 : specifies the input variable
+; Return         : - r0 : holds tve variable value after byte reversing.
+;*******************************************************************************
+__REV_Word 
+ 
+  REV r0, r0
+  BX r14
+  
+
+;*******************************************************************************
+; Function Name  : StartupRegisterTest
+; Description    : Full Cortex-M0 CPU test at start-up
+;                  Note: when possible, BRANCH are 16-bit only (depending on
+;                  relative offset to final BL instruction)
+; Input          : None.
+; Output         : Branch directly to a Fail Safe routine in case of failure
+; Return         : TRUE (=1)
+;*******************************************************************************/
+__StartupRegisterTest:
+	;save the register value to be tested
+	PUSH     {R1, R4, LR}
+	
+    MOVS R0, #0x00000000      		; Set Z(ero) Flag
+    BNE srt_fail                  	; Fails if Z clear
+    SUBS R0,#1                		; Set N(egative) Flag
+    BPL srt_fail                  	; Fails if N clear
+    ADDS R0,#2                		; Set C(arry) Flag and do not set Z
+    BCC srt_fail                	; Fails if C clear
+    LDR R0, = 0x80000000			; Prepares Overflow test
+    ADDS R0, R0, R0           		; Set V(overflow) Flag
+    BVC srt_fail         			; Fails if V clear
+    MRS R0, APSR              		; Get Status register
+    LDR R1, = 0x70000000			; Prepares Overflow test
+    CMP R0, R1						; Verifies that Z=C=V=1
+    BNE srt_fail         			; Fails if Q+N+C=V clear
+    
+    srt_pass:
+    BL __RunRegisterTest
+    ;restore the register value
+	POP      {R1, R4, PC}
+    BX LR               ; return to the caller
+
+    srt_fail:
+    ;restore the register value
+	POP      {R1, R4, PC}
+	
+	MOVS R0, #0x0
+	BX LR               ; return to the caller
+        
+;*******************************************************************************
+; Function Name  : RunRegisterTest
+; Description    : Full Cortex-M0 CPU test during run-time
+;                  Note: when possible, BRANCH are 16-bit only (depending on
+;                  relative offset to final BL instruction)
+; Input          : None.
+; Output         : Branch directly to a Fail Safe routine in case of failure
+; Return         : TRUE (=1) if test is ok
+;*******************************************************************************/
+__RunRegisterTest:
+
+    PUSH     {R1, R2, R3, R4, R5, R6, R7}
+    ; Register R0 (holds value returned by the function)
+    
+    ; Register R0 and R1
+    LDR R0,=0xAAAAAAAA
+    LDR R1,=0xAAAAAAAA
+    CMP R0, R1
+    BNE rrt_fail
+    LDR R0,=0x55555555
+    LDR R1,=0x55555555
+    CMP R0, R1
+    BNE rrt_fail
+    MOVS R1, #0x01            ; For ramp test
+
+    ; Link register (Register R14)
+    ;LDR R0,=0xAAAAAAAA
+    ;LDR R14,=0xAAAAAAAA
+    ;CMP R0, R14
+    ;BNE rrt_fail
+    ;LDR R0,=0x55555555
+    ;LDR R14,=0x55555555
+    ;CMP R0, R14
+    ;BNE rrt_fail
+
+    ; Register R2
+    LDR R0,=0xAAAAAAAA
+    LDR R2,=0xAAAAAAAA
+    CMP R0, R2
+    BNE rrt_fail
+    LDR R0,=0x55555555
+    LDR R2,=0x55555555
+    CMP R0, R2
+    BNE rrt_fail
+    MOVS R2, #0x02            ; For ramp test
+
+    ; Register R3
+    LDR R0,=0xAAAAAAAA
+    LDR R3,=0xAAAAAAAA
+    CMP R0, R3
+    BNE rrt_fail
+    LDR R0,=0x55555555
+    LDR R3,=0x55555555
+    CMP R0, R3
+    BNE rrt_fail
+    MOVS R3, #0x03            ; For ramp test
+
+    ; Register R4
+    LDR R0,=0xAAAAAAAA
+    LDR R4,=0xAAAAAAAA
+    CMP R0, R4
+    BNE rrt_fail
+    LDR R0,=0x55555555
+    LDR R4,=0x55555555
+    CMP R0, R4
+    BNE rrt_fail
+    MOVS R4, #0x04            ; For ramp test
+
+    ; Register R5
+    LDR R0,=0xAAAAAAAA
+    LDR R5,=0xAAAAAAAA
+    CMP R0, R5
+    BNE rrt_fail
+    LDR R0,=0x55555555
+    LDR R5,=0x55555555
+    CMP R0, R5
+    BNE rrt_fail
+    MOVS R5, #0x05            ; For ramp test
+
+    ; Register R6
+    LDR R0,=0xAAAAAAAA
+    LDR R6,=0xAAAAAAAA
+    CMP R0, R6
+    BNE rrt_fail
+    LDR R0,=0x55555555
+    LDR R6,=0x55555555
+    CMP R0, R6
+    BNE rrt_fail
+    MOVS R6, #0x06            ; For ramp test
+
+    ; Register R7
+    LDR R0,=0xAAAAAAAA
+    LDR R7,=0xAAAAAAAA
+    CMP R0, R7
+    BNE rrt_fail
+    LDR R0,=0x55555555
+    LDR R7,=0x55555555
+    CMP R0, R7
+    BNE rrt_fail
+    MOVS R7, #0x07            ; For ramp test
+
+    MOVS R0, #0x00            ; For ramp test
+
+    ; Ramp pattern verification
+    CMP R0, #0x00
+    BNE rrt_fail
+    CMP R1, #0x01
+    BNE rrt_fail
+    CMP R2, #0x02
+    BNE rrt_fail
+    CMP R3, #0x03
+    BNE rrt_fail
+    CMP R4, #0x04
+    BNE rrt_fail
+    CMP R5, #0x05
+    BNE rrt_fail
+    CMP R6, #0x06
+    BNE rrt_fail
+    CMP R7, #0x07
+    BNE rrt_fail
+
+    ; Process Stack pointer (banked Register R13)
+    MRS R0, PSP         ; Save process stack value
+    LDR R1, =0xAAAAAAA8     ; Test is different (PSP is word aligned)
+    MSR PSP, R1         ; load process stack value
+    MRS R2, PSP         ; Get back process stack value
+    CMP R2, R1          ; Verify value
+    BNE rrt_fail
+    LDR R1, =0x55555554     ; Test is different (PSP is word aligned)
+    MSR PSP, R1         ; load process stack value
+    MRS R2, PSP         ; Get back process stack value
+    CMP R2, R1          ; Verify value
+    BNE rrt_fail
+    MSR PSP, R0         ; Restore process stack value
+
+    ; Stack pointer (Register R13)
+    MOV R12, R13            ; Contains the return address and must be saved
+    LDR R1, =0xAAAAAAA8     ; It must be loaded half-word by half-word
+    MOV R13, R1             ; Contains the return address and must be saved
+    CMP R13, R1             ; and compared with another register
+    BNE rrt_fail
+    LDR R1, =0x55555554     ; It must be loaded half-word by half-word
+    MOV R13, R1             ; Contains the return address and must be saved
+    CMP R13, R1             ; and compared with another register
+    BNE rrt_fail
+    MOV R13, R12
+
+    rrt_pass:   
+    ;restore the register value
+    POP      {R1, R2, R3, R4, R5, R6, R7}
+
+    MOVS R0, #0x1
+    BX LR               ; return to the caller
+
+    rrt_fail:
+    ;restore the register value
+    POP      {R1, R2, R3, R4, R5, R6, R7}
+
+    MOVS R0, #0x0
+    BX LR               ; return to the caller
+
+ END
+        
+

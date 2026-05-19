@@ -1,0 +1,1058 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:12
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot/ExternalMotorPilot.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\ExternalMotorPilot.lst -o obj\ExternalMotorPilot.obj
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot/ExternalMotorPilot.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\ExternalMotorPilot.lst
+#    Object file  =  obj\ExternalMotorPilot.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\acuexpacu\ACUPilotHandler\ExternalMotorPilot\ExternalMotorPilot.c
+      1          /**
+      2           * @file
+      3           * @brief       Implements a motor pilot based on API221 and an externally controlled motor.
+      4           *
+      5           * @details     This module uses API221MotionCtrl to control an external motor controller. It
+      6           *              accepts two types of commands: simple and normal commands. They are identified
+      7           *              using bit 7 of the first byte of the command. 0 = Simple command. 1 = Custom
+      8           *              command.
+      9           *
+     10           *              Simple Commands:
+     11           *                  EXTERNAL_MOTOR_NO_COMMAND: 0x00
+     12           *                  This command indicates that no module requested anything for the external
+     13           *                  motor. In this case, the pilot will turn off the motor.
+     14           *
+     15           *                  EXTERNAL_MOTOR_NO_CHANGE: 0x01
+     16           *                  This command indicates that the application requested that the pilot maintain
+     17           *                  the most recent command. In this case, the pilot will not do anything.
+     18           *
+     19           *                  EXTERNAL_MOTOR_STOP: 0x02, deceleration (lo,hi)
+     20           *                  The pilot will send the Stop command with the specified deceleration. However,
+     21           *                  if this command is a copy of the previously sent command, then this command
+     22           *                  will do nothing.
+     23           *
+     24           *                  EXTERNAL_MOTOR_RUN: 0x03, velocity (lo,hi), acceleration (lo,hi)
+     25           *                  The pilot will send the Run command with the specified velocity and
+     26           *                  acceleration. However, if this command is a copy of the previously sent
+     27           *                  command, then this command will do nothing.
+     28           *
+     29           *              Custom commands:
+     30           *                  Always the same format: 0x80 + size, buffer
+     31           *              These commands are used to perform custom platform-specific behaviors. Neither
+     32           *              this module, nor the API221 module have any code to implement these custom
+     33           *              behaviors. The platform-specific code on the API221 server will parse the buffer.
+     34           *
+     35           *              Custom commands are only expected to be set on change. In between changes, the
+     36           *              EXTERNAL_MOTOR_NO_CHANGE simple command should be sent.
+     37           *
+     38           *              If the external motor control node is not connected on the Reveal communications
+     39           *              bus, then the ExternalMotorPilot will save the command until the node connects. It will
+     40           *              then send the most recent command.
+     41           *
+     42           * Setting file data structures for ExternalMotorPilot
+     43           *      ExternalMotorPilot Configuration
+     44           *              | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+     45           *      +0000h  |        Refresh_Seconds        |          Motor_Index          |
+     46           *      +0001h  |         Deceleration          | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+     47           *
+     48           *          Refer to the #EXTERNAL_MOTOR_PILOT_SF_CONFIG_TYPE for descriptions of the fields.
+     49           *
+     50              @startuml{ExternalMotorPilot_sm.png}
+     51                  title External Motor Pilot State Machine
+     52                  ' Use state = Emp_This->State
+     53          
+     54                  [*] --> Disconnected
+     55          
+     56                  Disconnected : do / CheckForMcuConnect()
+     57                  Disconnected --> Connected : evMcuConnected\n/ SendProcessed()
+     58          
+     59                  Connected : do / CheckForMcuDisconnect()
+     60                  Connected --> Disconnected : evMcuDisconnected
+     61              @enduml
+     62           *
+     63           * @copyright   Copyright 2016 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     64           */
+     65          
+     66          
+     67          //  --- Include Files -------------------------------------------------------------------------------------------------
+     68          
+     69          // -- This Module --
+     70          //lint -e766 Suppress Info: 'SystemConfig.h' header not used in module
+     71          #include "SystemConfig.h"
+     72          #if (HBL_PILOT_NUM_EXTERNAL_MOTOR > 0)
+     73          #include "ExternalMotorPilot.h"
+     74          
+     75          // -- Other Modules --
+     76          #include "API221MotionCtrl.h"
+     77          #include <limits.h>
+     78          #include "Log.h"
+     79          #include <string.h>
+     80          #include "SystemTimers.h"
+     81          
+     82          
+     83          //=====================================================================================================================
+     84          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for External Motor Pilot State Machine
+     85          //=====================================================================================================================
+     86          // !! StateEngineCrank cannot update this code if you change the header !!
+     87          
+     88          
+     89          //! Unique names used to identify states of the External Motor Pilot state machine.
+     90          typedef enum EXTERNAL_MOTOR_PILOT_STATE_ENUM
+     91          {
+     92              STATE_EXTERNAL_MOTOR_PILOT_NONE         = 0,
+     93          
+     94              STATE_EXTERNAL_MOTOR_PILOT_DISCONNECTED = 1,    //!< (initial_state)
+     95              STATE_EXTERNAL_MOTOR_PILOT_CONNECTED    = 2,
+     96          
+     97              STATE_EXTERNAL_MOTOR_PILOT_END          = 3
+     98          } EXTERNAL_MOTOR_PILOT_STATE_TYPE;
+     99          
+    100          // -- Private Function Prototypes used by the state machine for customization functions --
+    101          static void CheckForMcuConnect(void);
+    102          static void CheckForMcuDisconnect(void);
+    103          static void SendProcessed(void);
+    104          
+    105          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+    106          static void EventMcuConnected(void);
+    107          static void EventMcuDisconnected(void);
+    108          static void ExternalMotorPilotExecute(void);
+    109          static void ExternalMotorPilotInitialize(void);
+    110          
+    111          // !! StateEngineCrank cannot update this code if you change the footer !!
+    112          // End of StateEngineCrank Auto-Generated Code.
+    113          
+    114          
+    115          //  --- Private Declarations ------------------------------------------------------------------------------------------
+    116          
+    117          
+    118          // -- Private Constant Declarations --
+    119          
+    120          //! The name of this module for use by the Log module.
+    121          #define MODULE_NAME MODULE_EXTERNAL_MOTOR_PILOT
+    122          
+    123          
+    124          // -- Private Enumerated Constant Declarations --
+    125          
+    126          //! A list of log message IDs that are generated by this module.
+    127          typedef enum MODULE_EXTERNAL_MOTOR_PILOT_LOG_MESSAGE_ID_ENUM
+    128          {
+    129              INVALID_MOTOR_REQUEST = 1,                      // Data: HiByte = Motor index, LoByte = Request first byte.
+    130              DETECTED_DISCONNECTED_MOTOR_NODE                // Data = Motor index.
+    131          } MODULE_EXTERNAL_MOTOR_PILOT_LOG_MESSAGE_ID_TYPE;
+    132          
+    133          
+    134          // -- Private Structure Type Declarations --
+    135          
+    136          //! The setting file data associated with an external motor pilot.
+    137          typedef PACKED struct EXTERNAL_MOTOR_PILOT_SF_CONFIG_STRUCT
+    138          {
+    139              //! The client-side motor index to use when sending a command.
+    140              API221_CLIENT_MOTOR_INDEX_TYPE Motor_Index : 3;
+    141          
+    142              uint8 Reserved : 1;
+    143          
+    144              //! Refresh time between sending "Keep Running" commands to the MCU.
+    145              //! Set to 0 to disable the "Keep Running" commands to the MCU.
+    146              uint8 Refresh_Seconds : 4;
+    147          
+    148              //! The deceleration to use when stopping after no command is given.
+    149              uint8 Deceleration;
+    150          } EXTERNAL_MOTOR_PILOT_SF_CONFIG_TYPE;
+    151          
+    152          //! Motor pilot parameters type definition.
+    153          typedef struct EXTERNAL_MOTOR_PILOT_DATA_STRUCT
+    154          {
+    155              //! The currently requested command for the external motor.
+    156              EXTERNAL_MOTOR_COMMAND_TYPE Requested;
+    157          
+    158              //! The previously processed command for the external motor.
+    159              EXTERNAL_MOTOR_COMMAND_TYPE Processed;
+    160          
+    161              //! The current state of the external motor pilot.
+    162              uint8 State;
+    163          } EXTERNAL_MOTOR_PILOT_DATA_TYPE;
+    164          
+    165          
+    166          // -- Private Macro Declarations --
+    167          
+    168          //! The acceleration (or deceleration) to use when processing a simple command to run or stop.
+    169          //! This macro will use a default value if none is provided in the setting file.
+    170          #define EMP_DECELERATION()          ((Emp_Sf == NULL) ? 50 : (Emp_Sf->Deceleration))
+    171          
+    172          //! Access the motor index from the setting file data.
+    173          //! This macro will use a default value if none is provided in the setting file.
+    174          #define EMP_MOTOR_INDEX()           ((Emp_Sf == NULL) ? ((API221_CLIENT_MOTOR_INDEX_TYPE)0) : (Emp_Sf->Motor_Index))
+    175          
+    176          
+    177          //  --- Private Definitions -------------------------------------------------------------------------------------------
+    178          
+    179          
+    180          // -- Private Variable Definitions --
+    181          
+    182          //! Motor pilot data array. One entry per motor pilot instance.
+    183          static EXTERNAL_MOTOR_PILOT_DATA_TYPE Emp[HBL_PILOT_NUM_EXTERNAL_MOTOR];
+    184          
+    185          //! Tracks the number of motor pilot allocations.
+    186          static uint8 Emp_Allocation;
+    187          
+    188          //! A pointer to the external motor pilot setting file data for the state machine.
+    189          static EXTERNAL_MOTOR_PILOT_SF_CONFIG_TYPE* Emp_Sf;
+    190          
+    191          //! A pointer to the external motor pilot parameters for the state machine.
+    192          static EXTERNAL_MOTOR_PILOT_DATA_TYPE* Emp_This;
+    193          
+    194          //! Temporarily holds the status information that indicates whether the motor is connected.
+    195          //! FALSE if disconnected. TRUE if connected.
+    196          static EXTERNAL_MOTOR_STATUS_TYPE Emp_Status;
+    197          
+    198          
+    199          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    200          
+    201          static uint8 GetCommandSize(uint8 command);
+    202          
+    203          
+    204          //=====================================================================================================================
+    205          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    206          //=====================================================================================================================
+    207          
+    208          
+    209          //---------------------------------------------------------------------------------------------------------------------
+    210          /**
+    211           * Initialize all the instances of this pilot type.
+    212           *  - Initialize static RAM used by the module.
+    213           *  - Initialize any corrupted NVData used by the module.
+    214           */
+    215          void ExternalMotorPilot__Initialize(void)
+    216          {
+    217              memset(Emp, 0, sizeof(Emp));
+    218              Emp_Allocation = 0;
+    219              Emp_Sf = NULL;
+    220              Emp_This = NULL;
+    221          }
+    222          
+    223          
+    224          //---------------------------------------------------------------------------------------------------------------------
+    225          /**
+    226           * Reserve memory for this pilot instance.
+    227           * @return The index of the allocated pilot.
+    228           *         Return UCHAR_MAX if there is no space allocated for another pilot of this type.
+    229           */
+    230          uint8 ExternalMotorPilot__Allocate(void)
+    231          {
+    232              uint8 pilot_index = UCHAR_MAX;
+    233              if (Emp_Allocation < HBL_PILOT_NUM_EXTERNAL_MOTOR)
+    234              {
+    235                  pilot_index = Emp_Allocation;
+    236                  Emp_Allocation++;
+    237              }
+    238              return pilot_index;
+    239          }
+    240          
+    241          
+    242          //---------------------------------------------------------------------------------------------------------------------
+    243          /**
+    244           * Initialize this pilot instance.
+    245           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    246           * @return Always returns PASS.
+    247           *         The return value is ignored by HBL.
+    248           */
+    249          PASS_FAIL_TYPE ExternalMotorPilot__InitializeInstance(HBL_LOAD_TYPE* load)
+    250          {
+    251              if (load != NULL)
+    252              {
+    253                  uint8 pilot_index = load->Pilot_Data_Index;
+    254                  if (pilot_index < Emp_Allocation)
+    255                  {
+    256                      // Start the state machine for the pilot.
+    257                      Emp_This = &Emp[pilot_index];
+    258                      Emp_This->Requested.Standard.Command = EXTERNAL_MOTOR_NO_CHANGE;
+    259                      Emp_This->Processed.Standard.Command = EXTERNAL_MOTOR_NO_CHANGE;
+    260                      ExternalMotorPilotInitialize();
+    261                      return PASS;
+    262                  }
+    263              }
+    264              return FAIL;
+    265          }
+    266          
+    267          
+    268          //---------------------------------------------------------------------------------------------------------------------
+    269          /**
+    270           * Update the requested state of the output controlled by this pilot instance.
+    271           * If 'load' correctly identifies a pilot and if 'data' represents an invalid command, then this
+    272           * function will generate a EXTERNAL_MOTOR_NO_COMMAND command.
+    273           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    274           * @param data = A pointer to memory that contains the new requested pilot state.
+    275           * @return Always returns PASS.
+    276           *         The return value is ignored by HBL.
+    277           */
+    278          PASS_FAIL_TYPE ExternalMotorPilot__Request(HBL_LOAD_TYPE* load, void* data)
+    279          {
+    280              if ((load != NULL) && (data != NULL))
+    281              {
+    282                  // Determine if the pilot index is in range.
+    283                  uint8 pilot_index = load->Pilot_Data_Index;
+    284                  if (pilot_index < Emp_Allocation)
+    285                  {
+    286                      // Determine the size of the data.
+    287                      EXTERNAL_MOTOR_COMMAND_TYPE* cmd = (EXTERNAL_MOTOR_COMMAND_TYPE*)data;
+    288                      uint8 size = GetCommandSize(cmd->Common.Command);
+    289          
+    290                      // Determine if command size is in range.
+    291                      if ((1 <= size) && (size <= EXTERNAL_MOTOR_MAX_COMMAND_SIZE))
+    292                      {
+    293                          // Save the external motor command for later processing.
+    294                          memcpy(&Emp[pilot_index].Requested, cmd, size);
+    295                          return PASS;
+    296                      }
+    297                      else
+    298                      {
+    299                          // Invalid command -- stop the motor.
+    300                          LOG_ADD_EXCEPTION(INVALID_MOTOR_REQUEST, COMBINE_BYTES(load->Load_Id, cmd->Standard.Command));
+    301                          Emp[pilot_index].Requested.Standard.Command = EXTERNAL_MOTOR_NO_COMMAND;
+    302                      }
+    303                  }
+    304              }
+    305              return FAIL;
+    306          }
+    307          
+    308          
+    309          //---------------------------------------------------------------------------------------------------------------------
+    310          /**
+    311           * Update the output(s) controlled by this pilot instance based on previous requests.
+    312           *  - If the command is a custom command, then it should always be sent. The same custom
+    313           *      platform-specific commands may need to be sent sequentially more than once.
+    314           *  - If the command is an EXTERNAL_MOTOR_NO_CHANGE command, then there is nothing to do.
+    315           *      The previously processed command should be preserved.
+    316           *  - If the command is a standard command, and it is different from the previously processed
+    317           *      command, then send the new standard command.
+    318           *  - If the command is a standard command, and it is the same as the previously processed
+    319           *      command, then there is nothing to do. Let the Keep Running mechanism preserve the original
+    320           *      standard command.
+    321           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    322           * @return Always returns PASS.
+    323           *         The return value is ignored by HBL.
+    324           */
+    325          PASS_FAIL_TYPE ExternalMotorPilot__Process(HBL_LOAD_TYPE* load)
+    326          {
+    327              if (load != NULL)
+    328              {
+    329                  uint8 pilot_index = load->Pilot_Data_Index;
+    330                  if (pilot_index < Emp_Allocation)
+    331                  {
+    332                      // Setup the RAM and SettingFile access variables.
+    333                      Emp_This = &Emp[pilot_index];
+    334                      Emp_Sf = (EXTERNAL_MOTOR_PILOT_SF_CONFIG_TYPE*)(void*)load->Parameter_Ptr.Data;
+    335          
+    336                      // Check if the command needs to be processed.
+    337                      EXTERNAL_MOTOR_COMMAND_TYPE* processed = &Emp_This->Processed;
+    338                      EXTERNAL_MOTOR_COMMAND_TYPE* cmd = &Emp_This->Requested;
+    339                      uint8 size = GetCommandSize(cmd->Common.Command);
+    340                      BOOL_TYPE changed = (BOOL_TYPE)((cmd->Standard.Command != EXTERNAL_MOTOR_NO_CHANGE) &&
+    341                                                      (memcmp(processed, cmd, size) != 0));
+    342                      if ((changed == TRUE) || (cmd->Custom.Is_Custom_Command == TRUE))
+    343                      {
+    344                          // Process the command.
+    345                          memcpy(processed, cmd, size);
+    346                          if (Emp_This->State == STATE_EXTERNAL_MOTOR_PILOT_CONNECTED)
+    347                          {
+    348                              SendProcessed();
+    349                          }
+    350                      }
+    351          
+    352                      // Run the pilot state machine.
+    353                      if ((Emp_This != NULL) && (Emp_Sf != NULL))
+    354                      {
+    355                          ExternalMotorPilotExecute();
+    356                      }
+    357                  }
+    358              }
+    359              return PASS;
+    360          }
+    361          
+    362          
+    363          //---------------------------------------------------------------------------------------------------------------------
+    364          /**
+    365           * Get the requested state of the output controlled by this pilot instance.
+    366           * This function does not necessarily return the current state of the output.
+    367           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    368           * @return A pointer to data that describes the requested state of the output.
+    369           */
+    370          void* ExternalMotorPilot__GetRequested(HBL_LOAD_TYPE* load)
+    371          {
+    372              if (load != NULL)
+    373              {
+    374                  uint8 pilot_index = load->Pilot_Data_Index;
+    375                  if (pilot_index < Emp_Allocation)
+    376                  {
+    377                      EXTERNAL_MOTOR_PILOT_DATA_TYPE* pilot = &Emp[pilot_index];
+    378                      if (pilot->Requested.Standard.Command == EXTERNAL_MOTOR_NO_CHANGE)
+    379                      {
+    380                          // Since the request is to not change anything, return the processed.
+    381                          return (&pilot->Processed);
+    382                      }
+    383                      else if (GetCommandSize(pilot->Requested.Common.Command) > 0)
+    384                      {
+    385                          // Return the latest request.
+    386                          return (&pilot->Requested);
+    387                      }
+    388                  }
+    389              }
+    390              return NULL;
+    391          }
+    392          
+    393          
+    394          //---------------------------------------------------------------------------------------------------------------------
+    395          /**
+    396           * Get the state of the output controlled by this pilot instance.
+    397           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    398           * @return A pointer to data that describes the state of the output.
+    399           */
+    400          void* ExternalMotorPilot__GetProcessed(HBL_LOAD_TYPE* load)
+    401          {
+    402              if (load != NULL)
+    403              {
+    404                  uint8 pilot_index = load->Pilot_Data_Index;
+    405                  if (pilot_index < Emp_Allocation)
+    406                  {
+    407                      return (&Emp[pilot_index].Processed);
+    408                  }
+    409              }
+    410              return NULL;
+    411          }
+    412          
+    413          
+    414          //---------------------------------------------------------------------------------------------------------------------
+    415          /**
+    416           * Get the status of this pilot instance.
+    417           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    418           * @return A pointer to #BOOL_TYPE value that indicates whether the motor is connected.
+    419           *         FALSE = Disconnected. TRUE = Connected.
+    420           */
+    421          void* ExternalMotorPilot__GetStatus(HBL_LOAD_TYPE* load)
+    422          {
+    423              if (load != NULL)
+    424              {
+    425                  Emp_Sf = (EXTERNAL_MOTOR_PILOT_SF_CONFIG_TYPE*)(void*)load->Parameter_Ptr.Data;
+    426                  Emp_Status.Motor_Index = (uint8)EMP_MOTOR_INDEX();
+    427                  Emp_Status.Is_Connected = API221MotionCtrl__IsMotorPresentOnBus((API221_CLIENT_MOTOR_INDEX_TYPE)Emp_Status.Motor_Index);
+    428                  return &Emp_Status;
+    429              }
+    430              return NULL;
+    431          }
+    432          
+    433          
+    434          //=====================================================================================================================
+    435          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    436          //=====================================================================================================================
+    437          
+    438          
+    439          //---------------------------------------------------------------------------------------------------------------------
+    440          /**
+    441           * Get the size of the referenced command.
+    442           * @param cmd = A command for the external motor controller.
+    443           * @return The size of the referenced command.
+    444           */
+    445          static uint8 GetCommandSize(uint8 command)
+    446          {
+    447              uint8 size = 0;
+    448              switch (command)
+    449              {
+    450                  case EXTERNAL_MOTOR_NO_COMMAND:
+    451                  case EXTERNAL_MOTOR_NO_CHANGE:
+    452                      size = 1;
+    453                      break;
+    454          
+    455                  case EXTERNAL_MOTOR_STOP:
+    456                      size = 1 + sizeof(EMP_STOP_PARAM_TYPE);
+    457                      break;
+    458          
+    459                  case EXTERNAL_MOTOR_RUN:
+    460                      size = 1 + sizeof(EMP_RUN_PARAM_TYPE);
+    461                      break;
+    462          
+    463                  case EXTERNAL_MOTOR_WASH:
+    464                      size = 1 + sizeof(EMP_WASH_PARAM_TYPE);
+    465                      break;
+    466          
+    467                  case EXTERNAL_MOTOR_ROTATE_X_DEGREES:
+    468                      size = 1 + sizeof(EMP_ROTATE_PARAM_TYPE);
+    469                      break;
+    470          
+    471                  case EXTERNAL_MOTOR_PULSE_IMMEDIATE:
+    472                  case EXTERNAL_MOTOR_PULSE_MODIFY:
+    473                  case EXTERNAL_MOTOR_PULSE_QUEUE:
+    474                      size = 1 + sizeof(EMP_PULSE_PARAM_TYPE);
+    475                      break;
+    476          
+    477                  default:
+    478                      if (BIT_TEST(command, 7) == 1)
+    479                      {
+    480                          size = command & 0x7F;
+    481                          if (size > EXTERNAL_MOTOR_MAX_COMMAND_SIZE)
+    482                          {
+    483                              size = 0;
+    484                          }
+    485                      }
+    486                      break;
+    487              }
+    488          
+    489              return size;
+    490          }
+    491          
+    492          
+    493          //=====================================================================================================================
+    494          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    495          //=====================================================================================================================
+    496          
+    497          
+    498          //---------------------------------------------------------------------------------------------------------------------
+    499          /**
+    500           * Wait for Reveal to detect the MCU node on the communications bus.
+    501           */
+    502          static void CheckForMcuConnect(void)
+    503          {
+    504              if (API221MotionCtrl__IsMotorPresentOnBus(EMP_MOTOR_INDEX()) == TRUE)
+    505              {
+    506                  EventMcuConnected();
+    507              }
+    508          }
+    509          
+    510          
+    511          //---------------------------------------------------------------------------------------------------------------------
+    512          /**
+    513           * Check that the MCU is still connected on the communications bus.
+    514           */
+    515          static void CheckForMcuDisconnect(void)
+    516          {
+    517              API221_CLIENT_MOTOR_INDEX_TYPE motor_index = EMP_MOTOR_INDEX();
+    518              if (API221MotionCtrl__IsMotorPresentOnBus(motor_index) == FALSE)
+    519              {
+    520                  LOG_ADD_EVENT(DETECTED_DISCONNECTED_MOTOR_NODE, motor_index);
+    521                  EventMcuDisconnected();
+    522              }
+    523          }
+    524          
+    525          
+    526          //---------------------------------------------------------------------------------------------------------------------
+    527          /**
+    528           * Process the command for the currently running pilot by sending an API221 command.
+    529           * If no command has been processed since reset, then no API221 command is sent.
+    530           */
+    531          static void SendProcessed(void)
+    532          {
+    533              // Get the size of the command.
+    534              uint8 size = GetCommandSize(Emp_This->Processed.Common.Command);
+    535              if (size > 0)
+    536              {
+    537                  switch (Emp_This->Processed.Common.Command)
+    538                  {
+    539                      case EXTERNAL_MOTOR_NO_COMMAND:
+    540                          // This is a simple stop command.
+    541                          // This is also the default command if no command is provided to HBL.
+    542                          API221MotionCtrl__DeviceStop(EMP_MOTOR_INDEX(), EMP_DECELERATION());
+    543                          break;
+    544          
+    545                      case EXTERNAL_MOTOR_NO_CHANGE:
+    546                          // The EXTERNAL_MOTOR_NO_CHANGE value will only be in the Processed structure
+    547                          // immediately after initialization. After that, maintaining the previous
+    548                          // command is done by not doing anything at all. The previous command was
+    549                          // already sent and is still the active command.
+    550                          break;
+    551          
+    552                      case EXTERNAL_MOTOR_STOP:
+    553                          API221MotionCtrl__DeviceStop(EMP_MOTOR_INDEX(),
+    554                                                       Emp_This->Processed.Standard.Params.Stop.Deceleration);
+    555                          break;
+    556          
+    557                      case EXTERNAL_MOTOR_RUN:
+    558                          API221MotionCtrl__DeviceRun(EMP_MOTOR_INDEX(),
+    559                                                      Emp_This->Processed.Standard.Params.Run.Velocity,
+    560                                                      Emp_This->Processed.Standard.Params.Run.Acceleration);
+    561                          break;
+    562          
+    563                      case EXTERNAL_MOTOR_WASH:
+    564                          API221MotionCtrl__DeviceWash(EMP_MOTOR_INDEX(),
+    565                                                       &Emp_This->Processed.Standard.Params.Wash);
+    566                          break;
+    567          
+    568                      case EXTERNAL_MOTOR_ROTATE_X_DEGREES:
+    569                          API221MotionCtrl__DeviceRotate(EMP_MOTOR_INDEX(),
+    570                                                         &Emp_This->Processed.Standard.Params.Rotate);
+    571                          break;
+    572          
+    573                      case EXTERNAL_MOTOR_PULSE_IMMEDIATE:
+    574                      case EXTERNAL_MOTOR_PULSE_MODIFY:
+    575                      case EXTERNAL_MOTOR_PULSE_QUEUE:
+    576                          API221MotionCtrl__DevicePulse(EMP_MOTOR_INDEX(),
+    577                                                        Emp_This->Processed.Standard.Command,
+    578                                                        &Emp_This->Processed.Standard.Params.Pulse);
+    579                          break;
+    580          
+    581                      default:
+    582                          API221MotionCtrl__DeviceMotion(EMP_MOTOR_INDEX(),
+    583                                                         (uint8*)&Emp_This->Processed.Custom.Params,
+    584                                                         size - 1);
+    585                          break;
+    586                  }
+    587              }
+    588          }
+    589          
+    590          
+    591          //=====================================================================================================================
+    592          //=== StateEngineCrank (v2.8) Auto-Generated Functions for External Motor Pilot State Machine
+    593          //=====================================================================================================================
+    594          // !! StateEngineCrank cannot update this code if you change the header !!
+    595          
+    596          
+    597          //---------------------------------------------------------------------------------------------------------------------
+    598          /**
+    599           * Process the Mcu Connected Event for the External Motor Pilot state machine.
+    600           *
+    601           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    602           *
+    603           * This function was auto-generated and must not be edited manually.
+    604           * Change the UML used to generate this function and regenerate the source code.
+    605           */
+    606          static void EventMcuConnected(void)
+    607          {
+    608              switch (Emp_This->State)
+    609              {
+    610                  case STATE_EXTERNAL_MOTOR_PILOT_DISCONNECTED:
+    611                      SendProcessed();                        // Transition action function.
+    612                      Emp_This->State = STATE_EXTERNAL_MOTOR_PILOT_CONNECTED;
+    613                      break;
+    614          
+    615                  default:
+    616                      // Event is ignored for all other values of Emp_This->State.
+    617                      break;
+    618              }
+    619          }
+    620          
+    621          
+    622          //---------------------------------------------------------------------------------------------------------------------
+    623          /**
+    624           * Process the Mcu Disconnected Event for the External Motor Pilot state machine.
+    625           *
+    626           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    627           *
+    628           * This function was auto-generated and must not be edited manually.
+    629           * Change the UML used to generate this function and regenerate the source code.
+    630           */
+    631          static void EventMcuDisconnected(void)
+    632          {
+    633              switch (Emp_This->State)
+    634              {
+    635                  case STATE_EXTERNAL_MOTOR_PILOT_CONNECTED:
+    636                      Emp_This->State = STATE_EXTERNAL_MOTOR_PILOT_DISCONNECTED;
+    637                      break;
+    638          
+    639                  default:
+    640                      // Event is ignored for all other values of Emp_This->State.
+    641                      break;
+    642              }
+    643          }
+    644          
+    645          
+    646          //---------------------------------------------------------------------------------------------------------------------
+    647          /**
+    648           * The main execution function for the External Motor Pilot state machine.
+    649           * This function should be called periodically while the state machine is running.
+    650           *
+    651           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    652           *
+    653           * This function was auto-generated and must not be edited manually.
+    654           * Change the UML used to generate this function and regenerate the source code.
+    655           */
+    656          static void ExternalMotorPilotExecute(void)
+    657          {
+    658              switch(Emp_This->State)
+    659              {
+    660                  case STATE_EXTERNAL_MOTOR_PILOT_DISCONNECTED:
+    661                      CheckForMcuConnect();                   // Do function.
+    662                      break;
+    663          
+    664                  case STATE_EXTERNAL_MOTOR_PILOT_CONNECTED:
+    665                      CheckForMcuDisconnect();                // Do function.
+    666                      break;
+    667          
+    668                  default:
+    669                      // There is nothing to do for all other values of Emp_This->State.
+    670                      break;
+    671              }
+    672          }
+    673          
+    674          
+    675          //---------------------------------------------------------------------------------------------------------------------
+    676          /**
+    677           * The initialization function for the External Motor Pilot state machine.
+    678           * This function resets the state machine to the initial state.
+    679           *
+    680           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    681           *
+    682           * This function was auto-generated and must not be edited manually.
+    683           * Change the UML used to generate this function and regenerate the source code.
+    684           */
+    685          static void ExternalMotorPilotInitialize(void)
+    686          {
+    687              Emp_This->State = STATE_EXTERNAL_MOTOR_PILOT_DISCONNECTED;
+    688          }
+    689          
+    690          
+    691          // !! StateEngineCrank cannot update this code if you change the footer !!
+    692          // End of StateEngineCrank Auto-Generated Code.
+    693          
+    694          
+    695          #endif      // #if (HBL_PILOT_NUM_EXTERNAL_MOTOR > 0)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

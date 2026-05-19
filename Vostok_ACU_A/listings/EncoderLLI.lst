@@ -1,0 +1,696 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:10
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/EncoderLLI/EncoderLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\EncoderLLI.lst -o
+#        obj\EncoderLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/EncoderLLI/EncoderLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\EncoderLLI.lst
+#    Object file  =  obj\EncoderLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\EncoderLLI\EncoderLLI.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      Basic description of file contents
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8           *  @section    Applicable_Documents
+      9           *					List here all the applicable documents if needed. <tr>
+     10           *
+     11           *  $Header: EncoderLowInput.c 1.5 2016/03/16 11:27:57EDT G.Ottaviani (OTTAVG) Exp  $
+     12           *
+     13           *  @copyright  Copyright 2016-$Date: 2016/03/16 11:27:57EDT $. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     14           */
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          //---------------------------------------------------------------------------------------------------------------------
+     17          
+     18          
+     19          //-------------------------------------- Include Files ----------------------------------------------------------------
+     20          #include "SystemConfig.h"
+     21          #include "EncoderLLI.h"
+     22          
+     23          #if (HBL_LLI_NUM_ENCODER > 0)
+     24          #include "Gpio.h"
+     25          #include <string.h>
+     26          #include "VirtualPin.h"
+     27          
+     28          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     29          
+     30          typedef enum
+     31          {
+     32          	ENCODER_MACHINE_RESET = 0,
+     33          	ENCODER_MACHINE_WAIT,
+     34          	ENCODER_MACHINE_DONE
+     35          } ENCODER_MACHINE_TYPE;
+     36          
+     37          typedef struct
+     38          {
+     39          	uint8 Pin_CH1_Old;
+     40          	uint8 Pin_CH2_Old;
+     41          	uint8 Latch_CHx   				:1;
+     42          	uint8 Rotation_Type    			:2;  // Store temporary ClockWise versus.
+     43          	uint8 Machine_Enc_Filter_Steps  :5;
+     44          } ARRAY_PINS_TRANSITION_TYPE;
+     45          
+     46          static ARRAY_PINS_TRANSITION_TYPE  Array_Pin_CH_Old [HBL_LLI_NUM_ENCODER];
+     47          
+     48          typedef struct
+     49          {
+     50          	uint8 Filter_Sample;
+     51          	uint8 Read_Attempt;
+     52          	uint8 R_flag:1;
+     53          	uint8 Channel:1;
+     54          } ENCODER_PARAMETER_TYPE;
+     55          
+     56          static ENCODER_PARAMETER_TYPE Encoder_Input_Param [HBL_LLI_NUM_ENCODER];
+     57          
+     58          static ENCODER_DATA_TYPE EncoderLLI_Data [HBL_LLI_NUM_ENCODER];
+     59          
+     60          static uint8 EncoderLLI_Allocation;
+     61          
+     62          #define ENCODERLOWINPUT_CFG0_NREAD_MASK      0x07
+     63          #define ENCODERLOWINPUT_CFG0_AUTO_MASK       0x80
+     64          
+     65          #define ENCODERLOWINPUT_CFG1_INVERT          0x80
+     66          #define ENCODERLOWINPUT_CFG1_RFLAG           0x40
+     67          #define ENCODERLOWINPUT_CFG1_PULLUP          0x20
+     68          
+     69          #define TYPE_ROTATION_1						1
+     70          #define TYPE_ROTATION_2						2
+     71          
+     72          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     73          static void ResetArrayPinChOld (HBL_LLI_TYPE * input, uint8 pinvalLoc, uint8 pinval2Loc);
+     74          
+     75          //=====================================================================================================================
+     76          //-------------------------------------- Public Functions -------------------------------------------------------------
+     77          //=====================================================================================================================
+     78          //---------------------------------------------------------------------------------------------------------------------
+     79          /**
+     80           * @brief      It Initializes the module DigitalLowLevel and its variables
+     81           */
+     82          
+     83          void EncoderLLI__Initialize (void)
+     84          {
+     85              memset(&EncoderLLI_Data,0,sizeof(EncoderLLI_Data));
+     86              EncoderLLI_Allocation = 0;
+     87          }
+     88          
+     89          //---------------------------------------------------------------------------------------------------------------------
+     90          /**
+     91           * @brief
+     92           * @return
+     93           */
+     94          uint8 EncoderLLI__Allocate (void)
+     95          {
+     96              uint8 retval = HBL_ALLOCATION_INVALID;
+     97          
+     98              if (EncoderLLI_Allocation < HBL_LLI_NUM_ENCODER)
+     99              {
+    100                  retval = EncoderLLI_Allocation;
+    101                  EncoderLLI_Allocation++;
+    102              }
+    103              return (retval);
+    104          }
+    105          
+    106          //---------------------------------------------------------------------------------------------------------------------
+    107          /**
+    108           *  @brief
+    109           *
+    110           */
+    111          PASS_FAIL_TYPE EncoderLLI__InitializeInstance (HBL_LLI_TYPE * input)
+    112          {
+    113              GPIO_PIN_MODE_TYPE type;
+    114              uint8 virtual_pin;
+    115              uint8 virtual_pin2;
+    116              uint8 pinval;
+    117              uint8 pinval2;
+    118              uint8 digitalcfg1;
+    119          
+    120              if (input->Data_Index < EncoderLLI_Allocation)
+    121              {
+    122          		type = INPUT_FLOAT;
+    123          
+    124          		virtual_pin  = input->Pin_Ptr[0];
+    125          		virtual_pin2 = input->Pin_Ptr[1];
+    126          
+    127          		digitalcfg1 = input->Parameter_Ptr.Data[1];
+    128          
+    129          		if (digitalcfg1 & ENCODERLOWINPUT_CFG1_PULLUP)
+    130          		{   // This Flag is important in case we have Encoder with internal PullUp you don't have check.
+    131          			type = INPUT_PULLUP;
+    132          		}
+    133          
+    134          		Gpio__PinConfig(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin, type);
+    135          		Gpio__PinConfig(VIRTUALPIN_TABLE[virtual_pin2].port, VIRTUALPIN_TABLE[virtual_pin2].pin, type);
+    136          
+    137          		pinval  = Gpio__PinRead(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin);
+    138          		pinval2 = Gpio__PinRead(VIRTUALPIN_TABLE[virtual_pin2].port, VIRTUALPIN_TABLE[virtual_pin2].pin);
+    139          
+    140          		Array_Pin_CH_Old [input->Data_Index].Pin_CH1_Old = pinval;
+    141          		Array_Pin_CH_Old [input->Data_Index].Pin_CH2_Old = pinval2;
+    142          		Array_Pin_CH_Old [input->Data_Index].Latch_CHx  = 0;
+    143          		Array_Pin_CH_Old [input->Data_Index].Rotation_Type 	 = 0;
+    144          		Array_Pin_CH_Old [input->Data_Index].Machine_Enc_Filter_Steps = ENCODER_MACHINE_RESET;
+    145          
+    146                   return (PASS);
+    147              }
+    148              else
+    149              {
+    150                  return (FAIL);
+    151              }
+    152          }
+    153          
+    154          //---------------------------------------------------------------------------------------------------------------------
+    155          /**
+    156           *
+    157           * @param input
+    158           * @param data
+    159           * @return
+    160           */
+    161          void * EncoderLLI__Get (HBL_LLI_TYPE * input)
+    162          {
+    163              if (input->Data_Index < EncoderLLI_Allocation)
+    164              {
+    165                  return ((void *) &EncoderLLI_Data[input->Data_Index]);
+    166              }
+    167              else
+    168              {
+    169                  return (NULL);
+    170              }
+    171          }
+    172          
+    173          //---------------------------------------------------------------------------------------------------------------------
+    174          /**
+    175           *
+    176           * @param input
+    177           * @return
+    178           */
+    179          BOOL_TYPE EncoderLLI__AsynchProcess (HBL_LLI_TYPE * input)
+    180          {
+    181          	BOOL_TYPE retval;
+    182              uint8 pinval;
+    183              uint8 pinval2;
+    184              uint8 digitalcfg0;
+    185              uint8 digitalcfg1;
+    186              uint8 virtual_pin;
+    187              uint8 virtual_pin2;
+    188              uint8 nsamples;
+    189          
+    190              retval = FALSE;
+    191          
+    192              if (input->Data_Index < EncoderLLI_Allocation)
+    193              {
+    194                  virtual_pin = input->Pin_Ptr[0];
+    195                  virtual_pin2 = input->Pin_Ptr[1];
+    196          
+    197                  digitalcfg0 = input->Parameter_Ptr.Data[0];
+    198                  digitalcfg1 = input->Parameter_Ptr.Data[1];
+    199          
+    200                  pinval = Gpio__PinRead(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin);
+    201                  pinval2 = Gpio__PinRead(VIRTUALPIN_TABLE[virtual_pin2].port, VIRTUALPIN_TABLE[virtual_pin2].pin);
+    202          
+    203                  nsamples = 1 << (digitalcfg0 & ENCODERLOWINPUT_CFG0_NREAD_MASK);
+    204          
+    205                  Encoder_Input_Param[input->Data_Index].Filter_Sample = nsamples;
+    206          
+    207                  // Inverted logic flag enabled - swap TRUE to FALSE
+    208                  if (digitalcfg1 & ENCODERLOWINPUT_CFG1_INVERT)
+    209                  {
+    210                      pinval ^= TRUE;
+    211                      pinval2 ^= TRUE;
+    212                  }
+    213          
+    214                  if (digitalcfg1 & ENCODERLOWINPUT_CFG1_RFLAG)
+    215                  {
+    216                      Encoder_Input_Param[input->Data_Index].R_flag = 1;
+    217                  }
+    218          
+    219                  if ((Array_Pin_CH_Old[input->Data_Index].Pin_CH1_Old != pinval) &&
+    220                      (Array_Pin_CH_Old[input->Data_Index].Pin_CH2_Old == pinval2) &&
+    221                      (Array_Pin_CH_Old[input->Data_Index].Latch_CHx == 0) )
+    222                  {
+    223                      Array_Pin_CH_Old[input->Data_Index].Machine_Enc_Filter_Steps = ENCODER_MACHINE_WAIT;
+    224                      Array_Pin_CH_Old[input->Data_Index].Rotation_Type = TYPE_ROTATION_1;
+    225                      Encoder_Input_Param[input->Data_Index].Read_Attempt++;
+    226          
+    227                      if (Encoder_Input_Param[input->Data_Index].Read_Attempt >= Encoder_Input_Param[input->Data_Index].Filter_Sample)
+    228                      {
+    229                          Array_Pin_CH_Old[input->Data_Index].Pin_CH1_Old = pinval;
+    230                          Array_Pin_CH_Old[input->Data_Index].Latch_CHx = 1;
+    231                          Encoder_Input_Param[input->Data_Index].Read_Attempt = 0;
+    232                      }
+    233          
+    234                      retval = FALSE;
+    235          	    }
+    236                  else if ((Array_Pin_CH_Old[input->Data_Index].Pin_CH2_Old != pinval2) &&
+    237                           (Array_Pin_CH_Old[input->Data_Index].Pin_CH1_Old == pinval) &&
+    238                           (Array_Pin_CH_Old[input->Data_Index].Latch_CHx == 0))
+    239                  {
+    240                      Array_Pin_CH_Old[input->Data_Index].Machine_Enc_Filter_Steps = ENCODER_MACHINE_WAIT;
+    241          
+    242                      Array_Pin_CH_Old[input->Data_Index].Rotation_Type = TYPE_ROTATION_2;
+    243          
+    244                      Encoder_Input_Param[input->Data_Index].Read_Attempt++;
+    245          
+    246                      if (Encoder_Input_Param[input->Data_Index].Read_Attempt >= Encoder_Input_Param[input->Data_Index].Filter_Sample)
+    247                      {
+    248                          Array_Pin_CH_Old[input->Data_Index].Pin_CH2_Old = pinval2;
+    249                          Array_Pin_CH_Old[input->Data_Index].Latch_CHx = 1;
+    250                          Encoder_Input_Param[input->Data_Index].Read_Attempt = 0;
+    251                      }
+    252          
+    253                      retval = FALSE;
+    254                  }
+    255                  else
+    256                  {
+    257                      ResetArrayPinChOld(input, pinval, pinval2);
+    258                  }
+    259          
+    260                  if ((Array_Pin_CH_Old[input->Data_Index].Machine_Enc_Filter_Steps == ENCODER_MACHINE_WAIT) &&
+    261                      (Array_Pin_CH_Old[input->Data_Index].Rotation_Type == TYPE_ROTATION_1) &&
+    262                      (pinval == pinval2))
+    263                  {
+    264                      Array_Pin_CH_Old[input->Data_Index].Machine_Enc_Filter_Steps = ENCODER_MACHINE_DONE;
+    265                      Encoder_Input_Param[input->Data_Index].Channel = 1;
+    266          
+    267                      Array_Pin_CH_Old[input->Data_Index].Pin_CH1_Old = pinval;
+    268                      Array_Pin_CH_Old[input->Data_Index].Pin_CH2_Old = pinval2;
+    269                      Array_Pin_CH_Old[input->Data_Index].Latch_CHx = 0;
+    270                      Encoder_Input_Param[input->Data_Index].Read_Attempt = 0;
+    271                  }
+    272                  else if ((Array_Pin_CH_Old[input->Data_Index].Machine_Enc_Filter_Steps == ENCODER_MACHINE_WAIT) &&
+    273                           (Array_Pin_CH_Old[input->Data_Index].Rotation_Type == TYPE_ROTATION_2) &&
+    274                           (pinval == pinval2))
+    275                  {
+    276                      Array_Pin_CH_Old[input->Data_Index].Machine_Enc_Filter_Steps = ENCODER_MACHINE_DONE;
+    277                      Encoder_Input_Param[input->Data_Index].Channel = 0;
+    278          
+    279                      Array_Pin_CH_Old[input->Data_Index].Pin_CH1_Old = pinval;
+    280                      Array_Pin_CH_Old[input->Data_Index].Pin_CH2_Old = pinval2;
+    281                      Array_Pin_CH_Old[input->Data_Index].Latch_CHx = 0;
+    282                      Encoder_Input_Param[input->Data_Index].Read_Attempt = 0;
+    283                  }
+    284          
+    285                  if (Array_Pin_CH_Old[input->Data_Index].Machine_Enc_Filter_Steps == ENCODER_MACHINE_DONE)
+    286                  {
+    287                      EncoderLLI_Data[input->Data_Index].Pending = 1;
+    288          
+    289                      if (Encoder_Input_Param[input->Data_Index].R_flag == TRUE)
+    290                      {
+    291                          EncoderLLI_Data[input->Data_Index].Rotation = ~Encoder_Input_Param[input->Data_Index].Channel;
+    292                      }
+    293                      else
+    294                      {
+    295                          EncoderLLI_Data[input->Data_Index].Rotation = Encoder_Input_Param[input->Data_Index].Channel;
+    296                      }
+    297          
+    298                      ResetArrayPinChOld(input, pinval, pinval2);
+    299          
+    300                      retval = TRUE;
+    301                  }
+    302                  else
+    303                  {
+    304                      ResetArrayPinChOld(input, pinval, pinval2);
+    305                      retval = FALSE;
+    306                  }
+    307              }
+    308          
+    309              return (retval);
+    310          }
+    311          
+    312          //=====================================================================================================================
+    313          //-------------------------------------- Private Functions ------------------------------------------------------------
+    314          //=====================================================================================================================
+    315          
+    316          //---------------------------------------------------------------------------------------------------------------------
+    317          /**
+    318           * @brief
+    319           * @param   input
+    320           * @param   pinvalLoc
+    321           * @param   pinval2Loc
+    322           */
+    323          static void ResetArrayPinChOld (HBL_LLI_TYPE * input, uint8 pinvalLoc, uint8 pinval2Loc)
+    324          {
+    325          	Array_Pin_CH_Old[input->Data_Index].Machine_Enc_Filter_Steps = ENCODER_MACHINE_RESET;
+    326          	Array_Pin_CH_Old[input->Data_Index].Rotation_Type = 0;
+    327          	Array_Pin_CH_Old[input->Data_Index].Pin_CH1_Old = pinvalLoc;
+    328          	Array_Pin_CH_Old[input->Data_Index].Pin_CH2_Old = pinval2Loc;
+    329          	Array_Pin_CH_Old[input->Data_Index].Latch_CHx = 0;
+    330          	Encoder_Input_Param[input->Data_Index].Read_Attempt = 0;
+    331          }
+    332          
+    333          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

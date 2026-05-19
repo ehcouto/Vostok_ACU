@@ -1,0 +1,9 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//  std.lnt
+//  PC-lint configuration file passed on the command line.
+//
+
+tools\Lint\nucleus-sdk.lnt          // Options for the Nucleus-SDK
+tools\Lint\iar-co.lnt               // Options for all versions of the IAR compiler
+tools\Lint\au-misra3.lnt            // 2012 MISRA C guidelines
+tools\Lint\options.lnt              // Options for suppressing messages

@@ -1,0 +1,1435 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:38
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT/SEGGER_RTT_printf.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SEGGER_RTT_printf.lst
+#        -o obj\SEGGER_RTT_printf.obj
+#        source/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT/SEGGER_RTT_printf.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SEGGER_RTT_printf.lst
+#    Object file  =  obj\SEGGER_RTT_printf.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\Common\SeggerRTT\SEGGER_RTT\RTT\SEGGER_RTT_printf.c
+      1          /*********************************************************************
+      2          *                    SEGGER Microcontroller GmbH                     *
+      3          *                        The Embedded Experts                        *
+      4          **********************************************************************
+      5          *                                                                    *
+      6          *            (c) 1995 - 2021 SEGGER Microcontroller GmbH             *
+      7          *                                                                    *
+      8          *       www.segger.com     Support: support@segger.com               *
+      9          *                                                                    *
+     10          **********************************************************************
+     11          *                                                                    *
+     12          *       SEGGER RTT * Real Time Transfer for embedded targets         *
+     13          *                                                                    *
+     14          **********************************************************************
+     15          *                                                                    *
+     16          * All rights reserved.                                               *
+     17          *                                                                    *
+     18          * SEGGER strongly recommends to not make any changes                 *
+     19          * to or modify the source code of this software in order to stay     *
+     20          * compatible with the RTT protocol and J-Link.                       *
+     21          *                                                                    *
+     22          * Redistribution and use in source and binary forms, with or         *
+     23          * without modification, are permitted provided that the following    *
+     24          * condition is met:                                                  *
+     25          *                                                                    *
+     26          * o Redistributions of source code must retain the above copyright   *
+     27          *   notice, this condition and the following disclaimer.             *
+     28          *                                                                    *
+     29          * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND             *
+     30          * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,        *
+     31          * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF           *
+     32          * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE           *
+     33          * DISCLAIMED. IN NO EVENT SHALL SEGGER Microcontroller BE LIABLE FOR *
+     34          * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR           *
+     35          * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT  *
+     36          * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;    *
+     37          * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF      *
+     38          * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT          *
+     39          * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE  *
+     40          * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH   *
+     41          * DAMAGE.                                                            *
+     42          *                                                                    *
+     43          **********************************************************************
+     44          *                                                                    *
+     45          *       RTT version: 7.66g                                           *
+     46          *                                                                    *
+     47          **********************************************************************
+     48          
+     49          ---------------------------END-OF-HEADER------------------------------
+     50          File    : SEGGER_RTT_printf.c
+     51          Purpose : Replacement for printf to write formatted data via RTT
+     52          Revision: $Rev: 17697 $
+     53          ----------------------------------------------------------------------
+     54          */
+     55          #include "SEGGER_RTT_Conf.h"
+     56          #include "SEGGER_RTT.h"
+     57          
+     58          /*********************************************************************
+     59          *
+     60          *       Defines, configurable
+     61          *
+     62          **********************************************************************
+     63          */
+     64          
+     65          #ifndef SEGGER_RTT_PRINTF_BUFFER_SIZE
+     66            #define SEGGER_RTT_PRINTF_BUFFER_SIZE (64)
+     67          #endif
+     68          
+     69          #include <stdlib.h>
+     70          #include <stdarg.h>
+     71          
+     72          
+     73          #define FORMAT_FLAG_LEFT_JUSTIFY   (1u << 0)
+     74          #define FORMAT_FLAG_PAD_ZERO       (1u << 1)
+     75          #define FORMAT_FLAG_PRINT_SIGN     (1u << 2)
+     76          #define FORMAT_FLAG_ALTERNATE      (1u << 3)
+     77          
+     78          /*********************************************************************
+     79          *
+     80          *       Types
+     81          *
+     82          **********************************************************************
+     83          */
+     84          
+     85          typedef struct {
+     86            char*     pBuffer;
+     87            unsigned  BufferSize;
+     88            unsigned  Cnt;
+     89          
+     90            int   ReturnValue;
+     91          
+     92            unsigned RTTBufferIndex;
+     93          } SEGGER_RTT_PRINTF_DESC;
+     94          
+     95          /*********************************************************************
+     96          *
+     97          *       Function prototypes
+     98          *
+     99          **********************************************************************
+    100          */
+    101          
+    102          /*********************************************************************
+    103          *
+    104          *       Static code
+    105          *
+    106          **********************************************************************
+    107          */
+    108          /*********************************************************************
+    109          *
+    110          *       _StoreChar
+    111          */
+
+   \                                 In section .text, align 2, keep-with-next
+    112          static void _StoreChar(SEGGER_RTT_PRINTF_DESC * p, char c) {
+   \                     _StoreChar: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    113            unsigned Cnt;
+    114          
+    115            Cnt = p->Cnt;
+   \   00000004   0x68A0             LDR      R0,[R4, #+8]
+    116            if ((Cnt + 1u) <= p->BufferSize) {
+   \   00000006   0x0002             MOVS     R2,R0
+   \   00000008   0x1C52             ADDS     R2,R2,#+1
+   \   0000000A   0x6863             LDR      R3,[R4, #+4]
+   \   0000000C   0x4293             CMP      R3,R2
+   \   0000000E   0xD305             BCC      ??_StoreChar_0
+    117              *(p->pBuffer + Cnt) = c;
+   \   00000010   0x6823             LDR      R3,[R4, #+0]
+   \   00000012   0x5419             STRB     R1,[R3, R0]
+    118              p->Cnt = Cnt + 1u;
+   \   00000014   0x60A2             STR      R2,[R4, #+8]
+    119              p->ReturnValue++;
+   \   00000016   0x68E0             LDR      R0,[R4, #+12]
+   \   00000018   0x1C40             ADDS     R0,R0,#+1
+   \   0000001A   0x60E0             STR      R0,[R4, #+12]
+    120            }
+    121            //
+    122            // Write part of string, when the buffer is full
+    123            //
+    124            if (p->Cnt == p->BufferSize) {
+   \                     ??_StoreChar_0: (+1)
+   \   0000001C   0x68A2             LDR      R2,[R4, #+8]
+   \   0000001E   0x6860             LDR      R0,[R4, #+4]
+   \   00000020   0x4282             CMP      R2,R0
+   \   00000022   0xD10C             BNE      ??_StoreChar_1
+    125              if (SEGGER_RTT_Write(p->RTTBufferIndex, p->pBuffer, p->Cnt) != p->Cnt) {
+   \   00000024   0x6821             LDR      R1,[R4, #+0]
+   \   00000026   0x6920             LDR      R0,[R4, #+16]
+   \   00000028   0x.... 0x....      BL       SEGGER_RTT_Write
+   \   0000002C   0x68A1             LDR      R1,[R4, #+8]
+   \   0000002E   0x4288             CMP      R0,R1
+   \   00000030   0xD003             BEQ      ??_StoreChar_2
+    126                p->ReturnValue = -1;
+   \   00000032   0x2000             MOVS     R0,#+0
+   \   00000034   0x43C0             MVNS     R0,R0            ;; #-1
+   \   00000036   0x60E0             STR      R0,[R4, #+12]
+   \   00000038   0xBD10             POP      {R4,PC}
+    127              } else {
+    128                p->Cnt = 0u;
+   \                     ??_StoreChar_2: (+1)
+   \   0000003A   0x2000             MOVS     R0,#+0
+   \   0000003C   0x60A0             STR      R0,[R4, #+8]
+    129              }
+    130            }
+    131          }
+   \                     ??_StoreChar_1: (+1)
+   \   0000003E   0xBD10             POP      {R4,PC}          ;; return
+    132          
+    133          /*********************************************************************
+    134          *
+    135          *       _PrintUnsigned
+    136          */
+
+   \                                 In section .text, align 4, keep-with-next
+    137          static void _PrintUnsigned(SEGGER_RTT_PRINTF_DESC * pBufferDesc, unsigned v, unsigned Base, unsigned NumDigits, unsigned FieldWidth, unsigned FormatFlags) {
+   \                     _PrintUnsigned: (+1)
+   \   00000000   0xB5F7             PUSH     {R0-R2,R4-R7,LR}
+   \   00000002   0xB082             SUB      SP,SP,#+8
+   \   00000004   0x001E             MOVS     R6,R3
+    138            static const char _aV2C[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+    139            unsigned Div;
+    140            unsigned Digit;
+    141            unsigned Number;
+    142            unsigned Width;
+    143            char c;
+    144          
+    145            Number = v;
+   \   00000006   0x4608             MOV      R0,R1
+   \   00000008   0x2401             MOVS     R4,#+1
+    146            Digit = 1u;
+    147            //
+    148            // Get actual field width
+    149            //
+    150            Width = 1u;
+   \   0000000A   0x4625             MOV      R5,R4
+   \   0000000C   0xE002             B        ??_PrintUnsigned_0
+    151            while (Number >= Base) {
+    152              Number = (Number / Base);
+   \                     ??_PrintUnsigned_1: (+1)
+   \   0000000E   0x.... 0x....      BL       __aeabi_uidiv
+    153              Width++;
+   \   00000012   0x1C6D             ADDS     R5,R5,#+1
+    154            }
+   \                     ??_PrintUnsigned_0: (+1)
+   \   00000014   0x9904             LDR      R1,[SP, #+16]
+   \   00000016   0x4288             CMP      R0,R1
+   \   00000018   0xD2F9             BCS      ??_PrintUnsigned_1
+    155            if (NumDigits > Width) {
+   \   0000001A   0x42B5             CMP      R5,R6
+   \   0000001C   0xD200             BCS      ??_PrintUnsigned_2
+   \   0000001E   0x0035             MOVS     R5,R6
+   \                     ??_PrintUnsigned_2: (+1)
+   \   00000020   0x9500             STR      R5,[SP, #+0]
+   \   00000022   0x9D0A             LDR      R5,[SP, #+40]
+    156              Width = NumDigits;
+    157            }
+    158            //
+    159            // Print leading chars if necessary
+    160            //
+    161            if ((FormatFlags & FORMAT_FLAG_LEFT_JUSTIFY) == 0u) {
+   \   00000024   0x980B             LDR      R0,[SP, #+44]
+   \   00000026   0x07C0             LSLS     R0,R0,#+31
+   \   00000028   0xD417             BMI      ??_PrintUnsigned_3
+    162              if (FieldWidth != 0u) {
+   \   0000002A   0x2D00             CMP      R5,#+0
+   \   0000002C   0xD015             BEQ      ??_PrintUnsigned_3
+    163                if (((FormatFlags & FORMAT_FLAG_PAD_ZERO) == FORMAT_FLAG_PAD_ZERO) && (NumDigits == 0u)) {
+   \   0000002E   0x980B             LDR      R0,[SP, #+44]
+   \   00000030   0x0780             LSLS     R0,R0,#+30
+   \   00000032   0xD503             BPL      ??_PrintUnsigned_4
+   \   00000034   0x2E00             CMP      R6,#+0
+   \   00000036   0xD101             BNE      ??_PrintUnsigned_4
+    164                  c = '0';
+   \   00000038   0x2730             MOVS     R7,#+48
+   \   0000003A   0xE000             B        ??_PrintUnsigned_5
+    165                } else {
+    166                  c = ' ';
+   \                     ??_PrintUnsigned_4: (+1)
+   \   0000003C   0x2720             MOVS     R7,#+32
+    167                }
+    168                while ((FieldWidth != 0u) && (Width < FieldWidth)) {
+   \                     ??_PrintUnsigned_5: (+1)
+   \   0000003E   0x2D00             CMP      R5,#+0
+   \   00000040   0xD00B             BEQ      ??_PrintUnsigned_3
+   \   00000042   0x9800             LDR      R0,[SP, #+0]
+   \   00000044   0x42A8             CMP      R0,R5
+   \   00000046   0xD208             BCS      ??_PrintUnsigned_3
+    169                  FieldWidth--;
+   \   00000048   0x1E6D             SUBS     R5,R5,#+1
+    170                  _StoreChar(pBufferDesc, c);
+   \   0000004A   0x0039             MOVS     R1,R7
+   \   0000004C   0x9802             LDR      R0,[SP, #+8]
+   \   0000004E   0x.... 0x....      BL       _StoreChar
+    171                  if (pBufferDesc->ReturnValue < 0) {
+   \   00000052   0x9802             LDR      R0,[SP, #+8]
+   \   00000054   0x68C0             LDR      R0,[R0, #+12]
+   \   00000056   0x2800             CMP      R0,#+0
+   \   00000058   0xD5F1             BPL      ??_PrintUnsigned_5
+    172                    break;
+    173                  }
+    174                }
+    175              }
+    176            }
+    177            if (pBufferDesc->ReturnValue >= 0) {
+   \                     ??_PrintUnsigned_3: (+1)
+   \   0000005A   0x9802             LDR      R0,[SP, #+8]
+   \   0000005C   0x68C0             LDR      R0,[R0, #+12]
+   \   0000005E   0x2800             CMP      R0,#+0
+   \   00000060   0xD438             BMI      ??_PrintUnsigned_6
+   \   00000062   0xE002             B        ??_PrintUnsigned_7
+    178              //
+    179              // Compute Digit.
+    180              // Loop until Digit has the value of the highest digit required.
+    181              // Example: If the output is 345 (Base 10), loop 2 times until Digit is 100.
+    182              //
+    183              while (1) {
+    184                if (NumDigits > 1u) {       // User specified a min number of digits to print? => Make sure we loop at least that often, before checking anything else (> 1 check avoids problems with NumDigits being signed / unsigned)
+    185                  NumDigits--;
+   \                     ??_PrintUnsigned_8: (+1)
+   \   00000064   0x1E76             SUBS     R6,R6,#+1
+    186                } else {
+    187                  Div = v / Digit;
+    188                  if (Div < Base) {        // Is our divider big enough to extract the highest digit from value? => Done
+    189                    break;
+    190                  }
+    191                }
+    192                Digit *= Base;
+   \                     ??_PrintUnsigned_9: (+1)
+   \   00000066   0x9804             LDR      R0,[SP, #+16]
+   \   00000068   0x4344             MULS     R4,R0,R4
+   \                     ??_PrintUnsigned_7: (+1)
+   \   0000006A   0x2E02             CMP      R6,#+2
+   \   0000006C   0xD2FA             BCS      ??_PrintUnsigned_8
+   \   0000006E   0x9803             LDR      R0,[SP, #+12]
+   \   00000070   0x0021             MOVS     R1,R4
+   \   00000072   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000076   0x9904             LDR      R1,[SP, #+16]
+   \   00000078   0x4288             CMP      R0,R1
+   \   0000007A   0xD2F4             BCS      ??_PrintUnsigned_9
+    193              }
+    194              //
+    195              // Output digits
+    196              //
+    197              do {
+    198                Div = v / Digit;
+   \                     ??_PrintUnsigned_10: (+1)
+   \   0000007C   0x9803             LDR      R0,[SP, #+12]
+   \   0000007E   0x0021             MOVS     R1,R4
+   \   00000080   0x.... 0x....      BL       __aeabi_uidiv
+   \   00000084   0x0001             MOVS     R1,R0
+    199                v -= Div * Digit;
+   \   00000086   0x9A03             LDR      R2,[SP, #+12]
+   \   00000088   0x4360             MULS     R0,R4,R0
+   \   0000008A   0x1A10             SUBS     R0,R2,R0
+   \   0000008C   0x9003             STR      R0,[SP, #+12]
+    200                _StoreChar(pBufferDesc, _aV2C[Div]);
+   \   0000008E   0xBF00             Nop      
+   \   00000090   0x....             ADR.N    R0,`_PrintUnsigned::_aV2C`
+   \   00000092   0x5C41             LDRB     R1,[R0, R1]
+   \   00000094   0x9802             LDR      R0,[SP, #+8]
+   \   00000096   0x.... 0x....      BL       _StoreChar
+    201                if (pBufferDesc->ReturnValue < 0) {
+   \   0000009A   0x9802             LDR      R0,[SP, #+8]
+   \   0000009C   0x68C0             LDR      R0,[R0, #+12]
+   \   0000009E   0x2800             CMP      R0,#+0
+   \   000000A0   0xD405             BMI      ??_PrintUnsigned_11
+    202                  break;
+    203                }
+    204                Digit /= Base;
+   \   000000A2   0x0020             MOVS     R0,R4
+   \   000000A4   0x9904             LDR      R1,[SP, #+16]
+   \   000000A6   0x.... 0x....      BL       __aeabi_uidiv
+   \   000000AA   0x0004             MOVS     R4,R0
+    205              } while (Digit);
+   \   000000AC   0xD1E6             BNE      ??_PrintUnsigned_10
+    206              //
+    207              // Print trailing spaces if necessary
+    208              //
+    209              if ((FormatFlags & FORMAT_FLAG_LEFT_JUSTIFY) == FORMAT_FLAG_LEFT_JUSTIFY) {
+   \                     ??_PrintUnsigned_11: (+1)
+   \   000000AE   0x980B             LDR      R0,[SP, #+44]
+   \   000000B0   0x07C0             LSLS     R0,R0,#+31
+   \   000000B2   0xD50F             BPL      ??_PrintUnsigned_6
+    210                if (FieldWidth != 0u) {
+   \   000000B4   0x2D00             CMP      R5,#+0
+   \   000000B6   0xD00D             BEQ      ??_PrintUnsigned_6
+    211                  while ((FieldWidth != 0u) && (Width < FieldWidth)) {
+   \                     ??_PrintUnsigned_12: (+1)
+   \   000000B8   0x2D00             CMP      R5,#+0
+   \   000000BA   0xD00B             BEQ      ??_PrintUnsigned_6
+   \   000000BC   0x9800             LDR      R0,[SP, #+0]
+   \   000000BE   0x42A8             CMP      R0,R5
+   \   000000C0   0xD208             BCS      ??_PrintUnsigned_6
+    212                    FieldWidth--;
+   \   000000C2   0x1E6D             SUBS     R5,R5,#+1
+    213                    _StoreChar(pBufferDesc, ' ');
+   \   000000C4   0x2120             MOVS     R1,#+32
+   \   000000C6   0x9802             LDR      R0,[SP, #+8]
+   \   000000C8   0x.... 0x....      BL       _StoreChar
+    214                    if (pBufferDesc->ReturnValue < 0) {
+   \   000000CC   0x9802             LDR      R0,[SP, #+8]
+   \   000000CE   0x68C0             LDR      R0,[R0, #+12]
+   \   000000D0   0x2800             CMP      R0,#+0
+   \   000000D2   0xD5F1             BPL      ??_PrintUnsigned_12
+    215                      break;
+    216                    }
+    217                  }
+    218                }
+    219              }
+    220            }
+    221          }
+   \                     ??_PrintUnsigned_6: (+1)
+   \   000000D4   0xB005             ADD      SP,SP,#+20
+   \   000000D6   0xBDF0             POP      {R4-R7,PC}       ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     `_PrintUnsigned::_aV2C`:
+   \   00000000   0x30 0x31          DC8 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70
+   \              0x32 0x33    
+   \              0x34 0x35    
+   \              0x36 0x37    
+   \              0x38 0x39    
+   \              0x41 0x42    
+   \              0x43 0x44    
+   \              0x45 0x46    
+    222          
+    223          /*********************************************************************
+    224          *
+    225          *       _PrintInt
+    226          */
+
+   \                                 In section .text, align 2, keep-with-next
+    227          static void _PrintInt(SEGGER_RTT_PRINTF_DESC * pBufferDesc, int v, unsigned Base, unsigned NumDigits, unsigned FieldWidth, unsigned FormatFlags) {
+   \                     _PrintInt: (+1)
+   \   00000000   0xB5FC             PUSH     {R2-R7,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x000E             MOVS     R6,R1
+    228            unsigned Width;
+    229            int Number;
+    230          
+    231            Number = (v < 0) ? -v : v;
+   \   00000008   0x0030             MOVS     R0,R6
+   \   0000000A   0xD500             BPL      ??_PrintInt_0
+   \   0000000C   0x4240             RSBS     R0,R0,#+0
+   \                     ??_PrintInt_0: (+1)
+   \   0000000E   0x2501             MOVS     R5,#+1
+   \   00000010   0xE002             B        ??_PrintInt_1
+    232          
+    233            //
+    234            // Get actual field width
+    235            //
+    236            Width = 1u;
+    237            while (Number >= (int)Base) {
+    238              Number = (Number / (int)Base);
+   \                     ??_PrintInt_2: (+1)
+   \   00000012   0x.... 0x....      BL       __aeabi_idiv
+    239              Width++;
+   \   00000016   0x1C6D             ADDS     R5,R5,#+1
+    240            }
+   \                     ??_PrintInt_1: (+1)
+   \   00000018   0x9903             LDR      R1,[SP, #+12]
+   \   0000001A   0x4288             CMP      R0,R1
+   \   0000001C   0xDAF9             BGE      ??_PrintInt_2
+    241            if (NumDigits > Width) {
+   \   0000001E   0x9804             LDR      R0,[SP, #+16]
+   \   00000020   0x4285             CMP      R5,R0
+   \   00000022   0xD200             BCS      ??_PrintInt_3
+   \   00000024   0x0005             MOVS     R5,R0
+   \                     ??_PrintInt_3: (+1)
+   \   00000026   0x9500             STR      R5,[SP, #+0]
+   \   00000028   0x9D0A             LDR      R5,[SP, #+40]
+   \   0000002A   0x9F0B             LDR      R7,[SP, #+44]
+    242              Width = NumDigits;
+    243            }
+    244            if ((FieldWidth > 0u) && ((v < 0) || ((FormatFlags & FORMAT_FLAG_PRINT_SIGN) == FORMAT_FLAG_PRINT_SIGN))) {
+   \   0000002C   0x2D00             CMP      R5,#+0
+   \   0000002E   0xD004             BEQ      ??_PrintInt_4
+   \   00000030   0x2E00             CMP      R6,#+0
+   \   00000032   0xD401             BMI      ??_PrintInt_5
+   \   00000034   0x0778             LSLS     R0,R7,#+29
+   \   00000036   0xD500             BPL      ??_PrintInt_4
+    245              FieldWidth--;
+   \                     ??_PrintInt_5: (+1)
+   \   00000038   0x1E6D             SUBS     R5,R5,#+1
+    246            }
+    247          
+    248            //
+    249            // Print leading spaces if necessary
+    250            //
+    251            if ((((FormatFlags & FORMAT_FLAG_PAD_ZERO) == 0u) || (NumDigits != 0u)) && ((FormatFlags & FORMAT_FLAG_LEFT_JUSTIFY) == 0u)) {
+   \                     ??_PrintInt_4: (+1)
+   \   0000003A   0x07B8             LSLS     R0,R7,#+30
+   \   0000003C   0xD502             BPL      ??_PrintInt_6
+   \   0000003E   0x9804             LDR      R0,[SP, #+16]
+   \   00000040   0x2800             CMP      R0,#+0
+   \   00000042   0xD010             BEQ      ??_PrintInt_7
+   \                     ??_PrintInt_6: (+1)
+   \   00000044   0x07F8             LSLS     R0,R7,#+31
+   \   00000046   0xD40E             BMI      ??_PrintInt_7
+    252              if (FieldWidth != 0u) {
+   \   00000048   0x2D00             CMP      R5,#+0
+   \   0000004A   0xD00C             BEQ      ??_PrintInt_7
+    253                while ((FieldWidth != 0u) && (Width < FieldWidth)) {
+   \                     ??_PrintInt_8: (+1)
+   \   0000004C   0x2D00             CMP      R5,#+0
+   \   0000004E   0xD00A             BEQ      ??_PrintInt_7
+   \   00000050   0x9800             LDR      R0,[SP, #+0]
+   \   00000052   0x42A8             CMP      R0,R5
+   \   00000054   0xD207             BCS      ??_PrintInt_7
+    254                  FieldWidth--;
+   \   00000056   0x1E6D             SUBS     R5,R5,#+1
+    255                  _StoreChar(pBufferDesc, ' ');
+   \   00000058   0x2120             MOVS     R1,#+32
+   \   0000005A   0x0020             MOVS     R0,R4
+   \   0000005C   0x.... 0x....      BL       _StoreChar
+    256                  if (pBufferDesc->ReturnValue < 0) {
+   \   00000060   0x68E0             LDR      R0,[R4, #+12]
+   \   00000062   0x2800             CMP      R0,#+0
+   \   00000064   0xD5F2             BPL      ??_PrintInt_8
+    257                    break;
+    258                  }
+    259                }
+    260              }
+    261            }
+    262            //
+    263            // Print sign if necessary
+    264            //
+    265            if (pBufferDesc->ReturnValue >= 0) {
+   \                     ??_PrintInt_7: (+1)
+   \   00000066   0x68E0             LDR      R0,[R4, #+12]
+   \   00000068   0x2800             CMP      R0,#+0
+   \   0000006A   0xD432             BMI      ??_PrintInt_9
+    266              if (v < 0) {
+   \   0000006C   0x2E00             CMP      R6,#+0
+   \   0000006E   0xD506             BPL      ??_PrintInt_10
+    267                v = -v;
+   \   00000070   0x4270             RSBS     R0,R6,#+0
+   \   00000072   0x0006             MOVS     R6,R0
+    268                _StoreChar(pBufferDesc, '-');
+   \   00000074   0x212D             MOVS     R1,#+45
+   \   00000076   0x0020             MOVS     R0,R4
+   \   00000078   0x.... 0x....      BL       _StoreChar
+   \   0000007C   0xE005             B        ??_PrintInt_11
+    269              } else if ((FormatFlags & FORMAT_FLAG_PRINT_SIGN) == FORMAT_FLAG_PRINT_SIGN) {
+   \                     ??_PrintInt_10: (+1)
+   \   0000007E   0x0778             LSLS     R0,R7,#+29
+   \   00000080   0xD503             BPL      ??_PrintInt_11
+    270                _StoreChar(pBufferDesc, '+');
+   \   00000082   0x212B             MOVS     R1,#+43
+   \   00000084   0x0020             MOVS     R0,R4
+   \   00000086   0x.... 0x....      BL       _StoreChar
+    271              } else {
+    272          
+    273              }
+    274              if (pBufferDesc->ReturnValue >= 0) {
+   \                     ??_PrintInt_11: (+1)
+   \   0000008A   0x68E0             LDR      R0,[R4, #+12]
+   \   0000008C   0x2800             CMP      R0,#+0
+   \   0000008E   0xD420             BMI      ??_PrintInt_9
+    275                //
+    276                // Print leading zeros if necessary
+    277                //
+    278                if (((FormatFlags & FORMAT_FLAG_PAD_ZERO) == FORMAT_FLAG_PAD_ZERO) && ((FormatFlags & FORMAT_FLAG_LEFT_JUSTIFY) == 0u) && (NumDigits == 0u)) {
+   \   00000090   0x07B8             LSLS     R0,R7,#+30
+   \   00000092   0x0F80             LSRS     R0,R0,#+30
+   \   00000094   0x2802             CMP      R0,#+2
+   \   00000096   0xD111             BNE      ??_PrintInt_12
+   \   00000098   0x9804             LDR      R0,[SP, #+16]
+   \   0000009A   0x2800             CMP      R0,#+0
+   \   0000009C   0xD10E             BNE      ??_PrintInt_12
+    279                  if (FieldWidth != 0u) {
+   \   0000009E   0x2D00             CMP      R5,#+0
+   \   000000A0   0xD00C             BEQ      ??_PrintInt_12
+    280                    while ((FieldWidth != 0u) && (Width < FieldWidth)) {
+   \                     ??_PrintInt_13: (+1)
+   \   000000A2   0x2D00             CMP      R5,#+0
+   \   000000A4   0xD00A             BEQ      ??_PrintInt_12
+   \   000000A6   0x9800             LDR      R0,[SP, #+0]
+   \   000000A8   0x42A8             CMP      R0,R5
+   \   000000AA   0xD207             BCS      ??_PrintInt_12
+    281                      FieldWidth--;
+   \   000000AC   0x1E6D             SUBS     R5,R5,#+1
+    282                      _StoreChar(pBufferDesc, '0');
+   \   000000AE   0x2130             MOVS     R1,#+48
+   \   000000B0   0x0020             MOVS     R0,R4
+   \   000000B2   0x.... 0x....      BL       _StoreChar
+    283                      if (pBufferDesc->ReturnValue < 0) {
+   \   000000B6   0x68E0             LDR      R0,[R4, #+12]
+   \   000000B8   0x2800             CMP      R0,#+0
+   \   000000BA   0xD5F2             BPL      ??_PrintInt_13
+    284                        break;
+    285                      }
+    286                    }
+    287                  }
+    288                }
+    289                if (pBufferDesc->ReturnValue >= 0) {
+   \                     ??_PrintInt_12: (+1)
+   \   000000BC   0x68E0             LDR      R0,[R4, #+12]
+   \   000000BE   0x2800             CMP      R0,#+0
+   \   000000C0   0xD407             BMI      ??_PrintInt_9
+    290                  //
+    291                  // Print number without sign
+    292                  //
+    293                  _PrintUnsigned(pBufferDesc, (unsigned)v, Base, NumDigits, FieldWidth, FormatFlags);
+   \   000000C2   0x9701             STR      R7,[SP, #+4]
+   \   000000C4   0x9500             STR      R5,[SP, #+0]
+   \   000000C6   0x9B04             LDR      R3,[SP, #+16]
+   \   000000C8   0x9A03             LDR      R2,[SP, #+12]
+   \   000000CA   0x0031             MOVS     R1,R6
+   \   000000CC   0x0020             MOVS     R0,R4
+   \   000000CE   0x.... 0x....      BL       _PrintUnsigned
+    294                }
+    295              }
+    296            }
+    297          }
+   \                     ??_PrintInt_9: (+1)
+   \   000000D2   0xB005             ADD      SP,SP,#+20
+   \   000000D4   0xBDF0             POP      {R4-R7,PC}       ;; return
+    298          
+    299          /*********************************************************************
+    300          *
+    301          *       Public code
+    302          *
+    303          **********************************************************************
+    304          */
+    305          /*********************************************************************
+    306          *
+    307          *       SEGGER_RTT_vprintf
+    308          *
+    309          *  Function description
+    310          *    Stores a formatted string in SEGGER RTT control block.
+    311          *    This data is read by the host.
+    312          *
+    313          *  Parameters
+    314          *    BufferIndex  Index of "Up"-buffer to be used. (e.g. 0 for "Terminal")
+    315          *    sFormat      Pointer to format string
+    316          *    pParamList   Pointer to the list of arguments for the format string
+    317          *
+    318          *  Return values
+    319          *    >= 0:  Number of bytes which have been stored in the "Up"-buffer.
+    320          *     < 0:  Error
+    321          */
+
+   \                                 In section .text, align 2, keep-with-next
+    322          int SEGGER_RTT_vprintf(unsigned BufferIndex, const char * sFormat, va_list * pParamList) {
+   \                     SEGGER_RTT_vprintf: (+1)
+   \   00000000   0xB5F1             PUSH     {R0,R4-R7,LR}
+   \   00000002   0xB098             SUB      SP,SP,#+96
+   \   00000004   0x000C             MOVS     R4,R1
+   \   00000006   0x0016             MOVS     R6,R2
+    323            char c;
+    324            SEGGER_RTT_PRINTF_DESC BufferDesc;
+    325            int v;
+    326            unsigned NumDigits;
+    327            unsigned FormatFlags;
+    328            unsigned FieldWidth;
+    329            char acBuffer[SEGGER_RTT_PRINTF_BUFFER_SIZE];
+    330          
+    331            BufferDesc.pBuffer        = acBuffer;
+   \   00000008   0xA807             ADD      R0,SP,#+28
+   \   0000000A   0x9002             STR      R0,[SP, #+8]
+    332            BufferDesc.BufferSize     = SEGGER_RTT_PRINTF_BUFFER_SIZE;
+   \   0000000C   0x2040             MOVS     R0,#+64
+   \   0000000E   0x9003             STR      R0,[SP, #+12]
+    333            BufferDesc.Cnt            = 0u;
+   \   00000010   0x2700             MOVS     R7,#+0
+   \   00000012   0x9704             STR      R7,[SP, #+16]
+    334            BufferDesc.RTTBufferIndex = BufferIndex;
+   \   00000014   0x9818             LDR      R0,[SP, #+96]
+   \   00000016   0x9006             STR      R0,[SP, #+24]
+    335            BufferDesc.ReturnValue    = 0;
+   \   00000018   0x9705             STR      R7,[SP, #+20]
+    336          
+    337            do {
+    338              c = *sFormat;
+   \                     ??SEGGER_RTT_vprintf_0: (+1)
+   \   0000001A   0x7821             LDRB     R1,[R4, #+0]
+    339              sFormat++;
+   \   0000001C   0x1C64             ADDS     R4,R4,#+1
+    340              if (c == 0u) {
+   \   0000001E   0x2900             CMP      R1,#+0
+   \   00000020   0xD100             BNE      .+4
+   \   00000022   0xE0B5             B        ??SEGGER_RTT_vprintf_1
+    341                break;
+    342              }
+    343              if (c == '%') {
+   \   00000024   0x2925             CMP      R1,#+37
+   \   00000026   0xD000             BEQ      .+4
+   \   00000028   0xE0AB             B        ??SEGGER_RTT_vprintf_2
+    344                //
+    345                // Filter out flags
+    346                //
+    347                FormatFlags = 0u;
+   \   0000002A   0x0038             MOVS     R0,R7
+    348                v = 1;
+   \   0000002C   0x2201             MOVS     R2,#+1
+   \   0000002E   0x0011             MOVS     R1,R2
+    349                do {
+    350                  c = *sFormat;
+    351                  switch (c) {
+   \                     ??SEGGER_RTT_vprintf_3: (+1)
+   \   00000030   0x7823             LDRB     R3,[R4, #+0]
+   \   00000032   0x2B23             CMP      R3,#+35
+   \   00000034   0xD013             BEQ      ??SEGGER_RTT_vprintf_4
+   \   00000036   0x2B2B             CMP      R3,#+43
+   \   00000038   0xD00C             BEQ      ??SEGGER_RTT_vprintf_5
+   \   0000003A   0x2B2D             CMP      R3,#+45
+   \   0000003C   0xD002             BEQ      ??SEGGER_RTT_vprintf_6
+   \   0000003E   0x2B30             CMP      R3,#+48
+   \   00000040   0xD003             BEQ      ??SEGGER_RTT_vprintf_7
+   \   00000042   0xE011             B        ??SEGGER_RTT_vprintf_8
+    352                  case '-': FormatFlags |= FORMAT_FLAG_LEFT_JUSTIFY; sFormat++; break;
+   \                     ??SEGGER_RTT_vprintf_6: (+1)
+   \   00000044   0x4310             ORRS     R0,R0,R2
+   \   00000046   0x1C64             ADDS     R4,R4,#+1
+   \   00000048   0xE00F             B        ??SEGGER_RTT_vprintf_9
+    353                  case '0': FormatFlags |= FORMAT_FLAG_PAD_ZERO;     sFormat++; break;
+   \                     ??SEGGER_RTT_vprintf_7: (+1)
+   \   0000004A   0x0003             MOVS     R3,R0
+   \   0000004C   0x2002             MOVS     R0,#+2
+   \   0000004E   0x4318             ORRS     R0,R0,R3
+   \   00000050   0x1C64             ADDS     R4,R4,#+1
+   \   00000052   0xE00A             B        ??SEGGER_RTT_vprintf_9
+    354                  case '+': FormatFlags |= FORMAT_FLAG_PRINT_SIGN;   sFormat++; break;
+   \                     ??SEGGER_RTT_vprintf_5: (+1)
+   \   00000054   0x0003             MOVS     R3,R0
+   \   00000056   0x2004             MOVS     R0,#+4
+   \   00000058   0x4318             ORRS     R0,R0,R3
+   \   0000005A   0x1C64             ADDS     R4,R4,#+1
+   \   0000005C   0xE005             B        ??SEGGER_RTT_vprintf_9
+    355                  case '#': FormatFlags |= FORMAT_FLAG_ALTERNATE;    sFormat++; break;
+   \                     ??SEGGER_RTT_vprintf_4: (+1)
+   \   0000005E   0x0003             MOVS     R3,R0
+   \   00000060   0x2008             MOVS     R0,#+8
+   \   00000062   0x4318             ORRS     R0,R0,R3
+   \   00000064   0x1C64             ADDS     R4,R4,#+1
+   \   00000066   0xE000             B        ??SEGGER_RTT_vprintf_9
+    356                  default:  v = 0; break;
+   \                     ??SEGGER_RTT_vprintf_8: (+1)
+   \   00000068   0x0039             MOVS     R1,R7
+    357                  }
+    358                } while (v);
+   \                     ??SEGGER_RTT_vprintf_9: (+1)
+   \   0000006A   0x2900             CMP      R1,#+0
+   \   0000006C   0xD1E0             BNE      ??SEGGER_RTT_vprintf_3
+    359                //
+    360                // filter out field with
+    361                //
+    362                FieldWidth = 0u;
+   \   0000006E   0x003A             MOVS     R2,R7
+   \   00000070   0xE005             B        ??SEGGER_RTT_vprintf_10
+    363                do {
+    364                  c = *sFormat;
+    365                  if ((c < '0') || (c > '9')) {
+    366                    break;
+    367                  }
+    368                  sFormat++;
+   \                     ??SEGGER_RTT_vprintf_11: (+1)
+   \   00000072   0x1C64             ADDS     R4,R4,#+1
+    369                  FieldWidth = (FieldWidth * 10u) + ((unsigned)c - '0');
+   \   00000074   0x0093             LSLS     R3,R2,#+2
+   \   00000076   0x189A             ADDS     R2,R3,R2
+   \   00000078   0x0052             LSLS     R2,R2,#+1
+   \   0000007A   0x1852             ADDS     R2,R2,R1
+   \   0000007C   0x3A30             SUBS     R2,R2,#+48
+    370                } while (1);
+   \                     ??SEGGER_RTT_vprintf_10: (+1)
+   \   0000007E   0x7821             LDRB     R1,[R4, #+0]
+   \   00000080   0x000B             MOVS     R3,R1
+   \   00000082   0x3B30             SUBS     R3,R3,#+48
+   \   00000084   0x2B0A             CMP      R3,#+10
+   \   00000086   0xD3F4             BCC      ??SEGGER_RTT_vprintf_11
+    371          
+    372                //
+    373                // Filter out precision (number of digits to display)
+    374                //
+    375                NumDigits = 0u;
+   \   00000088   0x003B             MOVS     R3,R7
+    376                c = *sFormat;
+    377                if (c == '.') {
+   \   0000008A   0x292E             CMP      R1,#+46
+   \   0000008C   0xD10C             BNE      ??SEGGER_RTT_vprintf_12
+    378                  sFormat++;
+   \   0000008E   0x1C64             ADDS     R4,R4,#+1
+   \   00000090   0xE005             B        ??SEGGER_RTT_vprintf_13
+    379                  do {
+    380                    c = *sFormat;
+    381                    if ((c < '0') || (c > '9')) {
+    382                      break;
+    383                    }
+    384                    sFormat++;
+   \                     ??SEGGER_RTT_vprintf_14: (+1)
+   \   00000092   0x1C64             ADDS     R4,R4,#+1
+    385                    NumDigits = NumDigits * 10u + ((unsigned)c - '0');
+   \   00000094   0x009D             LSLS     R5,R3,#+2
+   \   00000096   0x18EB             ADDS     R3,R5,R3
+   \   00000098   0x005B             LSLS     R3,R3,#+1
+   \   0000009A   0x185B             ADDS     R3,R3,R1
+   \   0000009C   0x3B30             SUBS     R3,R3,#+48
+    386                  } while (1);
+   \                     ??SEGGER_RTT_vprintf_13: (+1)
+   \   0000009E   0x7821             LDRB     R1,[R4, #+0]
+   \   000000A0   0x000D             MOVS     R5,R1
+   \   000000A2   0x3D30             SUBS     R5,R5,#+48
+   \   000000A4   0x2D0A             CMP      R5,#+10
+   \   000000A6   0xD3F4             BCC      ??SEGGER_RTT_vprintf_14
+    387                }
+    388                //
+    389                // Filter out length modifier
+    390                //
+    391                c = *sFormat;
+   \                     ??SEGGER_RTT_vprintf_12: (+1)
+   \   000000A8   0x7821             LDRB     R1,[R4, #+0]
+   \   000000AA   0xE001             B        ??SEGGER_RTT_vprintf_15
+    392                do {
+    393                  if ((c == 'l') || (c == 'h')) {
+    394                    sFormat++;
+   \                     ??SEGGER_RTT_vprintf_16: (+1)
+   \   000000AC   0x1C64             ADDS     R4,R4,#+1
+    395                    c = *sFormat;
+   \   000000AE   0x7821             LDRB     R1,[R4, #+0]
+    396                  } else {
+    397                    break;
+    398                  }
+    399                } while (1);
+   \                     ??SEGGER_RTT_vprintf_15: (+1)
+   \   000000B0   0x296C             CMP      R1,#+108
+   \   000000B2   0xD0FB             BEQ      ??SEGGER_RTT_vprintf_16
+   \   000000B4   0x2968             CMP      R1,#+104
+   \   000000B6   0xD0F9             BEQ      ??SEGGER_RTT_vprintf_16
+    400                //
+    401                // Handle specifiers
+    402                //
+    403                switch (c) {
+   \   000000B8   0x2925             CMP      R1,#+37
+   \   000000BA   0xD05C             BEQ      ??SEGGER_RTT_vprintf_17
+   \   000000BC   0x2958             CMP      R1,#+88
+   \   000000BE   0xD02E             BEQ      ??SEGGER_RTT_vprintf_18
+   \   000000C0   0x2963             CMP      R1,#+99
+   \   000000C2   0xD00A             BEQ      ??SEGGER_RTT_vprintf_19
+   \   000000C4   0x2964             CMP      R1,#+100
+   \   000000C6   0xD012             BEQ      ??SEGGER_RTT_vprintf_20
+   \   000000C8   0x2970             CMP      R1,#+112
+   \   000000CA   0xD045             BEQ      ??SEGGER_RTT_vprintf_21
+   \   000000CC   0x2973             CMP      R1,#+115
+   \   000000CE   0xD032             BEQ      ??SEGGER_RTT_vprintf_22
+   \   000000D0   0x2975             CMP      R1,#+117
+   \   000000D2   0xD018             BEQ      ??SEGGER_RTT_vprintf_23
+   \   000000D4   0x2978             CMP      R1,#+120
+   \   000000D6   0xD022             BEQ      ??SEGGER_RTT_vprintf_18
+   \   000000D8   0xE051             B        ??SEGGER_RTT_vprintf_24
+    404                case 'c': {
+    405                  char c0;
+    406                  v = va_arg(*pParamList, int);
+   \                     ??SEGGER_RTT_vprintf_19: (+1)
+   \   000000DA   0x6835             LDR      R5,[R6, #+0]
+   \   000000DC   0x6035             STR      R5,[R6, #+0]
+   \   000000DE   0x6829             LDR      R1,[R5, #+0]
+   \   000000E0   0x1D2D             ADDS     R5,R5,#+4
+   \   000000E2   0x6035             STR      R5,[R6, #+0]
+    407                  c0 = (char)v;
+    408                  _StoreChar(&BufferDesc, c0);
+   \   000000E4   0xB2C9             UXTB     R1,R1
+   \   000000E6   0xA802             ADD      R0,SP,#+8
+   \   000000E8   0x.... 0x....      BL       _StoreChar
+    409                  break;
+   \   000000EC   0xE047             B        ??SEGGER_RTT_vprintf_24
+    410                }
+    411                case 'd':
+    412                  v = va_arg(*pParamList, int);
+   \                     ??SEGGER_RTT_vprintf_20: (+1)
+   \   000000EE   0x6835             LDR      R5,[R6, #+0]
+   \   000000F0   0x6035             STR      R5,[R6, #+0]
+   \   000000F2   0x6829             LDR      R1,[R5, #+0]
+   \   000000F4   0x1D2D             ADDS     R5,R5,#+4
+   \   000000F6   0x6035             STR      R5,[R6, #+0]
+    413                  _PrintInt(&BufferDesc, v, 10u, NumDigits, FieldWidth, FormatFlags);
+   \   000000F8   0x9001             STR      R0,[SP, #+4]
+   \   000000FA   0x9200             STR      R2,[SP, #+0]
+   \   000000FC   0x220A             MOVS     R2,#+10
+   \   000000FE   0xA802             ADD      R0,SP,#+8
+   \   00000100   0x.... 0x....      BL       _PrintInt
+    414                  break;
+   \   00000104   0xE03B             B        ??SEGGER_RTT_vprintf_24
+    415                case 'u':
+    416                  v = va_arg(*pParamList, int);
+   \                     ??SEGGER_RTT_vprintf_23: (+1)
+   \   00000106   0x6835             LDR      R5,[R6, #+0]
+   \   00000108   0x6035             STR      R5,[R6, #+0]
+   \   0000010A   0x6829             LDR      R1,[R5, #+0]
+   \   0000010C   0x1D2D             ADDS     R5,R5,#+4
+   \   0000010E   0x6035             STR      R5,[R6, #+0]
+    417                  _PrintUnsigned(&BufferDesc, (unsigned)v, 10u, NumDigits, FieldWidth, FormatFlags);
+   \   00000110   0x9001             STR      R0,[SP, #+4]
+   \   00000112   0x9200             STR      R2,[SP, #+0]
+   \   00000114   0x220A             MOVS     R2,#+10
+   \   00000116   0xA802             ADD      R0,SP,#+8
+   \   00000118   0x.... 0x....      BL       _PrintUnsigned
+    418                  break;
+   \   0000011C   0xE02F             B        ??SEGGER_RTT_vprintf_24
+    419                case 'x':
+    420                case 'X':
+    421                  v = va_arg(*pParamList, int);
+   \                     ??SEGGER_RTT_vprintf_18: (+1)
+   \   0000011E   0x6835             LDR      R5,[R6, #+0]
+   \   00000120   0x6035             STR      R5,[R6, #+0]
+   \   00000122   0x6829             LDR      R1,[R5, #+0]
+   \   00000124   0x1D2D             ADDS     R5,R5,#+4
+   \   00000126   0x6035             STR      R5,[R6, #+0]
+    422                  _PrintUnsigned(&BufferDesc, (unsigned)v, 16u, NumDigits, FieldWidth, FormatFlags);
+   \   00000128   0x9001             STR      R0,[SP, #+4]
+   \   0000012A   0x9200             STR      R2,[SP, #+0]
+   \   0000012C   0x2210             MOVS     R2,#+16
+   \   0000012E   0xA802             ADD      R0,SP,#+8
+   \   00000130   0x.... 0x....      BL       _PrintUnsigned
+    423                  break;
+   \   00000134   0xE023             B        ??SEGGER_RTT_vprintf_24
+    424                case 's':
+    425                  {
+    426                    const char * s = va_arg(*pParamList, const char *);
+   \                     ??SEGGER_RTT_vprintf_22: (+1)
+   \   00000136   0x6835             LDR      R5,[R6, #+0]
+   \   00000138   0x6035             STR      R5,[R6, #+0]
+   \   0000013A   0x6828             LDR      R0,[R5, #+0]
+   \   0000013C   0x1D2D             ADDS     R5,R5,#+4
+   \   0000013E   0x6035             STR      R5,[R6, #+0]
+   \   00000140   0x0005             MOVS     R5,R0
+    427                    do {
+    428                      c = *s;
+   \                     ??SEGGER_RTT_vprintf_25: (+1)
+   \   00000142   0x7829             LDRB     R1,[R5, #+0]
+    429                      s++;
+   \   00000144   0x1C6D             ADDS     R5,R5,#+1
+    430                      if (c == '\0') {
+   \   00000146   0x2900             CMP      R1,#+0
+   \   00000148   0xD019             BEQ      ??SEGGER_RTT_vprintf_24
+    431                        break;
+    432                      }
+    433                     _StoreChar(&BufferDesc, c);
+   \   0000014A   0xA802             ADD      R0,SP,#+8
+   \   0000014C   0x.... 0x....      BL       _StoreChar
+    434                    } while (BufferDesc.ReturnValue >= 0);
+   \   00000150   0x9805             LDR      R0,[SP, #+20]
+   \   00000152   0x2800             CMP      R0,#+0
+   \   00000154   0xD5F5             BPL      ??SEGGER_RTT_vprintf_25
+   \   00000156   0xE012             B        ??SEGGER_RTT_vprintf_24
+    435                  }
+    436                  break;
+    437                case 'p':
+    438                  v = va_arg(*pParamList, int);
+   \                     ??SEGGER_RTT_vprintf_21: (+1)
+   \   00000158   0x6835             LDR      R5,[R6, #+0]
+   \   0000015A   0x6035             STR      R5,[R6, #+0]
+   \   0000015C   0x6829             LDR      R1,[R5, #+0]
+   \   0000015E   0x1D2D             ADDS     R5,R5,#+4
+   \   00000160   0x6035             STR      R5,[R6, #+0]
+    439                  _PrintUnsigned(&BufferDesc, (unsigned)v, 16u, 8u, 8u, 0u);
+   \   00000162   0x4638             MOV      R0,R7
+   \   00000164   0x9001             STR      R0,[SP, #+4]
+   \   00000166   0x2008             MOVS     R0,#+8
+   \   00000168   0x9000             STR      R0,[SP, #+0]
+   \   0000016A   0x4603             MOV      R3,R0
+   \   0000016C   0x2210             MOVS     R2,#+16
+   \   0000016E   0xA802             ADD      R0,SP,#+8
+   \   00000170   0x.... 0x....      BL       _PrintUnsigned
+    440                  break;
+   \   00000174   0xE003             B        ??SEGGER_RTT_vprintf_24
+    441                case '%':
+    442                  _StoreChar(&BufferDesc, '%');
+   \                     ??SEGGER_RTT_vprintf_17: (+1)
+   \   00000176   0x2125             MOVS     R1,#+37
+   \   00000178   0xA802             ADD      R0,SP,#+8
+   \   0000017A   0x.... 0x....      BL       _StoreChar
+    443                  break;
+    444                default:
+    445                  break;
+    446                }
+    447                sFormat++;
+   \                     ??SEGGER_RTT_vprintf_24: (+1)
+   \   0000017E   0x1C64             ADDS     R4,R4,#+1
+   \   00000180   0xE002             B        ??SEGGER_RTT_vprintf_26
+    448              } else {
+    449                _StoreChar(&BufferDesc, c);
+   \                     ??SEGGER_RTT_vprintf_2: (+1)
+   \   00000182   0xA802             ADD      R0,SP,#+8
+   \   00000184   0x.... 0x....      BL       _StoreChar
+    450              }
+    451            } while (BufferDesc.ReturnValue >= 0);
+   \                     ??SEGGER_RTT_vprintf_26: (+1)
+   \   00000188   0x9805             LDR      R0,[SP, #+20]
+   \   0000018A   0x2800             CMP      R0,#+0
+   \   0000018C   0xD400             BMI      .+4
+   \   0000018E   0xE744             B        ??SEGGER_RTT_vprintf_0
+    452          
+    453            if (BufferDesc.ReturnValue > 0) {
+   \                     ??SEGGER_RTT_vprintf_1: (+1)
+   \   00000190   0x9805             LDR      R0,[SP, #+20]
+   \   00000192   0x2801             CMP      R0,#+1
+   \   00000194   0xDB0A             BLT      ??SEGGER_RTT_vprintf_27
+    454              //
+    455              // Write remaining data, if any
+    456              //
+    457              if (BufferDesc.Cnt != 0u) {
+   \   00000196   0x9A04             LDR      R2,[SP, #+16]
+   \   00000198   0x2A00             CMP      R2,#+0
+   \   0000019A   0xD003             BEQ      ??SEGGER_RTT_vprintf_28
+    458                SEGGER_RTT_Write(BufferIndex, acBuffer, BufferDesc.Cnt);
+   \   0000019C   0xA907             ADD      R1,SP,#+28
+   \   0000019E   0x9818             LDR      R0,[SP, #+96]
+   \   000001A0   0x.... 0x....      BL       SEGGER_RTT_Write
+    459              }
+    460              BufferDesc.ReturnValue += (int)BufferDesc.Cnt;
+   \                     ??SEGGER_RTT_vprintf_28: (+1)
+   \   000001A4   0x9805             LDR      R0,[SP, #+20]
+   \   000001A6   0x9904             LDR      R1,[SP, #+16]
+   \   000001A8   0x1840             ADDS     R0,R0,R1
+   \   000001AA   0x9005             STR      R0,[SP, #+20]
+    461            }
+    462            return BufferDesc.ReturnValue;
+   \                     ??SEGGER_RTT_vprintf_27: (+1)
+   \   000001AC   0x9805             LDR      R0,[SP, #+20]
+   \   000001AE   0xB019             ADD      SP,SP,#+100
+   \   000001B0   0xBDF0             POP      {R4-R7,PC}       ;; return
+    463          }
+    464          
+    465          /*********************************************************************
+    466          *
+    467          *       SEGGER_RTT_printf
+    468          *
+    469          *  Function description
+    470          *    Stores a formatted string in SEGGER RTT control block.
+    471          *    This data is read by the host.
+    472          *
+    473          *  Parameters
+    474          *    BufferIndex  Index of "Up"-buffer to be used. (e.g. 0 for "Terminal")
+    475          *    sFormat      Pointer to format string, followed by the arguments for conversion
+    476          *
+    477          *  Return values
+    478          *    >= 0:  Number of bytes which have been stored in the "Up"-buffer.
+    479          *     < 0:  Error
+    480          *
+    481          *  Notes
+    482          *    (1) Conversion specifications have following syntax:
+    483          *          %[flags][FieldWidth][.Precision]ConversionSpecifier
+    484          *    (2) Supported flags:
+    485          *          -: Left justify within the field width
+    486          *          +: Always print sign extension for signed conversions
+    487          *          0: Pad with 0 instead of spaces. Ignored when using '-'-flag or precision
+    488          *        Supported conversion specifiers:
+    489          *          c: Print the argument as one char
+    490          *          d: Print the argument as a signed integer
+    491          *          u: Print the argument as an unsigned integer
+    492          *          x: Print the argument as an hexadecimal integer
+    493          *          s: Print the string pointed to by the argument
+    494          *          p: Print the argument as an 8-digit hexadecimal integer. (Argument shall be a pointer to void.)
+    495          */
+
+   \                                 In section .text, align 2, keep-with-next
+    496          int SEGGER_RTT_printf(unsigned BufferIndex, const char * sFormat, ...) {
+   \                     SEGGER_RTT_printf: (+1)
+   \   00000000   0xB40C             PUSH     {R2,R3}
+   \   00000002   0xB580             PUSH     {R7,LR}
+    497            int r;
+    498            va_list ParamList;
+    499          
+    500            va_start(ParamList, sFormat);
+   \   00000004   0xAA02             ADD      R2,SP,#+8
+   \   00000006   0x9200             STR      R2,[SP, #+0]
+    501            r = SEGGER_RTT_vprintf(BufferIndex, sFormat, &ParamList);
+    502            va_end(ParamList);
+    503            return r;
+   \   00000008   0x466A             MOV      R2,SP
+   \   0000000A   0x.... 0x....      BL       SEGGER_RTT_vprintf
+   \   0000000E   0x9901             LDR      R1,[SP, #+4]
+   \   00000010   0xB004             ADD      SP,SP,#+16
+   \   00000012   0x4708             BX       R1               ;; return
+    504          }
+    505          /*************************** End of file ****************************/
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   SEGGER_RTT_printf
+        16   -> SEGGER_RTT_vprintf
+     120   SEGGER_RTT_vprintf
+       120   -> SEGGER_RTT_Write
+       120   -> _PrintInt
+       120   -> _PrintUnsigned
+       120   -> _StoreChar
+      40   _PrintInt
+        40   -> _PrintUnsigned
+        40   -> _StoreChar
+        40 __aeabi_idiv
+      40   _PrintUnsigned
+        40   -> _StoreChar
+        40 __aeabi_uidiv
+       8   _StoreChar
+         8   -> SEGGER_RTT_Write
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      20  SEGGER_RTT_printf
+     434  SEGGER_RTT_vprintf
+     214  _PrintInt
+     216  _PrintUnsigned
+      64  _StoreChar
+      16  _aV2C
+
+ 
+ 964 bytes in section .text
+ 
+ 964 bytes of CODE memory
+
+Errors: none
+Warnings: none

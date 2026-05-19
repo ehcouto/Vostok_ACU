@@ -1,0 +1,84 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//  options.lnt
+//  A set of suppression options for PC-Lint messages.
+//
+//  For details about specific messages, refer to the Gimpel Software website.
+//      On-Line Message Reference for PC-lint: http://www.gimpel-online.com/MsgRef.html
+//
+
+// SUPRESSED Messages
+
+-e46                    // Field type should be int
+-e123                   // Macro 'Symbol' defined with arguments at Location this is just a warning
+-e130                   // Expected integral type
+-efile(451,*cx?inc*)    // Header file 'FileName' repeatedly included but does not have a standard include guard
+-e522                   // Highest operator or function lacks side-effects
+-e525                   // Negative indentation from Location
+-e526                   // 'Symbol' (Location) not defined
+-e537                   // Repeated include file 'FileName'
+-e539                   // Did not expect positive indentation from Location
+-e568                   // nonnegative quantity is never less than zero.
+-esym(586,asm)          // String 'Name' is deprecated. String
+-e657                   // Unusual (nonportable) anonymous struct or union
+-e658                   // Anonymous union assumed (use flag +fan)
+-esym(714,*__*)         // Symbol 'Symbol' (Location) not referenced
+-e715                   // Symbol 'Symbol' (Location) not referenced
+-e716                   // while(1) ...
+-e717                   // do ... while(0)
+-e725                   // Expected positive indentation from Location
+-e726                   // Extraneous comma ignored
+-e731                   // Boolean argument to equal/not equal
+-e747                   // Significant prototype coercion (Context) Type to Type
+-e749                   // local enumeration constant 'Symbol' (Location) not referenced
+-esym(751,MODULE_*_MESSAGE_ID_TYPE)
+                        // local typedef 'Symbol' (Location) not referenced
+-esym(754,*Unused*)     // local structure member 'Symbol' (Location) not referenced
+-e755                   // global macro 'Symbol' (Location) not referenced
+-e756                   // global typedef 'Symbol' (Location) not referenced
+-e757                   // global declarator 'Symbol' (Location) not referenced
+-esym(759,*__*)         // header declaration for symbol 'Symbol' (Location) could be moved from header to module
+-esym(765,*__*)         // external 'Symbol' (Location) could be made static
+-efile(766,*_prm.h)     // Header file FileName not used in module String
+-efile(766,*_prv.h)     // Header file FileName not used in module String
+-esym(767,MODULE_NAME)  // macro 'Symbol' was defined differently in another module (Location)
+-e768                   // global struct member 'Symbol' (Location) not referenced
+-e769                   // global enumeration constant 'Symbol' (Location) not referenced
+-estring(774,*if)       // Boolean within 'String' always evaluates to [True/False]
+-e778                   // Constant expression evaluates to 0 in operation: String
+-e788                   // enum constant 'Symbol' not used within defaulted switch
+-e793                   // ANSI limit of String 'String' 'Name' exceeded
+-e818                   // Pointer parameter 'Symbol' (Location) could be declared ptr to const
+-e830                   // Location cited in prior message
+-e831                   // Reference cited in prior message
+-e833                   // Symbol 'Symbol' is typed differently (String) in another module, Location,
+-e835                   // A zero has been given as [left/right] argument to operator 'Name'
+-e844                   // Pointer variable 'Symbol' (Location) could be declared as pointing to const
+-e845                   // The [left/right] argument to operator 'Name' is certain to be 0
+-e849                   // Symbol 'Symbol' has same enumerator value 'String' as enumerator 'Symbol'
+-e954                   // Pointer variable 'Symbol' (Location) could be declared as pointing to a const
+-e9003                  // could define variable 'Symbol' at block scope
+-esym(9004,_*)          // object/function 'Symbol' previously declared
+-e9007                  // side effects on right hand of logical operator, 'String'
+-e9008                  // comma operator used
+-e9013                  // no 'else' at end of 'if ... else if' chain
+-e9016                  // pointer arithmetic other than array indexing used
+-e9018                  // declaration of union type or object of union type, 'Type'
+-estring(9019,_CtAssert*)
+                        // declaration of 'String' before #include
+-e9024                  // '#/##' operator used in macro 'String'
+-e9026                  // Function-like macro, 'String', defined
+-e9030                  // Impermissible cast
+-e9034                  // Expression assigned to a narrower or different essential type
+-e9044                  // function parameter modified
+-estring(9051,_Pragma)  // macro 'Symbol' defined with the same name as a C keyword
+-e9058                  // tag 'Symbol' (Location) unused outside of typedefs
+-e9063                  // no comment or action in else-branch
+-e9067                  // array declared without explicit dimension
+-esym(9071,NULL)        // defined macro 'Name' is reserved to the compiler String
+-esym(9071,_CTASSERT,__CTASSERT)
+-esym(9071,__evenaccess)
+-e9078                  // conversion between a pointer and integer type
+-e9079                  // conversion from pointer to void to pointer to other type
+-e9081                  // too few independent cases for switch
+-e9084                  // result of assignment operator used in larger expression
+-e9087                  // cast performed between a pointer to object type and a pointer to a different object type

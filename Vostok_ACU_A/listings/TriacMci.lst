@@ -1,0 +1,893 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:54
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci/TriacMci.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\TriacMci.lst -o
+#        obj\TriacMci.obj
+#        source/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci/TriacMci.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\TriacMci.lst
+#    Object file  =  obj\TriacMci.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Hbl\acuexpacu\ACULoadHandler\TriacMci\TriacMci.c
+      1          /**
+      2           *  @file       TriacMci.c
+      3           *  @brief      Basic description of file contents
+      4           *
+      5           *  @details    Detailed description of the file contents
+      6           *
+      7           *---------------------------------------------------------------------------------------------------------------------
+      8           *------------------- Copyright 2011.  Whirlpool Corporation.  All rights reserved - CONFIDENTIAL ---------------------
+      9           *---------------------------------------------------------------------------------------------------------------------
+     10           */
+     11          
+     12          //-------------------------------------- Include Files ----------------------------------------------------------------
+     13          #include "C_Extensions.h"
+     14          #include "TriacMci.h"
+     15          
+     16          #if (HBL_LOAD_NUM_TRIACMCI > 0)
+     17          #include "Mci.h"
+     18          #include "DigitalOutputPilot.h"
+     19          #include <string.h>
+     20          #include "VirtualPin.h"
+     21          #include "Log.h"
+     22          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     23          
+     24          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     25          //! A list of log message IDs that are generated by this module.
+     26          typedef enum
+     27          {
+     28              INVALID_VIRTUAL_PIN = 0     //!< data: the invalid virtual pin number being passed
+     29          } MODULE_TRIACMCI_MESSAGE_ID_TYPE;
+     30          #define MODULE_NAME MODULE_TRIACMCI       //!< The name of this module for use by the Log module.
+     31          
+     32          PACKED typedef struct
+     33          {
+     34              uint8                           Processed;                      //!< Processed value
+     35              uint8                           Requested;                      //!< Requested value
+     36          } TRIACMCI_DATA_TYPE;
+     37          
+
+   \                                 In section .bss, align 2
+     38          static TRIACMCI_DATA_TYPE TriacMci_Data[HBL_LOAD_NUM_TRIACMCI];
+   \                     TriacMci_Data:
+   \   00000000                      DS8 2
+   \   00000002                      DS8 1
+     39          static uint8 TriacMci_Allocation;
+     40          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     41          
+     42          static BOOL_TYPE GetVirtualPinNumber(HBL_LOAD_TYPE *load, uint8 *virtual_pin);
+     43          //=====================================================================================================================
+     44          //-------------------------------------- Public Functions -------------------------------------------------------------
+     45          //=====================================================================================================================
+     46          
+     47          //---------------------------------------------------------------------------------------------------------------------
+     48          /**
+     49           * @brief Initialize all instances of this load type.
+     50           *        Initialize static RAM used by the module.
+     51           * @return
+     52           */
+
+   \                                 In section .text, align 2, keep-with-next
+     53          void TriacMci__Initialize(void)
+     54          {
+   \                     TriacMci__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     55              TriacMci_Allocation = 0;
+   \   00000002   0x....             LDR      R0,??DataTable8
+   \   00000004   0x2100             MOVS     R1,#+0
+   \   00000006   0x7081             STRB     R1,[R0, #+2]
+     56              memset (TriacMci_Data , 0 , sizeof(TriacMci_Data));
+   \   00000008   0x460A             MOV      R2,R1
+   \   0000000A   0x2102             MOVS     R1,#+2
+   \   0000000C   0x.... 0x....      BL       __aeabi_memset
+     57          }
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+     58          
+     59          
+     60          //---------------------------------------------------------------------------------------------------------------------
+     61          /**
+     62           * @brief Reserve memory for this load instance.
+     63           * @return The index of the allocated load.
+     64           */
+
+   \                                 In section .text, align 2, keep-with-next
+     65          uint8 TriacMci__Allocate(void)
+     66          {
+     67              uint8 retval;
+     68              retval = 0xFF;
+   \                     TriacMci__Allocate: (+1)
+   \   00000000   0x20FF             MOVS     R0,#+255
+     69              if (TriacMci_Allocation < (uint8)HBL_LOAD_NUM_TRIACMCI)
+   \   00000002   0x....             LDR      R1,??DataTable8
+   \   00000004   0x788A             LDRB     R2,[R1, #+2]
+   \   00000006   0x2A00             CMP      R2,#+0
+   \   00000008   0xD102             BNE      ??TriacMci__Allocate_0
+     70              {
+     71                  retval = TriacMci_Allocation;
+   \   0000000A   0x2000             MOVS     R0,#+0
+     72                  TriacMci_Allocation++;
+   \   0000000C   0x2201             MOVS     R2,#+1
+   \   0000000E   0x708A             STRB     R2,[R1, #+2]
+     73              }
+     74              return (retval);
+   \                     ??TriacMci__Allocate_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+     75          }
+     76          
+     77          
+     78          //---------------------------------------------------------------------------------------------------------------------
+     79          /**
+     80           * @brief  This InitializeInstance function is called after an instance has been allocated in order to initialize the load instance.
+     81           * @param A pointer to the HBL_LOAD_TYPE structure with load and load instance information.
+     82           * @return PASS if the load is successfully initialize; otherwise FAIL.
+     83           *
+     84           */
+
+   \                                 In section .text, align 2, keep-with-next
+     85          PASS_FAIL_TYPE TriacMci__InitializeInstance(HBL_LOAD_TYPE * load)
+     86          {
+   \                     TriacMci__InitializeInstance: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+     87              PASS_FAIL_TYPE retval;
+     88              retval = FAIL;
+   \   00000002   0x2000             MOVS     R0,#+0
+     89          
+     90              if (load->Load_Data_Index < TriacMci_Allocation)
+   \   00000004   0x7C49             LDRB     R1,[R1, #+17]
+   \   00000006   0x....             LDR      R2,??DataTable8
+   \   00000008   0x7892             LDRB     R2,[R2, #+2]
+   \   0000000A   0x4291             CMP      R1,R2
+   \   0000000C   0xD200             BCS      ??TriacMci__InitializeInstance_0
+     91              {
+     92                  retval = PASS;
+   \   0000000E   0x2001             MOVS     R0,#+1
+     93              }
+     94          
+     95              return (retval);
+   \                     ??TriacMci__InitializeInstance_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+     96          }
+     97          
+     98          //---------------------------------------------------------------------------------------------------------------------
+     99          /**
+    100           * @brief This function is called each time a new request is made to control the output hardware.
+    101           *        It Update the requested state of the output controlled by this load instance.
+    102           * @param load  A pointer to the HBL_LOAD_TYPE structure with load and load instance information.
+    103           * @param data  A pointer to memory that contains the new requested load state.
+    104           * @return PASS if the requested load state is successfully saved; otherwise FAIL.
+    105           */
+
+   \                                 In section .text, align 2, keep-with-next
+    106          PASS_FAIL_TYPE TriacMci__Request(HBL_LOAD_TYPE * load,void * data)
+    107          {
+   \                     TriacMci__Request: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    108          	PASS_FAIL_TYPE retval;
+    109          
+    110          	if (load->Load_Data_Index < TriacMci_Allocation)
+   \   00000002   0x7C40             LDRB     R0,[R0, #+17]
+   \   00000004   0x....             LDR      R2,??DataTable8
+   \   00000006   0x0003             MOVS     R3,R0
+   \   00000008   0x7894             LDRB     R4,[R2, #+2]
+   \   0000000A   0x42A3             CMP      R3,R4
+   \   0000000C   0xD205             BCS      ??TriacMci__Request_0
+    111              {
+    112                  TriacMci_Data[load->Load_Data_Index].Requested = *(uint8 *)data;
+   \   0000000E   0x7809             LDRB     R1,[R1, #+0]
+   \   00000010   0x0040             LSLS     R0,R0,#+1
+   \   00000012   0x1810             ADDS     R0,R2,R0
+   \   00000014   0x7041             STRB     R1,[R0, #+1]
+    113                  retval = PASS;
+   \   00000016   0x2001             MOVS     R0,#+1
+   \   00000018   0xE000             B        ??TriacMci__Request_1
+    114              }
+    115              else
+    116              {
+    117              	retval = FAIL;
+   \                     ??TriacMci__Request_0: (+1)
+   \   0000001A   0x2000             MOVS     R0,#+0
+    118              }
+    119          
+    120          	return retval;
+   \                     ??TriacMci__Request_1: (+1)
+   \   0000001C   0xBC10             POP      {R4}
+   \   0000001E   0x4770             BX       LR               ;; return
+    121          }
+    122          
+    123          //---------------------------------------------------------------------------------------------------------------------
+    124          /**
+    125           * @brief This function is called  when it is time to update the output hardware.
+    126           *        This typically occurs every 100ms near the end of the application thread execution.
+    127           * @param load  A pointer to the HBL_LOAD_TYPE structure with load and load instance information.
+    128           * @return PASS if the controlled outputs are successfully updated; otherwise FAIL.
+    129           */
+
+   \                                 In section .text, align 2, keep-with-next
+    130          PASS_FAIL_TYPE TriacMci__Process(HBL_LOAD_TYPE * load , HBL_PILOT_HANDLER_HOOK_TYPE * pilot)
+    131          {
+   \                     TriacMci__Process: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    132              uint8 virtual_pin;
+    133          
+    134              if (load->Load_Data_Index < (uint8)HBL_LOAD_NUM_TRIACMCI)
+   \   00000004   0x7C60             LDRB     R0,[R4, #+17]
+   \   00000006   0x0001             MOVS     R1,R0
+   \   00000008   0xD134             BNE      ??TriacMci__Process_0
+    135              {
+    136                  TriacMci_Data[load->Load_Data_Index].Processed = TriacMci_Data[load->Load_Data_Index].Requested;
+   \   0000000A   0x....             LDR      R5,??DataTable8
+   \   0000000C   0x0040             LSLS     R0,R0,#+1
+   \   0000000E   0x1828             ADDS     R0,R5,R0
+   \   00000010   0x7841             LDRB     R1,[R0, #+1]
+   \   00000012   0x7001             STRB     R1,[R0, #+0]
+    137                  if(HBL_PILOT_TRIAC == load->Pilot_Type)
+   \   00000014   0x7D20             LDRB     R0,[R4, #+20]
+   \   00000016   0x2804             CMP      R0,#+4
+   \   00000018   0xD10F             BNE      ??TriacMci__Process_1
+    138                  {
+    139                      if(TriacMci_Data[load->Load_Data_Index].Processed != (uint8)0)
+   \   0000001A   0x7C60             LDRB     R0,[R4, #+17]
+   \   0000001C   0x0040             LSLS     R0,R0,#+1
+   \   0000001E   0x5C28             LDRB     R0,[R5, R0]
+   \   00000020   0x2800             CMP      R0,#+0
+   \   00000022   0xD005             BEQ      ??TriacMci__Process_2
+    140                      {
+    141                      	(void)MCI_RUN(MOTOR0);
+   \   00000024   0x2200             MOVS     R2,#+0
+   \   00000026   0x2164             MOVS     R1,#+100
+   \   00000028   0x4610             MOV      R0,R2
+   \   0000002A   0x.... 0x....      BL       Mci__Run
+   \   0000002E   0xE021             B        ??TriacMci__Process_0
+    142                      }
+    143                      else
+    144                      {
+    145                      	(void)MCI_STOP(MOTOR0);
+   \                     ??TriacMci__Process_2: (+1)
+   \   00000030   0x2164             MOVS     R1,#+100
+   \   00000032   0x2000             MOVS     R0,#+0
+   \   00000034   0x.... 0x....      BL       Mci__Stop
+   \   00000038   0xE01C             B        ??TriacMci__Process_0
+    146                      }
+    147                  }
+    148                  else
+    149                  {
+    150                      if (((uint8)GetVirtualPinNumber(load, &virtual_pin) == (uint8)TRUE) &&
+    151                              (VIRTUALPIN_TABLE[virtual_pin].port != PORT_NULL))
+   \                     ??TriacMci__Process_1: (+1)
+   \   0000003A   0x4669             MOV      R1,SP
+   \   0000003C   0x0020             MOVS     R0,R4
+   \   0000003E   0x.... 0x....      BL       GetVirtualPinNumber
+   \   00000042   0x2801             CMP      R0,#+1
+   \   00000044   0xD116             BNE      ??TriacMci__Process_0
+   \   00000046   0x....             LDR      R0,??DataTable8_1
+   \   00000048   0x4669             MOV      R1,SP
+   \   0000004A   0x7809             LDRB     R1,[R1, #+0]
+   \   0000004C   0x00C9             LSLS     R1,R1,#+3
+   \   0000004E   0x1840             ADDS     R0,R0,R1
+   \   00000050   0x7801             LDRB     R1,[R0, #+0]
+   \   00000052   0x29FF             CMP      R1,#+255
+   \   00000054   0xD00E             BEQ      ??TriacMci__Process_0
+    152                      {
+    153                          uint8 pin_val = TriacMci_Data[load->Load_Data_Index].Requested;
+    154                          // Invert pin value according to Hi Low Activation Bitmap
+    155                          pin_val ^= ~load->Hi_Low_Activation_Bitmap;
+    156                          pin_val &= (uint8)0x01;
+    157          
+    158                          Gpio__PinWrite(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin, (BOOL_TYPE)pin_val);
+   \   00000056   0x7C61             LDRB     R1,[R4, #+17]
+   \   00000058   0x0049             LSLS     R1,R1,#+1
+   \   0000005A   0x1869             ADDS     R1,R5,R1
+   \   0000005C   0x7849             LDRB     R1,[R1, #+1]
+   \   0000005E   0x7E22             LDRB     R2,[R4, #+24]
+   \   00000060   0x0912             LSRS     R2,R2,#+4
+   \   00000062   0x43D3             MVNS     R3,R2
+   \   00000064   0x404B             EORS     R3,R3,R1
+   \   00000066   0x001A             MOVS     R2,R3
+   \   00000068   0x07D2             LSLS     R2,R2,#+31
+   \   0000006A   0x0FD2             LSRS     R2,R2,#+31
+   \   0000006C   0x7841             LDRB     R1,[R0, #+1]
+   \   0000006E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000070   0x.... 0x....      BL       Gpio__PinWrite
+    159                      }
+    160                  }
+    161              }
+    162              return (PASS);
+   \                     ??TriacMci__Process_0: (+1)
+   \   00000074   0x2001             MOVS     R0,#+1
+   \   00000076   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    163          }
+    164          
+    165          
+    166          //---------------------------------------------------------------------------------------------------------------------
+    167          /**
+    168           * @brief This function get the requested state of the output controlled by this load instance.
+    169           * @param load A pointer to the HBL_LOAD_TYPE structure with load and load instance information.
+    170           * @return This function return the requested state of the output.
+    171           */
+
+   \                                 In section .text, align 2, keep-with-next
+    172          void * TriacMci__GetRequested(HBL_LOAD_TYPE * load)
+    173          {
+    174              void *retval;
+    175          
+    176              if (load->Load_Data_Index < TriacMci_Allocation)
+   \                     TriacMci__GetRequested: (+1)
+   \   00000000   0x7C40             LDRB     R0,[R0, #+17]
+   \   00000002   0x....             LDR      R1,??DataTable8
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x788B             LDRB     R3,[R1, #+2]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD203             BCS      ??TriacMci__GetRequested_0
+    177              {
+    178              	retval = (void *) &TriacMci_Data[load->Load_Data_Index].Requested;
+   \   0000000C   0x0040             LSLS     R0,R0,#+1
+   \   0000000E   0x1808             ADDS     R0,R1,R0
+   \   00000010   0x1C40             ADDS     R0,R0,#+1
+   \   00000012   0x4770             BX       LR
+    179              }
+    180              else
+    181              {
+    182              	retval = NULL;
+   \                     ??TriacMci__GetRequested_0: (+1)
+   \   00000014   0x2000             MOVS     R0,#+0
+    183              }
+    184          
+    185          	return retval;
+   \   00000016   0x4770             BX       LR               ;; return
+    186          }
+    187          
+    188          
+    189          //---------------------------------------------------------------------------------------------------------------------
+    190          /**
+    191           * @brief This function get the state of the output controlled by this load instance.
+    192           * @param load A pointer to the HBL_LOAD_TYPE structure with load and load instance information.
+    193           * @return This function return the the state of the output.
+    194           */
+
+   \                                 In section .text, align 2, keep-with-next
+    195          void * TriacMci__GetProcessed(HBL_LOAD_TYPE * load , HBL_PILOT_HANDLER_HOOK_TYPE * pilot)
+    196          {
+    197              void *retval;
+    198          
+    199          	if (load->Load_Data_Index < TriacMci_Allocation)
+   \                     TriacMci__GetProcessed: (+1)
+   \   00000000   0x7C40             LDRB     R0,[R0, #+17]
+   \   00000002   0x....             LDR      R1,??DataTable8
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x788B             LDRB     R3,[R1, #+2]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD202             BCS      ??TriacMci__GetProcessed_0
+    200              {
+    201          		retval = ((void *) &TriacMci_Data[load->Load_Data_Index].Processed);
+   \   0000000C   0x0040             LSLS     R0,R0,#+1
+   \   0000000E   0x1808             ADDS     R0,R1,R0
+   \   00000010   0x4770             BX       LR
+    202              }
+    203              else
+    204              {
+    205              	retval = (NULL);
+   \                     ??TriacMci__GetProcessed_0: (+1)
+   \   00000012   0x2000             MOVS     R0,#+0
+    206              }
+    207          
+    208          	return retval;
+   \   00000014   0x4770             BX       LR               ;; return
+    209          }
+    210          
+    211          
+    212          //---------------------------------------------------------------------------------------------------------------------
+    213          /**
+    214           * @brief This function handle the behaviors that must be implemented periodically by this load instance.
+    215           *        This function is called every 5ms.
+    216           * @param load A pointer to the HBL_LOAD_TYPE structure with load and load instance information.
+    217           * @return PASS if this function handle the behaviors successfully; otherwise FAIL.
+    218           */
+
+   \                                 In section .text, align 2, keep-with-next
+    219          PASS_FAIL_TYPE TriacMci__AsyncProcess(HBL_LOAD_TYPE * load , HBL_PILOT_HANDLER_HOOK_TYPE * pilot)
+    220          {
+   \                     TriacMci__AsyncProcess: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    221              PASS_FAIL_TYPE retval;
+    222          
+    223              retval = FAIL;
+   \   00000002   0x2000             MOVS     R0,#+0
+    224              if (load->Load_Data_Index < TriacMci_Allocation)
+   \   00000004   0x7C49             LDRB     R1,[R1, #+17]
+   \   00000006   0x....             LDR      R2,??DataTable8
+   \   00000008   0x7892             LDRB     R2,[R2, #+2]
+   \   0000000A   0x4291             CMP      R1,R2
+   \   0000000C   0xD200             BCS      ??TriacMci__AsyncProcess_0
+    225              {
+    226                  retval = PASS;
+   \   0000000E   0x2001             MOVS     R0,#+1
+    227              }
+    228          
+    229              return retval;
+   \                     ??TriacMci__AsyncProcess_0: (+1)
+   \   00000010   0x4770             BX       LR               ;; return
+    230          }
+    231          
+    232          
+    233          //---------------------------------------------------------------------------------------------------------------------
+    234          /**
+    235           * @brief This function get the status of this load instance.
+    236           * @param load A pointer to the HBL_LOAD_TYPE structure with load and load instance information.
+    237           * @return This function return the status of the load.
+    238           */
+
+   \                                 In section .text, align 2, keep-with-next
+    239          void * TriacMci__GetStatus(HBL_LOAD_TYPE * load , HBL_PILOT_HANDLER_HOOK_TYPE * pilot)
+    240          {
+    241              void *retval;
+    242          
+    243              if (load->Load_Data_Index < TriacMci_Allocation)
+   \                     TriacMci__GetStatus: (+1)
+   \   00000000   0x7C40             LDRB     R0,[R0, #+17]
+   \   00000002   0x....             LDR      R1,??DataTable8
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x788B             LDRB     R3,[R1, #+2]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD202             BCS      ??TriacMci__GetStatus_0
+    244              {
+    245              	retval = (void *) &TriacMci_Data[load->Load_Data_Index].Processed;
+   \   0000000C   0x0040             LSLS     R0,R0,#+1
+   \   0000000E   0x1808             ADDS     R0,R1,R0
+   \   00000010   0x4770             BX       LR
+    246              }
+    247              else
+    248              {
+    249              	retval = NULL;
+   \                     ??TriacMci__GetStatus_0: (+1)
+   \   00000012   0x2000             MOVS     R0,#+0
+    250              }
+    251          
+    252              return retval;
+   \   00000014   0x4770             BX       LR               ;; return
+    253          }
+    254          
+    255          
+    256          //=====================================================================================================================
+    257          //-------------------------------------- Private Functions ------------------------------------------------------------
+    258          //=====================================================================================================================
+    259          
+
+   \                                 In section .text, align 2, keep-with-next
+    260          static BOOL_TYPE GetVirtualPinNumber(HBL_LOAD_TYPE *load, uint8 *virtual_pin)
+    261          {
+   \                     GetVirtualPinNumber: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x000D             MOVS     R5,R1
+    262              BOOL_TYPE ret_val = TRUE;
+   \   00000004   0x2401             MOVS     R4,#+1
+    263              *virtual_pin = load->Pin_Ptr[0];
+   \   00000006   0x.... 0x....      BL       __aeabi_uread4
+   \   0000000A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000000C   0x7028             STRB     R0,[R5, #+0]
+    264              if ( *virtual_pin >= VirtualPin__GetNumOf() )
+   \   0000000E   0x.... 0x....      BL       VirtualPin__GetNumOf
+   \   00000012   0x782B             LDRB     R3,[R5, #+0]
+   \   00000014   0x0019             MOVS     R1,R3
+   \   00000016   0x4281             CMP      R1,R0
+   \   00000018   0xD305             BCC      ??GetVirtualPinNumber_0
+    265              {
+    266                  LOG_ADD_EXCEPTION(INVALID_VIRTUAL_PIN, *virtual_pin);
+   \   0000001A   0x4622             MOV      R2,R4
+   \   0000001C   0x2100             MOVS     R1,#+0
+   \   0000001E   0x2060             MOVS     R0,#+96
+   \   00000020   0x.... 0x....      BL       Log__AddMessage
+    267                  ret_val = FALSE;
+   \   00000024   0x2400             MOVS     R4,#+0
+    268              }
+    269              return (ret_val);
+   \                     ??GetVirtualPinNumber_0: (+1)
+   \   00000026   0x0020             MOVS     R0,R4
+   \   00000028   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    270          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \   00000000   0x........         DC32     TriacMci_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_1:
+   \   00000000   0x........         DC32     VIRTUALPIN_TABLE
+    271          
+    272          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   GetVirtualPinNumber
+        16   -> Log__AddMessage
+        16   -> VirtualPin__GetNumOf
+        16 __aeabi_uread4
+       0   TriacMci__Allocate
+       0   TriacMci__AsyncProcess
+       0   TriacMci__GetProcessed
+       0   TriacMci__GetRequested
+       0   TriacMci__GetStatus
+       8   TriacMci__Initialize
+         8   -> __aeabi_memset
+       0   TriacMci__InitializeInstance
+      16   TriacMci__Process
+        16   -> GetVirtualPinNumber
+        16   -> Gpio__PinWrite
+        16   -> Mci__Run
+        16   -> Mci__Stop
+       4   TriacMci__Request
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable8
+       4  ??DataTable8_1
+      42  GetVirtualPinNumber
+       3  TriacMci_Data
+          TriacMci_Allocation
+      18  TriacMci__Allocate
+      18  TriacMci__AsyncProcess
+      22  TriacMci__GetProcessed
+      24  TriacMci__GetRequested
+      22  TriacMci__GetStatus
+      18  TriacMci__Initialize
+      18  TriacMci__InitializeInstance
+     120  TriacMci__Process
+      32  TriacMci__Request
+
+ 
+   3 bytes in section .bss
+ 342 bytes in section .text
+ 
+ 342 bytes of CODE memory
+   3 bytes of DATA memory
+
+Errors: none
+Warnings: none

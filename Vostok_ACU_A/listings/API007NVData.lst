@@ -1,0 +1,1373 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:16:57
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Application/all/API007Data/API007NVData.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\API007NVData.lst -o
+#        obj\API007NVData.obj
+#        source/XCategory/Application/all/API007Data/API007NVData.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\API007NVData.lst
+#    Object file  =  obj\API007NVData.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Application\all\API007Data\API007NVData.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      API007NVData module implementation
+      5           *
+      6           *  @details	This module is responsible for managing the NVData(Non-Volatile) by the all types of expansion and HMI boards
+      7           *
+      8           *
+      9           *
+     10           *
+     11           *		Definitions 			Details
+     12           *
+     13           *		NVData				- 	Non Volatile Data, Data which can be retrieved even after power failure event
+     14           *								Project team shall be very cautions defining which data supposed to be NVData and not
+     15           *
+     16           *		Server 				- 	Management of the Data storing and restoring in the Non Volatile Data Memory
+     17           *      						Performing the NVData Write/Read requests from the client
+     18           *      						Here ACU shall be the Server (As in Nucleus only ACU knows how to store and retrieve the NVData)
+     19           *
+     20           *      Client 				- 	Management of requesting the NVData from the Server or Sending the NVData to the server to store
+     21           *
+     22           *      Client ID			- 	Node ID itself is used as Client ID at the server side
+     23           *
+     24           *      _appliance_segment	-	This is the tag/segment name used to segregate the data in appliance segment
+     25           *      						A data which holds the appliance information qualifies this tag
+     26           *      						For example - Max Cool, Max ICE remaining time, Cooking Selection, Dryer option selection
+     27           *
+     28           *      						Example -
+     29           *      						#pragma location = "_appliance_segment"
+     30           *      						static uint8 User_MaxCool_Option;
+     31           *
+     32           *
+     33           *      _statistics_segment	-	This is the tag/segment name used to segregate the data in statistics segment
+     34           *      						A data which holds the statistics information qualifies this tag
+     35           *      						For example - Number of Normal Washing Cycles run, Number of Days Refrigerator running
+     36           *
+     37           *      						Example -
+     38           *      						#pragma location = "_statistics_segment"
+     39           *      						static uint16 Washing_Cycle_Count;
+     40           *
+     41           *		_header_segment		-	Only used by the module to store the overall memory crc (this segment shall not be used by the user)
+     42           *
+     43           *		Client Block Data	- 	Client NVData memory is divided into blocks
+     44           *								These each block has its own block crc
+     45           *								data is continuously monitored to see the changes
+     46           *								Only that block is sent whose block crc changes, this way we can optimize sending data to the server
+     47           *
+     48           *		Client Block Crc	- 	Crc locally used for each block to detect easily which block changed its data
+     49           *
+     50           *		CDT					- 	Client Description Table used by the server
+     51           *								Refer 'CLIENT_DESCRIPT_TYPE' for details
+     52           *
+     53           *
+     54           *
+     55           *
+     56           *
+     57           *		Client Responsibility
+     58           *		1. Client role only applies to non ACU boards only
+     59           *		2. Client software shall only use the '_appliance_segment and '_statistics_segment' tag to define the NVData
+     60           *		3. Node Id itself treated as client ID in this module
+     61           *		4. Before proceeding Read/Write operations, its responsibility of Client to claim the NVData size from Server during boot-up
+     62           *		5. If the Client fails to claim the NVData then it shall remain in the error state
+     63           *		6. Client shall read the previously stored NVdata from server and compare with 'previously stored crc' If it matches then data is restored or else data is corrupted
+     64           *		7. If the Server is non-responsive during boot-up after the API007NVDATA_CLIENT_MSG_RETRY_COUNT number of retries shall enter to the error state
+     65           *		7. Its responsible for managing NVdata of more then one blocks, it should have a track of blocks index's
+     66           *		8. Its responsible to write blocks only who's block's crc is changed
+     67           *		9. Shall use Arbitrary method of finding which block data is changed so that every block gets equal chance.
+     68           *		10.Block shall be sent to the client with minimum time delay to avoid communication overflow (API007NVDATA_CLIENT_DATA_UPDATE_RATE_MS)
+     69           *		11. During boot up it takes time to read and verify the NVData from Server Client Application shall consider this timing
+     70           *          Recommended to wait until the status becomes other then API007NVDATA_RESTORE_IN_PROGRESS
+     71           *
+     72           *
+     73           *
+     74           *
+     75           *
+     76           *		Server Responsibility
+     77           *		1. ACU is always be the Server
+     78           *		2. Server features shall be enabled even if one client is present in the network
+     79           *		3. Server shall support more then one client and distinguish them by node id as their client id (API007NVDATA_SERVER_NUM_CLIENTS_SUPPORT)
+     80           *		4. Enough memory shall be reserved for Server so that it can serve those claims from client
+     81           *		5. Server not responsible for managing the Crc of the clients
+     82           *		6. If the previously stored claim does not match with the new Claim then server shall allocate new claim if its able to allocate or else reject the request
+     83           *		7. If the claim is failed then server shall notify to the client
+     84           *		8. If any Read/Write request are made then Server shall satisfy those requests only and shall not be involved in managing the data index etc
+     85           *
+     86           *
+     87           *
+     88           *
+     89          	@startuml(Module_Diagram.png)
+     90          
+     91          		object API007NVData
+     92          		object API007BulkData
+     93          		object API007App
+     94          
+     95          		API007Data_NVData <|-- API007NVData
+     96          
+     97          		API007Data_App <|-- API007BulkData
+     98          		API007BulkData <|-- API007App
+     99          
+    100          	@enduml
+    101          
+    102          
+    103          
+    104          
+    105          
+    106          
+    107           	@startuml(API007NVData.png)
+    108          	 hide footbox
+    109               autonumber
+    110          
+    111          	participant API007NVData_Client
+    112          	participant API007Data_Client
+    113          	participant API007Data_Server
+    114          	participant API007NVData_Server
+    115          
+    116          
+    117          							==  Info Update ==
+    118          	API007NVData_Client -> API007Data_Client : API007Data__NVDataCmdClaimSizeRequest(uint16 size)
+    119          
+    120          	API007Data_Client -> API007Data_Server : CMD, OPCODE - API007_OP_REQ_CLAIM_NVDATA(0x13),\nDATA[0-1] - size
+    121          
+    122          	API007Data_Server -> API007NVData_Server : API007NVData__ProcessClaimSize(uint8 client_node_id, uint16 size)
+    123          	API007NVData_Server ->API007Data_Server : API007Data__NVDataFbkClaimSize(uint8 client_node_id, uint16 size)
+    124          	API007Data_Server --> API007Data_Client : FBK, OPCODE - API007_OP_REQ_CLAIM_NVDATA(0x13),\nDATA[0-1] - size
+    125          	API007Data_Client -> API007NVData_Client : API007NVData__ReceivedClaimSize(uint16 size)
+    126          
+    127          
+    128          							==  Read ==
+    129          	API007NVData_Client -> API007Data_Client : API007Data__NVDataCmdReadRequest(uint16 index, uint16 size)
+    130          
+    131          	API007Data_Client -> API007Data_Server : CMD, OPCODE - API007_OP_REQ_READ_NVDATA(0x14),\nDATA[0-1] - index\nDATA[2-3] - size
+    132          
+    133          	API007Data_Server -> API007NVData_Server : API007NVData__ProcessReadCmd(uint8 client_node_id, uint16 index, uint16 size)
+    134          	API007NVData_Server ->API007Data_Server : API007Data__NVDataFbkReadData(uint8 client_node_id, uint16 index, uint16 size, uint8 *read_data_ptr)
+    135          	API007Data_Server --> API007Data_Client : FBK, OPCODE - API007_OP_REQ_READ_NVDATA(0x14),\nDATA[0-1] - index\nDATA[2...] - Read Data
+    136          	API007Data_Client -> API007NVData_Client : API007NVData__ReceivedRead(uint16 index ,uint16 size, uint8 * data_ptr)
+    137          
+    138          
+    139          							==  Write ==
+    140          	API007NVData_Client -> API007Data_Client : API007Data__NVDataCmdWriteRequest(uint16 index, uint16 size, uint8 *write_data_ptr)
+    141          
+    142          	API007Data_Client -> API007Data_Server : CMD, OPCODE - API007_OP_REQ_WRITE_NVDATA(0x15),\nDATA[0-1] - index\nDATA[2...] - Write Data
+    143          
+    144          	API007Data_Server -> API007NVData_Server : API007NVData__ProcessWriteCmd(uint8 client_node_id, uint16 index ,uint16 size, uint8 * data_ptr)
+    145          	API007NVData_Server ->API007Data_Server : API007Data__NVDataFbkWriteData(uint8 client_node_id, uint16 index)
+    146          	API007Data_Server --> API007Data_Client : FBK, OPCODE - API007_OP_REQ_WRITE_NVDATA(0x15),\nDATA[0-1] - index(currently pointing after the write cmd)
+    147          	API007Data_Client -> API007NVData_Client : API007NVData__ReceivedWrite(uint16 index)
+    148          
+    149          
+    150          
+    151          	@enduml
+    152           *
+    153           *  @copyright  Copyright 2022. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+    154           */
+    155          //---------------------------------------------------------------------------------------------------------------------
+    156          //---------------------------------------------------------------------------------------------------------------------
+    157          
+    158          //-------------------------------------- Include Files ----------------------------------------------------------------
+    159          #include "SystemConfig.h"
+    160          
+    161          #include "API007NVData.h"
+    162          
+    163          #if ((SYSTEM_ACU_HANDLING == ENABLED) && ((SYSTEM_HMI_HANDLING == ENABLED) || (SYSTEM_HMI_EXPANSION_HANDLING == ENABLED)))  //P1 board or ACU+EXP HMI
+    164              #include "NVData.h"
+    165          #endif
+    166          #if (API007DATA_NVDATA_FEATURE == ENABLED)
+    167          #include "API007Data.h"
+    168          
+    169          #include "Micro.h"
+    170          #include <string.h>
+    171          
+    172          #include "NVData.h"
+    173          #include "Crc16.h"
+    174          #include "Log.h"
+    175          
+    176          
+    177          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+    178          //-------------------------------------- IDs FOR LOG messages----------------------------------------------------------
+    179          //! A list of log message IDs that are generated by this module.
+    180          typedef enum MODULE_SETTINGFILE_LOG_MESSAGE_ID_STRUCT
+    181          {
+    182              ERROR_INSUFFECIENT_API007NVDATA_CLIENT_NUM_BLOCKS,                      // make sure 'API007NVDATA_CLIENT_NUM_BLOCKS' has enough space
+    183              ERROR_UNABLE_TO_ALLOCATE_CLAIMED_SIZE_IN_SERVER,                   		// make sure server has enough memory space to accommodate all clients claim for memory
+    184              ERROR_SERVER_NOT_SENDING_FEEDBACK,				                   		// make sure server is configured
+    185          
+    186          } MODULE_API007NVDATA_LOG_MESSAGE_ID_TYPE;
+    187          
+    188          //! The name of this module for use by the Log module.
+    189          #define MODULE_NAME     MODULE_API007NVDATA
+    190          
+    191          #define API007NVDATA_HANDLER_CALL_RATE_MS      5
+    192          
+    193          
+    194          #define INITIAL_CRC16_VALUE               		0xFFFF
+    195          #define EMPTY_NODE_ID							0xFF
+    196          
+    197          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    198          
+    199          #if(API007NVDATA_SERVER_FEATURE == ENABLED)
+    200          	typedef struct
+    201          	{
+    202          		uint16 Start_Index;
+    203          		uint16 End_Index;		//Inclusive address
+    204          		uint8 Node_ID;
+    205          	}CLIENT_DESCRIPT_TYPE;
+    206          
+    207          	/**
+    208               * Application specific data
+    209               * Define segment variables
+    210               */
+    211              #define API007NVDATA_SERVER_DATA_TRUE_SIZE    				(API007NVDATA_SERVER_DATA_SIZE + 1) //+1 as inclusive address always leaves index 0 free
+    212              #define API007NVDATA_SERVER_DATA_TRUE_CRC					(API007NVDATA_SERVER_DATA_SIZE + 2)
+    213          
+    214          	#pragma location = "_appliance_segment"
+    215          	static CLIENT_DESCRIPT_TYPE API007NVData_CDTable[API007NVDATA_SERVER_NUM_CLIENTS_SUPPORT];
+    216          
+    217              #pragma location = "_appliance_segment"
+    218              static uint8 API007NVData_ServerData[API007NVDATA_SERVER_DATA_TRUE_CRC];
+    219          #endif //(API007NVDATA_SERVER_FEATURE == ENABLED)
+    220          
+    221          
+    222          
+    223          #if(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    224          	//! Data is updated every API007NVDATA_CLIENT_DATA_UPDATE_RATE_MS milli seconds at the server side by default
+    225          	//! Keeping too small this time would affect the communication bus traffic
+    226          	#ifndef API007NVDATA_CLIENT_DATA_UPDATE_RATE_MS
+    227          		#define API007NVDATA_CLIENT_DATA_UPDATE_RATE_MS           	(500/API007NVDATA_HANDLER_CALL_RATE_MS)
+    228              #elif(API007NVDATA_CLIENT_DATA_UPDATE_RATE_MS < 50)
+    229                  #error :"Minimum value for this macro shall be more then 50 API007NVDATA_CLIENT_DATA_UPDATE_RATE_MS"
+    230          	#endif
+    231          
+    232              //! Defines number of loops that Client waits for data. After timeout elapsed Client restores default values.
+    233              #define API007NVDATA_CLIENT_MSG_REPLY_TIMEOUT_MS 				(800/API007NVDATA_HANDLER_CALL_RATE_MS)        //During analysis it takes less then 800ms for the reply for 65 bytes of data during boot up
+    234          
+    235              //!
+    236              #define API007NVDATA_CLIENT_MSG_RETRY_COUNT       				5
+    237          
+    238              //Here _header_segment is used to store the calculated crc of the _appliance_segment and _statistics_segment data only
+    239              #ifdef __IAR_SYSTEMS_ICC__
+    240                  extern uint32 NVDATA_SECTION_HEADER$$Base;
+    241                  extern uint32 NVDATA_SECTION_STATISTICS$$Limit;
+    242                  static uint8 * const  API007NVDATA_DATA_SECTION_START =			(uint8 * )(&NVDATA_SECTION_HEADER$$Base);
+    243                  static const uint32   API007NVDATA_DATA_SECTION_LIMIT =			(uint32)(&NVDATA_SECTION_STATISTICS$$Limit);
+    244          
+    245                  #define API007NVDATA_DATA_SECTION_SIZE							((uint16)(API007NVDATA_DATA_SECTION_LIMIT - (uint32)API007NVDATA_DATA_SECTION_START))
+    246                  #define COMPILE_TIME_CLIENT_NUM_BLOCKS                          ((API007NVDATA_DATA_SECTION_SIZE/DATA_TRANSFER_SEGMENT_SIZE) + 1)   //+1 to cover if any data lefts after the segment
+    247          
+    248          
+    249                  //Crc Section excluding the _header_segment
+    250                  extern uint32 NVDATA_SECTION_APPLIANCE$$Base;
+    251                  extern uint32 NVDATA_SECTION_STATISTICS$$Limit;
+    252                  static uint8 * const  API007NVDATA_CRC_SECTION_START =			(uint8 * )(&NVDATA_SECTION_APPLIANCE$$Base);
+    253                  static const uint32   API007NVDATA_CRC_SECTION_LIMIT =			(uint32)(&NVDATA_SECTION_STATISTICS$$Limit);
+    254          
+    255                  #define API007NVDATA_CRC_SECTION_SIZE							((uint16)(API007NVDATA_CRC_SECTION_LIMIT - (uint32)API007NVDATA_CRC_SECTION_START))
+    256              #else
+    257                  #ifdef UNITY
+    258                      extern uint8 * const  API007NVDATA_DATA_SECTION_START;
+    259                      extern const uint32   API007NVDATA_DATA_SECTION_LIMIT;
+    260          
+    261                      #define API007NVDATA_DATA_SECTION_SIZE                          ((uint16)(API007NVDATA_DATA_SECTION_LIMIT - (uint32)API007NVDATA_DATA_SECTION_START))
+    262                      #define COMPILE_TIME_CLIENT_NUM_BLOCKS                          ((API007NVDATA_DATA_SECTION_SIZE/DATA_TRANSFER_SEGMENT_SIZE) + 1)   //+1 to cover if any data lefts after the segment
+    263          
+    264                      //Crc Section excluding the _header_segment
+    265                      extern uint8 * const  API007NVDATA_CRC_SECTION_START;
+    266                      extern const uint32   API007NVDATA_CRC_SECTION_LIMIT;
+    267          
+    268                      #define API007NVDATA_CRC_SECTION_SIZE                           ((uint16)(API007NVDATA_CRC_SECTION_LIMIT - (uint32)API007NVDATA_CRC_SECTION_START))
+    269                  #endif
+    270              #endif
+    271          
+    272              //! Possible states of Client state machine.
+    273              typedef enum
+    274              {
+    275              	REQUEST_NVDATA_INFO,
+    276          		CHECK_RECEIVED_NVDATA_INFO,
+    277          
+    278                  REQUEST_READ_DATA,
+    279                  WAIT_FOR_DATA_RECEPTION,
+    280          
+    281                  REQUEST_WRITE_DATA,
+    282                  WAITING_FOR_SERVER_COMPLETED_WRITING,
+    283          
+    284          
+    285          		ERROR_IRRICOVERABLE_STATE,
+    286                  NUM_OF_CLIENT_STATE_MACHINE_STATES
+    287              }API007NVDATA_CLIENT_STATE;
+    288          
+    289          
+    290              //! Possible feedback status received from Server
+    291              typedef enum
+    292              {
+    293              	WAITING_FOR_FBK,
+    294              	RECEIVED_NODE_INFO_FBK_PASS,
+    295          		RECEIVED_NODE_INFO_FBK_FAILED,
+    296              	RECEIVED_READ_NVDATA_FBK_PASS,
+    297          		RECEIVED_READ_NVDATA_FBK_FAILED,
+    298              	RECEIVED_WRITE_NVDATA_FBK_PASS,
+    299              	RECEIVED_WRITE_NVDATA_FBK_FAILED,
+    300              	RECEIVED_ERROR,
+    301              }API007NVDATA_SERVER_FBK;
+    302          
+    303              //! State machine control variable
+    304              static API007NVDATA_CLIENT_STATE API007NVData_Client_State;
+    305          
+    306              static API007NVDATA_SERVER_FBK API007NVData_Client_Server_Fbk;
+    307          
+    308              static API007NVDATA_DATA_RESTORE_STATUS_TYPE API007NVData_Client_Data_Restore_Status;
+    309          
+    310              static uint8 API007NVData_Client_Msg_Retry_Count;
+    311          
+    312              //! Counter used to count loops that Client wait for response from Server.
+    313              static uint8 API007NVData_Client_Timeout_Count;
+    314          
+    315              //All Info/Read/Write related variable information
+    316              static uint16 API007NVData_Client_Data_Index;
+    317          
+    318              //! Crc calculated on every segment to detect the local data changes
+    319              static uint16 API007NVData_Client_Seg_Crc[API007NVDATA_CLIENT_NUM_BLOCKS];
+    320          
+    321              #ifdef __IAR_SYSTEMS_ICC__
+    322                  #pragma location = "_header_segment"
+    323                  static volatile uint16 API007NVData_Client_Stored_Crc;
+    324              #else
+    325                  #ifdef UNITY
+    326                      extern NVDATA_SEGMENT_DATA NVDataClient_Segment_Data;
+    327          
+    328                      #define API007NVData_Client_Stored_Crc  NVDataClient_Segment_Data.Header_Data[0]
+    329                  #endif
+    330              #endif
+    331          
+    332          #endif //(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    333          
+    334          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    335          #if(API007NVDATA_SERVER_FEATURE == ENABLED)
+    336              static CLIENT_DESCRIPT_TYPE *NVDataGetCDTByClientID(uint8 client_node_id);
+    337          #endif
+    338          
+    339          //=====================================================================================================================
+    340          //-------------------------------------- Public Functions -------------------------------------------------------------
+    341          //=====================================================================================================================
+    342          
+    343          //---------------------------------------------------------------------------------------------------------------------
+    344          /**
+    345           *  @brief      It Initializes the module API007NVData and its variables
+    346           *
+    347           *  @details	Function is called from the API007Data module. Should not be called from the Application
+    348           *
+    349           */
+    350          void API007NVData__Initialize(void)
+    351          {
+    352              #if(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    353          		if (API007NVDATA_CLIENT_NUM_BLOCKS >= COMPILE_TIME_CLIENT_NUM_BLOCKS)
+    354          		{
+    355          	        API007NVData_Client_State 			= REQUEST_WRITE_DATA;
+    356          	        API007NVData_Client_Server_Fbk		= WAITING_FOR_FBK;
+    357          
+    358          	        API007NVData_Client_Msg_Retry_Count = 0;
+    359          	        API007NVData_Client_Timeout_Count 	= 0;
+    360          
+    361          	        API007NVData_Client_Data_Index		= 0;
+    362          
+    363          	        if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+    364          	        {
+    365          		        for(uint8 index = 0; index < API007NVDATA_CLIENT_NUM_BLOCKS; index++)
+    366          		        {
+    367          		            API007NVData_Client_Seg_Crc[index] = INITIAL_CRC16_VALUE;
+    368          		        }
+    369          
+    370          	            API007NVData_Client_Data_Restore_Status = API007NVDATA_RESTORE_IN_PROGRESS;
+    371          
+    372          	            //case REQUEST_DATA: This starts with requesting the data
+    373          	            API007NVData_Client_State = REQUEST_NVDATA_INFO;
+    374          	        }
+    375          		}
+    376          		else
+    377          		{
+    378          			API007NVData_Client_State = ERROR_IRRICOVERABLE_STATE;
+    379          			LOG_ADD_ERROR(ERROR_INSUFFECIENT_API007NVDATA_CLIENT_NUM_BLOCKS, COMPILE_TIME_CLIENT_NUM_BLOCKS);	//data explains how many of them are required
+    380          		}
+    381              #endif //(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    382          
+    383          	#if(API007NVDATA_SERVER_FEATURE == ENABLED)
+    384                  if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+    385                  {
+    386                  	if(NVData__GetLastRestoreStatus()->Bit.Appliance_Data_Recovered != NVDATA_RESTORE_OKAY)
+    387                  	{
+    388                  		//Initialize CDT if the NVData is corrupted
+    389                  		for (uint8 index = 0; index < API007NVDATA_SERVER_NUM_CLIENTS_SUPPORT; index++)
+    390                  		{
+    391                  			API007NVData_CDTable[index].Node_ID 	= EMPTY_NODE_ID;
+    392                  			API007NVData_CDTable[index].Start_Index = 0;
+    393                  		}
+    394                  	}
+    395                  }
+    396          	#endif
+    397          }
+    398          
+    399          //----------------------------------------------------------------------------------------------------------
+    400          /**
+    401           * 	@brief 		Writing and Reading handlers
+    402           *
+    403           *  @details	Function is called from the API007Data module. Should not be called from the Application
+    404           *
+    405           * 				Shall be called at 5ms
+    406           * 				If the call rate is changed then should update the API007NVDATA_HANDLER_CALL_RATE_MS macro
+    407           *
+    408           */
+    409          void API007NVData__Handler(void)
+    410          {
+    411              #if(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    412          		uint16 crc_seg;
+    413          		uint16 crc_index = 0;
+    414          		uint16 block_size = 0;
+    415          
+    416          		API007NVData_Client_Timeout_Count++;
+    417          
+    418                  switch(API007NVData_Client_State)
+    419                  {
+    420          			case REQUEST_NVDATA_INFO:
+    421          				//Wait for the Server to participate in communication
+    422          				if ((Reveal__GetNodestatus() & (1 << API007NVDATA_SERVER_NODE_ID) ) != 0)
+    423                          {
+    424          					API007NVData_Client_Data_Restore_Status = API007NVDATA_RESTORE_IN_PROGRESS;
+    425                              API007NVData_Client_Timeout_Count 		= 0;
+    426                              API007NVData_Client_Server_Fbk			= WAITING_FOR_FBK;
+    427          					API007NVData_Client_State 				= CHECK_RECEIVED_NVDATA_INFO;
+    428          
+    429                              API007Data__NVDataCmdClaimSizeRequest(API007NVDATA_DATA_SECTION_SIZE);
+    430                          }
+    431          				break;
+    432          
+    433          			case CHECK_RECEIVED_NVDATA_INFO:
+    434          				if (API007NVData_Client_Timeout_Count < API007NVDATA_CLIENT_MSG_REPLY_TIMEOUT_MS)
+    435          				{
+    436          					if (API007NVData_Client_Server_Fbk == RECEIVED_NODE_INFO_FBK_PASS)
+    437          					{
+    438          						API007NVData_Client_State = REQUEST_READ_DATA;
+    439          					}
+    440          					else if (API007NVData_Client_Server_Fbk == RECEIVED_NODE_INFO_FBK_FAILED)
+    441          					{
+    442          						//Their is no use of continuing as we were not able to claim the required size
+    443          						API007NVData_Client_Data_Restore_Status = API007NVDATA_RESTORE_ERROR;
+    444          						API007NVData_Client_State = ERROR_IRRICOVERABLE_STATE;
+    445          						LOG_ADD_ERROR(ERROR_UNABLE_TO_ALLOCATE_CLAIMED_SIZE_IN_SERVER, API007NVDATA_DATA_SECTION_SIZE);	//data explains how much memory its trying to claim in server
+    446          					}
+    447          				}
+    448          				else
+    449          				{
+    450                              API007NVData_Client_Msg_Retry_Count++;
+    451          
+    452                              if (API007NVData_Client_Msg_Retry_Count >= API007NVDATA_CLIENT_MSG_RETRY_COUNT)
+    453                              {
+    454          						//Failed to receive feedback from server even though its active
+    455                              	//Diagnosis :Check is Server configured
+    456          						API007NVData_Client_Data_Restore_Status = API007NVDATA_RESTORE_ERROR;
+    457          						API007NVData_Client_State = ERROR_IRRICOVERABLE_STATE;
+    458          						LOG_ADD_ERROR(ERROR_SERVER_NOT_SENDING_FEEDBACK, API007NVDATA_CLIENT_MSG_RETRY_COUNT);	//data explains how many times it retried
+    459                              }
+    460                              else
+    461                              {
+    462                                  API007NVData_Client_State = REQUEST_NVDATA_INFO;
+    463                              }
+    464          				}
+    465          
+    466          				//Preparation before transit to next state
+    467          				if (API007NVData_Client_State == REQUEST_READ_DATA)
+    468          				{
+    469          					API007NVData_Client_Msg_Retry_Count = 0;
+    470          			        API007NVData_Client_Data_Index		= 0;
+    471          				}
+    472          				break;
+    473          
+    474          
+    475          
+    476          
+    477          
+    478          
+    479          
+    480                      case REQUEST_READ_DATA:
+    481                          API007NVData_Client_Server_Fbk			= WAITING_FOR_FBK;
+    482                          API007NVData_Client_Timeout_Count		= 0;
+    483          
+    484                          //Calculate how much read data we need to request
+    485                      	block_size = DATA_TRANSFER_SEGMENT_SIZE;
+    486                      	if ((API007NVData_Client_Data_Index + DATA_TRANSFER_SEGMENT_SIZE) >= API007NVDATA_DATA_SECTION_SIZE)
+    487                      	{
+    488                      		block_size = API007NVDATA_DATA_SECTION_SIZE - API007NVData_Client_Data_Index;
+    489                      	}
+    490          
+    491          				API007Data__NVDataCmdReadRequest(API007NVData_Client_Data_Index, block_size);
+    492          
+    493          				API007NVData_Client_State = WAIT_FOR_DATA_RECEPTION;
+    494                          break;
+    495          
+    496                      case WAIT_FOR_DATA_RECEPTION:
+    497                      	if (API007NVData_Client_Timeout_Count < API007NVDATA_CLIENT_MSG_REPLY_TIMEOUT_MS)
+    498          				{
+    499          					if (API007NVData_Client_Server_Fbk == RECEIVED_READ_NVDATA_FBK_PASS)
+    500          					{
+    501          	                	//All data received
+    502          	                	if (API007NVData_Client_Data_Index == API007NVDATA_DATA_SECTION_SIZE)
+    503          	                	{
+    504          	                		if (API007NVData_Client_Stored_Crc == Crc16__RangeProcess(API007NVDATA_CRC_SECTION_START, INITIAL_CRC16_VALUE, API007NVDATA_CRC_SECTION_SIZE))
+    505          	                		{
+    506          		                        API007NVData_Client_Data_Restore_Status = API007NVDATA_RESTORE_OKAY;
+    507          
+    508          								//Update CRC if all segments are received
+    509          		                        API007NVData_Client_Data_Index			= 0;
+    510          
+    511          		                        for(crc_index = 0; API007NVData_Client_Data_Index < API007NVDATA_DATA_SECTION_SIZE; crc_index++)
+    512          		                        {
+    513          		                        	block_size = DATA_TRANSFER_SEGMENT_SIZE;
+    514          
+    515          			                        //Calculate for remains
+    516          					            	if ((API007NVData_Client_Data_Index + DATA_TRANSFER_SEGMENT_SIZE) >= API007NVDATA_DATA_SECTION_SIZE)
+    517          					            	{
+    518          					            		block_size = API007NVDATA_DATA_SECTION_SIZE - API007NVData_Client_Data_Index;
+    519          					            	}
+    520          
+    521          									API007NVData_Client_Seg_Crc[crc_index] = Crc16__RangeProcess((API007NVDATA_DATA_SECTION_START + API007NVData_Client_Data_Index), INITIAL_CRC16_VALUE, block_size);
+    522          
+    523          									API007NVData_Client_Data_Index += block_size;
+    524          		                        }
+    525          	                		}
+    526          	                		else
+    527          	                		{
+    528          		                        API007NVData_Client_Data_Restore_Status = API007NVDATA_RESTORE_CORRUPTED;
+    529          	                		}
+    530          
+    531          	                        API007NVData_Client_State = REQUEST_WRITE_DATA;
+    532          	                	}
+    533          	                	else
+    534          	                	{
+    535          	                		//We still have more data to read
+    536          	                        API007NVData_Client_State = REQUEST_READ_DATA;
+    537          	                	}
+    538          					}
+    539          					else if(API007NVData_Client_Server_Fbk == RECEIVED_READ_NVDATA_FBK_FAILED)
+    540          					{
+    541          						//Restart from the beginning again
+    542                                  API007NVData_Client_State 				= REQUEST_NVDATA_INFO;
+    543          					}
+    544          				}
+    545          				else
+    546          				{
+    547          					API007NVData_Client_Msg_Retry_Count++;
+    548          
+    549          					if (API007NVData_Client_Msg_Retry_Count >= API007NVDATA_CLIENT_MSG_RETRY_COUNT)
+    550          					{
+    551          						//Failed to receive feedback from server even though its active
+    552          						API007NVData_Client_Data_Restore_Status = API007NVDATA_RESTORE_ERROR;
+    553          						API007NVData_Client_State = REQUEST_WRITE_DATA;
+    554          
+    555          						LOG_ADD_ERROR(ERROR_SERVER_NOT_SENDING_FEEDBACK, API007NVDATA_CLIENT_MSG_RETRY_COUNT);	//data explains how many times it retried
+    556          					}
+    557          					else
+    558          					{
+    559                                  API007NVData_Client_State = REQUEST_READ_DATA;
+    560          					}
+    561          				}
+    562          
+    563          				//Preparation before transit to next state
+    564          				if (API007NVData_Client_State == REQUEST_WRITE_DATA)
+    565          				{
+    566          					API007NVData_Client_Msg_Retry_Count = 0;
+    567          					API007NVData_Client_Data_Index		= 0;
+    568          					API007NVData_Client_Timeout_Count   = 0;
+    569          				}
+    570                          break;
+    571          
+    572          
+    573          
+    574          
+    575          
+    576          
+    577          
+    578          
+    579                      case REQUEST_WRITE_DATA:
+    580                      	//Monitor or update the write data only after the API007NVDATA_CLIENT_DATA_UPDATE_RATE_MS time expires to ease on the communication bus
+    581          				if (API007NVData_Client_Timeout_Count > API007NVDATA_CLIENT_DATA_UPDATE_RATE_MS)
+    582          				{
+    583          					//Data change is detected arbitrarily so that everyone get equal chance
+    584          
+    585          					crc_index = 0;
+    586          
+    587          					for (uint16 num_loops = 0; num_loops < COMPILE_TIME_CLIENT_NUM_BLOCKS; num_loops++)
+    588          					{
+    589          						if (API007NVData_Client_Data_Index >= API007NVDATA_DATA_SECTION_SIZE)
+    590          						{
+    591          							API007NVData_Client_Data_Index = 0;
+    592          
+    593          							//calculate data section crc as its stored in the _header_segment which is at the start
+    594          	                		API007NVData_Client_Stored_Crc = Crc16__RangeProcess(API007NVDATA_CRC_SECTION_START, INITIAL_CRC16_VALUE, API007NVDATA_CRC_SECTION_SIZE);
+    595          						}
+    596          
+    597          						block_size 	= DATA_TRANSFER_SEGMENT_SIZE;
+    598          						crc_index 	= API007NVData_Client_Data_Index/DATA_TRANSFER_SEGMENT_SIZE;
+    599          
+    600          						//Calculate for remains
+    601          						if ((API007NVData_Client_Data_Index + DATA_TRANSFER_SEGMENT_SIZE) > API007NVDATA_DATA_SECTION_SIZE)
+    602          						{
+    603          							block_size = API007NVDATA_DATA_SECTION_SIZE - API007NVData_Client_Data_Index;
+    604          						}
+    605          
+    606          						crc_seg = Crc16__RangeProcess((API007NVDATA_DATA_SECTION_START + API007NVData_Client_Data_Index), INITIAL_CRC16_VALUE, block_size);
+    607          
+    608          						if(crc_seg != API007NVData_Client_Seg_Crc[crc_index]) // Detect data change
+    609          						{
+    610          							API007NVData_Client_Seg_Crc[crc_index] 	= crc_seg;
+    611          		                    API007NVData_Client_Timeout_Count 		= 0;
+    612          		                    API007NVData_Client_Server_Fbk			= WAITING_FOR_FBK;
+    613          
+    614          							//Send modified data
+    615          							API007Data__NVDataCmdWriteRequest(API007NVData_Client_Data_Index, block_size, (API007NVDATA_DATA_SECTION_START + API007NVData_Client_Data_Index));
+    616          
+    617          							API007NVData_Client_State 				= WAITING_FOR_SERVER_COMPLETED_WRITING;
+    618          
+    619          							API007NVData_Client_Data_Index += block_size;
+    620          							break;
+    621          						}
+    622          
+    623          						API007NVData_Client_Data_Index += block_size;
+    624          					}
+    625          				}
+    626                          break;
+    627          
+    628          
+    629                      case WAITING_FOR_SERVER_COMPLETED_WRITING:
+    630          				if (API007NVData_Client_Timeout_Count < API007NVDATA_CLIENT_MSG_REPLY_TIMEOUT_MS)
+    631          				{
+    632          					if (API007NVData_Client_Server_Fbk == RECEIVED_WRITE_NVDATA_FBK_PASS)
+    633          					{
+    634          						API007NVData_Client_Timeout_Count = 0;
+    635          						API007NVData_Client_State = REQUEST_WRITE_DATA;
+    636          					}
+    637          				}
+    638          				else
+    639          				{
+    640          					API007NVData_Client_Timeout_Count = 0;
+    641          					API007NVData_Client_State = REQUEST_WRITE_DATA;
+    642          				}
+    643                          break;
+    644          
+    645                      case ERROR_IRRICOVERABLE_STATE :
+    646                      	break;
+    647          
+    648                      default:
+    649                          API007NVData_Client_State = REQUEST_NVDATA_INFO;
+    650                          break;
+    651                  }
+    652              #endif //(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    653          }
+    654          
+    655          
+    656          //----------------------------------------------------------------------------------------------------------
+    657          /**
+    658           * @brief   This API is been called from the API007Data__CommandParser()
+    659           *          Process the request for claim size by the client
+    660           *
+    661           * @details Enabled only for Server side
+    662           *          Sends the feedback message depending on weather the claim is accepted or rejected
+    663           *
+    664           * @param client_node_id - Client Node ID
+    665           * @param size  - Claim Size
+    666           */
+    667          void API007NVData__ProcessClaimSize(uint8 client_node_id, uint16 size)
+    668          {
+    669          	#if(API007NVDATA_SERVER_FEATURE == ENABLED)
+    670          		BOOL_TYPE claim_successfull = FALSE;
+    671          		uint16 existing_client_size = 0;
+    672          		uint16 re_index = 0;
+    673          		uint16 last_client = 0;
+    674          		BOOL_TYPE needs_remap_cdt = FALSE;
+    675          
+    676          		for (uint8 index = 0; index < API007NVDATA_SERVER_NUM_CLIENTS_SUPPORT; index++)
+    677          		{
+    678          			if (API007NVData_CDTable[index].Node_ID != EMPTY_NODE_ID)
+    679          			{
+    680          				if (API007NVData_CDTable[index].Node_ID == client_node_id)
+    681          				{
+    682          					//found the node
+    683          					//check the size requested matches what CDT already has or else forcedly corrupt the crc
+    684          					if (((API007NVData_CDTable[index].End_Index + 1) - API007NVData_CDTable[index].Start_Index) == size)
+    685          					{
+    686          						claim_successfull = TRUE;
+    687          					}
+    688          					else
+    689          					{
+    690          						//Find the last client registered
+    691          						for(re_index = index+1; re_index < API007NVDATA_SERVER_NUM_CLIENTS_SUPPORT; re_index++)
+    692          						{
+    693          							//find the last client registered in the CDT Table
+    694          							if (API007NVData_CDTable[re_index].Node_ID == EMPTY_NODE_ID)
+    695          							{
+    696          								break;
+    697          							}
+    698          						}
+    699          
+    700          						last_client = re_index;
+    701          						re_index--;
+    702          
+    703          
+    704          						//First make sure we have enough space for claimed size
+    705          						existing_client_size = (API007NVData_CDTable[index].End_Index + 1) - API007NVData_CDTable[index].Start_Index;
+    706          
+    707          						//if claim is more then the existing then we need to make sure we have enough space
+    708          						if (existing_client_size < size)
+    709          						{
+    710          							//Does new size fits in the memory
+    711          							if ((API007NVDATA_SERVER_DATA_TRUE_SIZE - (API007NVData_CDTable[re_index].End_Index + 1) + existing_client_size) >= size)
+    712          							{
+    713          								needs_remap_cdt = TRUE;
+    714          							}
+    715          						}
+    716          						else
+    717          						{
+    718          							//If the new claim is smaller then the existing then we just need remap of CDT Table
+    719          							needs_remap_cdt = TRUE;
+    720          						}
+    721          
+    722          						if (needs_remap_cdt == TRUE)
+    723          						{
+    724          							claim_successfull = TRUE;
+    725          
+    726          							API007NVData_CDTable[index].End_Index = API007NVData_CDTable[index].Start_Index + size - 1;	//-1 as end address is inclusive type
+    727          
+    728          							for (re_index = (index+1); re_index < last_client; re_index++)
+    729          							{
+    730          								existing_client_size = (API007NVData_CDTable[re_index].End_Index + 1) - API007NVData_CDTable[re_index].Start_Index;
+    731          
+    732          								API007NVData_CDTable[re_index].Start_Index = API007NVData_CDTable[(re_index-1)].End_Index + 1;
+    733          								API007NVData_CDTable[re_index].End_Index = API007NVData_CDTable[re_index].Start_Index + existing_client_size - 1;	//-1 as end address is inclusive type
+    734          							}
+    735          						}
+    736          						else
+    737          						{
+    738          
+    739          						}
+    740          
+    741          						break;	//After Remap CDT break
+    742          					}
+    743          
+    744          					break;	//If the claim matches to the CDT then break
+    745          				}
+    746          			}
+    747          			else
+    748          			{
+    749          				//Node Not registered yet...register it
+    750          				//check is enough space available to allocate
+    751          				uint16 last_client_end_index = 0;
+    752          				if (index != 0)
+    753          				{
+    754          					last_client_end_index = API007NVData_CDTable[(index-1)].End_Index;
+    755          				}
+    756          
+    757          				if ((API007NVDATA_SERVER_DATA_TRUE_SIZE - last_client_end_index) > size)
+    758          				{
+    759          					API007NVData_CDTable[index].Node_ID 	= client_node_id;
+    760          					API007NVData_CDTable[index].Start_Index = last_client_end_index + 1;
+    761          					API007NVData_CDTable[index].End_Index 	= API007NVData_CDTable[index].Start_Index + size - 1;
+    762          
+    763          					claim_successfull = TRUE;
+    764          				}
+    765          
+    766                          break; //Break after registering into the CDT Table
+    767          			}
+    768          		}
+    769          
+    770          
+    771          
+    772          		if (claim_successfull == FALSE)
+    773          		{
+    774          			size = 0;
+    775          		}
+    776          
+    777          		API007Data__NVDataFbkClaimSize(client_node_id, size);
+    778          
+    779          
+    780          	#endif
+    781          }
+    782          
+    783          
+    784          //----------------------------------------------------------------------------------------------------------
+    785          /**
+    786           * @brief   This API is been called from the API007Data__CommandParser()
+    787           *          Process the request for Read operation by the client
+    788           *
+    789           * @details Enabled only for Server side
+    790           *          Sends the feedback message depending on weather the read operation is accepted or rejected
+    791           *
+    792           * @param client_node_id - Client Node ID
+    793           * @param index - Data index
+    794           * @param size  - Claim Size
+    795           */
+    796          void API007NVData__ProcessReadCmd(uint8 client_node_id, uint16 index, uint16 size)
+    797          {
+    798          	#if(API007NVDATA_SERVER_FEATURE == ENABLED)
+    799          
+    800          		CLIENT_DESCRIPT_TYPE *cdt_client = NVDataGetCDTByClientID(client_node_id);
+    801          
+    802          		if (cdt_client != NULL)
+    803          		{
+    804                      //make sure we are reading within the client memory area
+    805          			if (((cdt_client->End_Index + 1) - cdt_client->Start_Index) >= (index+size))
+    806          			{
+    807          				API007Data__NVDataFbkReadData(client_node_id, index, size, &API007NVData_ServerData[cdt_client->Start_Index+index]);
+    808          
+    809          			}
+    810          			else
+    811          			{
+    812          			    API007Data__NVDataFbkReadData(client_node_id, index, 0, NULL);    //Reading failed
+    813          			}
+    814          		}
+    815          		else
+    816          		{
+    817          		    API007Data__NVDataFbkReadData(client_node_id, index, 0, NULL);    //Reading failed
+    818          		}
+    819          	#endif
+    820          }
+    821          
+    822          
+    823          //----------------------------------------------------------------------------------------------------------
+    824          /**
+    825           * @brief   This API is been called from the API007Data__CommandParser()
+    826           *          Process the request for Write operation by the client
+    827           *
+    828           * @details Enabled only for Server side
+    829           *          Sends the feedback message depending on weather the write operation is accepted or rejected
+    830           *
+    831           * @param client_node_id - Client Node ID
+    832           * @param index - Data index
+    833           * @param size  - Claim Size
+    834           * @param *data - Address of data from which to be written
+    835           */
+    836          void API007NVData__ProcessWriteCmd(uint8 client_node_id, uint16 index ,uint16 size, uint8 * data_ptr)
+    837          {
+    838          	#if(API007NVDATA_SERVER_FEATURE == ENABLED)
+    839              	CLIENT_DESCRIPT_TYPE *cdt_client = NULL;
+    840          
+    841          		cdt_client  = NVDataGetCDTByClientID(client_node_id);
+    842          
+    843          		if (cdt_client != NULL)
+    844          		{
+    845          		    //make sure we are writing within the client memory area
+    846          			if (((cdt_client->End_Index + 1) - cdt_client->Start_Index) >= (index + size))
+    847          			{
+    848          				memcpy((void *)(&API007NVData_ServerData[cdt_client->Start_Index + index]), data_ptr, size);
+    849          
+    850          				API007Data__NVDataFbkWriteData(client_node_id , (index + size));	//send index which is currently pointing after the write cmd
+    851          			}
+    852          			else
+    853          			{
+    854          			    API007Data__NVDataFbkWriteData(client_node_id , index);    //writing failed
+    855          			}
+    856          		}
+    857          		else
+    858          		{
+    859          		    API007Data__NVDataFbkWriteData(client_node_id , index);    //Client not found in CDT table
+    860          		}
+    861          	#endif
+    862          }
+    863          
+    864          
+    865          //----------------------------------------------------------------------------------------------------------
+    866          /**
+    867           * @brief   This API is been called from the API007Data__FeedbackParser() in response of API007_OP_REQ_CLAIM_NVDATA command from server
+    868           *
+    869           * @details Enabled only for client side
+    870           *
+    871           * @param size  - Claim Size
+    872           */
+    873          void API007NVData__ReceivedClaimSize(uint16 size)
+    874          {
+    875              #if(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    876                  if(size == API007NVDATA_DATA_SECTION_SIZE)
+    877                  {
+    878                      API007NVData_Client_Server_Fbk = RECEIVED_NODE_INFO_FBK_PASS;
+    879                  }
+    880                  else
+    881                  {
+    882                      API007NVData_Client_Server_Fbk = RECEIVED_NODE_INFO_FBK_FAILED;
+    883                  }
+    884              #endif
+    885          }
+    886          
+    887          
+    888          //----------------------------------------------------------------------------------------------------------
+    889          /**
+    890           * @brief   This API is been called from the API007Data__FeedbackParser() in response of API007_OP_REQ_READ_NVDATA command from server
+    891           *
+    892           * @details Enabled only for client side
+    893           *
+    894           * @param index - Read index
+    895           * @param size - Number of Read data size
+    896           * @param data_ptr - Source data memory location
+    897           */
+    898          void API007NVData__ReceivedRead(uint16 index ,uint16 size, uint8 * data_ptr)
+    899          {
+    900              #if(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    901                  if ((index + size) <= API007NVDATA_DATA_SECTION_SIZE)
+    902                  {
+    903                      memcpy(API007NVDATA_DATA_SECTION_START + index, data_ptr, size);
+    904          
+    905                      API007NVData_Client_Data_Index = index + size;
+    906                      API007NVData_Client_Server_Fbk = RECEIVED_READ_NVDATA_FBK_PASS;
+    907                  }
+    908                  else
+    909                  {
+    910                      API007NVData_Client_Server_Fbk = RECEIVED_READ_NVDATA_FBK_FAILED;
+    911                  }
+    912              #endif//(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    913          }
+    914          
+    915          
+    916          //----------------------------------------------------------------------------------------------------------
+    917          /**
+    918           * @brief   This API is been called from the API007Data__FeedbackParser() in response of API007_OP_REQ_WRITE_NVDATA command from server
+    919           *
+    920           * @details Enabled only for client side
+    921           *
+    922           * @param index - Current write index after successful writing
+    923           */
+    924          void API007NVData__ReceivedWrite(uint16 index)
+    925          {
+    926          	#if(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    927          		API007NVData_Client_Server_Fbk = RECEIVED_WRITE_NVDATA_FBK_PASS;
+    928          
+    929          		if(index != API007NVData_Client_Data_Index)
+    930          		{
+    931          			//RECEIVED_WRITE_NVDATA_FBK_FAILED
+    932          		}
+    933          	#endif
+    934          }
+    935          #endif
+    936          
+    937          
+    938          //----------------------------------------------------------------------------------------------------------
+    939          /**
+    940           * @brief   API returns the status of the NVData at the client side
+    941           *
+    942           * @details During boot up it takes time to read and verify the NVData from Server
+    943           *          Application shall consider this timing
+    944           *          Recommended to wait until the status becomes other then API007NVDATA_RESTORE_IN_PROGRESS
+    945           *
+    946           *
+    947           * @return API007NVDATA_DATA_RESTORE_STATUS_TYPE
+    948           */
+
+   \                                 In section .text, align 2, keep-with-next
+    949          API007NVDATA_DATA_RESTORE_STATUS_TYPE API007NVData__DataRestoreStatus(void)
+    950          {
+    951              API007NVDATA_DATA_RESTORE_STATUS_TYPE status = API007NVDATA_RESTORE_CORRUPTED;
+    952          
+    953              #if ((SYSTEM_ACU_HANDLING == ENABLED) && ((SYSTEM_HMI_HANDLING == ENABLED) || (SYSTEM_HMI_EXPANSION_HANDLING == ENABLED)))  //P1 board or ACU+EXP HMI
+    954                  if ((NVData__GetLastRestoreStatus()->Bit.Appliance_Data_Recovered == NVDATA_RESTORE_OKAY) && (NVData__GetLastRestoreStatus()->Bit.Statistics_Data_Recovered == NVDATA_RESTORE_OKAY))
+    955                  {
+    956                      status = API007NVDATA_RESTORE_OKAY;
+    957                  }
+    958              #else
+    959                  #if (API007NVDATA_CLIENT_FEATURE == ENABLED)
+    960                      status = API007NVData_Client_Data_Restore_Status;
+    961                  #endif //(API007NVDATA_CLIENT_FEATURE == ENABLED)
+    962              #endif
+    963              return status;
+   \                     API007NVData__DataRestoreStatus: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    964          }
+    965          //=====================================================================================================================
+    966          //-------------------------------------- Private Functions ------------------------------------------------------------
+    967          //=====================================================================================================================
+    968          
+    969          //----------------------------------------------------------------------------------------------------------
+    970          /**
+    971           * @brief Read Client Description information from the CDT table for the requested client_node_id
+    972           *
+    973           *
+    974           * @param client_node_id - client node
+    975           */
+    976          #if (API007DATA_NVDATA_FEATURE == ENABLED)
+    977          #if(API007NVDATA_SERVER_FEATURE == ENABLED)
+    978          static CLIENT_DESCRIPT_TYPE *NVDataGetCDTByClientID(uint8 client_node_id)
+    979          {
+    980              CLIENT_DESCRIPT_TYPE *cdt_ptr = NULL;
+    981          
+    982              for (uint8 index = 0; index < API007NVDATA_SERVER_NUM_CLIENTS_SUPPORT; index++)
+    983              {
+    984                  if (API007NVData_CDTable[index].Node_ID == client_node_id)
+    985                  {
+    986                      cdt_ptr = &API007NVData_CDTable[index];
+    987                      break;
+    988                  }
+    989              }
+    990          
+    991              return cdt_ptr;
+    992          }
+    993          #endif
+    994          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   API007NVData__DataRestoreStatus
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  API007NVData__DataRestoreStatus
+
+ 
+ 4 bytes in section .text
+ 
+ 4 bytes of CODE memory
+
+Errors: none
+Warnings: none

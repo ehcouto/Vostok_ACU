@@ -1,0 +1,2735 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:37
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Application/acuhmi/Regulations/Regulations.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Regulations.lst -o
+#        obj\Regulations.obj
+#        source/XCategory/Application/acuhmi/Regulations/Regulations.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Regulations.lst
+#    Object file  =  obj\Regulations.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Application\acuhmi\Regulations\Regulations.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Implements the interfaces for regulations. Some interfaces can be used on both ACU and HMI. Some interfaces
+      5           *              are meant for only ACU or only HMI.
+      6           *
+      7           *  @details    Common interfaces:
+      8           *              - Get the position of regulation
+      9           *              - Get number of regulations defined in the setting file
+     10           *              - Get number of regulations that are "to main" (considered by ACU)
+     11           *              - Get configuration of a regulation (function ID or other behavioral flags)
+     12           *              - Get current index of regulations
+     13           *
+     14           *              ACU only interfaces:
+     15           *              - Accept/Reject regulations
+     16           *              - Check if a regulation has changed (new request from HMI)
+     17           *              - Get main values of a regulation
+     18           *              - Get main value type
+     19           *
+     20           *              HMI only interfaces:
+     21           *              - Register a callback function on regulation changes
+     22           *              - Set regulation request
+     23           *              - Get visual values of a regulation
+     24           *              - Get visual value type
+     25           *
+     26           *  @copyright  Copyright 2015-2019 Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     27           */
+     28          //---------------------------------------------------------------------------------------------------------------------
+     29          //---------------------------------------------------------------------------------------------------------------------
+     30          
+     31          
+     32          //-------------------------------------- Include Files ----------------------------------------------------------------
+     33          #include "SystemConfig.h"
+     34          #include "Regulations.h"
+     35          
+     36          #include "Callback.h"
+     37          #include "Log.h"
+     38          #include "Micro.h"
+     39          #include "Mode.h"
+     40          #if (SYSTEM_ACU_HANDLING == ENABLED)
+     41              #include "NVData.h"
+     42              #include "TestMgr.h"
+     43          #endif
+     44          #include "SettingFile.h"
+     45          #include <string.h>
+     46          #include "Reveal.h"
+     47          
+     48          //-------------------------------------- IDs FOR LOG messages----------------------------------------------------------
+     49          //! IDs for Log messages
+     50          typedef enum
+     51          {
+     52              GI_POSITION_AND_TYPE_DOES_NOT_EXIST = 0,    //data: Upper Byte: GI position, Lower Byte: GI Read Type
+     53              POSITION_OUT_OF_RANGE,                      //data: Upper Byte: Source of message, Lower Byte: Regulation position that is out of range
+     54              TOO_MANY_REGULATIONS_DEFINED,               //data: Upper Byte: Number of regulations handled by this module(REGULATION_MAX_NUM); Lower byte: Number of regulations defined in the setting file
+     55              INDEX_OUT_OF_RANGE,                         //data: Upper Byte: out of boundary index, Lower Byte: Regulation position that is out of range
+     56              CONFIG_NOT_FOUND                            //data: Regulation position that is out of range
+     57          } MODULE_REGULATIONS_LOG_MESSAGE_ID_TYPE;
+     58          //! ID for this module on the Log module.
+     59          #define MODULE_NAME     MODULE_REGULATIONS
+     60          
+     61          
+     62          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     63          static uint8 Num_Functions_To_Main; //!< Number of functions that must be accepted or rejected by the ACU, otherwise a function is always accepted
+     64          static uint8 Num_Functions_Total;   //!< Total number of functions defined in the setting file
+     65          
+     66          typedef enum
+     67          {
+     68              REGULATION_PARAM_UINT8,
+     69              REGULATION_PARAM_SINT8,
+     70              REGULATION_PARAM_UINT16,
+     71              REGULATION_PARAM_SINT16
+     72          } REGULATION_PARAM_TYPE;
+     73          
+     74          typedef struct
+     75          {
+     76              uint8 Unused1                   :6;
+     77              REGULATION_PARAM_TYPE Type      :2;
+     78              uint8 Step;
+     79          }REGULATION_PARAM_HEADER_TYPE;
+     80          
+     81          //! Conversion table that converts the main/visual value type in the regulation table to the DATATYPE_TYPE typedef
+
+   \                                 In section .text, align 4, keep-with-next
+     82          static const DATATYPE_TYPE REGULATION_HEADER_TYPE_CONVERSION[] =
+   \                     REGULATION_HEADER_TYPE_CONVERSION:
+   \   00000000   0x01 0x05          DC8 1, 5, 2, 6
+   \              0x02 0x06    
+
+   \                                 In section .bss, align 4
+   \                     Num_Functions_To_Main:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 1
+   \   00000002                      DS8 2
+   \   00000004                      DS8 4
+     83          {
+     84            /* DATATYPE_TYPE */   /* REGULATION_PARAM_HEADER_TYPE */
+     85              DATATYPE_UINT8,     // REGULATION_PARAM_UINT8
+     86              DATATYPE_SINT8,     // REGULATION_PARAM_SINT8
+     87              DATATYPE_UINT16,    // REGULATION_PARAM_UINT16
+     88              DATATYPE_SINT16,    // REGULATION_PARAM_SINT16
+     89          };
+     90          
+     91          //! Maximum number of regulations that can be handled by the module. Can be overridden for project specific purposes.
+     92          //! This value is validated during initialization to ensure the firmware can handle the number of regulations defined
+     93          //! in the setting file.
+     94          #ifndef REGULATION_MAX_NUM
+     95              #define REGULATION_MAX_NUM      41
+     96          #endif
+     97          //! Ensure number of regulations does not exceed the max payload size for Reveal to prevent the need for multiple messages
+     98          //! Reducing the reveal payload by 5 to allow for additional bytes in the payload that aren't a regulation index
+     99          CT_ASSERT(REGULATION_MAX_NUM <= REVEAL_PAYLOAD_SIZE - 5);
+    100          
+    101          static REGULATIONS_CONFIG_TYPE * Regulations_Config;
+    102          
+    103          #if (SYSTEM_ACU_HANDLING == ENABLED)
+    104              #pragma location = "_appliance_segment"
+
+   \                                 In section _appliance_segment, align 4
+    105              static uint8 Regulations_Index_Buffer[REGULATION_MAX_NUM];
+   \                     Regulations_Index_Buffer:
+   \   00000000                      DS8 44
+    106          
+    107              #pragma location = "_appliance_segment"
+
+   \                                 In section _appliance_segment, align 4
+    108              static uint8 Regulations_Index_Request_Buffer[REGULATION_MAX_NUM];
+   \                     Regulations_Index_Request_Buffer:
+   \   00000000                      DS8 44
+    109          
+    110          #else
+    111              static uint8 Regulations_Index_Buffer[REGULATION_MAX_NUM];
+    112              static uint8 Regulations_Index_Request_Buffer[REGULATION_MAX_NUM];
+    113          #endif
+    114          
+    115          //! Callback structure
+    116          #ifndef REGULATION_CALLBACK_REGISTER_SIZE
+    117              #define REGULATION_CALLBACK_REGISTER_SIZE 5
+    118          #endif
+
+   \                                 In section .text, align 4, keep-with-next
+    119          DEFINE_CALLBACK_CONTROL_STRUCTURE(Regulation_Callback_Control_Structure, REGULATION_CALLBACK_REGISTER_SIZE);
+   \                     Regulation_Callback_Control_Structure:
+   \   00000000   0x........         DC32 Regulation_Callback_Control_Structure_Registry
+   \   00000004   0x05 0x00          DC8 5, 0, 0, 0
+   \              0x00 0x00    
+
+   \                                 In section .bss, align 4
+   \   static __absolute uint8 Regulation_Callback_Control_Structure_Registry[21]
+   \                     Regulation_Callback_Control_Structure_Registry:
+   \   00000000                      DS8 24
+    120          
+    121          #ifndef REGULATIONS_INITIALIZE_FACTORY_RESTORE_INDEX_FEATURE
+    122              #define REGULATIONS_INITIALIZE_FACTORY_RESTORE_INDEX_FEATURE DISABLED   // Feature is disabled by default
+    123          #endif
+    124          
+    125          #if (SYSTEM_ACU_HANDLING == DISABLED)
+    126              static BOOL_TYPE Regulations_Start;
+    127          #endif
+    128          
+    129          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    130          static sint32 GetRegValue(SETTINGFILE_OFFSET_TYPE type, uint8 position, uint8 index_value);
+    131          static DATATYPE_TYPE GetRegulationTableValueType(SETTINGFILE_OFFSET_TYPE sf_pointer, uint8 regulation_position);
+    132          //=====================================================================================================================
+    133          //-------------------------------------- Public Functions -------------------------------------------------------------
+    134          //=====================================================================================================================
+    135          
+    136          
+    137          //=====================================================================================================================
+    138          //=====================================================================================================================
+    139          //=====================================================================================================================
+    140          // Methods used by ACU and UI
+    141          //=====================================================================================================================
+    142          //=====================================================================================================================
+    143          //=====================================================================================================================
+    144          
+    145          //---------------------------------------------------------------------------------------------------------------------
+    146          /**
+    147           *  @brief      It Initializes the module Regulation and its variables
+    148           *
+    149           */
+
+   \                                 In section .text, align 2, keep-with-next
+    150          void Regulations__Initialize(void)
+    151          {
+   \                     Regulations__Initialize: (+1)
+   \   00000000   0xB5F0             PUSH     {R4-R7,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+    152              SETTINGFILE_LOADER_TYPE aux_loader;
+    153          
+    154              Regulations_Config = NULL;
+   \   00000004   0x2500             MOVS     R5,#+0
+   \   00000006   0x....             LDR      R4,??DataTable10
+   \   00000008   0x6065             STR      R5,[R4, #+4]
+    155          
+    156              if (SettingFile__BasicLoader(SF_PTR_UI_FUNCTION_HEADING, 0, &aux_loader) == PASS )
+   \   0000000A   0x466A             MOV      R2,SP
+   \   0000000C   0x4629             MOV      R1,R5
+   \   0000000E   0x2089             MOVS     R0,#+137
+   \   00000010   0x0040             LSLS     R0,R0,#+1        ;; #+274
+   \   00000012   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000016   0x2801             CMP      R0,#+1
+   \   00000018   0xD101             BNE      ??Regulations__Initialize_0
+    157              {
+    158                  Regulations_Config = (REGULATIONS_CONFIG_TYPE *)(void *)aux_loader.Data;
+   \   0000001A   0x9800             LDR      R0,[SP, #+0]
+   \   0000001C   0x6060             STR      R0,[R4, #+4]
+    159              }
+    160          
+    161              if (SettingFile__BasicLoader(SF_PTR_UI_PRODUCT_CONFIG, SF_DISPL_FUNCTIONS_NUMBER, &aux_loader) == PASS )
+   \                     ??Regulations__Initialize_0: (+1)
+   \   0000001E   0x466A             MOV      R2,SP
+   \   00000020   0x210A             MOVS     R1,#+10
+   \   00000022   0x2081             MOVS     R0,#+129
+   \   00000024   0x0040             LSLS     R0,R0,#+1        ;; #+258
+   \   00000026   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   0000002A   0x2801             CMP      R0,#+1
+   \   0000002C   0xD113             BNE      ??Regulations__Initialize_1
+    162              {
+    163                  Num_Functions_To_Main = aux_loader.Data[0];
+   \   0000002E   0x9800             LDR      R0,[SP, #+0]
+   \   00000030   0x7800             LDRB     R0,[R0, #+0]
+   \   00000032   0x7020             STRB     R0,[R4, #+0]
+    164                  Num_Functions_Total = aux_loader.Data[1];
+   \   00000034   0x9800             LDR      R0,[SP, #+0]
+   \   00000036   0x7840             LDRB     R0,[R0, #+1]
+   \   00000038   0x7060             STRB     R0,[R4, #+1]
+    165          
+    166                  if (Num_Functions_Total > REGULATION_MAX_NUM)
+   \   0000003A   0x282A             CMP      R0,#+42
+   \   0000003C   0xDB0B             BLT      ??Regulations__Initialize_1
+    167                  {
+    168                      LOG_ADD_EXCEPTION(TOO_MANY_REGULATIONS_DEFINED, COMBINE_BYTES(REGULATION_MAX_NUM, Num_Functions_Total));
+   \   0000003E   0x23A4             MOVS     R3,#+164
+   \   00000040   0x019B             LSLS     R3,R3,#+6        ;; #+10496
+   \   00000042   0x4303             ORRS     R3,R3,R0
+   \   00000044   0x2201             MOVS     R2,#+1
+   \   00000046   0x2102             MOVS     R1,#+2
+   \   00000048   0x2047             MOVS     R0,#+71
+   \   0000004A   0x.... 0x....      BL       Log__AddMessage
+    169                      Mode__SetModeExtended(MODE_NORMAL, SUBMODE_NORMAL_ERROR);               // Module will not be able to handle all the regulations defined in the
+   \   0000004E   0x2102             MOVS     R1,#+2
+   \   00000050   0x4628             MOV      R0,R5
+   \   00000052   0x.... 0x....      BL       Mode__SetModeExtended
+    170                  }                                                                           // setting file. Put machine in a safe state.
+    171              }
+    172          
+    173          #if (SYSTEM_ACU_HANDLING == ENABLED)
+    174              // ACU Handling
+    175              if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)         // If this is a cold reset,
+   \                     ??Regulations__Initialize_1: (+1)
+   \   00000056   0x.... 0x....      BL       Micro__GetResetMode
+   \   0000005A   0x2800             CMP      R0,#+0
+   \   0000005C   0xD123             BNE      ??Regulations__Initialize_2
+    176              {
+    177                  if (NVData__GetLastRestoreStatus()->Bit.Appliance_Data_Recovered != NVDATA_RESTORE_OKAY) // and Data is not restored correctly
+   \   0000005E   0x.... 0x....      BL       NVData__GetLastRestoreStatus
+   \   00000062   0x7800             LDRB     R0,[R0, #+0]
+   \   00000064   0x0780             LSLS     R0,R0,#+30
+   \   00000066   0x0F80             LSRS     R0,R0,#+30
+   \   00000068   0x2801             CMP      R0,#+1
+   \   0000006A   0xD01C             BEQ      ??Regulations__Initialize_2
+    178                  {
+    179                      // Force all regulation values to 1
+    180                      memset (Regulations_Index_Buffer,1,sizeof(Regulations_Index_Buffer));
+   \   0000006C   0x....             LDR      R6,??DataTable11
+   \   0000006E   0x2201             MOVS     R2,#+1
+   \   00000070   0x2129             MOVS     R1,#+41
+   \   00000072   0x0030             MOVS     R0,R6
+   \   00000074   0x.... 0x....      BL       __aeabi_memset4
+    181                      memset (Regulations_Index_Request_Buffer,1,sizeof(Regulations_Index_Request_Buffer));
+   \   00000078   0x....             LDR      R7,??DataTable11_1
+   \   0000007A   0x2201             MOVS     R2,#+1
+   \   0000007C   0x2129             MOVS     R1,#+41
+   \   0000007E   0x0038             MOVS     R0,R7
+   \   00000080   0x.... 0x....      BL       __aeabi_memset4
+    182          
+    183                      // Apply factory restore index values to appropriate regulations
+    184                      for (uint8 index = 0; index < Num_Functions_Total; index++)
+   \   00000084   0xE00C             B        ??Regulations__Initialize_3
+    185                      {
+    186                          if (Regulations_Config[index].Factory_Restore_Index != 0)
+   \                     ??Regulations__Initialize_4: (+1)
+   \   00000086   0x6860             LDR      R0,[R4, #+4]
+   \   00000088   0x00A9             LSLS     R1,R5,#+2
+   \   0000008A   0x1949             ADDS     R1,R1,R5
+   \   0000008C   0x0049             LSLS     R1,R1,#+1
+   \   0000008E   0x1840             ADDS     R0,R0,R1
+   \   00000090   0x78C1             LDRB     R1,[R0, #+3]
+   \   00000092   0x000A             MOVS     R2,R1
+   \   00000094   0xD002             BEQ      ??Regulations__Initialize_5
+    187                          {
+    188                              Regulations_Index_Buffer[index] = Regulations_Config[index].Factory_Restore_Index;
+   \   00000096   0x5571             STRB     R1,[R6, R5]
+    189                              Regulations_Index_Request_Buffer[index] = Regulations_Config[index].Factory_Restore_Index;
+   \   00000098   0x78C0             LDRB     R0,[R0, #+3]
+   \   0000009A   0x5578             STRB     R0,[R7, R5]
+    190                          }
+    191                      }
+   \                     ??Regulations__Initialize_5: (+1)
+   \   0000009C   0x1C6D             ADDS     R5,R5,#+1
+   \   0000009E   0xB2ED             UXTB     R5,R5
+   \                     ??Regulations__Initialize_3: (+1)
+   \   000000A0   0x7860             LDRB     R0,[R4, #+1]
+   \   000000A2   0x4285             CMP      R5,R0
+   \   000000A4   0xDBEF             BLT      ??Regulations__Initialize_4
+    192                  }
+    193              }
+    194          
+    195              // Test Cycle regulation must always be set to an index that ensures the test cycle does not get started unintentionally after a power cycle
+    196              // Look up position of test cycle regulation and set both the regulation index buffers to ensure HMI gets the same index
+    197              uint8 test_cycle_regulation_position = Regulations__GetPositionByFunctionID(FUNC_ID_TEST_CYCLE, 0);
+   \                     ??Regulations__Initialize_2: (+1)
+   \   000000A6   0x2100             MOVS     R1,#+0
+   \   000000A8   0x2019             MOVS     R0,#+25
+   \   000000AA   0x.... 0x....      BL       Regulations__GetPositionByFunctionID
+   \   000000AE   0x0004             MOVS     R4,R0
+    198              if (test_cycle_regulation_position != REGULATION_INVALID)
+   \   000000B0   0x2CFF             CMP      R4,#+255
+   \   000000B2   0xD009             BEQ      ??Regulations__Initialize_6
+    199              {
+    200                  uint8 test_cycle_regulation_index = Regulations__GetIndexOfMainValueByPosition(TESTMGR_CYCLE_NONE, test_cycle_regulation_position);
+   \   000000B4   0x0021             MOVS     R1,R4
+   \   000000B6   0x20FF             MOVS     R0,#+255
+   \   000000B8   0x.... 0x....      BL       Regulations__GetIndexOfMainValueByPosition
+    201                  if (test_cycle_regulation_index != REGULATION_INVALID)
+   \   000000BC   0x28FF             CMP      R0,#+255
+   \   000000BE   0xD003             BEQ      ??Regulations__Initialize_6
+    202                  {
+    203                      Regulations_Index_Buffer[test_cycle_regulation_position] = test_cycle_regulation_index;
+   \   000000C0   0x....             LDR      R1,??DataTable11
+   \   000000C2   0x5508             STRB     R0,[R1, R4]
+    204                      Regulations_Index_Request_Buffer[test_cycle_regulation_position] = test_cycle_regulation_index;
+   \   000000C4   0x....             LDR      R1,??DataTable11_1
+   \   000000C6   0x5508             STRB     R0,[R1, R4]
+    205                  }
+    206              }
+    207          
+    208          #else
+    209              //Hmi only handling
+    210              if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD) // If this is a cold reset, force defaults to 1 or the factory restore index
+    211              {
+    212                  memset (Regulations_Index_Buffer,1,sizeof(Regulations_Index_Buffer));
+    213                  memset (Regulations_Index_Request_Buffer,1,sizeof(Regulations_Index_Request_Buffer));
+    214          
+    215          #if (REGULATIONS_INITIALIZE_FACTORY_RESTORE_INDEX_FEATURE == ENABLED)
+    216                  // Apply factory restore index values to regulations with that index configured
+    217                  // This index is only applicable until the HMI receives regulations from the ACU
+    218                  // The factory restore index is often times a better initialization value than an index of 1
+    219                  for (uint8 index = 0; index < Num_Functions_Total; index++)
+    220                  {
+    221                      if (Regulations_Config[index].Factory_Restore_Index != 0)
+    222                      {
+    223                          Regulations_Index_Buffer[index] = Regulations_Config[index].Factory_Restore_Index;
+    224                          Regulations_Index_Request_Buffer[index] = Regulations_Config[index].Factory_Restore_Index;
+    225                      }
+    226                  }
+    227          #endif  // REGULATIONS_APPLY_FACTORY_RESTORE_INDEX == ENABLED
+    228              }
+    229          #endif
+    230          
+    231              Callback__Initialize(&Regulation_Callback_Control_Structure);
+   \                     ??Regulations__Initialize_6: (+1)
+   \   000000C8   0x....             LDR      R0,??DataTable13
+   \   000000CA   0x.... 0x....      BL       Callback__Initialize
+    232          }
+   \   000000CE   0xBDF7             POP      {R0-R2,R4-R7,PC}  ;; return
+    233          
+    234          //---------------------------------------------------------------------------------------------------------------------
+    235          /**
+    236           * @brief This method returns the Position for a given Function ID
+    237           * @param funciton_id
+    238           * @return position
+    239           */
+
+   \                                 In section .text, align 2, keep-with-next
+    240          uint8 Regulations__GetPositionByFunctionID(uint8 function_id, uint8 compartment)
+    241          {
+   \                     Regulations__GetPositionByFunctionID: (+1)
+   \   00000000   0xB5F3             PUSH     {R0,R1,R4-R7,LR}
+   \   00000002   0xB081             SUB      SP,SP,#+4
+    242              uint8 retval;
+    243              uint8 i;
+    244          
+    245              retval = REGULATION_INVALID;
+   \   00000004   0x24FF             MOVS     R4,#+255
+    246              for (i=0; i<Num_Functions_Total; i++ )
+   \   00000006   0x2700             MOVS     R7,#+0
+   \   00000008   0x003D             MOVS     R5,R7
+   \   0000000A   0xE000             B        ??Regulations__GetPositionByFunctionID_0
+   \                     ??Regulations__GetPositionByFunctionID_1: (+1)
+   \   0000000C   0x1C6D             ADDS     R5,R5,#+1
+   \                     ??Regulations__GetPositionByFunctionID_0: (+1)
+   \   0000000E   0x....             LDR      R0,??DataTable10
+   \   00000010   0x0029             MOVS     R1,R5
+   \   00000012   0x7842             LDRB     R2,[R0, #+1]
+   \   00000014   0xB2C9             UXTB     R1,R1
+   \   00000016   0x4291             CMP      R1,R2
+   \   00000018   0xD225             BCS      ??Regulations__GetPositionByFunctionID_2
+    247              {
+    248                  if ((Regulations_Config[i].Function_ID == function_id) &&
+    249                      (REGULATION_COMPARTMENT(i) == compartment))
+   \   0000001A   0x6840             LDR      R0,[R0, #+4]
+   \   0000001C   0xB2ED             UXTB     R5,R5
+   \   0000001E   0x00A9             LSLS     R1,R5,#+2
+   \   00000020   0x1949             ADDS     R1,R1,R5
+   \   00000022   0x0049             LSLS     R1,R1,#+1
+   \   00000024   0x5C40             LDRB     R0,[R0, R1]
+   \   00000026   0x0640             LSLS     R0,R0,#+25
+   \   00000028   0x0E40             LSRS     R0,R0,#+25
+   \   0000002A   0x4669             MOV      R1,SP
+   \   0000002C   0x7909             LDRB     R1,[R1, #+4]
+   \   0000002E   0x4288             CMP      R0,R1
+   \   00000030   0xD1EC             BNE      ??Regulations__GetPositionByFunctionID_1
+   \   00000032   0x0028             MOVS     R0,R5
+   \   00000034   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   00000038   0x2800             CMP      R0,#+0
+   \   0000003A   0xD101             BNE      ??Regulations__GetPositionByFunctionID_3
+   \   0000003C   0x0038             MOVS     R0,R7
+   \   0000003E   0xE00D             B        ??Regulations__GetPositionByFunctionID_4
+   \                     ??Regulations__GetPositionByFunctionID_3: (+1)
+   \   00000040   0x0028             MOVS     R0,R5
+   \   00000042   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   00000046   0x0006             MOVS     R6,R0
+   \   00000048   0x0028             MOVS     R0,R5
+   \   0000004A   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   0000004E   0x7871             LDRB     R1,[R6, #+1]
+   \   00000050   0x0749             LSLS     R1,R1,#+29
+   \   00000052   0x0F49             LSRS     R1,R1,#+29
+   \   00000054   0x0089             LSLS     R1,R1,#+2
+   \   00000056   0x7840             LDRB     R0,[R0, #+1]
+   \   00000058   0x0980             LSRS     R0,R0,#+6
+   \   0000005A   0x4308             ORRS     R0,R0,R1
+   \                     ??Regulations__GetPositionByFunctionID_4: (+1)
+   \   0000005C   0x4669             MOV      R1,SP
+   \   0000005E   0x7A09             LDRB     R1,[R1, #+8]
+   \   00000060   0x4288             CMP      R0,R1
+   \   00000062   0xD1D3             BNE      ??Regulations__GetPositionByFunctionID_1
+    250                  {
+    251                      retval = i;
+   \   00000064   0x002C             MOVS     R4,R5
+    252                      break;
+    253                  }
+    254              }
+    255          
+    256              return (retval);
+   \                     ??Regulations__GetPositionByFunctionID_2: (+1)
+   \   00000066   0x0020             MOVS     R0,R4
+   \   00000068   0xBDFE             POP      {R1-R7,PC}       ;; return
+    257          }
+    258          
+    259          //---------------------------------------------------------------------------------------------------------------------
+    260          /**
+    261           * @brief This method returns the Position for a given indirect Function ID
+    262           * @param funciton_id
+    263           * @return position
+    264           */
+
+   \                                 In section .text, align 2, keep-with-next
+    265          uint8 Regulations__GetPositionByIndirectFunctionID(uint8 function_id, uint8 compartment)
+    266          {
+   \                     Regulations__GetPositionByIndirectFunctionID: (+1)
+   \   00000000   0xB5F3             PUSH     {R0,R1,R4-R7,LR}
+   \   00000002   0xB081             SUB      SP,SP,#+4
+    267              uint8 retval;
+    268              uint8 i;
+    269          
+    270              retval = REGULATION_INVALID;
+   \   00000004   0x27FF             MOVS     R7,#+255
+   \   00000006   0x2400             MOVS     R4,#+0
+   \   00000008   0x....             LDR      R5,??DataTable10
+   \   0000000A   0xE000             B        ??Regulations__GetPositionByIndirectFunctionID_0
+    271              for (i=0; i<Num_Functions_Total; i++ )
+   \                     ??Regulations__GetPositionByIndirectFunctionID_1: (+1)
+   \   0000000C   0x1C64             ADDS     R4,R4,#+1
+   \                     ??Regulations__GetPositionByIndirectFunctionID_0: (+1)
+   \   0000000E   0x0020             MOVS     R0,R4
+   \   00000010   0x7869             LDRB     R1,[R5, #+1]
+   \   00000012   0xB2C0             UXTB     R0,R0
+   \   00000014   0x4288             CMP      R0,R1
+   \   00000016   0xD22E             BCS      ??Regulations__GetPositionByIndirectFunctionID_2
+    272              {
+    273                  if ((Regulations_Config[i].Function_ID == function_id) &&
+    274                      (REGULATION_COMPARTMENT(i) == compartment) &&
+    275                      (Regulations_Config[i].Indirect == TRUE) )
+   \   00000018   0xB2E4             UXTB     R4,R4
+   \   0000001A   0x00A0             LSLS     R0,R4,#+2
+   \   0000001C   0x1900             ADDS     R0,R0,R4
+   \   0000001E   0x0040             LSLS     R0,R0,#+1
+   \   00000020   0x9000             STR      R0,[SP, #+0]
+   \   00000022   0x6868             LDR      R0,[R5, #+4]
+   \   00000024   0x9900             LDR      R1,[SP, #+0]
+   \   00000026   0x5C40             LDRB     R0,[R0, R1]
+   \   00000028   0x0640             LSLS     R0,R0,#+25
+   \   0000002A   0x0E40             LSRS     R0,R0,#+25
+   \   0000002C   0x4669             MOV      R1,SP
+   \   0000002E   0x7909             LDRB     R1,[R1, #+4]
+   \   00000030   0x4288             CMP      R0,R1
+   \   00000032   0xD1EB             BNE      ??Regulations__GetPositionByIndirectFunctionID_1
+   \   00000034   0x0020             MOVS     R0,R4
+   \   00000036   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   0000003A   0x2800             CMP      R0,#+0
+   \   0000003C   0xD101             BNE      ??Regulations__GetPositionByIndirectFunctionID_3
+   \   0000003E   0x2000             MOVS     R0,#+0
+   \   00000040   0xE00D             B        ??Regulations__GetPositionByIndirectFunctionID_4
+   \                     ??Regulations__GetPositionByIndirectFunctionID_3: (+1)
+   \   00000042   0x0020             MOVS     R0,R4
+   \   00000044   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   00000048   0x0006             MOVS     R6,R0
+   \   0000004A   0x0020             MOVS     R0,R4
+   \   0000004C   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   00000050   0x7871             LDRB     R1,[R6, #+1]
+   \   00000052   0x0749             LSLS     R1,R1,#+29
+   \   00000054   0x0F49             LSRS     R1,R1,#+29
+   \   00000056   0x0089             LSLS     R1,R1,#+2
+   \   00000058   0x7840             LDRB     R0,[R0, #+1]
+   \   0000005A   0x0980             LSRS     R0,R0,#+6
+   \   0000005C   0x4308             ORRS     R0,R0,R1
+   \                     ??Regulations__GetPositionByIndirectFunctionID_4: (+1)
+   \   0000005E   0x4669             MOV      R1,SP
+   \   00000060   0x7A09             LDRB     R1,[R1, #+8]
+   \   00000062   0x4288             CMP      R0,R1
+   \   00000064   0xD1D2             BNE      ??Regulations__GetPositionByIndirectFunctionID_1
+   \   00000066   0x6868             LDR      R0,[R5, #+4]
+   \   00000068   0x9900             LDR      R1,[SP, #+0]
+   \   0000006A   0x1840             ADDS     R0,R0,R1
+   \   0000006C   0x7840             LDRB     R0,[R0, #+1]
+   \   0000006E   0x0940             LSRS     R0,R0,#+5
+   \   00000070   0x07C0             LSLS     R0,R0,#+31
+   \   00000072   0xD5CB             BPL      ??Regulations__GetPositionByIndirectFunctionID_1
+    276                  {
+    277          
+    278                      retval = i;
+   \   00000074   0x0027             MOVS     R7,R4
+    279                      break;
+    280                  }
+    281              }
+    282          
+    283              return (retval);
+   \                     ??Regulations__GetPositionByIndirectFunctionID_2: (+1)
+   \   00000076   0x0038             MOVS     R0,R7
+   \   00000078   0xBDFE             POP      {R1-R7,PC}       ;; return
+    284          }
+    285          
+    286          //---------------------------------------------------------------------------------------------------------------------
+    287          /**
+    288           * @brief This method returns the Position for a given indirect Function ID
+    289           * @param funciton_id
+    290           * @return position
+    291           */
+
+   \                                 In section .text, align 2, keep-with-next
+    292          uint8 Regulations__GetPositionByIndirectPushFunctionID(uint8 function_id, uint8 compartment)
+    293          {
+   \                     Regulations__GetPositionByIndirectPushFunctionID: (+1)
+   \   00000000   0xB5F3             PUSH     {R0,R1,R4-R7,LR}
+   \   00000002   0xB081             SUB      SP,SP,#+4
+    294              uint8 retval;
+    295              uint8 i;
+    296          
+    297              retval = REGULATION_INVALID;
+   \   00000004   0x27FF             MOVS     R7,#+255
+   \   00000006   0x2400             MOVS     R4,#+0
+   \   00000008   0x....             LDR      R5,??DataTable10
+   \   0000000A   0xE000             B        ??Regulations__GetPositionByIndirectPushFunctio_0
+    298              for (i=0; i<Num_Functions_Total; i++ )
+   \                     ??Regulations__GetPositionByIndirectPushFunctio_1: (+1)
+   \   0000000C   0x1C64             ADDS     R4,R4,#+1
+   \                     ??Regulations__GetPositionByIndirectPushFunctio_0: (+1)
+   \   0000000E   0x0020             MOVS     R0,R4
+   \   00000010   0x7869             LDRB     R1,[R5, #+1]
+   \   00000012   0xB2C0             UXTB     R0,R0
+   \   00000014   0x4288             CMP      R0,R1
+   \   00000016   0xD22F             BCS      ??Regulations__GetPositionByIndirectPushFunctio_2
+    299              {
+    300                  if ((Regulations_Config[i].Function_ID == function_id) &&
+    301                      (REGULATION_COMPARTMENT(i) == compartment) &&
+    302                      (Regulations_Config[i].Indirect == TRUE) &&
+    303                      (Regulations_Config[i].Push == TRUE))
+   \   00000018   0xB2E4             UXTB     R4,R4
+   \   0000001A   0x00A0             LSLS     R0,R4,#+2
+   \   0000001C   0x1900             ADDS     R0,R0,R4
+   \   0000001E   0x0040             LSLS     R0,R0,#+1
+   \   00000020   0x9000             STR      R0,[SP, #+0]
+   \   00000022   0x6868             LDR      R0,[R5, #+4]
+   \   00000024   0x9900             LDR      R1,[SP, #+0]
+   \   00000026   0x5C40             LDRB     R0,[R0, R1]
+   \   00000028   0x0640             LSLS     R0,R0,#+25
+   \   0000002A   0x0E40             LSRS     R0,R0,#+25
+   \   0000002C   0x4669             MOV      R1,SP
+   \   0000002E   0x7909             LDRB     R1,[R1, #+4]
+   \   00000030   0x4288             CMP      R0,R1
+   \   00000032   0xD1EB             BNE      ??Regulations__GetPositionByIndirectPushFunctio_1
+   \   00000034   0x0020             MOVS     R0,R4
+   \   00000036   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   0000003A   0x2800             CMP      R0,#+0
+   \   0000003C   0xD101             BNE      ??Regulations__GetPositionByIndirectPushFunctio_3
+   \   0000003E   0x2000             MOVS     R0,#+0
+   \   00000040   0xE00D             B        ??Regulations__GetPositionByIndirectPushFunctio_4
+   \                     ??Regulations__GetPositionByIndirectPushFunctio_3: (+1)
+   \   00000042   0x0020             MOVS     R0,R4
+   \   00000044   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   00000048   0x0006             MOVS     R6,R0
+   \   0000004A   0x0020             MOVS     R0,R4
+   \   0000004C   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   00000050   0x7871             LDRB     R1,[R6, #+1]
+   \   00000052   0x0749             LSLS     R1,R1,#+29
+   \   00000054   0x0F49             LSRS     R1,R1,#+29
+   \   00000056   0x0089             LSLS     R1,R1,#+2
+   \   00000058   0x7840             LDRB     R0,[R0, #+1]
+   \   0000005A   0x0980             LSRS     R0,R0,#+6
+   \   0000005C   0x4308             ORRS     R0,R0,R1
+   \                     ??Regulations__GetPositionByIndirectPushFunctio_4: (+1)
+   \   0000005E   0x4669             MOV      R1,SP
+   \   00000060   0x7A09             LDRB     R1,[R1, #+8]
+   \   00000062   0x4288             CMP      R0,R1
+   \   00000064   0xD1D2             BNE      ??Regulations__GetPositionByIndirectPushFunctio_1
+   \   00000066   0x6868             LDR      R0,[R5, #+4]
+   \   00000068   0x9900             LDR      R1,[SP, #+0]
+   \   0000006A   0x1840             ADDS     R0,R0,R1
+   \   0000006C   0x7840             LDRB     R0,[R0, #+1]
+   \   0000006E   0x2130             MOVS     R1,#+48
+   \   00000070   0x4001             ANDS     R1,R1,R0
+   \   00000072   0x2930             CMP      R1,#+48
+   \   00000074   0xD1CA             BNE      ??Regulations__GetPositionByIndirectPushFunctio_1
+    304                  {
+    305                      retval = i;
+   \   00000076   0x0027             MOVS     R7,R4
+    306                      break;
+    307                  }
+    308              }
+    309          
+    310              return (retval);
+   \                     ??Regulations__GetPositionByIndirectPushFunctio_2: (+1)
+   \   00000078   0x0038             MOVS     R0,R7
+   \   0000007A   0xBDFE             POP      {R1-R7,PC}       ;; return
+    311          }
+    312          
+    313          //---------------------------------------------------------------------------------------------------------------------
+    314          /**
+    315           * @brief This method returns the Position for a given down Function ID
+    316           * @param funciton_id
+    317           * @return position
+    318           */
+
+   \                                 In section .text, align 2, keep-with-next
+    319          uint8 Regulations__GetPositionByDownFunctionID(uint8 function_id, uint8 compartment)
+    320          {
+   \                     Regulations__GetPositionByDownFunctionID: (+1)
+   \   00000000   0xB5F3             PUSH     {R0,R1,R4-R7,LR}
+   \   00000002   0xB081             SUB      SP,SP,#+4
+    321              uint8 retval;
+    322              uint8 i;
+    323          
+    324              retval = REGULATION_INVALID;
+   \   00000004   0x27FF             MOVS     R7,#+255
+   \   00000006   0x2400             MOVS     R4,#+0
+   \   00000008   0x....             LDR      R5,??DataTable10
+   \   0000000A   0xE000             B        ??Regulations__GetPositionByDownFunctionID_0
+    325              for (i=0; i<Num_Functions_Total; i++ )
+   \                     ??Regulations__GetPositionByDownFunctionID_1: (+1)
+   \   0000000C   0x1C64             ADDS     R4,R4,#+1
+   \                     ??Regulations__GetPositionByDownFunctionID_0: (+1)
+   \   0000000E   0x0020             MOVS     R0,R4
+   \   00000010   0x7869             LDRB     R1,[R5, #+1]
+   \   00000012   0xB2C0             UXTB     R0,R0
+   \   00000014   0x4288             CMP      R0,R1
+   \   00000016   0xD22E             BCS      ??Regulations__GetPositionByDownFunctionID_2
+    326              {
+    327                  if ((Regulations_Config[i].Function_ID == function_id) &&
+    328                      (REGULATION_COMPARTMENT(i) == compartment) &&
+    329                      (Regulations_Config[i].Down == TRUE) )
+   \   00000018   0xB2E4             UXTB     R4,R4
+   \   0000001A   0x00A0             LSLS     R0,R4,#+2
+   \   0000001C   0x1900             ADDS     R0,R0,R4
+   \   0000001E   0x0040             LSLS     R0,R0,#+1
+   \   00000020   0x9000             STR      R0,[SP, #+0]
+   \   00000022   0x6868             LDR      R0,[R5, #+4]
+   \   00000024   0x9900             LDR      R1,[SP, #+0]
+   \   00000026   0x5C40             LDRB     R0,[R0, R1]
+   \   00000028   0x0640             LSLS     R0,R0,#+25
+   \   0000002A   0x0E40             LSRS     R0,R0,#+25
+   \   0000002C   0x4669             MOV      R1,SP
+   \   0000002E   0x7909             LDRB     R1,[R1, #+4]
+   \   00000030   0x4288             CMP      R0,R1
+   \   00000032   0xD1EB             BNE      ??Regulations__GetPositionByDownFunctionID_1
+   \   00000034   0x0020             MOVS     R0,R4
+   \   00000036   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   0000003A   0x2800             CMP      R0,#+0
+   \   0000003C   0xD101             BNE      ??Regulations__GetPositionByDownFunctionID_3
+   \   0000003E   0x2000             MOVS     R0,#+0
+   \   00000040   0xE00D             B        ??Regulations__GetPositionByDownFunctionID_4
+   \                     ??Regulations__GetPositionByDownFunctionID_3: (+1)
+   \   00000042   0x0020             MOVS     R0,R4
+   \   00000044   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   00000048   0x0006             MOVS     R6,R0
+   \   0000004A   0x0020             MOVS     R0,R4
+   \   0000004C   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   00000050   0x7871             LDRB     R1,[R6, #+1]
+   \   00000052   0x0749             LSLS     R1,R1,#+29
+   \   00000054   0x0F49             LSRS     R1,R1,#+29
+   \   00000056   0x0089             LSLS     R1,R1,#+2
+   \   00000058   0x7840             LDRB     R0,[R0, #+1]
+   \   0000005A   0x0980             LSRS     R0,R0,#+6
+   \   0000005C   0x4308             ORRS     R0,R0,R1
+   \                     ??Regulations__GetPositionByDownFunctionID_4: (+1)
+   \   0000005E   0x4669             MOV      R1,SP
+   \   00000060   0x7A09             LDRB     R1,[R1, #+8]
+   \   00000062   0x4288             CMP      R0,R1
+   \   00000064   0xD1D2             BNE      ??Regulations__GetPositionByDownFunctionID_1
+   \   00000066   0x6868             LDR      R0,[R5, #+4]
+   \   00000068   0x9900             LDR      R1,[SP, #+0]
+   \   0000006A   0x1840             ADDS     R0,R0,R1
+   \   0000006C   0x7840             LDRB     R0,[R0, #+1]
+   \   0000006E   0x08C0             LSRS     R0,R0,#+3
+   \   00000070   0x07C0             LSLS     R0,R0,#+31
+   \   00000072   0xD5CB             BPL      ??Regulations__GetPositionByDownFunctionID_1
+    330                  {
+    331          
+    332                      retval = i;
+   \   00000074   0x0027             MOVS     R7,R4
+    333                      break;
+    334                  }
+    335              }
+    336          
+    337              return (retval);
+   \                     ??Regulations__GetPositionByDownFunctionID_2: (+1)
+   \   00000076   0x0038             MOVS     R0,R7
+   \   00000078   0xBDFE             POP      {R1-R7,PC}       ;; return
+    338          }
+    339          
+    340          //---------------------------------------------------------------------------------------------------------------------
+    341          /**
+    342           * @brief This method returns the Function ID for a given Regulation Position.
+    343           * @param position
+    344           * @return function_id
+    345           */
+
+   \                                 In section .text, align 2, keep-with-next
+    346          uint8 Regulations__GetFunctionIDByPosition(uint8 position)
+    347          {
+   \                     Regulations__GetFunctionIDByPosition: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    348              uint8 function_id = REGULATION_INVALID;
+   \   00000002   0x24FF             MOVS     R4,#+255
+    349          
+    350              if (position >= Num_Functions_Total)
+   \   00000004   0x....             LDR      R1,??DataTable10
+   \   00000006   0x0002             MOVS     R2,R0
+   \   00000008   0x784B             LDRB     R3,[R1, #+1]
+   \   0000000A   0x429A             CMP      R2,R3
+   \   0000000C   0xD306             BCC      ??Regulations__GetFunctionIDByPosition_0
+    351              {
+    352                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(0, position));
+   \   0000000E   0x0003             MOVS     R3,R0
+   \   00000010   0x2201             MOVS     R2,#+1
+   \   00000012   0x4611             MOV      R1,R2
+   \   00000014   0x2047             MOVS     R0,#+71
+   \   00000016   0x.... 0x....      BL       Log__AddMessage
+   \   0000001A   0xE008             B        ??Regulations__GetFunctionIDByPosition_1
+    353              }
+    354              else if (Regulations_Config != NULL)
+   \                     ??Regulations__GetFunctionIDByPosition_0: (+1)
+   \   0000001C   0x6849             LDR      R1,[R1, #+4]
+   \   0000001E   0x2900             CMP      R1,#+0
+   \   00000020   0xD005             BEQ      ??Regulations__GetFunctionIDByPosition_1
+    355              {
+    356                  function_id = Regulations_Config[position].Function_ID;
+   \   00000022   0x0082             LSLS     R2,R0,#+2
+   \   00000024   0x1810             ADDS     R0,R2,R0
+   \   00000026   0x0040             LSLS     R0,R0,#+1
+   \   00000028   0x5C08             LDRB     R0,[R1, R0]
+   \   0000002A   0x0644             LSLS     R4,R0,#+25
+   \   0000002C   0x0E64             LSRS     R4,R4,#+25
+    357              }
+    358          
+    359              return (function_id);
+   \                     ??Regulations__GetFunctionIDByPosition_1: (+1)
+   \   0000002E   0x0020             MOVS     R0,R4
+   \   00000030   0xBD10             POP      {R4,PC}          ;; return
+    360          }
+    361          
+    362          //---------------------------------------------------------------------------------------------------------------------
+    363          /**
+    364           * @brief This method retrieves the total number of regulations are present.
+    365           * @return number of regulations
+    366           */
+
+   \                                 In section .text, align 2, keep-with-next
+    367          uint8 Regulations__GetTotalSize(void)
+    368          {
+    369              return (Num_Functions_Total);
+   \                     Regulations__GetTotalSize: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable10
+   \   00000002   0x7840             LDRB     R0,[R0, #+1]
+   \   00000004   0x4770             BX       LR               ;; return
+    370          }
+    371          
+    372          //---------------------------------------------------------------------------------------------------------------------
+    373          /**
+    374           * @brief This function retrieves how many regulation to Main are present.
+    375           * @return number of regulations
+    376           */
+
+   \                                 In section .text, align 2, keep-with-next
+    377          uint8 Regulations__GetToMainSize(void)
+    378          {
+    379              return (Num_Functions_To_Main);
+   \                     Regulations__GetToMainSize: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable10
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+    380          }
+    381          
+    382          //---------------------------------------------------------------------------------------------------------------------
+    383          /**
+    384           * @brief This method exposes the data related to the configuration of a Regulation.
+    385           * @param position
+    386           * @return pointer to the Regulation config in the Setting File.
+    387           */
+
+   \                                 In section .text, align 2, keep-with-next
+    388          REGULATIONS_CONFIG_TYPE * Regulations__GetRegulationConfig(uint8 position)
+    389          {
+   \                     Regulations__GetRegulationConfig: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    390              REGULATIONS_CONFIG_TYPE * regulation_config = NULL;
+   \   00000002   0x2400             MOVS     R4,#+0
+    391          
+    392              if (position >= Num_Functions_Total)
+   \   00000004   0x....             LDR      R1,??DataTable10
+   \   00000006   0x0002             MOVS     R2,R0
+   \   00000008   0x784B             LDRB     R3,[R1, #+1]
+   \   0000000A   0x429A             CMP      R2,R3
+   \   0000000C   0xD306             BCC      ??Regulations__GetRegulationConfig_0
+    393              {
+    394                  LOG_ADD_EXCEPTION(CONFIG_NOT_FOUND, position);
+   \   0000000E   0x0003             MOVS     R3,R0
+   \   00000010   0x2201             MOVS     R2,#+1
+   \   00000012   0x2104             MOVS     R1,#+4
+   \   00000014   0x2047             MOVS     R0,#+71
+   \   00000016   0x.... 0x....      BL       Log__AddMessage
+   \   0000001A   0xE006             B        ??Regulations__GetRegulationConfig_1
+    395              }
+    396              else if (Regulations_Config != NULL)
+   \                     ??Regulations__GetRegulationConfig_0: (+1)
+   \   0000001C   0x6849             LDR      R1,[R1, #+4]
+   \   0000001E   0x2900             CMP      R1,#+0
+   \   00000020   0xD003             BEQ      ??Regulations__GetRegulationConfig_1
+    397              {
+    398                  regulation_config = &Regulations_Config[position];
+   \   00000022   0x0082             LSLS     R2,R0,#+2
+   \   00000024   0x1810             ADDS     R0,R2,R0
+   \   00000026   0x0040             LSLS     R0,R0,#+1
+   \   00000028   0x180C             ADDS     R4,R1,R0
+    399              }
+    400          
+    401              return (regulation_config);
+   \                     ??Regulations__GetRegulationConfig_1: (+1)
+   \   0000002A   0x0020             MOVS     R0,R4
+   \   0000002C   0xBD10             POP      {R4,PC}          ;; return
+    402          }
+    403          
+    404          //---------------------------------------------------------------------------------------------------------------------
+    405          /**
+    406           * @brief This method retrieves the Index Value of a Regulation by Position
+    407           * @param position
+    408           * @return Index Value
+    409           */
+
+   \                                 In section .text, align 2, keep-with-next
+    410          uint8 Regulations__GetIndexValueByPosition(uint8 position)
+    411          {
+   \                     Regulations__GetIndexValueByPosition: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    412              if (position < Num_Functions_Total)
+   \   00000002   0x0001             MOVS     R1,R0
+   \   00000004   0x....             LDR      R2,??DataTable24
+   \   00000006   0x7852             LDRB     R2,[R2, #+1]
+   \   00000008   0x4291             CMP      R1,R2
+   \   0000000A   0xD202             BCS      ??Regulations__GetIndexValueByPosition_0
+    413              {
+    414                  return(Regulations_Index_Buffer[position]);
+   \   0000000C   0x....             LDR      R1,??DataTable26
+   \   0000000E   0x5C08             LDRB     R0,[R1, R0]
+   \   00000010   0xBD02             POP      {R1,PC}
+    415              }
+    416              else
+    417              {
+    418                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(1, position));
+   \                     ??Regulations__GetIndexValueByPosition_0: (+1)
+   \   00000012   0x2380             MOVS     R3,#+128
+   \   00000014   0x005B             LSLS     R3,R3,#+1        ;; #+256
+   \   00000016   0x4303             ORRS     R3,R3,R0
+   \   00000018   0x2201             MOVS     R2,#+1
+   \   0000001A   0x4611             MOV      R1,R2
+   \   0000001C   0x2047             MOVS     R0,#+71
+   \   0000001E   0x.... 0x....      BL       Log__AddMessage
+    419                  return (REGULATION_INVALID);
+   \   00000022   0x20FF             MOVS     R0,#+255
+   \   00000024   0xBD02             POP      {R1,PC}          ;; return
+    420              }
+    421          }
+    422          
+    423          //---------------------------------------------------------------------------------------------------------------------
+    424          /**
+    425           * @brief This method retrieves the Index Value of a Requested Regulation by Position
+    426           * @param position
+    427           * @return Requested Index Value
+    428           */
+
+   \                                 In section .text, align 2, keep-with-next
+    429          uint8 Regulations__GetRequestedIndexValueByPosition(uint8 position)
+    430          {
+   \                     Regulations__GetRequestedIndexValueByPosition: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    431              if (position < Num_Functions_Total)
+   \   00000002   0x0001             MOVS     R1,R0
+   \   00000004   0x....             LDR      R2,??DataTable24
+   \   00000006   0x7852             LDRB     R2,[R2, #+1]
+   \   00000008   0x4291             CMP      R1,R2
+   \   0000000A   0xD202             BCS      ??Regulations__GetRequestedIndexValueByPosition_0
+    432              {
+    433                  return(Regulations_Index_Request_Buffer[position]);
+   \   0000000C   0x....             LDR      R1,??DataTable27
+   \   0000000E   0x5C08             LDRB     R0,[R1, R0]
+   \   00000010   0xBD02             POP      {R1,PC}
+    434              }
+    435              else
+    436              {
+    437                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(2, position));
+   \                     ??Regulations__GetRequestedIndexValueByPosition_0: (+1)
+   \   00000012   0x2380             MOVS     R3,#+128
+   \   00000014   0x009B             LSLS     R3,R3,#+2        ;; #+512
+   \   00000016   0x4303             ORRS     R3,R3,R0
+   \   00000018   0x2201             MOVS     R2,#+1
+   \   0000001A   0x4611             MOV      R1,R2
+   \   0000001C   0x2047             MOVS     R0,#+71
+   \   0000001E   0x.... 0x....      BL       Log__AddMessage
+    438                  return (REGULATION_INVALID);
+   \   00000022   0x20FF             MOVS     R0,#+255
+   \   00000024   0xBD02             POP      {R1,PC}          ;; return
+    439              }
+    440          }
+    441          
+    442          //---------------------------------------------------------------------------------------------------------------------
+    443          /**
+    444           * @brief This method checks if there is a Regulation change pending by Position
+    445           * @param position
+    446           * @return TRUE (pending change) FALSE (no pending change)
+    447           */
+
+   \                                 In section .text, align 2, keep-with-next
+    448          BOOL_TYPE Regulations__IsRegulationChanged(uint8 position)
+    449          {
+   \                     Regulations__IsRegulationChanged: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    450              if (position < Num_Functions_Total)
+   \   00000002   0x0001             MOVS     R1,R0
+   \   00000004   0x....             LDR      R2,??DataTable24
+   \   00000006   0x7852             LDRB     R2,[R2, #+1]
+   \   00000008   0x4291             CMP      R1,R2
+   \   0000000A   0xD209             BCS      ??Regulations__IsRegulationChanged_0
+    451              {
+    452                  if (Regulations_Index_Buffer[position] != Regulations_Index_Request_Buffer[position])
+   \   0000000C   0x....             LDR      R1,??DataTable26
+   \   0000000E   0x5C09             LDRB     R1,[R1, R0]
+   \   00000010   0x....             LDR      R2,??DataTable27
+   \   00000012   0x5C10             LDRB     R0,[R2, R0]
+   \   00000014   0x4281             CMP      R1,R0
+   \   00000016   0xD001             BEQ      ??Regulations__IsRegulationChanged_1
+    453                  {
+    454                      return (TRUE);
+   \   00000018   0x2001             MOVS     R0,#+1
+   \   0000001A   0xBD02             POP      {R1,PC}
+    455                  }
+    456                  else
+    457                  {
+    458                      return (FALSE);
+   \                     ??Regulations__IsRegulationChanged_1: (+1)
+   \   0000001C   0x2000             MOVS     R0,#+0
+   \   0000001E   0xBD02             POP      {R1,PC}
+    459                  }
+    460              }
+    461              else
+    462              {
+    463                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(3, position));
+   \                     ??Regulations__IsRegulationChanged_0: (+1)
+   \   00000020   0x23C0             MOVS     R3,#+192
+   \   00000022   0x009B             LSLS     R3,R3,#+2        ;; #+768
+   \   00000024   0x4303             ORRS     R3,R3,R0
+   \   00000026   0x2201             MOVS     R2,#+1
+   \   00000028   0x4611             MOV      R1,R2
+   \   0000002A   0x2047             MOVS     R0,#+71
+   \   0000002C   0x.... 0x....      BL       Log__AddMessage
+    464                  return (FALSE);
+   \   00000030   0x2000             MOVS     R0,#+0
+   \   00000032   0xBD02             POP      {R1,PC}          ;; return
+    465              }
+    466          }
+    467          
+    468          //---------------------------------------------------------------------------------------------------------------------
+    469          /**
+    470           * @brief This method Accepts a requested regulation.
+    471           * @param function_id  (0 to Num_Functions_Total)
+    472           */
+
+   \                                 In section .text, align 2, keep-with-next
+    473          void Regulations__AcceptRequestByPosition(uint8 position)
+    474          {
+   \                     Regulations__AcceptRequestByPosition: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    475              if (position < Num_Functions_Total)
+   \   00000002   0x....             LDR      R1,??DataTable24
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x784B             LDRB     R3,[R1, #+1]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD21C             BCS      ??Regulations__AcceptRequestByPosition_0
+    476              {
+    477                  if( (Regulations_Index_Request_Buffer[position] > 0) &&                                             //regulation index 0 is also invalid
+    478                      (Regulations_Index_Request_Buffer[position] <= Regulations_Config[position].Num_Regulations))
+   \   0000000C   0x0004             MOVS     R4,R0
+   \   0000000E   0x....             LDR      R2,??DataTable27
+   \   00000010   0x1915             ADDS     R5,R2,R4
+   \   00000012   0x782A             LDRB     R2,[R5, #+0]
+   \   00000014   0x0013             MOVS     R3,R2
+   \   00000016   0xD00B             BEQ      ??Regulations__AcceptRequestByPosition_1
+   \   00000018   0x6849             LDR      R1,[R1, #+4]
+   \   0000001A   0x00A3             LSLS     R3,R4,#+2
+   \   0000001C   0x191B             ADDS     R3,R3,R4
+   \   0000001E   0x005B             LSLS     R3,R3,#+1
+   \   00000020   0x18C9             ADDS     R1,R1,R3
+   \   00000022   0x7989             LDRB     R1,[R1, #+6]
+   \   00000024   0x0013             MOVS     R3,R2
+   \   00000026   0x4299             CMP      R1,R3
+   \   00000028   0xD302             BCC      ??Regulations__AcceptRequestByPosition_1
+    479                  {
+    480                      Regulations_Index_Buffer[position] = Regulations_Index_Request_Buffer[position];    //accept the request
+   \   0000002A   0x....             LDR      R0,??DataTable26
+   \   0000002C   0x5502             STRB     R2,[R0, R4]
+   \   0000002E   0xBD31             POP      {R0,R4,R5,PC}
+    481                  }
+    482                  else
+    483                  {
+    484                      LOG_ADD_EXCEPTION(INDEX_OUT_OF_RANGE, COMBINE_BYTES(Regulations_Index_Request_Buffer[position], position));
+   \                     ??Regulations__AcceptRequestByPosition_1: (+1)
+   \   00000030   0x0213             LSLS     R3,R2,#+8
+   \   00000032   0x4303             ORRS     R3,R3,R0
+   \   00000034   0x2201             MOVS     R2,#+1
+   \   00000036   0x2103             MOVS     R1,#+3
+   \   00000038   0x2047             MOVS     R0,#+71
+   \   0000003A   0x.... 0x....      BL       Log__AddMessage
+    485                      Regulations_Index_Request_Buffer[position] = Regulations_Index_Buffer[position];    //replace the request with current
+   \   0000003E   0x....             LDR      R0,??DataTable26
+   \   00000040   0x5D00             LDRB     R0,[R0, R4]
+   \   00000042   0x7028             STRB     R0,[R5, #+0]
+   \   00000044   0xBD31             POP      {R0,R4,R5,PC}
+    486                  }
+    487              }
+    488              else
+    489              {
+    490                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(4, position));
+   \                     ??Regulations__AcceptRequestByPosition_0: (+1)
+   \   00000046   0x2380             MOVS     R3,#+128
+   \   00000048   0x00DB             LSLS     R3,R3,#+3        ;; #+1024
+   \   0000004A   0x4303             ORRS     R3,R3,R0
+   \   0000004C   0x2201             MOVS     R2,#+1
+   \   0000004E   0x4611             MOV      R1,R2
+   \   00000050   0x2047             MOVS     R0,#+71
+   \   00000052   0x.... 0x....      BL       Log__AddMessage
+    491              }
+    492          }
+   \   00000056   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    493          
+    494          //---------------------------------------------------------------------------------------------------------------------
+    495          /**
+    496           * @brief This method Rejects a requested regulation.
+    497           * @param function_id (0 to Num_Functions_Total)
+    498           */
+
+   \                                 In section .text, align 2, keep-with-next
+    499          void Regulations__RejectRequestByPosition(uint8 position)
+    500          {
+   \                     Regulations__RejectRequestByPosition: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    501              if (position < Num_Functions_Total)
+   \   00000002   0x0001             MOVS     R1,R0
+   \   00000004   0x....             LDR      R2,??DataTable24
+   \   00000006   0x7852             LDRB     R2,[R2, #+1]
+   \   00000008   0x4291             CMP      R1,R2
+   \   0000000A   0xD204             BCS      ??Regulations__RejectRequestByPosition_0
+    502              {
+    503                  Regulations_Index_Request_Buffer[position] = Regulations_Index_Buffer[position];
+   \   0000000C   0x....             LDR      R1,??DataTable26
+   \   0000000E   0x5C09             LDRB     R1,[R1, R0]
+   \   00000010   0x....             LDR      R2,??DataTable27
+   \   00000012   0x5411             STRB     R1,[R2, R0]
+   \   00000014   0xBD01             POP      {R0,PC}
+    504              }
+    505              else
+    506              {
+    507                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(5, position));
+   \                     ??Regulations__RejectRequestByPosition_0: (+1)
+   \   00000016   0x23A0             MOVS     R3,#+160
+   \   00000018   0x00DB             LSLS     R3,R3,#+3        ;; #+1280
+   \   0000001A   0x4303             ORRS     R3,R3,R0
+   \   0000001C   0x2201             MOVS     R2,#+1
+   \   0000001E   0x4611             MOV      R1,R2
+   \   00000020   0x2047             MOVS     R0,#+71
+   \   00000022   0x.... 0x....      BL       Log__AddMessage
+    508              }
+    509          }
+   \   00000026   0xBD01             POP      {R0,PC}          ;; return
+    510          
+    511          //---------------------------------------------------------------------------------------------------------------------
+    512          /**
+    513           * @brief Returns the index of the Start regulation that matches the visual value passed to the function.
+    514           * @param visual_value
+    515           * @param position
+    516           */
+
+   \                                 In section .text, align 2, keep-with-next
+    517          uint8 Regulations__GetIndexOfVisualValueByPosition(sint32 visual_value, uint8 position)
+    518          {
+   \                     Regulations__GetIndexOfVisualValueByPosition: (+1)
+   \   00000000   0xB5F1             PUSH     {R0,R4-R7,LR}
+   \   00000002   0x000F             MOVS     R7,R1
+    519              uint8 regulation_index;
+    520              REGULATIONS_CONFIG_TYPE * regulation;
+    521              uint8 retval =  REGULATION_INVALID;
+   \   00000004   0x24FF             MOVS     R4,#+255
+    522          
+    523              regulation = Regulations__GetRegulationConfig(position);
+   \   00000006   0x0038             MOVS     R0,R7
+   \   00000008   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   0000000C   0x0005             MOVS     R5,R0
+    524          
+    525              if(regulation != NULL)
+   \   0000000E   0xD010             BEQ      ??Regulations__GetIndexOfVisualValueByPosition_0
+    526              {
+    527                  for(regulation_index = 1; regulation_index <= regulation->Num_Regulations; regulation_index++)
+   \   00000010   0x2601             MOVS     R6,#+1
+   \   00000012   0xE000             B        ??Regulations__GetIndexOfVisualValueByPosition_1
+   \                     ??Regulations__GetIndexOfVisualValueByPosition_2: (+1)
+   \   00000014   0x1C76             ADDS     R6,R6,#+1
+   \                     ??Regulations__GetIndexOfVisualValueByPosition_1: (+1)
+   \   00000016   0x79A8             LDRB     R0,[R5, #+6]
+   \   00000018   0x0031             MOVS     R1,R6
+   \   0000001A   0xB2C9             UXTB     R1,R1
+   \   0000001C   0x4288             CMP      R0,R1
+   \   0000001E   0xD308             BCC      ??Regulations__GetIndexOfVisualValueByPosition_0
+    528                  {
+    529                      if(Regulations__GetVisualValueByPositionPlusIndex(position, regulation_index) == visual_value)
+   \   00000020   0x0031             MOVS     R1,R6
+   \   00000022   0xB2C9             UXTB     R1,R1
+   \   00000024   0x0038             MOVS     R0,R7
+   \   00000026   0x.... 0x....      BL       Regulations__GetVisualValueByPositionPlusIndex
+   \   0000002A   0x9900             LDR      R1,[SP, #+0]
+   \   0000002C   0x4288             CMP      R0,R1
+   \   0000002E   0xD1F1             BNE      ??Regulations__GetIndexOfVisualValueByPosition_2
+    530                      {
+    531                          retval = regulation_index;
+   \   00000030   0x0034             MOVS     R4,R6
+    532                          break;
+    533                      }
+    534                  }
+    535              }
+    536          
+    537              return(retval);
+   \                     ??Regulations__GetIndexOfVisualValueByPosition_0: (+1)
+   \   00000032   0x0020             MOVS     R0,R4
+   \   00000034   0xB2C0             UXTB     R0,R0
+   \   00000036   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    538          }
+    539          
+    540          //---------------------------------------------------------------------------------------------------------------------
+    541          /**
+    542           * @brief Returns the index of the regulation that matches the main value passed to the function.
+    543           * @param main_value: references the main value from a regulation table
+    544           * @param position: position of the regulation in the list of all regulations (based on setting file)
+    545           */
+
+   \                                 In section .text, align 2, keep-with-next
+    546          uint8 Regulations__GetIndexOfMainValueByPosition(sint32 main_value, uint8 position)
+    547          {
+   \                     Regulations__GetIndexOfMainValueByPosition: (+1)
+   \   00000000   0xB5F1             PUSH     {R0,R4-R7,LR}
+   \   00000002   0x000F             MOVS     R7,R1
+    548              uint8 regulation_index;
+    549              REGULATIONS_CONFIG_TYPE * regulation;
+    550              uint8 retval =  REGULATION_INVALID;
+   \   00000004   0x24FF             MOVS     R4,#+255
+    551          
+    552              regulation = Regulations__GetRegulationConfig(position);
+   \   00000006   0x0038             MOVS     R0,R7
+   \   00000008   0x.... 0x....      BL       Regulations__GetRegulationConfig
+   \   0000000C   0x0005             MOVS     R5,R0
+    553          
+    554              if(regulation != NULL)
+   \   0000000E   0xD010             BEQ      ??Regulations__GetIndexOfMainValueByPosition_0
+    555              {
+    556                  for(regulation_index = 1; regulation_index <= regulation->Num_Regulations; regulation_index++)
+   \   00000010   0x2601             MOVS     R6,#+1
+   \   00000012   0xE000             B        ??Regulations__GetIndexOfMainValueByPosition_1
+   \                     ??Regulations__GetIndexOfMainValueByPosition_2: (+1)
+   \   00000014   0x1C76             ADDS     R6,R6,#+1
+   \                     ??Regulations__GetIndexOfMainValueByPosition_1: (+1)
+   \   00000016   0x79A8             LDRB     R0,[R5, #+6]
+   \   00000018   0x0031             MOVS     R1,R6
+   \   0000001A   0xB2C9             UXTB     R1,R1
+   \   0000001C   0x4288             CMP      R0,R1
+   \   0000001E   0xD308             BCC      ??Regulations__GetIndexOfMainValueByPosition_0
+    557                  {
+    558                      if(Regulations__GetMainValueByPositionPlusIndex(position, regulation_index) == main_value)
+   \   00000020   0x0031             MOVS     R1,R6
+   \   00000022   0xB2C9             UXTB     R1,R1
+   \   00000024   0x0038             MOVS     R0,R7
+   \   00000026   0x.... 0x....      BL       Regulations__GetMainValueByPositionPlusIndex
+   \   0000002A   0x9900             LDR      R1,[SP, #+0]
+   \   0000002C   0x4288             CMP      R0,R1
+   \   0000002E   0xD1F1             BNE      ??Regulations__GetIndexOfMainValueByPosition_2
+    559                      {
+    560                          retval = regulation_index;
+   \   00000030   0x0034             MOVS     R4,R6
+    561                          break;
+    562                      }
+    563                  }
+    564              }
+    565          
+    566              return(retval);
+   \                     ??Regulations__GetIndexOfMainValueByPosition_0: (+1)
+   \   00000032   0x0020             MOVS     R0,R4
+   \   00000034   0xB2C0             UXTB     R0,R0
+   \   00000036   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    567          }
+    568          
+    569          //---------------------------------------------------------------------------------------------------------------------
+    570          /**
+    571           * @brief   Registers a regulation event handler with the module.
+    572           * @param   event_handler: pointer to the function that handles the event
+    573           */
+
+   \                                 In section .text, align 2, keep-with-next
+    574          void Regulations__RegisterChangeEventHandler(CALLBACK_HANDLER_TYPE event_handler)
+    575          {
+   \                     Regulations__RegisterChangeEventHandler: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    576              Callback__Register(&Regulation_Callback_Control_Structure, event_handler);
+   \   00000002   0x0001             MOVS     R1,R0
+   \   00000004   0x....             LDR      R0,??DataTable31
+   \   00000006   0x.... 0x....      BL       Callback__Register
+    577          }
+   \   0000000A   0xBD01             POP      {R0,PC}          ;; return
+    578          
+    579          //---------------------------------------------------------------------------------------------------------------------
+    580          /**
+    581           * @brief   Unregisters a regulation event handler with the module.
+    582           * @param   event_handler: pointer to the function that handles the event
+    583           */
+
+   \                                 In section .text, align 2, keep-with-next
+    584          void Regulations__UnregisterChangeEventHandler(CALLBACK_HANDLER_TYPE event_handler)
+    585          {
+   \                     Regulations__UnregisterChangeEventHandler: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    586              Callback__Unregister(&Regulation_Callback_Control_Structure, event_handler);
+   \   00000002   0x0001             MOVS     R1,R0
+   \   00000004   0x....             LDR      R0,??DataTable31
+   \   00000006   0x.... 0x....      BL       Callback__Unregister
+    587          }
+   \   0000000A   0xBD01             POP      {R0,PC}          ;; return
+    588          
+    589          //=====================================================================================================================
+    590          //=====================================================================================================================
+    591          //=====================================================================================================================
+    592          // Methods used by ACU Only
+    593          //=====================================================================================================================
+    594          //=====================================================================================================================
+    595          //=====================================================================================================================
+    596          
+    597          //---------------------------------------------------------------------------------------------------------------------
+    598          /**
+    599           * @brief  This method retrieves the pointer to the Regulation Index Buffer.
+    600           * @return pointer to the Regulation index buffer.
+    601           */
+
+   \                                 In section .text, align 2, keep-with-next
+    602          const uint8 * Regulations__GetIndexBufferPtr(void)
+    603          {
+    604              return ((const uint8 *)Regulations_Index_Buffer);       //lint !e926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \                     Regulations__GetIndexBufferPtr: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable26
+   \   00000002   0x4770             BX       LR               ;; return
+    605          }
+    606          
+    607          //---------------------------------------------------------------------------------------------------------------------
+    608          /**
+    609           * @brief This method sets the buffer used to track requested regulations from the HMI
+    610           * @param value_ptr:  Points to array of regulation indexes
+    611           * @param value_size: Number of regulations sent from the HMI
+    612           */
+
+   \                                 In section .text, align 2, keep-with-next
+    613          void Regulations__SetRequestIndexBuffer(const uint8 * value_ptr, uint8 value_size)
+    614          {
+   \                     Regulations__SetRequestIndexBuffer: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    615              if (value_size == Num_Functions_Total)      // Only update requested regulations buffer if the number of regulations matches the expected number
+   \   00000004   0x....             LDR      R6,??DataTable24
+   \   00000006   0x7875             LDRB     R5,[R6, #+1]
+   \   00000008   0x0008             MOVS     R0,R1
+   \   0000000A   0x002A             MOVS     R2,R5
+   \   0000000C   0x4290             CMP      R0,R2
+   \   0000000E   0xD10B             BNE      ??Regulations__SetRequestIndexBuffer_0
+    616              {
+    617                  // Copy all regulations into the request buffer
+    618                  memcpy(Regulations_Index_Request_Buffer, value_ptr, value_size);
+   \   00000010   0x000A             MOVS     R2,R1
+   \   00000012   0x0021             MOVS     R1,R4
+   \   00000014   0x....             LDR      R0,??DataTable27
+   \   00000016   0x.... 0x....      BL       __aeabi_memcpy
+   \   0000001A   0x7830             LDRB     R0,[R6, #+0]
+   \   0000001C   0x1A2A             SUBS     R2,R5,R0
+   \   0000001E   0x1821             ADDS     R1,R4,R0
+   \   00000020   0x....             LDR      R3,??DataTable26
+   \   00000022   0x1818             ADDS     R0,R3,R0
+   \   00000024   0x.... 0x....      BL       __aeabi_memcpy
+    619          
+    620                  // Copy regulations that are NOT "to_main" into the regular buffer to automatically accept the value
+    621                  memcpy(&(Regulations_Index_Buffer[Num_Functions_To_Main]), &(value_ptr[Num_Functions_To_Main]), (Num_Functions_Total - Num_Functions_To_Main));
+    622              }
+    623          }
+   \                     ??Regulations__SetRequestIndexBuffer_0: (+1)
+   \   00000028   0xBD70             POP      {R4-R6,PC}       ;; return
+    624          
+    625          //---------------------------------------------------------------------------------------------------------------------
+    626          /**
+    627           * @brief This method retrieves the Main Value of a Regulation by position.
+    628           * @param  position: position of the regulation in the list of all regulations (based on setting file)
+    629           * @return Regulation Main Value
+    630           */
+
+   \                                 In section .text, align 2, keep-with-next
+    631          sint32 Regulations__GetMainValueByPosition(uint8 position)
+    632          {
+   \                     Regulations__GetMainValueByPosition: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    633              if (position < Num_Functions_Total)
+   \   00000002   0x....             LDR      R1,??DataTable24
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x784B             LDRB     R3,[R1, #+1]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD20B             BCS      ??Regulations__GetMainValueByPosition_0
+    634              {
+    635                  return (GetRegValue(SF_PTR_ACU_REG_PARAM_TABLE, Regulations_Config[position].Main_Regulation_Table,Regulations_Index_Buffer[position]));
+   \   0000000C   0x....             LDR      R2,??DataTable26
+   \   0000000E   0x5C12             LDRB     R2,[R2, R0]
+   \   00000010   0x6849             LDR      R1,[R1, #+4]
+   \   00000012   0x0083             LSLS     R3,R0,#+2
+   \   00000014   0x1818             ADDS     R0,R3,R0
+   \   00000016   0x0040             LSLS     R0,R0,#+1
+   \   00000018   0x1808             ADDS     R0,R1,R0
+   \   0000001A   0x7A01             LDRB     R1,[R0, #+8]
+   \   0000001C   0x2023             MOVS     R0,#+35
+   \   0000001E   0x.... 0x....      BL       GetRegValue
+   \   00000022   0xBD02             POP      {R1,PC}
+    636              }
+    637              else
+    638              {
+    639                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(6, position));
+   \                     ??Regulations__GetMainValueByPosition_0: (+1)
+   \   00000024   0x23C0             MOVS     R3,#+192
+   \   00000026   0x00DB             LSLS     R3,R3,#+3        ;; #+1536
+   \   00000028   0x4303             ORRS     R3,R3,R0
+   \   0000002A   0x2201             MOVS     R2,#+1
+   \   0000002C   0x4611             MOV      R1,R2
+   \   0000002E   0x2047             MOVS     R0,#+71
+   \   00000030   0x.... 0x....      BL       Log__AddMessage
+    640                  return (0);
+   \   00000034   0x2000             MOVS     R0,#+0
+   \   00000036   0xBD02             POP      {R1,PC}          ;; return
+    641              }
+    642          }
+    643          
+    644          //---------------------------------------------------------------------------------------------------------------------
+    645          /**
+    646           * @brief  This method retrieves the Main Value of a Regulation by position at a specific regulation index.
+    647           * @param  position:  position of the regulation in the list of all regulations (based on setting file)
+    648           * @return Regulation Main Value
+    649           */
+
+   \                                 In section .text, align 2, keep-with-next
+    650          sint32 Regulations__GetMainValueByPositionPlusIndex(uint8 position, uint8 index)
+    651          {
+   \                     Regulations__GetMainValueByPositionPlusIndex: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    652              if (position < Num_Functions_Total)
+   \   00000002   0x....             LDR      R3,??DataTable31_1
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x785C             LDRB     R4,[R3, #+1]
+   \   00000008   0x42A2             CMP      R2,R4
+   \   0000000A   0xD20A             BCS      ??Regulations__GetMainValueByPositionPlusIndex_0
+    653              {
+    654                  return (GetRegValue(SF_PTR_ACU_REG_PARAM_TABLE, Regulations_Config[position].Main_Regulation_Table, index));
+   \   0000000C   0x000A             MOVS     R2,R1
+   \   0000000E   0x6859             LDR      R1,[R3, #+4]
+   \   00000010   0x0083             LSLS     R3,R0,#+2
+   \   00000012   0x1818             ADDS     R0,R3,R0
+   \   00000014   0x0040             LSLS     R0,R0,#+1
+   \   00000016   0x1808             ADDS     R0,R1,R0
+   \   00000018   0x7A01             LDRB     R1,[R0, #+8]
+   \   0000001A   0x2023             MOVS     R0,#+35
+   \   0000001C   0x.... 0x....      BL       GetRegValue
+   \   00000020   0xBD10             POP      {R4,PC}
+    655              }
+    656              else
+    657              {
+    658                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(12, position));
+   \                     ??Regulations__GetMainValueByPositionPlusIndex_0: (+1)
+   \   00000022   0x23C0             MOVS     R3,#+192
+   \   00000024   0x011B             LSLS     R3,R3,#+4        ;; #+3072
+   \   00000026   0x4303             ORRS     R3,R3,R0
+   \   00000028   0x2201             MOVS     R2,#+1
+   \   0000002A   0x4611             MOV      R1,R2
+   \   0000002C   0x2047             MOVS     R0,#+71
+   \   0000002E   0x.... 0x....      BL       Log__AddMessage
+    659                  return (0);
+   \   00000032   0x2000             MOVS     R0,#+0
+   \   00000034   0xBD10             POP      {R4,PC}          ;; return
+    660              }
+    661          }
+    662          
+    663          //---------------------------------------------------------------------------------------------------------------------
+    664          /**
+    665           * @brief  This method retrieves the Main Value of a Requested Regulation by position.
+    666           * @param  position: position of the regulation in the list of all regulations (based on setting file)
+    667           * @return Regulation Requested Main Value
+    668           */
+
+   \                                 In section .text, align 2, keep-with-next
+    669          sint32 Regulations__GetRequestedMainValueByPosition(uint8 position)
+    670          {
+   \                     Regulations__GetRequestedMainValueByPosition: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    671              if (position < Num_Functions_Total)
+   \   00000002   0x....             LDR      R1,??DataTable24
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x784B             LDRB     R3,[R1, #+1]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD20B             BCS      ??Regulations__GetRequestedMainValueByPosition_0
+    672              {
+    673                  return (GetRegValue(SF_PTR_ACU_REG_PARAM_TABLE,Regulations_Config[position].Main_Regulation_Table,Regulations_Index_Request_Buffer[position]));
+   \   0000000C   0x....             LDR      R2,??DataTable27
+   \   0000000E   0x5C12             LDRB     R2,[R2, R0]
+   \   00000010   0x6849             LDR      R1,[R1, #+4]
+   \   00000012   0x0083             LSLS     R3,R0,#+2
+   \   00000014   0x1818             ADDS     R0,R3,R0
+   \   00000016   0x0040             LSLS     R0,R0,#+1
+   \   00000018   0x1808             ADDS     R0,R1,R0
+   \   0000001A   0x7A01             LDRB     R1,[R0, #+8]
+   \   0000001C   0x2023             MOVS     R0,#+35
+   \   0000001E   0x.... 0x....      BL       GetRegValue
+   \   00000022   0xBD02             POP      {R1,PC}
+    674              }
+    675              else
+    676              {
+    677                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(7, position));
+   \                     ??Regulations__GetRequestedMainValueByPosition_0: (+1)
+   \   00000024   0x23E0             MOVS     R3,#+224
+   \   00000026   0x00DB             LSLS     R3,R3,#+3        ;; #+1792
+   \   00000028   0x4303             ORRS     R3,R3,R0
+   \   0000002A   0x2201             MOVS     R2,#+1
+   \   0000002C   0x4611             MOV      R1,R2
+   \   0000002E   0x2047             MOVS     R0,#+71
+   \   00000030   0x.... 0x....      BL       Log__AddMessage
+    678                  return (0);
+   \   00000034   0x2000             MOVS     R0,#+0
+   \   00000036   0xBD02             POP      {R1,PC}          ;; return
+    679              }
+    680          }
+    681          
+    682          //---------------------------------------------------------------------------------------------------------------------
+    683          /**
+    684           * @brief  This method retrieves the type of the Main Value of a Requested Regulation by position.
+    685           * @param  position: position of the regulation in the list of all regulations (based on setting file)
+    686           * @return Regulation Requested Main Value Type
+    687           */
+
+   \                                 In section .text, align 2, keep-with-next
+    688          DATATYPE_TYPE Regulations__GetMainValueTypeByPosition(uint8 position)
+    689          {
+   \                     Regulations__GetMainValueTypeByPosition: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    690              return(GetRegulationTableValueType(SF_PTR_ACU_REG_PARAM_TABLE, Regulations_Config[position].Main_Regulation_Table));
+   \   00000002   0x....             LDR      R1,??DataTable31_1
+   \   00000004   0x6849             LDR      R1,[R1, #+4]
+   \   00000006   0x0082             LSLS     R2,R0,#+2
+   \   00000008   0x1810             ADDS     R0,R2,R0
+   \   0000000A   0x0040             LSLS     R0,R0,#+1
+   \   0000000C   0x1808             ADDS     R0,R1,R0
+   \   0000000E   0x7A01             LDRB     R1,[R0, #+8]
+   \   00000010   0x2023             MOVS     R0,#+35
+   \   00000012   0x.... 0x....      BL       GetRegulationTableValueType
+   \   00000016   0xBD02             POP      {R1,PC}          ;; return
+    691          }
+    692          
+    693          //=====================================================================================================================
+    694          //=====================================================================================================================
+    695          //=====================================================================================================================
+    696          // Methods used by HMI Only
+    697          //=====================================================================================================================
+    698          //=====================================================================================================================
+    699          //=====================================================================================================================
+    700          //---------------------------------------------------------------------------------------------------------------------
+    701          /**
+    702           * @brief  This method retrieves the pointer to the Requested Regulation Index Buffer.
+    703           * @return pointer to the Requested Regulation index buffer.
+    704           */
+
+   \                                 In section .text, align 2, keep-with-next
+    705          const uint8 * Regulations__GetIndexRequestBufferPtr(void)
+    706          {
+    707              return ((const uint8 *)Regulations_Index_Request_Buffer);   //lint !e926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \                     Regulations__GetIndexRequestBufferPtr: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable27
+   \   00000002   0x4770             BX       LR               ;; return
+    708          }
+    709          
+    710          //---------------------------------------------------------------------------------------------------------------------
+    711          /**
+    712           * @brief This method is used by the Hmi to set the Regulations buffer received from the ACU
+    713           * @param value_ptr
+    714           * @param value_size
+    715           */
+
+   \                                 In section .text, align 2, keep-with-next
+    716          void Regulations__SetIndexBuffer(const uint8 * value_ptr, uint8 value_size)
+    717          {
+    718              if (value_size == Num_Functions_Total)
+   \                     Regulations__SetIndexBuffer: (+1)
+   \   00000000   0x000A             MOVS     R2,R1
+   \   00000002   0x....             LDR      R3,??DataTable25
+   \   00000004   0x785B             LDRB     R3,[R3, #+1]
+   \   00000006   0x429A             CMP      R2,R3
+   \   00000008   0xD000             BEQ      ??Regulations__SetIndexBuffer_0
+   \   0000000A   0x4770             BX       LR
+    719              {
+    720                  memcpy(Regulations_Index_Buffer,value_ptr,value_size);
+   \                     ??Regulations__SetIndexBuffer_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x0001             MOVS     R1,R0
+   \   00000010   0x....             LDR      R0,??DataTable26
+   \   00000012   0x.... 0x....      BL       __aeabi_memcpy
+    721          
+    722                  #if (SYSTEM_ACU_HANDLING == FALSE)
+    723                      if (Regulations_Start == TRUE)
+    724                      {
+    725                          Regulations_Start = FALSE;
+    726                          memcpy(Regulations_Index_Request_Buffer,Regulations_Index_Buffer,value_size);
+    727                      }
+    728                  #endif
+    729              }
+    730          }
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    731          
+    732          //---------------------------------------------------------------------------------------------------------------------
+    733          /**
+    734           * @brief This method Set one position Data into the Request Index Buffer
+    735           * @param position: position of the regulation in the list of all regulations (based on setting file)
+    736           * @param value: desired index of the regulation
+    737           * @return TRUE if the requested index is set to the desired index, else FALSE.
+    738           */
+
+   \                                 In section .text, align 4, keep-with-next
+    739          BOOL_TYPE Regulations__SetRequedIndex(uint8 position, uint8 value)
+    740          {
+   \                     Regulations__SetRequedIndex: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+    741              BOOL_TYPE change_requested = FALSE;
+   \   00000002   0x2200             MOVS     R2,#+0
+    742              BOOL_TYPE requested_index_set = FALSE;
+   \   00000004   0x0014             MOVS     R4,R2
+    743          
+    744              if (position < Num_Functions_Total)
+   \   00000006   0x0003             MOVS     R3,R0
+   \   00000008   0x....             LDR      R5,??DataTable31_1
+   \   0000000A   0x786D             LDRB     R5,[R5, #+1]
+   \   0000000C   0x42AB             CMP      R3,R5
+   \   0000000E   0xD20F             BCS      ??Regulations__SetRequedIndex_0
+    745              {
+    746                  if (Regulations_Index_Request_Buffer[position] != value)
+   \   00000010   0x....             LDR      R3,??DataTable27
+   \   00000012   0x181B             ADDS     R3,R3,R0
+   \   00000014   0x2401             MOVS     R4,#+1
+   \   00000016   0x781D             LDRB     R5,[R3, #+0]
+   \   00000018   0x000E             MOVS     R6,R1
+   \   0000001A   0x42B5             CMP      R5,R6
+   \   0000001C   0xD000             BEQ      ??Regulations__SetRequedIndex_1
+    747                  {
+    748                      change_requested = TRUE;
+   \   0000001E   0x0022             MOVS     R2,R4
+    749                  }
+    750          
+    751                  Regulations_Index_Request_Buffer[position] = value;
+   \                     ??Regulations__SetRequedIndex_1: (+1)
+   \   00000020   0x7019             STRB     R1,[R3, #+0]
+    752                  requested_index_set = TRUE;
+    753          
+    754                  if (change_requested == TRUE)
+   \   00000022   0x2A01             CMP      R2,#+1
+   \   00000024   0xD10C             BNE      ??Regulations__SetRequedIndex_2
+    755                  {
+    756                      Callback__Notify(&Regulation_Callback_Control_Structure, position);
+   \   00000026   0x0001             MOVS     R1,R0
+   \   00000028   0x....             ADR.N    R0,Regulation_Callback_Control_Structure
+   \   0000002A   0x.... 0x....      BL       Callback__Notify
+   \   0000002E   0xE007             B        ??Regulations__SetRequedIndex_2
+    757                  }
+    758              }
+    759              else
+    760              {
+    761                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(8, position));
+   \                     ??Regulations__SetRequedIndex_0: (+1)
+   \   00000030   0x2380             MOVS     R3,#+128
+   \   00000032   0x011B             LSLS     R3,R3,#+4        ;; #+2048
+   \   00000034   0x4303             ORRS     R3,R3,R0
+   \   00000036   0x2201             MOVS     R2,#+1
+   \   00000038   0x4611             MOV      R1,R2
+   \   0000003A   0x2047             MOVS     R0,#+71
+   \   0000003C   0x.... 0x....      BL       Log__AddMessage
+    762              }
+    763          
+    764              return (requested_index_set);
+   \                     ??Regulations__SetRequedIndex_2: (+1)
+   \   00000040   0x0020             MOVS     R0,R4
+   \   00000042   0xBD70             POP      {R4-R6,PC}       ;; return
+    765          }
+    766          
+    767          //---------------------------------------------------------------------------------------------------------------------
+    768          /**
+    769           * @brief  This method retrieves the Visual Value of a Regulation by position.
+    770           * @param  position: position of the regulation in the list of all regulations (based on setting file)
+    771           * @return Regulation Visual Value
+    772           */
+
+   \                                 In section .text, align 2, keep-with-next
+    773          sint32 Regulations__GetVisualValueByPosition(uint8 position)
+    774          {
+   \                     Regulations__GetVisualValueByPosition: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    775              if (position < Num_Functions_Total)
+   \   00000002   0x....             LDR      R1,??DataTable31_1
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x784B             LDRB     R3,[R1, #+1]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD20C             BCS      ??Regulations__GetVisualValueByPosition_0
+    776              {
+    777                  return (GetRegValue(SF_PTR_UI_DISPLAY_REGULATION_TABLE,Regulations_Config[position].UI_Regulation_Table,Regulations_Index_Buffer[position]));
+   \   0000000C   0x....             LDR      R2,??DataTable31_2
+   \   0000000E   0x5C12             LDRB     R2,[R2, R0]
+   \   00000010   0x6849             LDR      R1,[R1, #+4]
+   \   00000012   0x0083             LSLS     R3,R0,#+2
+   \   00000014   0x1818             ADDS     R0,R3,R0
+   \   00000016   0x0040             LSLS     R0,R0,#+1
+   \   00000018   0x1808             ADDS     R0,R1,R0
+   \   0000001A   0x79C1             LDRB     R1,[R0, #+7]
+   \   0000001C   0x20FF             MOVS     R0,#+255
+   \   0000001E   0x3014             ADDS     R0,R0,#+20       ;; #+275
+   \   00000020   0x.... 0x....      BL       GetRegValue
+   \   00000024   0xBD02             POP      {R1,PC}
+    778              }
+    779              else
+    780              {
+    781                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(9, position));
+   \                     ??Regulations__GetVisualValueByPosition_0: (+1)
+   \   00000026   0x2390             MOVS     R3,#+144
+   \   00000028   0x011B             LSLS     R3,R3,#+4        ;; #+2304
+   \   0000002A   0x4303             ORRS     R3,R3,R0
+   \   0000002C   0x2201             MOVS     R2,#+1
+   \   0000002E   0x4611             MOV      R1,R2
+   \   00000030   0x2047             MOVS     R0,#+71
+   \   00000032   0x.... 0x....      BL       Log__AddMessage
+    782                  return (0);
+   \   00000036   0x2000             MOVS     R0,#+0
+   \   00000038   0xBD02             POP      {R1,PC}          ;; return
+    783              }
+    784          }
+    785          
+    786          //---------------------------------------------------------------------------------------------------------------------
+    787          /**
+    788           * @brief  This method retrieves the Visual Value of a by position.
+    789           * @param  position: position of the regulation in the list of all regulations (based on setting file)
+    790           * @return Regulation Requested Visual Value
+    791           */
+
+   \                                 In section .text, align 2, keep-with-next
+    792          sint32 Regulations__GetRequestedVisualValueByPosition(uint8 position)
+    793          {
+   \                     Regulations__GetRequestedVisualValueByPosition: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    794              if (position < Num_Functions_Total)
+   \   00000002   0x....             LDR      R1,??DataTable31_1
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x784B             LDRB     R3,[R1, #+1]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD20C             BCS      ??Regulations__GetRequestedVisualValueByPositio_0
+    795              {
+    796                  return (GetRegValue(SF_PTR_UI_DISPLAY_REGULATION_TABLE,Regulations_Config[position].UI_Regulation_Table,Regulations_Index_Request_Buffer[position]));
+   \   0000000C   0x....             LDR      R2,??DataTable31_3
+   \   0000000E   0x5C12             LDRB     R2,[R2, R0]
+   \   00000010   0x6849             LDR      R1,[R1, #+4]
+   \   00000012   0x0083             LSLS     R3,R0,#+2
+   \   00000014   0x1818             ADDS     R0,R3,R0
+   \   00000016   0x0040             LSLS     R0,R0,#+1
+   \   00000018   0x1808             ADDS     R0,R1,R0
+   \   0000001A   0x79C1             LDRB     R1,[R0, #+7]
+   \   0000001C   0x20FF             MOVS     R0,#+255
+   \   0000001E   0x3014             ADDS     R0,R0,#+20       ;; #+275
+   \   00000020   0x.... 0x....      BL       GetRegValue
+   \   00000024   0xBD02             POP      {R1,PC}
+    797              }
+    798              else
+    799              {
+    800                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(10, position));
+   \                     ??Regulations__GetRequestedVisualValueByPositio_0: (+1)
+   \   00000026   0x23A0             MOVS     R3,#+160
+   \   00000028   0x011B             LSLS     R3,R3,#+4        ;; #+2560
+   \   0000002A   0x4303             ORRS     R3,R3,R0
+   \   0000002C   0x2201             MOVS     R2,#+1
+   \   0000002E   0x4611             MOV      R1,R2
+   \   00000030   0x2047             MOVS     R0,#+71
+   \   00000032   0x.... 0x....      BL       Log__AddMessage
+    801                  return (0);
+   \   00000036   0x2000             MOVS     R0,#+0
+   \   00000038   0xBD02             POP      {R1,PC}          ;; return
+    802              }
+    803          }
+    804          
+    805          //---------------------------------------------------------------------------------------------------------------------
+    806          /**
+    807           * @brief  This method retrieves the Visual Value of a regulation by position and index.
+    808           * @param  position: position of the regulation in the list of all regulations (based on setting file)
+    809           * @return Regulation Requested Visual Value
+    810           */
+
+   \                                 In section .text, align 2, keep-with-next
+    811          sint32 Regulations__GetVisualValueByPositionPlusIndex(uint8 position, uint8 index)
+    812          {
+   \                     Regulations__GetVisualValueByPositionPlusIndex: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    813              if (position < Num_Functions_Total)
+   \   00000002   0x....             LDR      R3,??DataTable31_1
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x785C             LDRB     R4,[R3, #+1]
+   \   00000008   0x42A2             CMP      R2,R4
+   \   0000000A   0xD20B             BCS      ??Regulations__GetVisualValueByPositionPlusInde_0
+    814              {
+    815                  return (GetRegValue(SF_PTR_UI_DISPLAY_REGULATION_TABLE, Regulations_Config[position].UI_Regulation_Table, index));
+   \   0000000C   0x000A             MOVS     R2,R1
+   \   0000000E   0x6859             LDR      R1,[R3, #+4]
+   \   00000010   0x0083             LSLS     R3,R0,#+2
+   \   00000012   0x1818             ADDS     R0,R3,R0
+   \   00000014   0x0040             LSLS     R0,R0,#+1
+   \   00000016   0x1808             ADDS     R0,R1,R0
+   \   00000018   0x79C1             LDRB     R1,[R0, #+7]
+   \   0000001A   0x20FF             MOVS     R0,#+255
+   \   0000001C   0x3014             ADDS     R0,R0,#+20       ;; #+275
+   \   0000001E   0x.... 0x....      BL       GetRegValue
+   \   00000022   0xBD10             POP      {R4,PC}
+    816              }
+    817              else
+    818              {
+    819                  LOG_ADD_EXCEPTION(POSITION_OUT_OF_RANGE, COMBINE_BYTES(11, position));
+   \                     ??Regulations__GetVisualValueByPositionPlusInde_0: (+1)
+   \   00000024   0x23B0             MOVS     R3,#+176
+   \   00000026   0x011B             LSLS     R3,R3,#+4        ;; #+2816
+   \   00000028   0x4303             ORRS     R3,R3,R0
+   \   0000002A   0x2201             MOVS     R2,#+1
+   \   0000002C   0x4611             MOV      R1,R2
+   \   0000002E   0x2047             MOVS     R0,#+71
+   \   00000030   0x.... 0x....      BL       Log__AddMessage
+    820                  return (0);
+   \   00000034   0x2000             MOVS     R0,#+0
+   \   00000036   0xBD10             POP      {R4,PC}          ;; return
+    821              }
+    822          }
+    823          
+    824          //---------------------------------------------------------------------------------------------------------------------
+    825          /**
+    826           * @brief  This method retrieves the type of the Visual Value of a Requested Regulation by position.
+    827           * @param  position: position of the regulation in the list of all regulations (based on setting file)
+    828           * @return Regulation Requested Visual Value Type
+    829           */
+
+   \                                 In section .text, align 2, keep-with-next
+    830          DATATYPE_TYPE Regulations__GetVisualValueTypeByPosition(uint8 position)
+    831          {
+   \                     Regulations__GetVisualValueTypeByPosition: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    832              return(GetRegulationTableValueType(SF_PTR_UI_DISPLAY_REGULATION_TABLE, Regulations_Config[position].UI_Regulation_Table));
+   \   00000002   0x....             LDR      R1,??DataTable31_1
+   \   00000004   0x6849             LDR      R1,[R1, #+4]
+   \   00000006   0x0082             LSLS     R2,R0,#+2
+   \   00000008   0x1810             ADDS     R0,R2,R0
+   \   0000000A   0x0040             LSLS     R0,R0,#+1
+   \   0000000C   0x1808             ADDS     R0,R1,R0
+   \   0000000E   0x79C1             LDRB     R1,[R0, #+7]
+   \   00000010   0x20FF             MOVS     R0,#+255
+   \   00000012   0x3014             ADDS     R0,R0,#+20       ;; #+275
+   \   00000014   0x.... 0x....      BL       GetRegulationTableValueType
+   \   00000018   0xBD02             POP      {R1,PC}          ;; return
+    833          }
+    834          
+    835          //---------------------------------------------------------------------------------------------------------------------
+    836          /**
+    837           * @brief   This method returns the position of a function with a given generic input position and type
+    838           * @param   gi_position: position of the GI
+    839           * @param   gi_type: read type of the GI
+    840           * @param   compartment: compartment assigned to the function
+    841           * @return  Position of the function with the given position and type of the generic input; If not found, returns REGULATION_INVALID
+    842           */
+
+   \                                 In section .text, align 2, keep-with-next
+    843          uint8 Regulations__GetFunctionPositionByGi(uint8 gi_position, uint8 gi_type, uint8 compartment)
+    844          {
+   \                     Regulations__GetFunctionPositionByGi: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+    845              uint8 retval;
+    846              uint8 index;
+    847          
+    848              retval = REGULATION_INVALID;
+   \   00000002   0x24FF             MOVS     R4,#+255
+    849          
+    850              if (Regulations_Config != NULL)
+   \   00000004   0x....             LDR      R2,??DataTable31_1
+   \   00000006   0x6853             LDR      R3,[R2, #+4]
+   \   00000008   0x2B00             CMP      R3,#+0
+   \   0000000A   0xD01F             BEQ      ??Regulations__GetFunctionPositionByGi_0
+    851              {
+    852                  for (index=0; index<Num_Functions_Total; index++ )
+   \   0000000C   0x2300             MOVS     R3,#+0
+   \   0000000E   0x0007             MOVS     R7,R0
+   \   00000010   0xE001             B        ??Regulations__GetFunctionPositionByGi_1
+   \                     ??Regulations__GetFunctionPositionByGi_2: (+1)
+   \   00000012   0x1C5B             ADDS     R3,R3,#+1
+   \   00000014   0xB2DB             UXTB     R3,R3
+   \                     ??Regulations__GetFunctionPositionByGi_1: (+1)
+   \   00000016   0x7855             LDRB     R5,[R2, #+1]
+   \   00000018   0x42AB             CMP      R3,R5
+   \   0000001A   0xDA0E             BGE      ??Regulations__GetFunctionPositionByGi_3
+   \   0000001C   0x6855             LDR      R5,[R2, #+4]
+   \   0000001E   0x009E             LSLS     R6,R3,#+2
+   \   00000020   0x18F6             ADDS     R6,R6,R3
+   \   00000022   0x0076             LSLS     R6,R6,#+1
+   \   00000024   0x19AD             ADDS     R5,R5,R6
+   \   00000026   0x78AD             LDRB     R5,[R5, #+2]
+   \   00000028   0x06AE             LSLS     R6,R5,#+26
+   \   0000002A   0x0EB6             LSRS     R6,R6,#+26
+   \   0000002C   0x42BE             CMP      R6,R7
+   \   0000002E   0xD1F0             BNE      ??Regulations__GetFunctionPositionByGi_2
+   \   00000030   0x09AD             LSRS     R5,R5,#+6
+   \   00000032   0x000E             MOVS     R6,R1
+   \   00000034   0x42B5             CMP      R5,R6
+   \   00000036   0xD1EC             BNE      ??Regulations__GetFunctionPositionByGi_2
+    853                  {
+    854                      if ((Regulations_Config[index].GI_Position == gi_position) &&
+    855                          (Regulations_Config[index].GI_Read_Type == gi_type) )
+    856                      {
+    857                          retval =  index;
+   \   00000038   0x001C             MOVS     R4,R3
+    858                          break;
+    859                      }
+    860                  }
+    861          
+    862                  if (retval == REGULATION_INVALID)
+   \                     ??Regulations__GetFunctionPositionByGi_3: (+1)
+   \   0000003A   0x2CFF             CMP      R4,#+255
+   \   0000003C   0xD106             BNE      ??Regulations__GetFunctionPositionByGi_0
+    863                  {
+    864                      LOG_ADD_EXCEPTION(GI_POSITION_AND_TYPE_DOES_NOT_EXIST, COMBINE_BYTES(gi_position, gi_type));
+   \   0000003E   0x0203             LSLS     R3,R0,#+8
+   \   00000040   0x430B             ORRS     R3,R3,R1
+   \   00000042   0x2201             MOVS     R2,#+1
+   \   00000044   0x2100             MOVS     R1,#+0
+   \   00000046   0x2047             MOVS     R0,#+71
+   \   00000048   0x.... 0x....      BL       Log__AddMessage
+    865                  }
+    866              }
+    867          
+    868              return (retval);
+   \                     ??Regulations__GetFunctionPositionByGi_0: (+1)
+   \   0000004C   0x0020             MOVS     R0,R4
+   \   0000004E   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    869          }
+    870          
+    871          //=====================================================================================================================
+    872          //-------------------------------------- Private Functions ------------------------------------------------------------
+    873          //=====================================================================================================================
+    874          
+    875          //---------------------------------------------------------------------------------------------------------------------
+    876          /**
+    877           * @brief
+    878           * @param type: setting file displacement (SF_PTR_MAIN_REG_PARAM_TABLE or SF_PTR_UI_REGULATION_PARAMS)
+    879           * @param position: position of the regulation in the list of all regulations (based on setting file)
+    880           * @param index_value
+    881           * @return
+    882           */
+
+   \                                 In section .text, align 2, keep-with-next
+    883          static sint32 GetRegValue(SETTINGFILE_OFFSET_TYPE type, uint8 position, uint8 index_value)
+    884          {
+   \                     GetRegValue: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+   \   00000004   0x0015             MOVS     R5,R2
+    885              sint32 retval;
+    886              SETTINGFILE_LOADER_TYPE aux_loader;
+    887              REGULATION_PARAM_HEADER_TYPE * header;
+    888              uint16 v_uint16;
+    889              sint16 v_sint16;
+    890          
+    891              retval = 0;
+   \   00000006   0x2400             MOVS     R4,#+0
+    892          
+    893              if (position < REGULATION_MAX_NUM)
+   \   00000008   0x2929             CMP      R1,#+41
+   \   0000000A   0xDA59             BGE      ??GetRegValue_0
+    894              {
+    895          
+    896                  if (SettingFile__BasicLoader(type ,position ,&aux_loader) == PASS )
+   \   0000000C   0x466A             MOV      R2,SP
+   \   0000000E   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000012   0x2801             CMP      R0,#+1
+   \   00000014   0xD154             BNE      ??GetRegValue_0
+    897                  {
+    898                      header = (REGULATION_PARAM_HEADER_TYPE *)aux_loader.Data;   //lint !e927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \   00000016   0x9800             LDR      R0,[SP, #+0]
+    899          
+    900                      // Prevents inde_value = 0
+    901                      if (index_value > 0)
+   \   00000018   0x0029             MOVS     R1,R5
+   \   0000001A   0xD000             BEQ      ??GetRegValue_1
+    902                      {
+    903                          index_value--;    // 1 will be adjusted the first index (1) means 0 in the math / table.
+   \   0000001C   0x1E6D             SUBS     R5,R5,#+1
+    904                      }
+    905          
+    906                      if (header->Step > 0)
+   \                     ??GetRegValue_1: (+1)
+   \   0000001E   0x7801             LDRB     R1,[R0, #+0]
+   \   00000020   0x000A             MOVS     R2,R1
+   \   00000022   0x0992             LSRS     R2,R2,#+6
+   \   00000024   0x7841             LDRB     R1,[R0, #+1]
+   \   00000026   0x000B             MOVS     R3,R1
+   \   00000028   0xD029             BEQ      ??GetRegValue_2
+    907                      {
+    908                          // Byte 0
+    909                          // Header - Type
+    910                          // Byte 1
+    911                          // Header - Step
+    912                          //
+    913                          // For 8 bits
+    914                          // Byte 2 none
+    915                          // Byte 3 initial value
+    916                          //
+    917                          // For 16 bits
+    918                          // Byte 2 = MSB data
+    919                          // Byte 3 = LSB data
+    920                          // Position defined the regulation
+    921                          // Index is the Main index value.
+    922          
+    923                          // Step Regulation
+    924                          switch (header->Type)
+   \   0000002A   0x2A01             CMP      R2,#+1
+   \   0000002C   0xD008             BEQ      ??GetRegValue_3
+   \   0000002E   0xD302             BCC      ??GetRegValue_4
+   \   00000030   0x2A03             CMP      R2,#+3
+   \   00000032   0xD017             BEQ      ??GetRegValue_5
+   \   00000034   0xD30B             BCC      ??GetRegValue_6
+    925                          {
+    926                              default:
+    927                              case REGULATION_PARAM_UINT8:
+    928                                  retval = (sint32)(aux_loader.Data[3] + (header->Step * index_value));
+   \                     ??GetRegValue_4: (+1)
+   \   00000036   0x78C0             LDRB     R0,[R0, #+3]
+   \   00000038   0xB2ED             UXTB     R5,R5
+   \   0000003A   0x4369             MULS     R1,R5,R1
+   \   0000003C   0x1844             ADDS     R4,R0,R1
+    929          
+    930                                  break;
+   \   0000003E   0xE03F             B        ??GetRegValue_0
+    931                              case REGULATION_PARAM_SINT8:
+    932                                  retval = (sint32)((sint8)(aux_loader.Data[3]) + (sint8)( header->Step *index_value));
+   \                     ??GetRegValue_3: (+1)
+   \   00000040   0x78C0             LDRB     R0,[R0, #+3]
+   \   00000042   0xB240             SXTB     R0,R0
+   \   00000044   0xB2ED             UXTB     R5,R5
+   \   00000046   0x4369             MULS     R1,R5,R1
+   \   00000048   0xB249             SXTB     R1,R1
+   \   0000004A   0x1844             ADDS     R4,R0,R1
+    933                                  break;
+   \   0000004C   0xE038             B        ??GetRegValue_0
+    934                              case REGULATION_PARAM_UINT16:
+    935                                  v_uint16 = *((uint16 PACKED *)&aux_loader.Data[2]);     //lint !e927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \                     ??GetRegValue_6: (+1)
+   \   0000004E   0x4601             MOV      R1,R0
+   \   00000050   0x788C             LDRB     R4,[R1, #+2]
+   \   00000052   0x78CA             LDRB     R2,[R1, #+3]
+   \   00000054   0x0612             LSLS     R2,R2,#+24
+   \   00000056   0x0C12             LSRS     R2,R2,#+16
+   \   00000058   0x4314             ORRS     R4,R4,R2
+    936                                  v_uint16 = ENDIANU16_STON(v_uint16);
+    937                                  retval = (sint32)(v_uint16 + (uint16)(header->Step * index_value));
+   \   0000005A   0x4618             MOV      R0,R3
+   \   0000005C   0xB2ED             UXTB     R5,R5
+   \   0000005E   0x4368             MULS     R0,R5,R0
+   \   00000060   0x1824             ADDS     R4,R4,R0
+    938                                  break;
+   \   00000062   0xE02D             B        ??GetRegValue_0
+    939                              case REGULATION_PARAM_SINT16:
+    940                                  v_sint16 = *((sint16 PACKED *)&aux_loader.Data[2]);     //lint !e927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \                     ??GetRegValue_5: (+1)
+   \   00000064   0x4601             MOV      R1,R0
+   \   00000066   0x788C             LDRB     R4,[R1, #+2]
+   \   00000068   0x78CA             LDRB     R2,[R1, #+3]
+   \   0000006A   0x0612             LSLS     R2,R2,#+24
+   \   0000006C   0x1412             ASRS     R2,R2,#+16
+   \   0000006E   0x4314             ORRS     R4,R4,R2
+    941                                  v_sint16 = ENDIANS16_STON(v_sint16);
+    942                                  retval = (sint32)(v_sint16 + (sint16)(header->Step * index_value));
+   \   00000070   0xB224             SXTH     R4,R4
+   \   00000072   0x4618             MOV      R0,R3
+   \   00000074   0xB2ED             UXTB     R5,R5
+   \   00000076   0x4368             MULS     R0,R5,R0
+   \   00000078   0xB200             SXTH     R0,R0
+   \   0000007A   0x1824             ADDS     R4,R4,R0
+    943                                  break;
+   \   0000007C   0xE020             B        ??GetRegValue_0
+    944                          }
+    945                      }
+    946                      else
+    947                      {
+    948                          // table regulation
+    949                          // Byte 0
+    950                          // Header - Type
+    951                          // Byte 1
+    952                          // Header - Step
+    953                          //
+    954                          // For 8 bits
+    955                          // Byte 2 data0
+    956                          // Byte 3 data1
+    957                          // byte 4 ...
+    958                          //
+    959                          // For 16 bits
+    960                          // Byte 2 = MSB data0
+    961                          // Byte 3 = LSB data0
+    962                          // Byte 4 = MSB data1
+    963                          // Byte 5 = LSB data1
+    964                          // ...
+    965                          // ...
+    966          
+    967                          // Step Regulation
+    968          
+    969                          switch (header->Type)
+   \                     ??GetRegValue_2: (+1)
+   \   0000007E   0x2A01             CMP      R2,#+1
+   \   00000080   0xD007             BEQ      ??GetRegValue_7
+   \   00000082   0xD302             BCC      ??GetRegValue_8
+   \   00000084   0x2A03             CMP      R2,#+3
+   \   00000086   0xD012             BEQ      ??GetRegValue_9
+   \   00000088   0xD308             BCC      ??GetRegValue_10
+    970                          {
+    971                              default:
+    972                              case REGULATION_PARAM_UINT8:
+    973                                  retval = (sint32)(aux_loader.Data[2+index_value]);
+   \                     ??GetRegValue_8: (+1)
+   \   0000008A   0xB2ED             UXTB     R5,R5
+   \   0000008C   0x1940             ADDS     R0,R0,R5
+   \   0000008E   0x7884             LDRB     R4,[R0, #+2]
+    974                                  break;
+   \   00000090   0xE016             B        ??GetRegValue_0
+    975                              case REGULATION_PARAM_SINT8:
+    976                                  retval = (sint32)( *((sint8 *)&aux_loader.Data[2+index_value]) );       //lint !e926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \                     ??GetRegValue_7: (+1)
+   \   00000092   0xB2ED             UXTB     R5,R5
+   \   00000094   0x1940             ADDS     R0,R0,R5
+   \   00000096   0x2102             MOVS     R1,#+2
+   \   00000098   0x5644             LDRSB    R4,[R0, R1]
+    977                                  break;
+   \   0000009A   0xE011             B        ??GetRegValue_0
+    978                              case REGULATION_PARAM_UINT16:
+    979                                  v_uint16 = *((uint16 PACKED *)&aux_loader.Data[2+ (index_value * 2)]);  //lint !e927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \                     ??GetRegValue_10: (+1)
+   \   0000009C   0xB2ED             UXTB     R5,R5
+   \   0000009E   0x0069             LSLS     R1,R5,#+1
+   \   000000A0   0x1840             ADDS     R0,R0,R1
+   \   000000A2   0x7884             LDRB     R4,[R0, #+2]
+   \   000000A4   0x78C1             LDRB     R1,[R0, #+3]
+   \   000000A6   0x0609             LSLS     R1,R1,#+24
+   \   000000A8   0x0C09             LSRS     R1,R1,#+16
+   \   000000AA   0x430C             ORRS     R4,R4,R1
+    980                                  v_uint16 = ENDIANU16_STON(v_uint16);
+    981                                  retval = (sint32)v_uint16;
+    982                                  break;
+   \   000000AC   0xE008             B        ??GetRegValue_0
+    983                              case REGULATION_PARAM_SINT16:
+    984                                  v_sint16 = *((sint16 PACKED *)&aux_loader.Data[2+ (index_value * 2)]);  //lint !e927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \                     ??GetRegValue_9: (+1)
+   \   000000AE   0xB2ED             UXTB     R5,R5
+   \   000000B0   0x0069             LSLS     R1,R5,#+1
+   \   000000B2   0x1840             ADDS     R0,R0,R1
+   \   000000B4   0x7884             LDRB     R4,[R0, #+2]
+   \   000000B6   0x78C1             LDRB     R1,[R0, #+3]
+   \   000000B8   0x0609             LSLS     R1,R1,#+24
+   \   000000BA   0x1409             ASRS     R1,R1,#+16
+   \   000000BC   0x430C             ORRS     R4,R4,R1
+    985                                  v_sint16 = ENDIANS16_STON(v_sint16);
+    986                                  retval = (sint32)v_sint16;
+   \   000000BE   0xB224             SXTH     R4,R4
+    987                                  break;
+    988                          }
+    989                      }
+    990                  }
+    991              }
+    992              return (retval);
+   \                     ??GetRegValue_0: (+1)
+   \   000000C0   0x0020             MOVS     R0,R4
+   \   000000C2   0xBD3E             POP      {R1-R5,PC}       ;; return
+    993          }
+    994          
+    995          //---------------------------------------------------------------------------------------------------------------------
+    996          /**
+    997           * @brief   This method retrieves the type of the Main or Visual Value of a Requested Regulation by position.
+    998           * @param   sf_pointer: setting file pointer that will determine if the lookup is for the data type of the ACU or HMI
+    999           *                    value in the regulation table
+   1000           * @param   position: position of the regulation in the setting file data
+   1001           * @return  Regulation Requested Main/Visual Value Type
+   1002           */
+
+   \                                 In section .text, align 4, keep-with-next
+   1003          static DATATYPE_TYPE GetRegulationTableValueType(SETTINGFILE_OFFSET_TYPE sf_pointer, uint8 regulation_position)
+   1004          {
+   \                     GetRegulationTableValueType: (+1)
+   \   00000000   0xB51C             PUSH     {R2-R4,LR}
+   1005              SETTINGFILE_LOADER_TYPE sf_loader;
+   1006              REGULATION_PARAM_HEADER_TYPE * header;
+   1007              DATATYPE_TYPE regulation_value_type = DATATYPE_INVALID;
+   \   00000002   0x2400             MOVS     R4,#+0
+   1008          
+   1009              if (regulation_position < REGULATION_MAX_NUM)
+   \   00000004   0x2929             CMP      R1,#+41
+   \   00000006   0xDA0A             BGE      ??GetRegulationTableValueType_0
+   1010              {
+   1011                  if (SettingFile__BasicLoader(sf_pointer, regulation_position, &sf_loader) == PASS )
+   \   00000008   0x466A             MOV      R2,SP
+   \   0000000A   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   0000000E   0x2801             CMP      R0,#+1
+   \   00000010   0xD105             BNE      ??GetRegulationTableValueType_0
+   1012                  {
+   1013                      header = (REGULATION_PARAM_HEADER_TYPE *)(void *)sf_loader.Data;
+   1014          
+   1015                      regulation_value_type = REGULATION_HEADER_TYPE_CONVERSION[header->Type];
+   \   00000012   0xBF00             Nop      
+   \   00000014   0x....             ADR.N    R0,REGULATION_HEADER_TYPE_CONVERSION
+   \   00000016   0x9900             LDR      R1,[SP, #+0]
+   \   00000018   0x7809             LDRB     R1,[R1, #+0]
+   \   0000001A   0x0989             LSRS     R1,R1,#+6
+   \   0000001C   0x5C44             LDRB     R4,[R0, R1]
+   1016                  }
+   1017              }
+   1018          
+   1019              return(regulation_value_type);
+   \                     ??GetRegulationTableValueType_0: (+1)
+   \   0000001E   0x0020             MOVS     R0,R4
+   \   00000020   0xBD16             POP      {R1,R2,R4,PC}    ;; return
+   1020          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable10:
+   \   00000000   0x........         DC32     Num_Functions_To_Main
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11:
+   \   00000000   0x........         DC32     Regulations_Index_Buffer
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_1:
+   \   00000000   0x........         DC32     Regulations_Index_Request_Buffer
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13:
+   \   00000000   0x........         DC32     Regulation_Callback_Control_Structure
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable24:
+   \   00000000   0x........         DC32     Num_Functions_To_Main
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable25:
+   \   00000000   0x........         DC32     Num_Functions_To_Main
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable26:
+   \   00000000   0x........         DC32     Regulations_Index_Buffer
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable27:
+   \   00000000   0x........         DC32     Regulations_Index_Request_Buffer
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable31:
+   \   00000000   0x........         DC32     Regulation_Callback_Control_Structure
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable31_1:
+   \   00000000   0x........         DC32     Num_Functions_To_Main
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable31_2:
+   \   00000000   0x........         DC32     Regulations_Index_Buffer
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable31_3:
+   \   00000000   0x........         DC32     Regulations_Index_Request_Buffer
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   GetRegValue
+        24   -> SettingFile__BasicLoader
+      16   GetRegulationTableValueType
+        16   -> SettingFile__BasicLoader
+      16   Regulations__AcceptRequestByPosition
+        16   -> Log__AddMessage
+       8   Regulations__GetFunctionIDByPosition
+         8   -> Log__AddMessage
+      24   Regulations__GetFunctionPositionByGi
+        24   -> Log__AddMessage
+       0   Regulations__GetIndexBufferPtr
+      24   Regulations__GetIndexOfMainValueByPosition
+        24   -> Regulations__GetMainValueByPositionPlusIndex
+        24   -> Regulations__GetRegulationConfig
+      24   Regulations__GetIndexOfVisualValueByPosition
+        24   -> Regulations__GetRegulationConfig
+        24   -> Regulations__GetVisualValueByPositionPlusIndex
+       0   Regulations__GetIndexRequestBufferPtr
+       8   Regulations__GetIndexValueByPosition
+         8   -> Log__AddMessage
+       8   Regulations__GetMainValueByPosition
+         8   -> GetRegValue
+         8   -> Log__AddMessage
+       8   Regulations__GetMainValueByPositionPlusIndex
+         8   -> GetRegValue
+         8   -> Log__AddMessage
+       8   Regulations__GetMainValueTypeByPosition
+         8   -> GetRegulationTableValueType
+      32   Regulations__GetPositionByDownFunctionID
+        32   -> Regulations__GetRegulationConfig
+      32   Regulations__GetPositionByFunctionID
+        32   -> Regulations__GetRegulationConfig
+      32   Regulations__GetPositionByIndirectFunctionID
+        32   -> Regulations__GetRegulationConfig
+      32   Regulations__GetPositionByIndirectPushFunctionID
+        32   -> Regulations__GetRegulationConfig
+       8   Regulations__GetRegulationConfig
+         8   -> Log__AddMessage
+       8   Regulations__GetRequestedIndexValueByPosition
+         8   -> Log__AddMessage
+       8   Regulations__GetRequestedMainValueByPosition
+         8   -> GetRegValue
+         8   -> Log__AddMessage
+       8   Regulations__GetRequestedVisualValueByPosition
+         8   -> GetRegValue
+         8   -> Log__AddMessage
+       0   Regulations__GetToMainSize
+       0   Regulations__GetTotalSize
+       8   Regulations__GetVisualValueByPosition
+         8   -> GetRegValue
+         8   -> Log__AddMessage
+       8   Regulations__GetVisualValueByPositionPlusIndex
+         8   -> GetRegValue
+         8   -> Log__AddMessage
+       8   Regulations__GetVisualValueTypeByPosition
+         8   -> GetRegulationTableValueType
+      32   Regulations__Initialize
+        32   -> Callback__Initialize
+        32   -> Log__AddMessage
+        32   -> Micro__GetResetMode
+        32   -> Mode__SetModeExtended
+        32   -> NVData__GetLastRestoreStatus
+        32   -> Regulations__GetIndexOfMainValueByPosition
+        32   -> Regulations__GetPositionByFunctionID
+        32   -> SettingFile__BasicLoader
+        32   -> __aeabi_memset4
+       8   Regulations__IsRegulationChanged
+         8   -> Log__AddMessage
+       8   Regulations__RegisterChangeEventHandler
+         8   -> Callback__Register
+       8   Regulations__RejectRequestByPosition
+         8   -> Log__AddMessage
+       8   Regulations__SetIndexBuffer
+         8   -> __aeabi_memcpy
+      16   Regulations__SetRequedIndex
+        16   -> Callback__Notify
+        16   -> Log__AddMessage
+      16   Regulations__SetRequestIndexBuffer
+        16   -> __aeabi_memcpy
+       8   Regulations__UnregisterChangeEventHandler
+         8   -> Callback__Unregister
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable13
+       4  ??DataTable24
+       4  ??DataTable25
+       4  ??DataTable26
+       4  ??DataTable27
+       4  ??DataTable31
+       4  ??DataTable31_1
+       4  ??DataTable31_2
+       4  ??DataTable31_3
+     196  GetRegValue
+      34  GetRegulationTableValueType
+       8  Num_Functions_To_Main
+          Num_Functions_Total
+          Regulations_Config
+       4  REGULATION_HEADER_TYPE_CONVERSION
+       8  Regulation_Callback_Control_Structure
+      24  Regulation_Callback_Control_Structure_Registry
+      44  Regulations_Index_Buffer
+      44  Regulations_Index_Request_Buffer
+      88  Regulations__AcceptRequestByPosition
+      50  Regulations__GetFunctionIDByPosition
+      80  Regulations__GetFunctionPositionByGi
+       4  Regulations__GetIndexBufferPtr
+      56  Regulations__GetIndexOfMainValueByPosition
+      56  Regulations__GetIndexOfVisualValueByPosition
+       4  Regulations__GetIndexRequestBufferPtr
+      38  Regulations__GetIndexValueByPosition
+      56  Regulations__GetMainValueByPosition
+      54  Regulations__GetMainValueByPositionPlusIndex
+      24  Regulations__GetMainValueTypeByPosition
+     122  Regulations__GetPositionByDownFunctionID
+     106  Regulations__GetPositionByFunctionID
+     122  Regulations__GetPositionByIndirectFunctionID
+     124  Regulations__GetPositionByIndirectPushFunctionID
+      46  Regulations__GetRegulationConfig
+      38  Regulations__GetRequestedIndexValueByPosition
+      56  Regulations__GetRequestedMainValueByPosition
+      58  Regulations__GetRequestedVisualValueByPosition
+       6  Regulations__GetToMainSize
+       6  Regulations__GetTotalSize
+      58  Regulations__GetVisualValueByPosition
+      56  Regulations__GetVisualValueByPositionPlusIndex
+      26  Regulations__GetVisualValueTypeByPosition
+     208  Regulations__Initialize
+      52  Regulations__IsRegulationChanged
+      12  Regulations__RegisterChangeEventHandler
+      40  Regulations__RejectRequestByPosition
+      24  Regulations__SetIndexBuffer
+      68  Regulations__SetRequedIndex
+      42  Regulations__SetRequestIndexBuffer
+      12  Regulations__UnregisterChangeEventHandler
+
+ 
+    32 bytes in section .bss
+ 2 082 bytes in section .text
+    88 bytes in section _appliance_segment
+ 
+ 2 082 bytes of CODE memory
+   120 bytes of DATA memory
+
+Errors: none
+Warnings: none

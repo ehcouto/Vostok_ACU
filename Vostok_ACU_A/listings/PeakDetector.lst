@@ -1,0 +1,975 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:32
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector/PeakDetector.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Oh --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\PeakDetector.lst -o
+#        obj\PeakDetector.obj
+#        source/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector/PeakDetector.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\PeakDetector.lst
+#    Object file  =  obj\PeakDetector.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Hbl\all\Mci\Slfac\Microblocks\PeakDetector\PeakDetector.c
+      1          /**
+      2           *  @file
+      3           *  @brief      Detect max, min and peak to peak value taken from defined number of samples.
+      4           *
+      5           *  @details    Extremes searching is performed within each handled in function #PeakDetector__SetValue period.
+      6           *              New calculation (min, max and peak to peak values) are available after defined (in function #PeakDetector__Setup)
+      7           *              number of period samples.
+      8           *              Each new calculation will be available thought function
+      9           *              #PeakDetector__GetMin, #PeakDetector__GetMax, #PeakDetector__GetPeak2Peak.
+     10           *
+     11           *              e.g. If each new value is set every 1ms,
+     12           *              and period value is defined to 20 samples than every new calculation will be available
+     13           *              every 20ms.
+     14           *
+     15           *  @Module_Owner{Lukasz Ochromowicz}
+     16           *  $Revision: 1.9 $
+     17           *
+     18           *  @copyright  Copyright 2011-$Date: 2016/06/24 11:00:33BRT $. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     19           */
+     20          
+     21          //  --- Include Files -------------------------------------------------------------------------------------------------
+     22          
+     23          // -- This Module --
+     24          #include "C_Extensions.h"
+     25          #include "PeakDetector.h"
+     26          
+     27          #ifndef PEAKDETECTOR_SR
+     28          #define PEAKDETECTOR_SR DISABLED
+     29          #endif //PEAKDETECTOR_SR
+     30          
+     31          #if (PEAKDETECTOR_SR == ENABLED)
+     32          #include "NSRPeakDetector_prm.h"
+     33          #endif //PEAKDETECTOR_SR
+     34          
+     35          // -- ANSI/ISO --
+     36          #include <string.h>
+     37          
+     38          // -- Project --
+     39          #if (PEAKDETECTOR_SR == ENABLED)
+     40          #include "SRData.h"
+     41          #endif //PEAKDETECTOR_SR
+     42          
+     43          //  --- Public Variables ----------------------------------------------------------------------------------------------
+     44          
+     45          //  --- Private Properties --------------------------------------------------------------------------------------------
+     46          //! Peak detector type definition - Contain all required variables for one channel
+     47          typedef struct
+     48          {
+     49          	uint16   Min_Peak_Out;    //!< Min peaks value (taken from Period_Counter_Reload number of samples)
+     50          	uint16   Max_Peak_Out;    //!< Max peaks value (taken from Period_Counter_Reload number of samples)
+     51          	uint16   Min_Peak_Rough;  //!< Min rough sample values use for calculation
+     52          	uint16   Max_Peak_Rough;  //!< Max rough sample value use for calculation
+     53          	uint16   Period_Counter_Reload;//!< Number of samples needed for calculate min/max value
+     54          	uint16   Period_Counter_Rough; //!< Current number of used samples
+     55          }PEAK_DETECTOR_TYPE;
+     56          
+
+   \                                 In section .bss, align 4
+     57          static PEAK_DETECTOR_TYPE Peak_Detector[PEAK_CHANNEL_NUM]; //!< Contain all required variables for all supported channel
+   \                     Peak_Detector:
+   \   00000000                      DS8 24
+     58          #if (PEAKDETECTOR_SR == ENABLED)
+     59          static PEAK_DETECTOR_TYPE N_Peak_Detector[PEAK_CHANNEL_NUM]; //!< Contain all required variables for all supported channel
+     60          #endif //PEAKDETECTOR_SR
+     61          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+     62          
+     63          //=====================================================================================================================
+     64          //  --- Public Functions ----------------------------------------------------------------------------------------------
+     65          //=====================================================================================================================//-------------------------------------- Include Files ----------------------------------------------------------------
+     66          
+     67          //---------------------------------------------------------------------------------------------------------------------
+     68          /**
+     69           * It Initializes the module PeakDetector and its variables.
+     70           */
+
+   \                                 In section .text, align 2, keep-with-next
+     71          void PeakDetector__Initialize(void)
+     72          {
+   \                     PeakDetector__Initialize: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+     73              uint8 channel;
+     74              PEAK_DETECTOR_TYPE *peak_detector;
+     75          
+     76          #if (PEAKDETECTOR_SR == ENABLED)
+     77              PEAK_DETECTOR_TYPE *n_peak_detector;
+     78          
+     79              PEAKDETECTION_INITIALIZE_FLOW();
+     80              
+     81              for(channel = 0; channel < PEAK_CHANNEL_NUM; channel++)
+     82              {
+     83                  peak_detector = &Peak_Detector[channel];
+     84                  n_peak_detector = &N_Peak_Detector[channel];
+     85          
+     86                  SRData__UpdateShort(&(peak_detector->Min_Peak_Out), &(n_peak_detector->Min_Peak_Out), 0);
+     87          
+     88                  SRData__UpdateShort(&(peak_detector->Max_Peak_Out), &(n_peak_detector->Max_Peak_Out), 0);
+     89          
+     90                  SRData__UpdateShort(&(peak_detector->Min_Peak_Rough), &(n_peak_detector->Min_Peak_Rough), USHRT_MAX);
+     91          
+     92                  SRData__UpdateShort(&(peak_detector->Max_Peak_Rough), &(n_peak_detector->Max_Peak_Rough), 0);
+     93          
+     94                  SRData__UpdateShort(&(peak_detector->Period_Counter_Reload), &(n_peak_detector->Period_Counter_Reload), 0);
+     95          
+     96                  SRData__UpdateShort(&(peak_detector->Period_Counter_Rough), &(n_peak_detector->Period_Counter_Rough), 0);
+     97              }
+     98          
+     99          #else //PEAKDETECTOR_SR
+    100              memset(&Peak_Detector, 0, sizeof(Peak_Detector));
+   \   00000002   0x....             LDR      R4,??DataTable6
+   \   00000004   0x2118             MOVS     R1,#+24
+   \   00000006   0x0020             MOVS     R0,R4
+   \   00000008   0x.... 0x....      BL       __aeabi_memclr4
+    101              
+    102              for(channel = 0; channel < PEAK_CHANNEL_NUM; channel++)
+   \   0000000C   0x....             LDR      R0,??DataTable6_1  ;; 0xffff
+    103              {
+    104                  peak_detector = &Peak_Detector[channel];
+    105              
+    106                  // Reset Min and Max separately
+    107                  peak_detector->Min_Peak_Rough = 65535;
+   \   0000000E   0x80A0             STRH     R0,[R4, #+4]
+    108                  peak_detector->Max_Peak_Rough = 0;
+   \   00000010   0x2100             MOVS     R1,#+0
+   \   00000012   0x80E1             STRH     R1,[R4, #+6]
+   \   00000014   0x8220             STRH     R0,[R4, #+16]
+   \   00000016   0x8261             STRH     R1,[R4, #+18]
+    109              }
+    110          #endif //PEAKDETECTOR_SR
+    111          }
+   \   00000018   0xBD10             POP      {R4,PC}          ;; return
+    112          
+    113          //---------------------------------------------------------------------------------------------------------------------
+    114          /**
+    115           * Setup period value for extremes searching, LSB is dependent on handler execution time (usually 1ms).
+    116           *
+    117           * @param    channel - Channel number taken from #PEAK_DETECTOR_CHANNEL_TYPE list.
+    118           * @param    period  - Number of samples needed for calculate min/max value. For 0 and 1 period is the same and equal to 1 sample.
+    119           */
+
+   \                                 In section .text, align 2, keep-with-next
+    120          void PeakDetector__Setup(PEAK_DETECTOR_CHANNEL_TYPE channel, uint16 period)
+    121          {
+    122          #if (PEAKDETECTOR_SR == ENABLED)
+    123          
+    124              if( channel < PEAK_CHANNEL_NUM )
+    125              {
+    126                  if( period < 1 )
+    127                  {
+    128                      period = 1;
+    129                  }
+    130                  
+    131                  SRData__UpdateShort(&(Peak_Detector[channel].Period_Counter_Reload), &(N_Peak_Detector[channel].Period_Counter_Reload), period - 1);
+    132              }
+    133              
+    134          #else //PEAKDETECTOR_SR
+    135              if( channel < PEAK_CHANNEL_NUM )
+   \                     PeakDetector__Setup: (+1)
+   \   00000000   0x2802             CMP      R0,#+2
+   \   00000002   0xDA0A             BGE      ??PeakDetector__Setup_0
+    136              {
+    137                  if( period < 1 )
+   \   00000004   0x000A             MOVS     R2,R1
+   \   00000006   0xD100             BNE      ??PeakDetector__Setup_1
+    138                  {
+    139                      period = 1;
+   \   00000008   0x2101             MOVS     R1,#+1
+    140                  }
+    141                  
+    142                  Peak_Detector[channel].Period_Counter_Reload = period - 1;
+   \                     ??PeakDetector__Setup_1: (+1)
+   \   0000000A   0x1E49             SUBS     R1,R1,#+1
+   \   0000000C   0x....             LDR      R2,??DataTable6
+   \   0000000E   0x0043             LSLS     R3,R0,#+1
+   \   00000010   0x1818             ADDS     R0,R3,R0
+   \   00000012   0x0080             LSLS     R0,R0,#+2
+   \   00000014   0x1810             ADDS     R0,R2,R0
+   \   00000016   0x8101             STRH     R1,[R0, #+8]
+    143                  Peak_Detector[channel].Period_Counter_Rough = Peak_Detector[channel].Period_Counter_Reload;
+   \   00000018   0x8141             STRH     R1,[R0, #+10]
+    144              }
+    145          
+    146          #endif //PEAKDETECTOR_SR
+    147          }
+   \                     ??PeakDetector__Setup_0: (+1)
+   \   0000001A   0x4770             BX       LR               ;; return
+    148          
+    149          
+    150          //---------------------------------------------------------------------------------------------------------------------
+    151          /**
+    152           * Reset channel
+    153           *
+    154           * @param    channel - Channel number taken from #PEAK_DETECTOR_CHANNEL_TYPE list.
+    155           */
+
+   \                                 In section .text, align 2, keep-with-next
+    156          void PeakDetector__Reset(PEAK_DETECTOR_CHANNEL_TYPE channel)
+    157          {
+    158              PEAK_DETECTOR_TYPE *peak_detector;
+    159          
+    160          #if (PEAKDETECTOR_SR == ENABLED)
+    161              PEAK_DETECTOR_TYPE *n_peak_detector;    
+    162          
+    163              peak_detector = &Peak_Detector[channel];
+    164              n_peak_detector = &N_Peak_Detector[channel];
+    165          
+    166              SRData__UpdateShort(&(peak_detector->Min_Peak_Out), &(n_peak_detector->Min_Peak_Out), 0);
+    167          
+    168              SRData__UpdateShort(&(peak_detector->Max_Peak_Out), &(n_peak_detector->Max_Peak_Out), 0);
+    169          
+    170              SRData__UpdateShort(&(peak_detector->Min_Peak_Rough), &(n_peak_detector->Min_Peak_Rough), 65535);
+    171          
+    172              SRData__UpdateShort(&(peak_detector->Max_Peak_Rough), &(n_peak_detector->Max_Peak_Rough), 0);
+    173          
+    174              SRData__UpdateShort(&(peak_detector->Period_Counter_Rough), &(n_peak_detector->Period_Counter_Rough), 0);
+    175          
+    176          #else //PEAKDETECTOR_SR
+    177              if( channel < PEAK_CHANNEL_NUM )
+   \                     PeakDetector__Reset: (+1)
+   \   00000000   0x2802             CMP      R0,#+2
+   \   00000002   0xDA0C             BGE      ??PeakDetector__Reset_0
+    178              {
+    179                  peak_detector = &Peak_Detector[channel];
+    180                  peak_detector->Min_Peak_Out = 0;
+   \   00000004   0x....             LDR      R1,??DataTable6
+   \   00000006   0x0042             LSLS     R2,R0,#+1
+   \   00000008   0x1810             ADDS     R0,R2,R0
+   \   0000000A   0x0080             LSLS     R0,R0,#+2
+   \   0000000C   0x1808             ADDS     R0,R1,R0
+   \   0000000E   0x2100             MOVS     R1,#+0
+   \   00000010   0x8001             STRH     R1,[R0, #+0]
+    181                  peak_detector->Max_Peak_Out = 0;
+   \   00000012   0x8041             STRH     R1,[R0, #+2]
+    182                  peak_detector->Min_Peak_Rough = 65535;
+   \   00000014   0x....             LDR      R2,??DataTable6_1  ;; 0xffff
+   \   00000016   0x8082             STRH     R2,[R0, #+4]
+    183                  peak_detector->Max_Peak_Rough = 0;
+   \   00000018   0x80C1             STRH     R1,[R0, #+6]
+    184                  peak_detector->Period_Counter_Rough = peak_detector->Period_Counter_Reload;
+   \   0000001A   0x8901             LDRH     R1,[R0, #+8]
+   \   0000001C   0x8141             STRH     R1,[R0, #+10]
+    185              }
+    186          #endif //PEAKDETECTOR_SR
+    187          }
+   \                     ??PeakDetector__Reset_0: (+1)
+   \   0000001E   0x4770             BX       LR               ;; return
+    188          
+    189          
+    190          //---------------------------------------------------------------------------------------------------------------------
+    191          /**
+    192           * Peak detector set current value and handle it.
+    193           *
+    194           * Set new rough value used for peak detector calculation, and handle it.
+    195           * New calculation are available after defined (in function #PeakDetector__Setup)
+    196           * number of period samples are set.
+    197           * Each new calculation will be available thought function
+    198           * #PeakDetector__GetMin, #PeakDetector__GetMax, #PeakDetector__GetPeak2Peak.
+    199           *
+    200           * e.g. If each new value is set every 1ms,
+    201           * and period value is defined to 20 samples than every new calculation will be available
+    202           * every 20ms.
+    203           *
+    204           * @param    channel        - Channel number taken from #PEAK_DETECTOR_CHANNEL_TYPE list.
+    205           * @param    current_value  - New rough value used for peak detector calculation.
+    206           */
+
+   \                                 In section .text, align 2, keep-with-next
+    207          void PeakDetector__SetValue(PEAK_DETECTOR_CHANNEL_TYPE channel, uint16 current_value)
+    208          {
+    209          #if (PEAKDETECTOR_SR == ENABLED)
+    210          
+    211              PEAK_DETECTOR_TYPE *peak_detector;
+    212              PEAK_DETECTOR_TYPE *n_peak_detector;
+    213          
+    214              if( channel < PEAK_CHANNEL_NUM )
+    215              {
+    216                  peak_detector = &Peak_Detector[channel];
+    217                  n_peak_detector = &N_Peak_Detector[channel];
+    218                  
+    219                  if( (SRDATA_OK == SRData__CheckShort(&(peak_detector->Max_Peak_Rough), &(n_peak_detector->Max_Peak_Rough))) &&
+    220                      (SRDATA_OK == SRData__CheckShort(&(peak_detector->Min_Peak_Rough), &(n_peak_detector->Min_Peak_Rough))) &&
+    221                      (SRDATA_OK == SRData__CheckShort(&(peak_detector->Period_Counter_Rough), &(n_peak_detector->Period_Counter_Rough))) &&
+    222                      (SRDATA_OK == SRData__CheckShort(&(peak_detector->Period_Counter_Reload), &(n_peak_detector->Period_Counter_Reload))) )
+    223                  {
+    224                      // Search for Max and Min
+    225                      if( current_value > peak_detector->Max_Peak_Rough )
+    226                      {
+    227                          SRData__UpdateShort(&(peak_detector->Max_Peak_Rough), &(n_peak_detector->Max_Peak_Rough), current_value);
+    228                      }
+    229                      if( current_value <  peak_detector->Min_Peak_Rough )
+    230                      {
+    231                          SRData__UpdateShort(&(peak_detector->Min_Peak_Rough), &(n_peak_detector->Min_Peak_Rough), current_value);
+    232                      }
+    233          
+    234                      if( peak_detector->Period_Counter_Rough == 0)
+    235                      {
+    236                          SRData__UpdateShort(&(peak_detector->Max_Peak_Out), &(n_peak_detector->Max_Peak_Out), peak_detector->Max_Peak_Rough);
+    237                          SRData__UpdateShort(&(peak_detector->Min_Peak_Out), &(n_peak_detector->Min_Peak_Out), peak_detector->Min_Peak_Rough);
+    238          
+    239                          // Reset Min and Max
+    240                          SRData__UpdateShort(&(peak_detector->Min_Peak_Rough), &(n_peak_detector->Min_Peak_Rough), 65535);
+    241                          SRData__UpdateShort(&(peak_detector->Max_Peak_Rough), &(n_peak_detector->Max_Peak_Rough), 0);
+    242          
+    243                          SRData__UpdateShort(&(peak_detector->Period_Counter_Rough), &(n_peak_detector->Period_Counter_Rough), peak_detector->Period_Counter_Reload);
+    244                      }
+    245                      else
+    246                      {
+    247                          SRData__UpdateShort(&(peak_detector->Period_Counter_Rough), &(n_peak_detector->Period_Counter_Rough), (peak_detector->Period_Counter_Rough) - 1);
+    248                      }
+    249                  }
+    250              }
+    251          
+    252          #else //PEAKDETECTOR_SR
+    253          
+    254              PEAK_DETECTOR_TYPE *peak_detector;
+    255          
+    256              if( channel < PEAK_CHANNEL_NUM )
+   \                     PeakDetector__SetValue: (+1)
+   \   00000000   0x2802             CMP      R0,#+2
+   \   00000002   0xDB00             BLT      ??PeakDetector__SetValue_0
+   \   00000004   0x4770             BX       LR
+    257              {
+    258                  peak_detector = &Peak_Detector[channel];
+    259                  // Search for Max and Min
+    260                  if( current_value > peak_detector->Max_Peak_Rough )
+   \                     ??PeakDetector__SetValue_0: (+1)
+   \   00000006   0xB410             PUSH     {R4}
+   \   00000008   0x....             LDR      R3,??DataTable6
+   \   0000000A   0x0044             LSLS     R4,R0,#+1
+   \   0000000C   0x1822             ADDS     R2,R4,R0
+   \   0000000E   0x0092             LSLS     R2,R2,#+2
+   \   00000010   0x189A             ADDS     R2,R3,R2
+   \   00000012   0x88D3             LDRH     R3,[R2, #+6]
+   \   00000014   0x428B             CMP      R3,R1
+   \   00000016   0xD200             BCS      ??PeakDetector__SetValue_1
+   \   00000018   0x000B             MOVS     R3,R1
+   \                     ??PeakDetector__SetValue_1: (+1)
+   \   0000001A   0x80D3             STRH     R3,[R2, #+6]
+    261                  {
+    262                      peak_detector->Max_Peak_Rough = current_value;
+    263                  }
+    264                  if( current_value <  peak_detector->Min_Peak_Rough )
+   \   0000001C   0x000B             MOVS     R3,R1
+   \   0000001E   0x8894             LDRH     R4,[R2, #+4]
+   \   00000020   0x42A3             CMP      R3,R4
+   \   00000022   0xD900             BLS      ??PeakDetector__SetValue_2
+   \   00000024   0x0023             MOVS     R3,R4
+   \                     ??PeakDetector__SetValue_2: (+1)
+   \   00000026   0x8093             STRH     R3,[R2, #+4]
+    265                  {
+    266                      peak_detector->Min_Peak_Rough = current_value;
+    267                  }
+    268          
+    269                  if( peak_detector->Period_Counter_Rough == 0)
+   \   00000028   0x8950             LDRH     R0,[R2, #+10]
+   \   0000002A   0x....             LDR      R1,??DataTable6_1  ;; 0xffff
+   \   0000002C   0x0003             MOVS     R3,R0
+   \   0000002E   0xD108             BNE      ??PeakDetector__SetValue_3
+    270                  {
+    271                      peak_detector->Max_Peak_Out = peak_detector->Max_Peak_Rough;
+   \   00000030   0x88D0             LDRH     R0,[R2, #+6]
+   \   00000032   0x8050             STRH     R0,[R2, #+2]
+    272                      peak_detector->Min_Peak_Out = peak_detector->Min_Peak_Rough;
+   \   00000034   0x8890             LDRH     R0,[R2, #+4]
+   \   00000036   0x8010             STRH     R0,[R2, #+0]
+    273          
+    274                      // Reset Min and Max
+    275                      peak_detector->Min_Peak_Rough = 65535;
+   \   00000038   0x8091             STRH     R1,[R2, #+4]
+    276                      peak_detector->Max_Peak_Rough = 0;
+   \   0000003A   0x2000             MOVS     R0,#+0
+   \   0000003C   0x80D0             STRH     R0,[R2, #+6]
+    277          
+    278                      peak_detector->Period_Counter_Rough = peak_detector->Period_Counter_Reload;
+   \   0000003E   0x8910             LDRH     R0,[R2, #+8]
+   \   00000040   0xE000             B        ??PeakDetector__SetValue_4
+    279                  }
+    280                  else
+    281                  {
+    282                      peak_detector->Period_Counter_Rough--;
+   \                     ??PeakDetector__SetValue_3: (+1)
+   \   00000042   0x1840             ADDS     R0,R0,R1
+   \                     ??PeakDetector__SetValue_4: (+1)
+   \   00000044   0x8150             STRH     R0,[R2, #+10]
+    283                  }
+    284              }
+    285          
+    286          #endif //PEAKDETECTOR_SR
+    287          }
+   \   00000046   0xBC10             POP      {R4}
+   \   00000048   0x4770             BX       LR               ;; return
+    288          
+    289          //---------------------------------------------------------------------------------------------------------------------
+    290          /**
+    291           * Get minimal value from previous samples set.
+    292           *
+    293           * @param    channel - Channel number taken from #PEAK_DETECTOR_CHANNEL_TYPE list.
+    294           *
+    295           * @return   Minimal value taken from period samples number.
+    296           */
+
+   \                                 In section .text, align 2, keep-with-next
+    297          uint16 PeakDetector__GetMin(PEAK_DETECTOR_CHANNEL_TYPE channel)
+    298          {
+   \                     PeakDetector__GetMin: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    299          #if (PEAKDETECTOR_SR == ENABLED)
+    300          
+    301          	uint16 retval;
+    302          
+    303              retval = 0;
+    304          
+    305              if( channel < PEAK_CHANNEL_NUM )
+    306              {
+    307                  if( SRDATA_OK == SRData__CheckShort(&(Peak_Detector[channel].Min_Peak_Out), &(N_Peak_Detector[channel].Min_Peak_Out)) )
+    308                  {
+    309                      retval =  Peak_Detector[channel].Min_Peak_Out;
+    310                  }
+    311              }
+    312              return retval;
+    313          
+    314          #else //PEAKDETECTOR_SR
+    315          
+    316              uint16 retval;
+    317          
+    318              retval = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+    319          
+    320              if( channel < PEAK_CHANNEL_NUM )
+   \   00000004   0x2902             CMP      R1,#+2
+   \   00000006   0xDA04             BGE      ??PeakDetector__GetMin_0
+    321              {
+    322                  retval = Peak_Detector[channel].Min_Peak_Out;
+   \   00000008   0x....             LDR      R0,??DataTable6
+   \   0000000A   0x004A             LSLS     R2,R1,#+1
+   \   0000000C   0x1851             ADDS     R1,R2,R1
+   \   0000000E   0x0089             LSLS     R1,R1,#+2
+   \   00000010   0x5A40             LDRH     R0,[R0, R1]
+    323              }
+    324              return retval;
+   \                     ??PeakDetector__GetMin_0: (+1)
+   \   00000012   0x4770             BX       LR               ;; return
+    325          
+    326          #endif //PEAKDETECTOR_SR
+    327          }
+    328          
+    329          //---------------------------------------------------------------------------------------------------------------------
+    330          /**
+    331           * Get maximal value from previous samples set.
+    332           *
+    333           * @param    channel - Channel number taken from #PEAK_DETECTOR_CHANNEL_TYPE list.
+    334           *
+    335           * @return   Maximal value taken from period samples number.
+    336           */
+
+   \                                 In section .text, align 2, keep-with-next
+    337          uint16 PeakDetector__GetMax(PEAK_DETECTOR_CHANNEL_TYPE channel)
+    338          {
+   \                     PeakDetector__GetMax: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    339          #if (PEAKDETECTOR_SR == ENABLED)
+    340          
+    341          	uint16 retval;
+    342          
+    343              retval = 0;
+    344          
+    345              if( channel < PEAK_CHANNEL_NUM )
+    346              {
+    347                  if( SRDATA_OK == SRData__CheckShort(&(Peak_Detector[channel].Max_Peak_Out), &(N_Peak_Detector[channel].Max_Peak_Out)) )
+    348                  {
+    349                      retval =  Peak_Detector[channel].Max_Peak_Out;
+    350                  }
+    351              }
+    352              return retval;
+    353          
+    354          #else //PEAKDETECTOR_SR
+    355          
+    356              uint16 retval;
+    357          
+    358              retval = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+    359          
+    360              if( channel < PEAK_CHANNEL_NUM )
+   \   00000004   0x2902             CMP      R1,#+2
+   \   00000006   0xDA05             BGE      ??PeakDetector__GetMax_0
+    361              {
+    362                  retval = Peak_Detector[channel].Max_Peak_Out;
+   \   00000008   0x....             LDR      R0,??DataTable6
+   \   0000000A   0x004A             LSLS     R2,R1,#+1
+   \   0000000C   0x1851             ADDS     R1,R2,R1
+   \   0000000E   0x0089             LSLS     R1,R1,#+2
+   \   00000010   0x1840             ADDS     R0,R0,R1
+   \   00000012   0x8840             LDRH     R0,[R0, #+2]
+    363              }
+    364              return retval;
+   \                     ??PeakDetector__GetMax_0: (+1)
+   \   00000014   0x4770             BX       LR               ;; return
+    365          
+    366          #endif //PEAKDETECTOR_SR
+    367          }
+    368          //---------------------------------------------------------------------------------------------------------------------
+    369          /**
+    370           * Get peak to peak value from previous samples set.
+    371           *
+    372           * @param    channel - Channel number taken from #PEAK_DETECTOR_CHANNEL_TYPE list.
+    373           *
+    374           * @return   Peak to peak value taken from period samples number.
+    375           */
+
+   \                                 In section .text, align 2, keep-with-next
+    376          uint16 PeakDetector__GetPeak2Peak(PEAK_DETECTOR_CHANNEL_TYPE channel)
+    377          {
+   \                     PeakDetector__GetPeak2Peak: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    378          #if (PEAKDETECTOR_SR == ENABLED)
+    379          
+    380          	uint16 retval;
+    381              PEAK_DETECTOR_TYPE *peak_detector;
+    382              PEAK_DETECTOR_TYPE *n_peak_detector;
+    383          
+    384              retval = 0;
+    385          
+    386              if( channel < PEAK_CHANNEL_NUM )
+    387              {
+    388                  peak_detector = &Peak_Detector[channel];
+    389                  n_peak_detector = &N_Peak_Detector[channel];
+    390                  
+    391                  if( (SRDATA_OK == SRData__CheckShort(&(peak_detector->Max_Peak_Out), &(n_peak_detector->Max_Peak_Out))) &&
+    392                      (SRDATA_OK == SRData__CheckShort(&(peak_detector->Min_Peak_Out), &(n_peak_detector->Min_Peak_Out))) )
+    393                  {
+    394                      if( peak_detector->Max_Peak_Out > peak_detector->Min_Peak_Out )
+    395                      {
+    396                          retval =  peak_detector->Max_Peak_Out - peak_detector->Min_Peak_Out;
+    397                      }
+    398                  }
+    399              }
+    400              return retval;
+    401          
+    402          #else //PEAKDETECTOR_SR
+    403          
+    404              uint16 retval;
+    405              PEAK_DETECTOR_TYPE *peak_detector;
+    406          
+    407              retval = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+    408              peak_detector = &Peak_Detector[channel];
+    409          
+    410              if( (channel < PEAK_CHANNEL_NUM) &&
+    411                  (peak_detector->Max_Peak_Out > peak_detector->Min_Peak_Out) )
+   \   00000004   0x2902             CMP      R1,#+2
+   \   00000006   0xDA09             BGE      ??PeakDetector__GetPeak2Peak_0
+   \   00000008   0x....             LDR      R2,??DataTable6
+   \   0000000A   0x004B             LSLS     R3,R1,#+1
+   \   0000000C   0x1859             ADDS     R1,R3,R1
+   \   0000000E   0x0089             LSLS     R1,R1,#+2
+   \   00000010   0x1851             ADDS     R1,R2,R1
+   \   00000012   0x884A             LDRH     R2,[R1, #+2]
+   \   00000014   0x880B             LDRH     R3,[R1, #+0]
+   \   00000016   0x4293             CMP      R3,R2
+   \   00000018   0xD200             BCS      ??PeakDetector__GetPeak2Peak_0
+    412              {
+    413                  retval = peak_detector->Max_Peak_Out - peak_detector->Min_Peak_Out;
+   \   0000001A   0x1AD0             SUBS     R0,R2,R3
+    414              }
+    415              return retval;
+   \                     ??PeakDetector__GetPeak2Peak_0: (+1)
+   \   0000001C   0xB280             UXTH     R0,R0
+   \   0000001E   0x4770             BX       LR               ;; return
+    416              
+    417          #endif //PEAKDETECTOR_SR
+    418          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6:
+   \   00000000   0x........         DC32     Peak_Detector
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_1:
+   \   00000000   0x0000FFFF         DC32     0xffff
+    419          
+    420          //=====================================================================================================================
+    421          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    422          //=====================================================================================================================
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   PeakDetector__GetMax
+       0   PeakDetector__GetMin
+       0   PeakDetector__GetPeak2Peak
+       8   PeakDetector__Initialize
+         8   -> __aeabi_memclr4
+       0   PeakDetector__Reset
+       4   PeakDetector__SetValue
+       0   PeakDetector__Setup
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable6
+       4  ??DataTable6_1
+      22  PeakDetector__GetMax
+      20  PeakDetector__GetMin
+      32  PeakDetector__GetPeak2Peak
+      26  PeakDetector__Initialize
+      32  PeakDetector__Reset
+      74  PeakDetector__SetValue
+      28  PeakDetector__Setup
+      24  Peak_Detector
+
+ 
+  24 bytes in section .bss
+ 242 bytes in section .text
+ 
+ 242 bytes of CODE memory
+  24 bytes of DATA memory
+
+Errors: none
+Warnings: none

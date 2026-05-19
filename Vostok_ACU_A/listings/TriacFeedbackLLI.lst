@@ -1,0 +1,859 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:55
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI/TriacFeedbackLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\TriacFeedbackLLI.lst
+#        -o obj\TriacFeedbackLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI/TriacFeedbackLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\TriacFeedbackLLI.lst
+#    Object file  =  obj\TriacFeedbackLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\TriacFeedbackLLI\TriacFeedbackLLI.c
+      1          /**
+      2           *  @file       TriacFeedbackLLI.c
+      3           *
+      4           *  @brief      Module for TriacFeedbackLLI reading - detects a Nominal/Double grid frequency or a Digital level
+      5           *
+      6           *  @details    This module track an input and decode it as level (Low or High) or frequency (grid frequency or its double).
+      7           *
+      8           *              In order to detect a frequency two event must be measured without additional spurious event.
+      9           *              After this, the module is capable of rejecting an arbitrary number of spurious event.
+     10           *
+     11           *              The read of the level at the end of this time window is performed via a simple read.
+     12           *
+     13           *              Macros available to configure the module:
+     14           *
+     15           *               TRIACFEEDBACKLLI_ALLOWED_MIN_FREQUENCY:
+     16           *                  (Default 45) Minimum mains frequency allowed
+     17           *
+     18           *               TRIACFEEDBACKLLI_ALLOWED_MAX_FREQUENCY:
+     19           *                  (Default 65) Maximum mains frequency allowed
+     20           *
+     21           *
+     22           *  @copyright  Copyright 2019 Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     23           */
+     24          //---------------------------------------------------------------------------------------------------------------------
+     25          //---------------------------------------------------------------------------------------------------------------------
+     26          
+     27          
+     28          //-------------------------------------- Include Files ----------------------------------------------------------------
+     29          #include "TriacFeedbackLLI.h"
+     30          
+     31          #if (HBL_LLI_NUM_TRIACFEEDBACK > 0)
+     32          #include "Gpio.h"
+     33          #include "Micro.h"
+     34          #include "VirtualPin.h"
+     35          #include <string.h>
+     36          
+     37          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     38          
+     39          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     40          #define DEFAULT_NUM_SAMPLES                 16
+     41          #define MIN_NUM_SAMPLES                     8
+     42          #define SAMPLES_NOISE_THRESHOLD             2
+     43          
+     44          // Minimum frequency allowed
+     45          #ifndef TRIACFEEDBACKLLI_ALLOWED_MIN_FREQUENCY
+     46              #ifdef SRTRIACFEEDBACKLLI_ALLOWED_MIN_FREQUENCY
+     47                  #define TRIACFEEDBACKLLI_ALLOWED_MIN_FREQUENCY SRTRIACFEEDBACKLLI_ALLOWED_MIN_FREQUENCY
+     48              #else
+     49                  #define TRIACFEEDBACKLLI_ALLOWED_MIN_FREQUENCY   45
+     50              #endif
+     51          #endif
+     52          
+     53          // Maximum frequency allowed
+     54          #ifndef TRIACFEEDBACKLLI_ALLOWED_MAX_FREQUENCY
+     55              #ifdef SRTRIACFEEDBACKLLI_ALLOWED_MAX_FREQUENCY
+     56                  #define TRIACFEEDBACKLLI_ALLOWED_MAX_FREQUENCY SRTRIACFEEDBACKLLI_ALLOWED_MAX_FREQUENCY
+     57              #else
+     58                  #define TRIACFEEDBACKLLI_ALLOWED_MAX_FREQUENCY   65
+     59              #endif
+     60          #endif
+     61          
+     62          #define TIME_MSEC_IN_ONE_SEC                (1000)
+     63          
+     64          #define MINIMUM_DURATION_ALLOWED            (TIME_MSEC_IN_ONE_SEC / TRIACFEEDBACKLLI_ALLOWED_MAX_FREQUENCY)
+     65          #define MAXIMUM_DURATION_ALLOWED            ((TIME_MSEC_IN_ONE_SEC / TRIACFEEDBACKLLI_ALLOWED_MIN_FREQUENCY) + 1)
+     66          
+     67          #define MINIMUM_HALF_DURATION_ALLOWED       ((TIME_MSEC_IN_ONE_SEC / (2 * TRIACFEEDBACKLLI_ALLOWED_MAX_FREQUENCY)))
+     68          #define MAXIMUM_HALF_DURATION_ALLOWED       ((TIME_MSEC_IN_ONE_SEC / (2 * TRIACFEEDBACKLLI_ALLOWED_MIN_FREQUENCY)) + 1)
+     69          
+     70          #define LAST_FREQUENCY_EVENT_TIMEOUT        ((3 * TIME_MSEC_IN_ONE_SEC) / (2 * TRIACFEEDBACKLLI_ALLOWED_MIN_FREQUENCY))
+     71          
+     72          typedef struct
+     73          {
+     74              uint8 N_Read:3;
+     75              uint8 Unused_0:5;
+     76              uint8 Unused_1:5;
+     77              uint8 Pull_Up:1;
+     78              uint8 Unused_2:1;
+     79              uint8 Inverted:1;
+     80          } TRIACFEEDBACKLLI_PARAM_TYPE;
+     81          
+     82          typedef struct
+     83          {
+     84              // Buffer of Gpio samples collected
+     85              uint16 Pin_Buffer;
+     86              // Sampling Sequence counter - updated on each 1ms sample
+     87              uint8 Sampling_Counter;
+     88              // last Sampling Sequence counter reference of the last Asynch iteration
+     89              uint8 Async_Sampling_Reference;
+     90              // Frequency detection in progress
+     91              BOOL_TYPE Is_Detecting_Frequency;
+     92              // Double frequency detection in progress
+     93              BOOL_TYPE Is_Detecting_Double_Frequency;
+     94              // Sampling Sequence counter reference of the last frequency event detected
+     95              uint8 Last_Frequency_Event_Reference;
+     96              // Time (in ms) between last two frequency events detected
+     97              uint8 Time_Between_Frequency_Events;
+     98              // Counter of High / Low pin level event detected: it increments on a new High value event, decrements on a new Low value event
+     99              sint8 Level_Counter;
+    100              // Counter of valid Frequency event detected: it increments when valid Frequency events have been detected
+    101              uint8 Frequency_Counter;
+    102              // Counter of Double Frequency event detected: it increments if a valid double frequency event happened
+    103              uint8 Double_Frequency_Counter;
+    104              // Current Feedback LLI value (0, 1, 2, 3)
+    105              TRIAC_FEEDBACK_LLI_OUTPUT_TYPE Value;
+    106          } TRIACFEEDBACKLLI_DATA_TYPE;
+    107          
+    108          static TRIACFEEDBACKLLI_DATA_TYPE TriacFeedbackLLI_Data[HBL_LLI_NUM_TRIACFEEDBACK];
+    109          static uint8 TriacFeedbackLLI_Allocation;
+    110          
+    111          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    112          static void UpdateLastFrequencyTimingEvents(TRIACFEEDBACKLLI_DATA_TYPE *data_ptr, uint8 new_frequency_reference);
+    113          
+    114          //=====================================================================================================================
+    115          //-------------------------------------- Public Functions -------------------------------------------------------------
+    116          //=====================================================================================================================
+    117          
+    118          
+    119          //---------------------------------------------------------------------------------------------------------------------
+    120          /**
+    121           * @brief      It Initializes the module TriacFeedbackLLI and its variables
+    122           */
+    123          void TriacFeedbackLLI__Initialize(void)
+    124          {
+    125              TriacFeedbackLLI_Allocation = 0;
+    126              memset(TriacFeedbackLLI_Data, 0, sizeof(TriacFeedbackLLI_Data));
+    127          }
+    128          
+    129          //---------------------------------------------------------------------------------------------------------------------
+    130          /**
+    131           * @brief   Checks if there is free space and reserve a new instance
+    132           * @return  index of TriacFeedbackLLI instance, 0xFF if all HBL_LLI_NUM_TRIACFEEDBACK are already allocated
+    133           */
+    134          uint8 TriacFeedbackLLI__Allocate(void)
+    135          {
+    136              uint8 retval = HBL_ALLOCATION_INVALID;
+    137          
+    138              if (TriacFeedbackLLI_Allocation < (uint8) HBL_LLI_NUM_TRIACFEEDBACK)
+    139              {
+    140                  retval = TriacFeedbackLLI_Allocation;
+    141                  TriacFeedbackLLI_Allocation++;
+    142          
+    143              }
+    144              return (retval);
+    145          }
+    146          
+    147          //---------------------------------------------------------------------------------------------------------------------
+    148          /**
+    149           * @brief      Initializes a new instance of TriacFeedbackLLI
+    150           * @param   input     pointer to HBL_LLI_TYPE structure reserved for that instance
+    151           * @return  PASS if initialize succeed, FAIL if there were any error
+    152           */
+    153          PASS_FAIL_TYPE TriacFeedbackLLI__InitializeInstance(HBL_LLI_TYPE * input)
+    154          {
+    155              PASS_FAIL_TYPE ret_status = FAIL;
+    156          
+    157              if(input->Data_Index < TriacFeedbackLLI_Allocation)
+    158              {
+    159                  TRIACFEEDBACKLLI_DATA_TYPE *data = &TriacFeedbackLLI_Data[input->Data_Index];
+    160                  TRIACFEEDBACKLLI_PARAM_TYPE *feedback_param = (void *)input->Parameter_Ptr.Data;
+    161                  GPIO_PIN_MODE_TYPE type = INPUT_FLOAT;
+    162                  uint8 virtual_pin = input->Pin_Ptr[0];
+    163          
+    164                  if((feedback_param != NULL) &&
+    165                      ((uint8) feedback_param->Pull_Up != 0U))
+    166                  {
+    167                      type = INPUT_PULLUP;
+    168                  }
+    169          
+    170                  if(virtual_pin < VirtualPin__GetNumOf())
+    171                  {
+    172                      Gpio__PinConfig(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin, type);
+    173                      data->Value = TRIAC_UNKNOWN_UNKNOWN_VALUE;
+    174                      ret_status = PASS;
+    175                  }
+    176              }
+    177              return (ret_status);
+    178          }
+    179          
+    180          //---------------------------------------------------------------------------------------------------------------------
+    181          /**
+    182           *  @brief      Provides current TriacFeedbackLLI value
+    183           * @param   input     pointer to HBL_LLI_TYPE structure reserved for that instance
+    184           * @return  Pointer to LLI Data structure (Public_Data.Output) or NULL if input points to an invalid item
+    185           */
+    186          void * TriacFeedbackLLI__Get(HBL_LLI_TYPE * input)
+    187          {
+    188              void *dataptr = NULL;
+    189          
+    190              if (input->Data_Index < TriacFeedbackLLI_Allocation)
+    191              {
+    192                  dataptr = &TriacFeedbackLLI_Data[input->Data_Index].Value;
+    193              }
+    194              return(dataptr);
+    195          }
+    196          
+    197          //---------------------------------------------------------------------------------------------------------------------
+    198          /**
+    199           * @brief   Process function to read on Asynch Process (5ms) - it detects High or Low values if no Frequency event occurs and updates LLI
+    200           * @param input     pointer to HBL_LLI_TYPE structure instance
+    201           * @return  TRUE if a new sample is ready, FALSE otherwise
+    202           */
+    203          BOOL_TYPE TriacFeedbackLLI__AsynchProcess(HBL_LLI_TYPE * input)
+    204          {
+    205              BOOL_TYPE retval = FALSE;
+    206          
+    207              if (input->Data_Index < TriacFeedbackLLI_Allocation)
+    208              {
+    209                  TRIACFEEDBACKLLI_DATA_TYPE *data = &TriacFeedbackLLI_Data[input->Data_Index];
+    210                  TRIACFEEDBACKLLI_PARAM_TYPE *feedback_param = (void *) input->Parameter_Ptr.Data;
+    211                  uint8 n_read = DEFAULT_NUM_SAMPLES;
+    212                  // Minimum number of samples to give priority between level (High / Low) or Frequency detection
+    213                  uint8 level_freq_threshold = (uint8) (DEFAULT_NUM_SAMPLES / 2);
+    214          
+    215                  if(feedback_param != NULL)
+    216                  {
+    217                      uint8 param_read = 1U << ((uint8) feedback_param->N_Read);
+    218                      if (param_read <= (uint8) MIN_NUM_SAMPLES)
+    219                      {
+    220                          param_read = (uint8) MIN_NUM_SAMPLES;
+    221                      }
+    222                      n_read = param_read;
+    223                      level_freq_threshold = param_read / 2U;
+    224                  }
+    225          
+    226                  // Update Feedback values if there are new samples coming from  1ms Process
+    227                  if(data->Async_Sampling_Reference != data->Sampling_Counter)
+    228                  {
+    229                      MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    230                      uint16 local_pin_buffer;
+    231                      BOOL_TYPE valid_freq_detected = FALSE;
+    232                      sint8 pin_value_counter = 0;
+    233                      sint8 local_level_counter;
+    234                      uint8 local_sampling_counter;
+    235                      uint8 local_double_freq_counter;
+    236                      uint8 local_freq_counter;
+    237                      uint8 num_samples;
+    238                      uint8 sample_reference;
+    239          
+    240                      // Take a snapshot of pin buffer and sample counter to prevent concurrent updates from OneMsProcess function
+    241                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    242                      local_sampling_counter = data->Sampling_Counter;
+    243                      local_pin_buffer = data->Pin_Buffer;
+    244                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    245          
+    246                      // Get number of samples to process with a limit to 10 samples
+    247                      // This limit comes from the falling edge transition pattern checks
+    248                      num_samples = (uint8) (local_sampling_counter - data->Async_Sampling_Reference);
+    249                      if(num_samples > 10U)
+    250                      {
+    251                          num_samples = 10U;
+    252                      }
+    253                      sample_reference = data->Async_Sampling_Reference + num_samples;
+    254          
+    255                      // Collects high, low pin value occurrences and detects a frequency signal through falling edge transitions:
+    256                      // - It counts number of High and Low new samples collected
+    257                      // - It detects a falling edge transition through a pattern detection:
+    258                      //   - last 4 ms for a clean falling edge transition with a 2ms debounce for each edge (2ms ON, 2ms OFF)
+    259                      //   - last 6 ms for a clean Charge pump signal (3 times: 1ms ON, 1ms OFF)
+    260                      //   - last 6 ms for a noisy falling edge transition with a 2ms debounce for each steady edge (2ms ON, 1ms OFF, 1 ms ON, 2ms OFF)
+    261                      //   - last 8 ms for a very noisy falling edge transition with a 2ms debounce for each steady edge (2ms ON, 1ms OFF, 1 ms ON, 1ms OFF, 1 ms ON, 2ms OFF)
+    262                      // - When a frequency signal has been detected:
+    263                      //   - it saves frequency time reference
+    264                      //   - it updates the time between frequency event to estimate the cycle (period) time
+    265                      for(uint8 i = 0; i < num_samples; i++)
+    266                      {
+    267                          uint16 pin_value = (local_pin_buffer & 0x01U);
+    268          
+    269                          // Update Level counter: increment if High pin value, decrement if Low pin value
+    270                          if(pin_value != 0U)
+    271                          {
+    272                              pin_value_counter++;
+    273                          }
+    274                          else
+    275                          {
+    276                              pin_value_counter--;
+    277                          }
+    278          
+    279                          // Find a frequency event based to a falling edge transition patterns, including noisy ones
+    280                          if ((local_pin_buffer & 0x0FU) == 0x0CU)          // Check if a falling edge event occur with 2ms debounce (2 ON - 2 OFF)
+    281                          {
+    282                              UpdateLastFrequencyTimingEvents(data, sample_reference - 2U);
+    283                          }
+    284                          else if((local_pin_buffer & 0x1FU) == 0x04U)      // Check if a falling edge event occur with 1 ms spikes (2 OFF, 1 ON, 2 OFF)
+    285                          {
+    286                              UpdateLastFrequencyTimingEvents(data, sample_reference - 2U);
+    287                          }
+    288                          else if((local_pin_buffer & 0x1FU) == 0x1BU)      // Check if a falling edge event occur with 1 ms spikes (2 ON, 1 OFF, 2 ON)
+    289                          {
+    290                              UpdateLastFrequencyTimingEvents(data, sample_reference - 3U);
+    291                          }
+    292                          else if  ((local_pin_buffer & 0x3FU) == 0x34U)      // Check if a falling edge event occur with 2ms debounce and 1 ms spikes (2 ON, 1 OFF, 1 ON, 2 OFF)
+    293                          {
+    294                              UpdateLastFrequencyTimingEvents(data, sample_reference - 3U);
+    295                          }
+    296                          else if ((local_pin_buffer & 0xFFU) == 0xD4U)         // Check if a falling edge event occur with 2ms debounce and 1 ms spikes (2 ON, 1 OFF,1 ON, 1 OFF, 1 ON, 2 OFF)
+    297                          {
+    298                              UpdateLastFrequencyTimingEvents(data, sample_reference - 4U);
+    299                          }
+    300          
+    301                          sample_reference--;
+    302                          local_pin_buffer >>= 1U;
+    303                      }
+    304                      // Update Async Sampling Reference for the next execution
+    305                      data->Async_Sampling_Reference = local_sampling_counter;
+    306          
+    307                      // Check if no double frequency signal detected after LAST_FREQUENCY_EVENT_TIMEOUT / 2
+    308                      // If no frequency events for more than timeout, switch to frequency detection
+    309                      if((uint8) (local_sampling_counter - data->Last_Frequency_Event_Reference) >= (uint8) (LAST_FREQUENCY_EVENT_TIMEOUT / 2))
+    310                      {
+    311                          data->Is_Detecting_Double_Frequency = FALSE;
+    312                      }
+    313          
+    314                      // Check if no frequency signal detected after LAST_FREQUENCY_EVENT_TIMEOUT
+    315                      // If no frequency events for more than timeout, switch to level detection
+    316                     if((uint8) (local_sampling_counter - data->Last_Frequency_Event_Reference) >= (uint8) LAST_FREQUENCY_EVENT_TIMEOUT)
+    317                      {
+    318                          data->Is_Detecting_Frequency = FALSE;
+    319                          data->Time_Between_Frequency_Events = 0;
+    320                      }
+    321          
+    322                     // Take a snapshot of Frequency, Double Frequency, Level event counters to
+    323                     local_freq_counter = data->Frequency_Counter;
+    324                     local_double_freq_counter = data->Double_Frequency_Counter;
+    325                     local_level_counter = data->Level_Counter;
+    326          
+    327                      // Frequency detection: it checks if a valid frequency signal has been detected
+    328                      // Valid frequency signals are Charge Pump and Mains (AC Signal) like frequency signal
+    329                      if(data->Is_Detecting_Frequency)
+    330                      {
+    331                          TRIAC_FEEDBACK_LLI_OUTPUT_TYPE new_value = TRIAC_UNKNOWN_UNKNOWN_VALUE;
+    332                          BOOL_TYPE is_mains_freq;
+    333          
+    334                          // Valid AC Signal frequency events happen within duration range - e.g. 45 Hz (22.22ms) - 65 Hz (15.38ms) range
+    335                          is_mains_freq = (BOOL_TYPE) (data->Time_Between_Frequency_Events >= (uint8) MINIMUM_DURATION_ALLOWED);
+    336                          is_mains_freq = (BOOL_TYPE) (is_mains_freq && (data->Time_Between_Frequency_Events <= (uint8) MAXIMUM_DURATION_ALLOWED));
+    337          
+    338                          if(is_mains_freq || data->Is_Detecting_Double_Frequency)
+    339                          {
+    340                              valid_freq_detected = TRUE;
+    341          
+    342                              // Increment the Double counter if Time between Frequency Events is less than the Mains frequency
+    343                              if(data->Is_Detecting_Double_Frequency)
+    344                              {
+    345                                  local_double_freq_counter++;
+    346                                  // If the number of Frequency event occurrences becomes higher than the half of valid samples to collect
+    347                                  // Frequency detection takes precedence over Level and double frequency detection
+    348                                  if(local_double_freq_counter >= level_freq_threshold)
+    349                                  {
+    350                                      local_level_counter = 0;
+    351                                      local_freq_counter = 0;
+    352                                  }
+    353          
+    354                                  // Update LLI value to Frequency (Phase / Opp.Phase) if number of valid samples have been collected
+    355                                  if(local_double_freq_counter >= n_read)
+    356                                  {
+    357                                      new_value = TRIAC_FB_LLI_DOUBLE_GRID_FREQ;
+    358                                  }
+    359                              }
+    360                              else
+    361                              {
+    362                                  local_freq_counter++;
+    363                                  // If the number of Frequency event occurrences becomes higher than the half of valid samples to collect
+    364                                  // Frequency detection takes precedence over Level and double frequency detection
+    365                                  if(local_freq_counter >= level_freq_threshold)
+    366                                  {
+    367                                      local_level_counter = 0;
+    368                                      local_double_freq_counter = 0;
+    369                                  }
+    370          
+    371                                  // Update LLI value to Frequency (Phase / Opp.Phase) if number of valid samples have been collected
+    372                                  if(local_freq_counter >= n_read)
+    373                                  {
+    374                                      new_value = TRIAC_FB_LLI_NOMINAL_GRID_FREQ;
+    375                                  }
+    376                              }
+    377                          }
+    378          
+    379                          // Update LLI value to Frequency (Phase / Opp.Phase) if number of valid samples have been collected
+    380                          if(new_value != TRIAC_UNKNOWN_UNKNOWN_VALUE)
+    381                          {
+    382                              data->Value = new_value;
+    383                              local_freq_counter = 0;
+    384                              local_double_freq_counter = 0;
+    385                              retval = TRUE;
+    386                          }
+    387                      }
+    388          
+    389                      // If not valid Frequency signal has been detected, High / Low detection algorithm is performed
+    390                      if(!valid_freq_detected)
+    391                      {
+    392                          // High value level event: Level counter is a positive number, higher than pin noise threshold
+    393                          if(pin_value_counter >= SAMPLES_NOISE_THRESHOLD)
+    394                          {
+    395                              local_level_counter++;
+    396                          }
+    397                          // Low value level event: Level counter is a negative number, lower than pin noise threshold
+    398                          else if(pin_value_counter <= -SAMPLES_NOISE_THRESHOLD)
+    399                          {
+    400                              local_level_counter--;
+    401                          }
+    402          
+    403                          // If the number of High/Low value Level event occurrences becomes higher than the half of valid samples to collect
+    404                          // Level detection takes precedence over Frequency detection
+    405                          if((local_level_counter >= (sint8) level_freq_threshold) ||
+    406                              (local_level_counter <= -((sint8) level_freq_threshold)))
+    407                          {
+    408                              local_freq_counter = 0;
+    409                              local_double_freq_counter = 0;
+    410                          }
+    411          
+    412                          // Update LLI value to High if number of valid samples have been collected
+    413                          if(local_level_counter >= (sint8) n_read)
+    414                          {
+    415                              data->Value = TRIAC_FB_LLI_1_VALUE;
+    416                              local_level_counter = 0;
+    417                              retval = TRUE;
+    418                          }
+    419          
+    420                          // Update LLI value to Low if number of valid samples have been collected
+    421                          if(local_level_counter <= -((sint8) n_read))
+    422                          {
+    423                              data->Value = TRIAC_FB_LLI_0_VALUE;
+    424                              local_level_counter = 0;
+    425                              retval = TRUE;
+    426                          }
+    427                      }
+    428          
+    429                      data->Frequency_Counter = local_freq_counter;
+    430                      data->Level_Counter = local_level_counter;
+    431                      data->Double_Frequency_Counter = local_double_freq_counter;
+    432                  }
+    433              }
+    434          
+    435              return(retval);
+    436          }
+    437          
+    438          //---------------------------------------------------------------------------------------------------------------------
+    439          /**
+    440           *  @brief      Executes TriacFeedbackLLI 1ms sampling
+    441           * @param       input - Hbl LLI Data structure of the instance to process
+    442           * @return      FALSE    this process never updates LLI Sequence ID
+    443           */
+    444          BOOL_TYPE TriacFeedbackLLI__OneMsProcess(HBL_LLI_TYPE * input)
+    445          {
+    446              if (input->Data_Index < TriacFeedbackLLI_Allocation)
+    447              {
+    448                  TRIACFEEDBACKLLI_DATA_TYPE *data = &TriacFeedbackLLI_Data[input->Data_Index];
+    449                  TRIACFEEDBACKLLI_PARAM_TYPE *feedback_param = (void *) input->Parameter_Ptr.Data;
+    450                  uint8 virtual_pin = input->Pin_Ptr[0];
+    451                  uint8 pin_value = (uint8) Gpio__PinRead(VIRTUALPIN_TABLE[virtual_pin].port, VIRTUALPIN_TABLE[virtual_pin].pin);
+    452                  uint16 pin_buffer;
+    453          
+    454                  // Inverted logic flag enabled
+    455                  if((feedback_param != NULL) &&
+    456                     ((uint8) feedback_param->Inverted != 0U))
+    457                  {
+    458                      pin_value = (pin_value == 0U) ? 1U : 0U;
+    459                  }
+    460          
+    461                  // Update pin buffer with a new sample
+    462                  pin_buffer = data->Pin_Buffer;
+    463                  pin_buffer  <<= 1U;
+    464                  pin_buffer |= (uint16) pin_value & 0x01U;
+    465                  data->Pin_Buffer = pin_buffer;
+    466          
+    467                  // Update sampling counter
+    468                  data->Sampling_Counter++;
+    469              }
+    470              return(FALSE);
+    471          }
+    472          
+    473          //=====================================================================================================================
+    474          //-------------------------------------- Private Functions ------------------------------------------------------------
+    475          //=====================================================================================================================
+    476          
+    477          /*
+    478           *
+    479           */
+    480          static void UpdateLastFrequencyTimingEvents(TRIACFEEDBACKLLI_DATA_TYPE *data_ptr, uint8 new_frequency_reference)
+    481          {
+    482              if(data_ptr->Is_Detecting_Frequency)
+    483              {
+    484                  BOOL_TYPE is_double_freq;
+    485                  data_ptr->Time_Between_Frequency_Events = new_frequency_reference - data_ptr->Last_Frequency_Event_Reference;
+    486                  // Valid AC Signal frequency events happen within half of durationr range - e.g. 45 Hz (11.11ms) - 65 Hz (7.38ms) range
+    487                  is_double_freq = (BOOL_TYPE) (data_ptr->Time_Between_Frequency_Events >= (uint8) MINIMUM_HALF_DURATION_ALLOWED);
+    488                  is_double_freq = (BOOL_TYPE) (is_double_freq && (data_ptr->Time_Between_Frequency_Events <= (uint8) MAXIMUM_HALF_DURATION_ALLOWED));
+    489                  data_ptr->Is_Detecting_Double_Frequency = is_double_freq;
+    490              }
+    491              data_ptr->Last_Frequency_Event_Reference = new_frequency_reference;
+    492              data_ptr->Is_Detecting_Frequency = TRUE;
+    493          }
+    494          
+    495          
+    496          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

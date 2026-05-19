@@ -1,0 +1,1974 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:19
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/Micros/STM32G0x/Driver/I2c/I2c.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\I2c.lst -o
+#        obj\I2c.obj source/Micros/STM32G0x/Driver/I2c/I2c.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\I2c.lst
+#    Object file  =  obj\I2c.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Micros\STM32G0x\Driver\I2c\I2c.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief    This module implements I2c driver for STM32F0x series of micro-controllers
+      5           *
+      6           *  @details  This module provides the service to the application such as initialization of I2c devices i.e. I2c1 & I2c2,
+      7           *            transmission, reception of serial data via I2C bus
+      8           *
+      9           *            Note -
+     10           *            I2C1 supports Slave mode
+     11           *            This was designed just to support the Hardware in loop testing only, projects shall not use this configurations
+     12           *            By default I2C1 works as Master mode
+     13           *
+     14           *  @section    Applicable_Documents
+     15           *                  List here all the applicable documents if needed. <tr>
+     16           *
+     17           *  $Header: $
+     18           *
+     19           *  @copyright  Copyright 2015-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     20           */
+     21          //-------------------------------------- Include Files ----------------------------------------------------------------
+     22          #include "C_Extensions.h"
+     23          #include "I2c.h"
+     24          #include "Gpio.h"
+     25          #include "Micro.h"
+     26          #include <string.h>
+     27          
+     28          #ifndef I2C1_SLAVE_FEATURE
+     29              #define I2C1_SLAVE_FEATURE                    DISABLED
+     30          #endif
+     31          
+     32          #if (I2C1_SLAVE_FEATURE == ENABLED)
+     33              #warning :"SLAVE mode is used only for testing purpose";
+     34          
+     35              #ifndef I2C_1_SLAVE_MODE_NEW_DATA_RECEIVED
+     36                  #define I2C_1_SLAVE_MODE_NEW_DATA_RECEIVED()
+     37              #endif
+     38          
+     39              #ifndef I2c_1_SLAVE_DATA_TRANSMISSION_COMPLETED
+     40                  #define I2c_1_SLAVE_DATA_TRANSMISSION_COMPLETED()
+     41              #endif
+     42          
+     43              static uint8 I2c1_Slave_TxSize;
+     44          #endif
+     45          
+     46          #if (I2C3_FEATURE == ENABLED)
+     47              #error :"I2C3 was not able to test during development as its unavailibility, contact developer email: hanumanth_b_dasar@whirlpoll.com";
+     48          #endif
+     49          
+     50          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     51          #ifndef I2C1_DIGITAL_NOISE_FILTER
+     52              #define I2C1_DIGITAL_NOISE_FILTER    2
+     53          #elif (I2C1_DIGITAL_NOISE_FILTER > 16)
+     54              #error:"I2C1_DIGITAL_NOISE_FILTER value should be not more than 16"
+     55          #endif
+     56          
+     57          #ifndef I2C2_DIGITAL_NOISE_FILTER
+     58              #define I2C2_DIGITAL_NOISE_FILTER    2
+     59          #elif (I2C2_DIGITAL_NOISE_FILTER > 16)
+     60              #error:"I2C2_DIGITAL_NOISE_FILTER value should be not more than 16"
+     61          #endif
+     62          
+     63          #ifndef I2C3_DIGITAL_NOISE_FILTER
+     64              #define I2C3_DIGITAL_NOISE_FILTER    2
+     65          #elif (I2C3_DIGITAL_NOISE_FILTER > 16)
+     66              #error:"I2C3_DIGITAL_NOISE_FILTER value should be not more than 16"
+     67          #endif
+     68          
+     69          //I2c Clock Calculation
+     70          #ifndef I2C_BASE_FREQUENCY_AT_50KHZ_100KHZ_SPEED
+     71              #define I2C_BASE_FREQUENCY_AT_50KHZ_100KHZ_SPEED        4000000  //clock period = 250ns
+     72          #endif
+     73          
+     74          #ifndef I2C_BASE_FREQUENCY_AT_400KHZ_SPEED
+     75              #define I2C_BASE_FREQUENCY_AT_400KHZ_SPEED              8000000  //clock period = 125ns
+     76          #endif
+     77          
+     78          #ifndef I2C_SCLL_FREQUENCY_AT_50KHZ
+     79              #define I2C_SCLL_FREQUENCY_AT_50KHZ                     100000
+     80          #endif
+     81          
+     82          #ifndef I2C_SCLH_FREQUENCY_AT_50KHZ
+     83              #define I2C_SCLH_FREQUENCY_AT_50KHZ                     110000
+     84          #endif
+     85          
+     86          #ifndef I2C_SCLL_FREQUENCY_AT_100KHZ
+     87              #define I2C_SCLL_FREQUENCY_AT_100KHZ                    200000
+     88          #endif
+     89          
+     90          #ifndef I2C_SCLH_FREQUENCY_AT_100KHZ
+     91              #define I2C_SCLH_FREQUENCY_AT_100KHZ                    250000
+     92          #endif
+     93          
+     94          #ifndef I2C_SCLL_FREQUENCY_AT_400KHZ
+     95              #define I2C_SCLL_FREQUENCY_AT_400KHZ                    800000
+     96          #endif
+     97          
+     98          #ifndef I2C_SCLH_FREQUENCY_AT_400KHZ
+     99              #define I2C_SCLH_FREQUENCY_AT_400KHZ                    2000000
+    100          #endif
+    101          
+    102          
+    103          #ifndef I2C_SDADEL_AT_50_100KHZ
+    104              #define I2C_SDADEL_AT_50_100KHZ                         ((uint32)0x00020000)
+    105          #endif
+    106          
+    107          #ifndef I2C_SCLDEL_AT_50_100KHZ
+    108              #define I2C_SCLDEL_AT_50_100KHZ                         ((uint32)0x00400000)
+    109          #endif
+    110          
+    111          #ifndef I2C_SDADEL_AT_400KHZ
+    112              #define I2C_SDADEL_AT_400KHZ                            ((uint32)0x00020000)
+    113          #endif
+    114          
+    115          #ifndef I2C_SCLDEL_AT_400KHZ
+    116              #define I2C_SCLDEL_AT_400KHZ                            ((uint32)0x00300000)
+    117          #endif
+    118          
+    119          #ifndef I2C1_INTERRUPT_PREEMPTION_PRIORITY
+    120              #define I2C1_INTERRUPT_PREEMPTION_PRIORITY    3
+    121          #elif (I2C1_INTERRUPT_PREEMPTION_PRIORITY > 3)
+    122              #error :"I2C1_INTERRUPT_PREEMPTION_PRIORITY should be 0 to 3.....0 for High priority and 3 for low priority"
+    123          #endif
+    124          
+    125          #ifndef I2C2_INTERRUPT_PREEMPTION_PRIORITY
+    126              #define I2C2_INTERRUPT_PREEMPTION_PRIORITY    3
+    127          #elif (I2C2_INTERRUPT_PREEMPTION_PRIORITY > 3)
+    128              #error :"I2C2_INTERRUPT_PREEMPTION_PRIORITY should be 0 to 3.....0 for High priority and 3 for low priority"
+    129          #endif
+    130          
+    131          #ifndef I2C3_INTERRUPT_PREEMPTION_PRIORITY
+    132              #define I2C3_INTERRUPT_PREEMPTION_PRIORITY    3
+    133          #elif (I2C3_INTERRUPT_PREEMPTION_PRIORITY > 3)
+    134              #error :"I2C3_INTERRUPT_PREEMPTION_PRIORITY should be 0 to 3.....0 for High priority and 3 for low priority"
+    135          #endif
+    136          
+    137          #if (I2C1_FEATURE == ENABLED)
+    138              static I2C_ERROR_TYPE I2c1_Ack_Error;
+    139              static uint8 I2c1_Buffer_In[I2C1_BUFFER_IN_SIZE];
+    140              static uint8 I2c1_Buffer_Out[I2C1_BUFFER_OUT_SIZE + 1];
+    141              static uint16 I2c1_TxPointer;
+    142              static uint16 I2c1_RxPointer;
+    143          #endif
+    144          
+    145          #if (I2C2_FEATURE == ENABLED)
+    146              static I2C_ERROR_TYPE I2c2_Ack_Error;
+    147              static uint8 I2c2_Buffer_In[I2C2_BUFFER_IN_SIZE];
+    148              static uint8 I2c2_Buffer_Out[I2C2_BUFFER_OUT_SIZE + 1];
+    149              static uint16 I2c2_TxPointer;
+    150              static uint16 I2c2_RxPointer;
+    151          #endif
+    152          
+    153          #if (I2C3_FEATURE == ENABLED)
+    154              static I2C_ERROR_TYPE I2c3_Ack_Error;
+    155              static uint8 I2c3_Buffer_In[I2C3_BUFFER_IN_SIZE];
+    156              static uint8 I2c3_Buffer_Out[I2C3_BUFFER_IN_SIZE + 1];
+    157              static uint16 I2c3_TxPointer;
+    158              static uint16 I2c3_RxPointer;
+    159          #endif
+    160          
+    161          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    162          #define I2C1_START()    {I2C_1.CR2 &= (uint32)(~I2C_CR2_STOP); I2C_1.CR2 |= I2C_CR2_START;}
+    163          #define I2C1_STOP()     {I2C_1.CR2 = I2C_CR2_STOP;}
+    164          
+    165          #define I2C2_START()    {I2C_2.CR2 &= (uint32)(~I2C_CR2_STOP); I2C_2.CR2 |= I2C_CR2_START;}
+    166          #define I2C2_STOP()     {I2C_2.CR2 = I2C_CR2_STOP;}
+    167          
+    168          #define I2C3_START()    {I2C_3.CR2 &= (uint32)(~I2C_CR2_STOP); I2C_3.CR2 |= I2C_CR2_START;}
+    169          #define I2C3_STOP()     {I2C_3.CR2 = I2C_CR2_STOP;}
+    170          
+    171          /**
+    172           * @brief  Configures the specified port-pin into the Alternate function.
+    173           */
+    174          #define GPIO__PIN_COFIG_AF(PORT, PORTBIT, AF)       {(*(volatile GPIO_DEF *)GPIO_PORT_LIST[PORT]).AFR[PORTBIT >> 0x03] = (*(volatile GPIO_DEF *)GPIO_PORT_LIST[PORT]).AFR[PORTBIT >> 0x03] | ((uint32)(AF) << ((uint32)((uint32)PORTBIT & (uint32)0x07) << 2));}
+    175          
+    176          //=====================================================================================================================
+    177          //-------------------------------------- Public Functions -------------------------------------------------------------
+    178          //=====================================================================================================================
+    179          //---------------------------------------------------------------------------------------------------------------------
+    180          /**
+    181           *    @brief    It initializes a specific I2C module i.e. I2c1 or I2c2
+    182           *
+    183           *    @details  This method first reset I2C module to ensure there is no activity on the I2C bus prior to its initialization,
+    184           *              then it enables the particular I2C module and configures it with user defined speed, also defines which type
+    185           *              of addressing scheme is used i.e. 7-bit or 10-bit addressing
+    186           *    @param    i2c       : I2C module i.e. I2c1 or I2c2 device
+    187           *    @param    speed     : defines the i2c bus speed
+    188           *    @param    addr_type : defines the slave addressing scheme types used 7-bits or 10-bits
+    189           *    @param    i2c_Addr  : defines the slave address used during I2C communication
+    190           *    @return   BOOL_TYPE
+    191           *      @retval   TRUE (1) : It means I2C module is successfully initialized
+    192           *      @retval   FALSE(0) : It means I2C module initialization is unsuccessful
+    193           *
+    194           *    @image html I2c__Initialize.jpg
+    195           */
+
+   \                                 In section .text, align 2, keep-with-next
+    196          BOOL_TYPE I2c__Initialize(I2C_ENUM_TYPE i2c,I2C_SPEED_TYPE speed, I2C_ADRESS_TYPE addr_type, uint8 i2c_addr)
+    197          {
+    198              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+    199          
+    200                  BOOL_TYPE response;
+    201                  uint32 apb_clock;
+    202                  uint8 prescaler;
+    203                  uint8 scll;
+    204                  uint8 sclh;
+    205                  uint32 sdadel_scl_del;
+    206          
+    207                  response = FALSE;
+    208                  prescaler = 0;
+    209          
+    210                  I2c__ResetBus(i2c);                                     //I2C bus is reset i.e. SCL is made low-high & SDA is checked for high
+    211          
+    212                  apb_clock = Micro__GetClock()->SYSCLK_Frequency;        //Peripheral clock is supplied by ABP module
+    213          
+    214                  //Clock configuration
+    215                  switch (speed)
+    216                  {
+    217                      case I2C_50KHZ:
+    218                          prescaler = apb_clock / I2C_BASE_FREQUENCY_AT_50KHZ_100KHZ_SPEED;
+    219          
+    220                          scll = (apb_clock/prescaler)/I2C_SCLL_FREQUENCY_AT_50KHZ;
+    221                          sclh = (apb_clock/prescaler)/I2C_SCLH_FREQUENCY_AT_50KHZ;
+    222                          sdadel_scl_del = (I2C_SDADEL_AT_50_100KHZ | I2C_SCLDEL_AT_50_100KHZ);
+    223                          break;
+    224          
+    225                      case I2C_400KHZ:
+    226                          prescaler = apb_clock / I2C_BASE_FREQUENCY_AT_400KHZ_SPEED;
+    227          
+    228                          scll = (apb_clock/prescaler)/I2C_SCLL_FREQUENCY_AT_400KHZ;
+    229                          sclh = (apb_clock/prescaler)/I2C_SCLH_FREQUENCY_AT_400KHZ;
+    230                          sdadel_scl_del = (I2C_SDADEL_AT_400KHZ | I2C_SCLDEL_AT_400KHZ);
+    231                          break;
+    232          
+    233                      case I2C_100KHZ:
+    234                      default:
+    235                          prescaler = apb_clock / I2C_BASE_FREQUENCY_AT_50KHZ_100KHZ_SPEED;
+    236          
+    237                          scll = (apb_clock/prescaler)/I2C_SCLL_FREQUENCY_AT_100KHZ;
+    238                          sclh = (apb_clock/prescaler)/I2C_SCLH_FREQUENCY_AT_100KHZ;
+    239                          sdadel_scl_del = (I2C_SDADEL_AT_50_100KHZ | I2C_SCLDEL_AT_50_100KHZ);
+    240                          break;
+    241                  }
+    242          
+    243                  prescaler--;
+    244                  scll--;
+    245                  sclh--;
+    246          
+    247                  #if (I2C1_FEATURE == ENABLED)
+    248                      if (i2c == I2C1)
+    249                      {
+    250                          I2c1_Ack_Error = I2C_ERROR_NONE;
+    251          
+    252                          //System clock (SYSCLK) selected as I2c1 clock
+    253                          RCC.CCIPR &= ~RCC_CCIPR_I2C1SEL;
+    254                          RCC.CCIPR |= LL_RCC_I2C1_CLKSOURCE_SYSCLK;
+    255          
+    256                          //Enable the clock for I2c1 module
+    257                          RCC.APBENR1 |= RCC_APBENR1_I2C1EN;
+    258          
+    259                          //Reset the I2c1
+    260                          RCC.APBRSTR1 |= RCC_APBENR1_I2C1EN;
+    261                          RCC.APBRSTR1 &= (uint32)(~RCC_APBENR1_I2C1EN);
+    262          
+    263                          I2c__Disable(i2c);                                      //I2C module is disabled
+    264          
+    265                          GPIO__PIN_COFIG_AF(I2C_1_SDA_PORT, I2C_1_SDA_PORTBIT, I2C_1_SDA__AF);
+    266                          GPIO__PIN_COFIG_SF_OPENDRAIN(I2C_1_SDA_PORT, I2C_1_SDA_PORTBIT);
+    267          
+    268                          GPIO__PIN_COFIG_AF(I2C_1_SCL_PORT, I2C_1_SCL_PORTBIT, I2C_1_SCL__AF);
+    269                          GPIO__PIN_COFIG_SF_OPENDRAIN(I2C_1_SCL_PORT, I2C_1_SCL_PORTBIT);
+    270          
+    271                          I2C_1.TIMINGR = (((prescaler & 0xf) << 28) | sdadel_scl_del | ((sclh & 0xff) << 8) | (scll & 0xff));
+    272          
+    273                          //Configure the Digital filter
+    274                          I2C_1.CR1 |= (uint32)((I2C1_DIGITAL_NOISE_FILTER << 8) & I2C_CR1_DFN);
+    275          
+    276                          #if (I2C1_SLAVE_FEATURE == DISABLED)
+    277                              //Configure the Device address
+    278                              I2C_1.CR2 |= (uint32)i2c_addr;
+    279                          #else
+    280                              //Slave Byte Control
+    281                              I2C_1.CR1 |= I2C_CR1_SBC;
+    282          
+    283                              I2C_1.OAR1 = (i2c_addr & 0xFE) | I2C_OAR1_OA1EN;
+    284                          #endif
+    285          
+    286                          //Set the interrupt
+    287                          Micro__NVICEnableIRQ (I2C1_IRQ_CHANNEL, I2C1_INTERRUPT_PREEMPTION_PRIORITY);
+    288          
+    289                          response = TRUE;
+    290                      }
+    291                  #endif
+    292          
+    293                  #if (I2C2_FEATURE == ENABLED)
+    294                      if (i2c == I2C2)
+    295                      {
+    296                          I2c2_Ack_Error = I2C_ERROR_NONE;
+    297          
+    298                          //System clock (SYSCLK) selected as I2c1 clock
+    299                          RCC.CCIPR &= ~RCC_CCIPR_I2C2SEL;
+    300                          RCC.CCIPR |= LL_RCC_I2C2_CLKSOURCE_SYSCLK;
+    301          
+    302                          //Enable the clock for I2c1 module
+    303                          RCC.APBENR1 |= RCC_APBENR1_I2C2EN;
+    304          
+    305                          //Reset the I2c1
+    306                          RCC.APBRSTR1 |= RCC_APBENR1_I2C2EN;
+    307                          RCC.APBRSTR1 &= (uint32)(~RCC_APBENR1_I2C2EN);
+    308          
+    309                          I2c__Disable(i2c);                                      //I2C module is disabled
+    310          
+    311                          GPIO__PIN_COFIG_AF(I2C_2_SDA_PORT, I2C_2_SDA_PORTBIT, I2C_2_SDA__AF);
+    312                          GPIO__PIN_COFIG_SF_OPENDRAIN(I2C_2_SDA_PORT, I2C_2_SDA_PORTBIT);
+    313          
+    314                          GPIO__PIN_COFIG_AF(I2C_2_SCL_PORT, I2C_2_SCL_PORTBIT, I2C_2_SCL__AF);
+    315                          GPIO__PIN_COFIG_SF_OPENDRAIN(I2C_2_SCL_PORT, I2C_2_SCL_PORTBIT);
+    316          
+    317                          I2C_2.TIMINGR = (((prescaler & 0xf) << 28) | sdadel_scl_del | ((sclh & 0xff) << 8) | (scll & 0xff));
+    318          
+    319                          //Configure the Digital filter
+    320                          I2C_2.CR1 |= (uint32)((I2C2_DIGITAL_NOISE_FILTER << 8) & I2C_CR1_DFN);
+    321          
+    322                          //Configure the Device address
+    323                          I2C_2.CR2 |= (uint32)i2c_addr;
+    324          
+    325                          //Set the interrupt
+    326                          Micro__NVICEnableIRQ (I2C2_3_IRQ_CHANNEL, I2C2_3_INTERRUPT_PREEMPTION_PRIORITY);
+    327          
+    328                          response = TRUE;
+    329                      }
+    330                  #endif
+    331          
+    332                  #if (I2C3_FEATURE == ENABLED)
+    333                      if (i2c == I2C3)
+    334                      {
+    335                          I2c3_Ack_Error = I2C_ERROR_NONE;
+    336          
+    337                          //Enable the clock for I2c1 module
+    338                          RCC.APBENR1 |= RCC_APBENR1_I2C3EN;
+    339          
+    340                          //Reset the I2c1
+    341                          RCC.APBRSTR1 |= RCC_APBENR1_I2C3EN;
+    342                          RCC.APBRSTR1 &= (uint32)(~RCC_APBENR1_I2C3EN);
+    343          
+    344                          I2c__Disable(i2c);                                      //I2C module is disabled
+    345          
+    346                          GPIO__PIN_COFIG_AF(I2C_3_SDA_PORT, I2C_3_SDA_PORTBIT, I2C_3_SDA__AF);
+    347                          GPIO__PIN_COFIG_SF_OPENDRAIN(I2C_3_SDA_PORT, I2C_3_SDA_PORTBIT);
+    348          
+    349                          GPIO__PIN_COFIG_AF(I2C_3_SCL_PORT, I2C_3_SCL_PORTBIT, I2C_3_SCL__AF);
+    350                          GPIO__PIN_COFIG_SF_OPENDRAIN(I2C_3_SCL_PORT, I2C_3_SCL_PORTBIT);
+    351          
+    352                          I2C_3.TIMINGR = (((prescaler & 0xf) << 28) | sdadel_scl_del | ((sclh & 0xff) << 8) | (scll & 0xff));
+    353          
+    354                          //Configure the Digital filter
+    355                          I2C_3.CR1 |= (uint32)((I2C3_DIGITAL_NOISE_FILTER << 8) & I2C_CR1_DFN);
+    356          
+    357                          //Configure the Device address
+    358                          I2C_3.CR2 |= (uint32)i2c_addr;
+    359          
+    360                          //Set the interrupt
+    361                          Micro__NVICEnableIRQ (I2C2_3_IRQ_CHANNEL, I2C2_3_INTERRUPT_PREEMPTION_PRIORITY);
+    362          
+    363                          response = TRUE;
+    364                      }
+    365                  #endif
+    366          
+    367                  I2c__Enable(i2c);
+    368          
+    369                  return (response);
+    370          
+    371              #else
+    372                  return (FALSE);
+   \                     I2c__Initialize: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    373              #endif
+    374          }
+    375          
+    376          //---------------------------------------------------------------------------------------------------------------------
+    377          /**
+    378           *    @brief    It clear the state machines which are meant for I2C communication
+    379           *    @details  A software reset can be performed by disabling the I2c peripheral for at least 3 APB clock cycles and
+    380           *              then turning it Enabled
+    381           *    @param    i2c : I2c module i.e. I2c1 or I2c2 device
+    382           *
+    383           *    @image html I2c__Clear.jpg
+    384           */
+
+   \                                 In section .text, align 2, keep-with-next
+    385          void I2c__Clear(I2C_ENUM_TYPE i2c)
+    386          {
+    387              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+    388          
+    389                  #if (I2C1_FEATURE == ENABLED)
+    390                      if (i2c == I2C1)
+    391                      {
+    392                          // A software reset can be performed by disabling the I2c peripheral for at least 3 APB clock cycles and
+    393                          // then turning it Enabled
+    394                          // Turn-off the I2c1
+    395                          I2C_1.CR1 &= (uint32)(~I2C_CR1_PE);
+    396          
+    397                          //Clear the NBYTES
+    398                          I2C_1.CR2 &= (uint32)(~I2C_CR2_NBYTES);
+    399          
+    400                          I2c1_TxPointer = 0;
+    401                          I2c1_RxPointer = 0;
+    402                          I2c1_Ack_Error = I2C_ERROR_NONE;
+    403          
+    404                          //Enable the I2c2
+    405                          I2C_1.CR1 |= I2C_CR1_PE;
+    406                      }
+    407                  #endif
+    408          
+    409                  #if (I2C2_FEATURE == ENABLED)
+    410                      if (i2c == I2C2)
+    411                      {
+    412                          // A software reset can be performed by disabling the I2c peripheral for at least 3 APB clock cycles and
+    413                          // then turning it Enabled
+    414                          // Turn-off the I2c1
+    415                          I2C_2.CR1 &= (uint32)(~I2C_CR1_PE);
+    416          
+    417                          //Clear the NBYTES
+    418                          I2C_2.CR2 &= (uint32)(~I2C_CR2_NBYTES);
+    419          
+    420                          I2c2_TxPointer = 0;
+    421                          I2c2_RxPointer = 0;
+    422                          I2c2_Ack_Error = I2C_ERROR_NONE;
+    423          
+    424                          //Enable the I2c2
+    425                          I2C_2.CR1 |= I2C_CR1_PE;
+    426                      }
+    427                  #endif
+    428          
+    429                  #if (I2C3_FEATURE == ENABLED)
+    430                      if (i2c == I2C3)
+    431                      {
+    432                          // A software reset can be performed by disabling the I2c peripheral for at least 3 APB clock cycles and
+    433                          // then turning it Enabled
+    434                          // Turn-off the I2c1
+    435                          I2C_3.CR1 &= (uint32)(~I2C_CR1_PE);
+    436          
+    437                          //Clear the NBYTES
+    438                          I2C_3.CR2 &= (uint32)(~I2C_CR2_NBYTES);
+    439          
+    440                          I2c3_TxPointer = 0;
+    441                          I2c3_RxPointer = 0;
+    442                          I2c3_Ack_Error = I2C_ERROR_NONE;
+    443          
+    444                          //Enable the I2c3
+    445                          I2C_3.CR1 |= I2C_CR1_PE;
+    446                      }
+    447                  #endif
+    448              #endif
+    449          }
+   \                     I2c__Clear: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    450          
+    451          //---------------------------------------------------------------------------------------------------------------------
+    452          /**
+    453           *    @brief    It is used to reset I2C bus
+    454           *
+    455           *    @details  This method performs the I2C bus reset operation in two cases such as prior to I2C module initialization
+    456           *              and in case any bus error occurs during I2C bus communication
+    457           *    @param    i2c : I2C modules i.e. I2c1 or I2c2 device
+    458           *    @return   BOOL_TYPE
+    459           *      @retval   TRUE (1) : It indicates I2C bus is reset operation is successful
+    460           *      @retval   FALSE(0) : It indicates I2C bus is reset operation is unsuccessful
+    461           *    @image html I2c__ResetBus.jpg
+    462           */
+
+   \                                 In section .text, align 2, keep-with-next
+    463          BOOL_TYPE I2c__ResetBus(I2C_ENUM_TYPE i2c)
+    464          {
+    465              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+    466                  BOOL_TYPE response;
+    467                  uint8 count;
+    468                  uint8 aux;
+    469          
+    470                  response = FALSE;
+    471          
+    472                  #if (I2C1_FEATURE == ENABLED)
+    473                      if (i2c == I2C1)
+    474                      {
+    475                          Gpio__PinWrite(I2C_1_SCL_PORT, I2C_1_SCL_PORTBIT, TRUE);
+    476          
+    477                          //Configure the SDA as INPUT mode and SCL into OOUTPUT mode
+    478                          Gpio__PinConfig(I2C_1_SCL_PORT, I2C_1_SCL_PORTBIT, OUTPUT_OPEN_DRAIN);
+    479                          Gpio__PinConfig(I2C_1_SDA_PORT, I2C_1_SDA_PORTBIT, INPUT_FLOAT);
+    480          
+    481                          //Read the SDA status
+    482                          aux = Gpio__PinRead(I2C_1_SDA_PORT, I2C_1_SDA_PORTBIT);
+    483          
+    484                          count = 0;
+    485          
+    486                          //If the SDA is hold by the slave then it must be released by mimicking the I2c clock
+    487                          //reading SDA status
+    488                          while((aux == FALSE) &&
+    489                                (count < 10))
+    490                          {
+    491                              //Send a clock pulse to the slave to release the SDA line
+    492                              Gpio__PinWrite(I2C_1_SCL_PORT, I2C_1_SCL_PORTBIT, FALSE);
+    493                              Micro__DelayNumNops(10);
+    494                              Gpio__PinWrite(I2C_1_SCL_PORT, I2C_1_SCL_PORTBIT, TRUE);
+    495                              Micro__DelayNumNops(10);
+    496          
+    497                              //read the status of the SDA line
+    498                              aux = Gpio__PinRead(I2C_1_SDA_PORT, I2C_1_SDA_PORTBIT);
+    499                              count++;
+    500                          }
+    501          
+    502                          response = (BOOL_TYPE)aux;
+    503          
+    504                          I2c1_Ack_Error = I2C_ERROR_NONE;
+    505          
+    506                          if (aux == FALSE)
+    507                          {
+    508                              //If the SDA line is still read as low then log the BUS_LOCK error
+    509                              I2c1_Ack_Error = I2C_ERROR_BUS_LOCKED;
+    510                          }
+    511          
+    512                          Gpio__PinConfig(I2C_1_SCL_PORT, I2C_1_SCL_PORTBIT, SPECIAL_FUNCTION_OPEN_DRAIN);   //Configure SCL line for I2C1
+    513                          Gpio__PinConfig(I2C_1_SDA_PORT, I2C_1_SDA_PORTBIT, SPECIAL_FUNCTION_OPEN_DRAIN);   //Configure SDA line for I2C1
+    514                      }
+    515                  #endif
+    516          
+    517                  #if (I2C2_FEATURE == ENABLED)
+    518                      if (i2c == I2C2)
+    519                      {
+    520                          Gpio__PinWrite(I2C_2_SCL_PORT, I2C_2_SCL_PORTBIT, TRUE);
+    521          
+    522                          //Configure the SDA as INPUT mode and SCL into OOUTPUT mode
+    523                          Gpio__PinConfig(I2C_2_SCL_PORT, I2C_2_SCL_PORTBIT, OUTPUT_OPEN_DRAIN);
+    524                          Gpio__PinConfig(I2C_2_SDA_PORT, I2C_2_SDA_PORTBIT, INPUT_FLOAT);
+    525          
+    526          
+    527                          //Read the SDA status
+    528                          aux = Gpio__PinRead(I2C_2_SDA_PORT, I2C_2_SDA_PORTBIT);
+    529          
+    530                          count = 0;
+    531          
+    532                          //If the SDA is hold by the slave then it must be released by mimicking the I2c clock
+    533                          //reading SDA status
+    534                          while((aux == FALSE) &&
+    535                                (count < 10))
+    536                          {
+    537                              //Send a clock pulse to the slave to release the SDA line
+    538                              Gpio__PinWrite(I2C_2_SCL_PORT, I2C_2_SCL_PORTBIT, FALSE);
+    539                              Micro__DelayNumNops(10);
+    540                              Gpio__PinWrite(I2C_2_SCL_PORT, I2C_2_SCL_PORTBIT, TRUE);
+    541                              Micro__DelayNumNops(10);
+    542          
+    543                              //read the status of the SDA line
+    544                              aux = Gpio__PinRead(I2C_2_SDA_PORT, I2C_2_SDA_PORTBIT);
+    545                              count++;
+    546                          }
+    547          
+    548                          response = (BOOL_TYPE)aux;
+    549          
+    550                          I2c2_Ack_Error = I2C_ERROR_NONE;
+    551          
+    552                          if (aux == FALSE)
+    553                          {
+    554                              //If the SDA line is still read as low then log the BUS_LOCK error
+    555                              I2c2_Ack_Error = I2C_ERROR_BUS_LOCKED;
+    556                          }
+    557          
+    558                          Gpio__PinConfig(I2C_2_SCL_PORT, I2C_2_SCL_PORTBIT, SPECIAL_FUNCTION_OPEN_DRAIN);   //Configure SCL line for I2C2
+    559                          Gpio__PinConfig(I2C_2_SDA_PORT, I2C_2_SDA_PORTBIT, SPECIAL_FUNCTION_OPEN_DRAIN);   //Configure SDA line for I2C2
+    560                      }
+    561                  #endif
+    562          
+    563                  #if (I2C3_FEATURE == ENABLED)
+    564                      if (i2c == I2C3)
+    565                      {
+    566                          Gpio__PinWrite(I2C_3_SCL_PORT, I2C_3_SCL_PORTBIT, TRUE);
+    567          
+    568                          //Configure the SDA as INPUT mode and SCL into OOUTPUT mode
+    569                          Gpio__PinConfig(I2C_3_SCL_PORT, I2C_3_SCL_PORTBIT, OUTPUT_OPEN_DRAIN);
+    570                          Gpio__PinConfig(I2C_3_SDA_PORT, I2C_3_SDA_PORTBIT, INPUT_FLOAT);
+    571          
+    572          
+    573                          //Read the SDA status
+    574                          aux = Gpio__PinRead(I2C_3_SDA_PORT, I2C_3_SDA_PORTBIT);
+    575          
+    576                          count = 0;
+    577          
+    578                          //If the SDA is hold by the slave then it must be released by mimicking the I2c clock
+    579                          //reading SDA status
+    580                          while((aux == FALSE) &&
+    581                                (count < 10))
+    582                          {
+    583                              //Send a clock pulse to the slave to release the SDA line
+    584                              Gpio__PinWrite(I2C_3_SCL_PORT, I2C_3_SCL_PORTBIT, FALSE);
+    585                              Micro__DelayNumNops(10);
+    586                              Gpio__PinWrite(I2C_3_SCL_PORT, I2C_3_SCL_PORTBIT, TRUE);
+    587                              Micro__DelayNumNops(10);
+    588          
+    589                              //read the status of the SDA line
+    590                              aux = Gpio__PinRead(I2C_3_SDA_PORT, I2C_3_SDA_PORTBIT);
+    591                              count++;
+    592                          }
+    593          
+    594                          response = (BOOL_TYPE)aux;
+    595          
+    596                          I2c3_Ack_Error = I2C_ERROR_NONE;
+    597          
+    598                          if (aux == FALSE)
+    599                          {
+    600                              //If the SDA line is still read as low then log the BUS_LOCK error
+    601                              I2c3_Ack_Error = I2C_ERROR_BUS_LOCKED;
+    602                          }
+    603          
+    604                          Gpio__PinConfig(I2C_3_SCL_PORT, I2C_3_SCL_PORTBIT, SPECIAL_FUNCTION_OPEN_DRAIN);   //Configure SCL line for I2C3
+    605                          Gpio__PinConfig(I2C_3_SDA_PORT, I2C_3_SDA_PORTBIT, SPECIAL_FUNCTION_OPEN_DRAIN);   //Configure SDA line for I2C3
+    606                      }
+    607                  #endif
+    608          
+    609                  return (response);
+    610          
+    611              #else
+    612                  return (FALSE);
+   \                     I2c__ResetBus: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    613              #endif
+    614          }
+    615          
+    616          //---------------------------------------------------------------------------------------------------------------------
+    617          /**
+    618           *    @brief    It enables a specific I2c device & I2c related interrupts
+    619           *
+    620           *    @details  This method is used to enable I2c device and I2c related interrupts such as event interrupt, data buffer
+    621           *              empty interrupt & bus error interrupt
+    622           *    @param    i2c : I2c modules i.e. I2c1 or I2c2 device
+    623           *    @image html I2c__Enable.jpg
+    624           */
+
+   \                                 In section .text, align 2, keep-with-next
+    625          void I2c__Enable(I2C_ENUM_TYPE i2c)
+    626          {
+    627              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+    628                  #if (I2C1_FEATURE == ENABLED)
+    629                      if (i2c == I2C1)
+    630                      {
+    631                          #if (I2C1_SLAVE_FEATURE == DISABLED)
+    632                              I2C_1.CR1 |= I2C_CR1_PE | I2C_CR1_TXIE | I2C_CR1_RXIE | I2C_CR1_NACKIE | I2C_CR1_ERRIE;                       //I2c1 device is enabled
+    633                          #else
+    634                              I2C_1.CR1 |= I2C_CR1_PE | I2C_CR1_ERRIE | I2C_CR1_NACKIE | I2C_CR1_ADDRIE | I2C_CR1_STOPIE;
+    635                          #endif
+    636                      }
+    637                  #endif
+    638          
+    639                  #if (I2C2_FEATURE == ENABLED)
+    640                      if (i2c == I2C2)
+    641                      {
+    642                          I2C_2.CR1 |= I2C_CR1_PE | I2C_CR1_TXIE | I2C_CR1_RXIE | I2C_CR1_NACKIE | I2C_CR1_ERRIE;                       //I2c1 device is enabled
+    643                      }
+    644                  #endif
+    645          
+    646                  #if (I2C3_FEATURE == ENABLED)
+    647                      if (i2c == I2C3)
+    648                      {
+    649                          I2C_3.CR1 |= I2C_CR1_PE | I2C_CR1_TXIE | I2C_CR1_RXIE | I2C_CR1_NACKIE | I2C_CR1_ERRIE;                       //I2c1 device is enabled
+    650                      }
+    651                  #endif
+    652              #endif
+    653          }
+   \                     I2c__Enable: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    654          
+    655          //---------------------------------------------------------------------------------------------------------------------
+    656          /**
+    657           *    @brief    It disables a specific I2c device & event interrupt related to it
+    658           *
+    659           *    @details  This method is used to disable I2c device & event interrupt related to it
+    660           *    @param    i2c : I2c modules i.e. I2c1 or I2c2 device
+    661           *    @image html I2c__Disable.jpg
+    662           */
+
+   \                                 In section .text, align 2, keep-with-next
+    663          void I2c__Disable(I2C_ENUM_TYPE i2c)
+    664          {
+    665              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+    666          
+    667                  #if (I2C1_FEATURE == ENABLED)
+    668                      if (i2c == I2C1)
+    669                      {
+    670                          //Disable the I2c Peripheral and its events
+    671                          I2C_1.CR1 &= ~(I2C_CR1_PE | I2C_CR1_TXIE | I2C_CR1_RXIE | I2C_CR1_NACKIE | I2C_CR1_STOPIE | I2C_CR1_TCIE | I2C_CR1_ERRIE);
+    672                      }
+    673                  #endif
+    674          
+    675                  #if (I2C2_FEATURE == ENABLED)
+    676                      if (i2c == I2C2)
+    677                      {
+    678                          //Disable the I2c Peripheral and its events
+    679                          I2C_2.CR1 &= ~(I2C_CR1_PE | I2C_CR1_TXIE | I2C_CR1_RXIE | I2C_CR1_NACKIE | I2C_CR1_STOPIE | I2C_CR1_TCIE | I2C_CR1_ERRIE);
+    680                      }
+    681                  #endif
+    682          
+    683                  #if (I2C3_FEATURE == ENABLED)
+    684                      if (i2c == I2C3)
+    685                      {
+    686                          //Disable the I2c Peripheral and its events
+    687                          I2C_3.CR1 &= ~(I2C_CR1_PE | I2C_CR1_TXIE | I2C_CR1_RXIE | I2C_CR1_NACKIE | I2C_CR1_STOPIE | I2C_CR1_TCIE | I2C_CR1_ERRIE);
+    688                      }
+    689                  #endif
+    690              #endif
+    691          }
+   \                     I2c__Disable: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    692          
+    693          //---------------------------------------------------------------------------------------------------------------------
+    694          /**
+    695           *    @brief    It performs I2C write operation for I2C1 & I2C2 modules of this microcontroller
+    696           *
+    697           *    @details  This method is used to perform write operation with device connected to I2C bus
+    698           *    @param    i2c              : I2C modules i.e. I2c1 or I2c2 devices
+    699           *    @param    internal_address : Defines the slave address in which data will be written
+    700           *    @param    buf              : It points to buffer which contains the data to be written
+    701           *    @param    size             : It defines the amount of bytes should be written
+    702           *    @return   BOOL_TYPE
+    703           *      @retval   TRUE(1)  = It means write operation with the devices connected to I2C bus is successful
+    704           *      @retval   FALSE(0) = It means write operation with the devices connected to I2C bus is unsuccessful
+    705           *    @image html I2c__Write.jpg
+    706           */
+
+   \                                 In section .text, align 2, keep-with-next
+    707          BOOL_TYPE I2c__Write(I2C_ENUM_TYPE i2c, uint8 internal_address, uint8 * buf,uint16 size)
+    708          {
+    709              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+    710          
+    711                  BOOL_TYPE response;
+    712          
+    713                  response = FALSE;
+    714          
+    715                  #if (I2C1_FEATURE == ENABLED)
+    716                      if (i2c == I2C1)
+    717                      {
+    718                          if ((I2C_1.ISR & I2C_ISR_BUSY) == FALSE)
+    719                          {
+    720                              if (size <= I2C1_BUFFER_OUT_SIZE)                                                       //Checking for mentioned size not exceeding buffer size
+    721                              {
+    722                                  #if (I2C1_SLAVE_FEATURE == DISABLED)
+    723                                      I2c__Disable(i2c);
+    724                                      I2c1_TxPointer = 0;
+    725          
+    726                                      //Increment the size to accommodate the internal_address
+    727                                      size++;
+    728          
+    729                                      I2c1_Buffer_Out[0] = internal_address;
+    730          
+    731                                      #if (I2C_BY_REFERENCE == ENABLED)
+    732                                          I2c1_Buffer_Out = buf;
+    733                                      #else
+    734                                          memcpy((I2c1_Buffer_Out + 1), buf, size);
+    735                                      #endif
+    736          
+    737                                      //Set the number of bytes to be transfered, which is limited to max of 255 bytes
+    738                                      //Master write Transfer, Enable Automatic End mode,
+    739                                      I2C_1.CR2 &= (uint32)(~(I2C_CR2_RELOAD | I2C_CR2_NBYTES | I2C_CR2_AUTOEND | I2C_CR2_RD_WRN));
+    740                                      I2C_1.CR2 |= (uint32)((((size & 0xff) << 16) & I2C_CR2_NBYTES) | I2C_CR2_AUTOEND);
+    741          
+    742          
+    743                                      I2c__Enable(i2c);                                                                   //I2C module is enabled
+    744                                      I2C1_START();                                                                       //Configuring I2c1 as master & generating start signal
+    745          
+    746                                      response = TRUE;
+    747                                      I2c1_Ack_Error = I2C_ERROR_NONE;
+    748                                  #else
+    749          
+    750                                      I2c1_TxPointer = 0;
+    751          
+    752                                      #if (I2C_BY_REFERENCE == ENABLED)
+    753                                          I2c1_Buffer_Out = buf;
+    754                                      #else
+    755                                          memcpy(I2c1_Buffer_Out, buf, size);
+    756                                      #endif
+    757                                      I2c1_Slave_TxSize = size;
+    758          
+    759                                      I2C_1.CR2 |= (uint32)((((size & 0xff) << 16) & I2C_CR2_NBYTES));
+    760          
+    761                                      response = TRUE;
+    762                                      I2c1_Ack_Error = I2C_ERROR_NONE;
+    763                                  #endif
+    764                                  }
+    765                              }
+    766                          }
+    767          
+    768                  #endif
+    769          
+    770                  #if (I2C2_FEATURE == ENABLED)
+    771                      if (i2c == I2C2)
+    772                      {
+    773                          if ((I2C_2.ISR & I2C_ISR_BUSY) == FALSE)
+    774                          {
+    775                              if (size <= I2C2_BUFFER_OUT_SIZE)                                                       //Checking for mentioned size not exceeding buffer size
+    776                              {
+    777                                  I2c__Disable(i2c);
+    778                                  I2c2_TxPointer = 0;
+    779          
+    780                                  //Increment the size to accommodate the internal_address
+    781                                  size++;
+    782          
+    783                                  I2c2_Buffer_Out[0] = internal_address;
+    784          
+    785                                  #if (I2C_BY_REFERENCE == ENABLED)
+    786                                      I2c2_Buffer_Out = buf;
+    787                                  #else
+    788                                      memcpy((I2c2_Buffer_Out + 1), buf, size);
+    789                                  #endif
+    790          
+    791                                  //Set the number of bytes to be transfered, which is limited to max of 255 bytes
+    792                                  //Master write Transfer, Enable Automatic End mode,
+    793                                  I2C_2.CR2 &= (uint32)(~(I2C_CR2_RELOAD | I2C_CR2_NBYTES | I2C_CR2_AUTOEND | I2C_CR2_RD_WRN));
+    794                                  I2C_2.CR2 |= (uint32)((((size & 0xff) << 16) & I2C_CR2_NBYTES) | I2C_CR2_AUTOEND);
+    795          
+    796          
+    797                                  I2c__Enable(i2c);                                                                   //I2C module is enabled
+    798                                  I2C2_START();                                                                       //Configuring I2c1 as master & generating start signal
+    799          
+    800                                  response = TRUE;
+    801                                  I2c2_Ack_Error = I2C_ERROR_NONE;
+    802                              }
+    803                          }
+    804                      }
+    805                  #endif
+    806          
+    807                  #if (I2C3_FEATURE == ENABLED)
+    808                      if (i2c == I2C3)
+    809                      {
+    810                          if ((I2C_3.ISR & I2C_ISR_BUSY) == FALSE)
+    811                          {
+    812                              if (size <= I2C3_BUFFER_OUT_SIZE)                                                       //Checking for mentioned size not exceeding buffer size
+    813                              {
+    814                                  I2c__Disable(i2c);
+    815                                  I2c3_TxPointer = 0;
+    816          
+    817                                  //Increment the size to accommodate the internal_address
+    818                                  size++;
+    819          
+    820                                  I2c3_Buffer_Out[0] = internal_address;
+    821          
+    822                                  #if (I2C_BY_REFERENCE == ENABLED)
+    823                                      I2c3_Buffer_Out = buf;
+    824                                  #else
+    825                                      memcpy((I2c3_Buffer_Out + 1), buf, size);
+    826                                  #endif
+    827          
+    828                                  //Set the number of bytes to be transfered, which is limited to max of 255 bytes
+    829                                  //Master write Transfer, Enable Automatic End mode,
+    830                                  I2C_3.CR2 &= (uint32)(~(I2C_CR2_RELOAD | I2C_CR2_NBYTES | I2C_CR2_AUTOEND | I2C_CR2_RD_WRN));
+    831                                  I2C_3.CR2 |= (uint32)((((size & 0xff) << 16) & I2C_CR2_NBYTES) | I2C_CR2_AUTOEND);
+    832          
+    833          
+    834                                  I2c__Enable(i2c);                                                                   //I2C module is enabled
+    835                                  I2C3_START();                                                                       //Configuring I2c1 as master & generating start signal
+    836          
+    837                                  response = TRUE;
+    838                                  I2c3_Ack_Error = I2C_ERROR_NONE;
+    839                              }
+    840                          }
+    841                      }
+    842                  #endif
+    843                  return (response);
+    844          
+    845              #else
+    846                  return (FALSE);
+   \                     I2c__Write: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    847              #endif
+    848          }
+    849          
+    850          //---------------------------------------------------------------------------------------------------------------------
+    851          /**
+    852           *    @brief    It is used to write on I2c bus in blocking way
+    853           *
+    854           *    @details  This method is used to perform I2c write operation in blocking way i.e. it initiates the data transfer
+    855           *              and waits till the data transfer is complete
+    856           *    @param    i2c              : I2C modules i.e. I2c1 or I2c2 device
+    857           *    @param    internal_address : Defines the slave address in which data will be written
+    858           *    @param    buf              : It points to the buffer which contains the data to be written
+    859           *    @param    size             : It defines the amount of bytes should be written
+    860           *    @return   BOOL_TYPE
+    861           *      @retval   TRUE(1)  = It means write operation with the devices connected to I2C bus in blocking way is successful
+    862           *      @retval   FALSE(0) = It means write operation with the devices connected to I2C bus in blocking way is unsuccessful
+    863           *    @image html I2c__BlockingWrite.jpg
+    864           */
+
+   \                                 In section .text, align 2, keep-with-next
+    865          BOOL_TYPE I2c__BlockingWrite(I2C_ENUM_TYPE i2c,uint8 internal_address, uint8 * buf,uint16 size)
+    866          {
+    867              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+    868          
+    869                  BOOL_TYPE response;
+    870                  I2C_STATE_TYPE state;
+    871          
+    872                  response = I2c__Write(i2c, internal_address, buf, size);
+    873          
+    874                  if (response == TRUE)
+    875                  {
+    876                      state = I2C_STATE_BUSY;
+    877          
+    878                      while (state == I2C_STATE_BUSY)
+    879                      {
+    880                          state  = (I2C_STATE_TYPE)I2c__GetStatus(i2c, I2C_STATUS_STATE);
+    881                      }
+    882          
+    883                      if (I2c__GetStatus(i2c, I2C_STATUS_ERROR) == I2C_ERROR_NONE)
+    884                      {
+    885                          response = TRUE;
+    886                      }
+    887                      else
+    888                      {
+    889                          response = FALSE;
+    890                      }
+    891                  }
+    892                  return (response);
+    893          
+    894              #else
+    895                  return (FALSE);
+   \                     I2c__BlockingWrite: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    896              #endif
+    897          }
+    898          
+    899          //---------------------------------------------------------------------------------------------------------------------
+    900          /**
+    901           *    @brief    It performs I2c read operation
+    902           *    @details  This method is used to read a byte of data from data register, for this to happen I2c__RequestRead()
+    903           *              operation needs to be performed prior this operation
+    904           *    @param    i2c     : I2C modules i.e. I2c1 or I2c2 device
+    905           *    @param    buf     : It's a pointer to the Buffer where the read data will be stored
+    906           *    @param    size    : It defines the amount of bytes will be read
+    907           *    @return   BOOL_TYPE
+    908           *      @retval   TRUE(1)  = If requested operation is successful
+    909           *      @retval   FALSE(0) = If requested operation is unsuccessful
+    910           *    @image html I2c__Read.jpg
+    911           */
+
+   \                                 In section .text, align 2, keep-with-next
+    912          BOOL_TYPE I2c__Read(I2C_ENUM_TYPE i2c, uint8 * buf,uint16 size)
+    913          {
+    914              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+    915          
+    916                  BOOL_TYPE response;
+    917          
+    918                  response = FALSE;
+    919          
+    920                  #if (I2C1_FEATURE == ENABLED)
+    921                      if (i2c == I2C1)
+    922                      {
+    923                          if ((I2C_1.ISR & I2C_ISR_BUSY) == FALSE)
+    924                          {
+    925                              if (size <= I2c1_RxPointer)
+    926                              {
+    927                                  memcpy(buf, I2c1_Buffer_In, I2c1_RxPointer);
+    928                                  I2c1_RxPointer = 0;
+    929                                  response = TRUE;;
+    930                              }
+    931                          }
+    932                      }
+    933                  #endif
+    934          
+    935                  #if (I2C2_FEATURE == ENABLED)
+    936                      if (i2c == I2C2)
+    937                      {
+    938                          if ((I2C_2.ISR & I2C_ISR_BUSY) == FALSE)
+    939                          {
+    940                              if (size <= I2c2_RxPointer)
+    941                              {
+    942                                  memcpy(buf, I2c2_Buffer_In, I2c2_RxPointer);
+    943                                  I2c2_RxPointer = 0;
+    944                                  response = TRUE;;
+    945                              }
+    946                          }
+    947                      }
+    948                  #endif
+    949          
+    950                  #if (I2C3_FEATURE == ENABLED)
+    951                      if (i2c == I2C3)
+    952                      {
+    953                          if ((I2C_3.ISR & I2C_ISR_BUSY) == FALSE)
+    954                          {
+    955                              if (size <= I2c3_RxPointer)
+    956                              {
+    957                                  memcpy(buf, I2c3_Buffer_In, I2c3_RxPointer);
+    958                                  I2c3_RxPointer = 0;
+    959                                  response = TRUE;;
+    960                              }
+    961                          }
+    962                      }
+    963                  #endif
+    964          
+    965                  return (response);
+    966          
+    967              #else
+    968                  return (FALSE);
+   \                     I2c__Read: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    969              #endif
+    970          }
+    971          
+    972          //---------------------------------------------------------------------------------------------------------------------
+    973          /**
+    974           *    @brief    It performs request for read operation
+    975           *
+    976           *    @details  This method is used to perform actual read operation it copies data from data register and stores in
+    977           *              data buffer from where upon performing read operation data is read. So it means before performing read
+    978           *              operation I2c__RequestRead() needs to be called
+    979           *    @param    i2c: device enumerator
+    980           *    @param    buf: It's a pointer to the Buffer where the read data will be stored.
+    981           *    @param    size: It defines the amount of bytes will be read
+    982           *    @return   BOOL_TYPE
+    983           *      @retval   TRUE(1)  = It means requested operation is successfully executed
+    984           *      @retval   FALSE(0) = It means requested operation is not successfully executed
+    985           */
+
+   \                                 In section .text, align 2, keep-with-next
+    986          BOOL_TYPE I2c__RequestRead(I2C_ENUM_TYPE i2c,uint16 size)
+    987          {
+    988              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+    989                  BOOL_TYPE response;
+    990          
+    991                  response = FALSE;
+    992          
+    993                  #if (I2C1_FEATURE == ENABLED)
+    994                      if (i2c == I2C1)
+    995                      {
+    996                          if ((I2C_1.ISR & I2C_ISR_BUSY) == FALSE)
+    997                          {
+    998                              if (size <= I2C1_BUFFER_IN_SIZE)
+    999                              {
+   1000                                  I2c1_RxPointer = 0;
+   1001          
+   1002                                  if(size != 0)
+   1003                                  {
+   1004                                      I2c__Disable(i2c);
+   1005          
+   1006                                      //Set the number of bytes to be transfered, which is limited to max of 255 bytes
+   1007                                      //Master Read mode, Enable Automatic End mode,
+   1008                                      I2C_1.CR2 &= (uint32)(~(I2C_CR2_RELOAD | I2C_CR2_NBYTES | I2C_CR2_AUTOEND | I2C_CR2_RD_WRN));
+   1009                                      I2C_1.CR2 |= (uint32)((((size & 0xff) << 16) & I2C_CR2_NBYTES) | I2C_CR2_AUTOEND | I2C_CR2_RD_WRN);
+   1010          
+   1011                                      I2c__Enable(i2c);                                                                   //I2C module is enabled
+   1012                                      I2C1_START();                                                                       //Configuring I2c1 as master & generating start signal
+   1013                                  }
+   1014          
+   1015                                  response = TRUE;
+   1016                                  I2c1_Ack_Error = I2C_ERROR_NONE;
+   1017                              }
+   1018                          }
+   1019                      }
+   1020                  #endif
+   1021          
+   1022          
+   1023                  #if (I2C2_FEATURE == ENABLED)
+   1024                      if (i2c == I2C2)
+   1025                      {
+   1026                          if ((I2C_2.ISR & I2C_ISR_BUSY) == FALSE)
+   1027                          {
+   1028                              if (size <= I2C2_BUFFER_IN_SIZE)
+   1029                              {
+   1030                                  I2c2_RxPointer = 0;
+   1031          
+   1032                                  if(size != 0)
+   1033                                  {
+   1034                                      I2c__Disable(i2c);
+   1035          
+   1036                                      //Set the number of bytes to be transfered, which is limited to max of 255 bytes
+   1037                                      //Master Read mode, Enable Automatic End mode,
+   1038                                      I2C_2.CR2 &= (uint32)(~(I2C_CR2_RELOAD | I2C_CR2_NBYTES | I2C_CR2_AUTOEND | I2C_CR2_RD_WRN));
+   1039                                      I2C_2.CR2 |= (uint32)((((size & 0xff) << 16) & I2C_CR2_NBYTES) | I2C_CR2_AUTOEND | I2C_CR2_RD_WRN);
+   1040          
+   1041                                      I2c__Enable(i2c);                                                                   //I2C module is enabled
+   1042                                      I2C2_START();                                                                       //Configuring I2c1 as master & generating start signal
+   1043                                  }
+   1044          
+   1045                                  response = TRUE;
+   1046                                  I2c2_Ack_Error = I2C_ERROR_NONE;
+   1047                              }
+   1048                          }
+   1049                      }
+   1050                  #endif
+   1051          
+   1052                  #if (I2C3_FEATURE == ENABLED)
+   1053                      if (i2c == I2C3)
+   1054                      {
+   1055                          if ((I2C_3.ISR & I2C_ISR_BUSY) == FALSE)
+   1056                          {
+   1057                              if (size <= I2C3_BUFFER_IN_SIZE)
+   1058                              {
+   1059                                  I2c3_RxPointer = 0;
+   1060          
+   1061                                  if(size != 0)
+   1062                                  {
+   1063                                      I2c__Disable(i2c);
+   1064          
+   1065                                      //Set the number of bytes to be transfered, which is limited to max of 255 bytes
+   1066                                      //Master Read mode, Enable Automatic End mode,
+   1067                                      I2C_3.CR2 &= (uint32)(~(I2C_CR2_RELOAD | I2C_CR2_NBYTES | I2C_CR2_AUTOEND | I2C_CR2_RD_WRN));
+   1068                                      I2C_3.CR2 |= (uint32)((((size & 0xff) << 16) & I2C_CR2_NBYTES) | I2C_CR2_AUTOEND | I2C_CR2_RD_WRN);
+   1069          
+   1070                                      I2c__Enable(i2c);                                                                   //I2C module is enabled
+   1071                                      I2C3_START();                                                                       //Configuring I2c1 as master & generating start signal
+   1072                                  }
+   1073          
+   1074                                  response = TRUE;
+   1075                                  I2c3_Ack_Error = I2C_ERROR_NONE;
+   1076                              }
+   1077                          }
+   1078                      }
+   1079                  #endif
+   1080          
+   1081                  return (response);
+   1082          
+   1083              #else
+   1084                  return (FALSE);
+   \                     I2c__RequestRead: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+   1085              #endif
+   1086          }
+   1087          
+   1088          //---------------------------------------------------------------------------------------------------------------------
+   1089          /**
+   1090          *     @brief    It performs read operation in blocking way
+   1091          *
+   1092          *     @details  This method reads data from a I2c device in a blocking way (function just returns when the process is finished).
+   1093          *               The programmer may have to be careful with the amount of bytes requested as well as the time required to read it.
+   1094          *               It performs read operation till it is completed and returns false response if bus communication occurs
+   1095          *     @param    i2c     : device enumerator
+   1096          *     @param    buf    : It's a pointer to the Buffer where the read data will be stored.
+   1097          *     @param    size    : It defines the amount of bytes will be read
+   1098          *     @return   BOOL_TYPE
+   1099          *      @retval    TRUE(1)  = It means requested operation is successful
+   1100          *      @retval    FALSE(0) = It means requested operation is not successful
+   1101           *    @image html I2c__BlockingRead.jpg
+   1102          */
+
+   \                                 In section .text, align 2, keep-with-next
+   1103          BOOL_TYPE I2c__BlockingRead(I2C_ENUM_TYPE i2c, uint8 * buf, uint16 size)
+   1104          {
+   1105              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+   1106          
+   1107                  BOOL_TYPE response;
+   1108                  I2C_STATE_TYPE state;
+   1109          
+   1110                  response =  I2c__RequestRead(i2c, size);
+   1111          
+   1112                  if (response == TRUE)
+   1113                  {
+   1114                      state = I2C_STATE_BUSY;
+   1115          
+   1116                      while (state  == I2C_STATE_BUSY)
+   1117                      {
+   1118                          state  = (I2C_STATE_TYPE)I2c__GetStatus(i2c, I2C_STATUS_STATE);
+   1119                      }
+   1120          
+   1121                      if (I2c__GetStatus(i2c, I2C_STATUS_ERROR) == I2C_ERROR_NONE)
+   1122                      {
+   1123                          response = I2c__Read(i2c,buf,size);
+   1124                      }
+   1125                      else
+   1126                      {
+   1127                          response = FALSE;
+   1128                      }
+   1129                  }
+   1130                  return (response);
+   1131          
+   1132              #else
+   1133                  return (FALSE);
+   \                     I2c__BlockingRead: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+   1134              #endif
+   1135          }
+   1136          
+   1137          //---------------------------------------------------------------------------------------------------------------------
+   1138          /**
+   1139           *    @brief    It returns the current status I2C communication service
+   1140           *
+   1141           *    @details  This method is used to provide status of I2C communication service i.e. I2C_STATE_IDLE in case no activity
+   1142           *              on the I2C bus, I2C_STATE_BUSY some activity on the bus, I2C_STATE_ERROR error occurred on the I2C bus
+   1143           *    @param    i2c : I2C module or device
+   1144           *    @return   uint8
+   1145           *      @retval   (I2C_STATE_IDLE, I2C_STATE_BUSY or I2C_STATE_ERROR)
+   1146           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1147          uint16 I2c__GetStatus(I2C_ENUM_TYPE i2c,I2C_STATUS_TYPE index)
+   1148          {
+   1149              #if ((I2C1_FEATURE == ENABLED) || (I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+   1150          
+   1151                  uint8 response;
+   1152          
+   1153                  response = 0;
+   1154          
+   1155                  #if (I2C1_FEATURE == ENABLED)
+   1156                      if (i2c == I2C1)
+   1157                      {
+   1158                          switch (index)
+   1159                          {
+   1160                              case I2C_STATUS_STATE:
+   1161                                  if ((I2C_1.ISR & I2C_ISR_BUSY) != FALSE)
+   1162                                  {
+   1163                                      response = I2C_STATE_BUSY;
+   1164                                  }
+   1165                                  break;
+   1166          
+   1167                              case I2C_STATUS_BUFFER_IN:
+   1168                                  if ((I2C_1.ISR & I2C_ISR_BUSY) == FALSE)
+   1169                                  {
+   1170                                      response = I2c1_RxPointer;
+   1171                                  }
+   1172                                  break;
+   1173          
+   1174                              case I2C_STATUS_ERROR:
+   1175                                  if (((I2C_1.ISR & I2C_ISR_ARLO) != FALSE) ||
+   1176                                  ((I2c1_Ack_Error == I2C_ERROR_BUS_LOCKED)))
+   1177                                  {
+   1178                                      //Set the error flag
+   1179                                      response = I2C_ERROR_BUS_LOCKED;
+   1180                                  }
+   1181                                  else if ((I2C_1.ISR & ( I2C_ISR_NACKF | I2C_ISR_BERR)) != FALSE)
+   1182                                  {
+   1183                                      response = I2C_ERROR_ACK;
+   1184                                  }
+   1185          
+   1186                                  //Clear the error to accommodate the new errors
+   1187                                  I2C_1.ICR = (I2C_ICR_NACKCF | I2C_ICR_BERRCF | I2C_ICR_ARLOCF | I2C_ICR_OVRCF | I2C_ICR_PECCF | I2C_ICR_TIMOUTCF | I2C_ICR_ALERTCF);
+   1188          
+   1189                                  break;
+   1190          
+   1191                              default:
+   1192                                  break;
+   1193                          }
+   1194                      }
+   1195                  #endif
+   1196          
+   1197                  #if (I2C2_FEATURE == ENABLED)
+   1198                      if (i2c == I2C2)
+   1199                      {
+   1200                          switch (index)
+   1201                          {
+   1202                              case I2C_STATUS_STATE:
+   1203                                  if ((I2C_2.ISR & I2C_ISR_BUSY) != FALSE)
+   1204                                  {
+   1205                                      response = I2C_STATE_BUSY;
+   1206                                  }
+   1207                                  break;
+   1208          
+   1209                              case I2C_STATUS_BUFFER_IN:
+   1210                                  if ((I2C_2.ISR & I2C_ISR_BUSY) == FALSE)
+   1211                                  {
+   1212                                      response = I2c2_RxPointer;
+   1213                                  }
+   1214                                  break;
+   1215          
+   1216                              case I2C_STATUS_ERROR:
+   1217                                  if (((I2C_2.ISR & I2C_ISR_ARLO) != FALSE) ||
+   1218                                  ((I2c2_Ack_Error == I2C_ERROR_BUS_LOCKED)))
+   1219                                  {
+   1220                                      //Set the error flag
+   1221                                      response = I2C_ERROR_BUS_LOCKED;
+   1222                                  }
+   1223                                  else if ((I2C_2.ISR & ( I2C_ISR_NACKF | I2C_ISR_BERR)) != FALSE)
+   1224                                  {
+   1225                                      response = I2C_ERROR_ACK;
+   1226                                  }
+   1227          
+   1228                                  //Clear the error to accommodate the new errors
+   1229                                  I2C_2.ICR = (I2C_ICR_NACKCF | I2C_ICR_BERRCF | I2C_ICR_ARLOCF | I2C_ICR_OVRCF | I2C_ICR_PECCF | I2C_ICR_TIMOUTCF | I2C_ICR_ALERTCF);
+   1230          
+   1231                                  break;
+   1232          
+   1233                              default:
+   1234                                  break;
+   1235                          }
+   1236                      }
+   1237                  #endif
+   1238          
+   1239                  #if (I2C3_FEATURE == ENABLED)
+   1240                      if (i2c == I2C3)
+   1241                      {
+   1242                          switch (index)
+   1243                          {
+   1244                              case I2C_STATUS_STATE:
+   1245                                  if ((I2C_3.ISR & I2C_ISR_BUSY) != FALSE)
+   1246                                  {
+   1247                                      response = I2C_STATE_BUSY;
+   1248                                  }
+   1249                                  break;
+   1250          
+   1251                              case I2C_STATUS_BUFFER_IN:
+   1252                                  if ((I2C_3.ISR & I2C_ISR_BUSY) == FALSE)
+   1253                                  {
+   1254                                      response = I2c3_RxPointer;
+   1255                                  }
+   1256                                  break;
+   1257          
+   1258                              case I2C_STATUS_ERROR:
+   1259                                  if (((I2C_3.ISR & I2C_ISR_ARLO) != FALSE) ||
+   1260                                  ((I2c3_Ack_Error == I2C_ERROR_BUS_LOCKED)))
+   1261                                  {
+   1262                                      //Set the error flag
+   1263                                      response = I2C_ERROR_BUS_LOCKED;
+   1264                                  }
+   1265                                  else if ((I2C_3.ISR & ( I2C_ISR_NACKF | I2C_ISR_BERR)) != FALSE)
+   1266                                  {
+   1267                                      response = I2C_ERROR_ACK;
+   1268                                  }
+   1269          
+   1270                                  //Clear the error to accommodate the new errors
+   1271                                  I2C_3.ICR = (I2C_ICR_NACKCF | I2C_ICR_BERRCF | I2C_ICR_ARLOCF | I2C_ICR_OVRCF | I2C_ICR_PECCF | I2C_ICR_TIMOUTCF | I2C_ICR_ALERTCF);
+   1272          
+   1273                                  break;
+   1274          
+   1275                              default:
+   1276                                  break;
+   1277                          }
+   1278                      }
+   1279                  #endif
+   1280          
+   1281                  return (response);
+   1282          
+   1283              #else
+   1284                  return (FALSE);
+   \                     I2c__GetStatus: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+   1285              #endif
+   1286          }
+   1287          
+   1288          //=====================================================================================================================
+   1289          //-------------------------------------- Private Functions ------------------------------------------------------------
+   1290          //=====================================================================================================================
+   1291          //---------------------------------------------------------------------------------------------------------------------
+   1292          //---------------------------------------------------------------------------------------------------------------------
+   1293          /**
+   1294           *    @brief    It defines ISR for I2C interrupt
+   1295           *
+   1296           *    @details  This method defines ISR for I2C interrupt whenever data byte is available in I2C_DR register & any event
+   1297           *              occurs during I2C bus communication
+   1298           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1299          void I2c1__InterruptHandler(void)
+   1300          {
+   1301              #if (I2C1_SLAVE_FEATURE == DISABLED)
+   1302                  #if (I2C1_FEATURE == ENABLED)
+   1303                      //Handle Error Events
+   1304                      if (((I2C_1.ISR & (I2C_ISR_BERR | I2C_ISR_ARLO | I2C_ISR_OVR | I2C_ISR_PECERR | I2C_ISR_TIMEOUT | I2C_ISR_ALERT | I2C_ISR_NACKF)) != FALSE))
+   1305                      {
+   1306                          if ((I2C_1.ISR & I2C_ISR_ARLO) != FALSE)
+   1307                          {
+   1308                              //Set the error flag
+   1309                              I2c1_Ack_Error = I2C_ERROR_BUS_LOCKED;
+   1310                          }
+   1311                          else
+   1312                          {
+   1313                              I2c1_Ack_Error = I2C_ERROR_ACK;
+   1314                          }
+   1315          
+   1316                          //Clear the error to accommodate the new errors
+   1317                          I2C_1.ICR = (I2C_ICR_NACKCF | I2C_ICR_BERRCF | I2C_ICR_ARLOCF | I2C_ICR_OVRCF | I2C_ICR_PECCF | I2C_ICR_TIMOUTCF | I2C_ICR_ALERTCF);
+   1318                      }
+   1319                      else
+   1320                      {
+   1321                          //Handle Write data
+   1322                          if (I2C_1.ISR & I2C_ISR_TXIS)
+   1323                          {
+   1324                              I2C_1.TXDR = I2c1_Buffer_Out[I2c1_TxPointer];
+   1325                              I2c1_TxPointer++;
+   1326                          }
+   1327                          //Handle Read data
+   1328                          else if (I2C_1.ISR & I2C_ISR_RXNE)
+   1329                          {
+   1330                              I2c1_Buffer_In[I2c1_RxPointer] = I2C_1.RXDR;
+   1331                              I2c1_RxPointer++;
+   1332                          }
+   1333                      }
+   1334                  #else
+   1335                  #endif
+   1336              #else
+   1337                  //Slave mode
+   1338          
+   1339                      //Address matched
+   1340                      if ((I2C_1.ISR & I2C_ISR_ADDR) != FALSE)
+   1341                      {
+   1342                          //Clear NACK
+   1343                          I2C_1.CR2 &= ~I2C_CR2_NACK;
+   1344          
+   1345                          if (I2C_1.ISR & I2C_ISR_DIR)
+   1346                          {
+   1347                              if (I2c1_Slave_TxSize != 0)
+   1348                              {
+   1349                                  //Clear the index to accommodate the new write
+   1350                                  I2c1_TxPointer = 0;
+   1351          
+   1352                                  //Read transfer, Slave enters transmitter mode
+   1353                                  I2C_1.CR1 |= I2C_CR1_TXIE | I2C_CR1_NACKIE;
+   1354                              }
+   1355                              else
+   1356                              {
+   1357                                  //No Data to send
+   1358                                  I2C_1.CR2 |= I2C_CR2_NACK;
+   1359                              }
+   1360                          }
+   1361                          else
+   1362                          {
+   1363                              //Clear the index to accommodate the new read
+   1364                              I2c1_RxPointer = 0;
+   1365          
+   1366                              I2C_1.CR1 |= I2C_CR1_RXIE | I2C_CR1_NACKIE;
+   1367          
+   1368                              //Write transfer, Slave enters receiver mode
+   1369                              I2C_1.CR2 |= I2C1_BUFFER_IN_SIZE << I2C_CR2_NBYTES_POS;
+   1370                          }
+   1371          
+   1372                          //Clear the error to accommodate the new errors
+   1373                          I2C_1.ICR = (I2C_ICR_ADDRCF);
+   1374                      }
+   1375                      //I2c1_Slave_TxSize
+   1376          
+   1377                      if ((I2C_1.ISR & I2C_ISR_RXNE) != FALSE)
+   1378                      {
+   1379                          I2c1_Buffer_In[I2c1_RxPointer] = I2C_1.RXDR;
+   1380                          I2c1_RxPointer++;
+   1381          
+   1382                          if (I2c1_RxPointer > I2C1_BUFFER_IN_SIZE)
+   1383                          {
+   1384                              I2C_1.CR2 |= I2C_CR2_NACK;
+   1385                          }
+   1386                      }
+   1387          
+   1388          
+   1389                      if ((I2C_1.ISR & I2C_ISR_TXIS) != FALSE)
+   1390                      {
+   1391                          I2C_1.TXDR = I2c1_Buffer_Out[I2c1_TxPointer];
+   1392                          I2c1_TxPointer++;
+   1393          
+   1394                          if (I2c1_TxPointer > I2c1_Slave_TxSize)
+   1395                          {
+   1396                              I2C_1.CR2 |= I2C_CR2_NACK;
+   1397                          }
+   1398                      }
+   1399          
+   1400                      if ((I2C_1.ISR & I2C_ISR_STOPF) != FALSE)
+   1401                      {
+   1402                          if ((I2C_1.ISR & I2C_ISR_DIR) != FALSE)
+   1403                          {
+   1404                              //Transmission completed
+   1405                              I2c_1_SLAVE_DATA_TRANSMISSION_COMPLETED();
+   1406          
+   1407                          }
+   1408                          else
+   1409                          {
+   1410                              if (I2c1_RxPointer != 0)
+   1411                              {
+   1412                                  //Reception completed
+   1413                                  I2C_1_SLAVE_MODE_NEW_DATA_RECEIVED();
+   1414                              }
+   1415          
+   1416                          }
+   1417                          //Clear the error to accommodate the new errors
+   1418                          I2C_1.ICR = I2C_ICR_STOPCF;
+   1419                      }
+   1420          
+   1421                      if ((I2C_1.ISR & I2C_ISR_NACKF) != FALSE)
+   1422                      {
+   1423                          //Clear the error to accommodate the new errors
+   1424                          I2C_1.ICR = I2C_ICR_NACKCF;
+   1425                      }
+   1426              #endif
+   1427          
+   1428          }
+   \                     I2c1__InterruptHandler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+   1429          
+   1430          //---------------------------------------------------------------------------------------------------------------------
+   1431          /**
+   1432           *    @brief    It defines ISR for I2C interrupt
+   1433           *
+   1434           *    @details  This method defines ISR for I2C interrupt whenever data byte is available in I2C_DR register & any event
+   1435           *              occurs during I2C bus communication
+   1436           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1437          void I2c2_3__InterruptHandler(void)
+   1438          {
+   1439              #if ((I2C2_FEATURE == ENABLED) || (I2C3_FEATURE == ENABLED))
+   1440                  #if (I2C2_FEATURE == ENABLED)
+   1441                      //Handle Error Events
+   1442                      if (((I2C_2.ISR & (I2C_ISR_BERR | I2C_ISR_ARLO | I2C_ISR_OVR | I2C_ISR_PECERR | I2C_ISR_TIMEOUT | I2C_ISR_ALERT | I2C_ISR_NACKF)) != FALSE))
+   1443                      {
+   1444                          if ((I2C_2.ISR & I2C_ISR_ARLO) != FALSE)
+   1445                          {
+   1446                              //Set the error flag
+   1447                              I2c2_Ack_Error = I2C_ERROR_BUS_LOCKED;
+   1448                          }
+   1449                          else
+   1450                          {
+   1451                              I2c2_Ack_Error = I2C_ERROR_ACK;
+   1452                          }
+   1453          
+   1454                          //Clear the error to accommodate the new errors
+   1455                          I2C_2.ICR = (I2C_ICR_NACKCF | I2C_ICR_BERRCF | I2C_ICR_ARLOCF | I2C_ICR_OVRCF | I2C_ICR_PECCF | I2C_ICR_TIMOUTCF | I2C_ICR_ALERTCF);
+   1456                      }
+   1457                      else
+   1458                      {
+   1459                          //Handle Write data
+   1460                          if (I2C_2.ISR & I2C_ISR_TXIS)
+   1461                          {
+   1462                              I2C_2.TXDR = I2c2_Buffer_Out[I2c2_TxPointer];
+   1463                              I2c2_TxPointer++;
+   1464                          }
+   1465                          //Handle Read data
+   1466                          else if (I2C_2.ISR & I2C_ISR_RXNE)
+   1467                          {
+   1468                              I2c2_Buffer_In[I2c2_RxPointer] = I2C_2.RXDR;
+   1469                              I2c2_RxPointer++;
+   1470                          }
+   1471                      }
+   1472                  #endif
+   1473          
+   1474                  #if (I2C3_FEATURE == ENABLED)
+   1475                      //Handle Error Events
+   1476                      if (((I2C_3.ISR & (I2C_ISR_BERR | I2C_ISR_ARLO | I2C_ISR_OVR | I2C_ISR_PECERR | I2C_ISR_TIMEOUT | I2C_ISR_ALERT | I2C_ISR_NACKF)) != FALSE))
+   1477                      {
+   1478                          if ((I2C_3.ISR & I2C_ISR_ARLO) != FALSE)
+   1479                          {
+   1480                              //Set the error flag
+   1481                              I2c3_Ack_Error = I2C_ERROR_BUS_LOCKED;
+   1482                          }
+   1483                          else
+   1484                          {
+   1485                              I2c3_Ack_Error = I2C_ERROR_ACK;
+   1486                          }
+   1487          
+   1488                          //Clear the error to accommodate the new errors
+   1489                          I2C_3.ICR = (I2C_ICR_NACKCF | I2C_ICR_BERRCF | I2C_ICR_ARLOCF | I2C_ICR_OVRCF | I2C_ICR_PECCF | I2C_ICR_TIMOUTCF | I2C_ICR_ALERTCF);
+   1490          
+   1491                      }
+   1492                      else
+   1493                      {
+   1494                          //Handle Write data
+   1495                          if (I2C_3.ISR & I2C_ISR_TXIS)
+   1496                          {
+   1497                              I2C_3.TXDR = I2c3_Buffer_Out[I2c3_TxPointer];
+   1498                              I2c3_TxPointer++;
+   1499                          }
+   1500                          //Handle Read data
+   1501                          else if (I2C_3.ISR & I2C_ISR_RXNE)
+   1502                          {
+   1503                              I2c3_Buffer_In[I2c3_RxPointer] = I2C_3.RXDR;
+   1504                              I2c3_RxPointer++;
+   1505                          }
+   1506                      }
+   1507                  #endif
+   1508          
+   1509              #else
+   1510              #endif
+   1511          
+   1512          }
+   \                     I2c2_3__InterruptHandler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+   1513          
+   1514          //=====================================================================================================================
+   1515          //-------------------------------------- Private Functions ------------------------------------------------------------
+   1516          //=====================================================================================================================
+   1517          //---------------------------------------------------------------------------------------------------------------------
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   I2c1__InterruptHandler
+       0   I2c2_3__InterruptHandler
+       0   I2c__BlockingRead
+       0   I2c__BlockingWrite
+       0   I2c__Clear
+       0   I2c__Disable
+       0   I2c__Enable
+       0   I2c__GetStatus
+       0   I2c__Initialize
+       0   I2c__Read
+       0   I2c__RequestRead
+       0   I2c__ResetBus
+       0   I2c__Write
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       2  I2c1__InterruptHandler
+       2  I2c2_3__InterruptHandler
+       4  I2c__BlockingRead
+       4  I2c__BlockingWrite
+       2  I2c__Clear
+       2  I2c__Disable
+       2  I2c__Enable
+       4  I2c__GetStatus
+       4  I2c__Initialize
+       4  I2c__Read
+       4  I2c__RequestRead
+       4  I2c__ResetBus
+       4  I2c__Write
+
+ 
+ 42 bytes in section .text
+ 
+ 42 bytes of CODE memory
+
+Errors: none
+Warnings: none

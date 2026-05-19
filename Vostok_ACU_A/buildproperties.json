@@ -1,0 +1,10 @@
+{
+	"$schema": "https://github.whirlpool.com/pages/gpo-electronics/WP.BinaryManager/BuildProperties/buildproperties-schema.json#",
+	"ControlType": "ACU",
+	"Category": "Dishwasher",
+	"Node": 1,
+	"ProjectName": "LUKE ACU",
+	"SoftwareArchitecture": "Nucleus",
+	"SoftwareFileName": "Vostok_ACU_A.s19",
+	"PackageType": "Firmware"
+}

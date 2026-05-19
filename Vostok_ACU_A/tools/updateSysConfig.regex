@@ -1,0 +1,13 @@
+# This collection of regular expressions are used to manipulate the  
+# SystemConfig_prm.h file to change the basic definitions based on the selected 
+# PROJ_TYPE configuration
+
+s/^(\s*#define\s+SYSTEM_ACU_HANDLING\s+)(\w+)/\1D_ACU_E/gm
+
+s/^(\s*#define\s+SYSTEM_HMI_HANDLING\s+)(\w+)/\1D_HMI_E/gm
+
+s/^(\s*#define\s+SYSTEM_ACU_EXPANSION_HANDLING\s+)(\w+)/\1D_EXPACU_E/gm
+
+s/^(\s*#define\s+SYSTEM_HMI_EXPANSION_HANDLING\s+)(\w+)/\1D_EXPHMI_E/gm
+
+s/^(\s*#define\s+WIN_NODE_DEF\s+)(\w+)/\1N_NODE_N/gm

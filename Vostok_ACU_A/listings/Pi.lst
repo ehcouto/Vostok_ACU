@@ -1,0 +1,784 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:33
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/Category/Hbl/all/Mci/Slfac/Microblocks/Pi/Pi.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Oh --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Pi.lst -o obj\Pi.obj
+#        source/Category/Hbl/all/Mci/Slfac/Microblocks/Pi/Pi.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Pi.lst
+#    Object file  =  obj\Pi.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Hbl\all\Mci\Slfac\Microblocks\Pi\Pi.c
+      1          /**
+      2           *  @file
+      3           *  @brief      Proportional-Integral Controller
+      4           *
+      5           *  @details    A PI-Lead controller is a proportional gain in parallel with an integrator;
+      6           *              both in series with a lead controller. The proportional gain provides fast error response.
+      7           *              The integrator drives the system to a 0 steady-state error.
+      8           *              See Pe13-1_Odra_Mci.doc for theoretical basis and how to derive A, B, C coefficients.
+      9           *
+     10           *  @Module_Owner{Lucien Lee from Delta}
+     11           *  $Revision: 1.2 $
+     12           *
+     13           *  Copyright 2011 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     14           */
+     15          
+     16          //  --- Include Files -------------------------------------------------------------------------------------------------
+     17          
+     18          // -- This Module --
+     19          #include "C_Extensions.h"
+     20          #include "Pi.h"
+     21          
+     22          // -- ANSI/ISO --
+     23          #include <string.h>
+     24          
+     25          // -- Project --
+     26          
+     27          //  --- Public Variables ----------------------------------------------------------------------------------------------
+     28          
+     29          //  --- Private Properties --------------------------------------------------------------------------------------------
+     30          
+     31          //! Number of bites of fractional part of PI coefficients
+     32          #define PI_QMATH                    10    
+     33          //! QMath divider. Used for conversion from QMath format.                   
+     34          #define PI_QMATH_DIVIDER            (sint16)(1U << PI_QMATH)
+     35          //! Half of QMath divider. Used for rounding
+     36          #define PI_HALF_OF_QMATH_DIVIDER    (sint16)(1U << (PI_QMATH - 1))
+     37          
+     38          //=====================================================================================================================
+     39          //  --- Public Functions ----------------------------------------------------------------------------------------------
+     40          //=====================================================================================================================
+     41          
+     42          //---------------------------------------------------------------------------------------------------------------------
+     43          /**
+     44           * It Initializes the module Pi and its variables.
+     45           */
+
+   \                                 In section .text, align 2, keep-with-next
+     46          extern void Pi__Initialize(PI_TYPE *pi_state)
+     47          {
+   \                     Pi__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     48              memset(pi_state, 0, sizeof(PI_TYPE));
+   \   00000002   0x2112             MOVS     R1,#+18
+   \   00000004   0x.... 0x....      BL       __aeabi_memclr
+     49          }
+   \   00000008   0xBD01             POP      {R0,PC}          ;; return
+     50          //---------------------------------------------------------------------------------------------------------------------
+     51          /**
+     52           * Calculates PI output based on feedback according to parameters.
+     53           *
+     54           * Call rate depends on desired response speed
+     55           *
+     56           * @param   feedback - actual feedback value, PI will change output to set feedback as close as possible to pi_state.Reference
+     57           */
+
+   \                                 In section .text, align 2, keep-with-next
+     58          extern void Pi__Calculate(PI_TYPE *pi_state, sint16 feedback)
+     59          {
+   \                     Pi__Calculate: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+     60              sint32	term_1;
+     61              sint32	term_2;
+     62              sint32	term_3;
+     63              sint32	out;
+     64          
+     65              term_1 = 0;
+     66              term_2 = 0;
+     67              term_3 = 0;
+     68              out = 0;
+     69          
+     70              // term_2 bases on previous error
+     71              term_2 = pi_state->Coefficient_B * pi_state->Error;
+   \   00000002   0x2202             MOVS     R2,#+2
+   \   00000004   0x5E82             LDRSH    R2,[R0, R2]
+   \   00000006   0x2308             MOVS     R3,#+8
+   \   00000008   0x5EC3             LDRSH    R3,[R0, R3]
+   \   0000000A   0x435A             MULS     R2,R3,R2
+     72          
+     73              // Calculate actual error
+     74              pi_state->Error = pi_state->Reference - feedback;
+   \   0000000C   0x88C3             LDRH     R3,[R0, #+6]
+   \   0000000E   0x1A59             SUBS     R1,R3,R1
+   \   00000010   0x8101             STRH     R1,[R0, #+8]
+     75          
+     76              // term_1 bases on actual error
+     77              term_1 = pi_state->Coefficient_A * pi_state->Error;
+     78          
+     79          
+     80              // term_3 is based on previous saturation error
+     81              term_3 = pi_state->Coefficient_C * pi_state->Saturation_Error;
+     82          
+     83              out = term_1 + term_2 + term_3;
+   \   00000012   0x2300             MOVS     R3,#+0
+   \   00000014   0x5EC3             LDRSH    R3,[R0, R3]
+   \   00000016   0xB209             SXTH     R1,R1
+   \   00000018   0x434B             MULS     R3,R1,R3
+   \   0000001A   0x1899             ADDS     R1,R3,R2
+   \   0000001C   0x2204             MOVS     R2,#+4
+   \   0000001E   0x5E82             LDRSH    R2,[R0, R2]
+   \   00000020   0x230A             MOVS     R3,#+10
+   \   00000022   0x5EC3             LDRSH    R3,[R0, R3]
+   \   00000024   0x435A             MULS     R2,R3,R2
+   \   00000026   0x1889             ADDS     R1,R1,R2
+     84          
+     85              // Round value of out
+     86              if( out >= 0 )
+   \   00000028   0xD402             BMI      ??Pi__Calculate_0
+     87              {
+     88                  out += PI_HALF_OF_QMATH_DIVIDER;
+   \   0000002A   0x2280             MOVS     R2,#+128
+   \   0000002C   0x0092             LSLS     R2,R2,#+2        ;; #+512
+   \   0000002E   0xE000             B        ??Pi__Calculate_1
+     89              }
+     90              else
+     91              {
+     92                  out -= PI_HALF_OF_QMATH_DIVIDER;
+   \                     ??Pi__Calculate_0: (+1)
+   \   00000030   0x....             LDR      R2,??DataTable0  ;; 0xfffffe00
+   \                     ??Pi__Calculate_1: (+1)
+   \   00000032   0x1889             ADDS     R1,R1,R2
+     93              }
+     94          
+     95              // Calculate pre saturation output
+     96              out = pi_state->Output + (out / PI_QMATH_DIVIDER);
+   \   00000034   0x2210             MOVS     R2,#+16
+   \   00000036   0x5E82             LDRSH    R2,[R0, R2]
+   \   00000038   0x124B             ASRS     R3,R1,#+9
+   \   0000003A   0x0D9B             LSRS     R3,R3,#+22
+   \   0000003C   0x1859             ADDS     R1,R3,R1
+   \   0000003E   0x1289             ASRS     R1,R1,#+10
+   \   00000040   0x1851             ADDS     R1,R2,R1
+     97          
+     98              // Saturate output
+     99              if( out > pi_state->Output_Max )
+   \   00000042   0x220C             MOVS     R2,#+12
+   \   00000044   0x5E83             LDRSH    R3,[R0, R2]
+   \   00000046   0x428B             CMP      R3,R1
+   \   00000048   0xDA05             BGE      ??Pi__Calculate_2
+    100              {
+    101                  pi_state->Output = pi_state->Output_Max;
+   \   0000004A   0x001A             MOVS     R2,R3
+    102          
+    103                  // out is long so check is max of unsint16 was not reached
+    104                  if( out < 32767 )
+   \   0000004C   0x....             LDR      R4,??DataTable0_1  ;; 0x7fff
+   \   0000004E   0x42A1             CMP      R1,R4
+   \   00000050   0xDB0B             BLT      ??Pi__Calculate_3
+    105                  {
+    106                      pi_state->Saturation_Error = pi_state->Output_Max - out;
+    107                  }
+    108                  else
+    109                  {
+    110                      pi_state->Saturation_Error = pi_state->Output_Max - 32767;
+   \   00000052   0x1B19             SUBS     R1,R3,R4
+   \   00000054   0xE00D             B        ??Pi__Calculate_4
+    111                  }
+    112              }
+    113              else if( out < pi_state->Output_Min )
+   \                     ??Pi__Calculate_2: (+1)
+   \   00000056   0x220E             MOVS     R2,#+14
+   \   00000058   0x5E83             LDRSH    R3,[R0, R2]
+   \   0000005A   0x4299             CMP      R1,R3
+   \   0000005C   0xDA07             BGE      ??Pi__Calculate_5
+    114              {
+    115                  pi_state->Output = pi_state->Output_Min;
+   \   0000005E   0x001A             MOVS     R2,R3
+    116          
+    117                  if( out > -32768 )
+   \   00000060   0x....             LDR      R4,??DataTable0_2  ;; 0xffff8001
+   \   00000062   0x42A1             CMP      R1,R4
+   \   00000064   0xDA01             BGE      ??Pi__Calculate_3
+    118                  {
+    119                      pi_state->Saturation_Error = pi_state->Output_Min - out;
+    120                  }
+    121                  else
+    122                  {
+    123                      pi_state->Saturation_Error = pi_state->Output_Min - (-32768);
+   \   00000066   0x2180             MOVS     R1,#+128
+   \   00000068   0x0209             LSLS     R1,R1,#+8        ;; #+32768
+   \                     ??Pi__Calculate_3: (+1)
+   \   0000006A   0x1A59             SUBS     R1,R3,R1
+   \   0000006C   0xE001             B        ??Pi__Calculate_4
+    124                  }
+    125              }
+    126              else
+    127              {
+    128                  pi_state->Output = out;
+   \                     ??Pi__Calculate_5: (+1)
+   \   0000006E   0x000A             MOVS     R2,R1
+    129                  pi_state->Saturation_Error = 0;
+   \   00000070   0x2100             MOVS     R1,#+0
+   \                     ??Pi__Calculate_4: (+1)
+   \   00000072   0x8202             STRH     R2,[R0, #+16]
+   \   00000074   0x8141             STRH     R1,[R0, #+10]
+    130              }
+    131          }
+   \   00000076   0xBC10             POP      {R4}
+   \   00000078   0x4770             BX       LR               ;; return
+    132          
+    133          //---------------------------------------------------------------------------------------------------------------------
+    134          /**
+    135           * Sets A PI coefficient.
+    136           *
+    137           * @param   value - value in PI_QMATH format
+    138           */
+
+   \                                 In section .text, align 2, keep-with-next
+    139          extern void Pi__SetCoefficientA(PI_TYPE *pi_state, sint16 value)
+    140          {
+    141              pi_state->Coefficient_A = value;
+   \                     Pi__SetCoefficientA: (+1)
+   \   00000000   0x8001             STRH     R1,[R0, #+0]
+    142          }
+   \   00000002   0x4770             BX       LR               ;; return
+    143          
+    144          //---------------------------------------------------------------------------------------------------------------------
+    145          /**
+    146           * Sets B PI coefficient.
+    147           *
+    148           * @param   value - value in PI_QMATH format
+    149           */
+
+   \                                 In section .text, align 2, keep-with-next
+    150          extern void Pi__SetCoefficientB(PI_TYPE *pi_state, sint16 value)
+    151          {
+    152              pi_state->Coefficient_B = value;
+   \                     Pi__SetCoefficientB: (+1)
+   \   00000000   0x8041             STRH     R1,[R0, #+2]
+    153          }
+   \   00000002   0x4770             BX       LR               ;; return
+    154          
+    155          //---------------------------------------------------------------------------------------------------------------------
+    156          /**
+    157           * Sets B PI coefficient.
+    158           *
+    159           * @param   value - value in PI_QMATH format
+    160           */
+
+   \                                 In section .text, align 2, keep-with-next
+    161          extern void Pi__SetCoefficientC(PI_TYPE *pi_state, sint16 value)
+    162          {
+    163              pi_state->Coefficient_C = value;
+   \                     Pi__SetCoefficientC: (+1)
+   \   00000000   0x8081             STRH     R1,[R0, #+4]
+    164          }
+   \   00000002   0x4770             BX       LR               ;; return
+    165          //---------------------------------------------------------------------------------------------------------------------
+    166          /**
+    167           * Sets PI output value.
+    168           *
+    169           * @param   out - output value to force
+    170           */
+
+   \                                 In section .text, align 2, keep-with-next
+    171          extern void Pi__SetOutput(PI_TYPE *pi_state, sint16 out)
+    172          {
+    173              pi_state->Output = out;
+   \                     Pi__SetOutput: (+1)
+   \   00000000   0x8201             STRH     R1,[R0, #+16]
+    174          }
+   \   00000002   0x4770             BX       LR               ;; return
+    175          
+    176          //---------------------------------------------------------------------------------------------------------------------
+    177          /**
+    178           * Sets PI reference (target) value.
+    179           *
+    180           * @param   reference - target value of feedback
+    181           */
+
+   \                                 In section .text, align 2, keep-with-next
+    182          extern void Pi__SetReference(PI_TYPE *pi_state, sint16 reference)
+    183          {
+    184              pi_state->Reference = reference;
+   \                     Pi__SetReference: (+1)
+   \   00000000   0x80C1             STRH     R1,[R0, #+6]
+    185          }
+   \   00000002   0x4770             BX       LR               ;; return
+    186          
+    187          //---------------------------------------------------------------------------------------------------------------------
+    188          /**
+    189           * Sets min and max of saturation.
+    190           *
+    191           * @param   out_min - minimum value of output
+    192           * @param   out_max - maximum value of output
+    193           */
+
+   \                                 In section .text, align 2, keep-with-next
+    194          extern void Pi__SetSaturation(PI_TYPE *pi_state, sint16 out_min, sint16 out_max)
+    195          {
+    196              pi_state->Output_Min = out_min;
+   \                     Pi__SetSaturation: (+1)
+   \   00000000   0x81C1             STRH     R1,[R0, #+14]
+    197              pi_state->Output_Max = out_max;
+   \   00000002   0x8182             STRH     R2,[R0, #+12]
+    198          }
+   \   00000004   0x4770             BX       LR               ;; return
+    199          
+    200          //---------------------------------------------------------------------------------------------------------------------
+    201          /**
+    202           * Gets A PI coefficients.
+    203           *
+    204           * @return  value of coefficient in PI_QMATH format
+    205           */
+
+   \                                 In section .text, align 2, keep-with-next
+    206          extern sint16 Pi__GetCoefficientA(PI_TYPE *pi_state)
+    207          {
+    208              return pi_state->Coefficient_A;
+   \                     Pi__GetCoefficientA: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+   \   00000002   0x5E40             LDRSH    R0,[R0, R1]
+   \   00000004   0x4770             BX       LR               ;; return
+    209          }
+    210          
+    211          //---------------------------------------------------------------------------------------------------------------------
+    212          /**
+    213           * Gets B PI coefficients.
+    214           *
+    215           * @return  value of coefficient in PI_QMATH format
+    216           */
+
+   \                                 In section .text, align 2, keep-with-next
+    217          extern sint16 Pi__GetCoefficientB(PI_TYPE *pi_state)
+    218          {
+    219              return pi_state->Coefficient_B;
+   \                     Pi__GetCoefficientB: (+1)
+   \   00000000   0x2102             MOVS     R1,#+2
+   \   00000002   0x5E40             LDRSH    R0,[R0, R1]
+   \   00000004   0x4770             BX       LR               ;; return
+    220          }
+    221          
+    222          //---------------------------------------------------------------------------------------------------------------------
+    223          /**
+    224           * Gets C PI coefficients.
+    225           *
+    226           * @return  value of coefficient in PI_QMATH format
+    227           */
+
+   \                                 In section .text, align 2, keep-with-next
+    228          extern sint16 Pi__GetCoefficientC(PI_TYPE *pi_state)
+    229          {
+    230              return pi_state->Coefficient_C;
+   \                     Pi__GetCoefficientC: (+1)
+   \   00000000   0x2104             MOVS     R1,#+4
+   \   00000002   0x5E40             LDRSH    R0,[R0, R1]
+   \   00000004   0x4770             BX       LR               ;; return
+    231          }
+    232          //---------------------------------------------------------------------------------------------------------------------
+    233          /**
+    234           * Gets PI reference (target) value.
+    235           *
+    236           * @return  target value of feedback
+    237           */
+
+   \                                 In section .text, align 2, keep-with-next
+    238          extern sint16 Pi__GetOutput(PI_TYPE *pi_state)
+    239          {
+    240              return pi_state->Output;
+   \                     Pi__GetOutput: (+1)
+   \   00000000   0x2110             MOVS     R1,#+16
+   \   00000002   0x5E40             LDRSH    R0,[R0, R1]
+   \   00000004   0x4770             BX       LR               ;; return
+    241          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable0:
+   \   00000000   0xFFFFFE00         DC32     0xfffffe00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable0_1:
+   \   00000000   0x00007FFF         DC32     0x7fff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable0_2:
+   \   00000000   0xFFFF8001         DC32     0xffff8001
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       4   Pi__Calculate
+       0   Pi__GetCoefficientA
+       0   Pi__GetCoefficientB
+       0   Pi__GetCoefficientC
+       0   Pi__GetOutput
+       8   Pi__Initialize
+         8   -> __aeabi_memclr
+       0   Pi__SetCoefficientA
+       0   Pi__SetCoefficientB
+       0   Pi__SetCoefficientC
+       0   Pi__SetOutput
+       0   Pi__SetReference
+       0   Pi__SetSaturation
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable0
+       4  ??DataTable0_1
+       4  ??DataTable0_2
+     122  Pi__Calculate
+       6  Pi__GetCoefficientA
+       6  Pi__GetCoefficientB
+       6  Pi__GetCoefficientC
+       6  Pi__GetOutput
+      10  Pi__Initialize
+       4  Pi__SetCoefficientA
+       4  Pi__SetCoefficientB
+       4  Pi__SetCoefficientC
+       4  Pi__SetOutput
+       4  Pi__SetReference
+       6  Pi__SetSaturation
+
+ 
+ 194 bytes in section .text
+ 
+ 194 bytes of CODE memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,737 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:07
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Hbl/all/Hbl/DefaultPin/DefaultPin.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\DefaultPin.lst -o
+#        obj\DefaultPin.obj
+#        source/XCategory/Hbl/all/Hbl/DefaultPin/DefaultPin.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\DefaultPin.lst
+#    Object file  =  obj\DefaultPin.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\Hbl\DefaultPin\DefaultPin.c
+      1          /**
+      2           *  @file       DefaultPin.c
+      3           *
+      4           *  @brief      Hbl Acu/Hmi module to refresh default configuration of unused pins from Setting file
+      5           *
+      6           *  @details    This module gets a list of pins and their configuration to be applied.
+      7           *                  TO ENABLE THIS FEATURE apply these changes in SRMain_prv.h:
+      8           *                  - Include DefaultPin.h
+      9           *                  - Add DefaultPin__Initialize in SRMainNormalInitialization_Tasks function list, e.g. after Hbl__Initialize
+     10           *                  - Add DefaultPin__Handler in SRMain_AppMgr_Handler function list
+     11           *  			Compile time parameters (it can bel placed on SystemConfig_prm.h):
+     12           *  			- DEFAULTPIN_REFRESH_COUNT: if set, pin refresh is performed after DEFAULTPIN_REFRESH_COUNT*100ms time.
+     13           *  			    Default is 0 (100ms)
+     14           *  			- DEFAULTPIN_ACU_EXP_SECTION: it should be defined explicitly if SYSTEM_ACU_EXPANSION_HANDLING is ENABLED and
+     15           *  			    SFUPDATER_ACU_SECTION_ID is not defined; if SYSTEM_ACU_EXPANSION_HANDLING is DISABLED this feature is disabled.
+     16           *                  If DEFAULTPIN_ACU_EXP_SECTION is not defined and SFUPDATER_ACU_SECTION_ID is, feature is enabled using SFUPDATER_ACU_SECTION_ID value.
+     17           *  			    If both DEFAULTPIN_ACU_EXP_SECTION and SFUPDATER_ACU_SECTION_ID are not defined, this feature is disabled.
+     18           *              - DEFAULTPIN_HMI_EXP_SECTION: it should be defined explicitly if SYSTEM_HMI_EXPANSION_HANDLING is ENABLED and
+     19           *                  SFUPDATER_HMI_SECTION_ID is not defined; if SYSTEM_HMI_EXPANSION_HANDLING is DISABLED this feature is disabled.
+     20           *                  If DEFAULTPIN_HMI_EXP_SECTION is not defined and SFUPDATER_HMI_SECTION_ID is, feature is enabled using SFUPDATER_HMISECTION_ID value.
+     21           *                  If both DEFAULTPIN_HMI_EXP_SECTION and SFUPDATER_HMI_SECTION_ID are not defined, this feature is disabled.
+     22           *
+     23           *  @copyright  Copyright 2019 Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     24           */
+     25          //---------------------------------------------------------------------------------------------------------------------
+     26          //---------------------------------------------------------------------------------------------------------------------
+     27          
+     28          
+     29          //-------------------------------------- Include Files ----------------------------------------------------------------
+     30          #include "SystemConfig.h"
+     31          #include "DefaultPin.h"
+     32          #include "SettingFile.h"
+     33          #include "VirtualPin.h"
+     34          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     35          
+     36          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     37          #define SF_DEFAULT_PIN_DISPLACEMENT         7
+     38          
+     39          #ifndef DEFAULTPIN_REFRESH_COUNT
+     40              #define DEFAULTPIN_REFRESH_COUNT        0
+     41          #endif
+     42          
+     43          typedef PACKED struct DEFAULT_PIN_PARAM_STRUCT
+     44          {
+     45              uint8   Pin;
+     46              uint8   Gpio_Type:7;
+     47              uint8   Is_High:1;
+     48          } DEFAULT_PIN_PARAM_TYPE;
+     49          
+     50          #if (SYSTEM_ACU_HANDLING == ENABLED)
+     51              // Reference for ACU DefaultPin configuration from Setting File
+
+   \                                 In section .bss, align 4
+     52              static SETTINGFILE_LOADER_TYPE DefaultPin_Acu_Ptr;
+   \                     DefaultPin_Acu_Ptr:
+   \   00000000                      DS8 8
+     53          #endif
+     54          #if (SYSTEM_HMI_HANDLING == ENABLED)
+     55              // Reference for HMI DefaultPin configuration from Setting File
+     56              static SETTINGFILE_LOADER_TYPE DefaultPin_Hmi_Ptr;
+     57          #endif
+     58          #if (SYSTEM_ACU_EXPANSION_HANDLING == ENABLED)
+     59              #if (!defined(DEFAULTPIN_ACU_EXP_SECTION) && defined(SFUPDATER_ACU_SECTION_ID))
+     60                  #define DEFAULTPIN_ACU_EXP_SECTION      SFUPDATER_ACU_SECTION_ID
+     61              #endif
+     62              #if (defined(DEFAULTPIN_ACU_EXP_SECTION))
+     63                  // Reference for ACU Expansion DefaultPin configuration from Setting File
+     64                  static SETTINGFILE_LOADER_TYPE DefaultPin_AcuExp_Ptr;
+     65              #endif
+     66          #endif
+     67          #if (SYSTEM_HMI_EXPANSION_HANDLING == ENABLED)
+     68              #if (!defined(DEFAULTPIN_HMI_EXP_SECTION) && defined(SFUPDATER_HMI_SECTION_ID))
+     69                  #define DEFAULTPIN_HMI_EXP_SECTION      SFUPDATER_HMI_SECTION_ID
+     70              #endif
+     71              #if (defined(DEFAULTPIN_HMI_EXP_SECTION))
+     72                  // Reference for HMI Expansion DefaultPin configuration from Setting File
+     73                  static SETTINGFILE_LOADER_TYPE DefaultPin_HmiExp_Ptr;
+     74              #endif
+     75          #endif
+     76          
+     77          #if(DEFAULTPIN_REFRESH_COUNT > 1)
+     78              // Counter to wait DEFAULTPIN_REFRESH_COUNT times before Pin config update
+     79              static uint16 DefaultPin_Exec_Counter;
+     80              #define DEFAULTPIN__IS_COUNTER_EXPIRED()        ( DefaultPin_Exec_Counter >= DEFAULTPIN_REFRESH_COUNT )
+     81              #define DEFAULTPIN__INITIALIZE_COUNTER()        { DefaultPin_Exec_Counter = DEFAULTPIN_REFRESH_COUNT; }
+     82              #define DEFAULTPIN__INCREMENT_COUNTER()         { DefaultPin_Exec_Counter++; }
+     83              #define DEFAULTPIN__CLEAR_COUNTER()             { DefaultPin_Exec_Counter = 0; }
+     84          
+     85          #else
+     86              #define DEFAULTPIN__IS_COUNTER_EXPIRED()        (TRUE)
+     87              #define DEFAULTPIN__INITIALIZE_COUNTER()        {}
+     88              #define DEFAULTPIN__INCREMENT_COUNTER()         {}
+     89              #define DEFAULTPIN__CLEAR_COUNTER()             {}
+     90          #endif
+     91          
+     92          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     93          static void DoPinUpdate(DEFAULT_PIN_PARAM_TYPE *param_ptr, uint16 n_items);
+     94          static void InitializePtr(SETTINGFILE_LOADER_TYPE *ptr, SETTINGFILE_OFFSET_TYPE sf_ptr);
+     95          
+     96          //=====================================================================================================================
+     97          //-------------------------------------- Public Functions -------------------------------------------------------------
+     98          //=====================================================================================================================
+     99          
+    100          //---------------------------------------------------------------------------------------------------------------------
+    101          /**
+    102           *  @brief      DefaultPin Initialize method; it calls DefaultPin__Handler, no other feature are required.
+    103           *
+    104           */
+
+   \                                 In section .text, align 2, keep-with-next
+    105          void DefaultPin__Initialize(void)
+    106          {
+   \                     DefaultPin__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    107              #if (SYSTEM_ACU_HANDLING == ENABLED)
+    108                  InitializePtr(&DefaultPin_Acu_Ptr, SF_PTR_ACU_IO_CONFIG);
+   \   00000002   0x2120             MOVS     R1,#+32
+   \   00000004   0x....             LDR      R0,??DataTable2
+   \   00000006   0x.... 0x....      BL       InitializePtr
+    109              #endif
+    110              #if (SYSTEM_HMI_HANDLING == ENABLED)
+    111                  InitializePtr(&DefaultPin_Hmi_Ptr, SF_PTR_UI_IO_CONFIG);
+    112              #endif
+    113              #if ((SYSTEM_ACU_EXPANSION_HANDLING == ENABLED) && defined(DEFAULTPIN_ACU_EXP_SECTION))
+    114                  InitializePtr(&DefaultPin_AcuExp_Ptr,
+    115                  	(SETTINGFILE_OFFSET_TYPE) ((DEFAULTPIN_ACU_EXP_SECTION << 8) | (SF_PTR_ACU_IO_CONFIG & 0xFF)));
+    116              #endif
+    117              #if ((SYSTEM_HMI_EXPANSION_HANDLING == ENABLED) && defined(DEFAULTPIN_HMI_EXP_SECTION))
+    118                  InitializePtr(&DefaultPin_HmiExp_Ptr,
+    119                  	(SETTINGFILE_OFFSET_TYPE) ((DEFAULTPIN_HMI_EXP_SECTION << 8) | (SF_PTR_UI_IO_CONFIG & 0xFF)));
+    120              #endif
+    121              DEFAULTPIN__INITIALIZE_COUNTER();
+    122              DefaultPin__Handler();
+   \   0000000A   0x.... 0x....      BL       DefaultPin__Handler
+    123          }
+   \   0000000E   0xBD01             POP      {R0,PC}          ;; return
+    124          
+    125          //---------------------------------------------------------------------------------------------------------------------
+    126          /**
+    127           *  @brief      Handler to refresh Default pin configuration
+    128           *
+    129           */
+
+   \                                 In section .text, align 2, keep-with-next
+    130          void DefaultPin__Handler(void)
+    131          {
+    132              DEFAULTPIN__INCREMENT_COUNTER();
+    133              if(DEFAULTPIN__IS_COUNTER_EXPIRED())
+    134              {
+    135                  #if (SYSTEM_ACU_HANDLING == ENABLED)
+    136                      // Check pins on ACU I/O Configuration pointer
+    137                      if(DefaultPin_Acu_Ptr.Data != NULL)
+   \                     DefaultPin__Handler: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable2
+   \   00000002   0x6808             LDR      R0,[R1, #+0]
+   \   00000004   0x2800             CMP      R0,#+0
+   \   00000006   0xD100             BNE      ??DefaultPin__Handler_0
+   \   00000008   0x4770             BX       LR
+    138                      {
+    139                          DoPinUpdate((void *) DefaultPin_Acu_Ptr.Data, DefaultPin_Acu_Ptr.Length);
+   \                     ??DefaultPin__Handler_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x8889             LDRH     R1,[R1, #+4]
+   \   0000000E   0x.... 0x....      BL       DoPinUpdate
+    140                      }
+    141                  #endif
+    142                  #if (SYSTEM_HMI_HANDLING == ENABLED)
+    143                      // Check pins on HMI I/O Configuration pointer
+    144                      if(DefaultPin_Hmi_Ptr.Data != NULL)
+    145                      {
+    146                          DoPinUpdate((void *) DefaultPin_Hmi_Ptr.Data, DefaultPin_Hmi_Ptr.Length);
+    147                      }
+    148                  #endif
+    149                  #if ((SYSTEM_ACU_EXPANSION_HANDLING == ENABLED) && defined(DEFAULTPIN_ACU_EXP_SECTION))
+    150                      // Check pins on ACU Expansion I/O Configuration pointer
+    151                      if(DefaultPin_AcuExp_Ptr.Data != NULL)
+    152                      {
+    153                          DoPinUpdate((void *) DefaultPin_AcuExp_Ptr.Data, DefaultPin_AcuExp_Ptr.Length);
+    154                      }
+    155                  #endif
+    156                  #if ((SYSTEM_HMI_EXPANSION_HANDLING == ENABLED) && defined(DEFAULTPIN_HMI_EXP_SECTION))
+    157                      // Check pins on HMI Expansion I/O Configuration pointer
+    158                      if(DefaultPin_HmiExp_Ptr.Data != NULL)
+    159                      {
+    160                          DoPinUpdate((void *) DefaultPin_HmiExp_Ptr.Data, DefaultPin_HmiExp_Ptr.Length);
+    161                      }
+    162                  #endif
+    163                  DEFAULTPIN__CLEAR_COUNTER();
+    164              }
+    165          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+    166          
+    167          //=====================================================================================================================
+    168          //-------------------------------------- Private Functions ------------------------------------------------------------
+    169          //=====================================================================================================================
+    170          
+    171          //---------------------------------------------------------------------------------------------------------------------
+    172          /**
+    173           *  @brief      Function that perform Gpio pin configuration and set level for Ouptut pin according to Pin list provided.
+    174           *  @param      param_ptr - Pointer to Setting file parameters to process
+    175           *  @param      n_items - Number of elements of Parameters list to process
+    176           *
+    177           */
+
+   \                                 In section .text, align 2, keep-with-next
+    178          void DoPinUpdate(DEFAULT_PIN_PARAM_TYPE *param_ptr, uint16 n_items)
+    179          {
+   \                     DoPinUpdate: (+1)
+   \   00000000   0xB5F3             PUSH     {R0,R1,R4-R7,LR}
+   \   00000002   0xB081             SUB      SP,SP,#+4
+    180              uint16 index;
+    181              for(index = 0; index < n_items; index++)
+   \   00000004   0x2400             MOVS     R4,#+0
+   \   00000006   0xE028             B        ??DoPinUpdate_0
+    182              {
+    183                  DEFAULT_PIN_PARAM_TYPE *cur_param_ptr = &param_ptr[index];
+    184                  if(cur_param_ptr->Pin < VirtualPin__GetNumOf())
+   \                     ??DoPinUpdate_1: (+1)
+   \   00000008   0x.... 0x....      BL       VirtualPin__GetNumOf
+   \   0000000C   0x9901             LDR      R1,[SP, #+4]
+   \   0000000E   0xB2A4             UXTH     R4,R4
+   \   00000010   0x0062             LSLS     R2,R4,#+1
+   \   00000012   0x188D             ADDS     R5,R1,R2
+   \   00000014   0x7829             LDRB     R1,[R5, #+0]
+   \   00000016   0x000A             MOVS     R2,R1
+   \   00000018   0x4282             CMP      R2,R0
+   \   0000001A   0xD21D             BCS      ??DoPinUpdate_2
+    185                  {
+    186                      VIRTUALPIN_TYPE *pin_ptr = (void *) &VIRTUALPIN_TABLE[cur_param_ptr->Pin];
+   \   0000001C   0x....             LDR      R0,??DataTable2_1
+   \   0000001E   0x00C9             LSLS     R1,R1,#+3
+   \   00000020   0x1847             ADDS     R7,R0,R1
+    187          
+    188                      // Check an entry where Port is not set
+    189                      if(pin_ptr->port != PORT_NULL)
+   \   00000022   0x7838             LDRB     R0,[R7, #+0]
+   \   00000024   0x28FF             CMP      R0,#+255
+   \   00000026   0xD017             BEQ      ??DoPinUpdate_2
+    190                      {
+    191                      	// Set Pin value if an Output Type is set
+    192                          if((cur_param_ptr->Gpio_Type == OUTPUT_PUSHPULL) ||
+    193                              (cur_param_ptr->Gpio_Type == OUTPUT_OPEN_DRAIN) ||
+    194                              (cur_param_ptr->Gpio_Type == SPECIAL_FUNCTION_PUSH_PULL) ||
+    195                              (cur_param_ptr->Gpio_Type == SPECIAL_FUNCTION_OPEN_DRAIN))
+   \   00000028   0x7869             LDRB     R1,[R5, #+1]
+   \   0000002A   0x267F             MOVS     R6,#+127
+   \   0000002C   0x0032             MOVS     R2,R6
+   \   0000002E   0x400A             ANDS     R2,R2,R1
+   \   00000030   0x2A06             CMP      R2,#+6
+   \   00000032   0xD005             BEQ      ??DoPinUpdate_3
+   \   00000034   0x2A07             CMP      R2,#+7
+   \   00000036   0xD003             BEQ      ??DoPinUpdate_3
+   \   00000038   0x2A05             CMP      R2,#+5
+   \   0000003A   0xD001             BEQ      ??DoPinUpdate_3
+   \   0000003C   0x2A04             CMP      R2,#+4
+   \   0000003E   0xD104             BNE      ??DoPinUpdate_4
+    196                          {
+    197                          	Gpio__PinWrite(pin_ptr->port, pin_ptr->pin, (BOOL_TYPE) cur_param_ptr->Is_High);
+   \                     ??DoPinUpdate_3: (+1)
+   \   00000040   0x000A             MOVS     R2,R1
+   \   00000042   0x09D2             LSRS     R2,R2,#+7
+   \   00000044   0x7879             LDRB     R1,[R7, #+1]
+   \   00000046   0x.... 0x....      BL       Gpio__PinWrite
+    198                          }
+    199                          Gpio__PinConfig(pin_ptr->port, pin_ptr->pin,(GPIO_PIN_MODE_TYPE) cur_param_ptr->Gpio_Type);
+   \                     ??DoPinUpdate_4: (+1)
+   \   0000004A   0x7868             LDRB     R0,[R5, #+1]
+   \   0000004C   0x4006             ANDS     R6,R6,R0
+   \   0000004E   0x0032             MOVS     R2,R6
+   \   00000050   0x7879             LDRB     R1,[R7, #+1]
+   \   00000052   0x7838             LDRB     R0,[R7, #+0]
+   \   00000054   0x.... 0x....      BL       Gpio__PinConfig
+    200                      }
+    201                  }
+    202              }
+   \                     ??DoPinUpdate_2: (+1)
+   \   00000058   0x1C64             ADDS     R4,R4,#+1
+   \                     ??DoPinUpdate_0: (+1)
+   \   0000005A   0x0020             MOVS     R0,R4
+   \   0000005C   0x4669             MOV      R1,SP
+   \   0000005E   0x8909             LDRH     R1,[R1, #+8]
+   \   00000060   0xB280             UXTH     R0,R0
+   \   00000062   0x4288             CMP      R0,R1
+   \   00000064   0xD3D0             BCC      ??DoPinUpdate_1
+    203          }
+   \   00000066   0xBDF7             POP      {R0-R2,R4-R7,PC}  ;; return
+    204          
+    205          //---------------------------------------------------------------------------------------------------------------------
+    206          /**
+    207           *  @brief      Function that initializes Setting file pointer
+    208           *  @param      ptr - Pointer to Settingfile Loader structure to save parameter table or initialize it as NULL if not present
+    209           *  @param      sf_section - Setting file section where to get Default Pin parameters table
+    210           *
+    211           */
+
+   \                                 In section .text, align 2, keep-with-next
+    212          void InitializePtr(SETTINGFILE_LOADER_TYPE *ptr, SETTINGFILE_OFFSET_TYPE sf_ptr)
+    213          {
+   \                     InitializePtr: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x0008             MOVS     R0,R1
+    214              if(SettingFile__BasicLoader(sf_ptr, SF_DEFAULT_PIN_DISPLACEMENT, ptr) == PASS)
+   \   00000006   0x0022             MOVS     R2,R4
+   \   00000008   0x2107             MOVS     R1,#+7
+   \   0000000A   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   0000000E   0x2801             CMP      R0,#+1
+   \   00000010   0xD109             BNE      ??InitializePtr_0
+    215              {
+    216                  // Use Length field to keep number of elements
+    217                  ptr->Length /= sizeof(DEFAULT_PIN_PARAM_TYPE);
+   \   00000012   0x7920             LDRB     R0,[R4, #+4]
+   \   00000014   0x7961             LDRB     R1,[R4, #+5]
+   \   00000016   0x0609             LSLS     R1,R1,#+24
+   \   00000018   0x0C09             LSRS     R1,R1,#+16
+   \   0000001A   0x4308             ORRS     R0,R0,R1
+   \   0000001C   0x0840             LSRS     R0,R0,#+1
+   \   0000001E   0x7120             STRB     R0,[R4, #+4]
+   \   00000020   0x0A00             LSRS     R0,R0,#+8
+   \   00000022   0x7160             STRB     R0,[R4, #+5]
+   \   00000024   0xBD10             POP      {R4,PC}
+    218              }
+    219              else
+    220              {
+    221                  ptr->Data = NULL;
+   \                     ??InitializePtr_0: (+1)
+   \   00000026   0x0021             MOVS     R1,R4
+   \   00000028   0x2000             MOVS     R0,#+0
+   \   0000002A   0x.... 0x....      BL       __aeabi_uwrite4
+    222                  ptr->Length = 0;
+   \   0000002E   0x2000             MOVS     R0,#+0
+   \   00000030   0x7120             STRB     R0,[R4, #+4]
+   \   00000032   0x7160             STRB     R0,[R4, #+5]
+    223              }
+    224          }
+   \   00000034   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x........         DC32     DefaultPin_Acu_Ptr
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \   00000000   0x........         DC32     VIRTUALPIN_TABLE
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   DefaultPin__Handler
+         8   -> DoPinUpdate
+       8   DefaultPin__Initialize
+         8   -> DefaultPin__Handler
+         8   -> InitializePtr
+      32   DoPinUpdate
+        32   -> Gpio__PinConfig
+        32   -> Gpio__PinWrite
+        32   -> VirtualPin__GetNumOf
+       8   InitializePtr
+         8   -> SettingFile__BasicLoader
+         8 __aeabi_uwrite4
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       8  DefaultPin_Acu_Ptr
+      20  DefaultPin__Handler
+      16  DefaultPin__Initialize
+     104  DoPinUpdate
+      54  InitializePtr
+
+ 
+   8 bytes in section .bss
+ 202 bytes in section .text
+ 
+ 202 bytes of CODE memory
+   8 bytes of DATA memory
+
+Errors: none
+Warnings: none

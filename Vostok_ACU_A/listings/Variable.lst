@@ -1,0 +1,2666 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:58
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Common/all/Common/Variable/Variable.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Variable.lst -o
+#        obj\Variable.obj
+#        source/XCategory/Common/all/Common/Variable/Variable.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Variable.lst
+#    Object file  =  obj\Variable.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\Common\Variable\Variable.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      Module that stores references and definitions to the meaningful variables on the platform.
+      5           *
+      6           *  @details    This is a hub module from where you can access variables using an index. To make it happen you need to configure the PRV file with
+      7           *  			the proper data: It's necessary to declare extern variables that you'll add to DATA_HOLDER_INITIALIZE. On this constant, you add the elements
+      8           *  			using DATATYPE_TYPE as reference. Fill up all fields.
+      9           *  			Important: this module manages 8 and 16 bits variables and Regulations using the VARIABLE_REGULATION_HUB position and the Regulation module.
+     10           *
+     11           *  @copyright  Copyright 2015-2016 Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     12           */
+     13          //---------------------------------------------------------------------------------------------------------------------
+     14          //---------------------------------------------------------------------------------------------------------------------
+     15          
+     16          
+     17          //-------------------------------------- Include Files ----------------------------------------------------------------
+     18          #include "SystemConfig.h"
+     19          #include <string.h>
+     20          #include "Variable.h"
+     21          #include "Variable_prv.h"
+     22          // Protecting the include. If we are on an expansion board, we don't need the variable module to compile.
+     23          #if ((SYSTEM_ACU_HANDLING == ENABLED) || (SYSTEM_HMI_HANDLING == ENABLED))
+     24              #include "Variable_defs.h"
+
+   \                                 In section .rodata, align 1, keep-with-next
+   \   static __absolute uint8 const Regulation_Dummy
+   \                     Regulation_Dummy:
+   \   00000000   0x00               DC8 0
+
+   \                                 In section _appliance_segment, align 4
+   \   static __absolute uint16 Variable_General_Purpose[6]
+   \                     Variable_General_Purpose:
+   \   00000000                      DS8 12
+
+   \                                 In section _appliance_segment, align 1
+   \   static __absolute uint8 Variable_General_Flags
+   \                     Variable_General_Flags:
+   \   00000000                      DS8 1
+
+   \                                 In section .rodata, align 1, keep-with-next
+   \   static __absolute BOOL_TYPE const Always_True
+   \                     Always_True:
+   \   00000000   0x01               DC8 1
+
+   \                                 In section .text, align 4, keep-with-next
+   \   static __absolute VARIABLE_TYPE const ACU_DATA_HOLDER[97]
+   \                     ACU_DATA_HOLDER:
+   \   00000000   0x........         DC32 Regulation_Dummy
+   \   00000004   0x01 0x0C          DC8 1, 12, 0
+   \              0x00         
+   \   00000007   0x........         DC32 Interpreter_Status
+   \   0000000B   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000000E   0x........         DC32 Interpreter_Status + 1H
+   \   00000012   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000015   0x........         DC32 Interpreter_Status + 2H
+   \   00000019   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000001C   0x........         DC32 Interpreter_Status + 6H
+   \   00000020   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000023   0x........         DC32 Interpreter_Status + 3H
+   \   00000027   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000002A   0x........         DC32 Interpreter_Status + 4H
+   \   0000002E   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000031   0x........         DC32 Interpreter_Status + 5H
+   \   00000035   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000038   0x........         DC32 Statistics_Seconds_Since_Reset
+   \   0000003C   0x01 0x03          DC8 1, 3, 0
+   \              0x00         
+   \   0000003F   0x........         DC32 Statistics + 8H
+   \   00000043   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000046   0x........         DC32 Always_True
+   \   0000004A   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000004D   0x........         DC32 Variable_General_Purpose
+   \   00000051   0x06 0x02          DC8 6, 2, 1
+   \              0x01         
+   \   00000054   0x........         DC32 Variable_General_Flags
+   \   00000058   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   0000005B   0x........         DC32 Prefault_Id
+   \   0000005F   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000062   0x........         DC32 Fault_Id
+   \   00000066   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000069   0x........         DC32 System_State
+   \   0000006D   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000070   0x........         DC32 Wash_Probe_Value
+   \   00000074   0x01 0x0D          DC8 1, 13, 0
+   \              0x00         
+   \   00000077   0x........         DC32 Diverter_Position
+   \   0000007B   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000007E   0x........         DC32 Sanitization_Result
+   \   00000082   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000085   0x........         DC32 Pulse_Counter_Ref
+   \   00000089   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   0000008C   0x........         DC32 Water_Counter
+   \   00000090   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000093   0x........         DC32 Door_Status
+   \   00000097   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000009A   0x........         DC32 Water_Present
+   \   0000009E   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   000000A1   0x........         DC32 Liters_In_Tub
+   \   000000A5   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   000000A8   0x........         DC32 Liters_Current_Fill
+   \   000000AC   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   000000AF   0x........         DC32 H2O_Alarm
+   \   000000B3   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   000000B6   0x........         DC32 Previous_HHP_Door_Check
+   \   000000BA   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   000000BD   0x........         DC32 OWI_Analog
+   \   000000C1   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   000000C4   0x........         DC32 Positional_Loads_Status_Bitmap
+   \   000000C8   0x01 0x03          DC8 1, 3, 0
+   \              0x00         
+   \   000000CB   0x........         DC32 Rinse_Aid_Status
+   \   000000CF   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   000000D2   0x........         DC32 Soil_Measure_Recent
+   \   000000D6   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   000000D9   0x........         DC32 Soil_Measure_2
+   \   000000DD   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   000000E0   0x........         DC32 Soil_Measure_3
+   \   000000E4   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   000000E7   0x........         DC32 Soil_Measure_4
+   \   000000EB   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   000000EE   0x........         DC32 Soil_Measure_5
+   \   000000F2   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   000000F5   0x........         DC32 Soil_Measure_6
+   \   000000F9   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   000000FC   0x........         DC32 Soil_Measure_Difference_Recent
+   \   00000100   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   00000103   0x........         DC32 Soil_Measure_Difference_2
+   \   00000107   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   0000010A   0x........         DC32 Soil_Measure_Difference_3
+   \   0000010E   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   00000111   0x........         DC32 Estimated_Remaining_Time
+   \   00000115   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000118   0x........         DC32 Supervisor_Delay_Time_Remaining
+   \   0000011C   0x01 0x03          DC8 1, 3, 0
+   \              0x00         
+   \   0000011F   0x........         DC32 OWI_Calibration_Drive_Duty_Cycle
+   \   00000123   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   00000126   0x........         DC32 OWI_Status
+   \   0000012A   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   0000012D   0x........         DC32 SensedDrain_DrainConfirmed
+   \   00000131   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   00000134   0x........         DC32 Sensed_Drain_Status
+   \   00000138   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000013B   0x........         DC32 Soil_Level_1
+   \   0000013F   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   00000142   0x........         DC32 Soil_Level_2
+   \   00000146   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   00000149   0x........         DC32 Life_Test_Mode_Shortcut_Status
+   \   0000014D   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000150   0x........         DC32 Fill_Fault
+   \   00000154   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000157   0x........         DC32 OWICalibration_State
+   \   0000015B   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000015E   0x........         DC32 OWICalibration_Status
+   \   00000162   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000165   0x........         DC32 OWICalibration_Turbidity_Voltage_Reading
+   \   00000169   0x01 0x09          DC8 1, 9, 0
+   \              0x00         
+   \   0000016C   0x........         DC32 Phase_Repetitions
+   \   00000170   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   00000173   0x........         DC32 RinseAid_Dispenser_Use_Cnt
+   \   00000177   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   0000017A   0x........         DC32 Generic_Bitmap
+   \   0000017E   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000181   0x........         DC32 Fault_Status_Bitmap_0_15
+   \   00000185   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000188   0x........         DC32 Fault_Status_Bitmap_16_31
+   \   0000018C   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   0000018F   0x........         DC32 Loads_Bitmap_Status_16_31
+   \   00000193   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000196   0x........         DC32 Loads_Bitmap_Status_0_15
+   \   0000019A   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   0000019D   0x........         DC32 Do_Factory_Cycle
+   \   000001A1   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   000001A4   0x........         DC32 Fault_Status_Bitmap_32_47
+   \   000001A8   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   000001AB   0x........         DC32 HeaterShadowing_Status
+   \   000001AF   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   000001B2   0x........         DC32 Salt_Alarm_Led
+   \   000001B6   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   000001B9   0x........         DC32 RegenerateAndSaltBitmap
+   \   000001BD   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   000001C0   0x........         DC32 Vwi_Status
+   \   000001C4   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   000001C7   0x........         DC32 Model_Options
+   \   000001CB   0x0A 0x01          DC8 10, 1, 0
+   \              0x00         
+   \   000001CE   0x........         DC32 Fault_Status_Bitmap_48_63
+   \   000001D2   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   000001D5   0x........         DC32 Dish_General_Purpose_Variables
+   \   000001D9   0x02 0x02          DC8 2, 2, 1
+   \              0x01         
+   \   000001DC   0x........         DC32 SC_Subcycle_Execution_Counters
+   \   000001E0   0x05 0x01          DC8 5, 1, 0
+   \              0x00         
+   \   000001E3   0x........         DC32 Partial_Drain_Status
+   \   000001E7   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   000001EA   0x........         DC32 Fault_Status_Bitmap_64_79
+   \   000001EE   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   000001F1   0x........         DC32 HCD_Heater_Clicks
+   \   000001F5   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   000001F8   0x........         DC32 HCD_Calcification_Level
+   \   000001FC   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   000001FF   0x........         DC32 HCD_Bitmap
+   \   00000203   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   00000206   0x........         DC32 HCD_HMI_Data
+   \   0000020A   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000020D   0x........         DC32 HCD_HMI_Data + 1H
+   \   00000211   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000214   0x........         DC32 Liters_In_Water_Tank
+   \   00000218   0x01 0x02          DC8 1, 2, 1
+   \              0x01         
+   \   0000021B   0x........         DC32 Water_Tank_State
+   \   0000021F   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   00000222   0x........         DC32 Voltage_Range_Status
+   \   00000226   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000229   0x........         DC32 OWI_VRO_DutyCycle_Stable
+   \   0000022D   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000230   0x........         DC32 OWI_VRO_DutyCycle_Comp
+   \   00000234   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000237   0x........         DC32 OWI_VRO_OWI_Status
+   \   0000023B   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   0000023E   0x........         DC32 Stability_Control_Flags
+   \   00000242   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   00000245   0x........         DC32 Class_A_Fill_Bitmap
+   \   00000249   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   0000024C   0x........         DC32 Tank_State_Drain
+   \   00000250   0x01 0x01          DC8 1, 1, 1
+   \              0x01         
+   \   00000253   0x........         DC32 Tank_State_Fill
+   \   00000257   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000025A   0x........         DC32 Liters_In_Tub_Before_Fill
+   \   0000025E   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000261   0x........         DC32 Liters_In_Tank_Before_Fill
+   \   00000265   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000268   0x........         DC32 Liters_Unchecked
+   \   0000026C   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   0000026F   0x........         DC32 Liters_For_Tank_Full
+   \   00000273   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   00000276   0x........         DC32 Liters_For_Tank_Empty
+   \   0000027A   0x01 0x02          DC8 1, 2, 0
+   \              0x00         
+   \   0000027D   0x........         DC32 Power_Loss_Occurring
+   \   00000281   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000284   0x........         DC32 Cartridge_HMI_Data
+   \   00000288   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   0000028B   0x........         DC32 Cartridge_HMI_Data + 1H
+   \   0000028F   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000292   0x........         DC32 Enzime_Tag_Operating_Temperature
+   \   00000296   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   00000299   0x........         DC32 Bleach_Tag_Operating_Temperature
+   \   0000029D   0x01 0x01          DC8 1, 1, 0
+   \              0x00         
+   \   000002A0   0x........         DC32 RinseAid_Tag_Operating_Temperature
+   \   000002A4   0x01 0x01          DC8 1, 1, 0, 0
+   \              0x00 0x00    
+
+   \                                 In section .rodata, align 4, keep-with-next
+   \   static __absolute VARIABLE_TYPE const HMI_DATA_HOLDER[1]
+   \                     HMI_DATA_HOLDER:
+   \   00000000   0x00000000         DC32 0H
+   \   00000004   0x00 0x00          DC8 0, 0, 0, 0
+   \              0x00 0x00    
+     25          #endif
+     26          
+     27          #include "Log.h"
+     28          #if (VARIABLES_REGULATIONS_FEATURE == ENABLED)
+     29              #include "Regulations.h"
+     30          #endif
+     31          
+     32          #ifndef VISUAL_MACRO_VARIABLES_FEATURE
+     33              #define VISUAL_MACRO_VARIABLES_FEATURE DISABLED
+     34          #elif (VISUAL_MACRO_VARIABLES_FEATURE == ENABLED)
+     35              #include "HmiVariable.h"
+     36          #endif
+     37          
+     38          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     39          
+     40          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     41          //! Array of sizes for data types defined in C_Extensions.
+
+   \                                 In section .text, align 4, keep-with-next
+     42          uint8 const VARIABLE_SIZE[] =
+   \                     VARIABLE_SIZE:
+   \   00000000   0x01 0x01          DC8 1, 1, 2, 4, 8, 1, 2, 4, 8, 4, 8, 1, 1, 2, 0, 0
+   \              0x02 0x04    
+   \              0x08 0x01    
+   \              0x02 0x04    
+   \              0x08 0x04    
+   \              0x08 0x01    
+   \              0x01 0x02    
+   \              0x00 0x00    
+     43          {
+     44             1,          //!< DATATYPE_INVALID
+     45             1,          //!< DATATYPE_UINT8
+     46             2,          //!< DATATYPE_UINT16
+     47             4,          //!< DATATYPE_UINT32
+     48             8,          //!< DATATYPE_UINT64
+     49             1,          //!< DATATYPE_SINT8
+     50             2,          //!< DATATYPE_SINT16
+     51             4,          //!< DATATYPE_SINT32
+     52             8,          //!< DATATYPE_SINT64
+     53             4,          //!< DATATYPE_FLOAT32
+     54             8,          //!< DATATYPE_FLOAT64
+     55             1,          //!< DATATYPE_IS_ARRAY
+     56             1,          //!< DATATYPE_IS_REGULATION
+     57             2		   //!< DATATYPE_IS_Q15_CELSIUS
+     58          };
+     59          #if ((SYSTEM_ACU_HANDLING == ENABLED) || (SYSTEM_HMI_HANDLING == ENABLED))
+     60          	/**
+     61          	 * Defines how many different variables this module will manage.
+     62          	 */
+     63          	#define VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES   ELEMENTS_IN_ARRAY(ACU_DATA_HOLDER)
+     64              #define VARIABLE_MAX_NUMBER_OF_HMI_VARIABLES   ELEMENTS_IN_ARRAY(HMI_DATA_HOLDER)
+     65          
+     66          
+     67          	// The VARIABLE_NUM_ACU_VARIABLES is a define in Variables_prm.h which is public , required by API010PollVar
+     68          	CT_ASSERT (VARIABLE_NUM_ACU_VARIABLES == VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES);
+     69          	
+     70          	//There is a requirement to limit the number of fixed variables you can expose to 300.
+     71          	CT_ASSERT (VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES < 200);
+     72          #endif
+     73          // To warn and advice what to do.
+     74          // To assert that the Regulation HUB is index Zero on ACU_DATA_HOLDER.
+     75          // Define VARIABLE_REGULATION_HUB on Variable_prm.h and Regulation_Dummy shall be on the ACU_DATA_HOLDER position Zero.
+     76          CT_ASSERT(VARIABLE_REGULATION_HUB == 0);
+     77          
+     78          // Protecting the function calls when the board isn't a main HMI or ACU
+     79          #if ((SYSTEM_ACU_HANDLING != ENABLED) && (SYSTEM_HMI_HANDLING != ENABLED))
+     80          	BOOL_TYPE     Variable__GetByIndex(VARIABLE_ID_TYPE index, VARIABLE_TYPE *to_fill_up)
+     81          	{
+     82          		return FALSE;
+     83          	}
+     84          	BOOL_TYPE     Variable__GetValue(VARIABLE_ID_TYPE index, uint8 offset, sint32 *value)
+     85          	{
+     86          		return FALSE;
+     87          	}
+     88          	BOOL_TYPE     Variable__GetTranslatedValue(VARIABLE_ID_TYPE index, uint8 offset, sint32 *value)
+     89          	{
+     90          		return FALSE;
+     91          	}
+     92          	DATATYPE_TYPE Variable__GetTypeByIndex(VARIABLE_ID_TYPE index)
+     93          	{
+     94          		return DATATYPE_INVALID;
+     95          	}
+     96          	BOOL_TYPE	  Variable__SetValue(VARIABLE_SET_OPERATION_TYPE operation, VARIABLE_ID_TYPE index, uint8 offset, sint32 value)
+     97          	{
+     98          		return FALSE;
+     99          	}
+    100          #else
+    101          
+    102          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    103          static void SetVariableValue(VARIABLE_ID_TYPE index, uint8 offset, sint32 value);
+    104          static void SetVariableMathValue(VARIABLE_ID_TYPE index, uint8 offset, sint32 value, VARIABLE_SET_OPERATION_TYPE operation);
+    105          
+    106          static BOOL_TYPE ConvertToSint32(VARIABLE_ID_TYPE index, uint8 offset, sint32 *value);
+    107          #if(VARIABLES_HAVE_KVP_ID == ENABLED)
+    108          	static BOOL_TYPE GetVariablePositionByKVP(uint32 kvp_id, VARIABLE_ID_TYPE *index, uint8 *offset);
+    109          #endif
+    110          
+    111          //-------------------------------------- IDs FOR LOG messages----------------------------------------------------------
+    112          //! IDs FOR LOG messages
+    113          typedef enum
+    114          {
+    115          	BOUNDARY_CHECK_INDEX = 0,
+    116          	BOUNDARY_CHECK_OFFSET,
+    117          	BOUNDARY_1_CHECK_INDEX,
+    118          	INVALID_INDEX,
+    119          	INVALID_SETVARIABLE,
+    120          	REGULATION_ERROR,
+    121          	DATATYPE_ERROR,
+    122          	POINTER_1_NULL,
+    123          	POINTER_2_NULL,
+    124          	BOUNDARY_CHECK_FOR_ESTIMATE,
+    125          	OFFSET_CHECK_FOR_ESTIMATE,
+    126          	NULL_POINTER_FOR_ESTIMATE,
+    127          	NULL_POINTERS_ON_KVP,
+    128          	NOT_WRITABLE,
+    129          	ENCOUNTER_DIVIDE_BY_ZERO,
+    130          	INVALID_MATH_OPERATION,
+    131          	VARIABLES_FEATURE_DISABLED
+    132          } MODULE_VARIABLE_MESSAGE_ID_TYPE;
+    133          //! ID for this module on the Log module.
+    134          #define MODULE_NAME		MODULE_VARIABLE
+    135          //=====================================================================================================================
+    136          //-------------------------------------- Public Functions -------------------------------------------------------------
+    137          //=====================================================================================================================
+    138          
+    139          //---------------------------------------------------------------------------------------------------------------------
+    140          /**
+    141           * @brief Getter for the variable with the desired index.
+    142           * You must pass the reference for the structure where you want this function to load the information
+    143           * about the variable you want.
+    144           * It will return the Variable info using the index you pass as reference. It'll use offset equals zero.
+    145           * @param index			index that identifies the variable you want to get.
+    146           * @param to_fill_up	reference of the variable you want to fill up with the info.
+    147           * @return	TRUE means the parameters where loaded, FALSE otherwise.
+    148           */
+
+   \                                 In section .text, align 2, keep-with-next
+    149          BOOL_TYPE Variable__GetByIndex(VARIABLE_ID_TYPE index, VARIABLE_TYPE *to_fill_up)
+    150          {
+   \                     Variable__GetByIndex: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000B             MOVS     R3,R1
+    151          	BOOL_TYPE ret;
+    152          
+    153          	ret = FALSE;
+   \   00000006   0x2000             MOVS     R0,#+0
+    154          	if(to_fill_up != NULL)
+   \   00000008   0x2B00             CMP      R3,#+0
+   \   0000000A   0xD00A             BEQ      ??Variable__GetByIndex_0
+    155          	{
+    156          	    if(index < VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES)  //ACU variables
+   \   0000000C   0x2C61             CMP      R4,#+97
+   \   0000000E   0xD208             BCS      ??Variable__GetByIndex_0
+    157          	    {
+    158          	        memcpy(to_fill_up, &ACU_DATA_HOLDER[index], sizeof(VARIABLE_TYPE));
+   \   00000010   0x2207             MOVS     R2,#+7
+   \   00000012   0x....             LDR      R0,??DataTable7
+   \   00000014   0x00E1             LSLS     R1,R4,#+3
+   \   00000016   0x1B09             SUBS     R1,R1,R4
+   \   00000018   0x1841             ADDS     R1,R0,R1
+   \   0000001A   0x0018             MOVS     R0,R3
+   \   0000001C   0x.... 0x....      BL       __aeabi_memcpy
+    159          	        //
+    160          	        ret = TRUE;
+   \   00000020   0x2001             MOVS     R0,#+1
+    161          	    }
+    162              #if(HMI_VARIABLE_FEATURE == ENABLED)
+    163          	    else if((index > VARIABLE_INVALID_INDEX) && (index < VARIABLE_END_HMI_VARIABLES))  //HMI variables
+    164          	    {
+    165          	        memcpy(to_fill_up, &HMI_DATA_HOLDER[index- VARIABLE_HMI_START_INDEX], sizeof(VARIABLE_TYPE));
+    166          	        ret = TRUE;
+    167          	    }
+    168              #endif
+    169              #if(VISUAL_MACRO_VARIABLES_FEATURE == ENABLED)         //Visual macro variables
+    170          	    else if((index >= VARIABLE_HMI_RESERVED_INDEX) && (index < VARIABLE_INVALID_INDEX))
+    171          	    {
+    172          	        index -=(VARIABLE_ID_TYPE)VARIABLE_HMI_RESERVED_INDEX;
+    173          	        memcpy(to_fill_up, &VISUAL_MACRO_VARIABLES_DATA_HOLDER[index], sizeof(VARIABLE_TYPE));
+    174          	        ret = TRUE;
+    175          	    }
+    176              #endif
+    177          	}
+    178          	return (ret);
+   \                     ??Variable__GetByIndex_0: (+1)
+   \   00000022   0xBD10             POP      {R4,PC}          ;; return
+    179          }
+    180          
+    181          //---------------------------------------------------------------------------------------------------------------------
+    182          /**
+    183           * Getter that returns the value of a variable (no translation if the variable IS_REGULATION). Adding the Capability of navigating on arrays.
+    184           * @param index   Variable Index (to access ACU_DATA_HOLDER using the Variable module)
+    185           * @param offset  Variable Offset(to access ACU_DATA_HOLDER using the Variable module)
+    186           * @param pointer where the function will load the value converted to sint32.
+    187           * @return TRUE means all was okay. FALSE tells to look @ log data to identify the issue.
+    188           */
+
+   \                                 In section .text, align 2, keep-with-next
+    189          BOOL_TYPE Variable__GetValue(VARIABLE_ID_TYPE index, uint8 offset, sint32 *value)
+    190          {
+   \                     Variable__GetValue: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x000D             MOVS     R5,R1
+   \   00000004   0x0016             MOVS     R6,R2
+    191          	BOOL_TYPE result = FALSE;
+   \   00000006   0x2400             MOVS     R4,#+0
+    192          
+    193          	if(value == NULL)
+   \   00000008   0x2E00             CMP      R6,#+0
+   \   0000000A   0xD107             BNE      ??Variable__GetValue_0
+    194          	{
+    195          		LOG_ADD_EXCEPTION(POINTER_1_NULL, index);
+   \   0000000C   0x0003             MOVS     R3,R0
+   \   0000000E   0xB29B             UXTH     R3,R3
+   \   00000010   0x2201             MOVS     R2,#+1
+   \   00000012   0x2107             MOVS     R1,#+7
+   \   00000014   0x2062             MOVS     R0,#+98
+   \   00000016   0x.... 0x....      BL       Log__AddMessage
+   \   0000001A   0xE04B             B        ??Variable__GetValue_1
+    196          	}
+    197          	else
+    198          	{
+    199          	    if(index == VARIABLE_REGULATION_HUB)
+   \                     ??Variable__GetValue_0: (+1)
+   \   0000001C   0x0001             MOVS     R1,R0
+   \   0000001E   0xD10E             BNE      ??Variable__GetValue_2
+    200          	    {
+    201                  #if (VARIABLES_REGULATIONS_FEATURE == ENABLED)
+    202          	        uint8 aux = Regulations__GetIndexValueByPosition(offset);
+   \   00000020   0x0028             MOVS     R0,R5
+   \   00000022   0x.... 0x....      BL       Regulations__GetIndexValueByPosition
+    203          	        if( aux == REGULATION_INVALID)
+   \   00000026   0x28FF             CMP      R0,#+255
+   \   00000028   0xD106             BNE      ??Variable__GetValue_3
+    204          	        {
+    205          	            LOG_ADD_EXCEPTION(REGULATION_ERROR, offset);
+   \   0000002A   0x002B             MOVS     R3,R5
+   \   0000002C   0x2201             MOVS     R2,#+1
+   \   0000002E   0x2105             MOVS     R1,#+5
+   \   00000030   0x2062             MOVS     R0,#+98
+   \   00000032   0x.... 0x....      BL       Log__AddMessage
+   \   00000036   0xE03D             B        ??Variable__GetValue_1
+    206          	        }
+    207          	        else
+    208          	        {
+    209          	            *value = (sint32) aux;
+   \                     ??Variable__GetValue_3: (+1)
+   \   00000038   0x6030             STR      R0,[R6, #+0]
+    210          	            result = TRUE;
+   \   0000003A   0x2401             MOVS     R4,#+1
+   \   0000003C   0xE03A             B        ??Variable__GetValue_1
+    211          	        }
+    212                  #else
+    213          	        LOG_ADD_EXCEPTION(VARIABLES_FEATURE_DISABLED, index);
+    214                  #endif
+    215          	    }
+    216          	    else if(index < VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES)   //Index for an ACU variable   (0 - 251)
+   \                     ??Variable__GetValue_2: (+1)
+   \   0000003E   0x0002             MOVS     R2,R0
+   \   00000040   0x2A61             CMP      R2,#+97
+   \   00000042   0xD210             BCS      ??Variable__GetValue_4
+    217          	    {
+    218          	        if(offset < ACU_DATA_HOLDER[index].Length)          // the offset requested is valid *lesser than the array length.
+   \   00000044   0x002B             MOVS     R3,R5
+   \   00000046   0x....             LDR      R2,??DataTable7
+   \   00000048   0x00CF             LSLS     R7,R1,#+3
+   \   0000004A   0x1A79             SUBS     R1,R7,R1
+   \   0000004C   0x1851             ADDS     R1,R2,R1
+   \   0000004E   0x7909             LDRB     R1,[R1, #+4]
+   \   00000050   0x428B             CMP      R3,R1
+   \   00000052   0xD322             BCC      ??Variable__GetValue_5
+    219          	        {
+    220          	            result = ConvertToSint32(index, offset, value);
+    221          	        }
+    222          	        else
+    223          	        {
+    224          	            LOG_ADD_EXCEPTION(BOUNDARY_CHECK_OFFSET, (index << 8 | offset));
+    225          	        }
+    226          	    }
+    227          	    else if((index >= VARIABLE_HMI_TIME_ESTIMATION)&&(index < VARIABLE_INVALID_INDEX))  // (252 - 254)
+    228          	    {
+    229          	        #if(VISUAL_MACRO_VARIABLES_FEATURE == ENABLED)
+    230                          index -= (VARIABLE_ID_TYPE)VARIABLE_HMI_RESERVED_INDEX;
+    231                          result = HmiVariable__Get(index, offset, value);
+    232                      #else
+    233                          LOG_ADD_EXCEPTION(VARIABLES_FEATURE_DISABLED, index);
+    234                      #endif
+    235          	    }
+    236          	    else if((index > VARIABLE_INVALID_INDEX) && (index < VARIABLE_END_HMI_VARIABLES)) // (256 - 511)
+    237          	    {
+    238          	        if(offset < HMI_DATA_HOLDER[index - VARIABLE_HMI_START_INDEX].Length)          // the offset requested is valid *lesser than the array length.
+    239                      {
+    240                          result = ConvertToSint32(index, offset, value);
+    241                      }
+    242                      else
+    243                      {
+    244                          LOG_ADD_EXCEPTION(BOUNDARY_CHECK_OFFSET, (index << 8 | offset));
+   \                     ??Variable__GetValue_6: (+1)
+   \   00000054   0x0203             LSLS     R3,R0,#+8
+   \   00000056   0x432B             ORRS     R3,R3,R5
+   \   00000058   0xB29B             UXTH     R3,R3
+   \   0000005A   0x2201             MOVS     R2,#+1
+   \   0000005C   0x4611             MOV      R1,R2
+   \   0000005E   0x2062             MOVS     R0,#+98
+   \   00000060   0x.... 0x....      BL       Log__AddMessage
+   \   00000064   0xE026             B        ??Variable__GetValue_1
+    245                      }
+   \                     ??Variable__GetValue_4: (+1)
+   \   00000066   0x000B             MOVS     R3,R1
+   \   00000068   0x3BFC             SUBS     R3,R3,#+252
+   \   0000006A   0x2B03             CMP      R3,#+3
+   \   0000006C   0xD207             BCS      ??Variable__GetValue_7
+   \   0000006E   0x0003             MOVS     R3,R0
+   \   00000070   0xB29B             UXTH     R3,R3
+   \   00000072   0x2201             MOVS     R2,#+1
+   \   00000074   0x2110             MOVS     R1,#+16
+   \   00000076   0x2062             MOVS     R0,#+98
+   \   00000078   0x.... 0x....      BL       Log__AddMessage
+   \   0000007C   0xE01A             B        ??Variable__GetValue_1
+   \                     ??Variable__GetValue_7: (+1)
+   \   0000007E   0x2380             MOVS     R3,#+128
+   \   00000080   0x005B             LSLS     R3,R3,#+1        ;; #+256
+   \   00000082   0x4299             CMP      R1,R3
+   \   00000084   0xDB0F             BLT      ??Variable__GetValue_8
+   \   00000086   0xDA0E             BGE      ??Variable__GetValue_8
+   \   00000088   0x002B             MOVS     R3,R5
+   \   0000008A   0x....             LDR      R1,??DataTable7_1
+   \   0000008C   0x00D7             LSLS     R7,R2,#+3
+   \   0000008E   0x1ABA             SUBS     R2,R7,R2
+   \   00000090   0x1889             ADDS     R1,R1,R2
+   \   00000092   0x....             LDR      R2,??DataTable7_2  ;; 0xfffff904
+   \   00000094   0x5C89             LDRB     R1,[R1, R2]
+   \   00000096   0x428B             CMP      R3,R1
+   \   00000098   0xD2DC             BCS      ??Variable__GetValue_6
+   \                     ??Variable__GetValue_5: (+1)
+   \   0000009A   0x0032             MOVS     R2,R6
+   \   0000009C   0x0029             MOVS     R1,R5
+   \   0000009E   0x.... 0x....      BL       ConvertToSint32
+   \   000000A2   0x0004             MOVS     R4,R0
+   \   000000A4   0xE006             B        ??Variable__GetValue_1
+    246          	    }
+    247                  else                                               
+    248                  {
+    249                      LOG_ADD_EXCEPTION(BOUNDARY_CHECK_INDEX, index);
+   \                     ??Variable__GetValue_8: (+1)
+   \   000000A6   0x0003             MOVS     R3,R0
+   \   000000A8   0xB29B             UXTH     R3,R3
+   \   000000AA   0x2201             MOVS     R2,#+1
+   \   000000AC   0x4621             MOV      R1,R4
+   \   000000AE   0x2062             MOVS     R0,#+98
+   \   000000B0   0x.... 0x....      BL       Log__AddMessage
+    250                  }
+    251          	}
+    252          
+    253          	return result;
+   \                     ??Variable__GetValue_1: (+1)
+   \   000000B4   0x0020             MOVS     R0,R4
+   \   000000B6   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    254          }
+    255          /**
+    256           * Getter that returns the translated value (translated in case the variable type requires it) of a variable content. Adding the Capability of navigating on arrays.
+    257           * @param index		Variable Index (to access ACU_DATA_HOLDER using the Variable module)
+    258           * @param offset	Variable Offset(to access ACU_DATA_HOLDER using the Variable module)
+    259           * @param pointer where the function will load the value converted to sint32.
+    260           * @return TRUE means all was okay. FALSE tells to look @ log data to identify the issue.
+    261           */
+
+   \                                 In section .text, align 2, keep-with-next
+    262          BOOL_TYPE Variable__GetTranslatedValue (VARIABLE_ID_TYPE index, uint8 offset, sint32 *value)
+    263          {
+   \                     Variable__GetTranslatedValue: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0015             MOVS     R5,R2
+    264          	BOOL_TYPE result;
+    265          
+    266          	result = FALSE;
+   \   00000004   0x2400             MOVS     R4,#+0
+    267          #if (VARIABLES_REGULATIONS_FEATURE == ENABLED)
+    268          	if(value != NULL)
+   \   00000006   0x2D00             CMP      R5,#+0
+   \   00000008   0xD01C             BEQ      ??Variable__GetTranslatedValue_0
+    269          	{
+    270          		// If the index is valid we check for Regulation translation or the raw value.
+    271          		if((index < VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES)||((index < VARIABLE_END_HMI_VARIABLES) && (index > VARIABLE_INVALID_INDEX)))
+   \   0000000A   0x2861             CMP      R0,#+97
+   \   0000000C   0xD305             BCC      ??Variable__GetTranslatedValue_1
+   \   0000000E   0x0002             MOVS     R2,R0
+   \   00000010   0x2380             MOVS     R3,#+128
+   \   00000012   0x005B             LSLS     R3,R3,#+1        ;; #+256
+   \   00000014   0x429A             CMP      R2,R3
+   \   00000016   0xDA0D             BGE      ??Variable__GetTranslatedValue_2
+   \   00000018   0xDB0C             BLT      ??Variable__GetTranslatedValue_2
+    272          		{
+    273          			// If the type is DATATYPE_IS_REGULATION, we solve using Regulation module...otherwise we get the raw.
+    274          			if(index == VARIABLE_REGULATION_HUB)
+   \                     ??Variable__GetTranslatedValue_1: (+1)
+   \   0000001A   0x0002             MOVS     R2,R0
+   \   0000001C   0xD105             BNE      ??Variable__GetTranslatedValue_3
+    275          			{
+    276          				*value = Regulations__GetMainValueByPosition(offset);
+   \   0000001E   0x0008             MOVS     R0,R1
+   \   00000020   0x.... 0x....      BL       Regulations__GetMainValueByPosition
+   \   00000024   0x6028             STR      R0,[R5, #+0]
+    277          				result = TRUE;
+   \   00000026   0x2401             MOVS     R4,#+1
+   \   00000028   0xE013             B        ??Variable__GetTranslatedValue_4
+    278          			}
+    279          			else
+    280          			{
+    281          				result = Variable__GetValue(index, offset, value);
+   \                     ??Variable__GetTranslatedValue_3: (+1)
+   \   0000002A   0x002A             MOVS     R2,R5
+   \   0000002C   0x.... 0x....      BL       Variable__GetValue
+   \   00000030   0x0004             MOVS     R4,R0
+   \   00000032   0xE00E             B        ??Variable__GetTranslatedValue_4
+    282          			}
+    283          		}
+    284          		else
+    285          		{
+    286          			LOG_ADD_EXCEPTION(BOUNDARY_1_CHECK_INDEX, index);
+   \                     ??Variable__GetTranslatedValue_2: (+1)
+   \   00000034   0x0003             MOVS     R3,R0
+   \   00000036   0xB29B             UXTH     R3,R3
+   \   00000038   0x2201             MOVS     R2,#+1
+   \   0000003A   0x2102             MOVS     R1,#+2
+   \   0000003C   0x2062             MOVS     R0,#+98
+   \   0000003E   0x.... 0x....      BL       Log__AddMessage
+   \   00000042   0xE006             B        ??Variable__GetTranslatedValue_4
+    287          		}
+    288          	}
+    289          	else
+    290          	{
+    291          		LOG_ADD_EXCEPTION(POINTER_2_NULL, index);
+   \                     ??Variable__GetTranslatedValue_0: (+1)
+   \   00000044   0x0003             MOVS     R3,R0
+   \   00000046   0xB29B             UXTH     R3,R3
+   \   00000048   0x2201             MOVS     R2,#+1
+   \   0000004A   0x2108             MOVS     R1,#+8
+   \   0000004C   0x2062             MOVS     R0,#+98
+   \   0000004E   0x.... 0x....      BL       Log__AddMessage
+    292          	}
+    293          #else
+    294          	LOG_ADD_EXCEPTION(VARIABLES_FEATURE_DISABLED, index);
+    295          #endif
+    296          	return result;
+   \                     ??Variable__GetTranslatedValue_4: (+1)
+   \   00000052   0x0020             MOVS     R0,R4
+   \   00000054   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+    297          }
+    298          /**
+    299           * Getter to the type of a variable by index.
+    300           * @param index	to one line on the ACU_DATA_HOLDER array.
+    301           * @return	type of the variable on ACU_DATA_HOLDER.
+    302           */
+
+   \                                 In section .text, align 2, keep-with-next
+    303          DATATYPE_TYPE Variable__GetTypeByIndex  (VARIABLE_ID_TYPE index)
+    304          {
+    305          	DATATYPE_TYPE result;
+    306          
+    307          	result = DATATYPE_INVALID;
+    308          
+    309          	if(index < VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES)
+   \                     Variable__GetTypeByIndex: (+1)
+   \   00000000   0x2861             CMP      R0,#+97
+   \   00000002   0xD205             BCS      ??Variable__GetTypeByIndex_0
+    310          	{
+    311          		return ACU_DATA_HOLDER[index].Type;
+   \   00000004   0x....             LDR      R1,??DataTable7
+   \   00000006   0x00C2             LSLS     R2,R0,#+3
+   \   00000008   0x1A10             SUBS     R0,R2,R0
+   \   0000000A   0x1808             ADDS     R0,R1,R0
+   \   0000000C   0x7940             LDRB     R0,[R0, #+5]
+   \   0000000E   0x4770             BX       LR
+    312          	}
+    313          #if(HMI_VARIABLE_FEATURE == ENABLED)
+    314          	else if((index > VARIABLE_INVALID_INDEX) && (index < VARIABLE_END_HMI_VARIABLES))
+    315          	{
+    316          	    return HMI_DATA_HOLDER[index- VARIABLE_HMI_START_INDEX].Type;
+    317          	}
+    318          #endif
+    319          #if(VISUAL_MACRO_VARIABLES_FEATURE == ENABLED)
+    320              else if((index >= VARIABLE_HMI_RESERVED_INDEX) && (index < VARIABLE_INVALID_INDEX))
+    321              {
+    322                  index -= (VARIABLE_ID_TYPE)VARIABLE_HMI_RESERVED_INDEX;
+    323                  return VISUAL_MACRO_VARIABLES_DATA_HOLDER[index].Type;
+    324              }
+    325          #endif
+    326          	return result;
+   \                     ??Variable__GetTypeByIndex_0: (+1)
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x4770             BX       LR               ;; return
+    327          }
+    328          /**
+    329           * It performs a simple value attribution Variable = Operand.
+    330           * Does not accept writing on Regulations (VARIABLE_REGULATION_HUB).
+    331           * @param operation Info to the operation to be performed.
+    332           * @param index		Variable Index (to access ACU_DATA_HOLDER using the Variable module)
+    333           * @param offset	Variable Offset(to access ACU_DATA_HOLDER using the Variable module)
+    334           * @param value		Depending on the operation it can be a value to use on a math or a position to set or clear a bit.
+    335           * @return	FALSE if index is not pointing to any variable, if offset is also wrong or operation is invalid or not accepted.
+    336           */
+
+   \                                 In section .text, align 4, keep-with-next
+    337          BOOL_TYPE Variable__SetValue (VARIABLE_SET_OPERATION_TYPE operation, VARIABLE_ID_TYPE index, uint8 offset, sint32 value)
+    338          {
+   \                     Variable__SetValue: (+1)
+   \   00000000   0xB5F1             PUSH     {R0,R4-R7,LR}
+   \   00000002   0xB082             SUB      SP,SP,#+8
+   \   00000004   0x0008             MOVS     R0,R1
+   \   00000006   0x0014             MOVS     R4,R2
+   \   00000008   0x001D             MOVS     R5,R3
+    339          	BOOL_TYPE result;
+    340          
+    341          	result = TRUE;
+   \   0000000A   0x2601             MOVS     R6,#+1
+   \   0000000C   0x0031             MOVS     R1,R6
+   \   0000000E   0x466A             MOV      R2,SP
+   \   00000010   0x7111             STRB     R1,[R2, #+4]
+    342          
+    343          	if((index == VARIABLE_REGULATION_HUB) || (operation >= VARIABLE_OPERATION_COUNT))
+   \   00000012   0x0001             MOVS     R1,R0
+   \   00000014   0xD024             BEQ      ??Variable__SetValue_1
+   \   00000016   0x4669             MOV      R1,SP
+   \   00000018   0x7A09             LDRB     R1,[R1, #+8]
+   \   0000001A   0x2909             CMP      R1,#+9
+   \   0000001C   0xDA20             BGE      ??Variable__SetValue_1
+    344          	{
+    345          		LOG_ADD_EXCEPTION(INVALID_INDEX, (operation << 16 | index << 8 | offset));
+    346          		result = FALSE;
+    347          	}
+    348          #if(VISUAL_MACRO_VARIABLES_FEATURE == ENABLED)
+    349          	else if((index >= VARIABLE_HMI_RESERVED_INDEX) && (index < VARIABLE_INVALID_INDEX)) //HMI variable Index
+    350          	{
+    351          	    index -= (VARIABLE_ID_TYPE)VARIABLE_HMI_RESERVED_INDEX;
+    352          	    result = HmiVariable__Set(index,offset,value);
+    353          	}
+    354          #endif
+    355          	else if ((index >= VARIABLE_END_HMI_VARIABLES) ||
+    356          	        ((index >= VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES) &&
+    357          	            (index <= VARIABLE_INVALID_INDEX)))
+   \   0000001E   0x0001             MOVS     R1,R0
+   \   00000020   0x29FF             CMP      R1,#+255
+   \   00000022   0xDC1D             BGT      ??Variable__SetValue_1
+   \   00000024   0x0002             MOVS     R2,R0
+   \   00000026   0x2A61             CMP      R2,#+97
+   \   00000028   0xD301             BCC      ??Variable__SetValue_2
+   \   0000002A   0x29FF             CMP      R1,#+255
+   \   0000002C   0xDD18             BLE      ??Variable__SetValue_1
+    358          	{
+    359                  LOG_ADD_EXCEPTION(INVALID_INDEX, (operation << 16 | index << 8 | offset));
+    360                  result = FALSE;
+    361              }
+    362              else if ((index < VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES) &&
+    363                  (offset >= ACU_DATA_HOLDER[index].Length))
+   \                     ??Variable__SetValue_2: (+1)
+   \   0000002E   0x2A61             CMP      R2,#+97
+   \   00000030   0xD209             BCS      ??Variable__SetValue_3
+   \   00000032   0x0027             MOVS     R7,R4
+   \   00000034   0x46BC             MOV      R12,R7
+   \   00000036   0x....             LDR      R7,??SetVariableValue_0
+   \   00000038   0x00CB             LSLS     R3,R1,#+3
+   \   0000003A   0x1A5B             SUBS     R3,R3,R1
+   \   0000003C   0x18FB             ADDS     R3,R7,R3
+   \   0000003E   0x791B             LDRB     R3,[R3, #+4]
+   \   00000040   0x4667             MOV      R7,R12
+   \   00000042   0x429F             CMP      R7,R3
+   \   00000044   0xD20C             BCS      ??Variable__SetValue_1
+    364              {
+    365                  LOG_ADD_EXCEPTION(INVALID_INDEX, (operation << 16 | index << 8 | offset));
+    366                  result = FALSE;
+    367              }
+    368              else if ((index >= VARIABLE_HMI_START_INDEX) &&
+    369                  (offset >= HMI_DATA_HOLDER[index - VARIABLE_HMI_START_INDEX].Length))
+   \                     ??Variable__SetValue_3: (+1)
+   \   00000046   0x2AFF             CMP      R2,#+255
+   \   00000048   0xD916             BLS      ??Variable__SetValue_4
+   \   0000004A   0x0027             MOVS     R7,R4
+   \   0000004C   0x46BC             MOV      R12,R7
+   \   0000004E   0x....             LDR      R7,??DataTable8
+   \   00000050   0x00D3             LSLS     R3,R2,#+3
+   \   00000052   0x1A9B             SUBS     R3,R3,R2
+   \   00000054   0x18FF             ADDS     R7,R7,R3
+   \   00000056   0x....             LDR      R3,??DataTable8_1  ;; 0xfffff904
+   \   00000058   0x5CFB             LDRB     R3,[R7, R3]
+   \   0000005A   0x4667             MOV      R7,R12
+   \   0000005C   0x429F             CMP      R7,R3
+   \   0000005E   0xD30B             BCC      ??Variable__SetValue_4
+    370              {
+    371                  LOG_ADD_EXCEPTION(INVALID_INDEX, (operation << 16 | index << 8 | offset));
+   \                     ??Variable__SetValue_1: (+1)
+   \   00000060   0x0203             LSLS     R3,R0,#+8
+   \   00000062   0x4323             ORRS     R3,R3,R4
+   \   00000064   0xB29B             UXTH     R3,R3
+   \   00000066   0x4632             MOV      R2,R6
+   \   00000068   0x2103             MOVS     R1,#+3
+   \   0000006A   0x2062             MOVS     R0,#+98
+   \   0000006C   0x.... 0x....      BL       Log__AddMessage
+    372                  result = FALSE;
+   \   00000070   0x2000             MOVS     R0,#+0
+   \   00000072   0x4669             MOV      R1,SP
+   \   00000074   0x7108             STRB     R0,[R1, #+4]
+   \   00000076   0xE148             B        ??Variable__SetValue_5
+    373              }
+    374              else if((index < VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES) &&
+    375                  (ACU_DATA_HOLDER[index].Is_Writable == FALSE))
+   \                     ??Variable__SetValue_4: (+1)
+   \   00000078   0x2A61             CMP      R2,#+97
+   \   0000007A   0xD206             BCS      ??Variable__SetValue_6
+   \   0000007C   0x....             LDR      R3,??SetVariableValue_0
+   \   0000007E   0x00CF             LSLS     R7,R1,#+3
+   \   00000080   0x1A7F             SUBS     R7,R7,R1
+   \   00000082   0x19DB             ADDS     R3,R3,R7
+   \   00000084   0x799B             LDRB     R3,[R3, #+6]
+   \   00000086   0x2B00             CMP      R3,#+0
+   \   00000088   0xD00A             BEQ      ??Variable__SetValue_7
+    376              {
+    377                  LOG_ADD_EXCEPTION(NOT_WRITABLE, (index << 8 | offset));
+    378                  result = FALSE;
+    379              }
+    380              else if ((index >= VARIABLE_HMI_START_INDEX) &&
+    381                  (HMI_DATA_HOLDER[index - VARIABLE_HMI_START_INDEX].Is_Writable == FALSE))
+   \                     ??Variable__SetValue_6: (+1)
+   \   0000008A   0x2AFF             CMP      R2,#+255
+   \   0000008C   0xD914             BLS      ??Variable__SetValue_8
+   \   0000008E   0x....             LDR      R3,??DataTable8
+   \   00000090   0x00D7             LSLS     R7,R2,#+3
+   \   00000092   0x1ABF             SUBS     R7,R7,R2
+   \   00000094   0x19DB             ADDS     R3,R3,R7
+   \   00000096   0x....             LDR      R7,??DataTable8_1  ;; 0xfffff904
+   \   00000098   0x19DB             ADDS     R3,R3,R7
+   \   0000009A   0x789B             LDRB     R3,[R3, #+2]
+   \   0000009C   0x2B00             CMP      R3,#+0
+   \   0000009E   0xD10B             BNE      ??Variable__SetValue_8
+    382               {
+    383                  LOG_ADD_EXCEPTION(NOT_WRITABLE, (index << 8 | offset));
+   \                     ??Variable__SetValue_7: (+1)
+   \   000000A0   0x0203             LSLS     R3,R0,#+8
+   \   000000A2   0x4323             ORRS     R3,R3,R4
+   \   000000A4   0xB29B             UXTH     R3,R3
+   \   000000A6   0x4632             MOV      R2,R6
+   \   000000A8   0x210D             MOVS     R1,#+13
+   \   000000AA   0x2062             MOVS     R0,#+98
+   \   000000AC   0x.... 0x....      BL       Log__AddMessage
+    384                  result = FALSE;
+   \   000000B0   0x2000             MOVS     R0,#+0
+   \   000000B2   0x4669             MOV      R1,SP
+   \   000000B4   0x7108             STRB     R0,[R1, #+4]
+   \   000000B6   0xE128             B        ??Variable__SetValue_5
+    385               }
+    386          
+    387          	else                                                                                //ACU variable index
+    388          	{
+    389          		switch(operation)
+   \                     ??Variable__SetValue_8: (+1)
+   \   000000B8   0x466B             MOV      R3,SP
+   \   000000BA   0x7A1B             LDRB     R3,[R3, #+8]
+   \   000000BC   0x2B08             CMP      R3,#+8
+   \   000000BE   0xD900             BLS      .+4
+   \   000000C0   0xE120             B        ??Variable__SetValue_9
+   \   000000C2   0xA702             ADR      R7,??Variable__SetValue_0
+   \   000000C4   0x005B             LSLS     R3,R3,#+1
+   \   000000C6   0x5AFF             LDRH     R7,[R7, R3]
+   \   000000C8   0x44BF             ADD      PC,PC,R7
+   \   000000CA   0xBF00             Nop      
+   \                     ??Variable__SetValue_0:
+   \   000000CC   0x0012 0x001C      DC16     0x12,0x1C,0x28,0x34
+   \              0x0028 0x0034
+   \   000000D4   0x0040 0x004C      DC16     0x40,0x4C,0x138,0x220
+   \              0x0138 0x0220
+   \   000000DC   0x022C             DC16     0x22C
+    390          		{
+    391          			case VARIABLE_OPERATION_SET 		:
+    392          				SetVariableValue(index, offset, value);
+   \                     ??Variable__SetValue_10: (+1)
+   \   000000DE   0x002A             MOVS     R2,R5
+   \   000000E0   0x0021             MOVS     R1,R4
+   \   000000E2   0x.... 0x....      BL       SetVariableValue
+    393          				break;
+   \   000000E6   0xE110             B        ??Variable__SetValue_5
+    394          			case VARIABLE_OPERATION_ADD			:
+    395          			    SetVariableMathValue(index, offset, value, VARIABLE_OPERATION_ADD);
+   \                     ??Variable__SetValue_11: (+1)
+   \   000000E8   0x4633             MOV      R3,R6
+   \   000000EA   0x002A             MOVS     R2,R5
+   \   000000EC   0x0021             MOVS     R1,R4
+   \   000000EE   0x.... 0x....      BL       SetVariableMathValue
+    396          				break;
+   \   000000F2   0xE10A             B        ??Variable__SetValue_5
+    397          			case VARIABLE_OPERATION_SUBTRACT	:
+    398                          SetVariableMathValue(index, offset, value, VARIABLE_OPERATION_SUBTRACT);
+   \                     ??Variable__SetValue_12: (+1)
+   \   000000F4   0x2302             MOVS     R3,#+2
+   \   000000F6   0x002A             MOVS     R2,R5
+   \   000000F8   0x0021             MOVS     R1,R4
+   \   000000FA   0x.... 0x....      BL       SetVariableMathValue
+    399          				break;
+   \   000000FE   0xE104             B        ??Variable__SetValue_5
+    400          			case VARIABLE_OPERATION_INCREMET	:
+    401          			    SetVariableMathValue(index, offset, 1, VARIABLE_OPERATION_ADD);
+   \                     ??Variable__SetValue_13: (+1)
+   \   00000100   0x4633             MOV      R3,R6
+   \   00000102   0x461A             MOV      R2,R3
+   \   00000104   0x0021             MOVS     R1,R4
+   \   00000106   0x.... 0x....      BL       SetVariableMathValue
+    402          				break;
+   \   0000010A   0xE0FE             B        ??Variable__SetValue_5
+    403          			case VARIABLE_OPERATION_DECREMENT	:
+    404          			    SetVariableMathValue(index, offset, 1, VARIABLE_OPERATION_SUBTRACT);
+   \                     ??Variable__SetValue_14: (+1)
+   \   0000010C   0x2302             MOVS     R3,#+2
+   \   0000010E   0x4632             MOV      R2,R6
+   \   00000110   0x0021             MOVS     R1,R4
+   \   00000112   0x.... 0x....      BL       SetVariableMathValue
+    405          				break;
+   \   00000116   0xE0F8             B        ??Variable__SetValue_5
+    406          			case VARIABLE_OPERATION_BIT_SET		:
+    407          			    if(index < VARIABLE_NUM_ACU_VARIABLES)
+   \                     ??Variable__SetValue_15: (+1)
+   \   00000118   0x2961             CMP      R1,#+97
+   \   0000011A   0xDA35             BGE      ??Variable__SetValue_16
+    408          			    {
+    409                              switch (ACU_DATA_HOLDER[index].Type)
+   \   0000011C   0x....             LDR      R0,??SetVariableValue_0
+   \   0000011E   0x00CA             LSLS     R2,R1,#+3
+   \   00000120   0x1A51             SUBS     R1,R2,R1
+   \   00000122   0x1847             ADDS     R7,R0,R1
+   \   00000124   0x7978             LDRB     R0,[R7, #+5]
+   \   00000126   0x2801             CMP      R0,#+1
+   \   00000128   0xD021             BEQ      ??Variable__SetValue_17
+   \   0000012A   0xD200             BCS      .+4
+   \   0000012C   0xE0EA             B        ??Variable__SetValue_9
+   \   0000012E   0x2803             CMP      R0,#+3
+   \   00000130   0xD001             BEQ      ??Variable__SetValue_18
+   \   00000132   0xD30E             BCC      ??Variable__SetValue_19
+   \   00000134   0xE0E6             B        ??Variable__SetValue_9
+    410                              {
+    411                                  case DATATYPE_UINT32:
+    412                                      BIT_SET(((uint32*)ACU_DATA_HOLDER[index].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_18: (+1)
+   \   00000136   0x0038             MOVS     R0,R7
+   \   00000138   0x.... 0x....      BL       __aeabi_uread4
+   \   0000013C   0x9000             STR      R0,[SP, #+0]
+   \   0000013E   0x0038             MOVS     R0,R7
+   \   00000140   0x.... 0x....      BL       __aeabi_uread4
+   \   00000144   0x00A1             LSLS     R1,R4,#+2
+   \   00000146   0x5840             LDR      R0,[R0, R1]
+   \   00000148   0x40AE             LSLS     R6,R6,R5
+   \   0000014A   0x4306             ORRS     R6,R6,R0
+   \   0000014C   0x9800             LDR      R0,[SP, #+0]
+   \   0000014E   0x5046             STR      R6,[R0, R1]
+    413                                      break;
+   \   00000150   0xE0DB             B        ??Variable__SetValue_5
+    414                                  case DATATYPE_UINT16:
+    415                                      BIT_SET16(((uint16*)ACU_DATA_HOLDER[index].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_19: (+1)
+   \   00000152   0x0038             MOVS     R0,R7
+   \   00000154   0x.... 0x....      BL       __aeabi_uread4
+   \   00000158   0x9000             STR      R0,[SP, #+0]
+   \   0000015A   0x0038             MOVS     R0,R7
+   \   0000015C   0x.... 0x....      BL       __aeabi_uread4
+   \   00000160   0x0061             LSLS     R1,R4,#+1
+   \   00000162   0x5A40             LDRH     R0,[R0, R1]
+   \   00000164   0x40AE             LSLS     R6,R6,R5
+   \   00000166   0x4306             ORRS     R6,R6,R0
+   \   00000168   0x9800             LDR      R0,[SP, #+0]
+   \   0000016A   0x5246             STRH     R6,[R0, R1]
+    416                                      break;
+   \   0000016C   0xE0CD             B        ??Variable__SetValue_5
+    417                                  case DATATYPE_UINT8:
+    418                                      BIT_SET8(((uint8*)ACU_DATA_HOLDER[index].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_17: (+1)
+   \   0000016E   0x0038             MOVS     R0,R7
+   \   00000170   0x.... 0x....      BL       __aeabi_uread4
+   \   00000174   0x9000             STR      R0,[SP, #+0]
+   \   00000176   0x0038             MOVS     R0,R7
+   \   00000178   0x.... 0x....      BL       __aeabi_uread4
+   \   0000017C   0x5D00             LDRB     R0,[R0, R4]
+   \   0000017E   0x40AE             LSLS     R6,R6,R5
+   \   00000180   0x4306             ORRS     R6,R6,R0
+   \   00000182   0x9800             LDR      R0,[SP, #+0]
+   \   00000184   0x5506             STRB     R6,[R0, R4]
+    419                                      break;
+   \   00000186   0xE0C0             B        ??Variable__SetValue_5
+    420                                  default:
+    421                                      result = FALSE;
+    422                                      break;
+    423                              }
+    424          			    }
+    425          			    else
+    426          			    {
+    427          			        switch (HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Type)
+   \                     ??Variable__SetValue_16: (+1)
+   \   00000188   0x....             LDR      R0,??DataTable8
+   \   0000018A   0x00D1             LSLS     R1,R2,#+3
+   \   0000018C   0x1A89             SUBS     R1,R1,R2
+   \   0000018E   0x1840             ADDS     R0,R0,R1
+   \   00000190   0x....             LDR      R1,??DataTable8_1  ;; 0xfffff904
+   \   00000192   0x1841             ADDS     R1,R0,R1
+   \   00000194   0x7849             LDRB     R1,[R1, #+1]
+   \   00000196   0x2901             CMP      R1,#+1
+   \   00000198   0xD025             BEQ      ??Variable__SetValue_20
+   \   0000019A   0xD200             BCS      .+4
+   \   0000019C   0xE0B2             B        ??Variable__SetValue_9
+   \   0000019E   0x2903             CMP      R1,#+3
+   \   000001A0   0xD001             BEQ      ??Variable__SetValue_21
+   \   000001A2   0xD310             BCC      ??Variable__SetValue_22
+   \   000001A4   0xE0AE             B        ??Variable__SetValue_9
+    428                              {
+    429                                  case DATATYPE_UINT32:
+    430                                      BIT_SET(((uint32*)HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_21: (+1)
+   \   000001A6   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   000001A8   0x1847             ADDS     R7,R0,R1
+   \   000001AA   0x0038             MOVS     R0,R7
+   \   000001AC   0x.... 0x....      BL       __aeabi_uread4
+   \   000001B0   0x9000             STR      R0,[SP, #+0]
+   \   000001B2   0x0038             MOVS     R0,R7
+   \   000001B4   0x.... 0x....      BL       __aeabi_uread4
+   \   000001B8   0x00A1             LSLS     R1,R4,#+2
+   \   000001BA   0x5840             LDR      R0,[R0, R1]
+   \   000001BC   0x40AE             LSLS     R6,R6,R5
+   \   000001BE   0x4306             ORRS     R6,R6,R0
+   \   000001C0   0x9800             LDR      R0,[SP, #+0]
+   \   000001C2   0x5046             STR      R6,[R0, R1]
+    431                                      break;
+   \   000001C4   0xE0A1             B        ??Variable__SetValue_5
+    432                                  case DATATYPE_UINT16:
+    433                                      BIT_SET16(((uint16*)HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_22: (+1)
+   \   000001C6   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   000001C8   0x1847             ADDS     R7,R0,R1
+   \   000001CA   0x0038             MOVS     R0,R7
+   \   000001CC   0x.... 0x....      BL       __aeabi_uread4
+   \   000001D0   0x9000             STR      R0,[SP, #+0]
+   \   000001D2   0x0038             MOVS     R0,R7
+   \   000001D4   0x.... 0x....      BL       __aeabi_uread4
+   \   000001D8   0x0061             LSLS     R1,R4,#+1
+   \   000001DA   0x5A40             LDRH     R0,[R0, R1]
+   \   000001DC   0x40AE             LSLS     R6,R6,R5
+   \   000001DE   0x4306             ORRS     R6,R6,R0
+   \   000001E0   0x9800             LDR      R0,[SP, #+0]
+   \   000001E2   0x5246             STRH     R6,[R0, R1]
+    434                                      break;
+   \   000001E4   0xE091             B        ??Variable__SetValue_5
+    435                                  case DATATYPE_UINT8:
+    436                                      BIT_SET8(((uint8*)HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_20: (+1)
+   \   000001E6   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   000001E8   0x1847             ADDS     R7,R0,R1
+   \   000001EA   0x0038             MOVS     R0,R7
+   \   000001EC   0x.... 0x....      BL       __aeabi_uread4
+   \   000001F0   0x9000             STR      R0,[SP, #+0]
+   \   000001F2   0x0038             MOVS     R0,R7
+   \   000001F4   0x.... 0x....      BL       __aeabi_uread4
+   \   000001F8   0x5D00             LDRB     R0,[R0, R4]
+   \   000001FA   0x40AE             LSLS     R6,R6,R5
+   \   000001FC   0x4306             ORRS     R6,R6,R0
+   \   000001FE   0x9800             LDR      R0,[SP, #+0]
+   \   00000200   0x5506             STRB     R6,[R0, R4]
+    437                                      break;
+   \   00000202   0xE082             B        ??Variable__SetValue_5
+    438                                  default:
+    439                                      result = FALSE;
+    440                                      break;
+    441                              }
+    442          			    }
+    443          				break;
+    444          			case VARIABLE_OPERATION_BIT_CLEAR	:
+    445          			    if(index < VARIABLE_NUM_ACU_VARIABLES)
+   \                     ??Variable__SetValue_23: (+1)
+   \   00000204   0x2961             CMP      R1,#+97
+   \   00000206   0xDA34             BGE      ??Variable__SetValue_24
+    446          			    {
+    447                              switch (ACU_DATA_HOLDER[index].Type)
+   \   00000208   0x....             LDR      R0,??SetVariableValue_0
+   \   0000020A   0x00CA             LSLS     R2,R1,#+3
+   \   0000020C   0x1A51             SUBS     R1,R2,R1
+   \   0000020E   0x1847             ADDS     R7,R0,R1
+   \   00000210   0x7978             LDRB     R0,[R7, #+5]
+   \   00000212   0x2801             CMP      R0,#+1
+   \   00000214   0xD020             BEQ      ??Variable__SetValue_25
+   \   00000216   0xD375             BCC      ??Variable__SetValue_9
+   \   00000218   0x2803             CMP      R0,#+3
+   \   0000021A   0xD001             BEQ      ??Variable__SetValue_26
+   \   0000021C   0xD30E             BCC      ??Variable__SetValue_27
+   \   0000021E   0xE071             B        ??Variable__SetValue_9
+    448                              {
+    449                                  case DATATYPE_UINT32:
+    450                                      BIT_CLR(((uint32*)ACU_DATA_HOLDER[index].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_26: (+1)
+   \   00000220   0x0038             MOVS     R0,R7
+   \   00000222   0x.... 0x....      BL       __aeabi_uread4
+   \   00000226   0x9000             STR      R0,[SP, #+0]
+   \   00000228   0x0038             MOVS     R0,R7
+   \   0000022A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000022E   0x00A1             LSLS     R1,R4,#+2
+   \   00000230   0x5840             LDR      R0,[R0, R1]
+   \   00000232   0x40AE             LSLS     R6,R6,R5
+   \   00000234   0x43B0             BICS     R0,R0,R6
+   \   00000236   0x9A00             LDR      R2,[SP, #+0]
+   \   00000238   0x5050             STR      R0,[R2, R1]
+    451                                      break;
+   \   0000023A   0xE066             B        ??Variable__SetValue_5
+    452                                  case DATATYPE_UINT16:
+    453                                      BIT_CLR16(((uint16*)ACU_DATA_HOLDER[index].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_27: (+1)
+   \   0000023C   0x0038             MOVS     R0,R7
+   \   0000023E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000242   0x9000             STR      R0,[SP, #+0]
+   \   00000244   0x0038             MOVS     R0,R7
+   \   00000246   0x.... 0x....      BL       __aeabi_uread4
+   \   0000024A   0x0061             LSLS     R1,R4,#+1
+   \   0000024C   0x5A40             LDRH     R0,[R0, R1]
+   \   0000024E   0x40AE             LSLS     R6,R6,R5
+   \   00000250   0x43B0             BICS     R0,R0,R6
+   \   00000252   0x9A00             LDR      R2,[SP, #+0]
+   \   00000254   0x5250             STRH     R0,[R2, R1]
+    454                                      break;
+   \   00000256   0xE058             B        ??Variable__SetValue_5
+    455                                  case DATATYPE_UINT8:
+    456                                      BIT_CLR8(((uint8*)ACU_DATA_HOLDER[index].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_25: (+1)
+   \   00000258   0x0038             MOVS     R0,R7
+   \   0000025A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000025E   0x9000             STR      R0,[SP, #+0]
+   \   00000260   0x0038             MOVS     R0,R7
+   \   00000262   0x.... 0x....      BL       __aeabi_uread4
+   \   00000266   0x5D00             LDRB     R0,[R0, R4]
+   \   00000268   0x40AE             LSLS     R6,R6,R5
+   \   0000026A   0x43B0             BICS     R0,R0,R6
+   \   0000026C   0x9900             LDR      R1,[SP, #+0]
+   \   0000026E   0x5508             STRB     R0,[R1, R4]
+    457                                      break;
+   \   00000270   0xE04B             B        ??Variable__SetValue_5
+    458                                  default:
+    459                                      result = FALSE;
+    460                                      break;
+    461                              }
+    462          			    }
+    463          			    else
+    464          			    {
+    465          			        switch (HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Type)
+   \                     ??Variable__SetValue_24: (+1)
+   \   00000272   0x....             LDR      R0,??DataTable8
+   \   00000274   0x00D1             LSLS     R1,R2,#+3
+   \   00000276   0x1A89             SUBS     R1,R1,R2
+   \   00000278   0x1840             ADDS     R0,R0,R1
+   \   0000027A   0x....             LDR      R1,??DataTable8_1  ;; 0xfffff904
+   \   0000027C   0x1841             ADDS     R1,R0,R1
+   \   0000027E   0x7849             LDRB     R1,[R1, #+1]
+   \   00000280   0x2901             CMP      R1,#+1
+   \   00000282   0xD024             BEQ      ??Variable__SetValue_28
+   \   00000284   0xD33E             BCC      ??Variable__SetValue_9
+   \   00000286   0x2903             CMP      R1,#+3
+   \   00000288   0xD001             BEQ      ??Variable__SetValue_29
+   \   0000028A   0xD310             BCC      ??Variable__SetValue_30
+   \   0000028C   0xE03A             B        ??Variable__SetValue_9
+    466                              {
+    467                                  case DATATYPE_UINT32:
+    468                                      BIT_CLR(((uint32*)HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_29: (+1)
+   \   0000028E   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   00000290   0x1847             ADDS     R7,R0,R1
+   \   00000292   0x0038             MOVS     R0,R7
+   \   00000294   0x.... 0x....      BL       __aeabi_uread4
+   \   00000298   0x9000             STR      R0,[SP, #+0]
+   \   0000029A   0x0038             MOVS     R0,R7
+   \   0000029C   0x.... 0x....      BL       __aeabi_uread4
+   \   000002A0   0x00A1             LSLS     R1,R4,#+2
+   \   000002A2   0x5840             LDR      R0,[R0, R1]
+   \   000002A4   0x40AE             LSLS     R6,R6,R5
+   \   000002A6   0x43B0             BICS     R0,R0,R6
+   \   000002A8   0x9A00             LDR      R2,[SP, #+0]
+   \   000002AA   0x5050             STR      R0,[R2, R1]
+    469                                      break;
+   \   000002AC   0xE02D             B        ??Variable__SetValue_5
+    470                                  case DATATYPE_UINT16:
+    471                                      BIT_CLR16(((uint16*)HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_30: (+1)
+   \   000002AE   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   000002B0   0x1847             ADDS     R7,R0,R1
+   \   000002B2   0x0038             MOVS     R0,R7
+   \   000002B4   0x.... 0x....      BL       __aeabi_uread4
+   \   000002B8   0x9000             STR      R0,[SP, #+0]
+   \   000002BA   0x0038             MOVS     R0,R7
+   \   000002BC   0x.... 0x....      BL       __aeabi_uread4
+   \   000002C0   0x0061             LSLS     R1,R4,#+1
+   \   000002C2   0x5A40             LDRH     R0,[R0, R1]
+   \   000002C4   0x40AE             LSLS     R6,R6,R5
+   \   000002C6   0x43B0             BICS     R0,R0,R6
+   \   000002C8   0x9A00             LDR      R2,[SP, #+0]
+   \   000002CA   0x5250             STRH     R0,[R2, R1]
+    472                                      break;
+   \   000002CC   0xE01D             B        ??Variable__SetValue_5
+    473                                  case DATATYPE_UINT8:
+    474                                      BIT_CLR8(((uint8*)HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset], (uint8)value);
+   \                     ??Variable__SetValue_28: (+1)
+   \   000002CE   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   000002D0   0x1847             ADDS     R7,R0,R1
+   \   000002D2   0x0038             MOVS     R0,R7
+   \   000002D4   0x.... 0x....      BL       __aeabi_uread4
+   \   000002D8   0x9000             STR      R0,[SP, #+0]
+   \   000002DA   0x0038             MOVS     R0,R7
+   \   000002DC   0x.... 0x....      BL       __aeabi_uread4
+   \   000002E0   0x5D00             LDRB     R0,[R0, R4]
+   \   000002E2   0x40AE             LSLS     R6,R6,R5
+   \   000002E4   0x43B0             BICS     R0,R0,R6
+   \   000002E6   0x9900             LDR      R1,[SP, #+0]
+   \   000002E8   0x5508             STRB     R0,[R1, R4]
+    475                                      break;
+   \   000002EA   0xE00E             B        ??Variable__SetValue_5
+    476                                  default:
+    477                                      result = FALSE;
+    478                                      break;
+    479                              }
+    480          			    }
+    481          				break;
+    482          
+    483                      case VARIABLE_OPERATION_MULTIPLY         :
+    484                          SetVariableMathValue(index, offset, value, VARIABLE_OPERATION_MULTIPLY);
+   \                     ??Variable__SetValue_31: (+1)
+   \   000002EC   0x2307             MOVS     R3,#+7
+   \   000002EE   0x002A             MOVS     R2,R5
+   \   000002F0   0x0021             MOVS     R1,R4
+   \   000002F2   0x.... 0x....      BL       SetVariableMathValue
+    485                          break;
+   \   000002F6   0xE008             B        ??Variable__SetValue_5
+    486          
+    487                      case VARIABLE_OPERATION_DIVIDE         :
+    488                          SetVariableMathValue(index, offset, value, VARIABLE_OPERATION_DIVIDE);
+   \                     ??Variable__SetValue_32: (+1)
+   \   000002F8   0x2308             MOVS     R3,#+8
+   \   000002FA   0x002A             MOVS     R2,R5
+   \   000002FC   0x0021             MOVS     R1,R4
+   \   000002FE   0x.... 0x....      BL       SetVariableMathValue
+    489                          break;
+   \   00000302   0xE002             B        ??Variable__SetValue_5
+    490          
+    491          			default:
+    492          				result = FALSE;
+   \                     ??Variable__SetValue_9: (+1)
+   \   00000304   0x2000             MOVS     R0,#+0
+   \   00000306   0x4669             MOV      R1,SP
+   \   00000308   0x7108             STRB     R0,[R1, #+4]
+    493          				break;
+    494          		}
+    495          	}
+    496          
+    497          	return result;
+   \                     ??Variable__SetValue_5: (+1)
+   \   0000030A   0x4668             MOV      R0,SP
+   \   0000030C   0x7900             LDRB     R0,[R0, #+4]
+   \   0000030E   0xBDFE             POP      {R1-R7,PC}       ;; return
+    498          }
+    499          
+    500          //=====================================================================================================================
+    501          //-------------------------------------- Getters and Setters using KVP Ids---------------------------------------------
+    502          //=====================================================================================================================
+    503          #if(VARIABLES_HAVE_KVP_ID == ENABLED)
+    504          	/**
+    505          	 * Getter to the content of the variable. Access it using Kvp_ID.
+    506          	 * @param kvp_id	32 bits ID for the variable.
+    507          	 * @param value		value of the variable. if the return of the function is TRUE this value was retrieved properly.
+    508          	 * @return	TRUE means the value is valid: it was possible to retrieve it. FALSE means you should NOT use the value.
+    509          	 */
+    510          	BOOL_TYPE Variable__GetValuebyKVP(uint32 kvp_id, sint32 *value)
+    511          	{
+    512          		VARIABLE_ID_TYPE index;
+    513          		uint8 offset;
+    514          
+    515          		if(GetVariablePositionByKVP(kvp_id, &index, &offset) == TRUE)
+    516          		{
+    517          			return Variable__GetValue(index, offset, value);
+    518          		}
+    519          		return FALSE;
+    520          	}
+    521          	/**
+    522          	 * Getter to the DATATYPE of the variable referenced by the KVP_ID
+    523          	 * @param kvp_id 32 bits ID for the variable.
+    524          	 * @return TRUE means it was possible to retrieve the DATATYPE_TYPE for the given index and offset. FALSE means no valid return.
+    525          	 */
+    526          	DATATYPE_TYPE Variable__GetTypeByKVP(uint32 kvp_id)
+    527          	{
+    528          		VARIABLE_ID_TYPE index;
+    529          		uint8 offset;
+    530          
+    531          		if(GetVariablePositionByKVP(kvp_id, &index, &offset) == TRUE)
+    532          		{
+    533          			return Variable__GetTypeByIndex(index);
+    534          		}
+    535          		return DATATYPE_INVALID;
+    536          	}
+    537          	/**
+    538          	 * Setter to the value of the variable referenced by the given KVP_ID.
+    539          	 * @param operation one of the possible operations to be performed on a variable.
+    540          	 * @param kvp_id 32 bits ID for the variable.
+    541          	 * @param value 32 bits value you want to set. For Increment/Decrement operations the value is not used. you can pass any constant.
+    542          	 * @return TRUE if the requested operation was performed. FALSE means it was not possible and reason will be on the Log.
+    543          	 */
+    544          	BOOL_TYPE Variable__SetValueByKVP(VARIABLE_SET_OPERATION_TYPE operation, uint32 kvp_id, sint32 value)
+    545          	{
+    546          		VARIABLE_ID_TYPE index;
+    547          		uint8 offset;
+    548          
+    549          		if(GetVariablePositionByKVP(kvp_id, &index, &offset) == TRUE)
+    550          		{
+    551          			return Variable__SetValue(operation, index, offset, value);
+    552          		}
+    553          		return FALSE;
+    554          	}
+    555          	/**
+    556          		 * It receives the index for the variable and returns the related KVP.
+    557          		 * @param variable_index as per the constants defined on this module.
+    558          		 * @return The KVP Index for the variable or FFFFFFFF if the variable is not found.
+    559          		 */
+    560          		uint32 Variable__GetKVPByIndex(VARIABLE_ID_TYPE variable_index)
+    561          		{
+    562          			uint32 kvp_id;
+    563          			uint8 key;
+    564          
+    565          			kvp_id = 0xFFFFFFFF;
+    566          			for(key = 0; key < ELEMENTS_IN_ARRAY(Kvp_To_Variable_Table); key++)
+    567          			{
+    568          				if(variable_index == Kvp_To_Variable_Table[key].Variable_Index)
+    569          				{
+    570          					kvp_id = Kvp_To_Variable_Table[key].Kvp_Id;
+    571          					key = ELEMENTS_IN_ARRAY(Kvp_To_Variable_Table);
+    572          				}
+    573          			}
+    574          			return kvp_id;
+    575          		}
+    576          	/**
+    577          	 * Function that returns the Index and Offset of the variable on the ACU_DATA_HOLDER array.
+    578          	 * It receives the KVP ID and if it is present on the KVP_TO_VARIABLE_TRANSLATION_TABLE, we return the index and offset to that variable.
+    579          	 * @param kvp_id	unique uint32 index for the variable. It is used for connectivity.
+    580          	 * @param *index	it will be loaded with the Index for the Variable only if the function returns TRUE this is a valid Index.
+    581          	 * @param *offset	it will be loaded with the Offset for the Variable only if the function returns TRUE this is a valid Offset.
+    582          	 * @return TRUE if we were able to retrieve the information.
+    583          	 */
+    584          	static BOOL_TYPE GetVariablePositionByKVP(uint32 kvp_id, VARIABLE_ID_TYPE *index, uint8 *offset)
+    585          	{
+    586          		BOOL_TYPE ret;
+    587          		uint8 key;
+    588          
+    589          		ret = FALSE;
+    590          		// If we are receiving valid addresses to load with the info, we proceed.
+    591          		if((index == NULL) || (offset == NULL))
+    592          		{
+    593          			LOG_ADD_EXCEPTION(NULL_POINTERS_ON_KVP, kvp_id);
+    594          		}
+    595          		else
+    596          		{
+    597          			for(key = 0; key < ELEMENTS_IN_ARRAY(Kvp_To_Variable_Table); key++)
+    598          			{
+    599          				if(kvp_id == Kvp_To_Variable_Table[key].Kvp_Id)
+    600          				{
+    601          					if(Kvp_To_Variable_Table[key].Variable_Index < VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES)
+    602          					{
+    603          						ret = TRUE;
+    604          						*index  = Kvp_To_Variable_Table[key].Variable_Index;
+    605          						*offset = Kvp_To_Variable_Table[key].Offset;
+    606          					}
+    607          				}
+    608          			}
+    609          		}
+    610          		return ret;
+    611          	}
+    612          #endif
+    613          
+    614          //=====================================================================================================================
+    615          //-------------------------------------- Private Functions ------------------------------------------------------------
+    616          //=====================================================================================================================
+    617          /**
+    618           * Function that sets the given value to a variable on the ACU_DATA_HOLDER structure.
+    619           * @param index		Variable Index (to access ACU_DATA_HOLDER using the Variable module)
+    620           * @param offset	Variable Offset(to access ACU_DATA_HOLDER using the Variable module)
+    621           * @param value		new value to the variable.
+    622           */
+
+   \                                 In section .text, align 4, keep-with-next
+    623          static void SetVariableValue(VARIABLE_ID_TYPE index, uint8 offset, sint32 value)
+    624          {
+   \                     SetVariableValue: (+1)
+   \   00000000   0xB576             PUSH     {R1,R2,R4-R6,LR}
+   \   00000002   0x000C             MOVS     R4,R1
+    625              if(index < VARIABLE_NUM_ACU_VARIABLES)
+   \   00000004   0x0005             MOVS     R5,R0
+   \   00000006   0x2D61             CMP      R5,#+97
+   \   00000008   0xDA48             BGE      ??SetVariableValue_1
+    626              {
+    627                  switch(ACU_DATA_HOLDER[index].Type)
+   \   0000000A   0x00E8             LSLS     R0,R5,#+3
+   \   0000000C   0x1B41             SUBS     R1,R0,R5
+   \   0000000E   0x4809             LDR      R0,??SetVariableValue_0
+   \   00000010   0x1840             ADDS     R0,R0,R1
+   \   00000012   0x7945             LDRB     R5,[R0, #+5]
+   \   00000014   0x0029             MOVS     R1,R5
+   \   00000016   0x2901             CMP      R1,#+1
+   \   00000018   0xD00E             BEQ      ??SetVariableValue_2
+   \   0000001A   0x2902             CMP      R1,#+2
+   \   0000001C   0xD016             BEQ      ??SetVariableValue_3
+   \   0000001E   0x2903             CMP      R1,#+3
+   \   00000020   0xD020             BEQ      ??SetVariableValue_4
+   \   00000022   0x2905             CMP      R1,#+5
+   \   00000024   0xD00D             BEQ      ??SetVariableValue_5
+   \   00000026   0x2906             CMP      R1,#+6
+   \   00000028   0xD016             BEQ      ??SetVariableValue_6
+   \   0000002A   0x2907             CMP      R1,#+7
+   \   0000002C   0xD020             BEQ      ??SetVariableValue_7
+   \   0000002E   0x290D             CMP      R1,#+13
+   \   00000030   0xD012             BEQ      ??SetVariableValue_6
+   \   00000032   0xE023             B        ??SetVariableValue_8
+   \                     ??SetVariableValue_0:
+   \   00000034   0x........         DC32     ACU_DATA_HOLDER
+    628                  {
+    629                      case DATATYPE_UINT8	   :
+    630                          ((uint8 *) ACU_DATA_HOLDER[index].Address)[offset] = (uint8) value;
+   \                     ??SetVariableValue_2: (+1)
+   \   00000038   0x.... 0x....      BL       __aeabi_uread4
+   \   0000003C   0x9901             LDR      R1,[SP, #+4]
+   \   0000003E   0x5501             STRB     R1,[R0, R4]
+    631                          break;
+   \   00000040   0xBD73             POP      {R0,R1,R4-R6,PC}
+    632                      case DATATYPE_SINT8    :
+    633                          ((sint8 *) ACU_DATA_HOLDER[index].Address)[offset] = (sint8) value;
+   \                     ??SetVariableValue_5: (+1)
+   \   00000042   0x.... 0x....      BL       __aeabi_uread4
+   \   00000046   0x9901             LDR      R1,[SP, #+4]
+   \   00000048   0x5501             STRB     R1,[R0, R4]
+    634                          break;
+   \   0000004A   0xBD73             POP      {R0,R1,R4-R6,PC}
+    635                      case DATATYPE_UINT16   :
+    636                          ((uint16 *) ACU_DATA_HOLDER[index].Address)[offset] = (uint16) value;
+   \                     ??SetVariableValue_3: (+1)
+   \   0000004C   0x.... 0x....      BL       __aeabi_uread4
+   \   00000050   0x9901             LDR      R1,[SP, #+4]
+   \   00000052   0x0062             LSLS     R2,R4,#+1
+   \   00000054   0x5281             STRH     R1,[R0, R2]
+    637                          break;
+   \   00000056   0xBD73             POP      {R0,R1,R4-R6,PC}
+    638                      case DATATYPE_IS_Q15_CELSIUS:
+    639                          //lint -fallthrough
+    640                      case DATATYPE_SINT16   :
+    641                          ((sint16*) ACU_DATA_HOLDER[index].Address)[offset] = (sint16) value;
+   \                     ??SetVariableValue_6: (+1)
+   \   00000058   0x.... 0x....      BL       __aeabi_uread4
+   \   0000005C   0x9901             LDR      R1,[SP, #+4]
+   \   0000005E   0x0062             LSLS     R2,R4,#+1
+   \   00000060   0x5281             STRH     R1,[R0, R2]
+    642                          break;
+   \   00000062   0xBD73             POP      {R0,R1,R4-R6,PC}
+    643                      case DATATYPE_UINT32   :
+    644                          ((uint32*) ACU_DATA_HOLDER[index].Address)[offset] = (uint32) value;
+   \                     ??SetVariableValue_4: (+1)
+   \   00000064   0x.... 0x....      BL       __aeabi_uread4
+   \   00000068   0x9901             LDR      R1,[SP, #+4]
+   \   0000006A   0x00A2             LSLS     R2,R4,#+2
+   \   0000006C   0x5081             STR      R1,[R0, R2]
+    645                          break;
+   \   0000006E   0xBD73             POP      {R0,R1,R4-R6,PC}
+    646                      case DATATYPE_SINT32   :
+    647                          ((sint32*) ACU_DATA_HOLDER[index].Address)[offset] = value;
+   \                     ??SetVariableValue_7: (+1)
+   \   00000070   0x.... 0x....      BL       __aeabi_uread4
+   \   00000074   0x9901             LDR      R1,[SP, #+4]
+   \   00000076   0x00A2             LSLS     R2,R4,#+2
+   \   00000078   0x5081             STR      R1,[R0, R2]
+    648                          break;
+   \   0000007A   0xBD73             POP      {R0,R1,R4-R6,PC}
+    649                      default:
+    650                          memcpy(&((uint8*)ACU_DATA_HOLDER[index].Address)[offset], &value, VARIABLE_SIZE[ACU_DATA_HOLDER[index].Type]);
+   \                     ??SetVariableValue_8: (+1)
+   \   0000007C   0x.... 0x....      BL       __aeabi_uread4
+   \   00000080   0x1900             ADDS     R0,R0,R4
+   \   00000082   0xBF00             Nop      
+   \   00000084   0x....             ADR.N    R1,VARIABLE_SIZE
+   \   00000086   0x5D4A             LDRB     R2,[R1, R5]
+   \   00000088   0xA901             ADD      R1,SP,#+4
+   \   0000008A   0x.... 0x....      BL       __aeabi_memcpy
+    651                          LOG_ADD_EXCEPTION(DATATYPE_ERROR, ACU_DATA_HOLDER[index].Type);
+   \   0000008E   0x002B             MOVS     R3,R5
+   \   00000090   0x2201             MOVS     R2,#+1
+   \   00000092   0x2106             MOVS     R1,#+6
+   \   00000094   0x2062             MOVS     R0,#+98
+   \   00000096   0x.... 0x....      BL       Log__AddMessage
+    652                          break;
+   \   0000009A   0xBD73             POP      {R0,R1,R4-R6,PC}
+    653          	    }
+    654              }
+    655          
+    656              else if((index > VARIABLE_INVALID_INDEX) && (index < VARIABLE_END_HMI_VARIABLES))
+   \                     ??SetVariableValue_1: (+1)
+   \   0000009C   0x2180             MOVS     R1,#+128
+   \   0000009E   0x0049             LSLS     R1,R1,#+1        ;; #+256
+   \   000000A0   0x428D             CMP      R5,R1
+   \   000000A2   0xDB58             BLT      ??SetVariableValue_9
+   \   000000A4   0xDA57             BGE      ??SetVariableValue_9
+    657              {
+    658                  switch(HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Type)
+   \   000000A6   0x....             LDR      R6,??DataTable11
+   \   000000A8   0x00C1             LSLS     R1,R0,#+3
+   \   000000AA   0x1A08             SUBS     R0,R1,R0
+   \   000000AC   0x1830             ADDS     R0,R6,R0
+   \   000000AE   0x....             LDR      R1,??DataTable11_1  ;; 0xfffff905
+   \   000000B0   0x5C41             LDRB     R1,[R0, R1]
+   \   000000B2   0x2901             CMP      R1,#+1
+   \   000000B4   0xD00C             BEQ      ??SetVariableValue_10
+   \   000000B6   0x2902             CMP      R1,#+2
+   \   000000B8   0xD018             BEQ      ??SetVariableValue_11
+   \   000000BA   0x2903             CMP      R1,#+3
+   \   000000BC   0xD026             BEQ      ??SetVariableValue_12
+   \   000000BE   0x2905             CMP      R1,#+5
+   \   000000C0   0xD00D             BEQ      ??SetVariableValue_13
+   \   000000C2   0x2906             CMP      R1,#+6
+   \   000000C4   0xD01A             BEQ      ??SetVariableValue_14
+   \   000000C6   0x2907             CMP      R1,#+7
+   \   000000C8   0xD028             BEQ      ??SetVariableValue_15
+   \   000000CA   0x290D             CMP      R1,#+13
+   \   000000CC   0xD016             BEQ      ??SetVariableValue_14
+   \   000000CE   0xE02D             B        ??SetVariableValue_16
+    659                  {
+    660                      case DATATYPE_UINT8    :
+    661                          ((uint8 *) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset] = (uint8) value;
+   \                     ??SetVariableValue_10: (+1)
+   \   000000D0   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   000000D2   0x1840             ADDS     R0,R0,R1
+   \   000000D4   0x.... 0x....      BL       __aeabi_uread4
+   \   000000D8   0x9901             LDR      R1,[SP, #+4]
+   \   000000DA   0x5501             STRB     R1,[R0, R4]
+    662                          break;
+   \   000000DC   0xBD73             POP      {R0,R1,R4-R6,PC}
+    663                      case DATATYPE_SINT8    :
+    664                          ((sint8 *) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset] = (sint8) value;
+   \                     ??SetVariableValue_13: (+1)
+   \   000000DE   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   000000E0   0x1840             ADDS     R0,R0,R1
+   \   000000E2   0x.... 0x....      BL       __aeabi_uread4
+   \   000000E6   0x9901             LDR      R1,[SP, #+4]
+   \   000000E8   0x5501             STRB     R1,[R0, R4]
+    665                          break;
+   \   000000EA   0xBD73             POP      {R0,R1,R4-R6,PC}
+    666                      case DATATYPE_UINT16   :
+    667                          ((uint16 *) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset] = (uint16) value;
+   \                     ??SetVariableValue_11: (+1)
+   \   000000EC   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   000000EE   0x1840             ADDS     R0,R0,R1
+   \   000000F0   0x.... 0x....      BL       __aeabi_uread4
+   \   000000F4   0x9901             LDR      R1,[SP, #+4]
+   \   000000F6   0x0062             LSLS     R2,R4,#+1
+   \   000000F8   0x5281             STRH     R1,[R0, R2]
+    668                          break;
+   \   000000FA   0xBD73             POP      {R0,R1,R4-R6,PC}
+    669                      case DATATYPE_IS_Q15_CELSIUS:
+    670                          //lint -fallthrough
+    671                      case DATATYPE_SINT16   :
+    672                          ((sint16*) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset] = (sint16) value;
+   \                     ??SetVariableValue_14: (+1)
+   \   000000FC   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   000000FE   0x1840             ADDS     R0,R0,R1
+   \   00000100   0x.... 0x....      BL       __aeabi_uread4
+   \   00000104   0x9901             LDR      R1,[SP, #+4]
+   \   00000106   0x0062             LSLS     R2,R4,#+1
+   \   00000108   0x5281             STRH     R1,[R0, R2]
+    673                          break;
+   \   0000010A   0xBD73             POP      {R0,R1,R4-R6,PC}
+    674                      case DATATYPE_UINT32   :
+    675                          ((uint32*) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset] = (uint32) value;
+   \                     ??SetVariableValue_12: (+1)
+   \   0000010C   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   0000010E   0x1840             ADDS     R0,R0,R1
+   \   00000110   0x.... 0x....      BL       __aeabi_uread4
+   \   00000114   0x9901             LDR      R1,[SP, #+4]
+   \   00000116   0x00A2             LSLS     R2,R4,#+2
+   \   00000118   0x5081             STR      R1,[R0, R2]
+    676                          break;
+   \   0000011A   0xBD73             POP      {R0,R1,R4-R6,PC}
+    677                      case DATATYPE_SINT32   :
+    678                          ((sint32*) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset] = value;
+   \                     ??SetVariableValue_15: (+1)
+   \   0000011C   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   0000011E   0x1840             ADDS     R0,R0,R1
+   \   00000120   0x.... 0x....      BL       __aeabi_uread4
+   \   00000124   0x9901             LDR      R1,[SP, #+4]
+   \   00000126   0x00A2             LSLS     R2,R4,#+2
+   \   00000128   0x5081             STR      R1,[R0, R2]
+    679                          break;
+   \   0000012A   0xBD73             POP      {R0,R1,R4-R6,PC}
+    680                      default:
+    681                          memcpy(&((uint8*)HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset], &value, VARIABLE_SIZE[HMI_DATA_HOLDER[index].Type]);
+   \                     ??SetVariableValue_16: (+1)
+   \   0000012C   0x....             LDR      R1,??DataTable9  ;; 0xfffff900
+   \   0000012E   0x1840             ADDS     R0,R0,R1
+   \   00000130   0x.... 0x....      BL       __aeabi_uread4
+   \   00000134   0x1900             ADDS     R0,R0,R4
+   \   00000136   0x00E9             LSLS     R1,R5,#+3
+   \   00000138   0x1B49             SUBS     R1,R1,R5
+   \   0000013A   0x1871             ADDS     R1,R6,R1
+   \   0000013C   0x794C             LDRB     R4,[R1, #+5]
+   \   0000013E   0xBF00             Nop      
+   \   00000140   0x....             ADR.N    R1,VARIABLE_SIZE
+   \   00000142   0x5D0A             LDRB     R2,[R1, R4]
+   \   00000144   0xA901             ADD      R1,SP,#+4
+   \   00000146   0x.... 0x....      BL       __aeabi_memcpy
+    682                          LOG_ADD_EXCEPTION(DATATYPE_ERROR, HMI_DATA_HOLDER[index].Type);
+   \   0000014A   0x0023             MOVS     R3,R4
+   \   0000014C   0x2201             MOVS     R2,#+1
+   \   0000014E   0x2106             MOVS     R1,#+6
+   \   00000150   0x2062             MOVS     R0,#+98
+   \   00000152   0x.... 0x....      BL       Log__AddMessage
+    683                          break;
+    684                  }
+    685              }
+    686          
+    687          }
+   \                     ??SetVariableValue_9: (+1)
+   \   00000156   0xBD73             POP      {R0,R1,R4-R6,PC}  ;; return
+    688          
+    689          /**
+    690           * Function that performs the math(which are Add, Subtract, Multiply or Divide) a value to a variable.
+    691           * @param index     Variable Index (to access ACU_DATA_HOLDER using the Variable module)
+    692           * @param offset    Variable Offset(to access ACU_DATA_HOLDER using the Variable module)
+    693           * @param value     value to be added.
+    694           */
+
+   \                                 In section .text, align 4, keep-with-next
+    695          static void SetVariableMathValue(VARIABLE_ID_TYPE index, uint8 offset, sint32 value, VARIABLE_SET_OPERATION_TYPE operation)
+    696          {
+   \                     SetVariableMathValue: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000E             MOVS     R6,R1
+   \   00000006   0x0015             MOVS     R5,R2
+   \   00000008   0x001F             MOVS     R7,R3
+    697              sint32 intermediate;
+    698              if(index <= VARIABLE_MAX_NUMBER_OF_ACU_VARIABLES)
+   \   0000000A   0x0021             MOVS     R1,R4
+   \   0000000C   0x2962             CMP      R1,#+98
+   \   0000000E   0xD211             BCS      ??SetVariableMathValue_0
+    699              {
+    700                  if(offset >= ACU_DATA_HOLDER[index].Length)
+   \   00000010   0x0032             MOVS     R2,R6
+   \   00000012   0xBF00             Nop      
+   \   00000014   0x....             ADR.N    R1,ACU_DATA_HOLDER
+   \   00000016   0x00C3             LSLS     R3,R0,#+3
+   \   00000018   0x1A18             SUBS     R0,R3,R0
+   \   0000001A   0x1808             ADDS     R0,R1,R0
+   \   0000001C   0x7900             LDRB     R0,[R0, #+4]
+   \   0000001E   0x4282             CMP      R2,R0
+   \   00000020   0xD316             BCC      ??SetVariableMathValue_1
+    701                  {
+    702                      LOG_ADD_EXCEPTION(INVALID_SETVARIABLE, index << 8 | offset);
+    703                  }
+    704                  else
+    705                  {
+    706                      ConvertToSint32(index, offset, &intermediate);
+    707          
+    708                      switch(operation)
+    709                      {
+    710                          case VARIABLE_OPERATION_ADD:
+    711                              intermediate += value;
+    712                              break;
+    713          
+    714                          case VARIABLE_OPERATION_SUBTRACT:
+    715                              intermediate -= value;
+    716                              break;
+    717          
+    718                          case VARIABLE_OPERATION_MULTIPLY:
+    719                              intermediate *= value;
+    720                              break;
+    721          
+    722                          case VARIABLE_OPERATION_DIVIDE:
+    723                              if (value != 0)
+    724                              {
+    725                                  intermediate /= value;
+    726                              }
+    727                              else
+    728                              {
+    729                                  LOG_ADD_EXCEPTION(ENCOUNTER_DIVIDE_BY_ZERO, index << 8 | offset);
+    730                              }
+    731                              break;
+    732          
+    733                          default:
+    734                              LOG_ADD_EXCEPTION(INVALID_MATH_OPERATION, index << 8 | offset);
+    735                              break;
+    736                      }
+    737                      SetVariableValue(index, offset, intermediate);
+    738                  }
+    739              }
+    740              else if((index > VARIABLE_INVALID_INDEX) && (index < VARIABLE_END_HMI_VARIABLES))
+    741              {
+    742                  if(offset >= HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Length)
+    743                  {
+    744                      LOG_ADD_EXCEPTION(INVALID_SETVARIABLE, index << 8 | offset);
+    745                  }
+    746                  else
+    747                  {
+    748                      ConvertToSint32(index, offset, &intermediate);
+    749          
+    750                      switch(operation)
+    751                      {
+    752                          case VARIABLE_OPERATION_ADD:
+    753                              intermediate += value;
+    754                              break;
+    755          
+    756                          case VARIABLE_OPERATION_SUBTRACT:
+    757                              intermediate -= value;
+    758                              break;
+    759          
+    760                          case VARIABLE_OPERATION_MULTIPLY:
+    761                              intermediate *= value;
+    762                              break;
+    763          
+    764                          case VARIABLE_OPERATION_DIVIDE:
+    765                              if (value != 0)
+    766                              {
+    767                                  intermediate /= value;
+    768                              }
+    769                              else
+    770                              {
+    771                                  LOG_ADD_EXCEPTION(ENCOUNTER_DIVIDE_BY_ZERO, index << 8 | offset);
+    772                              }
+    773                              break;
+    774          
+    775                          default:
+    776                              LOG_ADD_EXCEPTION(INVALID_MATH_OPERATION, index << 8 | offset);
+    777                              break;
+    778                      }
+    779                      SetVariableValue(index, offset, intermediate);
+    780                  }
+    781              }
+    782              else
+    783              {
+    784                  LOG_ADD_EXCEPTION(INVALID_SETVARIABLE, index << 8 | offset);
+   \                     ??SetVariableMathValue_2: (+1)
+   \   00000022   0x0223             LSLS     R3,R4,#+8
+   \   00000024   0x4333             ORRS     R3,R3,R6
+   \   00000026   0xB29B             UXTH     R3,R3
+   \   00000028   0x2201             MOVS     R2,#+1
+   \   0000002A   0x2104             MOVS     R1,#+4
+   \   0000002C   0x2062             MOVS     R0,#+98
+   \   0000002E   0x.... 0x....      BL       Log__AddMessage
+    785              }
+    786          }
+   \   00000032   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+   \                     ??SetVariableMathValue_0: (+1)
+   \   00000034   0x2280             MOVS     R2,#+128
+   \   00000036   0x0052             LSLS     R2,R2,#+1        ;; #+256
+   \   00000038   0x4290             CMP      R0,R2
+   \   0000003A   0xDBF2             BLT      ??SetVariableMathValue_2
+   \   0000003C   0xDAF1             BGE      ??SetVariableMathValue_2
+   \   0000003E   0x0032             MOVS     R2,R6
+   \   00000040   0x....             LDR      R0,??DataTable11
+   \   00000042   0x00CB             LSLS     R3,R1,#+3
+   \   00000044   0x1A59             SUBS     R1,R3,R1
+   \   00000046   0x1840             ADDS     R0,R0,R1
+   \   00000048   0x....             LDR      R1,??DataTable11_2  ;; 0xfffff904
+   \   0000004A   0x5C40             LDRB     R0,[R0, R1]
+   \   0000004C   0x4282             CMP      R2,R0
+   \   0000004E   0xD2E8             BCS      ??SetVariableMathValue_2
+   \                     ??SetVariableMathValue_1: (+1)
+   \   00000050   0x466A             MOV      R2,SP
+   \   00000052   0x0031             MOVS     R1,R6
+   \   00000054   0x0020             MOVS     R0,R4
+   \   00000056   0x.... 0x....      BL       ConvertToSint32
+   \   0000005A   0x2F01             CMP      R7,#+1
+   \   0000005C   0xD006             BEQ      ??SetVariableMathValue_3
+   \   0000005E   0x2F02             CMP      R7,#+2
+   \   00000060   0xD008             BEQ      ??SetVariableMathValue_4
+   \   00000062   0x2F07             CMP      R7,#+7
+   \   00000064   0xD00A             BEQ      ??SetVariableMathValue_5
+   \   00000066   0x2F08             CMP      R7,#+8
+   \   00000068   0xD00C             BEQ      ??SetVariableMathValue_6
+   \   0000006A   0xE01C             B        ??SetVariableMathValue_7
+   \                     ??SetVariableMathValue_3: (+1)
+   \   0000006C   0x9800             LDR      R0,[SP, #+0]
+   \   0000006E   0x1940             ADDS     R0,R0,R5
+   \   00000070   0x9000             STR      R0,[SP, #+0]
+   \   00000072   0xE020             B        ??SetVariableMathValue_8
+   \                     ??SetVariableMathValue_4: (+1)
+   \   00000074   0x9800             LDR      R0,[SP, #+0]
+   \   00000076   0x1B40             SUBS     R0,R0,R5
+   \   00000078   0x9000             STR      R0,[SP, #+0]
+   \   0000007A   0xE01C             B        ??SetVariableMathValue_8
+   \                     ??SetVariableMathValue_5: (+1)
+   \   0000007C   0x9800             LDR      R0,[SP, #+0]
+   \   0000007E   0x4368             MULS     R0,R5,R0
+   \   00000080   0x9000             STR      R0,[SP, #+0]
+   \   00000082   0xE018             B        ??SetVariableMathValue_8
+   \                     ??SetVariableMathValue_6: (+1)
+   \   00000084   0x2D00             CMP      R5,#+0
+   \   00000086   0xD005             BEQ      ??SetVariableMathValue_9
+   \   00000088   0x9800             LDR      R0,[SP, #+0]
+   \   0000008A   0x0029             MOVS     R1,R5
+   \   0000008C   0x.... 0x....      BL       __aeabi_idiv
+   \   00000090   0x9000             STR      R0,[SP, #+0]
+   \   00000092   0xE010             B        ??SetVariableMathValue_8
+   \                     ??SetVariableMathValue_9: (+1)
+   \   00000094   0x0223             LSLS     R3,R4,#+8
+   \   00000096   0x4333             ORRS     R3,R3,R6
+   \   00000098   0xB29B             UXTH     R3,R3
+   \   0000009A   0x2201             MOVS     R2,#+1
+   \   0000009C   0x210E             MOVS     R1,#+14
+   \   0000009E   0x2062             MOVS     R0,#+98
+   \   000000A0   0x.... 0x....      BL       Log__AddMessage
+   \   000000A4   0xE007             B        ??SetVariableMathValue_8
+   \                     ??SetVariableMathValue_7: (+1)
+   \   000000A6   0x0223             LSLS     R3,R4,#+8
+   \   000000A8   0x4333             ORRS     R3,R3,R6
+   \   000000AA   0xB29B             UXTH     R3,R3
+   \   000000AC   0x2201             MOVS     R2,#+1
+   \   000000AE   0x210F             MOVS     R1,#+15
+   \   000000B0   0x2062             MOVS     R0,#+98
+   \   000000B2   0x.... 0x....      BL       Log__AddMessage
+   \                     ??SetVariableMathValue_8: (+1)
+   \   000000B6   0x9A00             LDR      R2,[SP, #+0]
+   \   000000B8   0x0031             MOVS     R1,R6
+   \   000000BA   0x0020             MOVS     R0,R4
+   \   000000BC   0x.... 0x....      BL       SetVariableValue
+   \   000000C0   0xBDF1             POP      {R0,R4-R7,PC}
+    787          
+    788          /**
+    789           * A little function to convert the value of a variable to sint32 to use on the other local functions.
+    790           * @return the value of the variable converted to sint32.
+    791           */
+
+   \                                 In section .text, align 4, keep-with-next
+    792          static BOOL_TYPE ConvertToSint32(VARIABLE_ID_TYPE index, uint8 offset, sint32 *value)
+    793          {
+   \                     ConvertToSint32: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x000D             MOVS     R5,R1
+   \   00000004   0x0016             MOVS     R6,R2
+    794          	BOOL_TYPE result = TRUE;
+   \   00000006   0x2401             MOVS     R4,#+1
+    795          	if(index < VARIABLE_NUM_ACU_VARIABLES )
+   \   00000008   0x0001             MOVS     R1,R0
+   \   0000000A   0x2961             CMP      R1,#+97
+   \   0000000C   0xDA3E             BGE      ??ConvertToSint32_0
+    796          	{
+    797                  switch(ACU_DATA_HOLDER[index].Type)
+   \   0000000E   0xBF00             Nop      
+   \   00000010   0x....             ADR.N    R0,ACU_DATA_HOLDER
+   \   00000012   0x00CA             LSLS     R2,R1,#+3
+   \   00000014   0x1A51             SUBS     R1,R2,R1
+   \   00000016   0x1840             ADDS     R0,R0,R1
+   \   00000018   0x7943             LDRB     R3,[R0, #+5]
+   \   0000001A   0x0019             MOVS     R1,R3
+   \   0000001C   0x2901             CMP      R1,#+1
+   \   0000001E   0xD00C             BEQ      ??ConvertToSint32_1
+   \   00000020   0x2902             CMP      R1,#+2
+   \   00000022   0xD014             BEQ      ??ConvertToSint32_2
+   \   00000024   0x2903             CMP      R1,#+3
+   \   00000026   0xD01E             BEQ      ??ConvertToSint32_3
+   \   00000028   0x2905             CMP      R1,#+5
+   \   0000002A   0xD00B             BEQ      ??ConvertToSint32_4
+   \   0000002C   0x2906             CMP      R1,#+6
+   \   0000002E   0xD014             BEQ      ??ConvertToSint32_5
+   \   00000030   0x2907             CMP      R1,#+7
+   \   00000032   0xD01E             BEQ      ??ConvertToSint32_6
+   \   00000034   0x290D             CMP      R1,#+13
+   \   00000036   0xD010             BEQ      ??ConvertToSint32_5
+   \   00000038   0xE021             B        ??ConvertToSint32_7
+    798                  {
+    799                      case DATATYPE_UINT8	   :
+    800                          *value = (sint32) ((uint8*) ACU_DATA_HOLDER[index].Address)[offset];
+   \                     ??ConvertToSint32_1: (+1)
+   \   0000003A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000003E   0x5D40             LDRB     R0,[R0, R5]
+   \   00000040   0x6030             STR      R0,[R6, #+0]
+    801                          break;
+   \   00000042   0xE071             B        ??ConvertToSint32_8
+    802                      case DATATYPE_SINT8    :
+    803                          *value = (sint32) ((sint8*) ACU_DATA_HOLDER[index].Address)[offset];
+   \                     ??ConvertToSint32_4: (+1)
+   \   00000044   0x.... 0x....      BL       __aeabi_uread4
+   \   00000048   0x5740             LDRSB    R0,[R0, R5]
+   \   0000004A   0x6030             STR      R0,[R6, #+0]
+    804                          break;
+   \   0000004C   0xE06C             B        ??ConvertToSint32_8
+    805                      case DATATYPE_UINT16   :
+    806                          *value = (sint32) ((uint16*) ACU_DATA_HOLDER[index].Address)[offset];
+   \                     ??ConvertToSint32_2: (+1)
+   \   0000004E   0x.... 0x....      BL       __aeabi_uread4
+   \   00000052   0x0069             LSLS     R1,R5,#+1
+   \   00000054   0x5A40             LDRH     R0,[R0, R1]
+   \   00000056   0x6030             STR      R0,[R6, #+0]
+    807                          break;
+   \   00000058   0xE066             B        ??ConvertToSint32_8
+    808                      case DATATYPE_IS_Q15_CELSIUS:
+    809                          //lint -fallthrough
+    810                      case DATATYPE_SINT16   :
+    811                          *value  = (sint32) ((sint16*) ACU_DATA_HOLDER[index].Address)[offset];
+   \                     ??ConvertToSint32_5: (+1)
+   \   0000005A   0x.... 0x....      BL       __aeabi_uread4
+   \   0000005E   0x0069             LSLS     R1,R5,#+1
+   \   00000060   0x5E40             LDRSH    R0,[R0, R1]
+   \   00000062   0x6030             STR      R0,[R6, #+0]
+    812                          break;
+   \   00000064   0xE060             B        ??ConvertToSint32_8
+    813                      case DATATYPE_UINT32   :
+    814                          *value  = (sint32) ((uint32*) ACU_DATA_HOLDER[index].Address)[offset];
+   \                     ??ConvertToSint32_3: (+1)
+   \   00000066   0x.... 0x....      BL       __aeabi_uread4
+   \   0000006A   0x00A9             LSLS     R1,R5,#+2
+   \   0000006C   0x5840             LDR      R0,[R0, R1]
+   \   0000006E   0x6030             STR      R0,[R6, #+0]
+    815                          break;
+   \   00000070   0xE05A             B        ??ConvertToSint32_8
+    816                      case DATATYPE_SINT32   :
+    817                          *value  = ((sint32*) ACU_DATA_HOLDER[index].Address)[offset];
+   \                     ??ConvertToSint32_6: (+1)
+   \   00000072   0x.... 0x....      BL       __aeabi_uread4
+   \   00000076   0x00A9             LSLS     R1,R5,#+2
+   \   00000078   0x5840             LDR      R0,[R0, R1]
+   \   0000007A   0x6030             STR      R0,[R6, #+0]
+    818                          break;
+   \   0000007C   0xE054             B        ??ConvertToSint32_8
+    819                      default:
+    820                          result = FALSE;
+   \                     ??ConvertToSint32_7: (+1)
+   \   0000007E   0x2400             MOVS     R4,#+0
+    821                          LOG_ADD_EXCEPTION(DATATYPE_ERROR, ACU_DATA_HOLDER[index].Type);
+   \   00000080   0x2201             MOVS     R2,#+1
+   \   00000082   0x2106             MOVS     R1,#+6
+   \   00000084   0x2062             MOVS     R0,#+98
+   \   00000086   0x.... 0x....      BL       Log__AddMessage
+    822                          break;
+   \   0000008A   0xE04D             B        ??ConvertToSint32_8
+    823                  }
+    824          	}
+    825          
+    826          	else if((index > VARIABLE_INVALID_INDEX) && (index < VARIABLE_END_HMI_VARIABLES))
+   \                     ??ConvertToSint32_0: (+1)
+   \   0000008C   0x0222             LSLS     R2,R4,#+8
+   \   0000008E   0x4291             CMP      R1,R2
+   \   00000090   0xDB4A             BLT      ??ConvertToSint32_8
+   \   00000092   0xDA49             BGE      ??ConvertToSint32_8
+    827              {
+    828                  switch(HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Type)
+   \   00000094   0x....             LDR      R1,??DataTable11
+   \   00000096   0x00C2             LSLS     R2,R0,#+3
+   \   00000098   0x1A10             SUBS     R0,R2,R0
+   \   0000009A   0x1808             ADDS     R0,R1,R0
+   \   0000009C   0x....             LDR      R1,??DataTable11_1  ;; 0xfffff905
+   \   0000009E   0x5C43             LDRB     R3,[R0, R1]
+   \   000000A0   0x0019             MOVS     R1,R3
+   \   000000A2   0x2901             CMP      R1,#+1
+   \   000000A4   0xD00C             BEQ      ??ConvertToSint32_9
+   \   000000A6   0x2902             CMP      R1,#+2
+   \   000000A8   0xD018             BEQ      ??ConvertToSint32_10
+   \   000000AA   0x2903             CMP      R1,#+3
+   \   000000AC   0xD026             BEQ      ??ConvertToSint32_11
+   \   000000AE   0x2905             CMP      R1,#+5
+   \   000000B0   0xD00D             BEQ      ??ConvertToSint32_12
+   \   000000B2   0x2906             CMP      R1,#+6
+   \   000000B4   0xD01A             BEQ      ??ConvertToSint32_13
+   \   000000B6   0x2907             CMP      R1,#+7
+   \   000000B8   0xD028             BEQ      ??ConvertToSint32_14
+   \   000000BA   0x290D             CMP      R1,#+13
+   \   000000BC   0xD016             BEQ      ??ConvertToSint32_13
+   \   000000BE   0xE02D             B        ??ConvertToSint32_15
+    829                  {
+    830                      case DATATYPE_UINT8    :
+    831                          *value = (sint32) ((uint8*) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset];
+   \                     ??ConvertToSint32_9: (+1)
+   \   000000C0   0x....             LDR      R1,??DataTable11_3  ;; 0xfffff900
+   \   000000C2   0x1840             ADDS     R0,R0,R1
+   \   000000C4   0x.... 0x....      BL       __aeabi_uread4
+   \   000000C8   0x5D40             LDRB     R0,[R0, R5]
+   \   000000CA   0x6030             STR      R0,[R6, #+0]
+    832                          break;
+   \   000000CC   0xE02C             B        ??ConvertToSint32_8
+    833                      case DATATYPE_SINT8    :
+    834                          *value = (sint32) ((sint8*) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset];
+   \                     ??ConvertToSint32_12: (+1)
+   \   000000CE   0x....             LDR      R1,??DataTable11_3  ;; 0xfffff900
+   \   000000D0   0x1840             ADDS     R0,R0,R1
+   \   000000D2   0x.... 0x....      BL       __aeabi_uread4
+   \   000000D6   0x5740             LDRSB    R0,[R0, R5]
+   \   000000D8   0x6030             STR      R0,[R6, #+0]
+    835                          break;
+   \   000000DA   0xE025             B        ??ConvertToSint32_8
+    836                      case DATATYPE_UINT16   :
+    837                          *value = (sint32) ((uint16*) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset];
+   \                     ??ConvertToSint32_10: (+1)
+   \   000000DC   0x....             LDR      R1,??DataTable11_3  ;; 0xfffff900
+   \   000000DE   0x1840             ADDS     R0,R0,R1
+   \   000000E0   0x.... 0x....      BL       __aeabi_uread4
+   \   000000E4   0x0069             LSLS     R1,R5,#+1
+   \   000000E6   0x5A40             LDRH     R0,[R0, R1]
+   \   000000E8   0x6030             STR      R0,[R6, #+0]
+    838                          break;
+   \   000000EA   0xE01D             B        ??ConvertToSint32_8
+    839                      case DATATYPE_IS_Q15_CELSIUS:
+    840                          //lint -fallthrough
+    841                      case DATATYPE_SINT16   :
+    842                          *value  = (sint32) ((sint16*) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset];
+   \                     ??ConvertToSint32_13: (+1)
+   \   000000EC   0x....             LDR      R1,??DataTable11_3  ;; 0xfffff900
+   \   000000EE   0x1840             ADDS     R0,R0,R1
+   \   000000F0   0x.... 0x....      BL       __aeabi_uread4
+   \   000000F4   0x0069             LSLS     R1,R5,#+1
+   \   000000F6   0x5E40             LDRSH    R0,[R0, R1]
+   \   000000F8   0x6030             STR      R0,[R6, #+0]
+    843                          break;
+   \   000000FA   0xE015             B        ??ConvertToSint32_8
+    844                      case DATATYPE_UINT32   :
+    845                          *value  = (sint32) ((uint32*) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset];
+   \                     ??ConvertToSint32_11: (+1)
+   \   000000FC   0x....             LDR      R1,??DataTable11_3  ;; 0xfffff900
+   \   000000FE   0x1840             ADDS     R0,R0,R1
+   \   00000100   0x.... 0x....      BL       __aeabi_uread4
+   \   00000104   0x00A9             LSLS     R1,R5,#+2
+   \   00000106   0x5840             LDR      R0,[R0, R1]
+   \   00000108   0x6030             STR      R0,[R6, #+0]
+    846                          break;
+   \   0000010A   0xE00D             B        ??ConvertToSint32_8
+    847                      case DATATYPE_SINT32   :
+    848                          *value  = ((sint32*) HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Address)[offset];
+   \                     ??ConvertToSint32_14: (+1)
+   \   0000010C   0x....             LDR      R1,??DataTable11_3  ;; 0xfffff900
+   \   0000010E   0x1840             ADDS     R0,R0,R1
+   \   00000110   0x.... 0x....      BL       __aeabi_uread4
+   \   00000114   0x00A9             LSLS     R1,R5,#+2
+   \   00000116   0x5840             LDR      R0,[R0, R1]
+   \   00000118   0x6030             STR      R0,[R6, #+0]
+    849                          break;
+   \   0000011A   0xE005             B        ??ConvertToSint32_8
+    850                      default:
+    851                          result = FALSE;
+   \                     ??ConvertToSint32_15: (+1)
+   \   0000011C   0x2400             MOVS     R4,#+0
+    852                          LOG_ADD_EXCEPTION(DATATYPE_ERROR, HMI_DATA_HOLDER[index-VARIABLE_HMI_START_INDEX].Type);
+   \   0000011E   0x2201             MOVS     R2,#+1
+   \   00000120   0x2106             MOVS     R1,#+6
+   \   00000122   0x2062             MOVS     R0,#+98
+   \   00000124   0x.... 0x....      BL       Log__AddMessage
+    853                          break;
+    854                  }
+    855              }
+    856          
+    857          	//
+    858          	return result;
+   \                     ??ConvertToSint32_8: (+1)
+   \   00000128   0x0020             MOVS     R0,R4
+   \   0000012A   0xBD70             POP      {R4-R6,PC}       ;; return
+    859          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \   00000000   0x........         DC32     ACU_DATA_HOLDER
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_1:
+   \   00000000   0x........         DC32     HMI_DATA_HOLDER
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_2:
+   \   00000000   0xFFFFF904         DC32     0xfffff904
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \   00000000   0x........         DC32     HMI_DATA_HOLDER
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_1:
+   \   00000000   0xFFFFF904         DC32     0xfffff904
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9:
+   \   00000000   0xFFFFF900         DC32     0xfffff900
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11:
+   \   00000000   0x........         DC32     HMI_DATA_HOLDER
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_1:
+   \   00000000   0xFFFFF905         DC32     0xfffff905
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_2:
+   \   00000000   0xFFFFF904         DC32     0xfffff904
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_3:
+   \   00000000   0xFFFFF900         DC32     0xfffff900
+    860          
+    861          //
+    862          #endif 			//#if ((SYSTEM_ACU_HANDLING != ENABLED) && (SYSTEM_HMI_HANDLING != ENABLED))
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   ConvertToSint32
+        16   -> Log__AddMessage
+        16 __aeabi_uread4
+      24   SetVariableMathValue
+        24   -> ConvertToSint32
+        24   -> Log__AddMessage
+        24   -> SetVariableValue
+        24 __aeabi_idiv
+      24   SetVariableValue
+        24   -> Log__AddMessage
+        24   -> __aeabi_memcpy
+        24 __aeabi_uread4
+       8   Variable__GetByIndex
+         8   -> __aeabi_memcpy
+      16   Variable__GetTranslatedValue
+        16   -> Log__AddMessage
+        16   -> Regulations__GetMainValueByPosition
+        16   -> Variable__GetValue
+       0   Variable__GetTypeByIndex
+      24   Variable__GetValue
+        24   -> ConvertToSint32
+        24   -> Log__AddMessage
+        24   -> Regulations__GetIndexValueByPosition
+      32   Variable__SetValue
+        32   -> Log__AddMessage
+        32   -> SetVariableMathValue
+        32   -> SetVariableValue
+        32 __aeabi_uread4
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable11_2
+       4  ??DataTable11_3
+       4  ??DataTable7
+       4  ??DataTable7_1
+       4  ??DataTable7_2
+       4  ??DataTable8
+       4  ??DataTable8_1
+       4  ??DataTable9
+     680  ACU_DATA_HOLDER
+       1  Always_True
+     300  ConvertToSint32
+       8  HMI_DATA_HOLDER
+       1  Regulation_Dummy
+     194  SetVariableMathValue
+     344  SetVariableValue
+      16  VARIABLE_SIZE
+       1  Variable_General_Flags
+      12  Variable_General_Purpose
+      36  Variable__GetByIndex
+      86  Variable__GetTranslatedValue
+      20  Variable__GetTypeByIndex
+     184  Variable__GetValue
+     784  Variable__SetValue
+
+ 
+    10 bytes in section .rodata
+ 2 684 bytes in section .text
+    13 bytes in section _appliance_segment
+ 
+ 2 684 bytes of CODE  memory
+    10 bytes of CONST memory
+    13 bytes of DATA  memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,1032 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:09
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot/DoorLockWaxPilot.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\DoorLockWaxPilot.lst
+#        -o obj\DoorLockWaxPilot.obj
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot/DoorLockWaxPilot.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\DoorLockWaxPilot.lst
+#    Object file  =  obj\DoorLockWaxPilot.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\acuexpacu\ACUPilotHandler\DoorLockWaxPilot\DoorLockWaxPilot.c
+      1          /**
+      2           *  @file       DoorLockWaxPilot.c
+      3           *
+      4           *  @brief      Pilot Handler for Wax DoorLock device
+      5           *
+      6           *  @details    This module performs locking and unlocking process of a Wax Doorlock device.
+      7           *
+      8           *  @section    Applicable_Documents
+      9           *					List here all the applicable documents if needed. <tr>	
+     10           *
+     11           *  $Header: $
+     12           *
+     13           *  @copyright  Copyright 2016-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     14           */
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          //---------------------------------------------------------------------------------------------------------------------
+     17          
+     18          
+     19          //-------------------------------------- Include Files ----------------------------------------------------------------
+     20          #include "DoorLockWaxPilot.h"
+     21          
+     22          #if (HBL_PILOT_NUM_DOORLOCKWAX > 0)
+     23          #include "Gpio.h"
+     24          #include "VirtualPin.h"
+     25          #include "Hbl.h"
+     26          #include "string.h"
+     27          
+     28          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     29          
+     30          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     31          #define DOORLOCKWAX_INITIAL_PERIOD          20
+     32          #define DOORLOCKWAX_TIMING_REF				10
+     33          #define DOORLOCKWAX_MAX_DEBOUNCE			2
+     34          
+     35          #define ZC_ALLOWED_MIN_FREQUENCY            45
+     36          #define ZC_ALLOWED_MAX_FREQUENCY            65
+     37          
+     38          // Minimum and maximum period from ZeroCross frequency boundaries set - Round to near
+     39          #define DOORLOCKWAX_MIN_PERIOD_MS		((2000+ZC_ALLOWED_MAX_FREQUENCY)/(ZC_ALLOWED_MAX_FREQUENCY*2))
+     40          #define DOORLOCKWAX_MAX_PERIOD_MS		((2000+ZC_ALLOWED_MIN_FREQUENCY)/(ZC_ALLOWED_MIN_FREQUENCY*2))
+     41          
+     42          
+     43          typedef enum DOORLOCKWAX_STATUS_ENUM
+     44          {
+     45          	DOORLOCKWAX_STATUS_INIT,
+     46          	DOORLOCKWAX_STATUS_DOOR_UNLOCKED,
+     47          	DOORLOCKWAX_STATUS_DOOR_LOCKING,
+     48          	DOORLOCKWAX_STATUS_DOOR_LOCKING_FAILED,
+     49          	DOORLOCKWAX_STATUS_DOOR_LOCKED,
+     50          	DOORLOCKWAX_STATUS_DOOR_UNLOCKING,
+     51          	DOORLOCKWAX_STATUS_DOOR_UNLOCKING_FAILED
+     52          } DOORLOCKWAX_STATUS_TYPE;
+     53          
+     54          PACKED typedef struct
+     55          {
+     56          	uint8 Requested;
+     57          	uint8 Processed;
+     58          	HBL_LOAD_STATUS_TYPE PilotStatus;
+     59          	DOORLOCKWAX_STATUS_TYPE Status;
+     60          	uint16 Counter;
+     61          	uint16 Fbk_Timeout_Counter;
+     62          	uint8 Fbk_Counter;
+     63          	uint8 Fbk_Last_Counter;
+     64          	uint8 Fbk_Period;
+     65          	sint8 Fbk_Offset;
+     66          	uint8 Fbk_Last_Pin_Value;
+     67          	uint8 Wait_Trigger;
+     68          	uint8 Debounce;
+     69          	uint8 TimingRef;
+     70          	uint8 Fbk_Pin;
+     71          } DOORLOCKWAXPILOT_DATA_TYPE;
+     72          
+     73          typedef struct
+     74          {
+     75          	uint16 Unlock_Timeout;
+     76          	uint16 Lock_Timeout;
+     77          	uint8 Duty_On;
+     78          	uint8 Duty_Off;
+     79          	uint8 Filter_Time;
+     80          	uint8 Unused;
+     81          } DOORLOCKWAXPILOT_PARAM_TYPE;
+     82          
+     83          static uint8 DoorLockWaxPilot_Allocation;
+     84          static DOORLOCKWAXPILOT_DATA_TYPE DoorLockWaxPilot_Data[HBL_PILOT_NUM_DOORLOCKWAX];
+     85          
+     86          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     87          
+     88          //=====================================================================================================================
+     89          //-------------------------------------- Public Functions -------------------------------------------------------------
+     90          //=====================================================================================================================
+     91          
+     92          //---------------------------------------------------------------------------------------------------------------------
+     93          /**
+     94           *  @brief      It Initializes the module DoorLockWaxPilot and its variables
+     95           *
+     96           */
+     97          void DoorLockWaxPilot__Initialize(void)
+     98          {
+     99          	DoorLockWaxPilot_Allocation = 0;
+    100          	memset(&DoorLockWaxPilot_Data, 0, sizeof(DoorLockWaxPilot_Data));
+    101          }
+    102          
+    103          //---------------------------------------------------------------------------------------------------------------------
+    104          /**
+    105           *  @brief      Allocate pilot instance for DoorlockWaxPilot.
+    106           *
+    107           *  @return     uint8 result - Allocation result.
+    108           *  @retval     0-254 - Pilot allocation instance.
+    109           *  @retval     0xFF - Allocation failed.
+    110           */
+    111          uint8 DoorLockWaxPilot__Allocate(void)
+    112          {
+    113              uint8 retval = 0xFF;
+    114          
+    115          	if (DoorLockWaxPilot_Allocation < HBL_PILOT_NUM_DOORLOCKWAX)
+    116          	{
+    117          		retval = DoorLockWaxPilot_Allocation;
+    118          		DoorLockWaxPilot_Allocation++;
+    119          	}
+    120              return(retval);
+    121          }
+    122          
+    123          //---------------------------------------------------------------------------------------------------------------------
+    124          /**
+    125           *  @brief      Initialize DoorLockWaxPilot instance.
+    126           *
+    127           *  @param      HBL_LOAD_TYPE *load - Pointer to associated digital output load instance.
+    128           *
+    129           *  @return     PASS_FAIL_TYPE result - Result of DoorLockWaxPilot instance initialization.
+    130           *  @retval     PASS - Instance initialization succeeded.
+    131           *  @retval     FAIL - Instance initialization failed.
+    132           */
+    133          PASS_FAIL_TYPE DoorLockWaxPilot__InitializeInstance(HBL_LOAD_TYPE * load)
+    134          {
+    135              PASS_FAIL_TYPE retval = FAIL;
+    136              uint8 index = load->Pilot_Data_Index;
+    137              DOORLOCKWAXPILOT_PARAM_TYPE *param_ptr;
+    138              DOORLOCKWAXPILOT_DATA_TYPE *ptr;
+    139              uint8 *ptr_pin_table;
+    140              uint8 fbk_index;
+    141              uint8 virtual_pin;
+    142          
+    143          
+    144              if (index < DoorLockWaxPilot_Allocation)
+    145              {
+    146              	ptr = (DOORLOCKWAXPILOT_DATA_TYPE *) &DoorLockWaxPilot_Data[index];  //lint !e929 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    147              	param_ptr = (DOORLOCKWAXPILOT_PARAM_TYPE *) load->Parameter_Ptr.Data; //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    148          
+    149              	ptr->Status = DOORLOCKWAX_STATUS_INIT;
+    150              	ptr->PilotStatus.Load.Status = HBL_LOAD_STATUS_INITIALIZE;
+    151              	ptr->Counter = param_ptr->Filter_Time;
+    152              	ptr->Fbk_Timeout_Counter = param_ptr->Filter_Time * DOORLOCKWAX_TIMING_REF;
+    153              	ptr->Fbk_Period = DOORLOCKWAX_INITIAL_PERIOD;
+    154              	ptr->Debounce = DOORLOCKWAX_MAX_DEBOUNCE;
+    155          
+    156              	// Check if a Feedback/SRFeedback LLI is configured for pin synchronization
+    157              	fbk_index = Hbl__GetLLIIndexByOwnLoadConsistencyType(load, HBL_LLI_FEEDBACK);
+    158              	if (fbk_index >= Hbl__GetNumLLI())
+    159              	{
+    160                      fbk_index = Hbl__GetLLIIndexByOwnLoadConsistencyType(load, HBL_LLI_SRFEEDBACK);
+    161              	}
+    162              	ptr_pin_table = Hbl__GetLLIPinTabPtr(fbk_index);
+    163          
+    164              	if (ptr_pin_table == NULL)
+    165              	{
+    166              		virtual_pin = VirtualPin__GetNumOf();
+    167              	}
+    168              	else
+    169              	{
+    170              		virtual_pin = ptr_pin_table[0];
+    171              	}
+    172              	ptr->Fbk_Pin = virtual_pin;
+    173          
+    174              	virtual_pin = load->Pin_Ptr[0];
+    175          		if ((virtual_pin < VirtualPin__GetNumOf()) &&
+    176          			(VIRTUALPIN_TABLE[virtual_pin].port != 0xFF))
+    177          		{
+    178          			uint8 pin_val = ~load->Hi_Low_Activation_Bitmap;
+    179          			pin_val &= 0x01;
+    180                  	Gpio__PinWrite(VIRTUALPIN_TABLE[virtual_pin].port,VIRTUALPIN_TABLE[virtual_pin].pin, (BOOL_TYPE) pin_val);
+    181          			Gpio__PinConfig(VIRTUALPIN_TABLE[virtual_pin].port,VIRTUALPIN_TABLE[virtual_pin].pin,VIRTUALPIN_TABLE[virtual_pin].pin_config);
+    182          			retval = PASS;
+    183          		}
+    184              }
+    185              return(retval);
+    186          }
+    187          
+    188          //---------------------------------------------------------------------------------------------------------------------
+    189          /**
+    190           *  @brief      Set DoorLockWaxPilot instance request.
+    191           *
+    192           *  @param      HBL_LOAD_TYPE *load - Pointer to associated DoorLockWaxPilot instance.
+    193           *
+    194           *  @param      void *data - Pointer to request data. Pass argument as uint8 *.
+    195           *
+    196           *  @return     PASS_FAIL_TYPE result - Result of DoorLockWaxPilot request.
+    197           *  @retval     PASS - Instance request succeeded.
+    198           *  @retval     FAIL - Instance request failed.
+    199           */
+    200          PASS_FAIL_TYPE DoorLockWaxPilot__Request(HBL_LOAD_TYPE * load,void * data)
+    201          {
+    202          	PASS_FAIL_TYPE retval = FAIL;
+    203          	uint8 index = load->Pilot_Data_Index;
+    204          
+    205              if (index < DoorLockWaxPilot_Allocation)
+    206              {
+    207              	DoorLockWaxPilot_Data[index].Requested = *((uint8 *) data);
+    208              	retval = PASS;
+    209              }
+    210          
+    211          	return(retval);
+    212          }
+    213          
+    214          
+    215          //---------------------------------------------------------------------------------------------------------------------
+    216          /**
+    217           *  @brief      Process DoorLockWaxPilot instance.
+    218           *
+    219           *  @param      HBL_LOAD_TYPE *load - Pointer to DoorLockWaxPilot instance.
+    220           *
+    221           *  @return     PASS_FAIL_TYPE result - Result of DoorLockWaxPilot instance process.
+    222           *  @retval     PASS - Instance process succeeded.
+    223           *  @retval     FAIL - Instance process failed.
+    224           */
+    225          PASS_FAIL_TYPE DoorLockWaxPilot__Process(HBL_LOAD_TYPE * load)
+    226          {
+    227              DOORLOCKWAXPILOT_PARAM_TYPE *param_ptr;
+    228          	DOORLOCKWAXPILOT_DATA_TYPE *ptr;
+    229          	PASS_FAIL_TYPE retval = FAIL;
+    230          	uint8 index = load->Pilot_Data_Index;
+    231          
+    232              if (index < DoorLockWaxPilot_Allocation)
+    233              {
+    234              	ptr = &DoorLockWaxPilot_Data[index];
+    235          
+    236              	if (ptr->Requested != ptr->Processed)
+    237              	{
+    238                  	param_ptr = (DOORLOCKWAXPILOT_PARAM_TYPE *) load->Parameter_Ptr.Data; //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    239          
+    240              		if (ptr->Requested == 0)
+    241              		{
+    242              			switch (ptr->Status)
+    243              			{
+    244              			case DOORLOCKWAX_STATUS_DOOR_LOCKED:
+    245              			case DOORLOCKWAX_STATUS_DOOR_LOCKING:
+    246              				ptr->PilotStatus.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+    247              				ptr->PilotStatus.Load.Cur_Reg = ptr->Processed;
+    248              		    	ptr->Status = DOORLOCKWAX_STATUS_DOOR_UNLOCKING;
+    249              				ptr->Counter = ENDIANS16_STON(param_ptr->Unlock_Timeout);
+    250              		    	ptr->Wait_Trigger = 1;
+    251              				break;
+    252          
+    253              			default:
+    254              		    	ptr->Status = DOORLOCKWAX_STATUS_INIT;
+    255              				ptr->Counter = param_ptr->Filter_Time;
+    256              				break;
+    257              			}
+    258              		}
+    259              		else
+    260          			{
+    261          				switch (DoorLockWaxPilot_Data[index].Status)
+    262          				{
+    263          				case DOORLOCKWAX_STATUS_DOOR_UNLOCKED:
+    264          				case DOORLOCKWAX_STATUS_DOOR_UNLOCKING:
+    265          					ptr->PilotStatus.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+    266          					ptr->PilotStatus.Load.Cur_Reg = ptr->Processed;
+    267              		    	ptr->Status = DOORLOCKWAX_STATUS_DOOR_LOCKING;
+    268              				ptr->Counter = ENDIANS16_STON(param_ptr->Unlock_Timeout);
+    269              		    	ptr->Wait_Trigger = 1;
+    270          					break;
+    271          
+    272          				default:
+    273              		    	ptr->Status = DOORLOCKWAX_STATUS_INIT;
+    274              				ptr->Counter = param_ptr->Filter_Time;
+    275          					break;
+    276          				}
+    277          			}
+    278              	}
+    279          
+    280              	ptr->Processed = ptr->Requested;
+    281              }
+    282          
+    283          	return(retval);
+    284          }
+    285          
+    286          //---------------------------------------------------------------------------------------------------------------------
+    287          /**
+    288           *  @brief      Get current DoorLockWaxPilot instance request.
+    289           *
+    290           *  @param      HBL_LOAD_TYPE *load - Pointer to associated DoorLockWaxPilot instance.
+    291           *
+    292           *  @return     void *requested - Requested instance data.
+    293           *  @retval     Address of requested instance data. Cast it using *((uint8 *)ptr) to get values.
+    294           *  @retval     NULL - Invalid load index.
+    295           */
+    296          void * DoorLockWaxPilot__GetRequested(HBL_LOAD_TYPE * load)
+    297          {
+    298          	void *ptr = NULL;
+    299          
+    300              if (load->Pilot_Data_Index < DoorLockWaxPilot_Allocation)
+    301              {
+    302                  ptr = (void *) (&DoorLockWaxPilot_Data[load->Pilot_Data_Index].Requested);
+    303              }
+    304          
+    305              return(ptr);
+    306          }
+    307          
+    308          
+    309          //---------------------------------------------------------------------------------------------------------------------
+    310          /**
+    311           *  @brief      Get DoorLockWaxPilot instance processed request.
+    312           *
+    313           *  @param      HBL_LOAD_TYPE *load - Pointer to associated DoorLockWaxPilot instance.
+    314           *
+    315           *  @return     void * processed - Processed instance data.
+    316           *  @retval     Address of processed instance data. Cast it using *((uint8 *)ptr) to get values.
+    317           *  @retval     NULL - Invalid load index.
+    318           */
+    319          void * DoorLockWaxPilot__GetProcessed(HBL_LOAD_TYPE * load)
+    320          {
+    321          	void *ptr;
+    322          
+    323          	ptr = NULL;
+    324          
+    325              if (load->Pilot_Data_Index < DoorLockWaxPilot_Allocation)
+    326              {
+    327                  ptr = (void *) (&DoorLockWaxPilot_Data[load->Pilot_Data_Index].Processed);
+    328              }
+    329          
+    330              return ptr;
+    331          }
+    332          
+    333          //---------------------------------------------------------------------------------------------------------------------
+    334          /**
+    335           *  @brief      Get DoorLockWaxPilot instance status.
+    336           *
+    337           *  @param      HBL_LOAD_TYPE *load - Pointer to DoorLockWaxPilot instance.
+    338           *
+    339           *  @return     void *status - instance Status.
+    340           *  @retval     Address of instance Status. Cast it using *((uint8 *)ptr) to get the value.
+    341           *  @retval     NULL - Invalid load index.
+    342           */
+    343          void * DoorLockWaxPilot__GetStatus(HBL_LOAD_TYPE * load)
+    344          {
+    345          	void *ptr = NULL;
+    346          
+    347              if (load->Pilot_Data_Index < DoorLockWaxPilot_Allocation)
+    348              {
+    349                  ptr = (void *) (&DoorLockWaxPilot_Data[load->Pilot_Data_Index].PilotStatus);
+    350              }
+    351          
+    352              return(ptr);
+    353          }
+    354          
+    355          //---------------------------------------------------------------------------------------------------------------------
+    356          /**
+    357           *  @brief      Asynchronous process for DoorLockWaxPilot.
+    358           *
+    359           *	@detail     Asynchronous process handles status transition and consistency check for door lock status
+    360           *
+    361           *  @param      HBL_LOAD_TYPE *load - Pointer to DoorLockWaxPilot instance.
+    362           *
+    363           *  @return     PASS_FAIL_TYPE result - Result of DoorLockWaxPilot asynch execution.
+    364           *  @retval     PASS - Execution succeeded.
+    365           *  @retval     FAIL - Execution failed.
+    366           */
+    367          PASS_FAIL_TYPE DoorLockWaxPilot__AsynchProcess(HBL_LOAD_TYPE * load)
+    368          {
+    369          	DOORLOCKWAXPILOT_PARAM_TYPE *param_ptr;
+    370          	DOORLOCKWAXPILOT_DATA_TYPE *ptr;
+    371          	HBL_CONSISTENCY_TYPE lock_feedback;
+    372          	HBL_LOAD_STATUS_TYPE tmp_load;
+    373          	PASS_FAIL_TYPE retval = FAIL;
+    374          	BOOL_TYPE pin_val = FALSE;
+    375          	uint8 index = load->Pilot_Data_Index;
+    376          
+    377              if (index < DoorLockWaxPilot_Allocation)
+    378              {
+    379              	ptr = &DoorLockWaxPilot_Data[index];
+    380              	param_ptr = (DOORLOCKWAXPILOT_PARAM_TYPE *) load->Parameter_Ptr.Data; //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    381              	tmp_load.Load.Cur_Reg = ptr->Processed;
+    382              	// Prevent use of TRN table when DoorLock status is OFF;
+    383              	// during INITIALIZE consider Processed target like it has been already reached
+    384              	if ( (ptr->Processed != 0) &&
+    385              		(ptr->PilotStatus.Load.Status != HBL_LOAD_STATUS_INITIALIZE))
+    386              	{
+    387              		tmp_load.Load.Status = ptr->PilotStatus.Load.Status;
+    388              	}
+    389              	else
+    390              	{
+    391              		tmp_load.Load.Status = HBL_LOAD_STATUS_TARGET_COMPLETED;
+    392              	}
+    393              	lock_feedback.Byte = Hbl__GetOwnLoadConsistency(load, tmp_load.Byte);
+    394              	retval = PASS;
+    395          
+    396              	switch(ptr->Status)
+    397              	{
+    398              	case DOORLOCKWAX_STATUS_DOOR_LOCKING:
+    399              		pin_val = TRUE;
+    400              		if (ptr->Counter == 0)
+    401              		{
+    402          		    	ptr->Status = DOORLOCKWAX_STATUS_DOOR_LOCKING_FAILED;
+    403              		}
+    404              		else
+    405              		{
+    406                  		if ( (lock_feedback.Consistency.Value == HBL_CONSISTENCY_OK) &&
+    407                  				(lock_feedback.Consistency.Table != HBL_CONSISTENCY_TABLE_OFF))
+    408                  		{
+    409              		    	ptr->Status = DOORLOCKWAX_STATUS_DOOR_LOCKED;
+    410              		    	ptr->Counter = (param_ptr->Duty_On + param_ptr->Duty_Off) * 10;
+    411                  		}
+    412          
+    413              		}
+    414              		break;
+    415          
+    416          
+    417              	case DOORLOCKWAX_STATUS_DOOR_UNLOCKING:
+    418              		if (ptr->Counter == 0)
+    419              		{
+    420          		    	ptr->Status = DOORLOCKWAX_STATUS_DOOR_UNLOCKING_FAILED;
+    421              		}
+    422              		else
+    423              		{
+    424                  		if ( (lock_feedback.Consistency.Value == HBL_CONSISTENCY_OK) &&
+    425                  			(lock_feedback.Consistency.Table != HBL_CONSISTENCY_TABLE_ON) &&
+    426          					(lock_feedback.Consistency.Table != HBL_CONSISTENCY_TABLE_ON_ALTERNATE) )
+    427                  		{
+    428              		    	ptr->Status = DOORLOCKWAX_STATUS_DOOR_UNLOCKED;
+    429              		    	ptr->Counter = 0;
+    430                  		}
+    431          
+    432              		}
+    433              		break;
+    434          
+    435              	case DOORLOCKWAX_STATUS_DOOR_LOCKED:
+    436              		if (param_ptr->Duty_On == 0)
+    437              		{
+    438          				pin_val = TRUE;
+    439              		}
+    440              		else
+    441              		{
+    442                  		if (ptr->Counter == 0)
+    443                  		{
+    444              		    	ptr->Counter = (param_ptr->Duty_On + param_ptr->Duty_Off) * 10;
+    445                  		}
+    446                  		else if (ptr->Counter >= (param_ptr->Duty_Off * 10))
+    447              			{
+    448              				pin_val = TRUE;
+    449              			}
+    450              		}
+    451          
+    452              		break;
+    453          
+    454              	case DOORLOCKWAX_STATUS_DOOR_UNLOCKED:
+    455              	case DOORLOCKWAX_STATUS_DOOR_LOCKING_FAILED:
+    456              	case DOORLOCKWAX_STATUS_DOOR_UNLOCKING_FAILED:
+    457              		break;
+    458          
+    459              	default:
+    460              		if (ptr->Counter == 0)
+    461              		{
+    462              			if (ptr->Processed == OFF)
+    463              			{
+    464              				// Check if door feedback value is fine
+    465                      		if ((lock_feedback.Consistency.Value == HBL_CONSISTENCY_OK) ||
+    466                      				(lock_feedback.Byte == HBL_CONSISTENCY_TABLE_INVALID))
+    467                      		{
+    468                      			// Door already unlocked
+    469                  		    	ptr->Status = DOORLOCKWAX_STATUS_DOOR_UNLOCKED;
+    470                  		    	ptr->Counter = 0;
+    471                      		}
+    472                      		else
+    473                      		{
+    474                      			// Door is going to be unlocked
+    475                  		    	ptr->Status = DOORLOCKWAX_STATUS_DOOR_UNLOCKING;
+    476                  		    	ptr->Counter = ENDIANS16_STON(param_ptr->Unlock_Timeout);
+    477                      		}
+    478              			}
+    479              			else
+    480              			{
+    481              				// Check if door feedback value is fine
+    482                      		if ((lock_feedback.Consistency.Value == HBL_CONSISTENCY_OK) ||
+    483                      				(lock_feedback.Byte == HBL_CONSISTENCY_TABLE_INVALID))
+    484                      		{
+    485                      			// Door already locked
+    486                  		    	ptr->Status = DOORLOCKWAX_STATUS_DOOR_LOCKED;
+    487                  		    	ptr->Counter = (param_ptr->Duty_On + param_ptr->Duty_Off) * 10;
+    488                      		}
+    489                      		else
+    490                      		{
+    491                      			// Door is going to be locked
+    492                  		    	ptr->Status = DOORLOCKWAX_STATUS_DOOR_LOCKING;
+    493                  		    	ptr->Counter = ENDIANS16_STON(param_ptr->Lock_Timeout);
+    494                      		}
+    495              			}
+    496              		}
+    497              		break;
+    498          
+    499              	}
+    500          
+    501              	switch(ptr->Status)
+    502              	{
+    503              	case DOORLOCKWAX_STATUS_DOOR_LOCKED:
+    504              	case DOORLOCKWAX_STATUS_DOOR_UNLOCKED:
+    505              		ptr->PilotStatus.Load.Status = ((pin_val == TRUE) ? HBL_LOAD_STATUS_TARGET_ALT_TABLE : HBL_LOAD_STATUS_TARGET_COMPLETED);
+    506              		ptr->PilotStatus.Load.Cur_Reg = ptr->Processed;
+    507              		break;
+    508          
+    509              	case DOORLOCKWAX_STATUS_DOOR_LOCKING_FAILED:
+    510              	case DOORLOCKWAX_STATUS_DOOR_UNLOCKING_FAILED:
+    511              		ptr->PilotStatus.Load.Status = HBL_LOAD_STATUS_FAILURE;
+    512              		ptr->PilotStatus.Load.Cur_Reg = ptr->Processed;
+    513              		break;
+    514          
+    515              	default:
+    516              		if (ptr->PilotStatus.Load.Status != HBL_LOAD_STATUS_INITIALIZE)
+    517              		{
+    518              			ptr->PilotStatus.Load.Status = HBL_LOAD_STATUS_WAITING_TARGET;
+    519              		}
+    520              	}
+    521              }
+    522          
+    523          	return(retval);
+    524          }
+    525          
+    526          //---------------------------------------------------------------------------------------------------------------------
+    527          /**
+    528           *  @brief      One millisecond process for DoorLockWaxPilot.
+    529           *
+    530           *	@detail     Low level feedback probe to detect frequency and pin activation in sync with feedback
+    531           *
+    532           *  @param      HBL_LOAD_TYPE *load - Pointer to DoorLockWaxPilot instance.
+    533           *
+    534           *  @return     PASS_FAIL_TYPE result - Result of DoorLockWaxPilot 1ms execution.
+    535           *  @retval     PASS - Execution succeeded.
+    536           *  @retval     FAIL - Execution failed.
+    537           */
+    538          PASS_FAIL_TYPE DoorLockWaxPilot__Handler1ms(HBL_LOAD_TYPE * load)
+    539          {
+    540          	DOORLOCKWAXPILOT_PARAM_TYPE *param_ptr;
+    541          	DOORLOCKWAXPILOT_DATA_TYPE *ptr;
+    542          	uint8 virtual_pin;
+    543          	PASS_FAIL_TYPE retval = FAIL;
+    544          	BOOL_TYPE pin_val = FALSE;
+    545          	BOOL_TYPE pin_fbk_val = FALSE;
+    546          	uint8 index = load->Pilot_Data_Index;
+    547          
+    548              if (index < DoorLockWaxPilot_Allocation)
+    549              {
+    550              	param_ptr = (DOORLOCKWAXPILOT_PARAM_TYPE *)(load->Parameter_Ptr.Data); //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    551              	ptr = &DoorLockWaxPilot_Data[index];
+    552              	retval = PASS;
+    553          
+    554              	if (ptr->Fbk_Pin < VirtualPin__GetNumOf())
+    555              	{
+    556              		pin_fbk_val = Gpio__PinRead(VIRTUALPIN_TABLE[ptr->Fbk_Pin].port, VIRTUALPIN_TABLE[ptr->Fbk_Pin].pin);
+    557              	}
+    558          
+    559              	if (pin_fbk_val != ptr->Fbk_Last_Pin_Value)
+    560              	{
+    561              		if (pin_fbk_val == TRUE)
+    562              		{
+    563              	    	if ( (ptr->Fbk_Counter >= DOORLOCKWAX_MIN_PERIOD_MS) &&
+    564              					(ptr->Fbk_Counter <= DOORLOCKWAX_MAX_PERIOD_MS))
+    565              			{
+    566              	    		if (ptr->Debounce)
+    567              	    		{
+    568              	    			ptr->Debounce--;
+    569              	    		}
+    570              	    		else
+    571              	    		{
+    572              	    			sint8 tmp_offset = (2*ptr->Fbk_Last_Counter - ptr->Fbk_Counter)/4;
+    573          						if (tmp_offset < 0)
+    574          						{
+    575          							tmp_offset += (ptr->Fbk_Period / 2);
+    576          						}
+    577          	    	    		ptr->Fbk_Offset =  tmp_offset; //lint !e926 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    578              	    			ptr->Fbk_Period = ptr->Fbk_Counter;
+    579          
+    580              	    		}
+    581              			}
+    582              	    	else
+    583              	    	{
+    584              	    		ptr->Debounce = DOORLOCKWAX_MAX_DEBOUNCE;
+    585              	    	}
+    586                  		ptr->Fbk_Timeout_Counter = 0;
+    587                  		ptr->Fbk_Counter= 0;
+    588              		}
+    589              		else
+    590              		{
+    591                  		ptr->Fbk_Last_Counter = ptr->Fbk_Counter;
+    592              		}
+    593          
+    594              		ptr->Fbk_Last_Pin_Value =  pin_fbk_val;
+    595              	}
+    596              	else if (ptr->Fbk_Timeout_Counter > (param_ptr->Filter_Time*DOORLOCKWAX_TIMING_REF))
+    597              	{
+    598          			ptr->Debounce = DOORLOCKWAX_MAX_DEBOUNCE;
+    599              		if (ptr->Fbk_Counter >= ptr->Fbk_Period)
+    600          			{
+    601                  		ptr->Fbk_Counter = 0;
+    602          			}
+    603              	}
+    604              	else
+    605              	{
+    606              		ptr->Fbk_Timeout_Counter++;
+    607              	}
+    608          		ptr->Fbk_Counter++;
+    609          
+    610              	switch(ptr->Status)
+    611              	{
+    612              	case DOORLOCKWAX_STATUS_DOOR_LOCKING:
+    613              		pin_val = TRUE;
+    614              		break;
+    615          
+    616              	case DOORLOCKWAX_STATUS_DOOR_LOCKED:
+    617          			if ((param_ptr->Duty_On == 0) ||
+    618          				(ptr->Counter >= (param_ptr->Duty_Off * 10)))
+    619          			{
+    620          				pin_val = TRUE;
+    621          			}
+    622              		break;
+    623          
+    624              	default:
+    625              		break;
+    626              	}
+    627          
+    628          		if (ptr->Wait_Trigger)
+    629          		{
+    630          			if ((ptr->Fbk_Counter == ptr->Fbk_Offset) ||
+    631          				(ptr->Fbk_Counter == ptr->Fbk_Offset + (ptr->Fbk_Period / 2)))
+    632          			{
+    633          				ptr->Wait_Trigger = 0;
+    634          			}
+    635          			else
+    636          			{
+    637          				pin_val = FALSE;
+    638          			}
+    639          		}
+    640          
+    641              	if (ptr->TimingRef > 0)
+    642              	{
+    643              		ptr->TimingRef--;
+    644              	}
+    645              	else
+    646              	{
+    647              		ptr->TimingRef = DOORLOCKWAX_TIMING_REF;
+    648              		if (ptr->Counter > 0)
+    649              		{
+    650          				ptr->Counter--;
+    651              		}
+    652              	}
+    653          
+    654          		pin_val ^= ~load->Hi_Low_Activation_Bitmap;
+    655          		pin_val &= 0x01;
+    656                  virtual_pin = (*load->Pin_Ptr);
+    657          		Gpio__PinWrite(VIRTUALPIN_TABLE[virtual_pin].port,VIRTUALPIN_TABLE[virtual_pin].pin, pin_val);
+    658          
+    659              }
+    660          
+    661              return(retval);
+    662          }
+    663          
+    664          //=====================================================================================================================
+    665          //-------------------------------------- Private Functions ------------------------------------------------------------
+    666          //=====================================================================================================================
+    667          
+    668          
+    669          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

@@ -1,0 +1,4 @@
+# Regular expression to get the value of the Setting file starting address
+# from the MAP file
+
+s/.*_?__SetingFile_Start\s+\{Abs\}\s+(0x[0-9a-f]{8}).*/\1/s

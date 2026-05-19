@@ -1,0 +1,14 @@
+# This collection of regular expressions are used to manipulate the  
+# uc_prm.h file to change the basic definitions based on the selected 
+# MICRO configuration
+# Select the appropriate microcontroller family.
+# Any line in the file uc_prm.h with the following content will be updated:
+#       #define MKE1xZ_FAMILY
+#       #define MKE1xF_FAMILY
+
+s/^#\s*define\s+MKE1x[ZF]_FAMILY/#define MICRO_FAMILY/gm
+
+
+
+
+

@@ -1,0 +1,1 @@
+LAST_EMBOS_PATH:=arm\v4.26

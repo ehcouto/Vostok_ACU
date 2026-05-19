@@ -1,0 +1,109 @@
+//    iar-co.lnt
+//    Options for IAR compilers.
+
+//
+//    Size of Scalars
+//
+-si4
+-sl4
+-sp4
+-sf4
+-sd8
+
+            // while processing compiler (library) header files ...
+-wlib(1)    // sets the warning level within library headers to 1
+            // (no warnings, just syntax errors).  Comment out if you
+            // are actually linting library headers.  This
+            // option makes obsolete options of the form -elib(axxx) where
+            // xxx >= 400 which may be retained for historical reasons.
+
+
++fcu        // chars are unsigned
+
++rw(_gobble)              // activate the _gobble keyword
++rw(_to_brackets)
++dinterrupt=_to_brackets  // ignore "interrupt(...)"
++rw(__nounwind)
+
+-d__absolute=       // Makes references to the object use absolute addressing
+-d__arm=            // Makes a function execute in ARM mode
+-d__big_endian=     // Declares a variable to use the big-endian byte order
+-d__data16=         // Controls the storage of data objects
+-d__data24=         // Controls the storage of data objects
+-d__data32=         // Controls the storage of data objects
+-d__fast_interrupt= // Supports fast interrupt functions
+-d__fiq=            // Declares a fast interrupt function
+-d__interrupt=      // Supports interrupt functions
+-d__interwork=      // Declares a function to be callable from both ARM and Thumb mode
+-d__intrinsic=      // Reserved for compiler internal use only
+-d__irq=            // Declares an interrupt function
+-d__little_endian=	// Declares a variable to use the little-endian byte order
+-d__monitor=        // Supports atomic execution of a function
+-d__nested=         // Allows an __irq declared interrupt function to be nested, that is, interruptible by the same type of interrupt
+-d__no_init=        // Supports non-volatile memory
+-d__noreturn=       // Informs the compiler that the function will not return
+-d__packed=         // Decreases data type alignment to 1
+-d__pcrel=          // Used internally by the compiler for constant data when the --ropi compiler option is used
+-d__ramfunc=        // Makes a function execute in RAM
+-d__root=           // Ensures that a function or variable is included in the object code even if unused
+-d__stackless=      // Makes a function callable without a working stack
+-d__swi=            // Declares a software interrupt function
+-d__task=           // Relaxes the rules for preserving registers
+-d__thumb=          // Makes a function execute in Thumb mode
+-d__weak=           // Declares a symbol to be externally weakly linked
+
+// This symbol determines properties for class objects.
+-d__construction_by_bitwise_copy_allowed(x)=true
+
+// This symbol determines properties for class objects.
+-d__assignment_by_bitwise_copy_allowed(x)=true
+
+// These symbols determine properties for class objects and they function like the
+// sizeof operator. The symbols are true when a class, base class, or member
+// (recursively) has a user-defined constructor or destructor, respectively.
+-d__has_destructor(x)=true
+-d__has_constructor(x)=true
+
+// These symbols are used as memory attributes internally by the compiler, and they
+// might have to be used as arguments in certain templates.
+-d__code
+-d__data
+
+// Determines the allowed range for a parameter to an intrinsic function and that the
+// parameter must be of type const.
+-d__constrange(x,y)=const
+
+// Determines the class memory. A class memory determines which memory a class
+// object can reside
+-d__memory_of(x)=true
+
+-d__section_begin=
+-d__segment_begin=
+-d__sfb=
+
+-d__section_end=
+-d__segment_end=
+-d__sfe=
+
+-d__section_size=
+-d__segment_size=
+-d__sfs=
+
+// ignore the pragma extension
+-d_Pragma(x)=
+
+//  The following functions exhibit variable return modes.
+//  That is, they may equally-usefully be called for a value
+//  as called just for their effects.  Accordingly we inhibit
+//  Warning 534 for these functions.
+//  Feel free to add to or subtract from this list.
+-esym(534,close,creat,fclose,fflush,_flsbuf,fprintf,fputc)
+-esym(534,fputs,fscanf,fseek,fwrite,lseek,memcpy,memmove,memset)
+-esym(534,printf,puts,scanf,sprintf,sscanf,strcat,strcpy)
+-esym(534,strncat,strncpy,unlink,write)
+
+// The following options are required by most compilers to
+// noiselessly process iostream.h
+-elib(14)       // Redefinition of library functions (prototype + inline code)
+-elib(19)       // Usually about stray semicolons
+-elib(46)       // For bitfields with non-int fields

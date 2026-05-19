@@ -1,0 +1,679 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:39
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot/SRChargePumpPilot.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SRChargePumpPilot.lst
+#        -o obj\SRChargePumpPilot.obj
+#        source/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot/SRChargePumpPilot.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SRChargePumpPilot.lst
+#    Object file  =  obj\SRChargePumpPilot.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\acuexpacu\ACUPilotHandler\SRChargePumpPilot\SRChargePumpPilot.c
+      1          /**
+      2           *  @file       
+      3           *  @defgroup    CLASS_B
+      4           *
+      5           * @brief       Implements a Class B pilot that drives a Charge pump
+      6           *
+      7           *  @details    Detailed description of the file contents
+      8           *
+      9           *  @section    Applicable_Documents
+     10           *					List here all the applicable documents if needed. <tr>	
+     11           *
+     12           *
+     13           *  @copyright  Copyright 2015-$Date: 2015/07/14 17:37:51EDT $. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     14           */
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          //---------------------------------------------------------------------------------------------------------------------
+     17          
+     18          
+     19          //-------------------------------------- Include Files ----------------------------------------------------------------
+     20          #include "SRChargePumpPilot.h"
+     21          
+     22          #if (HBL_PILOT_NUM_SRCHARGEPUMP > 0)
+     23          #include "VirtualPin.h"
+     24          #include <String.h>
+     25          #include "Gpio.h"
+     26          #include "SRData.h"
+     27          #include "SRException.h"
+     28          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+     29              #include "SRTaskSequence.h"
+     30          #endif
+     31          
+     32          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     33          
+     34          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     35          // -- Private Structure Type Declarations --
+     36          
+     37          //! Volatile data required for each instance of the pilot.
+     38          PACKED typedef struct
+     39          {
+     40              //! The value requested by the application modules.
+     41              ON_OFF_TYPE Requested;
+     42          
+     43              //! The value accepted and processed.
+     44              ON_OFF_TYPE Processed;
+     45          
+     46              //! The current state of the pin
+     47              BOOL_TYPE   Pin_State;
+     48          }SR_CHARGEPUMPPILOT_INSTANCE_DATA_TYPE;
+     49          
+     50          
+     51          //! Volatile data required for the pilot module.
+     52          PACKED typedef struct
+     53          {
+     54              SR_CHARGEPUMPPILOT_INSTANCE_DATA_TYPE Data[HBL_PILOT_NUM_SRCHARGEPUMP];
+     55          
+     56              //! Tracks the number of digital output pilot allocations.
+     57              uint8 Allocation;
+     58          }SR_CHARGEPUMPPILOT_DATA_TYPE;
+     59          
+     60          
+     61          //! All the volatile data used by this module.
+     62          static SR_CHARGEPUMPPILOT_DATA_TYPE SRChargePumpPilot_Data;
+     63          
+     64          //! An inverted copy of the volatile data used by this module for data integrity purposes.
+     65          static SR_CHARGEPUMPPILOT_DATA_TYPE N_SRChargePumpPilot_Data;
+     66          
+     67          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     68          
+     69          
+     70          //=====================================================================================================================
+     71          //-------------------------------------- Public Functions -------------------------------------------------------------
+     72          //=====================================================================================================================
+     73          
+     74          //---------------------------------------------------------------------------------------------------------------------
+     75          /**
+     76           * Initialize all instances of this Pilot type.
+     77           *  - Initialize static RAM used by the module.
+     78           *  - Initialize any corrupted NVData used by the module.
+     79           */
+     80          void SRChargePumpPilot__Initialize(void)
+     81          {
+     82              SR_FILL(SRChargePumpPilot_Data, 0, sizeof(SRChargePumpPilot_Data));
+     83          
+     84              #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+     85                  SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_INIT, SRTASKSEQUENCE_APPL_INIT_SRCHARGEPUMP_PILOT);
+     86              #endif
+     87          }
+     88          
+     89          //---------------------------------------------------------------------------------------------------------------------
+     90          /**
+     91           * Reserve memory for this pilot instance.
+     92           * @return The index of the allocated Pilot.
+     93           *         Return 0xFF if there is no space allocated for another Pilot of this type.
+     94           */
+     95          uint8 SRChargePumpPilot__Allocate(void)
+     96          {
+     97              uint8 pilot_index = 0xFF;
+     98          
+     99              SR_CHECK_BYTE(SRChargePumpPilot_Data.Allocation);
+    100          
+    101              if (SRChargePumpPilot_Data.Allocation < HBL_PILOT_NUM_SRCHARGEPUMP)
+    102              {
+    103                  pilot_index = SRChargePumpPilot_Data.Allocation;
+    104                  SR_SET_BYTE(SRChargePumpPilot_Data.Allocation, SRChargePumpPilot_Data.Allocation + 1);
+    105              }
+    106              return (pilot_index);
+    107          }
+    108          
+    109          //---------------------------------------------------------------------------------------------------------------------
+    110          /**
+    111           * Initialize this pilot instance.
+    112           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    113           * @return PASS if the Pilot instance is successfully initialized; otherwise FAIL.
+    114           */
+    115          PASS_FAIL_TYPE SRChargePumpPilot__InitializeInstance(HBL_LOAD_TYPE * load)
+    116          {
+    117              PASS_FAIL_TYPE result = FAIL;
+    118          
+    119              if (load != NULL)
+    120              {
+    121                  uint8 virtual_pin = (*load->Pin_Ptr);;
+    122          
+    123                  SR_CHECK_BYTE(SRChargePumpPilot_Data.Allocation);
+    124          
+    125                  if ((load->Pilot_Data_Index < SRChargePumpPilot_Data.Allocation) &&
+    126                      (virtual_pin < VirtualPin__GetNumOf()) &&
+    127                      (VIRTUALPIN_TABLE[virtual_pin].port != PORT_NULL))
+    128                  {
+    129                      const VIRTUALPIN_TYPE* vp = &VIRTUALPIN_TABLE[virtual_pin];
+    130                      GPIO_PORT_TYPE port = vp->port;
+    131                      uint8 pin = vp->pin;
+    132                      if ((Gpio__Validate(port, pin) == PASS) &&
+    133                          (vp->pin_config == OUTPUT_PUSHPULL))
+    134                      {
+    135                          SRData__CheckByte((uint8 *)&SRChargePumpPilot_Data.Data[load->Pilot_Data_Index].Pin_State,
+    136                              (uint8 *)&N_SRChargePumpPilot_Data.Data[load->Pilot_Data_Index].Pin_State);
+    137                          SRData__UpdateByte((uint8 *)&SRChargePumpPilot_Data.Data[load->Pilot_Data_Index].Pin_State,
+    138                              (uint8 *)&N_SRChargePumpPilot_Data.Data[load->Pilot_Data_Index].Pin_State,
+    139                              (~load->Hi_Low_Activation_Bitmap) & 0x01);
+    140                          Gpio__PinWrite(port, pin, (BOOL_TYPE) SRChargePumpPilot_Data.Data[load->Pilot_Data_Index].Pin_State);
+    141                          Gpio__PinConfig(port, pin, vp->pin_config);
+    142                          result = PASS;
+    143                      }
+    144                  }
+    145              }
+    146          
+    147              return (result);
+    148          }
+    149          
+    150          //---------------------------------------------------------------------------------------------------------------------
+    151          /**
+    152           * Update the requested state of the output controlled by this pilot instance.
+    153           * This function must not set the output.
+    154           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    155           * @param data = A pointer to memory that contains the new requested pilot state.
+    156           * @return PASS if the requested pilot state is successfully saved; otherwise FAIL.
+    157           */
+    158          PASS_FAIL_TYPE SRChargePumpPilot__Request(HBL_LOAD_TYPE * load,void * data)
+    159          {
+    160              PASS_FAIL_TYPE result = FAIL;
+    161          
+    162              if (load != NULL)
+    163              {
+    164                  uint8 pilot_index = load->Pilot_Data_Index;
+    165          
+    166                  SR_CHECK_BYTE(SRChargePumpPilot_Data.Allocation);
+    167          
+    168                  if (load->Pilot_Data_Index < SRChargePumpPilot_Data.Allocation)
+    169                  {
+    170                      BOOL_TYPE drive_request = (BOOL_TYPE)OFF;
+    171                      if (*((uint8 *)data) > 0)
+    172                      {
+    173                          drive_request = (BOOL_TYPE)ON;
+    174                      }
+    175          
+    176                      SRData__UpdateByte((uint8 *)&SRChargePumpPilot_Data.Data[pilot_index].Requested, (uint8 *)&N_SRChargePumpPilot_Data.Data[pilot_index].Requested, drive_request);
+    177                      result = PASS;
+    178                  }
+    179              }
+    180          
+    181              return result;
+    182          }
+    183          
+    184          //---------------------------------------------------------------------------------------------------------------------
+    185          /**
+    186           * Update the output controlled by this pilot instance based on previous requests.
+    187           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    188           * @return PASS if the controlled output is successfully updated; otherwise FAIL.
+    189           */
+    190          PASS_FAIL_TYPE SRChargePumpPilot__Process(HBL_LOAD_TYPE * load)
+    191          {
+    192              PASS_FAIL_TYPE result = FAIL;
+    193              if (load != NULL)
+    194              {
+    195                  uint8 pilot_index = load->Pilot_Data_Index;
+    196                  SR_CHECK_BYTE(SRChargePumpPilot_Data.Allocation);
+    197                  if (pilot_index < SRChargePumpPilot_Data.Allocation)
+    198                  {
+    199                      SRData__CheckByte((uint8 *)&SRChargePumpPilot_Data.Data[pilot_index].Requested, (uint8 *)&N_SRChargePumpPilot_Data.Data[pilot_index].Requested);
+    200                      SRData__UpdateByte((uint8 *)&SRChargePumpPilot_Data.Data[pilot_index].Processed, (uint8 *)&N_SRChargePumpPilot_Data.Data[pilot_index].Processed, SRChargePumpPilot_Data.Data[pilot_index].Requested);
+    201          
+    202                      result = PASS;
+    203                  }
+    204              }
+    205          
+    206              return result;
+    207          }
+    208          
+    209          //---------------------------------------------------------------------------------------------------------------------
+    210          /**
+    211           * Get the requested state of the output controlled by this pilot instance.
+    212           * This function does not necessarily return the current state of the output.
+    213           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    214           * @return A pointer to data that describes the requested state of the output.
+    215           */
+    216          void * SRChargePumpPilot__GetRequested(HBL_LOAD_TYPE * load)
+    217          {
+    218              void* requested = NULL;
+    219              if (load != NULL)
+    220              {
+    221                  uint8 pilot_index = load->Pilot_Data_Index;
+    222                  SR_CHECK_BYTE(SRChargePumpPilot_Data.Allocation);
+    223                  if (pilot_index < SRChargePumpPilot_Data.Allocation)
+    224                  {
+    225                      SRData__CheckByte((uint8 *)&SRChargePumpPilot_Data.Data[pilot_index].Requested, (uint8 *)&N_SRChargePumpPilot_Data.Data[pilot_index].Requested);
+    226          
+    227                      requested = &SRChargePumpPilot_Data.Data[pilot_index].Requested;
+    228                  }
+    229              }
+    230              return requested;
+    231          }
+    232          
+    233          //---------------------------------------------------------------------------------------------------------------------
+    234          /**
+    235           * Get the state of the output controlled by this pilot instance.
+    236           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    237           * @return A pointer to data that describes the state of the output.
+    238           */
+    239          void * SRChargePumpPilot__GetProcessed(HBL_LOAD_TYPE * load)
+    240          {
+    241              void* processed = NULL;
+    242              if (load != NULL)
+    243              {
+    244                  uint8 pilot_index = load->Pilot_Data_Index;
+    245                  SR_CHECK_BYTE(SRChargePumpPilot_Data.Allocation);
+    246                  if (pilot_index < SRChargePumpPilot_Data.Allocation)
+    247                  {
+    248                      SRData__CheckByte((uint8 *)&SRChargePumpPilot_Data.Data[pilot_index].Processed, (uint8 *)&N_SRChargePumpPilot_Data.Data[pilot_index].Processed);
+    249                      processed = &SRChargePumpPilot_Data.Data[load->Pilot_Data_Index].Processed;
+    250                  }
+    251              }
+    252              return processed;
+    253          }
+    254          
+    255          //---------------------------------------------------------------------------------------------------------------------
+    256          /**
+    257           * @brief - This API been called every 1ms periodically by the HBL
+    258           * @param load = A pointer to the HBL_LOAD_TYPE structure with load and pilot instance information.
+    259           * @return PASS if the Pilot is called successfully or else fail
+    260           */
+    261          PASS_FAIL_TYPE SRChargePumpPilot__Handler1ms(HBL_LOAD_TYPE * load)
+    262          {
+    263              PASS_FAIL_TYPE result = FAIL;
+    264              if (load != NULL)
+    265              {
+    266                  uint8 pilot_index = load->Pilot_Data_Index;
+    267                  uint8 virtual_pin = load->Pin_Ptr[0];
+    268          
+    269                  SR_CHECK_BYTE(SRChargePumpPilot_Data.Allocation);
+    270          
+    271                  if ((pilot_index < SRChargePumpPilot_Data.Allocation) &&
+    272                      (virtual_pin < VirtualPin__GetNumOf()) &&
+    273                      (VIRTUALPIN_TABLE[virtual_pin].port != PORT_NULL))
+    274                  {
+    275                      // Determine the port/pin information.
+    276                      const VIRTUALPIN_TYPE* vp = &VIRTUALPIN_TABLE[virtual_pin];
+    277                      GPIO_PORT_TYPE port = vp->port;
+    278                      uint8 pin = vp->pin;
+    279          
+    280                      SRData__CheckByte((uint8 *)&SRChargePumpPilot_Data.Data[pilot_index].Processed, (uint8 *)&N_SRChargePumpPilot_Data.Data[pilot_index].Processed);
+    281                      SRData__CheckByte((uint8 *)&SRChargePumpPilot_Data.Data[pilot_index].Pin_State, (uint8 *)&N_SRChargePumpPilot_Data.Data[pilot_index].Pin_State);
+    282          
+    283                      BOOL_TYPE previous_pin_state = SRChargePumpPilot_Data.Data[pilot_index].Pin_State;
+    284          
+    285                      if (SRChargePumpPilot_Data.Data[pilot_index].Processed == ON)
+    286                      {
+    287                          SRData__UpdateByte((uint8 *)&SRChargePumpPilot_Data.Data[pilot_index].Pin_State, (uint8 *)&N_SRChargePumpPilot_Data.Data[pilot_index].Pin_State, ((SRChargePumpPilot_Data.Data[pilot_index].Pin_State ^ 1) & 0x01));
+    288                      }
+    289                      else
+    290                      {
+    291                          SRData__UpdateByte((uint8 *)&SRChargePumpPilot_Data.Data[pilot_index].Pin_State, (uint8 *)&N_SRChargePumpPilot_Data.Data[pilot_index].Pin_State, (~load->Hi_Low_Activation_Bitmap) & 0x01);
+    292                      }
+    293          
+    294          
+    295                      if (Gpio__CheckConfig(port, pin, vp->pin_config, previous_pin_state) == TRUE)
+    296                      {
+    297                          SRData__CheckByte((uint8 *)&SRChargePumpPilot_Data.Data[pilot_index].Pin_State, (uint8 *)&N_SRChargePumpPilot_Data.Data[pilot_index].Pin_State);
+    298                          Gpio__PinWrite(port, pin, SRChargePumpPilot_Data.Data[load->Pilot_Data_Index].Pin_State);
+    299                          result = PASS;
+    300                      }
+    301                      else
+    302                      {
+    303                          SRException__Queue(SREXCEPTION_GPIO_CONFIGURATION_CORRUPTION, load->Load_Id, vp->pin_config);
+    304                      }
+    305                  }
+    306              }
+    307          
+    308              return result;
+    309          }
+    310          
+    311          //=====================================================================================================================
+    312          //-------------------------------------- Private Functions ------------------------------------------------------------
+    313          //=====================================================================================================================
+    314          
+    315          
+    316          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

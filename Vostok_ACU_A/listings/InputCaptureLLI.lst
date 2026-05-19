@@ -1,0 +1,788 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:20
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/InputCaptureLLI/InputCaptureLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\InputCaptureLLI.lst
+#        -o obj\InputCaptureLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/InputCaptureLLI/InputCaptureLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\InputCaptureLLI.lst
+#    Object file  =  obj\InputCaptureLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\InputCaptureLLI\InputCaptureLLI.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Basic description of file contents
+      5           *
+      6           *  @details This module uses 2 methods for capturing the input frequency
+      7           *              1. Continuous Conversion Mode -
+      8           *                 Conversion is performed continuously. Valid for frequency 2 to 200Hz.
+      9           *                 Sampling period is unused in this mode
+     10           *
+     11           *              2. Discrete Conversion Mode -
+     12           *                 Conversion is performed discretely on every sampling period. Valid for frequency above 200Hz. This method avoids overriding of timer interrupt
+     13           *                 Sampling period is derived from the setting file which is multiple of 5ms
+     14           *
+     15           *
+     16           *           Filter - Filter is used only if the number of readings are more than 1
+     17           *           This method uses the IIR filter for Period and Duty calculation.
+     18           *
+     19           *
+     20           *  Note- 1. Valid Frequency range for the detection is 2Hz to 65KHz
+     21           *        2. During testing its observed that the input capture Period readings are accurate for up to 10Khz frequency
+     22           *
+     23           *  @section    Applicable_Documents
+     24           *                  List here all the applicable documents if needed. <tr>
+     25           *
+     26           *  $Header: InputCaptureLLI.c 1.9 2015/08/10 15:48:11EDT Dasar Hanumanth (DASARHB) Exp  $
+     27           *
+     28           *  @copyright  Copyright 2015-$Date: 2015/08/10 15:48:11EDT $. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     29           */
+     30          //---------------------------------------------------------------------------------------------------------------------
+     31          
+     32          //-------------------------------------- Include Files ----------------------------------------------------------------
+     33          #include "InputCaptureLLI.h"
+     34          
+     35          #if (HBL_LLI_NUM_INPUTCAPTURE > 0)
+     36          #include "Filter.h"
+     37          #include "Micro.h"
+     38          #include "Millis.h"
+     39          #include "Timer.h"
+     40          #include "VirtualPin.h"
+     41          #include <string.h>
+     42          
+     43          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     44          
+     45          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     46          
+     47          #define INPUTCAPTURELLI_AUTO_FEATURE_MIN_FREQUENCY          2
+     48          #define INPUTCAPTURELLI_AUTO_FEATURE_MAX_FREQUENCY          150
+     49          
+     50          #define INPUTCAPTURELLI_AUTO_FEATURE_FREQUENCY_HYS          30 //SSS_ frequency hysteresis value[Hz]
+     51          #define INPUTCAPTURELLI_AUTO_FEATURE_DOWN_PERIOD_HYS       (1000000 / (INPUTCAPTURELLI_AUTO_FEATURE_MAX_FREQUENCY))
+     52          #define INPUTCAPTURELLI_AUTO_FEATURE_UP_PERIOD_HYS         (1000000 / (INPUTCAPTURELLI_AUTO_FEATURE_MAX_FREQUENCY-INPUTCAPTURELLI_AUTO_FEATURE_FREQUENCY_HYS))
+     53          #define MAX_INVALID_SAMPLE_COUNT                            255
+     54          #define DEFAULT_SAMPLING_MODE                               1 //continue mode=1 don't change
+     55          
+     56          PACKED typedef struct
+     57          {
+     58              uint8 N_Read:3;
+     59              uint8 Unused_1:5;
+     60              uint8 Delta:4;
+     61              uint8 Unused_2:4;
+     62              uint8 Time_Out;
+     63              uint8 Sampling_Time;
+     64              uint16 Minimum_Period;
+     65              uint16 Maximum_Period;
+     66              uint16 Minimum_Duty;
+     67              uint16 Maximum_Duty;
+     68              uint16 Filter_Period;
+     69              uint16 Filter_Duty;
+     70              uint8 Base_Period;
+     71          } INPUTCAPTURELLI_PARAMETERS_TYPE;
+     72          
+     73          typedef struct
+     74          {
+     75              INPUTCAPTURE_PUBLIC_TYPE Public_Data;
+     76              IIR_FILTER_MEASURE_TYPE Private_Period;
+     77              IIR_FILTER_MEASURE_TYPE Private_Duty;
+     78              BOOL_TYPE Continue_mode;
+     79              BOOL_TYPE Filter_Initialized;
+     80              uint8 Private_Valid_Sample_Count;
+     81              uint8 Private_Invalid_Sample_Count;
+     82              uint8 Private_Current_Count;
+     83              MILLIS_TIMER_TYPE Timer_Sampling;
+     84              MILLIS_TIMER_TYPE Timer_Timeout;
+     85              TIMER_PARAMETER_TYPE Timer_Parameter;
+     86          }INPUTCAPTURE_DATA_TYPE;
+     87          
+     88          static INPUTCAPTURE_DATA_TYPE InputCaptureLLI_Data[HBL_LLI_NUM_INPUTCAPTURE];
+     89          static uint8 InputCaptureLLI_Allocation;
+     90          
+     91          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     92          
+     93          //=====================================================================================================================
+     94          //-------------------------------------- Public Functions -------------------------------------------------------------
+     95          //=====================================================================================================================
+     96          
+     97          
+     98          //---------------------------------------------------------------------------------------------------------------------
+     99          /**
+    100           * @brief      It Initializes the module DigitalLowLevel and its variables
+    101           */
+    102          void InputCaptureLLI__Initialize(void)
+    103          {
+    104              memset(&InputCaptureLLI_Data,0,sizeof(InputCaptureLLI_Data));
+    105              InputCaptureLLI_Allocation = 0;
+    106          }
+    107          
+    108          //---------------------------------------------------------------------------------------------------------------------
+    109          /**
+    110           * @brief
+    111           * @return
+    112           */
+    113          uint8 InputCaptureLLI__Allocate(void)
+    114          {
+    115              uint8 retval;
+    116          
+    117              retval = 0xFF;
+    118          
+    119              if (InputCaptureLLI_Allocation < HBL_LLI_NUM_INPUTCAPTURE)
+    120              {
+    121                  retval = InputCaptureLLI_Allocation;
+    122                  InputCaptureLLI_Allocation++;
+    123          
+    124              }
+    125              return (retval);
+    126          }
+    127          
+    128          //---------------------------------------------------------------------------------------------------------------------
+    129          /**
+    130           *  @brief      It Initializes the module DigitalLowLevel and its variables
+    131           *
+    132           */
+    133          PASS_FAIL_TYPE InputCaptureLLI__InitializeInstance(HBL_LLI_TYPE * input)
+    134          {
+    135              PASS_FAIL_TYPE ret_status = FAIL;
+    136          
+    137              if (input->Data_Index < InputCaptureLLI_Allocation)
+    138              {
+    139                  MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    140                  uint8 delta_expanded;
+    141                  INPUTCAPTURE_DATA_TYPE *data = (INPUTCAPTURE_DATA_TYPE *)&InputCaptureLLI_Data[input->Data_Index]; //lint !e929 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    142                  INPUTCAPTURELLI_PARAMETERS_TYPE *parameters = (INPUTCAPTURELLI_PARAMETERS_TYPE *)input->Parameter_Ptr.Data; //lint !e927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    143                  uint8 virtual_pin = input->Pin_Ptr[0];
+    144          
+    145                  delta_expanded = 1 << parameters->Delta;
+    146                  // If Delta is set to 1, fallback to N.Reads - backward compatibility
+    147                  if (delta_expanded <= 1)
+    148                  {
+    149                      delta_expanded = 1 << parameters->N_Read;
+    150                  }
+    151          
+    152                  data->Continue_mode = TRUE;
+    153                  data->Filter_Initialized = FALSE;
+    154          
+    155                  //Initialize the filters
+    156                  data->Private_Period.Inverted_Alpha = delta_expanded;
+    157                  data->Private_Duty.Inverted_Alpha   = delta_expanded;
+    158          
+    159                  data->Timer_Parameter.Timer       =   (TIMER_TYPE)VIRTUALPIN_TABLE[virtual_pin].device;
+    160                  data->Timer_Parameter.Channel     =   (TIMER_CHANNEL_TYPE)VIRTUALPIN_TABLE[virtual_pin].param0;
+    161                  data->Timer_Parameter.Mode        =   TIMER_MODE_INPUT_CAPTURE;
+    162                  data->Timer_Parameter.Port        =   VIRTUALPIN_TABLE[virtual_pin].port;
+    163                  data->Timer_Parameter.Pin         =   VIRTUALPIN_TABLE[virtual_pin].pin;
+    164                  data->Timer_Parameter.Pin_ReMap   =   VIRTUALPIN_TABLE[virtual_pin].pin_remap;
+    165                  data->Timer_Parameter.Polarity    =   TIMER_POLARITY_ACTIVE_HIGH;
+    166          
+    167                  //Configure Continuous reading
+    168                  MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    169                  ret_status =  Timer__Config(&data->Timer_Parameter);
+    170                  ret_status |= Timer__CaptureStart(&data->Timer_Parameter, TIMER_CAPTURE_CYCLE, TIMER_CAPTUREON_RISING_EDGE);
+    171                  MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    172          
+    173                  //Init the timeout and start it
+    174                  Millis__Reset(&data->Timer_Timeout);
+    175                  Millis__Start(&data->Timer_Timeout);
+    176          
+    177                  //Init the sampling for discrete mode
+    178                  Millis__Reset(&data->Timer_Sampling);
+    179              }
+    180          
+    181              return (ret_status);
+    182          }
+    183          
+    184          //---------------------------------------------------------------------------------------------------------------------
+    185          /**
+    186           *
+    187           * @param   input
+    188           * @return  pointer to the INPUTCAPTURE_PUBLIC_TYPE for the specified input
+    189           * @return  NULL passed input was invalid
+    190           */
+    191          void * InputCaptureLLI__Get(HBL_LLI_TYPE * input)
+    192          {
+    193              if (input->Data_Index < InputCaptureLLI_Allocation)
+    194              {
+    195                  return ((void *)&InputCaptureLLI_Data[input->Data_Index]);
+    196              }
+    197              else
+    198              {
+    199                  return (NULL);
+    200              }
+    201          }
+    202          
+    203          //---------------------------------------------------------------------------------------------------------------------
+    204          /**
+    205           * @details - Controls the Discrete Sampling mode and Timeout
+    206           * @param input
+    207           * @param status
+    208           * @return
+    209           */
+    210          BOOL_TYPE InputCaptureLLI__AsynchProcess(HBL_LLI_TYPE * input)
+    211          {
+    212              BOOL_TYPE ret_val;
+    213          
+    214              ret_val = FALSE;
+    215          
+    216              INPUTCAPTURELLI_PARAMETERS_TYPE *parameters;
+    217              INPUTCAPTURE_DATA_TYPE *data;
+    218          
+    219              if (input->Data_Index < InputCaptureLLI_Allocation)
+    220              {
+    221                  MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    222                  data = (INPUTCAPTURE_DATA_TYPE *)&InputCaptureLLI_Data[input->Data_Index]; //lint !e929 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    223                  parameters = (INPUTCAPTURELLI_PARAMETERS_TYPE *)(input->Parameter_Ptr.Data);        //lint !e927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    224          
+    225                  //Enable Sampling only if Auto or Continuous reading is set
+    226                  if ((data->Continue_mode == FALSE) &&
+    227                      (data->Timer_Parameter.Mode == TIMER_MODE_DISABLE))
+    228                  {
+    229                      if (Millis__ReachedTarget(&data->Timer_Sampling, parameters->Sampling_Time * 5) == TRUE)
+    230                      {
+    231                          Millis__Start(&data->Timer_Sampling);
+    232                          // Enable timer as Input Capture
+    233                          MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    234                          data->Timer_Parameter.Mode = TIMER_MODE_INPUT_CAPTURE;
+    235                          Timer__Config(&data->Timer_Parameter);
+    236                          Timer__CaptureStart(&data->Timer_Parameter, TIMER_CAPTURE_CYCLE, TIMER_CAPTUREON_RISING_EDGE);
+    237                          MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    238                      }
+    239                  }
+    240          
+    241                  //Re-Initialize the InputCapture peripheral if their is no signal received in the timeout period
+    242                  if (Millis__ReachedTarget(&data->Timer_Timeout, parameters->Time_Out * 5) == TRUE)
+    243                  {
+    244                      // Disable timer
+    245                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    246                      InputCaptureLLI_Data[input->Data_Index].Timer_Parameter.Mode = TIMER_MODE_DISABLE;
+    247                      Timer__Config(&InputCaptureLLI_Data[input->Data_Index].Timer_Parameter);
+    248                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    249                      // Reset filter
+    250                      data->Filter_Initialized = FALSE;
+    251                      data->Continue_mode = TRUE;
+    252                      //Restart reading of samples
+    253                      data->Private_Valid_Sample_Count                    = 0;
+    254                      data->Private_Invalid_Sample_Count                  = 0;
+    255                      data->Private_Current_Count                         = 0;
+    256                      //Refresh the Timeout timer
+    257                      Millis__Start(&data->Timer_Timeout);
+    258                      //Refresh sampling time
+    259                      Millis__Start(&data->Timer_Sampling);
+    260                      // Initialize the Timer module and start sampling
+    261                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    262                      InputCaptureLLI_Data[input->Data_Index].Timer_Parameter.Mode = TIMER_MODE_INPUT_CAPTURE;
+    263                      Timer__Config(&InputCaptureLLI_Data[input->Data_Index].Timer_Parameter);
+    264                      Timer__CaptureStart(&InputCaptureLLI_Data[input->Data_Index].Timer_Parameter, TIMER_CAPTURE_CYCLE, TIMER_CAPTUREON_RISING_EDGE);
+    265                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    266                  }
+    267          
+    268                  ret_val = TRUE;
+    269              }
+    270          
+    271              return(ret_val);
+    272          }
+    273          
+    274          //---------------------------------------------------------------------------------------------------------------------
+    275          /**
+    276           *
+    277           * @param input
+    278           * @return
+    279           */
+    280          BOOL_TYPE InputCaptureLLI__ICProcess(HBL_LLI_TYPE * input)
+    281          {
+    282              INPUTCAPTURELLI_PARAMETERS_TYPE *parameters;
+    283              INPUTCAPTURE_DATA_TYPE *data;
+    284              BOOL_TYPE retval;
+    285              uint32 captured_duration;
+    286              uint16 captured_duty;
+    287              uint8 n_read_expanded;
+    288          
+    289          
+    290              retval = FALSE;
+    291          
+    292              if (input->Data_Index < InputCaptureLLI_Allocation)
+    293              {
+    294                  MICRO_DECLARE_INTERRUPT_CONTEXT_LOCAL();
+    295                  data = (INPUTCAPTURE_DATA_TYPE *)&InputCaptureLLI_Data[input->Data_Index]; //lint !e929 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    296                  parameters = (INPUTCAPTURELLI_PARAMETERS_TYPE *)input->Parameter_Ptr.Data; //lint !e927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    297          
+    298                  //Read the current captured duration and duty
+    299                  captured_duration = Timer__GetCaptureDuration(&data->Timer_Parameter);
+    300                  captured_duty = Timer__GetCaptureDuty(&data->Timer_Parameter);
+    301          
+    302                  //Refresh the Timeout timer
+    303                  Millis__Start(&data->Timer_Timeout);
+    304          
+    305                  //Disable the Timer Input Capture if the Sampling Read is set
+    306                  if (data->Continue_mode == FALSE)
+    307                  {
+    308                      //Discrete Sampling Mode
+    309                      //Switch to Discrete sampling as Current captured duration is too small to do in continuous sampling
+    310                      //Disable the Timer and let control the sampling from the InputCaptureLLI__AsynchProcess()
+    311                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    312                      data->Timer_Parameter.Mode = TIMER_MODE_DISABLE;
+    313                      Timer__Config(&data->Timer_Parameter);
+    314                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    315          
+    316                  }
+    317          
+    318                  /*SSS latch_check to changing mode*/
+    319                  if (((captured_duration) < (INPUTCAPTURELLI_AUTO_FEATURE_DOWN_PERIOD_HYS)) && (data->Continue_mode)) /*(f > MAX_FREQUENCY*)*/
+    320                  {
+    321                      Millis__Start(&data->Timer_Sampling);
+    322                      //Change the mode and stop InputCapture
+    323                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    324                      data->Continue_mode = FALSE;
+    325                      data->Timer_Parameter.Mode = TIMER_MODE_DISABLE;
+    326                      Timer__Config(&data->Timer_Parameter);
+    327                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    328                  }
+    329                  else if(((captured_duration) > (INPUTCAPTURELLI_AUTO_FEATURE_UP_PERIOD_HYS))&& !(data->Continue_mode))/*((f > MAX_FREQUENCY-HYSTERESIS*))*/
+    330                  {
+    331                      //Change the mode and restart InputCapture
+    332                      MICRO_SAVE_INTERRUPT_CONTEXT_LOCAL();
+    333                      data->Continue_mode = TRUE;
+    334                      data->Timer_Parameter.Mode = TIMER_MODE_INPUT_CAPTURE;
+    335                      Timer__Config(&data->Timer_Parameter);
+    336                      Timer__CaptureStart(&data->Timer_Parameter, TIMER_CAPTURE_CYCLE, TIMER_CAPTUREON_RISING_EDGE);
+    337                      MICRO_RESTORE_INTERRUPT_CONTEXT_LOCAL();
+    338                  }
+    339                  else
+    340                  {
+    341                      /*all ok*/
+    342                  }
+    343          
+    344                  //Expand the number of reads
+    345                  n_read_expanded = 1 << parameters->N_Read;
+    346          
+    347                  data->Private_Current_Count++;
+    348          
+    349                  //validate the Cycle Period
+    350                  if ((captured_duration >= (ENDIANU16_STON(parameters->Minimum_Period) << 3)) &&
+    351                      (captured_duration <= (ENDIANU16_STON(parameters->Maximum_Period) << 3)))
+    352                  {
+    353                      //validate the captured_duty
+    354                      if ((captured_duty >= ENDIANU16_STON(parameters->Minimum_Duty)) &&
+    355                          (captured_duty <= ENDIANU16_STON(parameters->Maximum_Duty)))
+    356                      {
+    357                          data->Private_Valid_Sample_Count++;
+    358          
+    359                          //scale the period based on the base
+    360                          captured_duration = captured_duration / parameters->Base_Period;
+    361                          if (data->Filter_Initialized == TRUE)
+    362                          {
+    363                              Filter__Update((void *)(&(data->Private_Period)), (FILTER_DATA_TYPE)captured_duration, FILTER_IIR);
+    364                              Filter__Update((void *)(&(data->Private_Duty)), (FILTER_DATA_TYPE)captured_duty, FILTER_IIR);
+    365                          }
+    366                          else
+    367                          {
+    368                              Filter__Initialize((void *)(&(data->Private_Period)), (FILTER_DATA_TYPE) captured_duration, FILTER_IIR);
+    369                              Filter__Initialize((void *)(&(data->Private_Duty)), (FILTER_DATA_TYPE) captured_duty , FILTER_IIR);
+    370                              data->Filter_Initialized = TRUE;
+    371                          }
+    372                      }
+    373                      else
+    374                      {
+    375                          data->Private_Invalid_Sample_Count++;
+    376                      }
+    377                  }
+    378                  else
+    379                  {
+    380                      data->Private_Invalid_Sample_Count++;
+    381                  }
+    382          
+    383                  //Check if there are too many invalid samples
+    384                  if(data->Private_Invalid_Sample_Count == MAX_INVALID_SAMPLE_COUNT)
+    385                  {
+    386                      //Force Timer_Timeout to DONE state
+    387                      Millis__Start(&data->Timer_Timeout);
+    388                      Millis__SetElapsed(&data->Timer_Timeout, parameters->Time_Out * 5);
+    389                  }
+    390          
+    391                  //if its the new sampling
+    392                  if(data->Private_Valid_Sample_Count >= n_read_expanded)
+    393                  {
+    394                      //Copy previous sampling data
+    395                      data->Public_Data.Period                    = data->Private_Period.Filtered_Value;
+    396                      data->Public_Data.Duty                      = data->Private_Duty.Filtered_Value;
+    397                      data->Public_Data.Valid_Sample_Count        = data->Private_Valid_Sample_Count;
+    398                      data->Public_Data.InValid_Sample_Count      = data->Private_Invalid_Sample_Count;
+    399          
+    400                      //new readings available
+    401                      data->Public_Data.Sequence_Count++;
+    402          
+    403                      if (data->Public_Data.Sequence_Count == 0)
+    404                      {
+    405                          data->Public_Data.Sequence_Count++;
+    406                      }
+    407          
+    408                      //Prepare for reading new sampling
+    409                      data->Private_Valid_Sample_Count                    = 0;
+    410                      data->Private_Invalid_Sample_Count                  = 0;
+    411                      data->Private_Current_Count                         = 0;
+    412          
+    413                      //Data ready after the filter
+    414                      retval = TRUE;
+    415                  }
+    416              }
+    417          
+    418              return (retval);
+    419          }
+    420          
+    421          //=====================================================================================================================
+    422          //-------------------------------------- Private Functions ------------------------------------------------------------
+    423          //=====================================================================================================================
+    424          
+    425          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

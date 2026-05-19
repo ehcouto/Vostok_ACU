@@ -1,0 +1,669 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:07
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/Micros/STM32G0x/Driver/DataFlash/DataFlash.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\DataFlash.lst -o
+#        obj\DataFlash.obj source/Micros/STM32G0x/Driver/DataFlash/DataFlash.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\DataFlash.lst
+#    Object file  =  obj\DataFlash.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Micros\STM32G0x\Driver\DataFlash\DataFlash.c
+      1          /**
+      2           *  @file
+      3           *    @brief    This module implements the standard Data Flash API (Application Programming Interface)
+      4           *              for STM32F0x
+      5           *    @details  As STM32G0 does not have seperate DATA memory so we use FLASH memory as DATA memory
+      6           *              This module referes the Flash.h module
+      7           *
+      8           *   @section    Applicable_Documents
+      9           *                  List here all the applicable documents if needed. <tr>
+     10           *
+     11           *
+     12           *  @section    Applicable_Documents
+     13           *                  List here all the applicable documents if needed. <tr>
+     14           *
+     15           *  $Header: $
+     16           *
+     17           *  @copyright  Copyright 2021-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     18           */
+     19          //---------------------------------------------------------------------------------------------------------------------
+     20          //---------------------------------------------------------------------------------------------------------------------
+     21          
+     22          //-------------------------------------- Include Files ----------------------------------------------------------------
+     23          #include "C_Extensions.h"
+     24          #include "DataFlash.h"
+     25          #include "Flash.h"
+     26          
+     27          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     28          
+     29          //=====================================================================================================================
+     30          /**
+     31           *    @brief  - Memory is addressed as relative or absolute address mode.
+     32           *    @details- Absolute address –
+     33           *              means address must be between
+     34           *
+     35           *
+     36           *    @param  - ENABLED(1) - Relative address mode
+     37           *              DISABLED(0) – Absolute address mode
+     38           *
+     39           *    @note   - Following are the Examples\n
+     40           *              "#define DATAFLASH_RELATIVE_ADDRESS   ENABLED" // Relative address mode enabled
+     41           *              "#define DATAFLASH_RELATIVE_ADDRESS   DISABLED"// Absolute address mode enabled
+     42           */
+     43          #ifndef DATAFLASH_RELATIVE_ADDRESS
+     44              #define DATAFLASH_RELATIVE_ADDRESS      ENABLED
+     45          #endif
+     46          
+
+   \                                 In section .bss, align 1
+     47          static DATAFLASH_STATE_TYPE DataFlash_Status;
+   \                     DataFlash_Status:
+   \   00000000                      DS8 1
+     48          
+     49          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     50          
+     51          //=====================================================================================================================
+     52          //-------------------------------------- Public Functions -------------------------------------------------------------
+     53          //=====================================================================================================================
+     54          //---------------------------------------------------------------------------------------------------------------------
+     55          /**
+     56           *    @brief    This method initializes the Data flash module.
+     57           *    @details  This method initializes data flash related variables.
+     58           */
+
+   \                                 In section .text, align 2, keep-with-next
+     59          void DataFlash__Initialize(void)
+     60          {
+   \                     DataFlash__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     61              Flash__Initialize();
+   \   00000002   0x.... 0x....      BL       Flash__Initialize
+     62          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+     63          
+     64          //---------------------------------------------------------------------------------------------------------------------
+     65          /**
+     66           *    @brief    This method Copies data from the RAM to the DataFlash as per the size and returns
+     67           *              the response for write operation.
+     68           *    @details  This method writes data from source (RAM) to destination (Data Flash) as per the size
+     69           *              and returns the response for the write operation.
+     70           *            Note -
+     71           *                  1. Implemented in this API - Dataflash (EEPROM) byte must be in erased state before being programmed.
+     72           *                  2. Controller supports byte by byte and 1 long write.
+     73           *                  3. The software design supports for both even and odd size write.
+     74           *
+     75           *    @param    destination : Defines the address of the Data flash where data to be written
+     76           *    @param    source      : Defines the address of RAM from where data to be written to flash
+     77           *    @param    size        : Number of bytes to be written
+     78           *    @return   enum DATAFLASH_RESPONSE_TYPE
+     79           *      @retval DATAFLASH_RESPONSE_DONE(0)                 : If the write operation is complete.
+     80           *      @retval DATAFLASH_RESPONSE_WRITE_ERROR(3)          : If the write operation is unsuccessful.
+     81           *      @retval DATAFLASH_RESPONSE_ERROR_OUT_OF_RANGE(4)   : If the requested memory is out of range
+     82           *      @retval DATAFLASH_RESPONSE_INVALID_SIZE(5)         : If the size is invalid i.e. odd size
+     83           *
+     84           */
+
+   \                                 In section .text, align 2, keep-with-next
+     85          DATAFLASH_RESPONSE_TYPE DataFlash__Write(ADDRESS_TYPE destination, uint8 * source, SIZE_TYPE size)
+     86           {
+   \                     DataFlash__Write: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     87              DATAFLASH_RESPONSE_TYPE response;
+     88          
+     89              response = DATAFLASH_RESPONSE_ERROR_OUT_OF_RANGE;
+     90          
+     91              #if (DATAFLASH_RELATIVE_ADDRESS == ENABLED)
+     92                  destination += DATAFLASH_LOW_LIMIT;
+     93              #endif
+     94                  response = (DATAFLASH_RESPONSE_TYPE) Flash__Write(destination,source,size);
+     95              return (response);
+   \   00000002   0x....             LDR      R3,??DataTable3
+   \   00000004   0x18C0             ADDS     R0,R0,R3
+   \   00000006   0x.... 0x....      BL       Flash__Write
+   \   0000000A   0xBD02             POP      {R1,PC}          ;; return
+     96          }
+     97          
+     98          //---------------------------------------------------------------------------------------------------------------------
+     99          /**
+    100           *    @brief    This method reads data from source (Data Flash) and copies to destination (RAM) as per the size
+    101          *               and returns the response for the read operation
+    102          *     @param    destination : Defines the address of the RAM where data to be copied
+    103          *     @param    source      : Defines the address of Data Flash from where data to be read
+    104          *     @param    size        : Number of bytes to be read
+    105          *     @return   enum DATAFLASH_RESPONSE_TYPE
+    106          *       @retval DATAFLASH_RESPONSE_DONE(0)                 : Read operation is performed successfully
+    107          *       @retval DATAFLASH_RESPONSE_ERROR_OUT_OF_RANGE(4)   : If the requested memory is out of range
+    108           */
+
+   \                                 In section .text, align 2, keep-with-next
+    109          DATAFLASH_RESPONSE_TYPE DataFlash__Read(uint8 * destination, ADDRESS_TYPE source, SIZE_TYPE size)
+    110          {
+   \                     DataFlash__Read: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    111              DATAFLASH_RESPONSE_TYPE response;
+    112          
+    113              response = DATAFLASH_RESPONSE_ERROR_OUT_OF_RANGE;
+    114          
+    115              //Check for the requested size
+    116              if (size > 0)
+   \   00000002   0x0013             MOVS     R3,R2
+   \   00000004   0xD004             BEQ      ??DataFlash__Read_0
+    117              {
+    118                  #if (DATAFLASH_RELATIVE_ADDRESS == ENABLED)     //For relative address
+    119                        source += DATAFLASH_LOW_LIMIT;
+    120                  #endif
+    121          
+    122                  response = (DATAFLASH_RESPONSE_TYPE) Flash__Read(destination,source,size);
+   \   00000006   0x....             LDR      R3,??DataTable3
+   \   00000008   0x18C9             ADDS     R1,R1,R3
+   \   0000000A   0x.... 0x....      BL       Flash__Read
+   \   0000000E   0xBD02             POP      {R1,PC}
+    123              }
+    124              else
+    125              {
+    126                  response = DATAFLASH_RESPONSE_INVALID_SIZE;
+   \                     ??DataFlash__Read_0: (+1)
+   \   00000010   0x2005             MOVS     R0,#+5
+    127              }
+    128          
+    129              return (response);
+   \   00000012   0xBD02             POP      {R1,PC}          ;; return
+    130          }
+    131          
+    132          
+    133          //---------------------------------------------------------------------------------------------------------------------
+    134          /**
+    135           *    @brief    This method performs erase/format operation on particular page.
+    136           *    @param    page_init :  address within page which to be formatted.
+    137           *
+    138           *    @note     For Freescale Kinetis MKE01x their is Flash of 2048 byte it means only one page
+    139           *
+    140           *
+    141           *    @return   enum DATAFLASH_RESPONSE_TYPE
+    142           *    @retval DATAFLASH_RESPONSE_DONE(0)                 : If the write operation is complete.
+    143           *    @retval DATAFLASH_RESPONSE_WRITE_ERROR(3)          : If the write operation is unsuccessful.
+    144           *    @retval DATAFLASH_RESPONSE_ERROR_OUT_OF_RANGE(4)   : If the requested memory is out of range
+    145           */
+
+   \                                 In section .text, align 2, keep-with-next
+    146          DATAFLASH_RESPONSE_TYPE DataFlash__FormatPage(ADDRESS_TYPE page_init)
+    147          {
+   \                     DataFlash__FormatPage: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    148              DATAFLASH_RESPONSE_TYPE response;
+    149              response = DATAFLASH_RESPONSE_ERROR_OUT_OF_RANGE;
+    150              DataFlash_Status = DATAFLASH_STATE_BUSY;
+   \   00000002   0x....             LDR      R4,??DataTable3_1
+   \   00000004   0x2100             MOVS     R1,#+0
+   \   00000006   0x7021             STRB     R1,[R4, #+0]
+    151          
+    152              #if (DATAFLASH_RELATIVE_ADDRESS == ENABLED)
+    153                  page_init += DATAFLASH_LOW_LIMIT;
+    154              #endif
+    155          
+    156              response = (DATAFLASH_RESPONSE_TYPE) Flash__FormatPage (page_init);
+   \   00000008   0x....             LDR      R1,??DataTable3
+   \   0000000A   0x1840             ADDS     R0,R0,R1
+   \   0000000C   0x.... 0x....      BL       Flash__FormatPage
+    157              if (DATAFLASH_RESPONSE_DONE == response)
+   \   00000010   0x0001             MOVS     R1,R0
+   \   00000012   0xD101             BNE      ??DataFlash__FormatPage_0
+    158              {
+    159                  DataFlash_Status = DATAFLASH_STATE_FREE;
+   \   00000014   0x2101             MOVS     R1,#+1
+   \   00000016   0x7021             STRB     R1,[R4, #+0]
+    160              }
+    161          
+    162              return (response);
+   \                     ??DataFlash__FormatPage_0: (+1)
+   \   00000018   0xBD10             POP      {R4,PC}          ;; return
+    163          }
+    164          
+    165          //---------------------------------------------------------------------------------------------------------------------
+    166          /**
+    167           *    @brief    This method provides status of Data flash whether busy/free/error
+    168           *    @return   enum DATAFLASH_STATE_TYPE
+    169           *    @retval   DATAFLASH_STATE_BUSY    : Data Flash is busy for read write
+    170           *              DATAFLASH_STATE_FREE    : Data Flash is free for read write
+    171           *              DATAFLASH_STATE_ERROR   : Data Flash is encountered error condition
+    172           */
+
+   \                                 In section .text, align 2, keep-with-next
+    173          DATAFLASH_STATE_TYPE DataFlash__GetStatus(void)
+    174          {
+    175              return (DataFlash_Status);
+   \                     DataFlash__GetStatus: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable3_1
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+    176          }
+    177          
+    178          //---------------------------------------------------------------------------------------------------------------------
+    179          /**
+    180           *    @brief    DataFlash Handler
+    181           *    @details  N/A
+    182           */
+
+   \                                 In section .text, align 2, keep-with-next
+    183          void DataFlash__Handler(void)
+    184          {
+    185          
+    186          }
+   \                     DataFlash__Handler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \   00000000   0x........         DC32     __DataFlash_Start
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_1:
+   \   00000000   0x........         DC32     DataFlash_Status
+    187          
+    188          #if (FILL_DATA_FEATURE == ENABLED)
+    189          //---------------------------------------------------------------------------------------------------------------------
+    190          /**
+    191           *   @brief    This method fills the Data Flash with specific value as per the size and returns the response of fill operation
+    192           *   @details  This method fills the specific no of bytes of data into the Data Flash with specific value.
+    193           *              Destination address is starting address of data flash where specific value to be filled.
+    194           *              It returns the Data flash response for write operation
+    195           *            Note -  1. Controller supports byte by byte and 1 long word write.
+    196           *                    2. The software design supports for both even and odd size write.
+    197           *
+    198           *    @param    destination : Defines the address of the Data flash where data to be written
+    199           *    @param    size        : Number of bytes to be written
+    200           *    @param    value       : Defines the specific value which should be filled into Data Flash
+    201           *    @return   enum DATAFLASH_RESPONSE_TYPE
+    202           *      @retval DATAFLASH_RESPONSE_DONE(0)                 : If the write operation is complete.
+    203           *      @retval DATAFLASH_RESPONSE_WRITE_ERROR(3)          : If the write operation is unsuccessful.
+    204           *      @retval DATAFLASH_RESPONSE_ERROR_OUT_OF_RANGE(4)   : If the requested memory is out of range
+    205           *      @retval DATAFLASH_RESPONSE_INVALID_SIZE(5)         : If the size is invalid i.e. odd size
+    206           */
+    207          DATAFLASH_RESPONSE_TYPE DataFlash__Fill(ADDRESS_TYPE destination, SIZE_TYPE size, uint8 value)
+    208          {
+    209          
+    210          }
+    211          
+    212          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   DataFlash__FormatPage
+         8   -> Flash__FormatPage
+       0   DataFlash__GetStatus
+       0   DataFlash__Handler
+       8   DataFlash__Initialize
+         8   -> Flash__Initialize
+       8   DataFlash__Read
+         8   -> Flash__Read
+       8   DataFlash__Write
+         8   -> Flash__Write
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable3_1
+       1  DataFlash_Status
+      26  DataFlash__FormatPage
+       6  DataFlash__GetStatus
+       2  DataFlash__Handler
+       8  DataFlash__Initialize
+      20  DataFlash__Read
+      12  DataFlash__Write
+
+ 
+  1 byte  in section .bss
+ 82 bytes in section .text
+ 
+ 82 bytes of CODE memory
+  1 byte  of DATA memory
+
+Errors: none
+Warnings: none

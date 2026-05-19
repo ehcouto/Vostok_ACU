@@ -1,0 +1,1174 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:51
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Processes/Fill/TankDrain/TankDrain.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\TankDrain.lst -o
+#        obj\TankDrain.obj
+#        source/Category/Application/acu/Processes/Fill/TankDrain/TankDrain.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\TankDrain.lst
+#    Object file  =  obj\TankDrain.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Processes\Fill\TankDrain\TankDrain.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Tank Drain Process
+      5           *
+      6           *  @details    This module manage the Tank Drain Process
+      7           *
+      8           *  @section    Applicable_Documents
+      9           *					List here all the applicable documents if needed. <tr>	
+     10           *
+     11           *  $Header: $
+     12           *
+     13           *  @copyright  Copyright 2017-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     14           */
+     15          /*
+     16          @startuml
+     17          	title Tank Drain State Machine
+     18          	'terminate function unused
+     19          
+     20          	[*] --> TANK_DRAIN
+     21          
+     22          	TANK_DRAIN --> FILL_CHECK_SUBCYCLE: WaterCheck
+     23          	TANK_DRAIN --> TANK_DRAIN_COMPLETE: TankDrainCompleted
+     24          	TANK_DRAIN: entry / TankDrainInitialCheck()
+     25          	TANK_DRAIN: do / TankDrain()
+     26          
+     27          	FILL_CHECK_SUBCYCLE --> TANK_DRAIN_COMPLETE: TankDrainCompleted
+     28          	FILL_CHECK_SUBCYCLE: entry / ResetSubcycleExecution()
+     29          	FILL_CHECK_SUBCYCLE: do / WaitSubcycleExecution()
+     30          @enduml
+     31          */
+     32          
+     33          //-------------------------------------- Include Files ----------------------------------------------------------------
+     34          // -- This Module --
+     35          #include "TankDrain.h"
+     36          #include "TankDrain_fsm.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __interwork __softfp void TankDrainFsmInitialize(enum <unnamed> *)
+   \                     TankDrainFsmInitialize: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0xB082             SUB      SP,SP,#+8
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x2001             MOVS     R0,#+1
+   \   00000008   0x.... 0x....      BL       TankDrainBuildFsmVar
+   \   0000000C   0x9000             STR      R0,[SP, #+0]
+   \   0000000E   0x4668             MOV      R0,SP
+   \   00000010   0x.... 0x....      BL       TankDrainInitialCheck
+   \   00000014   0x4668             MOV      R0,SP
+   \   00000016   0x7800             LDRB     R0,[R0, #+0]
+   \   00000018   0x7020             STRB     R0,[R4, #+0]
+   \   0000001A   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __interwork __softfp void TankDrainFsmExecute(enum <unnamed> *)
+   \                     TankDrainFsmExecute: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0xB082             SUB      SP,SP,#+8
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x7820             LDRB     R0,[R4, #+0]
+   \   00000008   0x.... 0x....      BL       TankDrainBuildFsmVar
+   \   0000000C   0x9000             STR      R0,[SP, #+0]
+   \   0000000E   0x4668             MOV      R0,SP
+   \   00000010   0x7800             LDRB     R0,[R0, #+0]
+   \   00000012   0x2801             CMP      R0,#+1
+   \   00000014   0xD002             BEQ      ??TankDrainFsmExecute_0
+   \   00000016   0x2802             CMP      R0,#+2
+   \   00000018   0xD004             BEQ      ??TankDrainFsmExecute_1
+   \   0000001A   0xE006             B        ??TankDrainFsmExecute_2
+   \                     ??TankDrainFsmExecute_0: (+1)
+   \   0000001C   0x4668             MOV      R0,SP
+   \   0000001E   0x.... 0x....      BL       TankDrain
+   \   00000022   0xE002             B        ??TankDrainFsmExecute_2
+   \                     ??TankDrainFsmExecute_1: (+1)
+   \   00000024   0x4668             MOV      R0,SP
+   \   00000026   0x.... 0x....      BL       WaitSubcycleExecution
+   \                     ??TankDrainFsmExecute_2: (+1)
+   \   0000002A   0x4668             MOV      R0,SP
+   \   0000002C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000002E   0x7020             STRB     R0,[R4, #+0]
+   \   00000030   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __interwork __softfp void TankDrainFsmEvent(enum <unnamed>, struct <unnamed> *)
+   \                     TankDrainFsmEvent: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x000C             MOVS     R4,R1
+   \   00000004   0x2100             MOVS     R1,#+0
+   \   00000006   0x7061             STRB     R1,[R4, #+1]
+   \   00000008   0x2801             CMP      R0,#+1
+   \   0000000A   0xD002             BEQ      ??TankDrainFsmEvent_0
+   \   0000000C   0x2802             CMP      R0,#+2
+   \   0000000E   0xD009             BEQ      ??TankDrainFsmEvent_1
+   \   00000010   0xBD10             POP      {R4,PC}
+   \                     ??TankDrainFsmEvent_0: (+1)
+   \   00000012   0x7820             LDRB     R0,[R4, #+0]
+   \   00000014   0x1E40             SUBS     R0,R0,#+1
+   \   00000016   0x2801             CMP      R0,#+1
+   \   00000018   0xD80E             BHI      ??TankDrainFsmEvent_2
+   \   0000001A   0x2003             MOVS     R0,#+3
+   \   0000001C   0x7020             STRB     R0,[R4, #+0]
+   \   0000001E   0x2001             MOVS     R0,#+1
+   \   00000020   0x7060             STRB     R0,[R4, #+1]
+   \   00000022   0xBD10             POP      {R4,PC}
+   \                     ??TankDrainFsmEvent_1: (+1)
+   \   00000024   0x7820             LDRB     R0,[R4, #+0]
+   \   00000026   0x2801             CMP      R0,#+1
+   \   00000028   0xD106             BNE      ??TankDrainFsmEvent_2
+   \   0000002A   0x2002             MOVS     R0,#+2
+   \   0000002C   0x7020             STRB     R0,[R4, #+0]
+   \   0000002E   0x0020             MOVS     R0,R4
+   \   00000030   0x.... 0x....      BL       ResetSubcycleExecution
+   \   00000034   0x2001             MOVS     R0,#+1
+   \   00000036   0x7060             STRB     R0,[R4, #+1]
+   \                     ??TankDrainFsmEvent_2: (+1)
+   \   00000038   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __interwork __softfp struct <unnamed> TankDrainBuildFsmVar(enum <unnamed>)
+   \                     TankDrainBuildFsmVar: (+1)
+   \   00000000   0xB081             SUB      SP,SP,#+4
+   \   00000002   0x4669             MOV      R1,SP
+   \   00000004   0x7008             STRB     R0,[R1, #+0]
+   \   00000006   0x2000             MOVS     R0,#+0
+   \   00000008   0x7048             STRB     R0,[R1, #+1]
+   \   0000000A   0x9800             LDR      R0,[SP, #+0]
+   \   0000000C   0xB001             ADD      SP,SP,#+4
+   \   0000000E   0x4770             BX       LR               ;; return
+     37          #include "SystemConfig.h"
+     38          
+     39          // -- Other Modules --
+     40          #include "DishAuxVar.h"
+     41          #include "Fill.h"
+     42          #include "Fault.h"
+     43          #include "Hbl.h"
+     44          #include "Log.h"
+     45          #include "Micro.h"
+     46          #include "NVData.h"
+     47          #include "Selector.h"
+     48          #include "SettingFile.h"
+     49          #include <string.h>
+     50          #include "SubCycle.h"
+     51          #include "Vwi.h"
+     52          
+     53          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     54          
+     55          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     56          //! The name of this module for use by the Log module.
+     57          #define MODULE_NAME MODULE_TANK_DRAIN
+     58          
+     59          //! A list of log message IDs that are generated by this module.
+     60          typedef enum MODULE_TANK_DRAIN_LOG_MESSAGE_ID_ENUM
+     61          {
+     62              ERROR_LOADING_PARAMETERS	= 1,
+     63          } MODULE_TANK_DRAIN_LOG_MESSAGE_ID_TYPE;
+     64          
+     65          //! Volatile data structure for Tank Drain process
+     66          typedef struct TANK_DRAIN_VOLATILE_DATA_STRUCT
+     67          {
+     68          	CLASS_A_FILL_PARAMETER_TYPE *Class_A_Fill_Parameters;
+     69          	BOOL_TYPE Subcycle_Executed;
+     70          	PASS_FAIL_TYPE Process_Parameters_Loading;
+     71          } TANK_DRAIN_VOLATILE_DATA_TYPE;
+     72          
+     73          //! Non volatile data structure for Tank Drain process
+     74          typedef struct TANK_DRAIN_NV_DATA_STRUCT
+     75          {
+     76          	uint16 Tank_Drain_Timer;
+     77          } TANK_DRAIN_NV_DATA_TYPE;
+     78          
+     79          //! Volatile data for Tank Drain process
+
+   \                                 In section .bss, align 4
+     80          static TANK_DRAIN_VOLATILE_DATA_TYPE TankDrain_Data;
+   \                     TankDrain_Data:
+   \   00000000                      DS8 8
+     81          
+     82          //! Non volatile data for Tank Drain process
+     83          #pragma location = "_appliance_segment"
+
+   \                                 In section _appliance_segment, align 4
+     84          static TANK_DRAIN_NV_DATA_TYPE TankDrain_NV_Data;
+     85          
+     86          //! State machine state for Tank Drain process
+     87          #pragma location = "_appliance_segment"
+     88          static TANKDRAIN_FSM_STATE_TYPE Tank_Drain_State;
+   \                     Tank_Drain_State:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 3
+   \   00000004                      DS8 4
+     89          
+     90          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     91          static PASS_FAIL_TYPE ReadProcessParameters(PROCESS_CONTROL_TYPE* control);
+     92          
+     93          //=====================================================================================================================
+     94          //-------------------------------------- Public Functions -------------------------------------------------------------
+     95          //=====================================================================================================================
+     96          //---------------------------------------------------------------------------------------------------------------------
+     97          
+     98          //---------------------------------------------------------------------------------------------------------------------
+     99          /**
+    100           * Initialize the TankDrain module's variables
+    101           */
+
+   \                                 In section .text, align 2, keep-with-next
+    102          void TankDrain__Initialize(void)
+    103          {
+   \                     TankDrain__Initialize: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    104          	if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+   \   00000002   0x.... 0x....      BL       Micro__GetResetMode
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD112             BNE      ??TankDrain__Initialize_0
+    105          	{
+    106          		if (NVData__GetLastRestoreStatus()->Bit.Appliance_Data_Recovered != (NVDATA_RESTORE_TYPE)NVDATA_RESTORE_OKAY)
+   \   0000000A   0x.... 0x....      BL       NVData__GetLastRestoreStatus
+   \   0000000E   0x2400             MOVS     R4,#+0
+   \   00000010   0x7800             LDRB     R0,[R0, #+0]
+   \   00000012   0x0780             LSLS     R0,R0,#+30
+   \   00000014   0x0F80             LSRS     R0,R0,#+30
+   \   00000016   0x2801             CMP      R0,#+1
+   \   00000018   0xD003             BEQ      ??TankDrain__Initialize_1
+    107          		{
+    108          			Tank_Drain_State = FSM_STATE_NONE;
+   \   0000001A   0x....             LDR      R0,??DataTable7
+   \   0000001C   0x0021             MOVS     R1,R4
+   \   0000001E   0x7001             STRB     R1,[R0, #+0]
+    109          			TankDrain_NV_Data.Tank_Drain_Timer = 0;
+   \   00000020   0x8081             STRH     R1,[R0, #+4]
+    110          		}
+    111          
+    112          		memset(&TankDrain_Data, 0, sizeof(TankDrain_Data));
+   \                     ??TankDrain__Initialize_1: (+1)
+   \   00000022   0x....             LDR      R5,??DataTable7_1
+   \   00000024   0x4622             MOV      R2,R4
+   \   00000026   0x2108             MOVS     R1,#+8
+   \   00000028   0x0028             MOVS     R0,R5
+   \   0000002A   0x.... 0x....      BL       __aeabi_memset4
+    113          
+    114          		TankDrain_Data.Process_Parameters_Loading = FAIL;
+    115          		TankDrain_Data.Subcycle_Executed = FALSE;
+   \   0000002E   0x80AC             STRH     R4,[R5, #+4]
+    116          	}
+    117          }
+   \                     ??TankDrain__Initialize_0: (+1)
+   \   00000030   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    118          
+    119          
+    120          /**
+    121           * It implements the Tank Drain process
+    122           */
+
+   \                                 In section .text, align 2, keep-with-next
+    123          PROCESS_RESULT_TYPE TankDrain__Manager(PROCESS_CONTROL_TYPE* control)
+    124          {
+   \                     TankDrain__Manager: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    125          	PROCESS_RESULT_TYPE result = PROCESS_COMPLETE;
+   \   00000004   0x2500             MOVS     R5,#+0
+    126          
+    127          	if ((control->Step_Initializing != (BOOL_TYPE)FALSE) ||
+    128          		(control->Resume_From_Reset != (BOOL_TYPE)FALSE) ||
+    129          		(control->Resume_From_Pause != (BOOL_TYPE)FALSE))
+   \   00000006   0x....             LDR      R6,??DataTable7_1
+   \   00000008   0x7960             LDRB     R0,[R4, #+5]
+   \   0000000A   0x0740             LSLS     R0,R0,#+29
+   \   0000000C   0xD003             BEQ      ??TankDrain__Manager_0
+    130          	{
+    131          		TankDrain_Data.Process_Parameters_Loading = ReadProcessParameters(control);
+   \   0000000E   0x0020             MOVS     R0,R4
+   \   00000010   0x.... 0x....      BL       ReadProcessParameters
+   \   00000014   0x7170             STRB     R0,[R6, #+5]
+    132          	}
+    133          
+    134          	if (TankDrain_Data.Process_Parameters_Loading == PASS)
+   \                     ??TankDrain__Manager_0: (+1)
+   \   00000016   0x7970             LDRB     R0,[R6, #+5]
+   \   00000018   0x2801             CMP      R0,#+1
+   \   0000001A   0xD114             BNE      ??TankDrain__Manager_1
+    135          	{
+    136          		if (control->Step_Initializing != (BOOL_TYPE)FALSE)
+   \   0000001C   0x....             LDR      R6,??DataTable7
+   \   0000001E   0x2701             MOVS     R7,#+1
+   \   00000020   0x7960             LDRB     R0,[R4, #+5]
+   \   00000022   0x0039             MOVS     R1,R7
+   \   00000024   0x4208             TST      R0,R1
+   \   00000026   0xD002             BEQ      ??TankDrain__Manager_2
+    137          		{
+    138          			// Initialize this instance of the Tank Drain process.
+    139          			TankDrainFsmInitialize(&Tank_Drain_State);
+   \   00000028   0x0030             MOVS     R0,R6
+   \   0000002A   0x.... 0x....      BL       TankDrainFsmInitialize
+    140          		}
+    141          
+    142          		if (control->Resume_From_Reset == (BOOL_TYPE)FALSE)
+   \                     ??TankDrain__Manager_2: (+1)
+   \   0000002E   0x7960             LDRB     R0,[R4, #+5]
+   \   00000030   0x0880             LSRS     R0,R0,#+2
+   \   00000032   0x0039             MOVS     R1,R7
+   \   00000034   0x4208             TST      R0,R1
+   \   00000036   0xD102             BNE      ??TankDrain__Manager_3
+    143          		{
+    144          			// TankDrainFsmExecute() not called in first iteration after a cold reset to avoid a spurious Valve turning on in case of
+    145          			// long power fail: actually, in this case, Tank Drain process would be called for just one iteration before going in PAUSE.
+    146          			TankDrainFsmExecute(&Tank_Drain_State);
+   \   00000038   0x0030             MOVS     R0,R6
+   \   0000003A   0x.... 0x....      BL       TankDrainFsmExecute
+    147          		}
+    148          
+    149          		result = ((Tank_Drain_State == FSM_STATE_TANK_DRAIN_COMPLETE) ? PROCESS_COMPLETE : PROCESS_BUSY);
+   \                     ??TankDrain__Manager_3: (+1)
+   \   0000003E   0x7830             LDRB     R0,[R6, #+0]
+   \   00000040   0x2803             CMP      R0,#+3
+   \   00000042   0xD000             BEQ      ??TankDrain__Manager_1
+   \   00000044   0x003D             MOVS     R5,R7
+    150          	}
+    151          
+    152          	return result;
+   \                     ??TankDrain__Manager_1: (+1)
+   \   00000046   0x0028             MOVS     R0,R5
+   \   00000048   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    153          }
+    154          
+
+   \                                 In section .text, align 2, keep-with-next
+    155          void TankDrain__SetSubcycleExecuted(uint8 compartment, uint8 subcycle_id, SUB_CYCLE_END_TYPE subcycle_end_code)
+    156          {
+   \                     TankDrain__SetSubcycleExecuted: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0014             MOVS     R4,R2
+    157          	if (Selector__GetCycleNameId(0, compartment , subcycle_id) == CYCLE_NAME_SPECIFIC_FILL_CHECK_WATER)
+   \   00000004   0x000A             MOVS     R2,R1
+   \   00000006   0x0001             MOVS     R1,R0
+   \   00000008   0x2000             MOVS     R0,#+0
+   \   0000000A   0x.... 0x....      BL       Selector__GetCycleNameId
+   \   0000000E   0x281D             CMP      R0,#+29
+   \   00000010   0xD106             BNE      ??TankDrain__SetSubcycleExecuted_0
+    158          	{
+    159          		if ((subcycle_end_code == SUB_CYCLE_END_COMPLETED) || (subcycle_end_code == SUB_CYCLE_END_SET_STATE_PROCESS))
+   \   00000012   0x0020             MOVS     R0,R4
+   \   00000014   0xD001             BEQ      ??TankDrain__SetSubcycleExecuted_1
+   \   00000016   0x2C03             CMP      R4,#+3
+   \   00000018   0xD102             BNE      ??TankDrain__SetSubcycleExecuted_0
+    160          		{
+    161          			TankDrain_Data.Subcycle_Executed = TRUE;
+   \                     ??TankDrain__SetSubcycleExecuted_1: (+1)
+   \   0000001A   0x2001             MOVS     R0,#+1
+   \   0000001C   0x....             LDR      R1,??DataTable7_1
+   \   0000001E   0x7108             STRB     R0,[R1, #+4]
+    162          		}
+    163          	}
+    164          }
+   \                     ??TankDrain__SetSubcycleExecuted_0: (+1)
+   \   00000020   0xBD10             POP      {R4,PC}          ;; return
+    165          
+    166          //=====================================================================================================================
+    167          //-------------------------------------- Private Functions ------------------------------------------------------------
+    168          //=====================================================================================================================
+
+   \                                 In section .text, align 2, keep-with-next
+    169          static PASS_FAIL_TYPE ReadProcessParameters(PROCESS_CONTROL_TYPE* control)
+    170          {
+   \                     ReadProcessParameters: (+1)
+   \   00000000   0xB51C             PUSH     {R2-R4,LR}
+    171          	PASS_FAIL_TYPE result = FAIL;
+   \   00000002   0x2400             MOVS     R4,#+0
+    172          	SETTINGFILE_LOADER_TYPE loader;
+    173          
+    174          	if ( FAIL == SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS,
+    175          										  DISPL_CLASS_A_FILL,
+    176          										  &loader) )
+   \   00000004   0x466A             MOV      R2,SP
+   \   00000006   0x211A             MOVS     R1,#+26
+   \   00000008   0x2027             MOVS     R0,#+39
+   \   0000000A   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   0000000E   0x2800             CMP      R0,#+0
+   \   00000010   0xD106             BNE      ??ReadProcessParameters_0
+    177          	{
+    178          		LOG_ADD_EXCEPTION(ERROR_LOADING_PARAMETERS, (uint16)SF_PTR_ACU_ALGORITHM_PARAMETERS);
+   \   00000012   0x2327             MOVS     R3,#+39
+   \   00000014   0x2201             MOVS     R2,#+1
+   \   00000016   0x4611             MOV      R1,R2
+   \   00000018   0x205C             MOVS     R0,#+92
+   \   0000001A   0x.... 0x....      BL       Log__AddMessage
+   \   0000001E   0xE003             B        ??ReadProcessParameters_1
+    179          	}
+    180          	else
+    181          	{
+    182          		TankDrain_Data.Class_A_Fill_Parameters = (CLASS_A_FILL_PARAMETER_TYPE *)(void*)loader.Data;
+   \                     ??ReadProcessParameters_0: (+1)
+   \   00000020   0x9800             LDR      R0,[SP, #+0]
+   \   00000022   0x....             LDR      R1,??DataTable7_1
+   \   00000024   0x6008             STR      R0,[R1, #+0]
+    183          		result = PASS;
+   \   00000026   0x2401             MOVS     R4,#+1
+    184          	}
+    185          
+    186          	return result;
+   \                     ??ReadProcessParameters_1: (+1)
+   \   00000028   0x0020             MOVS     R0,R4
+   \   0000002A   0xBD16             POP      {R1,R2,R4,PC}    ;; return
+    187          }
+    188          
+    189          
+    190          //=====================================================================================================================
+    191          // Tank Drain State Machine customization functions.
+    192          // NOTE: do not modify this header or the StateMachineCodeGenerator will not be able to find it.
+    193          //=====================================================================================================================
+    194          //---------------------------------------------------------------------------------------------------------------------
+    195          /**
+    196           * @brief
+    197           */
+
+   \                                 In section .text, align 2, keep-with-next
+    198          static void ResetSubcycleExecution(FSM_CUSTOMIZATION_FUNCTION_ARGUMENT)
+    199          {
+    200          	TankDrain_Data.Subcycle_Executed = FALSE;
+   \                     ResetSubcycleExecution: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR      R1,??DataTable7_1
+   \   00000004   0x7108             STRB     R0,[R1, #+4]
+    201          }
+   \   00000006   0x4770             BX       LR               ;; return
+    202          
+    203          //---------------------------------------------------------------------------------------------------------------------
+    204          /**
+    205           * @brief
+    206           */
+
+   \                                 In section .text, align 2, keep-with-next
+    207          static void TankDrain(FSM_CUSTOMIZATION_FUNCTION_ARGUMENT)
+    208          {
+   \                     TankDrain: (+1)
+   \   00000000   0xB53E             PUSH     {R1-R5,LR}
+   \   00000002   0x0005             MOVS     R5,R0
+    209          	ON_OFF_TYPE valve_state = ON;
+   \   00000004   0x2001             MOVS     R0,#+1
+   \   00000006   0x4669             MOV      R1,SP
+   \   00000008   0x7008             STRB     R0,[R1, #+0]
+    210          
+    211          	if (TankDrain_NV_Data.Tank_Drain_Timer < ((uint16)TankDrain_Data.Class_A_Fill_Parameters->Time_For_Tank_Drain * (uint16)(5 * FILL_CALLS_PER_SECOND)))
+   \   0000000A   0x....             LDR      R0,??DataTable7_1
+   \   0000000C   0x6800             LDR      R0,[R0, #+0]
+   \   0000000E   0x....             LDR      R4,??DataTable7
+   \   00000010   0x88A1             LDRH     R1,[R4, #+4]
+   \   00000012   0x7A42             LDRB     R2,[R0, #+9]
+   \   00000014   0x2332             MOVS     R3,#+50
+   \   00000016   0x435A             MULS     R2,R3,R2
+   \   00000018   0x4291             CMP      R1,R2
+   \   0000001A   0xDA08             BGE      ??TankDrain_0
+    212          	{
+    213          		(void)Hbl__SetLoadRequestByLoadID(HBL_LOAD_UPPER_TANK_VALVE, HBL_PRIORITY_APPLICATION_HI, (uint8 *) &valve_state);	//lint !e928 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+   \   0000001C   0x466A             MOV      R2,SP
+   \   0000001E   0x2103             MOVS     R1,#+3
+   \   00000020   0x2026             MOVS     R0,#+38
+   \   00000022   0x.... 0x....      BL       Hbl__SetLoadRequestByLoadID
+    214          		TankDrain_NV_Data.Tank_Drain_Timer ++;
+   \   00000026   0x88A0             LDRH     R0,[R4, #+4]
+   \   00000028   0x1C40             ADDS     R0,R0,#+1
+   \   0000002A   0x80A0             STRH     R0,[R4, #+4]
+   \   0000002C   0xBD37             POP      {R0-R2,R4,R5,PC}
+    215          	}
+    216          	else
+    217          	{
+    218          		if ((TankDrain_Data.Class_A_Fill_Parameters->Fill_Check_Water_Subcycle_Priority != 0U) && (Interpreter__GetStatus().Sub_Cycle[COMPARTMENT_DEFAULT] == 0U))
+   \                     ??TankDrain_0: (+1)
+   \   0000002E   0x7B80             LDRB     R0,[R0, #+14]
+   \   00000030   0x2800             CMP      R0,#+0
+   \   00000032   0xD00D             BEQ      ??TankDrain_1
+   \   00000034   0xA800             ADD      R0,SP,#+0
+   \   00000036   0x1C40             ADDS     R0,R0,#+1
+   \   00000038   0x.... 0x....      BL       Interpreter__GetStatus
+   \   0000003C   0xA800             ADD      R0,SP,#+0
+   \   0000003E   0x1C40             ADDS     R0,R0,#+1
+   \   00000040   0x78C0             LDRB     R0,[R0, #+3]
+   \   00000042   0x2800             CMP      R0,#+0
+   \   00000044   0xD104             BNE      ??TankDrain_1
+    219          		{
+    220          			DISPATCH_FSM_EVENT(FSM_EVENT_WATERCHECK);
+   \   00000046   0x0029             MOVS     R1,R5
+   \   00000048   0x2002             MOVS     R0,#+2
+   \   0000004A   0x.... 0x....      BL       TankDrainFsmEvent
+   \   0000004E   0xBD37             POP      {R0-R2,R4,R5,PC}
+    221          		}
+    222          		else
+    223          		{
+    224          			// Fill Check subcycle is not present in setting file, or Tank Drain is being executed inside a subcycle:
+    225          			// it is not possible to start Fill Check Subcycle, recovery action is to assume water is not present
+    226          			Tank_State_Fill = TANK_STATE_UNKNOWN;
+   \                     ??TankDrain_1: (+1)
+   \   00000050   0x2002             MOVS     R0,#+2
+   \   00000052   0x....             LDR      R1,??DataTable7_2
+   \   00000054   0x7008             STRB     R0,[R1, #+0]
+    227          			Tank_State_Drain = TANK_STATE_FAIL;
+   \   00000056   0x2000             MOVS     R0,#+0
+   \   00000058   0x....             LDR      R1,??DataTable7_3
+   \   0000005A   0x7008             STRB     R0,[R1, #+0]
+    228          			Fill__ClearBitmapBit(TANK_STATE_CLEAN);
+   \   0000005C   0x.... 0x....      BL       Fill__ClearBitmapBit
+    229          			Fault__ConditionDetected(FAULT_ID_WATER_TANK_VALVE_NOT_FUNCTIONING);
+   \   00000060   0x204A             MOVS     R0,#+74
+   \   00000062   0x.... 0x....      BL       Fault__ConditionDetected
+    230          
+    231          			Fill__SetBitmapBit(SENSED_DRAIN_REQUESTED_BY_TANK_DRAIN);
+   \   00000066   0x2003             MOVS     R0,#+3
+   \   00000068   0x.... 0x....      BL       Fill__SetBitmapBit
+    232          
+    233          			DISPATCH_FSM_EVENT(FSM_EVENT_TANKDRAINCOMPLETED);
+   \   0000006C   0x0029             MOVS     R1,R5
+   \   0000006E   0x2001             MOVS     R0,#+1
+   \   00000070   0x.... 0x....      BL       TankDrainFsmEvent
+    234          		}
+    235          
+    236          	}
+    237          }
+   \   00000074   0xBD37             POP      {R0-R2,R4,R5,PC}  ;; return
+    238          
+    239          //---------------------------------------------------------------------------------------------------------------------
+    240          /**
+    241           * @brief
+    242           */
+
+   \                                 In section .text, align 2, keep-with-next
+    243          static void TankDrainInitialCheck(FSM_CUSTOMIZATION_FUNCTION_ARGUMENT)
+    244          {
+   \                     TankDrainInitialCheck: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    245          	Liters_In_Tub_Before_Fill = Liters_In_Tub;
+   \   00000004   0x....             LDR      R5,??DataTable7_4
+   \   00000006   0x8828             LDRH     R0,[R5, #+0]
+   \   00000008   0x....             LDR      R1,??DataTable7_5
+   \   0000000A   0x8008             STRH     R0,[R1, #+0]
+    246          	Liters_In_Tank_Before_Fill = Liters_In_Water_Tank;
+   \   0000000C   0x....             LDR      R6,??DataTable7_6
+   \   0000000E   0x8830             LDRH     R0,[R6, #+0]
+   \   00000010   0x....             LDR      R1,??DataTable7_7
+   \   00000012   0x8008             STRH     R0,[R1, #+0]
+    247          
+    248          	Fill__ClearBitmapBit(SENSED_DRAIN_REQUESTED_BY_TANK_DRAIN);
+   \   00000014   0x2003             MOVS     R0,#+3
+   \   00000016   0x.... 0x....      BL       Fill__ClearBitmapBit
+    249          
+    250          	if ((Liters_In_Water_Tank < ( (uint16)TankDrain_Data.Class_A_Fill_Parameters->Liters_For_Tank_Empty_Max *(uint16)5 )) ||
+    251          		(Liters_In_Tub >= ( (uint16)TankDrain_Data.Class_A_Fill_Parameters->Liters_For_WI_Empty_Max * (uint16)5 )))
+   \   0000001A   0x....             LDR      R0,??DataTable7_1
+   \   0000001C   0x6800             LDR      R0,[R0, #+0]
+   \   0000001E   0x8831             LDRH     R1,[R6, #+0]
+   \   00000020   0x7902             LDRB     R2,[R0, #+4]
+   \   00000022   0x0093             LSLS     R3,R2,#+2
+   \   00000024   0x189A             ADDS     R2,R3,R2
+   \   00000026   0x4291             CMP      R1,R2
+   \   00000028   0xDB05             BLT      ??TankDrainInitialCheck_0
+   \   0000002A   0x8829             LDRH     R1,[R5, #+0]
+   \   0000002C   0x7940             LDRB     R0,[R0, #+5]
+   \   0000002E   0x0082             LSLS     R2,R0,#+2
+   \   00000030   0x1810             ADDS     R0,R2,R0
+   \   00000032   0x4281             CMP      R1,R0
+   \   00000034   0xDB04             BLT      ??TankDrainInitialCheck_1
+    252          
+    253          	{
+    254          		DISPATCH_FSM_EVENT(FSM_EVENT_TANKDRAINCOMPLETED);
+   \                     ??TankDrainInitialCheck_0: (+1)
+   \   00000036   0x0021             MOVS     R1,R4
+   \   00000038   0x2001             MOVS     R0,#+1
+   \   0000003A   0x.... 0x....      BL       TankDrainFsmEvent
+   \   0000003E   0xBD70             POP      {R4-R6,PC}
+    255          	}
+    256          	else
+    257          	{
+    258          		Fill__ClearBitmapBit(DRAIN_CONFIRMED);
+   \                     ??TankDrainInitialCheck_1: (+1)
+   \   00000040   0x2002             MOVS     R0,#+2
+   \   00000042   0x.... 0x....      BL       Fill__ClearBitmapBit
+    259          		Fill__ClearBitmapBit(TANK_STATE_CLEAN);
+   \   00000046   0x2000             MOVS     R0,#+0
+   \   00000048   0x.... 0x....      BL       Fill__ClearBitmapBit
+    260          		TankDrain_NV_Data.Tank_Drain_Timer = 0;
+   \   0000004C   0x2000             MOVS     R0,#+0
+   \   0000004E   0x....             LDR      R1,??DataTable7
+   \   00000050   0x8088             STRH     R0,[R1, #+4]
+    261          	}
+    262          }
+   \   00000052   0xBD70             POP      {R4-R6,PC}       ;; return
+    263          
+    264          //---------------------------------------------------------------------------------------------------------------------
+    265          /**
+    266           * @brief
+    267           */
+
+   \                                 In section .text, align 2, keep-with-next
+    268          static void WaitSubcycleExecution(FSM_CUSTOMIZATION_FUNCTION_ARGUMENT)
+    269          {
+   \                     WaitSubcycleExecution: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    270          	if (TankDrain_Data.Subcycle_Executed == FALSE)
+   \   00000004   0x....             LDR      R0,??DataTable7_1
+   \   00000006   0x7901             LDRB     R1,[R0, #+4]
+   \   00000008   0x2900             CMP      R1,#+0
+   \   0000000A   0xD105             BNE      ??WaitSubcycleExecution_0
+    271          	{
+    272          		(void)SubCycle__RequestStart(0, TankDrain_Data.Class_A_Fill_Parameters->Fill_Check_Water_Subcycle_Priority);
+   \   0000000C   0x6800             LDR      R0,[R0, #+0]
+   \   0000000E   0x7B81             LDRB     R1,[R0, #+14]
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x.... 0x....      BL       SubCycle__RequestStart
+   \   00000016   0xBD31             POP      {R0,R4,R5,PC}
+    273          	}
+    274          	else
+    275          	{
+    276          		VWI_WATER_SENSE_TYPE last_valid_water_status;
+    277          
+    278          		last_valid_water_status = Vwi__GetLastValidWaterStatus();
+   \                     ??WaitSubcycleExecution_0: (+1)
+   \   00000018   0x.... 0x....      BL       Vwi__GetLastValidWaterStatus
+    279          
+    280          		if ((last_valid_water_status == WS_WATER) || (last_valid_water_status == WS_UNSTABLE_WATER))
+   \   0000001C   0x2804             CMP      R0,#+4
+   \   0000001E   0xD001             BEQ      ??WaitSubcycleExecution_1
+   \   00000020   0x2803             CMP      R0,#+3
+   \   00000022   0xD118             BNE      ??WaitSubcycleExecution_2
+    281          		{
+    282          			// Water is present
+    283          			uint32 sum;
+    284          			sum = (uint32)Liters_In_Tub + Liters_In_Water_Tank;
+   \                     ??WaitSubcycleExecution_1: (+1)
+   \   00000024   0x....             LDR      R0,??DataTable7_6
+   \   00000026   0x....             LDR      R1,??DataTable7_4
+   \   00000028   0x880A             LDRH     R2,[R1, #+0]
+   \   0000002A   0x8803             LDRH     R3,[R0, #+0]
+   \   0000002C   0x18D2             ADDS     R2,R2,R3
+    285          			if (sum > (uint16)__UNSIGNED_SHORT_MAX__)
+   \   0000002E   0x2380             MOVS     R3,#+128
+   \   00000030   0x025B             LSLS     R3,R3,#+9        ;; #+65536
+   \   00000032   0x429A             CMP      R2,R3
+   \   00000034   0xD300             BCC      ??WaitSubcycleExecution_3
+    286          			{
+    287          				sum = __UNSIGNED_SHORT_MAX__;
+   \   00000036   0x1E5A             SUBS     R2,R3,#+1
+    288          			}
+    289          			Liters_In_Tub = (uint16)sum;
+   \                     ??WaitSubcycleExecution_3: (+1)
+   \   00000038   0x800A             STRH     R2,[R1, #+0]
+    290          
+    291          			Liters_In_Tub_Before_Fill = Liters_In_Tub;
+   \   0000003A   0x8809             LDRH     R1,[R1, #+0]
+   \   0000003C   0x....             LDR      R2,??DataTable7_5
+   \   0000003E   0x8011             STRH     R1,[R2, #+0]
+    292          			Liters_In_Water_Tank = 0;
+   \   00000040   0x2500             MOVS     R5,#+0
+   \   00000042   0x8005             STRH     R5,[R0, #+0]
+    293          			Tank_State_Drain = TANK_STATE_PASSED;
+   \   00000044   0x2001             MOVS     R0,#+1
+   \   00000046   0x....             LDR      R1,??DataTable7_3
+   \   00000048   0x7008             STRB     R0,[R1, #+0]
+    294          			Fill__SetBitmapBit(TANK_STATE_CLEAN);
+   \   0000004A   0x4628             MOV      R0,R5
+   \   0000004C   0x.... 0x....      BL       Fill__SetBitmapBit
+    295          			Liters_Unchecked = 0;
+   \   00000050   0x....             LDR      R0,??DataTable7_8
+   \   00000052   0x8005             STRH     R5,[R0, #+0]
+   \   00000054   0xE00D             B        ??WaitSubcycleExecution_4
+    296          		}
+    297          		else
+    298          		{
+    299          			// No Water
+    300          			Tank_State_Fill = TANK_STATE_UNKNOWN;
+   \                     ??WaitSubcycleExecution_2: (+1)
+   \   00000056   0x2002             MOVS     R0,#+2
+   \   00000058   0x....             LDR      R1,??DataTable7_2
+   \   0000005A   0x7008             STRB     R0,[R1, #+0]
+    301          			Tank_State_Drain = TANK_STATE_FAIL;
+   \   0000005C   0x2000             MOVS     R0,#+0
+   \   0000005E   0x....             LDR      R1,??DataTable7_3
+   \   00000060   0x7008             STRB     R0,[R1, #+0]
+    302          			Fill__ClearBitmapBit(TANK_STATE_CLEAN);
+   \   00000062   0x.... 0x....      BL       Fill__ClearBitmapBit
+    303          			Fault__ConditionDetected(FAULT_ID_WATER_TANK_VALVE_NOT_FUNCTIONING);
+   \   00000066   0x204A             MOVS     R0,#+74
+   \   00000068   0x.... 0x....      BL       Fault__ConditionDetected
+    304          
+    305          			Fill__SetBitmapBit(SENSED_DRAIN_REQUESTED_BY_TANK_DRAIN);
+   \   0000006C   0x2003             MOVS     R0,#+3
+   \   0000006E   0x.... 0x....      BL       Fill__SetBitmapBit
+    306          		}
+    307          
+    308          		DISPATCH_FSM_EVENT(FSM_EVENT_TANKDRAINCOMPLETED);
+   \                     ??WaitSubcycleExecution_4: (+1)
+   \   00000072   0x0021             MOVS     R1,R4
+   \   00000074   0x2001             MOVS     R0,#+1
+   \   00000076   0x.... 0x....      BL       TankDrainFsmEvent
+    309          	}
+    310          }
+   \   0000007A   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \   00000000   0x........         DC32     Tank_Drain_State
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_1:
+   \   00000000   0x........         DC32     TankDrain_Data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_2:
+   \   00000000   0x........         DC32     Tank_State_Fill
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_3:
+   \   00000000   0x........         DC32     Tank_State_Drain
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_4:
+   \   00000000   0x........         DC32     Liters_In_Tub
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_5:
+   \   00000000   0x........         DC32     Liters_In_Tub_Before_Fill
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_6:
+   \   00000000   0x........         DC32     Liters_In_Water_Tank
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_7:
+   \   00000000   0x........         DC32     Liters_In_Tank_Before_Fill
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_8:
+   \   00000000   0x........         DC32     Liters_Unchecked
+    311          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   ReadProcessParameters
+        16   -> Log__AddMessage
+        16   -> SettingFile__BasicLoader
+       0   ResetSubcycleExecution
+      24   TankDrain
+        24   -> Fault__ConditionDetected
+        24   -> Fill__ClearBitmapBit
+        24   -> Fill__SetBitmapBit
+        24   -> Hbl__SetLoadRequestByLoadID
+        24   -> Interpreter__GetStatus
+        24   -> TankDrainFsmEvent
+       4   TankDrainBuildFsmVar
+       8   TankDrainFsmEvent
+         8   -> ResetSubcycleExecution
+      16   TankDrainFsmExecute
+        16   -> TankDrain
+        16   -> TankDrainBuildFsmVar
+        16   -> WaitSubcycleExecution
+      16   TankDrainFsmInitialize
+        16   -> TankDrainBuildFsmVar
+        16   -> TankDrainInitialCheck
+      16   TankDrainInitialCheck
+        16   -> Fill__ClearBitmapBit
+        16   -> TankDrainFsmEvent
+      16   TankDrain__Initialize
+        16   -> Micro__GetResetMode
+        16   -> NVData__GetLastRestoreStatus
+        16   -> __aeabi_memset4
+      24   TankDrain__Manager
+        24   -> ReadProcessParameters
+        24   -> TankDrainFsmExecute
+        24   -> TankDrainFsmInitialize
+       8   TankDrain__SetSubcycleExecuted
+         8   -> Selector__GetCycleNameId
+      16   WaitSubcycleExecution
+        16   -> Fault__ConditionDetected
+        16   -> Fill__ClearBitmapBit
+        16   -> Fill__SetBitmapBit
+        16   -> SubCycle__RequestStart
+        16   -> TankDrainFsmEvent
+        16   -> Vwi__GetLastValidWaterStatus
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable7
+       4  ??DataTable7_1
+       4  ??DataTable7_2
+       4  ??DataTable7_3
+       4  ??DataTable7_4
+       4  ??DataTable7_5
+       4  ??DataTable7_6
+       4  ??DataTable7_7
+       4  ??DataTable7_8
+      44  ReadProcessParameters
+       8  ResetSubcycleExecution
+     118  TankDrain
+      16  TankDrainBuildFsmVar
+      58  TankDrainFsmEvent
+      50  TankDrainFsmExecute
+      28  TankDrainFsmInitialize
+      84  TankDrainInitialCheck
+       8  TankDrain_Data
+      50  TankDrain__Initialize
+      74  TankDrain__Manager
+      34  TankDrain__SetSubcycleExecuted
+       8  Tank_Drain_State
+          TankDrain_NV_Data
+     124  WaitSubcycleExecution
+
+ 
+   8 bytes in section .bss
+ 724 bytes in section .text
+   8 bytes in section _appliance_segment
+ 
+ 724 bytes of CODE memory
+  16 bytes of DATA memory
+
+Errors: none
+Warnings: none

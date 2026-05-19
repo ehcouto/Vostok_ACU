@@ -1,0 +1,28 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//  format.lnt
+//  PC-Lint options for formatting the generated output
+//
+
+// +ffn = When ON filenames reported in error messages are full path names.
++ffn
+
+// -width(w,i) = The first parameter (W) specifies the width of messages.
+// Lines greater than this width are broken at blanks. A width of 0 implies
+// no breaking. The second number specifies the indentation to be used on
+// continued lines.
+-width(0,4)
+
+// -hsFbr^3
+// -h = Message height is controlled by the -h option
+//  s = The optional s means Space (blank line) after each message. However,
+//      -hs does not skip a line after wrap-up messages.
+//  F = An error message is always provided with File information.
+//  b = Show the indicator (^) below the source line.
+//  r = Repeat the source line for each lint message.
+//  ^ = Use the '^' symbol to indicate the location of the issue.
+//  3 = Use 3 lines for each lint message.
+-hsFbr^3
+
+// Use a format that is very similar to the IAR output format.
+// Insert the word "Lint" to make it clear that it is a Lint output.
+-format="%f",%l\s\sLint\s%t[%n]:\s%m

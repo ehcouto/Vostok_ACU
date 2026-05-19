@@ -1,0 +1,907 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:34
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/PluggingMonitor.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\PluggingMonitor.lst
+#        -o obj\PluggingMonitor.obj
+#        source/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/PluggingMonitor.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\PluggingMonitor.lst
+#    Object file  =  obj\PluggingMonitor.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Monitors\ModelMonitors\PluggingDetectionMonitor\PluggingMonitor.c
+      1          /**
+      2           *  @file		PluggingMonitor.c
+      3           *
+      4           *  @brief      Wrapper for the code generated Plugging_Model
+      5           *
+      6           *  @details    This code has the monitor initialize and execution interfaces, also an enabling/disabling function
+      7           *  			as Start/Stop, a Reset function to clear the model information and a Pause/Resume.
+      8           *
+      9           *  @section    Applicable_Documents
+     10           *					List here all the applicable documents if needed. <tr>
+     11           *
+     12           *  $Header: $
+     13           *
+     14           *  @copyright  Copyright 2018-2019. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     15           */
+     16          //---------------------------------------------------------------------------------------------------------------------
+     17          //---------------------------------------------------------------------------------------------------------------------
+     18          
+     19          
+     20          //-------------------------------------- Include Files ----------------------------------------------------------------
+     21          #include "PluggingMonitor.h"
+     22          
+     23          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     24          
+     25          //! SettingFile Data
+
+   \                                 In section .bss, align 4
+     26          static SF_PLUGGING_DATA_TYPE* Plugging__SFData_Ptr;
+     27          static SF_PLUGGING_DATA_TYPE Plugging__SFData;
+   \                     Plugging__SFData:
+   \   00000000                      DS8 12
+   \   0000000C                      DS8 1
+   \   0000000D                      DS8 1
+   \   0000000E                      DS8 1
+   \   0000000F                      DS8 1
+   \   00000010                      DS8 2
+   \   00000012                      DS8 2
+   \   00000014                      DS8 4
+   \   00000018                      DS8 1
+   \   00000019                      DS8 3
+   \   0000001C                      DS8 4
+     28          
+     29          //! The name of this module for use by the Log module.
+     30          #define MODULE_NAME MODULE_PLUGGING_MONITOR
+     31          
+     32          //! A list of log message IDs that are generated by this module.
+     33          typedef enum MODULE_PLUGGING_MONITOR_LOG_MESSAGE_ID_ENUM
+     34          {
+     35          	ERROR_LOADING_PARAMETERS       = 1,
+     36          } MODULE_PLUGGING_MONITOR_LOG_MESSAGE_ID_TYPE;
+     37          
+     38          //! Boolean variable to enable and disable Plugging execution.
+     39          static BOOL_TYPE Plugging_Enabled = FALSE;
+     40          static BOOL_TYPE Plugging_Paused = FALSE;
+     41          static BOOL_TYPE Plugging_Reset = FALSE;
+     42          
+     43          //! Plugging Status - Plugged/No Plugged
+     44          static PLUGGING_STATUS_TYPE PluggingMonitor_Status;
+     45          
+     46          //! Plugging Model - State Machine current state
+     47          static PLUGGING_MONITORSTATE_TYPE PluggingMonitor_AlgorithmState;
+     48          
+     49          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     50          
+     51          //! Model Data
+     52          static RT_MODELPLUGGING_MODEL_TYPE PluggingMonitor_ModelData_;
+     53          static RT_MODELPLUGGING_MODEL_TYPE *const PluggingMonitor_ModelData = &PluggingMonitor_ModelData_;/* Real-time model */
+     54          
+     55          //! Timer Handle
+     56          static uint16 PluggingMonitor_TimerHandle;
+     57          
+     58          //! Recovery Data
+     59          #pragma location = "_appliance_segment"
+
+   \                                 In section _appliance_segment, align 4
+     60          static PLUGGING_MODEL_DATA_TYPE  Plugging_ModelRecoveryData;
+   \                     Plugging_ModelRecoveryData:
+   \   00000000                      DS8 8
+     61          
+     62          //! Check that imported macros have the correct range
+     63          #ifdef PLUG_RISK_DELAY_TIMER_MSEC
+     64          #if PLUG_RISK_DELAY_TIMER_MSEC > 4294967295U  //uint32 limit
+     65          #error The variable for the parameter "PLUG_RISK_DELAY_TIMER_MSEC" is too big
+     66          #endif
+     67          #endif
+     68          
+     69          #ifdef PLUG_RISK_NOISE_VALUE
+     70          #if PLUG_RISK_NOISE_VALUE > 65535  //uint16 limit
+     71          #error The variable for the parameter "PLUG_RISK_NOISE_VALUE" is too big
+     72          #endif
+     73          #endif
+     74          
+     75          
+     76          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     77          //static BOOL_TYPE GetPluggingParameters(SETTINGFILE_OFFSET_TYPE pointer_id, uint16 displacement);
+     78          
+     79          
+     80          //=====================================================================================================================
+     81          //-------------------------------------- Public Functions -------------------------------------------------------------
+     82          //=====================================================================================================================
+     83          
+
+   \                                 In section .text, align 2, keep-with-next
+     84          SYSTEMTIMERS_STATE_TYPE PluggingMonitor__GetTimerState(void)
+     85          {
+   \                     PluggingMonitor__GetTimerState: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     86          	return SystemTimers__GetState(PluggingMonitor_TimerHandle);
+   \   00000002   0x....             LDR      R0,??DataTable13
+   \   00000004   0x8A00             LDRH     R0,[R0, #+16]
+   \   00000006   0x.... 0x....      BL       SystemTimers__GetState
+   \   0000000A   0xBD02             POP      {R1,PC}          ;; return
+     87          }
+     88          
+
+   \                                 In section .text, align 2, keep-with-next
+     89          PLUGGING_MODEL_DATA_TYPE PluggingMonitor__GetModelData(void)
+     90          {
+   \                     PluggingMonitor__GetModelData: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     91          	return Plugging_ModelRecoveryData;
+   \   00000002   0x....             LDR      R1,??DataTable13_1
+   \   00000004   0x2206             MOVS     R2,#+6
+   \   00000006   0x.... 0x....      BL       __aeabi_memcpy
+   \   0000000A   0xBD01             POP      {R0,PC}          ;; return
+     92          }
+     93          
+
+   \                                 In section .text, align 2, keep-with-next
+     94          BOOL_TYPE Plugging__GetResetStatus(void)
+     95          {
+     96          	BOOL_TYPE retval;
+     97          	if (Plugging_Reset)
+   \                     Plugging__GetResetStatus: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR      R1,??DataTable13
+   \   00000004   0x7B8A             LDRB     R2,[R1, #+14]
+   \   00000006   0x2A00             CMP      R2,#+0
+   \   00000008   0xD001             BEQ      ??Plugging__GetResetStatus_0
+     98          	{
+     99          		Plugging_Reset = FALSE;
+   \   0000000A   0x7388             STRB     R0,[R1, #+14]
+    100          		retval = TRUE;
+   \   0000000C   0x2001             MOVS     R0,#+1
+    101          	}
+    102          	else
+    103          	{
+    104          		retval = FALSE;
+    105          	}
+    106          
+    107          	return retval;
+   \                     ??Plugging__GetResetStatus_0: (+1)
+   \   0000000E   0x4770             BX       LR               ;; return
+    108          }
+    109          
+
+   \                                 In section .text, align 2, keep-with-next
+    110          void PluggingMonitor__SetRiskDelayTimer(uint32 PluggingTimeout)
+    111          {
+   \                     PluggingMonitor__SetRiskDelayTimer: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    112          	(void)SystemTimers__SetMs(PluggingMonitor_TimerHandle, PluggingTimeout);
+   \   00000002   0x0001             MOVS     R1,R0
+   \   00000004   0x....             LDR      R0,??DataTable13
+   \   00000006   0x8A00             LDRH     R0,[R0, #+16]
+   \   00000008   0x.... 0x....      BL       SystemTimers__SetMs
+    113          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+    114          
+
+   \                                 In section .text, align 2, keep-with-next
+    115          void PluggingMonitor__SetStatus(PLUGGING_STATUS_TYPE PluggingStatus)
+    116          {
+    117          	PluggingMonitor_Status = PluggingStatus;
+   \                     PluggingMonitor__SetStatus: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable13
+   \   00000002   0x73C8             STRB     R0,[R1, #+15]
+    118          }
+   \   00000004   0x4770             BX       LR               ;; return
+    119          
+
+   \                                 In section .text, align 2, keep-with-next
+    120          void PluggingMonitor__SetModelData(PLUGGING_MODEL_DATA_TYPE PluggingData)
+    121          {
+    122          	Plugging_ModelRecoveryData = PluggingData;
+   \                     PluggingMonitor__SetModelData: (+1)
+   \   00000000   0x....             LDR      R2,??DataTable13_1
+   \   00000002   0xC203             STM      R2!,{R0,R1}
+    123          }
+   \   00000004   0x4770             BX       LR               ;; return
+    124          
+    125          
+    126          //---------------------------------------------------------------------------------------------------------------------
+    127          /**
+    128           *  @brief		Function to return the Plugging_Status
+    129           *
+    130           */
+
+   \                                 In section .text, align 2, keep-with-next
+    131          PLUGGING_STATUS_TYPE PluggingMonitor__GetStatus(void)
+    132          {
+    133          	return PluggingMonitor_Status;
+   \                     PluggingMonitor__GetStatus: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x7BC0             LDRB     R0,[R0, #+15]
+   \   00000004   0x4770             BX       LR               ;; return
+    134          }
+    135          
+    136          //----------------------------------------------------------------------------
+    137          /**
+    138           *  @brief      PluggingMonitor__Initialize
+    139           *  @details    Function used to initialize the Plugging monitor.
+    140           *
+    141           */
+
+   \                                 In section .text, align 2, keep-with-next
+    142          void PluggingMonitor__Initialize(void)
+    143          {
+   \                     PluggingMonitor__Initialize: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+    144          	Plugging_Model_initialize(PluggingMonitor_ModelData, &PluggingMonitor_AlgorithmState);
+   \   00000004   0x....             LDR      R4,??DataTable13
+   \   00000006   0x0021             MOVS     R1,R4
+   \   00000008   0x3118             ADDS     R1,R1,#+24
+   \   0000000A   0x0020             MOVS     R0,R4
+   \   0000000C   0x301C             ADDS     R0,R0,#+28
+   \   0000000E   0x.... 0x....      BL       Plugging_Model_initialize
+    145          
+    146          	Plugging_ModelRecoveryData.PluggingRisk = 0;
+   \   00000012   0x2500             MOVS     R5,#+0
+   \   00000014   0x....             LDR      R0,??DataTable13_1
+   \   00000016   0x0029             MOVS     R1,R5
+   \   00000018   0x6001             STR      R1,[R0, #+0]
+    147          	Plugging_ModelRecoveryData.RiskCounter = 0;
+    148          	Plugging_ModelRecoveryData.VwiRiskLastValue = 0;
+    149          
+    150          	//create a new  timer handler
+    151          	(void)SystemTimers__ReleaseHandle(PluggingMonitor_TimerHandle);
+   \   0000001A   0x8A20             LDRH     R0,[R4, #+16]
+   \   0000001C   0x.... 0x....      BL       SystemTimers__ReleaseHandle
+    152          	PluggingMonitor_TimerHandle = SystemTimers__GetHandle(SYSTEMTIMERS_TYPE_DOWN_COUNTER);
+   \   00000020   0x4628             MOV      R0,R5
+   \   00000022   0x.... 0x....      BL       SystemTimers__GetHandle
+   \   00000026   0x8220             STRH     R0,[R4, #+16]
+    153          
+    154              // Initialize SF data pointer
+    155          	Plugging__SFData_Ptr = NULL;
+   \   00000028   0x6165             STR      R5,[R4, #+20]
+    156          
+    157          	SETTINGFILE_LOADER_TYPE plugloader;
+    158          	if (SettingFile__BasicLoader(SF_PTR_ACU_ALGORITHM_PARAMETERS, DISPL_PLUGGING, &plugloader) == PASS)
+   \   0000002A   0x466A             MOV      R2,SP
+   \   0000002C   0x2108             MOVS     R1,#+8
+   \   0000002E   0x2027             MOVS     R0,#+39
+   \   00000030   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000034   0x2801             CMP      R0,#+1
+   \   00000036   0xD129             BNE      ??PluggingMonitor__Initialize_0
+    159          	{
+    160          		Plugging__SFData.Plugging_VwiVarianceThreshold = ENDIANU16_STON(((SF_PLUGGING_DATA_TYPE*)(void*)(plugloader.Data))->Plugging_VwiVarianceThreshold);
+   \   00000038   0x9900             LDR      R1,[SP, #+0]
+   \   0000003A   0x7808             LDRB     R0,[R1, #+0]
+   \   0000003C   0x784A             LDRB     R2,[R1, #+1]
+   \   0000003E   0x0612             LSLS     R2,R2,#+24
+   \   00000040   0x0C12             LSRS     R2,R2,#+16
+   \   00000042   0x4310             ORRS     R0,R0,R2
+   \   00000044   0x8020             STRH     R0,[R4, #+0]
+    161          		Plugging__SFData.Plugging_VwiSignalRecoverThreshold = ENDIANU16_STON(((SF_PLUGGING_DATA_TYPE*)(void*)(plugloader.Data))->Plugging_VwiSignalRecoverThreshold);
+   \   00000046   0x9900             LDR      R1,[SP, #+0]
+   \   00000048   0x7888             LDRB     R0,[R1, #+2]
+   \   0000004A   0x78CA             LDRB     R2,[R1, #+3]
+   \   0000004C   0x0612             LSLS     R2,R2,#+24
+   \   0000004E   0x0C12             LSRS     R2,R2,#+16
+   \   00000050   0x4310             ORRS     R0,R0,R2
+   \   00000052   0x8060             STRH     R0,[R4, #+2]
+    162          		Plugging__SFData.Plugging_VwiSignalLowThreshold = ENDIANU16_STON(((SF_PLUGGING_DATA_TYPE*)(void*)(plugloader.Data))->Plugging_VwiSignalLowThreshold);
+   \   00000054   0x9900             LDR      R1,[SP, #+0]
+   \   00000056   0x7908             LDRB     R0,[R1, #+4]
+   \   00000058   0x794A             LDRB     R2,[R1, #+5]
+   \   0000005A   0x0612             LSLS     R2,R2,#+24
+   \   0000005C   0x0C12             LSRS     R2,R2,#+16
+   \   0000005E   0x4310             ORRS     R0,R0,R2
+   \   00000060   0x80A0             STRH     R0,[R4, #+4]
+    163          		Plugging__SFData.Plugging_VwiSignalRiskThreshold = ENDIANU16_STON(((SF_PLUGGING_DATA_TYPE*)(void*)(plugloader.Data))->Plugging_VwiSignalRiskThreshold);
+   \   00000062   0x9900             LDR      R1,[SP, #+0]
+   \   00000064   0x7988             LDRB     R0,[R1, #+6]
+   \   00000066   0x79CA             LDRB     R2,[R1, #+7]
+   \   00000068   0x0612             LSLS     R2,R2,#+24
+   \   0000006A   0x0C12             LSRS     R2,R2,#+16
+   \   0000006C   0x4310             ORRS     R0,R0,R2
+   \   0000006E   0x80E0             STRH     R0,[R4, #+6]
+    164          		Plugging__SFData.Plugging_RiskMaxCount = ((SF_PLUGGING_DATA_TYPE*)(void*)(plugloader.Data))->Plugging_RiskMaxCount;
+   \   00000070   0x9800             LDR      R0,[SP, #+0]
+   \   00000072   0x7A00             LDRB     R0,[R0, #+8]
+   \   00000074   0x7220             STRB     R0,[R4, #+8]
+    165          
+    166          		Plugging__SFData.Plugging_DiverterMovingTimeoutSec = ((SF_PLUGGING_DATA_TYPE*)(void*)(plugloader.Data))->Plugging_DiverterMovingTimeoutSec;
+   \   00000076   0x9800             LDR      R0,[SP, #+0]
+   \   00000078   0x7A40             LDRB     R0,[R0, #+9]
+   \   0000007A   0x7260             STRB     R0,[R4, #+9]
+    167          
+    168          		if(plugloader.Length < sizeof(SF_PLUGGING_DATA_TYPE))
+   \   0000007C   0x4668             MOV      R0,SP
+   \   0000007E   0x8880             LDRH     R0,[R0, #+4]
+   \   00000080   0x280C             CMP      R0,#+12
+   \   00000082   0xD201             BCS      ??PluggingMonitor__Initialize_1
+    169          		{
+    170          			// Old Setting File, assign default values to this variable
+    171          			Plugging__SFData.Plugging_DiverterMovingTimeoutSec = 3;
+   \   00000084   0x2003             MOVS     R0,#+3
+   \   00000086   0x7260             STRB     R0,[R4, #+9]
+    172          		}
+    173          
+    174          		Plugging__SFData_Ptr = &Plugging__SFData;
+   \                     ??PluggingMonitor__Initialize_1: (+1)
+   \   00000088   0x6164             STR      R4,[R4, #+20]
+   \   0000008A   0xBD37             POP      {R0-R2,R4,R5,PC}
+    175          	}
+    176          	else
+    177          	{
+    178          		LOG_ADD_EXCEPTION(ERROR_LOADING_PARAMETERS, SF_PTR_ACU_PRODUCT_CONFIGURATION_DATA);
+   \                     ??PluggingMonitor__Initialize_0: (+1)
+   \   0000008C   0x2304             MOVS     R3,#+4
+   \   0000008E   0x2201             MOVS     R2,#+1
+   \   00000090   0x4611             MOV      R1,R2
+   \   00000092   0x2043             MOVS     R0,#+67
+   \   00000094   0x.... 0x....      BL       Log__AddMessage
+    179          	}
+    180          }
+   \   00000098   0xBD37             POP      {R0-R2,R4,R5,PC}  ;; return
+    181          
+    182          //----------------------------------------------------------------------------
+    183          /**
+    184           *  @brief      PluggingMonitor__Execution
+    185           *  @details    Function used to perform the Plugging monitor.
+    186           *
+    187           */
+
+   \                                 In section .text, align 2, keep-with-next
+    188          void PluggingMonitor__Execution(void)
+    189          {
+    190          	// Monitor will run only if SF is present
+    191          	if (Plugging__SFData_Ptr != NULL)
+   \                     PluggingMonitor__Execution: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x6941             LDR      R1,[R0, #+20]
+   \   00000004   0x2900             CMP      R1,#+0
+   \   00000006   0xD100             BNE      ??PluggingMonitor__Execution_0
+   \   00000008   0x4770             BX       LR
+    192          	{
+    193          		// Monitor will run only when not paused
+    194          		if (!Plugging_Paused)
+   \                     ??PluggingMonitor__Execution_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x7B42             LDRB     R2,[R0, #+13]
+   \   0000000E   0x2A00             CMP      R2,#+0
+   \   00000010   0xD105             BNE      ??PluggingMonitor__Execution_1
+    195          		{
+    196          			PluggingModel__Execute(PluggingMonitor_ModelData, Plugging__SFData_Ptr,
+    197          					Plugging_Enabled, &PluggingMonitor_AlgorithmState);
+   \   00000012   0x0003             MOVS     R3,R0
+   \   00000014   0x3318             ADDS     R3,R3,#+24
+   \   00000016   0x7B02             LDRB     R2,[R0, #+12]
+   \   00000018   0x301C             ADDS     R0,R0,#+28
+   \   0000001A   0x.... 0x....      BL       PluggingModel__Execute
+    198          		}
+    199          	}
+    200          }
+   \                     ??PluggingMonitor__Execution_1: (+1)
+   \   0000001E   0xBD01             POP      {R0,PC}          ;; return
+    201          
+    202          
+    203          
+    204          //----------------------------------------------------------------------------
+    205          /**
+    206           *  @brief      PluggingMonitor__Start
+    207           *  @details    Function used to enable the Plugging monitor.
+    208           *
+    209           */
+
+   \                                 In section .text, align 2, keep-with-next
+    210          void PluggingMonitor__Start(void)
+    211          {
+    212          	Plugging_Enabled = TRUE;
+   \                     PluggingMonitor__Start: (+1)
+   \   00000000   0x2001             MOVS     R0,#+1
+   \   00000002   0x....             LDR      R1,??DataTable13
+   \   00000004   0x7308             STRB     R0,[R1, #+12]
+    213          }
+   \   00000006   0x4770             BX       LR               ;; return
+    214          
+    215          //----------------------------------------------------------------------------
+    216          /**
+    217           *  @brief      PluggingMonitor__Stop
+    218           *  @details    Function used to disable the Plugging monitor.
+    219           *
+    220           */
+
+   \                                 In section .text, align 2, keep-with-next
+    221          void PluggingMonitor__Stop(void)
+    222          {
+    223          	Plugging_Enabled = FALSE;
+   \                     PluggingMonitor__Stop: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR      R1,??DataTable13
+   \   00000004   0x7308             STRB     R0,[R1, #+12]
+    224          }
+   \   00000006   0x4770             BX       LR               ;; return
+    225          
+    226          //----------------------------------------------------------------------------
+    227          /**
+    228           *  @brief      PluggingMonitor__Start
+    229           *  @details    Function used to enable the Plugging monitor.
+    230           *
+    231           */
+
+   \                                 In section .text, align 2, keep-with-next
+    232          void PluggingMonitor__Pause(void)
+    233          {
+    234          	Plugging_Paused = TRUE;
+   \                     PluggingMonitor__Pause: (+1)
+   \   00000000   0x2001             MOVS     R0,#+1
+   \   00000002   0x....             LDR      R1,??DataTable13
+   \   00000004   0x7348             STRB     R0,[R1, #+13]
+    235          }
+   \   00000006   0x4770             BX       LR               ;; return
+    236          
+    237          //----------------------------------------------------------------------------
+    238          /**
+    239           *  @brief      PluggingMonitor__Stop
+    240           *  @details    Function used to disable the Plugging monitor.
+    241           *
+    242           */
+
+   \                                 In section .text, align 2, keep-with-next
+    243          void PluggingMonitor__Resume(void)
+    244          {
+    245          	Plugging_Paused = FALSE;
+   \                     PluggingMonitor__Resume: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR      R1,??DataTable13
+   \   00000004   0x7348             STRB     R0,[R1, #+13]
+    246          }
+   \   00000006   0x4770             BX       LR               ;; return
+    247          
+    248          //----------------------------------------------------------------------------
+    249          /**
+    250           *  @brief      PluggingMonitor__Reset
+    251           *  @details    Function used to reset the Plugging monitor.
+    252           *
+    253           */
+
+   \                                 In section .text, align 2, keep-with-next
+    254          void PluggingMonitor__Reset(void)
+    255          {
+   \                     PluggingMonitor__Reset: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    256          	PluggingMonitor__Initialize();
+   \   00000002   0x.... 0x....      BL       PluggingMonitor__Initialize
+    257          	PluggingMonitor_Status = PL_UNDEFINED;
+   \   00000006   0x....             LDR      R0,??DataTable13
+   \   00000008   0x2100             MOVS     R1,#+0
+   \   0000000A   0x73C1             STRB     R1,[R0, #+15]
+    258          	Plugging_Enabled = TRUE;
+   \   0000000C   0x2201             MOVS     R2,#+1
+   \   0000000E   0x7302             STRB     R2,[R0, #+12]
+    259          	Plugging_Paused = FALSE;
+   \   00000010   0x7341             STRB     R1,[R0, #+13]
+    260          	Plugging_Reset = TRUE;
+   \   00000012   0x7382             STRB     R2,[R0, #+14]
+    261          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13:
+   \   00000000   0x........         DC32     Plugging__SFData
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13_1:
+   \   00000000   0x........         DC32     Plugging_ModelRecoveryData
+    262          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   PluggingMonitor__Execution
+         8   -> PluggingModel__Execute
+       8   PluggingMonitor__GetModelData
+         8   -> __aeabi_memcpy
+       0   PluggingMonitor__GetStatus
+       8   PluggingMonitor__GetTimerState
+         8   -> SystemTimers__GetState
+      24   PluggingMonitor__Initialize
+        24   -> Log__AddMessage
+        24   -> Plugging_Model_initialize
+        24   -> SettingFile__BasicLoader
+        24   -> SystemTimers__GetHandle
+        24   -> SystemTimers__ReleaseHandle
+       0   PluggingMonitor__Pause
+       8   PluggingMonitor__Reset
+         8   -> PluggingMonitor__Initialize
+       0   PluggingMonitor__Resume
+       0   PluggingMonitor__SetModelData
+       8   PluggingMonitor__SetRiskDelayTimer
+         8   -> SystemTimers__SetMs
+       0   PluggingMonitor__SetStatus
+       0   PluggingMonitor__Start
+       0   PluggingMonitor__Stop
+       0   Plugging__GetResetStatus
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable13
+       4  ??DataTable13_1
+      32  PluggingMonitor__Execution
+      12  PluggingMonitor__GetModelData
+       6  PluggingMonitor__GetStatus
+      12  PluggingMonitor__GetTimerState
+     154  PluggingMonitor__Initialize
+       8  PluggingMonitor__Pause
+      22  PluggingMonitor__Reset
+       8  PluggingMonitor__Resume
+       6  PluggingMonitor__SetModelData
+      14  PluggingMonitor__SetRiskDelayTimer
+       6  PluggingMonitor__SetStatus
+       8  PluggingMonitor__Start
+       8  PluggingMonitor__Stop
+       8  Plugging_ModelRecoveryData
+      16  Plugging__GetResetStatus
+      32  Plugging__SFData
+          Plugging_Enabled
+          Plugging_Paused
+          Plugging_Reset
+          PluggingMonitor_Status
+          PluggingMonitor_TimerHandle
+          Plugging__SFData_Ptr
+          PluggingMonitor_AlgorithmState
+          PluggingMonitor_ModelData_
+
+ 
+  32 bytes in section .bss
+ 320 bytes in section .text
+   8 bytes in section _appliance_segment
+ 
+ 320 bytes of CODE memory
+  40 bytes of DATA memory
+
+Errors: none
+Warnings: none

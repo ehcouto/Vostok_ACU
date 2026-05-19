@@ -1,0 +1,1210 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:39
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/SRAnalogLLI/SRAnalogLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SRAnalogLLI.lst -o
+#        obj\SRAnalogLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/SRAnalogLLI/SRAnalogLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SRAnalogLLI.lst
+#    Object file  =  obj\SRAnalogLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\SRAnalogLLI\SRAnalogLLI.c
+      1          /**
+      2           *  @file       SRAnalogLLI.c
+      3           *
+      4           *  @defgroup	CLASS_B
+      5           *
+      6           *  @brief      Module for SRAnalogLLI readings
+      7           *
+      8           *  @details    This module perform reading of Analog channels and perform some filters.
+      9           *
+     10           *  			Analog channels can be read as Asynchronous or on AC line peaks (at angles 90 and 270 degrees of ZC), depending
+     11           *  			on which register macro used (ANALOG_LLI_ASYNCH_REGISTER or ANALOG_LLI_PEAK_REGISTER)
+     12           *
+     13           *  			Filters applied:
+     14           *  			- Average of 2^N samples (N is a setting parameter and can change by channel)
+     15           *  			- Filter reading: if a new sample is higher than 2^M points than last sample read (M is a setting parameter)
+     16           *  				 average is suspended for ANALOGLLI_FILTER_SAMPLES next samples (if they are within valid range with last readings)
+     17           *  			- Channel compensation: If a channel is set as "Compensated", every sample is converted using compensation
+     18           *  				algorithm, depending on Reference channel defined
+     19           *
+     20           *              For Class B checks:
+     21           *              SRANALOG_EXTERNAL_CHECK_GPIO_FEATURE can be ENABLED if micro has no internal feature for Channel disconnection,
+     22           *                  so an external pin is required to be used
+     23           *              SRANALOG_EXTERNAL_CHECK_GPIO_LIST must be defined if SRANALOG_EXTERNAL_CHECK_GPIO_FEATURE is ENABLED; it will contain
+     24           *                  an array of {Atod_Channel, Gpio_Port, Gpio_Pin} to find Gpio pin for an Atod channel.
+     25           *
+     26           *              Optional Features:
+     27           *              SRANALOGLLI_FILTER_SAMPLES (default 3) is debounce counter when Delta filter is enabled
+     28           *              SRANALOG_ONEMS_NUM_READS (default 25) set number of 1ms reading before providing each Peak to Peak / Peak values
+     29           *                  if set to 0, N_Reads is used as parameter for 1ms readings - no further filters will be applied to result
+     30           *              SRANALOG_ONEMS_NUM_READS_DIVIDER (default 1) can be used to divide N_Reads when a new sample comes out during 1ms readings (if SRANALOG_ONEMS_NUM_READS > 0)
+     31           *              SRANALOG_ONEMS_FIXED_DELTA_FILTER (default 1) applies a fixed maximum/minimum Delta filter between 1ms reads.
+     32           *                  If set to 0, setting file Delta parameter is used for that purpose and it will be disabled on sample result.
+     33           *                  If set to 1, Delta filter on 1ms reads is disabled.
+     34           *
+     35           *  @section    Applicable_Documents
+     36           *					List here all the applicable documents if needed. <tr>	
+     37           *
+     38           *  @copyright  Copyright 2016-$Date: 2015/07/24 11:27:57EDT $. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     39           */
+     40          //---------------------------------------------------------------------------------------------------------------------
+     41          //---------------------------------------------------------------------------------------------------------------------
+     42          
+     43          
+     44          //-------------------------------------- Include Files ----------------------------------------------------------------
+     45          #include "C_Extensions.h"
+     46          #include "SRAnalogLLI.h"
+     47          
+     48          #if (HBL_LLI_NUM_SRANALOG > 0)
+     49          #include "VirtualPin.h"
+     50          #include "Atod.h"
+     51          #include "Micro.h"
+     52          #include "SRData.h"
+     53          #include "SRException.h"
+     54          #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+     55          #include "SRTaskSequence.h"
+     56          #endif
+     57          
+     58          #ifndef SRANALOG_EXTERNAL_CHECK_GPIO_FEATURE
+     59          #define SRANALOG_EXTERNAL_CHECK_GPIO_FEATURE    DISABLED
+     60          #endif
+     61          
+     62          #ifndef SRANALOG_ONEMS_NUM_READS
+     63          #define SRANALOG_ONEMS_NUM_READS                 25
+     64          #endif
+     65          
+     66          #ifndef SRANALOG_ONEMS_NUM_READS_DIVIDER
+     67          #define SRANALOG_ONEMS_NUM_READS_DIVIDER         1
+     68          #endif
+     69          
+     70          #ifndef SRANALOG_ONEMS_FIXED_DELTA_FILTER
+     71          #define SRANALOG_ONEMS_FIXED_DELTA_FILTER       1
+     72          #endif
+     73          
+     74          #ifndef SRANALOGLLI_FILTER_SAMPLES
+     75          #define SRANALOGLLI_FILTER_SAMPLES              3
+     76          #endif
+     77          
+     78          #if (SRANALOG_EXTERNAL_CHECK_GPIO_FEATURE == DISABLED)
+     79              #ifdef SRANALOG_EXTERNAL_CHECK_GPIO_LIST
+     80                  #error "SRANALOG_EXTERNAL_CHECK_GPIO_LIST cannot be defined if SRANALOG_EXTERNAL_CHECK_GPIO_FEATURE is DISABLED"
+     81              #else
+     82                  #define  SRANALOG_EXTERNAL_CHECK_GPIO_LIST   { {(ATOD_CHANNEL_DEF) 0xFF, PORT_NULL, 0} }
+     83              #endif
+     84          #endif
+     85          
+     86          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     87          
+     88          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     89          typedef PACKED struct
+     90          {
+     91              uint32 Sum;                     /* A/D samples's sum */
+     92              uint16 Value;                   /* A/D current sample */
+     93              uint16 Raw_Sample;              /* A/D raw sample */
+     94              uint16 Last_Sample;             /* A/D old sample */
+     95              uint16 Lower_Value;             /* A/D current min value */
+     96              uint16 Higher_Value;            /* A/D current max value */
+     97              uint8  Sample_Counter;          /* Number of Samples collected */
+     98              uint8  Fast_Sample_Counter;     /* Number of Samples collected */
+     99              uint8  Sync_Counter;            /* Counter used for max. variation between two samples */
+    100              uint8  Fast_Sync_Counter;       /* Number of considered invalid value during 1ms process ATOD */
+    101          } SRANALOGLLI_DATA_TYPE;
+    102          
+    103          // SRAnalogLLI Parameter table
+    104          typedef PACKED struct
+    105          {
+    106          	union
+    107          	{
+    108          		uint16 Complete;
+    109          		struct
+    110          		{
+    111          			uint8 N_Read:3;
+    112          			uint8 Unused:5;
+    113          			uint8 Filter_Reading:4;
+    114          			uint8 Channel_Discharge:1;
+    115          			uint8 Compensation:1;
+    116          			uint8 Reference:1;
+    117          			uint8 Ac_Line:1;
+    118          		};
+    119          	} Config;
+    120          	union
+    121          	{
+    122          		struct
+    123          		{
+    124          			uint16 Min;
+    125          			uint16 Max;
+    126          			uint16 Nominal;
+    127          			sint8 Pre_Offset;
+    128          			uint8 Hysteresis;
+    129          		} Reference;
+    130          		struct
+    131          		{
+    132          			sint8 Comp_Pre_Offset;
+    133          			sint8 Comp_Post_Offset;
+    134          			uint16 Zero_Level_Ref;
+    135          			uint16 unused[2];
+    136          		} Compensated;
+    137          	} Config_param;
+    138          } SRANALOGLLI_PARAM_TYPE;
+    139          
+    140          typedef PACKED struct
+    141          {
+    142          	uint16 Reference_Value;
+    143          	uint16 Nominal_Value;
+    144          	sint8 Nominal_Offset;
+    145          } SRANALOGLLI_COMP_TYPE;
+    146          
+    147          typedef PACKED struct
+    148          {
+    149              ATOD_CHANNEL_DEF    Atod_Channel;
+    150              GPIO_PORT_TYPE      Gpio_Port;
+    151              uint8               Gpio_Pin;
+    152          } SRANALOGLLI_CHECK_PIN_TYPE;
+    153          
+    154          typedef enum
+    155          {
+    156              SRANALOGLLI_SINGLE_READ,
+    157              SRANALOGLLI_FAST_READ,
+    158              SRANALOGLLI_HI_PEAK_READ,
+    159              SRANALOGLLI_LO_PEAK_READ,
+    160          } SRANALOGLLI_READ_TYPE;
+    161          
+    162          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    163          static SRANALOGLLI_DATA_TYPE SRAnalogLLI_Data[HBL_LLI_NUM_SRANALOG];
+    164          static uint8 SRAnalogLLI_Channel[HBL_LLI_NUM_SRANALOG];
+    165          static SRANALOGLLI_COMP_TYPE SRAnalogLLI_Compensation;
+    166          static uint8 SRAnalogLLI_Allocation;
+    167          
+    168          static SRANALOGLLI_DATA_TYPE N_SRAnalogLLI_Data[HBL_LLI_NUM_SRANALOG];
+    169          static uint8 N_SRAnalogLLI_Channel[HBL_LLI_NUM_SRANALOG];
+    170          static SRANALOGLLI_COMP_TYPE N_SRAnalogLLI_Compensation;
+    171          static uint8 N_SRAnalogLLI_Allocation;
+    172          
+    173          static SRANALOGLLI_CHECK_PIN_TYPE const CHECK_PIN_TABLE[] =  SRANALOG_EXTERNAL_CHECK_GPIO_LIST;
+    174          
+    175          static BOOL_TYPE AnalogInputDoRead(HBL_LLI_TYPE * input, SRANALOGLLI_READ_TYPE read_type, BOOL_TYPE is_peak_to_peak);
+    176          static PASS_FAIL_TYPE AnalogInputCheckSample(uint16 sample, uint16 ref, uint8 delta);
+    177          static uint16 DoCompensation(SRANALOGLLI_PARAM_TYPE *input_param, uint16 ad_value);
+    178          static void UpdateReference(SRANALOGLLI_PARAM_TYPE *input_param, uint16 advalue);
+    179          static uint8 FindCheckGpio(uint8 channel);
+    180          
+    181          //=====================================================================================================================
+    182          //-------------------------------------- Public Functions -------------------------------------------------------------
+    183          //=====================================================================================================================
+    184          
+    185          //---------------------------------------------------------------------------------------------------------------------
+    186          /**
+    187           * @brief	Initializes the SRAnalogLLI module and its variables
+    188           */
+    189          void SRAnalogLLI__Initialize(void)
+    190          {
+    191          	SRData__UpdateByte(&SRAnalogLLI_Allocation, &N_SRAnalogLLI_Allocation, 0);
+    192          	SRData__Fill(SRAnalogLLI_Channel, N_SRAnalogLLI_Channel, 0xFF, sizeof(SRAnalogLLI_Channel));
+    193          	SRData__Fill(SRAnalogLLI_Data, N_SRAnalogLLI_Data, 0, sizeof(SRAnalogLLI_Data));
+    194          	SRData__Fill((void *) &SRAnalogLLI_Compensation,(void *) &N_SRAnalogLLI_Compensation, 0, sizeof(SRAnalogLLI_Compensation));
+    195          
+    196              #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    197                  SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_INIT, SRTASKSEQUENCE_APPL_INIT_SRANALOG_LLI);
+    198              #endif
+    199          }
+    200          
+    201          //---------------------------------------------------------------------------------------------------------------------
+    202          /**
+    203           * @brief	Checks if there is free space and reserve a new instance
+    204           * @return	index of AnalogLLI instance, 0xFF if all HBL_LLI_NUM_SRANALOG are already allocated
+    205           */
+    206          uint8 SRAnalogLLI__Allocate(void)
+    207          {
+    208              uint8 retval;
+    209              retval = 0xFF;
+    210          
+    211              if ((SRData__CheckByte(&SRAnalogLLI_Allocation, &N_SRAnalogLLI_Allocation) == SRDATA_OK) &&
+    212              	(SRAnalogLLI_Allocation < HBL_LLI_NUM_SRANALOG))
+    213              {
+    214                  retval = SRAnalogLLI_Allocation;
+    215              	SRData__UpdateByte(&SRAnalogLLI_Allocation, &N_SRAnalogLLI_Allocation, SRAnalogLLI_Allocation+1);
+    216              }
+    217          
+    218              return (retval);
+    219          }
+    220          
+    221          //---------------------------------------------------------------------------------------------------------------------
+    222          /**
+    223           * @brief      Initializes a new instance of SRAnalogLLI
+    224           * @param input		pointer to HBL_LLI_TYPE structure reserved for that instance
+    225           */
+    226          PASS_FAIL_TYPE SRAnalogLLI__InitializeInstance(HBL_LLI_TYPE *input)
+    227          {
+    228              PASS_FAIL_TYPE retval = FAIL;
+    229          
+    230          	if ((SRData__CheckByte(&SRAnalogLLI_Allocation, &N_SRAnalogLLI_Allocation) == SRDATA_OK) &&
+    231          			(input->Data_Index < SRAnalogLLI_Allocation))
+    232              {
+    233          	    SRANALOGLLI_DATA_TYPE *data = &SRAnalogLLI_Data[input->Data_Index];
+    234          	    SRANALOGLLI_DATA_TYPE *n_data = &N_SRAnalogLLI_Data[input->Data_Index];
+    235          	    uint8 virtual_pin = input->Pin_Ptr[0];
+    236          
+    237                  if((SRDATA_OK == SRData__CheckByte(&SRAnalogLLI_Channel[input->Data_Index], &N_SRAnalogLLI_Channel[input->Data_Index])) &&
+    238                  		(SRDATA_OK == SRData__CheckArrayNonBlocking(data, n_data, sizeof(SRANALOGLLI_DATA_TYPE))))
+    239                  {
+    240              		if (VIRTUALPIN_TABLE[virtual_pin].pin_config == (uint8) INPUT_ANALOG)
+    241                      {
+    242                          SRData__UpdateByte(&SRAnalogLLI_Channel[input->Data_Index], &N_SRAnalogLLI_Channel[input->Data_Index], VIRTUALPIN_TABLE[virtual_pin].device);
+    243                          Gpio__PinConfig(VIRTUALPIN_TABLE[virtual_pin].port,VIRTUALPIN_TABLE[virtual_pin].pin,INPUT_ANALOG);
+    244                          retval = PASS;
+    245                      }
+    246          
+    247                      SRData__UpdateLong(&data->Sum, &n_data->Sum, 0);
+    248                      SRData__UpdateShort(&data->Value, &n_data->Value, ATOD_INVALID_CONVERSION);
+    249                      SRData__UpdateShort(&data->Last_Sample, &n_data->Last_Sample,  ATOD_INVALID_CONVERSION);
+    250                      SRData__UpdateShort(&data->Raw_Sample, &n_data->Raw_Sample, ATOD_INVALID_CONVERSION);
+    251                      SRData__UpdateShort(&data->Higher_Value, &n_data->Higher_Value, 0);
+    252                      SRData__UpdateShort(&data->Lower_Value, &n_data->Lower_Value , ATOD_INVALID_CONVERSION);
+    253                      SRData__UpdateByte(&data->Sample_Counter, &n_data->Sample_Counter, 0);
+    254                      SRData__UpdateByte(&data->Fast_Sample_Counter, &n_data->Fast_Sample_Counter, 0);
+    255                      SRData__UpdateByte(&data->Sync_Counter, &n_data->Sync_Counter, 0);
+    256                      SRData__UpdateByte(&data->Fast_Sync_Counter, &n_data->Fast_Sync_Counter, 0);
+    257                  }
+    258              }
+    259          
+    260              return (retval);
+    261          
+    262          }
+    263          
+    264          //---------------------------------------------------------------------------------------------------------------------
+    265          /**
+    266           * @brief	Handler for SRAnalogLLI execution
+    267           */
+    268          void SRAnalogLLI__Handler(void)
+    269          {
+    270          	BOOL_TYPE retval;
+    271          	uint8 index;
+    272          
+    273          	retval = (BOOL_TYPE) (SRData__CheckByte(&SRAnalogLLI_Allocation, &N_SRAnalogLLI_Allocation) == SRDATA_OK);
+    274          	retval &= (BOOL_TYPE) (SRData__CheckArrayNonBlocking((void *) &SRAnalogLLI_Compensation, (void *) &N_SRAnalogLLI_Compensation, sizeof(SRAnalogLLI_Compensation)) == SRDATA_OK);
+    275              retval &= (BOOL_TYPE) (Atod__EngineClassBCheck() == PASS);
+    276          
+    277          	for (index = 0; index < HBL_LLI_NUM_SRANALOG; index++)
+    278          	{
+    279          	    uint8 channel;
+    280          
+    281          		retval &= (BOOL_TYPE) (SRData__CheckArrayNonBlocking((void *) &SRAnalogLLI_Data[index],(void *) &N_SRAnalogLLI_Data[index], sizeof(SRAnalogLLI_Data[0])) == SRDATA_OK);
+    282          		retval &= (BOOL_TYPE) (SRData__CheckByte(&SRAnalogLLI_Channel[index], &N_SRAnalogLLI_Channel[index]) == SRDATA_OK);
+    283          		channel = SRAnalogLLI_Channel[index];
+    284          		if (channel != 0xFF)
+    285          		{
+    286          		    uint8 gpio_index = FindCheckGpio(channel);
+    287          		    if (gpio_index < ELEMENTS_IN_ARRAY(CHECK_PIN_TABLE))
+    288          		    {
+    289          	            retval &= (BOOL_TYPE) (Atod__ChannelClassBCheck((ATOD_CHANNEL_DEF) channel, CHECK_PIN_TABLE[gpio_index].Gpio_Port, CHECK_PIN_TABLE[gpio_index].Gpio_Pin) == PASS);
+    290          		    }
+    291          		    else
+    292          		    {
+    293          		        retval = FALSE;
+    294          		    }
+    295          		}
+    296          
+    297          		if (retval == FALSE)
+    298          		{
+    299          			SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, 0, index);
+    300          			break;
+    301          		}
+    302          	}
+    303              #if (SYSTEM_ENABLE_TASKSEQUENCE == ENABLED)
+    304                  SRTaskSequence__SetSequenceStep(SRTASKSEQUENCE_APPL_SAFETY_THREAD, SRTASKSEQUENCE_APPL_SRANALOG_CHECKS);
+    305              #endif
+    306          }
+    307          
+    308          
+    309          //---------------------------------------------------------------------------------------------------------------------
+    310          /**
+    311           * @brief		Get function to provide value of an SRAnalogLLI instance
+    312           * @param input		pointer to HBL_LLI_TYPE structure instance
+    313           * @return	pointer to Value
+    314           */
+    315          void * SRAnalogLLI__Get(HBL_LLI_TYPE * input)
+    316          {
+    317              if (input->Data_Index < SRAnalogLLI_Allocation)
+    318              {
+    319                  return ((void *)&SRAnalogLLI_Data[input->Data_Index].Value);
+    320              }
+    321              else
+    322              {
+    323                  return (NULL);
+    324              }
+    325          }
+    326          
+    327          //---------------------------------------------------------------------------------------------------------------------
+    328          /**
+    329           * @brief	Process function to read on ZC Peak angle (90, 270)
+    330           * @param input		pointer to HBL_LLI_TYPE structure instance
+    331           * @param peak_polarity		TRUE for 90, FALSE for 270
+    332           * @return	TRUE if a new sample is ready, FALSE otherwise
+    333           */
+    334          BOOL_TYPE SRAnalogLLI__PeakProcess(HBL_LLI_TYPE * input, BOOL_TYPE peak_polarity)
+    335          {
+    336              BOOL_TYPE retval = FALSE;
+    337          
+    338          	if ((SRData__CheckByte(&SRAnalogLLI_Allocation, &N_SRAnalogLLI_Allocation) == SRDATA_OK) &&
+    339          			(input->Data_Index < SRAnalogLLI_Allocation))
+    340          	{
+    341          	    SRANALOGLLI_PARAM_TYPE *param_ptr = (SRANALOGLLI_PARAM_TYPE *) (input->Parameter_Ptr.Data); //lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    342          	    BOOL_TYPE acflag = FALSE;
+    343          
+    344                  if ((param_ptr != NULL) &&
+    345          			(param_ptr->Config.Ac_Line != 0))
+    346                  {
+    347                      acflag = TRUE;
+    348                  }
+    349          
+    350                  if (acflag == peak_polarity)
+    351                  {
+    352                      retval = AnalogInputDoRead(input, SRANALOGLLI_SINGLE_READ, FALSE);
+    353                  }
+    354              }
+    355          	else
+    356          	{
+    357          		SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, input->LLI_Handler_Index, input->Data_Index);
+    358          	}
+    359              return (retval);
+    360          }
+    361          
+    362          //---------------------------------------------------------------------------------------------------------------------
+    363          /**
+    364           * @brief   Process function to read on ZC Peak angle (90, 270)
+    365           * @param input     pointer to HBL_LLI_TYPE structure instance
+    366           * @param peak_polarity     TRUE for 90, FALSE for 270
+    367           * @return  TRUE if a new sample is ready, FALSE otherwise
+    368           */
+    369          BOOL_TYPE SRAnalogLLI__PeakToPeakProcess(HBL_LLI_TYPE * input, BOOL_TYPE peak_polarity)
+    370          {
+    371              BOOL_TYPE retval = FALSE;
+    372          
+    373              if ((SRData__CheckByte(&SRAnalogLLI_Allocation, &N_SRAnalogLLI_Allocation) == SRDATA_OK) &&
+    374                      (input->Data_Index < SRAnalogLLI_Allocation))
+    375              {
+    376                  SRANALOGLLI_READ_TYPE read_type = (peak_polarity == TRUE) ? SRANALOGLLI_HI_PEAK_READ : SRANALOGLLI_LO_PEAK_READ;
+    377                  retval = AnalogInputDoRead(input, read_type, FALSE);
+    378              }
+    379              else
+    380              {
+    381                  SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, input->LLI_Handler_Index, input->Data_Index);
+    382              }
+    383          
+    384              return (retval);
+    385          }
+    386          
+    387          //---------------------------------------------------------------------------------------------------------------------
+    388          /**
+    389           * @brief	Process function to read on ZC Peak angle (90, 270)
+    390           * @param input		pointer to HBL_LLI_TYPE structure instance
+    391           * @return	PASS if a new sample is ready, FAIL otherwise
+    392           */
+    393          BOOL_TYPE SRAnalogLLI__AsynchProcess(HBL_LLI_TYPE * input)
+    394          {
+    395              BOOL_TYPE retval = FALSE;
+    396          
+    397          	if ((SRData__CheckByte(&SRAnalogLLI_Allocation, &N_SRAnalogLLI_Allocation) == SRDATA_OK) &&
+    398          		(input->Data_Index < SRAnalogLLI_Allocation))
+    399              {
+    400          		retval = AnalogInputDoRead(input, SRANALOGLLI_SINGLE_READ, FALSE);
+    401              }
+    402          	else
+    403          	{
+    404          		SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, input->LLI_Handler_Index, input->Data_Index);
+    405          	}
+    406          
+    407              return (retval);
+    408          }
+    409          
+    410          //---------------------------------------------------------------------------------------------------------------------
+    411          /**
+    412           * @brief   Process function to read Analog value in 1ms Handler
+    413           * @param input     pointer to HBL_LLI_TYPE structure instance
+    414           * @return  PASS if a new sample is ready, FAIL otherwise
+    415           */
+    416          BOOL_TYPE SRAnalogLLI__OneMsPeakToPeakProcess(HBL_LLI_TYPE * input)
+    417          {
+    418              BOOL_TYPE retval = FALSE;
+    419          
+    420              if ((SRData__CheckByte(&SRAnalogLLI_Allocation, &N_SRAnalogLLI_Allocation) == SRDATA_OK) &&
+    421                 (input->Data_Index < SRAnalogLLI_Allocation))
+    422              {
+    423                  retval = AnalogInputDoRead(input, SRANALOGLLI_FAST_READ, TRUE);
+    424              }
+    425              else
+    426              {
+    427                  SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, input->LLI_Handler_Index, input->Data_Index);
+    428              }
+    429              return (retval);
+    430          }
+    431          
+    432          //---------------------------------------------------------------------------------------------------------------------
+    433          /**
+    434           * @brief   Process function to read SRAnalogLLI value in 1ms Handler, returning Max value on 90 degrees, minimum on 270
+    435           * @param input     pointer to HBL_LLI_TYPE structure instance
+    436           * @return  PASS if a new sample is ready, FAIL otherwise
+    437           */
+    438          BOOL_TYPE SRAnalogLLI__OneMsPeakProcess(HBL_LLI_TYPE * input)
+    439          {
+    440              BOOL_TYPE retval = FALSE;
+    441          
+    442              if ((SRData__CheckByte(&SRAnalogLLI_Allocation, &N_SRAnalogLLI_Allocation) == SRDATA_OK) &&
+    443                  (input->Data_Index < SRAnalogLLI_Allocation))
+    444              {
+    445                  retval = AnalogInputDoRead(input, SRANALOGLLI_FAST_READ, FALSE);
+    446              }
+    447              else
+    448              {
+    449                  SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, input->LLI_Handler_Index, input->Data_Index);
+    450              }
+    451              return (retval);
+    452          }
+    453          
+    454          //=====================================================================================================================
+    455          //-------------------------------------- Private Functions ------------------------------------------------------------
+    456          //=====================================================================================================================
+    457          //---------------------------------------------------------------------------------------------------------------------
+    458          /**
+    459           * @brief		Algorithm to update and filter a new sample
+    460           * @param input		pointer to HBL_LLI_TYPE structure instance
+    461           * @param status
+    462           * @return	PASS if a new sample is ready, FAIL otherwise
+    463           */
+    464          static BOOL_TYPE AnalogInputDoRead(HBL_LLI_TYPE * input, SRANALOGLLI_READ_TYPE read_type, BOOL_TYPE is_peak_to_peak)
+    465          {
+    466              BOOL_TYPE ret_value = FALSE;
+    467              SRANALOGLLI_DATA_TYPE *data = &SRAnalogLLI_Data[input->Data_Index];
+    468              SRANALOGLLI_DATA_TYPE *n_data = &N_SRAnalogLLI_Data[input->Data_Index];
+    469          
+    470          	if (SRData__CheckArrayNonBlocking((void *) data, (void *) n_data, sizeof(SRAnalogLLI_Data[0])) == SRDATA_OK)
+    471          	{
+    472                  uint8 virtual_pin = input->Pin_Ptr[0];
+    473          
+    474                  if (VIRTUALPIN_TABLE[virtual_pin].pin_config == (uint8) INPUT_ANALOG)
+    475                  {
+    476                      SRANALOGLLI_PARAM_TYPE *param_ptr = (void *)input->Parameter_Ptr.Data;
+    477                      uint8 filter_value = 1;
+    478                      uint8 n_samples = 1;
+    479          
+    480                      uint16 new_ad_sample = Atod__Convert((ATOD_CHANNEL_DEF) VIRTUALPIN_TABLE[virtual_pin].device, (ATOD_CHANNEL_RESOLUTION_DEF) VIRTUALPIN_TABLE[virtual_pin].param0);
+    481                      uint16 new_raw_sample = new_ad_sample;
+    482          
+    483                      if (param_ptr != NULL)
+    484                      {
+    485                          n_samples = 1 << (param_ptr->Config.N_Read);
+    486                          filter_value = 1 << (param_ptr->Config.Filter_Reading);
+    487                      }
+    488          
+    489                      if((read_type == SRANALOGLLI_FAST_READ) &&
+    490                          (new_ad_sample != ATOD_INVALID_CONVERSION))
+    491                      {
+    492                          uint8 fast_max_sample_count;
+    493                          uint8 one_ms_filter = (SRANALOG_ONEMS_FIXED_DELTA_FILTER == 0) ? filter_value : SRANALOG_ONEMS_FIXED_DELTA_FILTER;
+    494                          if((one_ms_filter > 1) &&
+    495                              (FAIL == AnalogInputCheckSample(new_ad_sample, data->Raw_Sample, one_ms_filter)))
+    496                          {
+    497                              SRData__UpdateByte(&data->Fast_Sync_Counter, &n_data->Fast_Sync_Counter, data->Fast_Sync_Counter+1);
+    498          
+    499                              if (data->Fast_Sync_Counter < SRANALOGLLI_FILTER_SAMPLES)
+    500                              {
+    501                                  new_ad_sample = data->Raw_Sample;
+    502                              }
+    503                              else
+    504                              {
+    505                                  SRData__UpdateByte(&data->Fast_Sync_Counter, &n_data->Fast_Sync_Counter, 0);
+    506                              }
+    507                          }
+    508                          else
+    509                          {
+    510                              SRData__UpdateByte(&data->Fast_Sync_Counter, &n_data->Fast_Sync_Counter, 0);
+    511                          }
+    512          
+    513                          // Store the maximum Value acquired during the NUMBER_OF_A2D_SAMPLES samples
+    514                          if(new_ad_sample > data->Higher_Value)
+    515                          {
+    516                             SRData__UpdateShort(&data->Higher_Value, &n_data->Higher_Value, new_ad_sample);
+    517                          }
+    518          
+    519                          // Store the minimum Value acquired during the NUMBER_OF_A2D_SAMPLES samples
+    520                          if(new_ad_sample < data->Lower_Value)
+    521                          {
+    522                              SRData__UpdateShort(&data->Lower_Value, &n_data->Lower_Value, new_ad_sample);
+    523                          }
+    524          
+    525                          // increment counter
+    526          
+    527                          SRData__UpdateByte(&data->Fast_Sample_Counter, &n_data->Fast_Sample_Counter, data->Fast_Sample_Counter+1);
+    528                          fast_max_sample_count = (SRANALOG_ONEMS_NUM_READS > 0) ? SRANALOG_ONEMS_NUM_READS : n_samples;
+    529          
+    530                          if( data->Fast_Sample_Counter >= fast_max_sample_count)
+    531                          {
+    532                              if(is_peak_to_peak == TRUE)
+    533                              {
+    534                                new_ad_sample = (data->Higher_Value - data->Lower_Value);
+    535                              }
+    536                              else if(param_ptr->Config.Ac_Line == TRUE)
+    537                              {
+    538                                new_ad_sample = data->Higher_Value;
+    539                              }
+    540                              else
+    541                              {
+    542                                new_ad_sample = data->Lower_Value;
+    543                              }
+    544                              SRData__UpdateByte(&data->Fast_Sample_Counter, &n_data->Fast_Sample_Counter, 0);
+    545                              SRData__UpdateShort(&data->Lower_Value, &n_data->Lower_Value, ATOD_INVALID_CONVERSION);
+    546                              SRData__UpdateShort(&data->Higher_Value, &n_data->Higher_Value, 0);
+    547                          }
+    548                          else
+    549                          {
+    550                              new_ad_sample = ATOD_INVALID_CONVERSION;
+    551                          }
+    552                      }
+    553          
+    554                      if((is_peak_to_peak == TRUE) &&
+    555                          (new_ad_sample != ATOD_INVALID_CONVERSION) &&
+    556                          ((read_type == SRANALOGLLI_HI_PEAK_READ) ||
+    557                              (read_type == SRANALOGLLI_LO_PEAK_READ)) )
+    558                      {
+    559                          if(read_type == SRANALOGLLI_HI_PEAK_READ)
+    560                          {
+    561                              SRData__UpdateShort(&data->Higher_Value, &n_data->Higher_Value, new_ad_sample);
+    562                          }
+    563                          else
+    564                          {
+    565                              SRData__UpdateShort(&data->Lower_Value, &n_data->Lower_Value, new_ad_sample);
+    566                          }
+    567          
+    568                          if((data->Higher_Value != 0) &&
+    569                              (data->Lower_Value != ATOD_INVALID_CONVERSION))
+    570                          {
+    571                              if(data->Higher_Value > data->Lower_Value)
+    572                              {
+    573                                  new_ad_sample = data->Higher_Value - data->Lower_Value;
+    574          
+    575                              }
+    576                              else
+    577                              {
+    578                                  new_ad_sample = data->Lower_Value - data->Higher_Value;
+    579                              }
+    580                              SRData__UpdateShort(&data->Lower_Value, &n_data->Lower_Value, ATOD_INVALID_CONVERSION);
+    581                              SRData__UpdateShort(&data->Higher_Value, &n_data->Higher_Value, 0);
+    582                          }
+    583                          else
+    584                          {
+    585                              new_ad_sample = ATOD_INVALID_CONVERSION;
+    586                          }
+    587                      }
+    588          
+    589                          SRData__UpdateShort(&data->Raw_Sample, &n_data->Raw_Sample , new_raw_sample);
+    590          
+    591                      // If Compensation reference is set, apply compensation algorithm
+    592                      if ((SRAnalogLLI_Compensation.Reference_Value > 0) &&
+    593                          (new_ad_sample != ATOD_INVALID_CONVERSION) &&
+    594                          (param_ptr->Config.Compensation != 0) &&
+    595                          (input->Parameter_Ptr.Length > 2))
+    596                      {
+    597                          uint16 max_sample;
+    598                          new_ad_sample = DoCompensation(param_ptr, new_ad_sample);
+    599          
+    600                          switch(VIRTUALPIN_TABLE[virtual_pin].param0)
+    601                          {
+    602                              case ATOD_RESOLUTION_04BITS:
+    603                                  max_sample = 0x000F;
+    604                                  break;
+    605                              case ATOD_RESOLUTION_08BITS:
+    606                                  max_sample = 0x00FF;
+    607                                  break;
+    608                              case ATOD_RESOLUTION_10BITS:
+    609                                  max_sample = 0x03FF;
+    610                                  break;
+    611                              case ATOD_RESOLUTION_12BITS:
+    612                                  max_sample = 0x0FFF;
+    613                                  break;
+    614                              case ATOD_RESOLUTION_14BITS:
+    615                                  max_sample = 0x3FFF;
+    616                                  break;
+    617                              default:
+    618                                  max_sample = 0xFFFE;
+    619                          }
+    620                          if(new_ad_sample > max_sample)
+    621                          {
+    622                              new_ad_sample = max_sample;
+    623                          }
+    624                      }
+    625          
+    626                      if(read_type == SRANALOGLLI_FAST_READ)
+    627                      {
+    628                          #if(SRANALOG_ONEMS_FIXED_DELTA_FILTER == 0)
+    629                          // This check skips Sample Delta filtering on OneMs readings - it's performed at 1ms level
+    630                              filter_value = 1;
+    631                          #endif
+    632                          #if(SRANALOG_ONEMS_NUM_READS == 0)
+    633                              // If N_Samples is used on 1ms readings, force it to 1
+    634                              n_samples = 1;
+    635                          #elif(SRANALOG_ONEMS_NUM_READS_DIVIDER > 1)
+    636                              // Applies SRANALOG_ONEMS_NUM_READS_DIVIDER into N_Samples, if set
+    637                              if(n_samples > SRANALOG_ONEMS_NUM_READS_DIVIDER)
+    638                              {
+    639                                  n_samples /= SRANALOG_ONEMS_NUM_READS_DIVIDER;
+    640                              }
+    641                              else
+    642                              {
+    643                                  n_samples = 1;
+    644                              }
+    645                          #endif
+    646                      }
+    647          
+    648                      // Delta filter of a new sample compared to last one
+    649                      if ((new_ad_sample != ATOD_INVALID_CONVERSION) &&
+    650                          (filter_value > 1))
+    651                      {
+    652                          if (FAIL == AnalogInputCheckSample(new_ad_sample, data->Last_Sample, filter_value))
+    653                          {
+    654                              if (data->Sync_Counter == 0)
+    655                              {
+    656                                  SRData__UpdateShort(&data->Last_Sample, &n_data->Last_Sample, new_ad_sample);
+    657                              }
+    658                              else
+    659                              {
+    660                                  SRData__UpdateByte(&data->Sync_Counter, &n_data->Sync_Counter, 0);
+    661                              }
+    662                              SRData__UpdateByte(&data->Sample_Counter, &n_data->Sample_Counter, 0);
+    663                              SRData__UpdateLong(&data->Sum, &n_data->Sum, 0);
+    664                              new_ad_sample = ATOD_INVALID_CONVERSION;
+    665                          }
+    666                          else
+    667                          {
+    668                              SRData__UpdateShort(&data->Last_Sample, &n_data->Last_Sample, new_ad_sample);
+    669                              if (data->Sync_Counter < SRANALOGLLI_FILTER_SAMPLES)
+    670                              {
+    671                                  new_ad_sample = ATOD_INVALID_CONVERSION;
+    672                                  SRData__UpdateByte(&data->Sync_Counter, &n_data->Sync_Counter, data->Sync_Counter+1);
+    673                              }
+    674                          }
+    675                      }
+    676          
+    677                      // Process new valid sample and update average (if ready)
+    678                      if (new_ad_sample != ATOD_INVALID_CONVERSION)
+    679                      {
+    680                          SRData__UpdateLong(&data->Sum, &n_data->Sum, data->Sum + new_ad_sample);
+    681                          SRData__UpdateByte(&data->Sample_Counter, &n_data->Sample_Counter, data->Sample_Counter + 1);
+    682          
+    683                          if (data->Sample_Counter >= n_samples)
+    684                          {
+    685                              SRData__UpdateShort(&data->Value, &n_data->Value, data->Sum / n_samples);
+    686                              SRData__UpdateLong(&data->Sum, &n_data->Sum, 0);
+    687                              SRData__UpdateByte(&data->Sample_Counter, &n_data->Sample_Counter, 0);
+    688                              ret_value = TRUE;
+    689                          }
+    690          
+    691                          // If it's compensation reference, check and updates
+    692                          if  ((param_ptr->Config.Reference != 0) &&
+    693                                  (input->Parameter_Ptr.Length > 2))
+    694                          {
+    695                              UpdateReference(param_ptr, new_ad_sample);
+    696                          }
+    697                      }
+    698                  }
+    699          	}
+    700          	else
+    701          	{
+    702          		SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, input->LLI_Handler_Index, input->Data_Index);
+    703          	}
+    704          
+    705          
+    706              return (ret_value);
+    707          }
+    708          
+    709          //---------------------------------------------------------------------------------------------------------------------
+    710          /**
+    711           * @brief		Check new sample with filter value
+    712           * @param sample new AD sample read
+    713           * @param ref last AD value refrence
+    714           * @param delta maximum delta between new and last values
+    715           * @return PASS if new sample differs from reference less than delta, FAIL otherwise
+    716           */
+    717          static PASS_FAIL_TYPE AnalogInputCheckSample(uint16 sample, uint16 ref, uint8 delta)
+    718          {
+    719              PASS_FAIL_TYPE ret_value;
+    720          
+    721              ret_value = PASS;
+    722          
+    723              if (ref != ATOD_INVALID_CONVERSION)
+    724              {
+    725                  if (sample > (ref + delta))
+    726                  {
+    727                      ret_value = FAIL;
+    728                  }
+    729          
+    730                  if (ref > delta)
+    731                  {
+    732                      if (sample < (ref - delta))
+    733                      {
+    734                          ret_value = FAIL;
+    735                      }
+    736                  }
+    737              }
+    738          
+    739              return (ret_value);
+    740          }
+    741          
+    742          //---------------------------------------------------------------------------------------------------------------------
+    743          /**
+    744           * @brief		Compensation algorithm
+    745           * @param input_param	Configuration parameters related to a channel
+    746           * @param ad_value		AD Value to compensate
+    747           * @return AD Value compensated; ad_value if not applied
+    748           */
+    749          static uint16 DoCompensation(SRANALOGLLI_PARAM_TYPE *input_param, uint16 ad_value)
+    750          {
+    751          	sint32 temp_value = ad_value;
+    752          
+    753          	if (SRData__CheckArrayNonBlocking(&SRAnalogLLI_Compensation, &N_SRAnalogLLI_Compensation, sizeof(SRAnalogLLI_Compensation)) == SRDATA_OK)
+    754          	{
+    755          		if (SRAnalogLLI_Compensation.Reference_Value > SRAnalogLLI_Compensation.Nominal_Offset)
+    756          		{
+    757          			temp_value -= (sint32) input_param->Config_param.Compensated.Comp_Pre_Offset;
+    758          			temp_value -= ENDIANU16_STON(input_param->Config_param.Compensated.Zero_Level_Ref);
+    759          			temp_value *= (SRAnalogLLI_Compensation.Nominal_Value - SRAnalogLLI_Compensation.Nominal_Offset);
+    760          			temp_value /= (SRAnalogLLI_Compensation.Reference_Value - SRAnalogLLI_Compensation.Nominal_Offset);
+    761          			temp_value += ENDIANU16_STON(input_param->Config_param.Compensated.Zero_Level_Ref);
+    762          			temp_value += (sint32) input_param->Config_param.Compensated.Comp_Post_Offset;
+    763          
+    764          			if (temp_value < 0)
+    765          			{
+    766          				temp_value = 0;
+    767          			}
+    768          		}
+    769          	}
+    770          	else
+    771          	{
+    772          		SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, 0xFF, 0xFF);
+    773          	}
+    774          
+    775          	return((uint16) temp_value);
+    776          
+    777          }
+    778          
+    779          /**
+    780           * @brief		Check and update reference value
+    781           * @param input_param	Configuration parameters related to a channel
+    782           * @param ad_value		AD Value of reference read
+    783           */
+    784          static void UpdateReference(SRANALOGLLI_PARAM_TYPE *input_param, uint16 advalue)
+    785          {
+    786          	if (SRData__CheckArrayNonBlocking(&SRAnalogLLI_Compensation, &N_SRAnalogLLI_Compensation,
+    787          		sizeof(SRAnalogLLI_Compensation)) == SRDATA_OK)
+    788          	{
+    789          		uint16 min_val = ENDIANU16_STON(input_param->Config_param.Reference.Min);
+    790          		uint16 max_val = ENDIANU16_STON(input_param->Config_param.Reference.Max);
+    791          
+    792          		// If a reference Value is set, applies an hysteresis to Min and Max thresholds
+    793          		if (SRAnalogLLI_Compensation.Reference_Value > 0)
+    794          		{
+    795          			if (min_val > input_param->Config_param.Reference.Hysteresis)
+    796          			{
+    797          				min_val -= input_param->Config_param.Reference.Hysteresis;
+    798          			}
+    799          			else
+    800          			{
+    801          				min_val = 0;
+    802          			}
+    803          
+    804          			max_val += input_param->Config_param.Reference.Hysteresis;
+    805          		}
+    806          
+    807          		// Check and update reference values
+    808          		if ( (advalue >= min_val) &&
+    809          				(advalue <= max_val) )
+    810          		{
+    811          			SRData__UpdateShort(&SRAnalogLLI_Compensation.Reference_Value, &N_SRAnalogLLI_Compensation.Reference_Value, advalue);
+    812          			SRData__UpdateShort(&SRAnalogLLI_Compensation.Nominal_Value, &N_SRAnalogLLI_Compensation.Nominal_Value, ENDIANU16_STON(input_param->Config_param.Reference.Nominal));
+    813          			SRData__UpdateByte((void *) &SRAnalogLLI_Compensation.Nominal_Offset,(void *) &N_SRAnalogLLI_Compensation.Nominal_Offset, input_param->Config_param.Reference.Pre_Offset);
+    814          		}
+    815          		else
+    816          		{
+    817          			SRData__UpdateShort(&SRAnalogLLI_Compensation.Reference_Value, &N_SRAnalogLLI_Compensation.Reference_Value, 0);
+    818          		}
+    819          	}
+    820          	else
+    821          	{
+    822          		SRException__Queue(SREXCEPTION_HBL_DATA_NOT_CONSISTENT, 0xFF, 0xFF);
+    823          	}
+    824          
+    825          }
+    826          
+    827          uint8 FindCheckGpio(uint8 channel)
+    828          {
+    829          #if (SRANALOG_EXTERNAL_CHECK_GPIO_FEATURE == ENABLED)
+    830              uint8 index;
+    831          
+    832              for (index = 0; index < ELEMENTS_IN_ARRAY(CHECK_PIN_TABLE); index++)
+    833              {
+    834                  if(CHECK_PIN_TABLE[index].Atod_Channel == channel)
+    835                  {
+    836                      // Found index - break the loop
+    837                      break;
+    838                  }
+    839              }
+    840              return index;
+    841          
+    842          #else
+    843              return 0;
+    844          #endif
+    845          }
+    846          
+    847          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

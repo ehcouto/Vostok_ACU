@@ -1,0 +1,11 @@
+# List search and replace regular expressions
+# Default return value is 0
+# Append a single numeric digit to cause a match to update the return value
+
+# Define search pattern for warnings
+#   1-  -1  2- -2   3-      4-     -4-3     5- -5
+s/^"(\S*?)",(\d+)\s+(warning(\[.*?\])?):?\s*(.*?)$/\1:\2: Warning: \4 \5/gim
+
+# Define search pattern for errors - these will stop the build
+#   1-  -1  2- -2   34-    -4      5-     -5-3     6- -6
+s/^"(\S*?)",(\d+)\s+((fatal )?error(\[.*?\])?):?\s*(.*?)$/\1:\2: Error: \5 \6/gim1

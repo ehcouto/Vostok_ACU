@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Built from the sandbox "C:\Data\Projects\Nucleus_Dev" and the workspace "Vostok_ACU_A_WS"--><!--Generated: 2024-06-18 10.21.15--><scm:sourceControlLoadRule eclipseProjectOptions="import" version="1" xmlns:scm="http://com.ibm.team.scm">
+    <parentLoadRule>
+        <component itemId="_oYPSsEZ_EeWJ9ss2TZmwzw"/>
+        <!-- <component name="SERVICE_NVDATA" /> -->
+        <parentFolder itemId="_CLCiYEaAEeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/ServiceAcu" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Service/all"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="APIs">
+        <component itemId="_WmqaoEhEEeWJ9ss2TZmwzw"/>
+        <!-- <component name="Driver_APIs" /> -->
+        <item itemId="_Z9WCkEhEEeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <item repositoryPath="/DriverAPIs" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Driver"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_jflXIEZ-EeWJ9ss2TZmwzw"/>
+        <!-- <component name="HBL_CORE_ACU_LOAD" /> -->
+        <parentFolder itemId="_jflXJEZ-EeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Hbl/acuexpacu"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_7nrRUG22EeWmyIImHGY9Dw"/>
+        <!-- <component name="HBL_DISH_CORE" /> -->
+        <item itemId="_DXCGkGFsEee7zdNUsK_JHQ" itemType="folder"/>
+        <!-- <item repositoryPath="/HblDish/ACULoadHandler/AlternateLoad" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Hbl/acu/ACULoadHandler"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_7nrRUG22EeWmyIImHGY9Dw"/>
+        <!-- <component name="HBL_DISH_CORE" /> -->
+        <parentFolder itemId="_DW7Y4GFsEee7zdNUsK_JHQ" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/HblDish/ACULoadHandler" /> -->
+        <exclude>
+            <filter name="AlternateLoad"/>
+        </exclude>
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Hbl/acuexpacu/ACULoadHandler"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_7nrRUG22EeWmyIImHGY9Dw"/>
+        <!-- <component name="HBL_DISH_CORE" /> -->
+        <item itemId="_EgV0MFzbEee5BqLbJnuMoQ" itemType="folder"/>
+        <!-- <item repositoryPath="/HblDish/ACUGIHandler" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Hbl/acuexpacu"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="StateMachineCodeGenerator">
+        <component itemId="_JlIIoI09EeWjWf37Tgbr8A"/>
+        <!-- <component name="GENERIC_TOOLS" /> -->
+        <item itemId="_kQHbUMGCEeyI6s9xIRC11g" itemType="folder"/>
+        <!-- <item repositoryPath="/StateMachineCodeGenerator/source/dist" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/tools"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_xV3tQHgdEeWmyYImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_ACU_HMI" /> -->
+        <parentFolder itemId="_FOCKgHgeEeWmyYImHGY9Dw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/Reveal_Acu_Hmi" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/all"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_DErRQEp_EeWJ9ss2TZmwzw"/>
+        <!-- <component name="APPLICATION_DISH_CORE" /> -->
+        <parentFolder itemId="_AuzwoEqAEeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/ApplicationDish" /> -->
+        <exclude>
+            <filter name="API007App"/>
+        </exclude>
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Application/acu"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_DErRQEp_EeWJ9ss2TZmwzw"/>
+        <!-- <component name="APPLICATION_DISH_CORE" /> -->
+        <item itemId="_UTPwUP9-EeeglrDa3ccNqg" itemType="folder"/>
+        <!-- <item repositoryPath="/ApplicationDish/API007App" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Application/all"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_hf0GgMnzEeuj0qf48D0sTw"/>
+        <!-- <component name="STM32G0x_Build" /> -->
+        <parentFolder itemId="_hf0GhMnzEeuj0qf48D0sTw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Micros"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_IKh1cD92EeWJ9ss2TZmwzw"/>
+        <!-- <component name="HBL_CORE_ACU" /> -->
+        <parentFolder itemId="_IKh1dD92EeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Hbl/acuexpacu"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="Config">
+        <component itemId="_7mjP8G22EeWmyIImHGY9Dw"/>
+        <!-- <component name="COMMON_DISH_CONFIG" /> -->
+        <item itemId="_M2aKMG3jEeWmyIImHGY9Dw" itemType="folder"/>
+        <!-- <item repositoryPath="/CommonDishConfig" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Common/all"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_fvLt4HjiEeWmyYImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_ACU_HMI" /> -->
+        <parentFolder itemId="_tZ4jUHjiEeWmyYImHGY9Dw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/Application" /> -->
+        <exclude>
+            <filter name="StatusLed"/>
+            <filter name="SFUpdater"/>
+            <filter name="Mode"/>
+        </exclude>
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/acuhmi"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_fvLt4HjiEeWmyYImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_ACU_HMI" /> -->
+        <item itemId="_QpGDEHjjEeWTDOwD0PNOEg" itemType="folder"/>
+        <!-- <item repositoryPath="/Application/SFUpdater" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/all"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_fvLt4HjiEeWmyYImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_ACU_HMI" /> -->
+        <item itemId="_I-uzoBGcEeiVK4rm_YYTNA" itemType="folder"/>
+        <!-- <item repositoryPath="/Application/StatusLed" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/all"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_fvLt4HjiEeWmyYImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_ACU_HMI" /> -->
+        <item itemId="_QoY4cHjjEeWTDOwD0PNOEg" itemType="folder"/>
+        <!-- <item repositoryPath="/Application/Mode" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/all"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Slfac">
+        <component itemId="_WUe64OAKEeuj0qf48D0sTw"/>
+        <!-- <component name="MCL_SLFAC_2_0" /> -->
+        <item itemId="_f84l0PtkEeu9lYGCqjG3zw" itemType="folder"/>
+        <!-- <item repositoryPath="/Mcislfac_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Hbl/all/Mci"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_oQpc8EZ_EeWJ9ss2TZmwzw"/>
+        <!-- <component name="SERVICE_CORE" /> -->
+        <parentFolder itemId="_HPn2kEaAEeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/Service" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Service/all"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="Config">
+        <component itemId="_DLY9QEp_EeWJ9ss2TZmwzw"/>
+        <!-- <component name="APPLICATION_DISH_CONFIG" /> -->
+        <item itemId="_COk6QEqAEeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <item repositoryPath="/ApplicationDishConfig" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Application/all"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="ModelMonitors">
+        <component itemId="_w4lMYJ20EemAgaQ43hAeHw"/>
+        <!-- <component name="APPLICATION_DISH_MONITOR_MODELS" /> -->
+        <item itemId="_mBbAIJ21EemNRoZsDLPzzA" itemType="folder"/>
+        <!-- <item repositoryPath="/MonitorCode" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Application/acu/Monitors"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Config">
+        <component itemId="_7poZIG22EeWmyIImHGY9Dw"/>
+        <!-- <component name="HBL_DISH_CONFIG" /> -->
+        <item itemId="_Qfw2gG3jEeWmyIImHGY9Dw" itemType="folder"/>
+        <!-- <item repositoryPath="/HblDishConfig" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Hbl/all"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_jajGIEZ-EeWJ9ss2TZmwzw"/>
+        <!-- <component name="HBL_CORE_LLI" /> -->
+        <parentFolder itemId="_jajGJEZ-EeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Hbl/all"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="BoardDebugging">
+        <component itemId="_-hLN4NDmEeWnN6hSMszwjA"/>
+        <!-- <component name="BOARD_DEBUGGING" /> -->
+        <item itemId="_miqi0YvREeapsOrIG8CNhg" itemType="folder"/>
+        <!-- <item repositoryPath="/BoardDebugging_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Common/all"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_IgMjcD92EeWJ9ss2TZmwzw"/>
+        <!-- <component name="HBL_CORE" /> -->
+        <parentFolder itemId="_IgMjdD92EeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Hbl/all"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_S6O1UJMNEeurcLVrdqOr5w"/>
+        <!-- <component name="_PROJECT_SPECIFIC_DISH" /> -->
+        <item itemId="_yKkRULeFEe2KEfMn805znA" itemType="folder"/>
+        <!-- <item repositoryPath="/loading" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_S6O1UJMNEeurcLVrdqOr5w"/>
+        <!-- <component name="_PROJECT_SPECIFIC_DISH" /> -->
+        <item itemId="_-anqoZMZEeurcLVrdqOr5w" itemType="folder"/>
+        <!-- <item repositoryPath="/ProjectSpecific" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_S6O1UJMNEeurcLVrdqOr5w"/>
+        <!-- <component name="_PROJECT_SPECIFIC_DISH" /> -->
+        <item itemId="_6Yyz8JMZEeurcLVrdqOr5w" itemType="folder"/>
+        <!-- <item repositoryPath="/config" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="SharedUtils">
+        <component itemId="_WZdiQdGfEeqqu6mKen3eiQ"/>
+        <!-- <component name="DISH_SHARED_UTILS_MODELS" /> -->
+        <item itemId="_0dO34NGfEeqqu6mKen3eiQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Dish_SharedUtils" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Common/all"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="ModelTasks">
+        <component itemId="_1rxvkOhREeqv3qdAMw8kkg"/>
+        <!-- <component name="APPLICATION_DISH_TASK_MODELS" /> -->
+        <item itemId="_A66ggOhdEeqv3qdAMw8kkg" itemType="folder"/>
+        <!-- <item repositoryPath="/TaskCode" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Application/acu/Tasks"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_W_jCoBCgEeaDJcZsSok9wA"/>
+        <!-- <component name="COMMON_CORE_TASKS" /> -->
+        <parentFolder itemId="_W_jCpBCgEeaDJcZsSok9wA" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Common/all"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_cxSW0L9WEeW-EstoBRGxnA"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_MCU" /> -->
+        <item itemId="_W4E_MMlcEeaJZu1ctJh4lQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Reveal_MCU_Laundry/API221MotionCtrl" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/acu"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="ModelProcesses">
+        <component itemId="_w-ws4J20EemAgaQ43hAeHw"/>
+        <!-- <component name="APPLICATION_DISH_PROCESS_MODELS" /> -->
+        <item itemId="_BTd3MJ3FEem8yMENIVycXg" itemType="folder"/>
+        <!-- <item repositoryPath="/ProcessCode" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Application/acu/Processes"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_0w-gIOJLEeaade-ccGl3ig"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_RMTFUNC" /> -->
+        <parentFolder itemId="_TXZP0OJMEeaade-ccGl3ig" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/Reveal_RmtFunc" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/all"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_zclV8Z0bEeW0RoiDn8ROJw"/>
+        <!-- <component name="APPLICATION_CORE_EXP_ACU" /> -->
+        <parentFolder itemId="_zcl9Ap0bEeW0RoiDn8ROJw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/expacu"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_7jnQsW22EeWmyIImHGY9Dw"/>
+        <!-- <component name="COMMON_DISH_CORE" /> -->
+        <parentFolder itemId="_7jn3wm22EeWmyIImHGY9Dw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Common/acu"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_lF-U4MnzEeuj0qf48D0sTw"/>
+        <!-- <component name="STM32G0x_Drivers" /> -->
+        <parentFolder itemId="_lF-U5MnzEeuj0qf48D0sTw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Micros/STM32G0x"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_Iq884GgxEe6ohrnk-iowrg"/>
+        <!-- <component name="MCI_2_0_SPM" /> -->
+        <parentFolder itemId="_Iq885GgxEe6ohrnk-iowrg" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Hbl/all"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_jdP00EZ-EeWJ9ss2TZmwzw"/>
+        <!-- <component name="HBL_CORE_ACU_GI" /> -->
+        <parentFolder itemId="_jdP01EZ-EeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Hbl/acuexpacu"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="Vostok_ACU_A">
+        <component itemId="_iJfaEHXyEeqQq8ogSE9Y-w"/>
+        <!-- <component name="_SDK_Root" /> -->
+        <item itemId="_opNPgXXyEeqQq8ogSE9Y-w" itemType="folder"/>
+        <!-- <item repositoryPath="/Nucleus-SDK" /> -->
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_0JFJ0HgfEeWmyYImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_EXP" /> -->
+        <item itemId="_coibMHggEeWVvcZ-3iBwJA" itemType="folder"/>
+        <!-- <item repositoryPath="/Reveal_Exp/API012Exp" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/all"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_Ra_vQHghEeWmyYImHGY9Dw"/>
+        <!-- <component name="COMMON_CORE_BASIC" /> -->
+        <parentFolder itemId="_RbAWUHghEeWmyYImHGY9Dw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Common/all"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="MCUDebug">
+        <component itemId="_0VfQoHxfEeeSr9nSu8dEvQ"/>
+        <!-- <component name="MCI_SLFAC_DEBUG" /> -->
+        <item itemId="_LKLP4GnHEe6Rn4XJO4VqDw" itemType="folder"/>
+        <!-- <item repositoryPath="/MCUDebug_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/ProjectSpecific/Application/all"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="SRAPI020Safety">
+        <component itemId="_5C-WQPhDEeaVgpcRXWg3kQ"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_CLASSB" /> -->
+        <item itemId="_tYE_8PhEEeaVgpcRXWg3kQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Reveal_ClassB" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/all"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="API220MotorControl">
+        <component itemId="_vdUK8LjGEeamrb_I84GFsQ"/>
+        <!-- <component name="COMM_API220" /> -->
+        <item itemId="_bEyzQLriEeamrb_I84GFsQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Comm_Api220_Core_Server" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/all"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Api">
+        <component itemId="_vdUK8LjGEeamrb_I84GFsQ"/>
+        <!-- <component name="COMM_API220" /> -->
+        <item itemId="_zVF_UL1cEeamrb_I84GFsQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Comm_Api220_Core_API" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/all/API220MotorControl"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_jefyAUZ-EeWJ9ss2TZmwzw"/>
+        <!-- <component name="HBL_CORE_ACU_PILOT" /> -->
+        <parentFolder itemId="_jegZEkZ-EeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Hbl/acuexpacu"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="MCUDrivers">
+        <component itemId="_-jPhAOAOEeuj0qf48D0sTw"/>
+        <!-- <component name="SLFAC_STM32G0x_Drivers" /> -->
+        <item itemId="_teV5YIXBEey9Faoh_XIAfA" itemType="folder"/>
+        <!-- <item repositoryPath="/MCU_Drivers_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Hbl/all"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="MasterCommander">
+        <component itemId="_VlY-0IvQEeapsOrIG8CNhg"/>
+        <!-- <component name="MASTER_COMMANDER" /> -->
+        <item itemId="__ATWYIvREeapsOrIG8CNhg" itemType="folder"/>
+        <!-- <item repositoryPath="/MasterCommander_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Common/all"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_5OjZYHggEeWmyYImHGY9Dw"/>
+        <!-- <component name="COMMON_CORE_CLASSB" /> -->
+        <parentFolder itemId="_5OjZZHggEeWmyYImHGY9Dw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Common/all"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_r4tiEHdOEeWmyIImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_BASIC" /> -->
+        <parentFolder itemId="_r4tiFHdOEeWmyIImHGY9Dw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/all"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_HaegMEbTEeqbV9M6RZrASA"/>
+        <!-- <component name="BUILD_ENV" /> -->
+        <parentFolder itemId="_HafHQkbTEeqbV9M6RZrASA" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_c5aawEaGEeWJ9ss2TZmwzw"/>
+        <!-- <component name="APPLICATION_CORE_ACU" /> -->
+        <parentFolder itemId="_osVPMEaGEeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/ApplicationAcu" /> -->
+        <exclude>
+            <filter name="ApplianceMgr"/>
+        </exclude>
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/acu"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_c5aawEaGEeWJ9ss2TZmwzw"/>
+        <!-- <component name="APPLICATION_CORE_ACU" /> -->
+        <item itemId="_fpZt8Ea5EeWozq5M-AYttw" itemType="folder"/>
+        <!-- <item repositoryPath="/ApplicationAcu/ApplianceMgr" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Application/acuexpacu"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="ActivePower">
+        <component itemId="_Bb8JsMnxEeyD79Dapa5CLw"/>
+        <!-- <component name="WASHMOTOR_RIF_ACTIVEPOWER" /> -->
+        <item itemId="_mb2LAMnxEeyD79Dapa5CLw" itemType="folder"/>
+        <!-- <item repositoryPath="/ActivePower_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Application/all"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="MciZeroCross">
+        <component itemId="_3gqzwHMKEeerw4AGEnIzew"/>
+        <!-- <component name="MCI_ZERO_CROSS" /> -->
+        <item itemId="_NYvTQHMLEeerw4AGEnIzew" itemType="folder"/>
+        <!-- <item repositoryPath="/Mci_ZeroCross_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/Category/Hbl/all/Mci"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_ymp_wEaFEeWJ9ss2TZmwzw"/>
+        <!-- <component name="COMMON_CORE_ACU" /> -->
+        <parentFolder itemId="_DUwUwEaGEeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/CommonAcu" /> -->
+        <exclude>
+            <filter name="FdmTimer"/>
+            <filter name="FdmCounter"/>
+        </exclude>
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Common/acu"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_ymp_wEaFEeWJ9ss2TZmwzw"/>
+        <!-- <component name="COMMON_CORE_ACU" /> -->
+        <item itemId="_89RJkA2LEea-4JcWGYusaw" itemType="folder"/>
+        <!-- <item repositoryPath="/CommonAcu/FdmCounter" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Hbl/acu"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_ymp_wEaFEeWJ9ss2TZmwzw"/>
+        <!-- <component name="COMMON_CORE_ACU" /> -->
+        <item itemId="_-9Ba0A2LEea-4JcWGYusaw" itemType="folder"/>
+        <!-- <item repositoryPath="/CommonAcu/FdmTimer" /> -->
+        <sandboxRelativePath pathPrefix="/Vostok_ACU_A/source/XCategory/Hbl/acu"/>
+    </itemLoadRule>
+</scm:sourceControlLoadRule>

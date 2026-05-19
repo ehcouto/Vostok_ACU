@@ -1,0 +1,1531 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:19
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI/I2CRHTSensorLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\I2CRHTSensorLLI.lst
+#        -o obj\I2CRHTSensorLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI/I2CRHTSensorLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\I2CRHTSensorLLI.lst
+#    Object file  =  obj\I2CRHTSensorLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\I2CRHTSensorLLI\I2CRHTSensorLLI.c
+      1          /**
+      2           *  @file       I2CRHTSensorLLI.c
+      3           *
+      4           *  @brief      Basic description of file contents
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *              Design Consideration :
+      8           *              1) Automic Reading :- TO read every one temperature/humidity reading it takes 1000 millisecond.
+      9           *                 This Time need to be considered while designing the GI module
+     10           *              2) This module handles only one device can be configured to read either temperature or Humidity or both Temperature and humidity value.
+     11           *              3) Minimum Sampling rate to read One sensor value shall not be less then 100ms
+     12           *              4) When more then one sensor is enabled on the same bus the handler will always service the first requested sensor only
+     13           *  	 	 	   as per Hbl architecture (I2C read/Write commands are processed in 1ms handler)
+     14           *  	 	 	   In order to avoid the conjunction on the I2C bus we will be processing the one sensor data at a time
+     15           *
+     16           *
+     17           *
+     18           *  	 	 	Special Design Consideration SHT2X :
+     19           *  	 	 	    It is been observed that SHT2X I2C device gives wrong reading after few hours of operation or
+     20           *  	 	 	    fluctuation of reading value with difference of more then 2 C for temperature and 10 % for Humidity
+     21           *  	 	 	    Due to which the SHT2x Device needs to be Reset
+     22           *  	 	 	    Resets are done on the below Conditions :
+     23           *  	 	 	    i)   Reset After every 6 hours  Or
+     24           *  	 	 	    ii)  Reset if the Delta observed between current reading and previous reading more then 2 C  or
+     25           *  	 	 	    iii) Reset if the Delta observed between current reading and previous reading more then 10 % Humidity
+     26           *
+     27           *  	 	 	    i) On Power up do not monitor the reset condition and take the reading up to 1 minute
+     28           *  	 	 	    ii) Do not take the reading for 1 minute once the device is reseted, up to this 1 minute publish the previous correct reading
+     29           *
+     30           *
+     31           * @section    Applicable_Documents
+     32           *					List here all the applicable documents if needed. <tr>	
+     33           *
+     34           *  $Header: $
+     35           *
+     36           *  @copyright  Copyright 2017-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     37           */
+     38          //---------------------------------------------------------------------------------------------------------------------
+     39          //---------------------------------------------------------------------------------------------------------------------
+     40          
+     41          //-------------------------------------- Include Files ----------------------------------------------------------------
+     42          #include "SystemConfig.h"
+     43          
+     44          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0) || (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+     45          #include "I2CRHTSensorLLI.h"
+     46          #include "I2c.h"
+     47          #include "I2cMgr.h"
+     48          #include "Log.h"
+     49          #include "SystemTimers.h"
+     50          #include <string.h>
+     51          #include "stdlib.h"
+     52          
+     53          
+     54          //-------------------------------------- PUBLIC (Defines  ) -----------------------------------------------------------
+     55          // Time calculation
+     56          #ifndef SHT2X_SAMPLING_RATE_IN_MS
+     57          	#define SHT2X_SAMPLING_RATE_IN_MS 1000
+     58          #endif
+     59          
+     60          #if (SHT2X_SAMPLING_RATE_IN_MS < 100)
+     61          	#error: "Sampling rate shall not be less then 100ms"
+     62          #endif
+     63          
+     64          
+     65          #define SHT2X_I2C_TIME_DELAY_BETWEEN_READING 20
+     66          
+     67          
+     68          
+     69          #ifndef SHT2X_TOTAL_HUMIDITY_CHANNELS_USED
+     70              #define SHT2X_TOTAL_HUMIDITY_CHANNELS_USED        0
+     71          #endif
+     72          
+     73          #ifndef SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED
+     74              #define SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED        0
+     75          #endif
+     76          
+     77          //Add feature modules in the below compilation to make sure the user has selected atleast one device type
+     78          #if ((SHT2X_TOTAL_HUMIDITY_CHANNELS_USED == 0) && (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED == 0))
+     79              #error: "At least one RHT Device shall be connected to use the I2CRHTSensorLLI module"
+     80          #endif
+     81          
+     82          //! A list of log message IDs that are generated by this module.
+     83          typedef enum MODULE_I2C_RHT_SENSOR_LLI_LOG_MESSAGE_ID_ENUM
+     84          {
+     85              ERROR_COMMUNICATION  = 1,
+     86              ERROR_DATA_STUCK,
+     87          }MODULE_I2C_RHT_SENSOR_LLI_LOG_MESSAGE_ID_TYPE;
+     88          
+     89          //! The name of this module for use by the Log module.
+     90          #define MODULE_NAME MODULE_I2C_RHT_SENSOR_LLI
+     91          
+     92          //! Name of the RHT Device Type
+     93          typedef enum
+     94          {
+     95              SHT2X_RHT_DEVICE_TYPE = 0,
+     96          	SHT2X_RHT_WRONG_TEMEPRATURE_READING = 1,
+     97          	SHT2X_RHT_WRONG_HUMIDITY_READING = 2,
+     98              //Add new RHT devices
+     99              MAX_RHT_DEVICE_TYPE
+    100          }RHT_DEVICE_TYPE;
+    101          
+    102          // I2C Humidity Sensor State
+    103          typedef enum
+    104          {
+    105          	//Below states for the Humidity sensor
+    106          	I2C_HUMIDITY_SENSOR_STATE_WRITE = 0,
+    107          	I2C_HUMIDITY_SENSOR_STATE_WRITE_WAIT,
+    108          	I2C_HUMIDITY_SENSOR_STATE_DELAY,
+    109          	I2C_HUMIDITY_SENSOR_STATE_REQUEST,
+    110          	I2C_HUMIDITY_SENSOR_STATE_READ,
+    111          	I2C_HUMIDITY_SENSOR_STATE_INACTIVE_DELAY,
+    112          
+    113          	//Below states for the temperature sensor
+    114          	I2C_TEMP_SENSOR_STATE_WRITE ,
+    115          	I2C_TEMP_SENSOR_STATE_WRITE_WAIT,
+    116          	I2C_TEMP_SENSOR_STATE_DELAY,
+    117          	I2C_TEMP_SENSOR_STATE_REQUEST,
+    118          	I2C_TEMP_SENSOR_STATE_READ,
+    119          	I2C_TEMP_SENSOR_STATE_INACTIVE_DELAY,
+    120          
+    121          	//Below states for the RHT sensor
+    122          	I2C_ERROR_STATE
+    123          
+    124          }SHT2X_SENSOR_STATE_TYPE;
+    125          
+    126          
+    127          //! RHT I2C Setting file configuration Data
+    128          PACKED typedef struct
+    129          {
+    130          	uint8 Reserved1;
+    131          	uint8 Reserved2;
+    132          	RHT_DEVICE_TYPE Device_Type   :2 ;
+    133          	I2C_SPEED_TYPE I2C_Speed      :2 ;
+    134          	I2C_ENUM_TYPE I2C_Channel     :4 ;
+    135          	uint8 Slave_Address;
+    136          	uint8 Reserved                :4 ;
+    137          	uint8 Automic_Reading         :4 ;
+    138          	uint8 Reserved3;
+    139          	uint8 Reserved4;
+    140          }I2C_RHT_SENSOR_PARAM_TYPE;
+    141          
+    142          // Following enums are used instead of hardcoded numbers to provide delay
+    143          enum
+    144          {
+    145          	DELAY_1_MS     = 1,  		//   1 ms
+    146          	DELAY_2_MS     = 2,  		//   2 ms
+    147          	DELAY_5_MS     = 5,  		//   5 ms
+    148          	DELAY_20_MS    = 20, 		//   20 ms
+    149          	DELAY_1000_MS  = 1000, 		//   1000 ms
+    150          	DELAY_2000_MS  = 2000 		//   2000 ms
+    151          };
+    152          
+    153          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    154          
+    155          #if ((SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0) || (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0))
+    156              #define SHT2X_I2C_REQUEST_READ_BUFFER_SIZE          3
+    157              #define SHT2X_I2C_READ_BUFFER_SIZE                  5
+    158              #define SHT2X_I2C_WRITE_BUFFER_SIZE                 3
+    159              // Below 3 macro are divide by 5 because we are using them as counter and decremented in asynch process which is getting called after 5 ms
+    160          	#define SHT2X_I2C_RESET_TIME_TIMEOUT                CONVERT_HOURS_TO_MILLISECONDS(6)/5 // 6 hour
+    161          	#define SHT2X_I2C_POWERUP_STABLE_TIME               CONVERT_MINUTES_TO_MILLISECOND(1)/5  // 1 minutes Power up stable time
+    162          	#define SHT2X_NEXT_READ_DELAY_AFTER_RESET	        CONVERT_MINUTES_TO_MILLISECOND(1)/5  // 1 minute timer after which reading should not take
+    163          
+    164          	#define SHT2X_I2C_RESET_HMUIDTY_DELTA               (10) // Relative Humidity Delta Difference with Previous Reading to reset the I2C chip
+    165          	#define SHT2X_I2C_RESET_TEMPERATURE_DELTA           (2) //  Celcius Delta Difference with Previous Reading to reset the I2C chip
+    166          
+    167          
+    168          	// Enum for the Address of the SHT20 I2C
+    169          	typedef enum
+    170          	{
+    171          		SHT2X_I2C_ADDRESS_WRITE = 0x80,
+    172          		SHT2X_I2C_ADDRESS_READ  = 0x81
+    173          	}SENSOR_RHT_I2C_ADDRESS_TYPE;
+    174          
+    175          	// sensor command to configure I2C device as per Table 6 of data sheet
+    176          	typedef enum
+    177          	{
+    178          		SHT2X_TRIG_T_MEASUREMENT_HM   = 0xE3,     // command trig. temp meas. hold master
+    179          		SHT2X_TRIG_RH_MEASUREMENT_HM  = 0xE5,     // command trig. humidity meas. hold master
+    180          		SHT2X_TRIG_T_MEASUREMENT_POLL = 0xF3,     // command trig. temp meas. no hold master
+    181          		SHT2X_TRIG_RH_MEASUREMENT_POLL= 0xF5,     // command trig. humidity meas. no hold master
+    182          		SHT2X_USER_REG_W              = 0xE6,     // command writing user register
+    183          		SHT2X_USER_REG_R              = 0xE7,     // command reading user register
+    184          		SHT2X_SOFT_RESET              = 0xFE      // command soft reset
+    185          	} SHT2X_COMMAND_TYPE;
+    186          
+    187          	// Sensor Resolution to configure the I2C devices
+    188          	typedef enum
+    189          	{
+    190          		SHT2x_RES_12_14BIT = 0x00,  // RH=12bit, T=14bit
+    191          		SHT2x_RES_8_12BIT  = 0x01,  // RH= 8bit, T=12bit
+    192          		SHT2x_RES_10_13BIT = 0x80,  // RH=10bit, T=13bit
+    193          		SHT2x_RES_11_11BIT = 0x81,  // RH=11bit, T=11bit
+    194          		SHT2x_RES_MASK     = 0x81   // Mask for res. bits (7,0) in user reg.
+    195          	} SHT2X_RESOLUTION_TYPE;
+    196          
+    197          	typedef enum
+    198          	{
+    199          		SHT2x_EOB_ON    = 0x40, // end of battery
+    200          		SHT2x_EOB_MASK  = 0x40  // Mask for EOB bit(6) in user reg.
+    201          	} SRHT_END_OF_BATTERY_TYPE;
+    202          
+    203          	typedef enum
+    204          	{
+    205          		SHT2x_HEATER_ON     = 0x04, // heater on
+    206          		SHT2x_HEATER_OFF    = 0x00, // heater off
+    207          		SHT2x_HEATER_MASK   = 0x04  // Mask for Heater bit(2) in user reg.
+    208          	} SRHT_HEATER_COMMAND_TYPE;
+    209          
+    210          //----------------------------------------------------------------------------------------------
+    211          
+    212          	//! Humidity I2C Data
+    213          	PACKED typedef struct
+    214          	{
+    215          	    uint8 I2cMgr_Device_Handle;
+    216          	    uint16 Sensor_I2C_RH_Raw_Percentage;
+    217          	    uint32 Sensor_I2C_RH_Percentage;
+    218          	    uint16 Sensor_I2C_Relative_Humidity;
+    219          	    uint16 Sensor_I2C_Previous_Relative_Humidity;
+    220          	    uint8  Index_Average;
+    221          	    uint16 AD_RH_Buffer;
+    222          	}SHT2X_HUMIDITY_SENSOR_DATA_TYPE;
+    223          
+    224          	//! Temperature I2C Data
+    225          	PACKED typedef struct
+    226          	{
+    227          	    uint8 I2cMgr_Device_Handle;
+    228          	    uint16 Sensor_I2C_Tempearture_Raw_Data;
+    229          	    sint16 Sensor_I2C_Tempearture_Raw_Celcius;
+    230          	    sint16 Sensor_I2C_Tempearture_Celcius;
+    231          	    sint16 Sensor_I2C_Tempearture_Previous_Celcius;
+    232          	    uint8  Index_Average;
+    233          	    uint16 Buffer;
+    234          	}SHT2X_TEMPERATURE_SENSOR_DATA_TYPE;
+    235          
+    236          #endif  // (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+    237          
+    238          #if ((SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0) || (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0))
+    239          	static SHT2X_SENSOR_STATE_TYPE  SHT2X_Device_State;
+    240          
+    241          	// When more then one sensor is enabled on the same bus the handler will always service the first requested sensor only
+    242          	// as per Hbl architecture (I2C read/Write commands are processed in 1ms handler)
+    243          	// In order to avoid the conjunction on the I2C bus we will be processing the one sensor data at a time
+    244          	// The below variable will hold the handler index of the sensor to be processed if the 2nd sensor handle is called then its call will be ignored
+    245          	static SETTINGFILE_LOADER_TYPE *SHT2X_Instance_Handler_ID;
+    246          	static uint32 SHT2X_State_Delay_Counter;
+    247          	static uint8 SHT2X_Total_Sensor;
+    248          
+    249              static uint8 SHT2X_Read_Buffer[SHT2X_I2C_READ_BUFFER_SIZE];
+    250              static uint8 SHT2X_Write_Buffer[SHT2X_I2C_WRITE_BUFFER_SIZE];
+    251          
+    252              static uint16  SHT2XI2C_Retry;         // number retries for reading data
+    253              static uint16 SHT2XI2C_TimeOut;		// max time it takes to wait for communication w/ the device
+    254              static uint32 SHT2X_Reset_Counter;
+    255              static uint32 SHT2X_Powerup_Stable_Counter;
+    256              static uint16 SHT2X_After_Reset_Stable_Counter;
+    257              static BOOL_TYPE SHT2XI2C_Forced_Reset;
+    258          #endif
+    259          
+    260          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0)
+    261          	static uint8 I2CHumidity_Allocation;
+    262          	static uint8 I2CHumidity_Device_Data_Remap[HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR];
+    263          	// Add device specific data
+    264          	#if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+    265          		static uint8 SHT2XHumidity_Allocation;
+    266              	static SHT2X_HUMIDITY_SENSOR_DATA_TYPE SHT2XHumidity_Data[SHT2X_TOTAL_HUMIDITY_CHANNELS_USED];
+    267          	#endif
+    268          #endif
+    269          
+    270          #if (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+    271              static uint8 I2CTemperature_Allocation;
+    272              static uint8 I2CTemperature_Device_Data_Remap[HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR];
+    273              // Add device specific data
+    274              #if (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+    275                  static uint8 SHT2XTemperature_Allocation;
+    276              	static SHT2X_TEMPERATURE_SENSOR_DATA_TYPE SHT2XTemperature_Data[SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED];
+    277              	static uint16 Temperature_Q15_Format;
+    278          	#endif
+    279          #endif
+    280          
+    281          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    282          
+    283          #if ((SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0) || (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0))
+    284              static void SHT2XResetHandler(HBL_LLI_TYPE * input);
+    285              void SHT2xCounterHandler(void);
+    286          #endif
+    287          
+    288          #if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED > 0)
+    289          	static void RHRawToPercent (HBL_LLI_TYPE * input);
+    290          	static void ProcessRHValue(HBL_LLI_TYPE * input);
+    291          	static void CheckRHNeedToReset(HBL_LLI_TYPE * input);
+    292          #endif
+    293          
+    294          #if (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED > 0)
+    295          	static void TempRawToPercent (HBL_LLI_TYPE * input);
+    296          	static void ProcessTempValue(HBL_LLI_TYPE * input);
+    297          	static void ChecTempNeedToReset(HBL_LLI_TYPE * input);
+    298          #endif
+    299          
+    300          //=====================================================================================================================
+    301          //-------------------------------------- Public Functions -------------------------------------------------------------
+    302          //=====================================================================================================================
+    303          //---------------------------------------------------------------------------------------------------------------------
+    304          /**
+    305           * @brief   It Initializes the module I2CRHTSensor LLI and its variables
+    306           */
+    307          void I2CRHTSensorLLI__Initialize(void)
+    308          {
+    309          	#if ((SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0) || (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0))
+    310          		// Initialization of the device related variables
+    311          		SHT2X_Instance_Handler_ID = NULL;
+    312          		SHT2X_State_Delay_Counter = 0;
+    313          		SHT2X_Total_Sensor = 0;
+    314          		SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+    315          		SHT2XI2C_Retry = 0;
+    316          		SHT2XI2C_TimeOut = 0;
+    317          		SHT2XI2C_Forced_Reset = FALSE;
+    318          		SHT2X_Reset_Counter = SHT2X_I2C_RESET_TIME_TIMEOUT;
+    319          		SHT2X_Powerup_Stable_Counter = SHT2X_I2C_POWERUP_STABLE_TIME;
+    320          		SHT2X_After_Reset_Stable_Counter = 0;
+    321          		Temperature_Q15_Format = TEMPERATURE_INVALID_VALUE;
+    322              #if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+    323          		SHT2XHumidity_Allocation = 0;
+    324              #endif
+    325              #if (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+    326          		SHT2XTemperature_Allocation = 0;
+    327              #endif
+    328          
+    329          		#if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0)
+    330          			for (uint8 index = 0; index < HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR; index++)
+    331          			{
+    332          				memset(&SHT2XHumidity_Data[index],0,sizeof(SHT2XHumidity_Data[0]));
+    333          			}
+    334          			I2CHumidity_Allocation = 0;
+    335          		#endif
+    336          
+    337          		#if (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+    338          		   for (uint8 index = 0; index < HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR; index++)
+    339          		   {
+    340          			   memset(&SHT2XTemperature_Data[index],0,sizeof(SHT2XTemperature_Data[0]));
+    341          		   }
+    342          		   I2CTemperature_Allocation = 0;
+    343          		#endif
+    344          	#endif
+    345          
+    346          }
+    347          
+    348          //---------------------------------------------------------------------------------------------------------------------
+    349          /**
+    350           * @brief   Determines the destination (index) of the data for the LLI.
+    351           * @return  Index to a local buffer where the data will reside.
+    352           */
+    353          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0)
+    354          uint8 I2CRHTSensorLLI__AllocateHumidity(void)
+    355          {
+    356              uint8 retval = 0xFF;
+    357          
+    358              if (I2CHumidity_Allocation < HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR)
+    359              {
+    360                  retval = I2CHumidity_Allocation;
+    361                  I2CHumidity_Allocation++;
+    362              }
+    363              return (retval);
+    364          }
+    365          #endif
+    366          
+    367          //---------------------------------------------------------------------------------------------------------------------
+    368          /**
+    369           * @brief   Determines the destination (index) of the data for the LLI.
+    370           * @return  Index to a local buffer where the data will reside.
+    371           */
+    372          #if (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+    373          uint8 I2CRHTSensorLLI__AllocateTemperature(void)
+    374          {
+    375              uint8 retval = 0xFF;
+    376          
+    377              if (I2CTemperature_Allocation < HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR)
+    378              {
+    379                  retval = I2CTemperature_Allocation;
+    380                  I2CTemperature_Allocation++;
+    381              }
+    382              return (retval);
+    383          }
+    384          #endif
+    385          
+    386          //---------------------------------------------------------------------------------------------------------------------
+    387          /**
+    388           * @brief   Initialize an instance of the LLI by extracting parameter data and initializing variables.
+    389           * @param   input: data related to the instance of the LLI
+    390           * @param   PASS if the initialization was successful, else FAIL
+    391           */
+    392          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0)
+    393          PASS_FAIL_TYPE I2CRHTSensorLLI__InitializeHumidityInstance(HBL_LLI_TYPE * input)
+    394          {
+    395          	PASS_FAIL_TYPE retval = FAIL;
+    396          
+    397              if (input->Data_Index < HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR)
+    398              {
+    399                  I2C_RHT_SENSOR_PARAM_TYPE *param_ptr = (I2C_RHT_SENSOR_PARAM_TYPE *) (void *)(input->Parameter_Ptr.Data);
+    400          
+    401                  switch (param_ptr->Device_Type)
+    402                  {
+    403                      #if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+    404                      case SHT2X_RHT_DEVICE_TYPE:
+    405                      	I2CHumidity_Device_Data_Remap[input->Data_Index] = SHT2XHumidity_Allocation;
+    406          
+    407                          if (SHT2XHumidity_Allocation < SHT2X_TOTAL_HUMIDITY_CHANNELS_USED)
+    408                          {
+    409                              SHT2XHumidity_Data[I2CHumidity_Device_Data_Remap[input->Data_Index]].I2cMgr_Device_Handle = I2cMgr__GetDeviceHandle(param_ptr->I2C_Channel);
+    410          
+    411                              if (SHT2XHumidity_Data[I2CHumidity_Device_Data_Remap[input->Data_Index]].I2cMgr_Device_Handle != I2CMGR_HANDLE_INVALID)
+    412                              {
+    413                                  //Initialize Device related Variables
+    414                              	retval = (PASS_FAIL_TYPE)I2c__Initialize(param_ptr->I2C_Channel, param_ptr->I2C_Speed, I2C_ADDR_7BITS, param_ptr->Slave_Address);
+    415                              	if(retval)
+    416                              	{
+    417                              		SHT2X_Instance_Handler_ID = &(input->Parameter_Ptr);
+    418                              		SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+    419                              		SHT2XHumidity_Allocation++;
+    420                              		SHT2X_Total_Sensor++;
+    421                              		retval = PASS;
+    422                              	}
+    423                              }
+    424                          }
+    425                          break;
+    426                      #endif
+    427          
+    428                      default:
+    429                          break;
+    430                  }
+    431              }
+    432          	return (retval);
+    433          }
+    434          #endif
+    435          
+    436          //---------------------------------------------------------------------------------------------------------------------
+    437          /**
+    438           * @brief   Initialize an instance of the LLI by extracting parameter data and initializing variables.
+    439           * @param   input: data related to the instance of the LLI
+    440           * @param   PASS if the initialization was successful, else FAIL
+    441           */
+    442          #if (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+    443          PASS_FAIL_TYPE I2CRHTSensorLLI__InitializeTemperatureInstance(HBL_LLI_TYPE * input)
+    444          {
+    445              PASS_FAIL_TYPE retval = FAIL;
+    446          
+    447              if (input->Data_Index < HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR)
+    448              {
+    449                  I2C_RHT_SENSOR_PARAM_TYPE *param_ptr = (I2C_RHT_SENSOR_PARAM_TYPE *) (void *)(input->Parameter_Ptr.Data);
+    450          
+    451                  switch (param_ptr->Device_Type)
+    452                  {
+    453                      #if (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+    454                      case SHT2X_RHT_DEVICE_TYPE:
+    455                      	I2CTemperature_Device_Data_Remap[input->Data_Index] = SHT2XTemperature_Allocation;
+    456                          if (SHT2XTemperature_Allocation < SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED)
+    457                          {
+    458                          	SHT2XTemperature_Data[I2CTemperature_Device_Data_Remap[input->Data_Index]].I2cMgr_Device_Handle = I2cMgr__GetDeviceHandle(param_ptr->I2C_Channel);
+    459          
+    460                              if (SHT2XTemperature_Data[I2CTemperature_Device_Data_Remap[input->Data_Index]].I2cMgr_Device_Handle != I2CMGR_HANDLE_INVALID)
+    461                              {
+    462                              	//Initialize Device related Variables
+    463                              	retval = (PASS_FAIL_TYPE)I2c__Initialize(param_ptr->I2C_Channel, param_ptr->I2C_Speed, I2C_ADDR_7BITS, param_ptr->Slave_Address);
+    464                              	if(retval)
+    465                              	{
+    466                              		SHT2X_Instance_Handler_ID = &input->Parameter_Ptr;
+    467                              		SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE;
+    468                              		SHT2XTemperature_Allocation++;
+    469                              		SHT2X_Total_Sensor++;
+    470                              		retval = PASS;
+    471                              	}
+    472                              }
+    473                          }
+    474                          break;
+    475                      #endif
+    476          
+    477                      default:
+    478                          break;
+    479                  }
+    480              }
+    481              return (retval);
+    482          }
+    483          #endif
+    484          //---------------------------------------------------------------------------------------------------------------------
+    485          /**
+    486           * @brief   Retrieves the current value of the LLI
+    487           * @param   input: data related to the instance of the LLI
+    488           * @return  The current value of the LLI
+    489           */
+    490          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0)
+    491          void * I2CRHTSensorLLI__GetHumidity(HBL_LLI_TYPE * input)
+    492          {
+    493          	I2C_RHT_SENSOR_PARAM_TYPE *param_ptr = (I2C_RHT_SENSOR_PARAM_TYPE *) (void *)(input->Parameter_Ptr.Data);
+    494          
+    495          	switch (param_ptr->Device_Type)
+    496          	{
+    497          	#if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+    498          		case SHT2X_RHT_DEVICE_TYPE:
+    499          			return ((void *)&SHT2XHumidity_Data[I2CHumidity_Device_Data_Remap[input->Data_Index]].Sensor_I2C_Relative_Humidity);
+    500          	#endif
+    501          
+    502          		default:
+    503          			return NULL;
+    504          		}
+    505          }
+    506          #endif
+    507          
+    508          //---------------------------------------------------------------------------------------------------------------------
+    509          /**
+    510           * @brief   Retrieves the current value of the LLI
+    511           * @param   input: data related to the instance of the LLI
+    512           * @return  The current value of the LLI
+    513           */
+    514          #if (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+    515          void * I2CRHTSensorLLI__GetTemperature(HBL_LLI_TYPE * input)
+    516          {
+    517              I2C_RHT_SENSOR_PARAM_TYPE *param_ptr = (I2C_RHT_SENSOR_PARAM_TYPE *) (void *)(input->Parameter_Ptr.Data);
+    518          
+    519              switch (param_ptr->Device_Type)
+    520              {
+    521               #if (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+    522               	 case SHT2X_RHT_DEVICE_TYPE:
+    523               		Temperature_Q15_Format = ((SHT2XTemperature_Data[I2CTemperature_Device_Data_Remap[input->Data_Index]].Sensor_I2C_Tempearture_Celcius)*SHRT_MAX)/TEMPERATURE_BASE_SCALE;
+    524               		return ((void *)&Temperature_Q15_Format);
+    525          	#endif
+    526          
+    527                  default:
+    528                  	 return NULL;
+    529               }
+    530          }
+    531          #endif
+    532          
+    533          //---------------------------------------------------------------------------------------------------------------------
+    534          /**
+    535           * @brief   Asynchronous processing of a the LLI
+    536           * @param   input: data related to the instance of the LLI
+    537           * @return  PASS if the LLI was successfully processed, else FAIL
+    538           */
+    539          BOOL_TYPE I2CRHTSensorLLI__AsynchProcess(HBL_LLI_TYPE * input)
+    540          {
+    541          	BOOL_TYPE retval = FALSE;
+    542          
+    543              if ((input->Data_Index < HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR) || (input->Data_Index < HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR))
+    544              {
+    545          		I2C_RHT_SENSOR_PARAM_TYPE *param_ptr = (I2C_RHT_SENSOR_PARAM_TYPE *) (void *)(input->Parameter_Ptr.Data);
+    546          
+    547                  switch (param_ptr->Device_Type)
+    548                  {
+    549          			#if ((SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0) || (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0))
+    550                      case SHT2X_RHT_DEVICE_TYPE:
+    551                          if(SHT2X_Instance_Handler_ID == &(input->Parameter_Ptr))
+    552                          {
+    553                              SHT2xCounterHandler();
+    554                              SHT2XResetHandler(input);
+    555                          }
+    556                          break;
+    557                      #endif
+    558          
+    559                      default:
+    560                          break;
+    561                  }
+    562                  retval = TRUE;
+    563              }
+    564          	return (retval);
+    565          }
+    566          
+    567          //---------------------------------------------------------------------------------------------------------------------
+    568          /**
+    569           * @brief - This API is called at every 1ms
+    570           * @param   input: data related to the instance of the LLI
+    571           * @return  PASS if the OneMsProcess was successfully processed, else FAIL
+    572           */
+    573          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0) && (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+    574          BOOL_TYPE I2CRHTSensorLLI__OneMsProcess(HBL_LLI_TYPE * input)
+    575          {
+    576          	BOOL_TYPE retval = FALSE;
+    577          	I2C_RHT_SENSOR_PARAM_TYPE *param_ptr = (I2C_RHT_SENSOR_PARAM_TYPE *) (void *)(input->Parameter_Ptr.Data);
+    578          
+    579          	// This is to make sure to process the algorithm per device in sequentially
+    580          	if(SHT2X_Instance_Handler_ID == &(input->Parameter_Ptr))
+    581             	{
+    582          		SHT2X_State_Delay_Counter++;
+    583          
+    584          		switch (param_ptr->Device_Type)
+    585          		{
+    586          			#if ((SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0) || (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0))
+    587          				case SHT2X_RHT_DEVICE_TYPE:
+    588          				switch (SHT2X_Device_State)
+    589          				{
+    590          				/**
+    591          				 * Below state machine Handles the reading of the Humidity
+    592          				 */
+    593          				#if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+    594          				case I2C_HUMIDITY_SENSOR_STATE_WRITE:
+    595          					if(I2cMgr__RequestBus(SHT2XHumidity_Data[input->Data_Index].I2cMgr_Device_Handle) == TRUE)
+    596          					{
+    597          						SHT2X_Device_State = I2C_ERROR_STATE;
+    598          						if(I2c__Initialize(param_ptr->I2C_Channel, param_ptr->I2C_Speed, I2C_ADDR_7BITS, param_ptr->Slave_Address) == TRUE)
+    599          						{
+    600          							if(I2c__Write(param_ptr->I2C_Channel, SHT2X_TRIG_RH_MEASUREMENT_POLL,SHT2X_Write_Buffer, 0) == TRUE)     // trigger a humidity measurement
+    601          							{
+    602          								SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE_WAIT;
+    603          								SHT2XI2C_TimeOut = DELAY_20_MS;
+    604          								SHT2XI2C_Retry = DELAY_5_MS;
+    605          							}
+    606          						}
+    607          					}
+    608          					break;
+    609          
+    610          				case I2C_HUMIDITY_SENSOR_STATE_WRITE_WAIT:
+    611          					if ((I2c__GetStatus(param_ptr->I2C_Channel, I2C_STATUS_ERROR)) == I2C_ERROR_ACK)
+    612          					{
+    613          
+    614          							SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+    615          							I2cMgr__ReleaseBus(SHT2XHumidity_Data[input->Data_Index].I2cMgr_Device_Handle);
+    616          					}
+    617          					else
+    618          					{
+    619          						if ((I2c__GetStatus(param_ptr->I2C_Channel, I2C_STATUS_STATE)) == I2C_STATE_IDLE)
+    620          						{
+    621          							SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_DELAY;
+    622          							SHT2XI2C_Retry = DELAY_20_MS;
+    623          							SHT2XI2C_TimeOut = DELAY_20_MS;
+    624          							I2cMgr__ReleaseBus(SHT2XHumidity_Data[input->Data_Index].I2cMgr_Device_Handle);
+    625          						}
+    626          					}
+    627          					break;
+    628          
+    629          				case I2C_HUMIDITY_SENSOR_STATE_DELAY:
+    630          					if (SHT2XI2C_Retry > 0)
+    631          					{
+    632          						SHT2XI2C_Retry--;
+    633          						SHT2XI2C_TimeOut = DELAY_20_MS;
+    634          					}
+    635          					else
+    636          					{
+    637          						SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_REQUEST;
+    638          						SHT2XI2C_Retry = DELAY_2_MS;
+    639          					}
+    640          					break;
+    641          				case I2C_HUMIDITY_SENSOR_STATE_REQUEST:
+    642          					if(I2cMgr__RequestBus(SHT2XHumidity_Data[input->Data_Index].I2cMgr_Device_Handle) == TRUE)
+    643          					{
+    644          						I2c__Initialize(param_ptr->I2C_Channel, param_ptr->I2C_Speed, I2C_ADDR_7BITS, param_ptr->Slave_Address);
+    645          						I2c__RequestRead(param_ptr->I2C_Channel, SHT2X_I2C_REQUEST_READ_BUFFER_SIZE);
+    646          						SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_READ;
+    647          					}
+    648          					break;
+    649          
+    650          				case I2C_HUMIDITY_SENSOR_STATE_READ:
+    651          					if ((I2c__GetStatus(param_ptr->I2C_Channel, I2C_STATUS_ERROR)) == I2C_ERROR_ACK)
+    652          					{
+    653          						if (SHT2XI2C_Retry > 0)
+    654          						{
+    655          							SHT2XI2C_Retry--;
+    656          							SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_REQUEST;
+    657          							I2cMgr__ReleaseBus(SHT2XHumidity_Data[input->Data_Index].I2cMgr_Device_Handle);
+    658          						}
+    659          						else
+    660          						{
+    661          							SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+    662          							I2cMgr__ReleaseBus(SHT2XHumidity_Data[input->Data_Index].I2cMgr_Device_Handle);
+    663          						}
+    664          					}
+    665          					else
+    666          					{
+    667          						if (I2c__GetStatus(param_ptr->I2C_Channel, I2C_STATUS_STATE) == I2C_STATE_IDLE)
+    668          						{
+    669          							I2c__Read(param_ptr->I2C_Channel, &SHT2X_Read_Buffer[1], SHT2X_I2C_READ_BUFFER_SIZE);
+    670          							I2cMgr__ReleaseBus(SHT2XHumidity_Data[input->Data_Index].I2cMgr_Device_Handle);
+    671          							SHT2X_Read_Buffer[0] = (SHT2X_I2C_ADDRESS_WRITE | 1);
+    672          
+    673          							SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_RH_Raw_Percentage = (uint16)SHT2X_Read_Buffer[1];
+    674          							SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_RH_Raw_Percentage <<= 8;  // Shift to MSB Byte
+    675          							SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_RH_Raw_Percentage |= SHT2X_Read_Buffer[2];
+    676          							SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_RH_Raw_Percentage = SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_RH_Raw_Percentage & 0xfffC; // blank the last two bits-- status bits
+    677          							// get the data into the HumidithI2c_Buffer variable.
+    678          							SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_INACTIVE_DELAY;
+    679          
+    680          
+    681          							//Process the Humidity value
+    682          							RHRawToPercent(input);
+    683          							ProcessRHValue(input);
+    684          
+    685          							sint16 remain_time = (SHT2X_SAMPLING_RATE_IN_MS / SHT2X_Total_Sensor) - SHT2X_State_Delay_Counter;
+    686          
+    687          							if(remain_time > 0)
+    688          							{
+    689          								SHT2XI2C_Retry = remain_time;
+    690          								SHT2XI2C_TimeOut = remain_time + DELAY_5_MS;
+    691          							}
+    692          							else
+    693          							{
+    694          								SHT2XI2C_Retry = 0;
+    695          								SHT2XI2C_TimeOut = DELAY_20_MS;
+    696          							}
+    697          						}
+    698          					}
+    699          					break;
+    700          
+    701          				case I2C_HUMIDITY_SENSOR_STATE_INACTIVE_DELAY:
+    702          					if(SHT2XI2C_Retry > 0)
+    703          					{
+    704          						SHT2XI2C_Retry--;
+    705          					}
+    706          					else
+    707          					{
+    708          						SHT2XI2C_TimeOut = DELAY_20_MS;
+    709          						#if (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+    710          						if(SHT2XTemperature_Allocation > 0)
+    711          						{
+    712          							SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE;
+    713          						}
+    714          						else
+    715          						{
+    716          							SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+    717          						}
+    718          						#else
+    719          						SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+    720          						#endif
+    721          						SHT2X_State_Delay_Counter = 0;
+    722          					}
+    723          					break;
+    724          
+    725          				#endif
+    726          
+    727          					/**
+    728          					 * Below state machine Handles the reading of the temperature
+    729          					 */
+    730          				#if (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+    731          				case I2C_TEMP_SENSOR_STATE_WRITE:
+    732          					if(I2cMgr__RequestBus(SHT2XTemperature_Data[input->Data_Index].I2cMgr_Device_Handle) == TRUE)
+    733          					{
+    734          						SHT2X_Device_State = I2C_ERROR_STATE;
+    735          						if(I2c__Initialize(param_ptr->I2C_Channel, param_ptr->I2C_Speed, I2C_ADDR_7BITS, param_ptr->Slave_Address) == TRUE )
+    736          						{
+    737          							if(I2c__Write(param_ptr->I2C_Channel, SHT2X_TRIG_T_MEASUREMENT_POLL,SHT2X_Write_Buffer, 0) == TRUE )     // trigger a humidity measurement
+    738          							{
+    739          								SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE_WAIT;
+    740          								SHT2XI2C_TimeOut = DELAY_20_MS;
+    741          								SHT2XI2C_Retry = DELAY_5_MS;
+    742          							}
+    743          						}
+    744          					}
+    745          					break;
+    746          
+    747          				case I2C_TEMP_SENSOR_STATE_WRITE_WAIT:
+    748          					if ((I2c__GetStatus(param_ptr->I2C_Channel, I2C_STATUS_ERROR)) == I2C_ERROR_ACK)
+    749          					{
+    750          						SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE;
+    751          						I2cMgr__ReleaseBus(SHT2XTemperature_Data[input->Data_Index].I2cMgr_Device_Handle);
+    752          					}
+    753          					else
+    754          					{
+    755          						if ((I2c__GetStatus(param_ptr->I2C_Channel, I2C_STATUS_STATE)) == I2C_STATE_IDLE)
+    756          						{
+    757          							SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_DELAY;
+    758          							SHT2XI2C_Retry = DELAY_20_MS;
+    759          							SHT2XI2C_TimeOut = DELAY_20_MS;
+    760          							I2cMgr__ReleaseBus(SHT2XTemperature_Data[input->Data_Index].I2cMgr_Device_Handle);
+    761          						}
+    762          					}
+    763          					break;
+    764          
+    765          				case I2C_TEMP_SENSOR_STATE_DELAY:
+    766          					if (SHT2XI2C_Retry > 0)
+    767          					{
+    768          						SHT2XI2C_Retry--;
+    769          						SHT2XI2C_TimeOut = DELAY_20_MS;
+    770          					}
+    771          					else
+    772          					{
+    773          						SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_REQUEST;
+    774          						SHT2XI2C_Retry = DELAY_1_MS;
+    775          					}
+    776          					break;
+    777          
+    778          				case I2C_TEMP_SENSOR_STATE_REQUEST:
+    779          					if(I2cMgr__RequestBus(SHT2XTemperature_Data[input->Data_Index].I2cMgr_Device_Handle) == TRUE)
+    780          					{
+    781          						I2c__Initialize(param_ptr->I2C_Channel, param_ptr->I2C_Speed, I2C_ADDR_7BITS, param_ptr->Slave_Address);
+    782          						I2c__RequestRead(param_ptr->I2C_Channel, SHT2X_I2C_REQUEST_READ_BUFFER_SIZE);
+    783          						SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_READ;
+    784          					}
+    785          					break;
+    786          
+    787          				case I2C_TEMP_SENSOR_STATE_READ:
+    788          					if ((I2c__GetStatus(param_ptr->I2C_Channel, I2C_STATUS_ERROR)) == I2C_ERROR_ACK)
+    789          					{
+    790          						if (SHT2XI2C_Retry > 0)
+    791          						{
+    792          							SHT2XI2C_Retry--;
+    793          							SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_REQUEST;
+    794          							I2cMgr__ReleaseBus(SHT2XTemperature_Data[input->Data_Index].I2cMgr_Device_Handle);
+    795          						}
+    796          						else
+    797          						{
+    798          							SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE;
+    799          							I2cMgr__ReleaseBus(SHT2XTemperature_Data[input->Data_Index].I2cMgr_Device_Handle);
+    800          						}
+    801          					}
+    802          					else
+    803          					{
+    804          						if (I2c__GetStatus(param_ptr->I2C_Channel, I2C_STATUS_STATE) == I2C_STATE_IDLE)
+    805          						{
+    806          							//	I2c__Initialize(param_ptr->I2C_Channel, param_ptr->I2C_Speed, param_ptr->I2C_Address_Type, param_ptr->Slave_Address);
+    807          							I2c__Read(param_ptr->I2C_Channel, &SHT2X_Read_Buffer[1], SHT2X_I2C_READ_BUFFER_SIZE);
+    808          							I2cMgr__ReleaseBus(SHT2XTemperature_Data[input->Data_Index].I2cMgr_Device_Handle);
+    809          							SHT2X_Read_Buffer[0] = (SHT2X_I2C_ADDRESS_WRITE | 1);
+    810          							// get the data into the I2CTemperature_Data variable.
+    811          							SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Raw_Data = (uint16) SHT2X_Read_Buffer[1];
+    812          							SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Raw_Data <<= 8; // Shift to MSB Byte
+    813          							SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Raw_Data |= SHT2X_Read_Buffer[2];
+    814          							SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Raw_Data = SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Raw_Data & 0xfffc; // blank last two bits status bits
+    815          							SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_INACTIVE_DELAY;
+    816          
+    817          
+    818          							//Process the Temperature value
+    819          							TempRawToPercent(input);
+    820          							ProcessTempValue(input);
+    821          
+    822          							sint16 remain_time = (SHT2X_SAMPLING_RATE_IN_MS / SHT2X_Total_Sensor) - SHT2X_State_Delay_Counter;
+    823          
+    824          							if(remain_time > 0)
+    825          							{
+    826          								SHT2XI2C_Retry = remain_time;
+    827          								SHT2XI2C_TimeOut = remain_time + DELAY_5_MS;
+    828          							}
+    829          							else
+    830          							{
+    831          								SHT2XI2C_Retry = 0;
+    832          								SHT2XI2C_TimeOut = DELAY_20_MS;
+    833          							}
+    834          						}
+    835          					}
+    836          					break;
+    837          
+    838          				case I2C_TEMP_SENSOR_STATE_INACTIVE_DELAY:
+    839          					if(SHT2XI2C_Retry > 0)
+    840          					{
+    841          						SHT2XI2C_Retry--;
+    842          					}
+    843          					else
+    844          					{
+    845          						SHT2XI2C_TimeOut = DELAY_20_MS;
+    846          						#if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+    847          						if(SHT2XHumidity_Allocation > 0)
+    848          						{
+    849          							SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+    850          						}
+    851          						else
+    852          						{
+    853          							SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE;
+    854          						}
+    855          						#else
+    856          						SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE;
+    857          						#endif
+    858          						SHT2X_State_Delay_Counter = 0;
+    859          					}
+    860          					break;
+    861          
+    862          				case I2C_ERROR_STATE:
+    863          					if(I2c__Initialize(param_ptr->I2C_Channel, param_ptr->I2C_Speed, I2C_ADDR_7BITS, param_ptr->Slave_Address) == TRUE)
+    864          					{
+    865          						#if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+    866          							if(SHT2XHumidity_Allocation > 0)
+    867          							{
+    868          								SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+    869          							}
+    870          						#elif (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+    871          							if(SHT2XTemperature_Allocation > 0)
+    872          							{
+    873          								SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE;
+    874          							}
+    875          						#endif
+    876          					}
+    877          					break;
+    878          
+    879          				#endif
+    880          
+    881          				default:
+    882          
+    883          					#if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+    884          					if(SHT2XHumidity_Allocation > 0)
+    885          					{
+    886          						SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+    887          					}
+    888          					#elif (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+    889          					if(SHT2XTemperature_Allocation > 0)
+    890          					{
+    891          						SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE;
+    892          					}
+    893          					#endif
+    894          					SHT2X_State_Delay_Counter = 0;
+    895          					break;
+    896          				}
+    897          				break;
+    898          				#endif
+    899          				// Add New dvice type here
+    900          				default:
+    901          					break;
+    902          		}
+    903          		retval = TRUE;
+    904              }
+    905          
+    906           // THis below code is to observe the timeout and initialize the SHT2X sensor initialization state
+    907          	#if ((SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0) || (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0))
+    908          		if (SHT2XI2C_TimeOut != 0)
+    909          		{
+    910          			if(SHT2X_Total_Sensor > 0)
+    911          			{
+    912          				SHT2XI2C_TimeOut--;
+    913          			}
+    914          		}
+    915          		else
+    916          		{
+    917          		#if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+    918          				if(SHT2XHumidity_Allocation > 0)
+    919          				{
+    920          					SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+    921          				}
+    922          		#elif (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+    923          				if(SHT2XTemperature_Allocation > 0)
+    924          				{
+    925          					SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE;
+    926          				}
+    927          		#endif
+    928          		}
+    929          	#endif
+    930          
+    931          	return (retval);
+    932          }
+    933          #endif
+    934          
+    935          //=====================================================================================================================
+    936          //-------------------------------------- Private Functions ------------------------------------------------------------
+    937          //=====================================================================================================================
+    938          /**
+    939           * @brief   This function convert raw value to percentage value
+    940           *          Formula for conversion is given in Datasheet SHT20,
+    941           *          section 6.1 Relative Humidity Conversion, page 10
+    942           * @param   input: data related to the instance of the LLI
+    943           */
+    944          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0)
+    945          static void RHRawToPercent (HBL_LLI_TYPE * input)
+    946          {
+    947              uint16 hum_us = 0;
+    948              uint32 hum_ul = 0;
+    949          
+    950              hum_ul = ((uint32) SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_RH_Raw_Percentage * 125);
+    951              hum_us = (uint16) (hum_ul / 65536);
+    952              SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_RH_Percentage = hum_us - 6;
+    953          }
+    954          #endif
+    955          //---------------------------------------------------------------------------------------------------------------------
+    956          /**
+    957           * @brief   this function is accumulation raw percentage value, taking average and the checking for error status
+    958           * @param   input: data related to the instance of the LLI
+    959           */
+    960          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0)
+    961          static void ProcessRHValue(HBL_LLI_TYPE * input)
+    962          {
+    963          	if (input->Data_Index < HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR)
+    964          	{
+    965                  I2C_RHT_SENSOR_PARAM_TYPE *param_ptr = (I2C_RHT_SENSOR_PARAM_TYPE *) (void *)(input->Parameter_Ptr.Data);
+    966          
+    967                  if((SHT2XI2C_Forced_Reset == FALSE) && (SHT2X_After_Reset_Stable_Counter == 0))  //  This check is to maker sure not to take the reading when RHT chip is reseting
+    968                  {																																					 // The RHT after reset delay time is running
+    969          			if (SHT2XHumidity_Data[input->Data_Index].Index_Average < param_ptr->Automic_Reading)
+    970          			{
+    971          				SHT2XHumidity_Data[input->Data_Index].Index_Average++;    // Increment number of sample @ 1sec
+    972          				SHT2XHumidity_Data[input->Data_Index].AD_RH_Buffer += SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_RH_Percentage; // accumulate sample
+    973          			}
+    974          			else
+    975          			{   // take average of accumulated samples
+    976          				SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_Relative_Humidity = (uint8)(SHT2XHumidity_Data[input->Data_Index].AD_RH_Buffer / param_ptr->Automic_Reading); //
+    977          
+    978          
+    979          				CheckRHNeedToReset(input);
+    980          
+    981          				SHT2XHumidity_Data[input->Data_Index].Index_Average = 0; // clear counter
+    982          				SHT2XHumidity_Data[input->Data_Index].AD_RH_Buffer = 0; // clear previous value
+    983          			}
+    984          		}
+    985          	}
+    986          }
+    987          #endif
+    988          
+    989          //---------------------------------------------------------------------------------------------------------------------
+    990          /**
+    991           * @brief   This is primarily being done due to the fact that I2C Sensor behaves random after few days / hours of operation.
+    992           *          Originally was resolved by Doing every 12 Hr I2C Chip reset. Now failure was seen that Sensor give abnormal value
+    993           *          and recovers after 12 hrs which affects product operation
+    994           * @param   input: data related to the instance of the LLI
+    995           */
+    996          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0)
+    997          static void CheckRHNeedToReset(HBL_LLI_TYPE * input)
+    998          {
+    999          	if((abs(SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_Relative_Humidity - SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_Previous_Relative_Humidity) >= SHT2X_I2C_RESET_HMUIDTY_DELTA) && //  monitor the RH delta for the failure of sensor
+   1000          	   (SHT2X_Powerup_Stable_Counter == 0))                                  // this check is there to wait for Power up stable time and after that only need to detect the logic for the reset
+   1001          	{
+   1002          		SHT2XI2C_Forced_Reset = TRUE;
+   1003          		SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_Relative_Humidity = SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_Previous_Relative_Humidity;
+   1004          		LOG_ADD_EVENT(SHT2X_RHT_WRONG_HUMIDITY_READING, SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_Previous_Relative_Humidity);
+   1005          	}
+   1006          	else
+   1007          	{
+   1008          		SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_Previous_Relative_Humidity = SHT2XHumidity_Data[input->Data_Index].Sensor_I2C_Relative_Humidity; //if sensor is not detect as error state then assign the current trading to previous reading
+   1009          	}
+   1010          }
+   1011          #endif
+   1012          
+   1013          //---------------------------------------------------------------------------------------------------------------------
+   1014          /**
+   1015           * @brief   This function convert raw value to percentage value
+   1016           *          Formula for conversion is given in Datasheet SHT20,
+   1017           *          section 6.1 Relative Humidity Conversion, page 10
+   1018           * @param   input: data related to the instance of the LLI
+   1019           *
+   1020           */
+   1021          #if (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+   1022          static void TempRawToPercent (HBL_LLI_TYPE * input)
+   1023          {
+   1024          	float32 temp_us = 0;
+   1025          	float32 temp_ul = 0;
+   1026          
+   1027          	temp_ul =  SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Raw_Data * 175.72;
+   1028          	temp_us = (temp_ul / 65536);
+   1029          	SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Raw_Celcius= (sint16)(temp_us - 46.85);
+   1030          }
+   1031          #endif
+   1032          //---------------------------------------------------------------------------------------------------------------------
+   1033          /**
+   1034           * @brief   this function is accumulation raw percentage value, taking average and the checking for error status
+   1035           * @param   input: data related to the instance of the LLI
+   1036           */
+   1037          #if (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+   1038          static void ProcessTempValue(HBL_LLI_TYPE * input)
+   1039          {
+   1040          	if(input->Data_Index < HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR)
+   1041          	{
+   1042          		I2C_RHT_SENSOR_PARAM_TYPE *param_ptr = (I2C_RHT_SENSOR_PARAM_TYPE *) (void *)(input->Parameter_Ptr.Data);
+   1043          
+   1044          		if((SHT2XI2C_Forced_Reset == FALSE) && (SHT2X_After_Reset_Stable_Counter == 0))    //  This check is to maker sure not to take the reading when RHT chip is reseting
+   1045          		{																																					 // The RHT after reset delay time is running
+   1046          			if (SHT2XTemperature_Data[input->Data_Index].Index_Average < param_ptr->Automic_Reading)
+   1047          			{
+   1048          				SHT2XTemperature_Data[input->Data_Index].Index_Average++;    // Increment number of sample @ 1sec
+   1049          				SHT2XTemperature_Data[input->Data_Index].Buffer += SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Raw_Celcius;// accumulate sample
+   1050          			}
+   1051          			else
+   1052          			{   // take average of accumulated samples
+   1053          				SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Celcius = (uint8)(SHT2XTemperature_Data[input->Data_Index].Buffer / param_ptr->Automic_Reading);
+   1054          				ChecTempNeedToReset(input);
+   1055          				SHT2XTemperature_Data[input->Data_Index].Index_Average = 0; // clear counter
+   1056          				SHT2XTemperature_Data[input->Data_Index].Buffer = 0; // clear previous value
+   1057          			}
+   1058          		}
+   1059          	}
+   1060          }
+   1061          #endif
+   1062          
+   1063          //---------------------------------------------------------------------------------------------------------------------
+   1064          /**
+   1065           * @brief   This is primarily being done due to the fact that I2C Sensor behaves random after few days / hours of operation.
+   1066           *          Originally was resolved by Doing every 12 Hr I2C Chip reset. Now failure was seen that Sensor give abnormal value
+   1067           *          and recovers after 12 hrs which affects product operation
+   1068           * @param   input: data related to the instance of the LLI
+   1069           */
+   1070          #if (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+   1071          static void ChecTempNeedToReset(HBL_LLI_TYPE * input)
+   1072          {
+   1073          	if((abs(SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Celcius - SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Previous_Celcius) >= SHT2X_I2C_RESET_TEMPERATURE_DELTA)&&  //  monitor the temperature delta for the failure of sensor
+   1074          	   (SHT2X_Powerup_Stable_Counter == 0))                                  // this check is there to wait for Power up stable time and after that only need to detect the logic for the reset
+   1075          	{
+   1076          		SHT2XI2C_Forced_Reset = TRUE;
+   1077          		SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Celcius = SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Previous_Celcius;  // if Sensor error is detected then take the previous correct reading for application
+   1078          		LOG_ADD_EVENT(SHT2X_RHT_WRONG_TEMEPRATURE_READING, SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Previous_Celcius);
+   1079          	}
+   1080          	else
+   1081          	{
+   1082          		SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Previous_Celcius = SHT2XTemperature_Data[input->Data_Index].Sensor_I2C_Tempearture_Celcius;  //if sensor is not detect as error state then assign the current trading to previous reading
+   1083          	}
+   1084          }
+   1085          #endif
+   1086          
+   1087          //---------------------------------------------------------------------------------------------------------------------
+   1088          /**
+   1089           * @brief   this function Handle the RHT2x Chip Reset Logic.
+   1090           * @param   input: data related to the instance of the LLI
+   1091           */
+   1092          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0) || (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+   1093          static void SHT2XResetHandler(HBL_LLI_TYPE * input)
+   1094          {
+   1095          	if((SHT2X_Reset_Counter == 0) || (SHT2XI2C_Forced_Reset == TRUE))
+   1096          	{
+   1097          		I2C_RHT_SENSOR_PARAM_TYPE *param_ptr = (I2C_RHT_SENSOR_PARAM_TYPE *) (void *)(input->Parameter_Ptr.Data);
+   1098          
+   1099          		#if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+   1100          			if(SHT2XHumidity_Allocation > 0)
+   1101          			{
+   1102          				if(I2cMgr__RequestBus(SHT2XHumidity_Data[input->Data_Index].I2cMgr_Device_Handle) == TRUE)
+   1103          				{
+   1104          		#elif (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+   1105          		if(SHT2XTemperature_Allocation > 0)
+   1106          			{
+   1107          				if(I2cMgr__RequestBus(SHT2XTemperature_Data[input->Data_Index].I2cMgr_Device_Handle) == TRUE)
+   1108          				{
+   1109          		#endif
+   1110          				if(I2c__Initialize(param_ptr->I2C_Channel, param_ptr->I2C_Speed, I2C_ADDR_7BITS, param_ptr->Slave_Address) == TRUE )
+   1111          				{
+   1112          					if(I2c__Write(param_ptr->I2C_Channel, SHT2X_SOFT_RESET,SHT2X_Write_Buffer, 0) == TRUE )     // trigger a soft reset
+   1113          					{
+   1114          						if(SHT2XI2C_Forced_Reset == TRUE)      //  if the chip is reset due to temperature or Humidity delta then only we need to relaod the
+   1115          						{                                                          //  Next reset Delay counter to not take the reading after Reset command
+   1116          							SHT2XI2C_Forced_Reset = FALSE;
+   1117          							SHT2X_After_Reset_Stable_Counter = SHT2X_NEXT_READ_DELAY_AFTER_RESET ;
+   1118          						}
+   1119          						SHT2X_Reset_Counter = SHT2X_I2C_RESET_TIME_TIMEOUT; // reload the next reset timeout timer
+   1120          
+   1121          						// Below code is added to reset the RHT2X state machine when I2C chip is reset
+   1122          						#if (SHT2X_TOTAL_HUMIDITY_CHANNELS_USED != 0)
+   1123          							if(SHT2XHumidity_Allocation > 0)
+   1124          							{
+   1125          								I2cMgr__ReleaseBus(SHT2XTemperature_Data[input->Data_Index].I2cMgr_Device_Handle);
+   1126          								SHT2X_Device_State = I2C_HUMIDITY_SENSOR_STATE_WRITE;
+   1127          							}
+   1128          						#elif (SHT2X_TOTAL_TEMPERATURE_CHANNELS_USED != 0)
+   1129          							if(SHT2XTemperature_Allocation > 0)
+   1130          							{
+   1131          								I2cMgr__ReleaseBus(SHT2XTemperature_Data[input->Data_Index].I2cMgr_Device_Handle);
+   1132          								SHT2X_Device_State = I2C_TEMP_SENSOR_STATE_WRITE;
+   1133          							}
+   1134          						#endif
+   1135          						SHT2X_State_Delay_Counter = 0;
+   1136          					}
+   1137          				}
+   1138          			}
+   1139          		}
+   1140          	}
+   1141          }
+   1142          #endif
+   1143          
+   1144          //---------------------------------------------------------------------------------------------------------------------
+   1145          /**
+   1146           * @brief   this function Handle the RHT2x Counter for the Power up stable, Next read Delay, Reset timeuot after 6 hr
+   1147           */
+   1148          #if (HBL_LLI_NUM_I2C_RHT_HUMIDITY_SENSOR > 0) || (HBL_LLI_NUM_I2C_RHT_TEMPERATURE_SENSOR > 0)
+   1149          void SHT2xCounterHandler(void)
+   1150          {
+   1151          	if(SHT2X_After_Reset_Stable_Counter > 0)
+   1152          	{
+   1153          		SHT2X_After_Reset_Stable_Counter--;
+   1154          	}
+   1155          
+   1156          	if(SHT2X_Reset_Counter > 0)
+   1157          	{
+   1158          		SHT2X_Reset_Counter--;
+   1159          	}
+   1160          
+   1161          	if(SHT2X_Powerup_Stable_Counter > 0)
+   1162          	{
+   1163          		SHT2X_Powerup_Stable_Counter--;
+   1164          	}
+   1165          }
+   1166          #endif
+   1167          
+   1168          #endif //(HBL_LLI_NUM_I2C_RHT_SENSOR > 0)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

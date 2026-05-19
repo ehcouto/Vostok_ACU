@@ -1,0 +1,951 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:45
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974/SelfTestFXLS8974.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\SelfTestFXLS8974.lst
+#        -o obj\SelfTestFXLS8974.obj
+#        source/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974/SelfTestFXLS8974.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\SelfTestFXLS8974.lst
+#    Object file  =  obj\SelfTestFXLS8974.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\AccelerometerLLI\FXLS8974\SelfTestFXLS8974\SelfTestFXLS8974.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Performs the self test procedure for the FXLS8974 accelerometer.
+      5           *              Procedure (per axis):
+      6           *                  - Read Axis Positive value
+      7           *                  - Read Axis Negative value
+      8           *                  - Calculate Self Test Output Change
+      9           *                      - If within the specification for the given axis and FSR g range, continue test
+     10           *                      - If not within the specification, test ends and fails
+     11           *
+     12           *  @section    Applicable_Documents
+     13           *                  AN13193 Self-test procedure for FXLS896xAF and FXLS897xCF (Rev 2.1)
+     14           *                  FXLS8974CF Datasheet (Rev 1.3)
+     15           *  @details    
+     16           *
+     17          
+     18              @startuml{FXLS8974_sm.png}
+     19                  title SelfTestFXLS8974 State-Machine
+     20          
+     21                  [*] --> ReadPositiveXAxis
+     22          
+     23          'Test X Axis
+     24                  ReadPositiveXAxis : entry / SetPositiveXAxis()
+     25                  ReadPositiveXAxis : do / MeasurePositiveXAxis()
+     26                  ReadPositiveXAxis --> ReadNegativeXAxis : evDataReceived
+     27          
+     28                  ReadNegativeXAxis : entry / SetNegativeXAxis()
+     29                  ReadNegativeXAxis : do / MeasureNegativeXAxis()
+     30                  ReadNegativeXAxis --> ReadPositiveYAxis : evPassed
+     31                  ReadNegativeXAxis --> [*]               : evFailed
+     32          
+     33          'Test Y Axis
+     34                  ReadPositiveYAxis : entry / SetPositiveYAxis()
+     35                  ReadPositiveYAxis : do / MeasurePositiveYAxis()
+     36                  ReadPositiveYAxis --> ReadNegativeYAxis : evDataReceived
+     37          
+     38                  ReadNegativeYAxis : entry / SetNegativeYAxis()
+     39                  ReadNegativeYAxis : do / MeasureNegativeYAxis()
+     40                  ReadNegativeYAxis --> ReadPositiveZAxis : evPassed
+     41                  ReadNegativeYAxis --> [*]               : evFailed
+     42          
+     43          'Test Z Axis
+     44                  ReadPositiveZAxis : entry / SetPositiveZAxis()
+     45                  ReadPositiveZAxis : do / MeasurePositiveZAxis()
+     46                  ReadPositiveZAxis --> ReadNegativeZAxis : evDataReceived
+     47          
+     48                  ReadNegativeZAxis : entry / SetNegativeZAxis()
+     49                  ReadNegativeZAxis : do / MeasureNegativeZAxis()
+     50                  ReadNegativeZAxis --> [*] : evPassed / ClearSelfTestErrors()
+     51                  ReadNegativeZAxis --> [*] : evFailed / IncrementSelfTestErrors()
+     52          
+     53              @enduml
+     54           *
+     55           *  @copyright  Copyright 2022. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     56           */
+     57          //---------------------------------------------------------------------------------------------------------------------
+     58          //---------------------------------------------------------------------------------------------------------------------
+     59          
+     60          //-------------------------------------- Include Files ----------------------------------------------------------------
+     61          #include "SystemConfig.h"
+     62          
+     63          #if (HBL_LLI_NUM_ACCELEROMETER > 0)
+     64          #include "SelfTestFXLS8974.h"
+     65          
+     66          #include "FXLS8974.h"
+     67          
+     68          //=====================================================================================================================
+     69          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Self Test FXLS8974 State Machine
+     70          //=====================================================================================================================
+     71          // !! StateEngineCrank cannot update this code if you change the header !!
+     72          
+     73          
+     74          //! Unique names used to identify states of the Self Test FXLS8974 state machine.
+     75          typedef enum SELF_TEST_FXLS8974_STATE_ENUM
+     76          {
+     77              STATE_SELF_TEST_FXLS8974_NONE                 = 0,
+     78          
+     79              STATE_SELF_TEST_FXLS8974_READ_POSITIVE_X_AXIS = 1, //!< (initial_state)
+     80              STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_X_AXIS = 2,
+     81              STATE_SELF_TEST_FXLS8974_READ_POSITIVE_Y_AXIS = 3,
+     82              STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_Y_AXIS = 4,
+     83              STATE_SELF_TEST_FXLS8974_READ_POSITIVE_Z_AXIS = 5,
+     84              STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_Z_AXIS = 6,
+     85          
+     86              STATE_SELF_TEST_FXLS8974_END                  = 7
+     87          } SELF_TEST_FXLS8974_STATE_TYPE;
+     88          
+     89          //! The state variable for the Self Test FXLS8974 state machine.
+     90          //! State machines with a history pseudostate may write to this variable during initialization.
+     91          //! Other state machines must only write to this variable through auto-generated functions.
+     92          static SELF_TEST_FXLS8974_STATE_TYPE Self_Test_FXLS8974_State;
+     93          
+     94          // -- Private Function Prototypes used by the state machine for customization functions --
+     95          static void ClearSelfTestErrors(void);
+     96          static void IncrementSelfTestErrors(void);
+     97          static void MeasureNegativeXAxis(void);
+     98          static void MeasureNegativeYAxis(void);
+     99          static void MeasureNegativeZAxis(void);
+    100          static void MeasurePositiveXAxis(void);
+    101          static void MeasurePositiveYAxis(void);
+    102          static void MeasurePositiveZAxis(void);
+    103          static void SetNegativeXAxis(void);
+    104          static void SetNegativeYAxis(void);
+    105          static void SetNegativeZAxis(void);
+    106          static void SetPositiveXAxis(void);
+    107          static void SetPositiveYAxis(void);
+    108          static void SetPositiveZAxis(void);
+    109          
+    110          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+    111          static void EventDataReceived(void);
+    112          static void EventFailed(void);
+    113          static void EventPassed(void);
+    114          static void SelfTestFXLS8974Execute(void);
+    115          static void SelfTestFXLS8974Initialize(void);
+    116          
+    117          // !! StateEngineCrank cannot update this code if you change the footer !!
+    118          // End of StateEngineCrank Auto-Generated Code.
+    119          
+    120          //! Module data
+    121          static struct
+    122          {
+    123              uint8  Self_Test_Errors;
+    124              sint16 Positive_Measurements[3];
+    125              sint16 Negative_Measurements[3];
+    126          }SelfTestFXLS8974;
+    127          
+    128          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    129          
+    130          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    131          
+    132          //=====================================================================================================================
+    133          //-------------------------------------- Public Functions -------------------------------------------------------------
+    134          //=====================================================================================================================
+    135          
+    136          //---------------------------------------------------------------------------------------------------------------------
+    137          /**
+    138           *  @brief      Initializes the module variables
+    139           */
+    140          void SelfTestFXLS8974__Start(void)
+    141          {
+    142              SelfTestFXLS8974Initialize();
+    143          }
+    144          
+    145          //---------------------------------------------------------------------------------------------------------------------
+    146          /**
+    147           *  @brief  Execute the state machine for the self test
+    148           */
+    149          void SelfTestFXLS8974__Execute(void)
+    150          {
+    151              SelfTestFXLS8974Execute();
+    152          }
+    153          
+    154          //---------------------------------------------------------------------------------------------------------------------
+    155          /**
+    156           *  @brief  Returns the number of self test errors that have occurred. This value is reset when the self test is
+    157           *          executed with no errors.
+    158           */
+    159          uint8 SelfTestFXLS8974__GetSelfTestErrors(void)
+    160          {
+    161              return(SelfTestFXLS8974.Self_Test_Errors);
+    162          }
+    163          
+    164          //---------------------------------------------------------------------------------------------------------------------
+    165          /**
+    166           *  @brief  Returns if the self test is still active
+    167           */
+    168          BOOL_TYPE SelfTestFXLS8974__IsActive(void)
+    169          {
+    170              BOOL_TYPE is_active = TRUE;
+    171          
+    172              if ((Self_Test_FXLS8974_State == STATE_SELF_TEST_FXLS8974_NONE) ||
+    173                  (Self_Test_FXLS8974_State == STATE_SELF_TEST_FXLS8974_END))
+    174              {
+    175                  is_active = FALSE;
+    176              }
+    177          
+    178              return(is_active);
+    179          }
+    180          
+    181          //=====================================================================================================================
+    182          //-------------------------------------- Private Functions ------------------------------------------------------------
+    183          //=====================================================================================================================
+    184          
+    185          
+    186          //=====================================================================================================================
+    187          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    188          //=====================================================================================================================
+    189          
+    190          
+    191          //---------------------------------------------------------------------------------------------------------------------
+    192          /**
+    193           *  Clear any previous self test errors that have occurred
+    194           */
+    195          static void ClearSelfTestErrors(void)
+    196          {
+    197              SelfTestFXLS8974.Self_Test_Errors = 0;
+    198          }
+    199          
+    200          
+    201          //---------------------------------------------------------------------------------------------------------------------
+    202          /**
+    203           *  Increment the number of self test errors that have occurred
+    204           */
+    205          static void IncrementSelfTestErrors(void)
+    206          {
+    207              SelfTestFXLS8974.Self_Test_Errors++;
+    208          }
+    209          
+    210          
+    211          //---------------------------------------------------------------------------------------------------------------------
+    212          /**
+    213           *  Measure the Negative X axis self test value and calculate the self test output change (STOC)
+    214           *      STOC = (Positive Output - Negative Output) / 2
+    215           *  If the STOC is within the range per the specification, continue to the Y Axis test, else fail the self test.
+    216           */
+    217          static void MeasureNegativeXAxis(void)
+    218          {
+    219              sint16 axis_data[3];
+    220              if (FXLS8974__Read((sint16 *)(&axis_data)) == TRUE)
+    221              {
+    222                  // Set the Negative X Axis value
+    223                  SelfTestFXLS8974.Negative_Measurements[0] = axis_data[0];
+    224          
+    225                  // Calculate Self Test Output Change (STOC): (Positive Output - Negative Output) / 2
+    226                  sint16 self_test_output_change = ((SelfTestFXLS8974.Positive_Measurements[0] - SelfTestFXLS8974.Negative_Measurements[0]) >> 1);
+    227          
+    228                  // Compare STOC to data sheet specification for the given axis and 16g range (Defined in FXLS8974 module)
+    229                  if ((self_test_output_change < -52) ||
+    230                      (self_test_output_change > -19))
+    231                  {
+    232                      EventFailed();
+    233                  }
+    234                  else
+    235                  {
+    236                      EventPassed();
+    237                  }
+    238              }
+    239          }
+    240          
+    241          
+    242          //---------------------------------------------------------------------------------------------------------------------
+    243          /**
+    244           *  Measure the Negative Y axis self test value and calculate the self test output change (STOC)
+    245           *      STOC = (Positive Output - Negative Output) / 2
+    246           *  If the STOC is within the range per the specification, continue to the X Axis test, else fail the self test.
+    247           */
+    248          static void MeasureNegativeYAxis(void)
+    249          {
+    250              sint16 axis_data[3];
+    251              if (FXLS8974__Read((sint16 *)(&axis_data)) == TRUE)
+    252              {
+    253                  // Set the Negative Y Axis value
+    254                  SelfTestFXLS8974.Negative_Measurements[1] = axis_data[1];
+    255          
+    256                  // Calculate Self Test Output Change (STOC): (Positive Output - Negative Output) / 2
+    257                  sint16 self_test_output_change = ((SelfTestFXLS8974.Positive_Measurements[1] - SelfTestFXLS8974.Negative_Measurements[1]) >> 1);
+    258          
+    259                  // Compare STOC to data sheet specification for the given axis and 16g range (Defined in FXLS8974 module)
+    260                  if ((self_test_output_change < 19) ||
+    261                      (self_test_output_change > 52))
+    262                  {
+    263                      EventFailed();
+    264                  }
+    265                  else
+    266                  {
+    267                      EventPassed();
+    268                  }
+    269              }
+    270          }
+    271          
+    272          
+    273          //---------------------------------------------------------------------------------------------------------------------
+    274          /**
+    275           *  Measure the Negative Z axis self test value and calculate the self test output change (STOC)
+    276           *      STOC = (Positive Output - Negative Output) / 2
+    277           *  If the STOC is outside the range per the specification, else fail the self test.
+    278           */
+    279          static void MeasureNegativeZAxis(void)
+    280          {
+    281              sint16 axis_data[3];
+    282              if (FXLS8974__Read((sint16 *)(&axis_data)) == TRUE)
+    283              {
+    284                  // Set the Negative X Axis value
+    285                  SelfTestFXLS8974.Negative_Measurements[2] = axis_data[2];
+    286          
+    287                  // Calculate Self Test Output Change (STOC): (Positive Output - Negative Output) / 2
+    288                  sint16 self_test_output_change = ((SelfTestFXLS8974.Positive_Measurements[2] - SelfTestFXLS8974.Negative_Measurements[2]) >> 1);
+    289          
+    290                  // Compare STOC to data sheet specification for the given axis and 16g range (Defined in FXLS8974 module)
+    291                  if ((self_test_output_change < -178) ||
+    292                      (self_test_output_change > -35))
+    293                  {
+    294                      EventFailed();
+    295                  }
+    296                  else
+    297                  {
+    298                      EventPassed();
+    299                  }
+    300              }
+    301          }
+    302          
+    303          
+    304          //---------------------------------------------------------------------------------------------------------------------
+    305          /**
+    306           *  Measure the Positive X axis self test value and store it for calculating the self test output change later
+    307           */
+    308          static void MeasurePositiveXAxis(void)
+    309          {
+    310              sint16 axis_data[3];
+    311              if (FXLS8974__Read((sint16 *)(&axis_data)) == TRUE)
+    312              {
+    313                  // Measure the Positive X Axis value
+    314                  SelfTestFXLS8974.Positive_Measurements[0] = axis_data[0];   // Remove the upper byte
+    315          
+    316                  EventDataReceived();
+    317              }
+    318          }
+    319          
+    320          
+    321          //---------------------------------------------------------------------------------------------------------------------
+    322          /**
+    323           *  Measure the Positive Y axis self test value and store it for calculating the self test output change later
+    324           */
+    325          static void MeasurePositiveYAxis(void)
+    326          {
+    327              sint16 axis_data[3];
+    328              if (FXLS8974__Read((sint16 *)(&axis_data)) == TRUE)
+    329              {
+    330                  // Measure the Positive Y Axis value
+    331                  SelfTestFXLS8974.Positive_Measurements[1] = axis_data[1];   // Remove the upper byte
+    332          
+    333                  EventDataReceived();
+    334              }
+    335          }
+    336          
+    337          
+    338          //---------------------------------------------------------------------------------------------------------------------
+    339          /**
+    340           *  Measure the Positive Z axis self test value and store it for calculating the self test output change later
+    341           */
+    342          static void MeasurePositiveZAxis(void)
+    343          {
+    344              sint16 axis_data[3];
+    345              if (FXLS8974__Read((sint16 *)(&axis_data)) == TRUE)
+    346              {
+    347                  // Measure the Positive Z Axis value
+    348                  SelfTestFXLS8974.Positive_Measurements[2] = axis_data[2];   // Remove the upper byte
+    349          
+    350                  EventDataReceived();
+    351              }
+    352          }
+    353          
+    354          
+    355          //---------------------------------------------------------------------------------------------------------------------
+    356          /**
+    357           *  Start the self test on the negative X axis
+    358           */
+    359          static void SetNegativeXAxis(void)
+    360          {
+    361              FXLS8974__Enable(FXLS8974_MODE_ST_NEGATIVE_X);
+    362          }
+    363          
+    364          
+    365          //---------------------------------------------------------------------------------------------------------------------
+    366          /**
+    367           *  Start the self test on the negative Y axis
+    368           */
+    369          static void SetNegativeYAxis(void)
+    370          {
+    371              FXLS8974__Enable(FXLS8974_MODE_ST_NEGATIVE_Y);
+    372          }
+    373          
+    374          
+    375          //---------------------------------------------------------------------------------------------------------------------
+    376          /**
+    377           *  Start the self test on the negative Z axis
+    378           */
+    379          static void SetNegativeZAxis(void)
+    380          {
+    381              FXLS8974__Enable(FXLS8974_MODE_ST_NEGATIVE_Z);
+    382          }
+    383          
+    384          
+    385          //---------------------------------------------------------------------------------------------------------------------
+    386          /**
+    387           *  Start the self test on the positive X axis
+    388           */
+    389          static void SetPositiveXAxis(void)
+    390          {
+    391              FXLS8974__Enable(FXLS8974_MODE_ST_POSITIVE_X);
+    392          }
+    393          
+    394          
+    395          //---------------------------------------------------------------------------------------------------------------------
+    396          /**
+    397           *  Start the self test on the positive Y axis
+    398           */
+    399          static void SetPositiveYAxis(void)
+    400          {
+    401              FXLS8974__Enable(FXLS8974_MODE_ST_POSITIVE_Y);
+    402          }
+    403          
+    404          
+    405          //---------------------------------------------------------------------------------------------------------------------
+    406          /**
+    407           *  Start the self test on the positive Z axis
+    408           */
+    409          static void SetPositiveZAxis(void)
+    410          {
+    411              FXLS8974__Enable(FXLS8974_MODE_ST_POSITIVE_Z);
+    412          }
+    413          
+    414          
+    415          //=====================================================================================================================
+    416          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Self Test FXLS8974 State Machine
+    417          //=====================================================================================================================
+    418          // !! StateEngineCrank cannot update this code if you change the header !!
+    419          
+    420          
+    421          //---------------------------------------------------------------------------------------------------------------------
+    422          /**
+    423           * Process the Data Received Event for the Self Test FXLS8974 state machine.
+    424           *
+    425           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    426           *
+    427           * This function was auto-generated and must not be edited manually.
+    428           * Change the UML used to generate this function and regenerate the source code.
+    429           */
+    430          static void EventDataReceived(void)
+    431          {
+    432              switch (Self_Test_FXLS8974_State)
+    433              {
+    434                  case STATE_SELF_TEST_FXLS8974_READ_POSITIVE_X_AXIS:
+    435                      Self_Test_FXLS8974_State = STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_X_AXIS;
+    436                      SetNegativeXAxis();                     // Entry Function.
+    437                      break;
+    438          
+    439                  case STATE_SELF_TEST_FXLS8974_READ_POSITIVE_Y_AXIS:
+    440                      Self_Test_FXLS8974_State = STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_Y_AXIS;
+    441                      SetNegativeYAxis();                     // Entry Function.
+    442                      break;
+    443          
+    444                  case STATE_SELF_TEST_FXLS8974_READ_POSITIVE_Z_AXIS:
+    445                      Self_Test_FXLS8974_State = STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_Z_AXIS;
+    446                      SetNegativeZAxis();                     // Entry Function.
+    447                      break;
+    448          
+    449                  default:
+    450                      // Event is ignored for all other values of Self_Test_FXLS8974_State.
+    451                      break;
+    452              }
+    453          }
+    454          
+    455          
+    456          //---------------------------------------------------------------------------------------------------------------------
+    457          /**
+    458           * Process the Failed Event for the Self Test FXLS8974 state machine.
+    459           *
+    460           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    461           *
+    462           * This function was auto-generated and must not be edited manually.
+    463           * Change the UML used to generate this function and regenerate the source code.
+    464           */
+    465          static void EventFailed(void)
+    466          {
+    467              switch (Self_Test_FXLS8974_State)
+    468              {
+    469                  case STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_X_AXIS:
+    470                  case STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_Y_AXIS:
+    471                      Self_Test_FXLS8974_State = STATE_SELF_TEST_FXLS8974_NONE; // Terminate Self Test FXLS8974 state machine execution.
+    472                      break;
+    473          
+    474                  case STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_Z_AXIS:
+    475                      IncrementSelfTestErrors();              // Transition action function.
+    476                      Self_Test_FXLS8974_State = STATE_SELF_TEST_FXLS8974_NONE; // Terminate Self Test FXLS8974 state machine execution.
+    477                      break;
+    478          
+    479                  default:
+    480                      // Event is ignored for all other values of Self_Test_FXLS8974_State.
+    481                      break;
+    482              }
+    483          }
+    484          
+    485          
+    486          //---------------------------------------------------------------------------------------------------------------------
+    487          /**
+    488           * Process the Passed Event for the Self Test FXLS8974 state machine.
+    489           *
+    490           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    491           *
+    492           * This function was auto-generated and must not be edited manually.
+    493           * Change the UML used to generate this function and regenerate the source code.
+    494           */
+    495          static void EventPassed(void)
+    496          {
+    497              switch (Self_Test_FXLS8974_State)
+    498              {
+    499                  case STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_X_AXIS:
+    500                      Self_Test_FXLS8974_State = STATE_SELF_TEST_FXLS8974_READ_POSITIVE_Y_AXIS;
+    501                      SetPositiveYAxis();                     // Entry Function.
+    502                      break;
+    503          
+    504                  case STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_Y_AXIS:
+    505                      Self_Test_FXLS8974_State = STATE_SELF_TEST_FXLS8974_READ_POSITIVE_Z_AXIS;
+    506                      SetPositiveZAxis();                     // Entry Function.
+    507                      break;
+    508          
+    509                  case STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_Z_AXIS:
+    510                      ClearSelfTestErrors();                  // Transition action function.
+    511                      Self_Test_FXLS8974_State = STATE_SELF_TEST_FXLS8974_NONE; // Terminate Self Test FXLS8974 state machine execution.
+    512                      break;
+    513          
+    514                  default:
+    515                      // Event is ignored for all other values of Self_Test_FXLS8974_State.
+    516                      break;
+    517              }
+    518          }
+    519          
+    520          
+    521          //---------------------------------------------------------------------------------------------------------------------
+    522          /**
+    523           * The main execution function for the Self Test FXLS8974 state machine.
+    524           * This function should be called periodically while the state machine is running.
+    525           *
+    526           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    527           *
+    528           * This function was auto-generated and must not be edited manually.
+    529           * Change the UML used to generate this function and regenerate the source code.
+    530           */
+    531          static void SelfTestFXLS8974Execute(void)
+    532          {
+    533              switch(Self_Test_FXLS8974_State)
+    534              {
+    535                  case STATE_SELF_TEST_FXLS8974_READ_POSITIVE_X_AXIS:
+    536                      MeasurePositiveXAxis();                 // Do function.
+    537                      break;
+    538          
+    539                  case STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_X_AXIS:
+    540                      MeasureNegativeXAxis();                 // Do function.
+    541                      break;
+    542          
+    543                  case STATE_SELF_TEST_FXLS8974_READ_POSITIVE_Y_AXIS:
+    544                      MeasurePositiveYAxis();                 // Do function.
+    545                      break;
+    546          
+    547                  case STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_Y_AXIS:
+    548                      MeasureNegativeYAxis();                 // Do function.
+    549                      break;
+    550          
+    551                  case STATE_SELF_TEST_FXLS8974_READ_POSITIVE_Z_AXIS:
+    552                      MeasurePositiveZAxis();                 // Do function.
+    553                      break;
+    554          
+    555                  case STATE_SELF_TEST_FXLS8974_READ_NEGATIVE_Z_AXIS:
+    556                      MeasureNegativeZAxis();                 // Do function.
+    557                      break;
+    558          
+    559                  default:
+    560                      // There is nothing to do for all other values of Self_Test_FXLS8974_State.
+    561                      break;
+    562              }
+    563          }
+    564          
+    565          
+    566          //---------------------------------------------------------------------------------------------------------------------
+    567          /**
+    568           * The initialization function for the Self Test FXLS8974 state machine.
+    569           * This function resets the state machine to the initial state and executes the initial state's
+    570           * entry function.
+    571           *
+    572           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    573           *
+    574           * This function was auto-generated and must not be edited manually.
+    575           * Change the UML used to generate this function and regenerate the source code.
+    576           */
+    577          static void SelfTestFXLS8974Initialize(void)
+    578          {
+    579              Self_Test_FXLS8974_State = STATE_SELF_TEST_FXLS8974_READ_POSITIVE_X_AXIS;
+    580              SetPositiveXAxis();                             // Entry Function.
+    581          }
+    582          
+    583          
+    584          // !! StateEngineCrank cannot update this code if you change the footer !!
+    585          // End of StateEngineCrank Auto-Generated Code.
+    586          
+    587          
+    588          #endif // (HBL_LLI_NUM_ACCELEROMETER > 0)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

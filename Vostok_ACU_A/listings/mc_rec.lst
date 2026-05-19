@@ -1,0 +1,1968 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:18:00
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/Category/Common/all/MasterCommander/Source/mc_rec.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Oh --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\mc_rec.lst -o
+#        obj\mc_rec.obj
+#        source/Category/Common/all/MasterCommander/Source/mc_rec.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\mc_rec.lst
+#    Object file  =  obj\mc_rec.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Common\all\MasterCommander\Source\mc_rec.c
+      1          /**
+      2           *  @file
+      3           *
+      4           *  @brief      MC Recorder implementation.
+      5           *
+      6           *
+      7           *  $Header: $
+      8           *
+      9           *  @copyright  Copyright 2016-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     10           */
+     11          //---------------------------------------------------------------------------------------------------------------------
+     12          
+     13          //-------------------------------------- Include Files ----------------------------------------------------------------
+     14          #include "master_commander.h"
+     15          #include "mc_llmem.h"
+     16          #include "mc_private.h"
+     17          #include "mc_protocol.h"
+     18          
+     19          #if (MC_USE_RECORDER) && (!(MC_DISABLE))
+     20          
+     21          #include "../Source/mc_rec.h"
+     22          
+     23          #if MC_USE_FASTREC
+     24          #include "mc_fastrec.h"
+     25          #endif
+     26          
+     27          /********************************************************
+     28          *  global variables (shared with FastRecorder if used)
+     29          ********************************************************/
+     30          
+     31          /* configuration variables */
+
+   \                                 In section .bss, align 4
+     32          MC_U16  pcm_wRecTotalSmps;        /* number of samples to measure */
+     33          
+     34          #if MC_REC_STATIC_POSTTRIG == 0
+     35          MC_U16  pcm_wRecPostTrigger;      /* number of post-trigger samples to keep */
+     36          #endif
+     37          
+     38          #if (MC_USE_FASTREC) == 0
+     39          MC_U8   pcm_nRecTriggerMode;      /* trigger mode (0 = disabled, 1 = _/, 2 = \_) */
+   \                     pcm_nRecTriggerMode:
+   \   00000000                      DS8 1
+     40          #endif
+     41          
+     42          #if (MC_REC_STATIC_DIVISOR) == 0
+     43          MC_U16  pcm_wRecTimeDiv;          /* divisor of recorder "clock" */
+     44          #endif
+     45          
+     46          MC_U8    pcm_nRecVarCount;        /* number of active recorder variables */
+   \                     pcm_nRecVarCount:
+   \   00000001                      DS8 1
+   \   00000002                      DS8 1
+   \   00000003                      DS8 1
+     47          MC_ADDR  pcm_pRecVarAddr[MC_MAX_SCOPE_VARS]; /* addresses of recorded variables */
+     48          MC_SIZE8 pcm_pRecVarSize[MC_MAX_SCOPE_VARS]; /* sizes of recorded variables */
+   \                     pcm_pRecVarSize:
+   \   00000004                      DS8 8
+     49          
+     50          /* runtime variables  */
+     51          #if (MC_REC_STATIC_DIVISOR) != 1
+     52          MC_U16  pcm_wRecTimeDivCtr;       /* recorder "clock" divisor counter */
+     53          #endif
+     54          
+     55          MC_U16  pcm_wStoprecCountDown;    /* post-trigger countdown counter */
+     56          
+     57          /* recorder flags */
+     58          MC_REC_FLAGS pcm_wRecFlags;
+   \                     pcm_wRecFlags:
+   \   0000000C                      DS8 4
+   \   00000010                      DS8 4
+   \                     pcm_wRecTotalSmps:
+   \   00000014                      DS8 2
+   \                     pcm_wRecPostTrigger:
+   \   00000016                      DS8 2
+   \                     pcm_wRecTimeDiv:
+   \   00000018                      DS8 2
+   \                     pcm_wRecTimeDivCtr:
+   \   0000001A                      DS8 2
+   \                     pcm_wStoprecCountDown:
+   \   0000001C                      DS8 2
+     59          
+     60          /***********************************
+     61          *  local variables 
+     62          ***********************************/
+     63          
+     64          #if (MC_USE_FASTREC) == 0
+     65          MC_U16   pcm_wRecBuffStartIx;     /* first sample index */
+   \                     pcm_wRecBuffStartIx:
+   \   0000001E                      DS8 2
+   \                     pcm_pRecVarAddr:
+   \   00000020                      DS8 32
+     66          
+     67          /* Recorder buffer pointers */
+     68          MC_ADDR pcm_dwRecWritePtr;        /* write pointer in recorder buffer */
+   \                     pcm_dwRecWritePtr:
+   \   00000040                      DS8 4
+     69          MC_ADDR pcm_dwRecEndBuffPtr;      /* pointer to end of active recorder buffer */
+   \                     pcm_dwRecEndBuffPtr:
+   \   00000044                      DS8 4
+   \   00000048                      DS8 4
+   \   0000004C                      DS8 4
+   \   00000050                      DS8 4
+   \   00000054                      DS8 6000
+     70          
+     71          /* configuration variables */
+     72          static MC_ADDR pcm_nTrgVarAddr;          /* trigger variable address */
+     73          static MC_U8   pcm_nTrgVarSize;          /* trigger variable threshold size */
+     74          static MC_U8   pcm_bTrgVarSigned;        /* trigger compare mode (0 = unsigned, 1 = signed) */
+     75          
+     76          /*lint -e{960} using union */
+     77          static union 
+     78          {
+     79          #if MC_CFG_BUS_WIDTH == 1
+     80              MC_U8  u8;
+     81              MC_S8  s8;
+     82          #endif
+     83              MC_U16 u16;
+     84              MC_S16 s16;
+     85              MC_U32 u32;
+     86              MC_S32 s32;
+     87          #if MC_REC_FLOAT_TRIG
+     88              MC_FLOAT fp;
+     89          #endif
+     90          } pcm_uTrgThreshold;                        /* trigger threshold level (1,2 or 4 bytes) */
+     91          #endif /* (MC_USE_FASTREC) == 0 */
+     92          
+     93          static MC_ADDR  pcm_nRecBuffAddr;        /* recorder buffer address */
+     94          #if MC_REC_OWNBUFF
+     95          static MC_SIZE  pcm_wRecBuffSize;        /* recorder buffer size */
+     96          #endif
+     97          /* compare functions prototype */
+     98          typedef MC_BOOL (*MC_PCOMPAREFUNC)(void);
+     99          
+    100          /*/ pointer to active compare function */
+    101          static MC_PCOMPAREFUNC pcm_pCompareFunc;
+    102          
+    103          #if !MC_REC_OWNBUFF && (MC_USE_FASTREC) == 0
+    104          /* put buffer into far memory ? */
+    105          #if MC_REC_FARBUFF
+    106          #pragma section fardata begin
+    107          #endif /* MC_REC_FARBUFF */
+    108          /* statically allocated recorder buffer (MC_REC_OWNBUFF is FALSE) */
+    109          static MC_U8 pcm_pOwnRecBuffer[MC_REC_BUFF_SIZE];
+    110          /* end of far memory section */
+    111          #if MC_REC_FARBUFF
+    112          #pragma section fardata end
+    113          #endif /* MC_REC_FARBUFF */
+    114          #endif /* MC_REC_OWNBUFF */
+    115          
+    116          /***********************************
+    117          *  local functions
+    118          ***********************************/
+    119          
+    120          static MC_BOOL MC_Compare8S(void);
+    121          static MC_BOOL MC_Compare8U(void);
+    122          static MC_BOOL MC_Compare16S(void);
+    123          static MC_BOOL MC_Compare16U(void);
+    124          static MC_BOOL MC_Compare32S(void);
+    125          static MC_BOOL MC_Compare32U(void);
+    126          #if MC_REC_FLOAT_TRIG
+    127          static MC_BOOL MC_Comparefloat(void);
+    128          #endif
+    129          static void MC_Recorder2(void);
+    130          
+    131          /**************************************************************************//*!
+    132          *
+    133          * @brief    Recorder Initialization
+    134          *
+    135          ******************************************************************************/
+    136          
+
+   \                                 In section .text, align 2, keep-with-next
+    137          void MC_InitRec(void)
+    138          {   
+    139              /* initialize Recorder flags*/
+    140              pcm_wRecFlags.all = 0U;
+   \                     MC_InitRec: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x2100             MOVS     R1,#+0
+   \   00000004   0x7301             STRB     R1,[R0, #+12]
+    141          
+    142              /* setup buffer pointer and size so IsInRecBuffer works even  
+    143                 before the recorder is first initialized and used */
+    144              
+    145          #if MC_REC_OWNBUFF
+    146              /* user wants to use his own buffer */
+    147              pcm_nRecBuffAddr = 0U;
+    148              pcm_wRecBuffSize = 0U;
+    149          #elif MC_USE_FASTREC
+    150              /* Initialize Fast Recorder Buffer  */
+    151              MC_InitFastRec();
+    152          #else
+    153              /* size in native sizeof units (=bytes on most platforms) */
+    154              MC_ARR2ADDR(pcm_nRecBuffAddr, pcm_pOwnRecBuffer);
+   \   00000006   0x0001             MOVS     R1,R0
+   \   00000008   0x3154             ADDS     R1,R1,#+84
+   \   0000000A   0x64C1             STR      R1,[R0, #+76]
+    155              
+    156              /*lint -esym(528, pcm_pOwnRecBuffer) this symbol is used outside of lint sight */
+    157          #endif
+    158          
+    159          }
+   \   0000000C   0x4770             BX       LR               ;; return
+    160          
+    161          /**************************************************************************//*!
+    162          *
+    163          * @brief    Abort and de-initialize recorder
+    164          *
+    165          ******************************************************************************/
+    166          
+    167          #if defined(MC_PLATFORM_HC08) || defined(MC_PLATFORM_HC12)
+    168          #pragma INLINE
+    169          #elif defined(__ARMCC_VERSION)
+    170          __inline
+    171          #else
+    172          static inline
+    173          #endif
+    174          void MC_AbortRec(void)
+    175          {
+    176              /* clear flags */
+    177              pcm_wRecFlags.all = 0U;
+    178          }
+    179          
+    180          /**************************************************************************//*!
+    181          *
+    182          * @brief    API: Replacing the recorder buffer with the user's one
+    183          *
+    184          * @param    pBuffer - user buffer pointer
+    185          * @param    wBuffSize - buffer size
+    186          *
+    187          * @note Use the MC_SetUpBuff32 to pass the forced 32bit address in SDM
+    188          *
+    189          ******************************************************************************/
+    190          
+
+   \                                 In section .text, align 2, keep-with-next
+    191          void MC_SetUpRecBuff(MC_ADDR pBuffer, MC_SIZE nBuffSize)
+    192          {    
+    193          #if MC_REC_OWNBUFF
+    194              pcm_nRecBuffAddr = pBuffer;
+    195              pcm_wRecBuffSize = nBuffSize;
+    196          #else
+    197              MC_UNUSED(pBuffer);
+    198              MC_UNUSED(nBuffSize);
+    199          #endif
+    200          }
+   \                     MC_SetUpRecBuff: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    201          
+    202          /**************************************************************************//*!
+    203          *
+    204          * @brief    Handling SETUPREC and SETUPREC_EX commands
+    205          *
+    206          * @param    pMessageIO - original command (in) and response buffer (out) 
+    207          *
+    208          * @return   As all command handlers, the return value should be the buffer 
+    209          *           pointer where the response output finished (except checksum)
+    210          *
+    211          ******************************************************************************/
+    212          
+
+   \                                 In section .text, align 2, keep-with-next
+    213          MC_BPTR MC_SetUpRec(MC_BPTR pMessageIO)
+    214          {
+   \                     MC_SetUpRec: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+    215              MC_BPTR pResponse = pMessageIO;
+   \   00000002   0x9000             STR      R0,[SP, #+0]
+   \   00000004   0x....             LDR      R4,??DataTable13
+   \   00000006   0x2100             MOVS     R1,#+0
+   \   00000008   0x7321             STRB     R1,[R4, #+12]
+    216              MC_SIZE8 nRecVarsetSize;
+    217              MC_SIZE blen;
+    218              MC_U8 i, sz;
+    219              MC_U8 nResponseCode;
+    220              
+    221              /* de-initialize first   */
+    222              MC_AbortRec();
+    223          
+    224          #if MC_REC_OWNBUFF
+    225              /* user wants to use his own buffer, check if it is valid */
+    226              if(!pcm_nRecBuffAddr || !pcm_wRecBuffSize)
+    227              {
+    228                  return MC_ConstToBuffer8(pResponse, MC_STC_INVBUFF);
+    229              }
+    230          #elif (MC_USE_FASTREC) == 0
+    231              /* size in native sizeof units (=bytes on most platforms) */
+    232              MC_ARR2ADDR(pcm_nRecBuffAddr, pcm_pOwnRecBuffer);
+   \   0000000A   0x0021             MOVS     R1,R4
+   \   0000000C   0x3154             ADDS     R1,R1,#+84
+   \   0000000E   0x64E1             STR      R1,[R4, #+76]
+    233          #endif
+    234          
+    235              /* seek the setup data */
+    236          #if (MC_USE_FASTREC) == 0
+    237              pMessageIO = MC_SkipInBuffer(pMessageIO, 2U);
+    238              pMessageIO = MC_ValueFromBuffer8(&pcm_nRecTriggerMode, pMessageIO);
+   \   00000010   0x1C80             ADDS     R0,R0,#+2
+   \   00000012   0x7801             LDRB     R1,[R0, #+0]
+   \   00000014   0x7021             STRB     R1,[R4, #+0]
+   \   00000016   0x1C41             ADDS     R1,R0,#+1
+    239          #else /* (MC_USE_FASTREC) == 0 */
+    240              pMessageIO = MC_SkipInBuffer(pMessageIO, 3U);
+    241          #endif /* (MC_USE_FASTREC) == 0 */
+    242          
+    243              pMessageIO = MC_ValueFromBuffer16(&pcm_wRecTotalSmps, pMessageIO);
+   \   00000018   0x2202             MOVS     R2,#+2
+   \   0000001A   0x0020             MOVS     R0,R4
+   \   0000001C   0x3014             ADDS     R0,R0,#+20
+   \   0000001E   0x.... 0x....      BL       MC_CopyFromBuffer
+    244          
+    245          #if (MC_REC_STATIC_POSTTRIG) == 0
+    246              pMessageIO = MC_ValueFromBuffer16(&pcm_wRecPostTrigger, pMessageIO);
+   \   00000022   0x2202             MOVS     R2,#+2
+   \   00000024   0x0001             MOVS     R1,R0
+   \   00000026   0x0020             MOVS     R0,R4
+   \   00000028   0x3016             ADDS     R0,R0,#+22
+   \   0000002A   0x.... 0x....      BL       MC_CopyFromBuffer
+    247          #else /* (MC_REC_STATIC_POSTTRIG) == 0 */
+    248              pMessageIO = MC_SkipInBuffer(pMessageIO, 2U);
+    249          #endif /* (MC_REC_STATIC_POSTTRIG) == 0 */
+    250          
+    251          #if (MC_REC_STATIC_DIVISOR) == 0
+    252              pMessageIO = MC_ValueFromBuffer16(&pcm_wRecTimeDiv, pMessageIO);
+   \   0000002E   0x2202             MOVS     R2,#+2
+   \   00000030   0x0001             MOVS     R1,R0
+   \   00000032   0x0020             MOVS     R0,R4
+   \   00000034   0x3018             ADDS     R0,R0,#+24
+   \   00000036   0x.... 0x....      BL       MC_CopyFromBuffer
+    253          #else /* (MC_REC_STATIC_DIVISOR) == 0 */
+    254              pMessageIO = MC_SkipInBuffer(pMessageIO, 2U);
+    255          #endif /* (MC_REC_STATIC_DIVISOR) == 0 */
+    256          
+    257          #if (MC_USE_FASTREC) == 0
+    258              /* address & size of trigger variable */
+    259              pMessageIO = MC_AddressFromBuffer(&pcm_nTrgVarAddr, pMessageIO);
+    260              pMessageIO = MC_ValueFromBuffer8(&pcm_nTrgVarSize, pMessageIO);
+   \   0000003A   0x0001             MOVS     R1,R0
+   \   0000003C   0x0020             MOVS     R0,R4
+   \   0000003E   0x3048             ADDS     R0,R0,#+72
+   \   00000040   0x.... 0x....      BL       MC_AddressFromBuffer
+   \   00000044   0x7801             LDRB     R1,[R0, #+0]
+   \   00000046   0x70A1             STRB     R1,[R4, #+2]
+   \   00000048   0x1C40             ADDS     R0,R0,#+1
+    261          
+    262              /* trigger compare mode  */
+    263              pMessageIO = MC_ValueFromBuffer8(&pcm_bTrgVarSigned, pMessageIO);
+   \   0000004A   0x7801             LDRB     R1,[R0, #+0]
+   \   0000004C   0x70E1             STRB     R1,[R4, #+3]
+   \   0000004E   0x1C41             ADDS     R1,R0,#+1
+    264          
+    265              /* threshold value  */
+    266              pMessageIO = MC_ValueFromBuffer32(&pcm_uTrgThreshold.u32, pMessageIO);
+    267          #else /* (MC_USE_FASTREC) == 0 */
+    268              pMessageIO = MC_SkipInBuffer(pMessageIO, 8U);
+    269          #endif /* (MC_USE_FASTREC) == 0 */
+    270              
+    271              /* recorder variable count */
+    272              pMessageIO = MC_ValueFromBuffer8(&pcm_nRecVarCount, pMessageIO);
+   \   00000050   0x2204             MOVS     R2,#+4
+   \   00000052   0x0020             MOVS     R0,R4
+   \   00000054   0x3010             ADDS     R0,R0,#+16
+   \   00000056   0x.... 0x....      BL       MC_CopyFromBuffer
+   \   0000005A   0x7801             LDRB     R1,[R0, #+0]
+   \   0000005C   0x7061             STRB     R1,[R4, #+1]
+   \   0000005E   0x1C40             ADDS     R0,R0,#+1
+    273          
+    274              /* rec variable information must fit into our buffers */
+    275              if(!pcm_nRecVarCount || pcm_nRecVarCount > (MC_U8)MC_MAX_REC_VARS)
+   \   00000060   0x000A             MOVS     R2,R1
+   \   00000062   0xD04B             BEQ      ??MC_SetUpRec_0
+   \   00000064   0x2909             CMP      R1,#+9
+   \   00000066   0xDA49             BGE      ??MC_SetUpRec_0
+    276              {
+    277          #if MC_REC_COMMON_ERR_CODES
+    278                  goto MC_SetUpRec_exit_error;
+    279          #else
+    280                  nResponseCode = MC_STC_INVBUFF;
+    281                  goto MC_SetUpRec_exit;
+    282          #endif
+    283              }
+    284          
+    285              /* calculate sum of sizes of all variables */
+    286              nRecVarsetSize = 0U;
+   \   00000068   0x2700             MOVS     R7,#+0
+    287          
+    288              /* get all addresses and sizes */
+    289              for(i=0U; i<pcm_nRecVarCount; i++)
+   \   0000006A   0x2600             MOVS     R6,#+0
+   \   0000006C   0xE010             B        ??MC_SetUpRec_1
+    290              {
+    291                  /* variable size */
+    292                  pMessageIO = MC_ValueFromBuffer8(&sz, pMessageIO);
+   \                     ??MC_SetUpRec_2: (+1)
+   \   0000006E   0x7805             LDRB     R5,[R0, #+0]
+   \   00000070   0x1C41             ADDS     R1,R0,#+1
+    293                  
+    294                  pcm_pRecVarSize[i] = sz;
+   \   00000072   0x19A0             ADDS     R0,R4,R6
+   \   00000074   0x7105             STRB     R5,[R0, #+4]
+    295                  nRecVarsetSize += sz;
+   \   00000076   0x197F             ADDS     R7,R7,R5
+   \   00000078   0xB2FF             UXTB     R7,R7
+    296                  
+    297                  /* variable address */
+    298                  pMessageIO = MC_AddressFromBuffer(&pcm_pRecVarAddr[i], pMessageIO);
+   \   0000007A   0x00B0             LSLS     R0,R6,#+2
+   \   0000007C   0x1820             ADDS     R0,R4,R0
+   \   0000007E   0x3020             ADDS     R0,R0,#+32
+   \   00000080   0x.... 0x....      BL       MC_AddressFromBuffer
+    299          
+    300                  /* valid numeric variable sizes only */
+    301                  if(sz == 0U || sz > 8U)
+   \   00000084   0x0029             MOVS     R1,R5
+   \   00000086   0xD039             BEQ      ??MC_SetUpRec_0
+   \   00000088   0x2D09             CMP      R5,#+9
+   \   0000008A   0xD237             BCS      ??MC_SetUpRec_0
+    302                  {
+    303          #if MC_REC_COMMON_ERR_CODES
+    304                      goto MC_SetUpRec_exit_error;
+    305          #else
+    306                      nResponseCode = MC_STC_INVSIZE;
+    307                      goto MC_SetUpRec_exit;
+    308          #endif
+    309                  }
+    310          
+    311          #if MC_CFG_BUS_WIDTH > 1U
+    312                  /* even sizes only */
+    313                  if(sz & 0x1)
+    314                  {
+    315          #if MC_REC_COMMON_ERR_CODES
+    316                      goto MC_SetUpRec_exit_error;
+    317          #else
+    318                      nResponseCode = MC_STC_INVSIZE;
+    319                      goto MC_SetUpRec_exit;
+    320          #endif
+    321                  }
+    322          #endif /* MC_CFG_BUS_WIDTH > 1U */
+    323                  
+    324          #if MC_USE_TSA && MC_USE_TSA_SAFETY
+    325                  if(!MC_CheckTsaSpace(pcm_pRecVarAddr[i], (MC_SIZE8)sz, 0U))
+    326                  {
+    327          #if MC_REC_COMMON_ERR_CODES
+    328                      goto MC_SetUpRec_exit_error;
+    329          #else
+    330                      nResponseCode = MC_STC_EACCESS;
+    331                      goto MC_SetUpRec_exit;
+    332          #endif
+    333                  }
+    334          #endif /* MC_USE_TSA && MC_USE_TSA_SAFETY */
+    335              }
+   \   0000008C   0x1C76             ADDS     R6,R6,#+1
+   \   0000008E   0xB2F6             UXTB     R6,R6
+   \                     ??MC_SetUpRec_1: (+1)
+   \   00000090   0x7861             LDRB     R1,[R4, #+1]
+   \   00000092   0x428E             CMP      R6,R1
+   \   00000094   0xDBEB             BLT      ??MC_SetUpRec_2
+    336          
+    337              /* fast recorder handles trigger by itself */
+    338          #if (MC_USE_FASTREC) == 0
+    339              /* any trigger? */
+    340              pcm_pCompareFunc = NULL;
+   \   00000096   0x2000             MOVS     R0,#+0
+   \   00000098   0x6520             STR      R0,[R4, #+80]
+    341              if(pcm_nRecTriggerMode)
+   \   0000009A   0x7820             LDRB     R0,[R4, #+0]
+   \   0000009C   0x2800             CMP      R0,#+0
+   \   0000009E   0xD01E             BEQ      ??MC_SetUpRec_3
+    342              {
+    343                  /* access to trigger variable? */
+    344          #if MC_USE_TSA && MC_USE_TSA_SAFETY
+    345                  if(!MC_CheckTsaSpace(pcm_nTrgVarAddr, (MC_SIZE8)pcm_nTrgVarSize, 0U))
+    346                  {
+    347          #if MC_REC_COMMON_ERR_CODES
+    348                      goto MC_SetUpRec_exit_error;
+    349          #else
+    350                      nResponseCode = MC_STC_EACCESS;
+    351                      goto MC_SetUpRec_exit;
+    352          #endif
+    353                  }
+    354          #endif /* MC_USE_TSA && MC_USE_TSA_SAFETY */
+    355                  /* get compare function */
+    356          
+    357          #if MC_REC_FLOAT_TRIG
+    358                  if(pcm_bTrgVarSigned&MC_REC_FLOAT_TRIG_MASK)
+   \   000000A0   0x78E0             LDRB     R0,[R4, #+3]
+   \   000000A2   0x0781             LSLS     R1,R0,#+30
+   \   000000A4   0xD501             BPL      ??MC_SetUpRec_4
+    359                  {
+    360                      pcm_pCompareFunc = MC_Comparefloat;
+   \   000000A6   0x....             LDR      R0,??DataTable15
+   \   000000A8   0xE018             B        ??MC_SetUpRec_5
+    361                  }
+    362                  else
+    363          #else
+    364                  if(pcm_bTrgVarSigned&MC_REC_FLOAT_TRIG_MASK)
+    365                  {
+    366          #if MC_REC_COMMON_ERR_CODES
+    367                      goto MC_SetUpRec_exit_error;
+    368          #else
+    369                      nResponseCode = MC_STC_FLOATDISABLED;
+    370                      goto MC_SetUpRec_exit;
+    371          #endif
+    372                  }
+    373          #endif
+    374                  {
+    375                  switch(pcm_nTrgVarSize)
+   \                     ??MC_SetUpRec_4: (+1)
+   \   000000AA   0x78A1             LDRB     R1,[R4, #+2]
+   \   000000AC   0x2901             CMP      R1,#+1
+   \   000000AE   0xD004             BEQ      ??MC_SetUpRec_6
+   \   000000B0   0x2902             CMP      R1,#+2
+   \   000000B2   0xD008             BEQ      ??MC_SetUpRec_7
+   \   000000B4   0x2904             CMP      R1,#+4
+   \   000000B6   0xD00C             BEQ      ??MC_SetUpRec_8
+   \   000000B8   0xE020             B        ??MC_SetUpRec_0
+    376                  {
+    377          #if MC_CFG_BUS_WIDTH == 1U
+    378                  case 1: pcm_pCompareFunc = pcm_bTrgVarSigned ? MC_Compare8S : MC_Compare8U; break;
+   \                     ??MC_SetUpRec_6: (+1)
+   \   000000BA   0x2800             CMP      R0,#+0
+   \   000000BC   0xD001             BEQ      ??MC_SetUpRec_9
+   \   000000BE   0x....             LDR      R0,??DataTable15_1
+   \   000000C0   0xE00C             B        ??MC_SetUpRec_5
+   \                     ??MC_SetUpRec_9: (+1)
+   \   000000C2   0x....             LDR      R0,??DataTable15_2
+   \   000000C4   0xE00A             B        ??MC_SetUpRec_5
+    379          #endif
+    380                  case 2: pcm_pCompareFunc = pcm_bTrgVarSigned ? MC_Compare16S : MC_Compare16U; break;
+   \                     ??MC_SetUpRec_7: (+1)
+   \   000000C6   0x2800             CMP      R0,#+0
+   \   000000C8   0xD001             BEQ      ??MC_SetUpRec_10
+   \   000000CA   0x....             LDR      R0,??DataTable15_3
+   \   000000CC   0xE006             B        ??MC_SetUpRec_5
+   \                     ??MC_SetUpRec_10: (+1)
+   \   000000CE   0x....             LDR      R0,??DataTable15_4
+   \   000000D0   0xE004             B        ??MC_SetUpRec_5
+    381                  case 4: pcm_pCompareFunc = pcm_bTrgVarSigned ? MC_Compare32S : MC_Compare32U; break;
+   \                     ??MC_SetUpRec_8: (+1)
+   \   000000D2   0x2800             CMP      R0,#+0
+   \   000000D4   0xD001             BEQ      ??MC_SetUpRec_11
+   \   000000D6   0x....             LDR      R0,??DataTable15_5
+   \   000000D8   0xE000             B        ??MC_SetUpRec_5
+   \                     ??MC_SetUpRec_11: (+1)
+   \   000000DA   0x....             LDR      R0,??DataTable15_6
+   \                     ??MC_SetUpRec_5: (+1)
+   \   000000DC   0x6520             STR      R0,[R4, #+80]
+    382                  
+    383                  /* invalid trigger variable size  */
+    384                  default:
+    385          #if MC_REC_COMMON_ERR_CODES
+    386                      goto MC_SetUpRec_exit_error;
+    387          #else
+    388                      nResponseCode = MC_STC_INVSIZE;
+    389                      goto MC_SetUpRec_exit;
+    390          #endif
+    391                      }
+    392                  }
+    393              }
+    394          #endif /* (MC_USE_FASTREC) == 0 */
+    395              
+    396              /* total recorder buffer length in native sizeof units (=bytes on most platforms) */
+    397              blen = (MC_SIZE) (pcm_wRecTotalSmps * nRecVarsetSize / MC_CFG_BUS_WIDTH);
+   \                     ??MC_SetUpRec_3: (+1)
+   \   000000DE   0x8AA0             LDRH     R0,[R4, #+20]
+   \   000000E0   0x4347             MULS     R7,R0,R7
+   \   000000E2   0xB2BF             UXTH     R7,R7
+    398          
+    399              /* recorder memory available? */
+    400              if(blen > MC_GetRecBuffSize())
+   \   000000E4   0x....             LDR      R0,??DataTable16  ;; 0x1771
+   \   000000E6   0x4287             CMP      R7,R0
+   \   000000E8   0xDA08             BGE      ??MC_SetUpRec_0
+    401              {
+    402          #if MC_REC_COMMON_ERR_CODES
+    403                  goto MC_SetUpRec_exit_error;
+    404          #else
+    405                  nResponseCode = MC_STC_INVSIZE;
+    406                  goto MC_SetUpRec_exit;
+    407          #endif
+    408              }
+    409          
+    410          #if (MC_USE_FASTREC) == 0
+    411              /* remember the effective end of circular buffer */
+    412              pcm_dwRecEndBuffPtr = pcm_nRecBuffAddr + blen;
+   \   000000EA   0x6CE0             LDR      R0,[R4, #+76]
+   \   000000EC   0x19C0             ADDS     R0,R0,R7
+   \   000000EE   0x6460             STR      R0,[R4, #+68]
+    413          #endif /* (MC_USE_FASTREC) == 0 */
+    414          
+    415          #if MC_USE_FASTREC
+    416              if(!MC_SetUpFastRec())
+    417              {
+    418          #if MC_REC_COMMON_ERR_CODES
+    419                  goto MC_SetUpRec_exit_error;
+    420          #else /* MC_REC_COMMON_ERR_CODES */
+    421                  nResponseCode = MC_STC_FASTRECERR;
+    422                  goto MC_SetUpRec_exit;
+    423          #endif /* MC_REC_COMMON_ERR_CODES */
+    424              }
+    425          #endif /* MC_USE_FASTREC */
+    426          
+    427              /* everything is okay    */
+    428              pcm_wRecFlags.flg.bIsConfigured = 1U;
+   \   000000F0   0x68E0             LDR      R0,[R4, #+12]
+   \   000000F2   0x2101             MOVS     R1,#+1
+   \   000000F4   0x4301             ORRS     R1,R1,R0
+   \   000000F6   0x60E1             STR      R1,[R4, #+12]
+    429              nResponseCode = MC_STS_OK;
+   \   000000F8   0x2000             MOVS     R0,#+0
+    430          #if MC_REC_COMMON_ERR_CODES
+    431              goto MC_SetUpRec_exit;
+   \   000000FA   0xE000             B        ??MC_SetUpRec_12
+    432          MC_SetUpRec_exit_error:
+    433              nResponseCode = MC_STC_INVSIZE;
+   \                     ??MC_SetUpRec_0: (+1)
+   \   000000FC   0x2086             MOVS     R0,#+134
+    434          #endif
+    435          MC_SetUpRec_exit:
+    436              return MC_ConstToBuffer8(pResponse, nResponseCode);
+   \                     ??MC_SetUpRec_12: (+1)
+   \   000000FE   0x9900             LDR      R1,[SP, #+0]
+   \   00000100   0x7008             STRB     R0,[R1, #+0]
+   \   00000102   0x1C48             ADDS     R0,R1,#+1
+   \   00000104   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    437          }
+    438          
+    439          /**************************************************************************//*!
+    440          *
+    441          * @brief    API: Pull the trigger of the recorder
+    442          *
+    443          * This function starts the post-trigger stop countdown
+    444          *
+    445          ******************************************************************************/
+    446          
+
+   \                                 In section .text, align 2, keep-with-next
+    447          void MC_TriggerRec(void)
+    448          {
+    449              if(!pcm_wRecFlags.flg.bIsStopping)
+   \                     MC_TriggerRec: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x68C1             LDR      R1,[R0, #+12]
+   \   00000004   0x074A             LSLS     R2,R1,#+29
+   \   00000006   0x0FD2             LSRS     R2,R2,#+31
+   \   00000008   0xD105             BNE      ??MC_TriggerRec_0
+    450              {
+    451                  pcm_wRecFlags.flg.bIsStopping = 1U;
+   \   0000000A   0x68C1             LDR      R1,[R0, #+12]
+   \   0000000C   0x2204             MOVS     R2,#+4
+   \   0000000E   0x430A             ORRS     R2,R2,R1
+   \   00000010   0x60C2             STR      R2,[R0, #+12]
+    452          #if (MC_REC_STATIC_POSTTRIG) == 0
+    453                  pcm_wStoprecCountDown = pcm_wRecPostTrigger;
+   \   00000012   0x8AC1             LDRH     R1,[R0, #+22]
+   \   00000014   0x8381             STRH     R1,[R0, #+28]
+    454          #else
+    455                  pcm_wStoprecCountDown = MC_REC_STATIC_POSTTRIG;
+    456          #endif
+    457              }
+    458          }
+   \                     ??MC_TriggerRec_0: (+1)
+   \   00000016   0x4770             BX       LR               ;; return
+    459          
+    460          /**************************************************************************//*!
+    461          *
+    462          * @brief    Handling STARTREC command
+    463          *
+    464          * @param    pMessageIO - original command (in) and response buffer (out) 
+    465          *
+    466          * @return   As all command handlers, the return value should be the length
+    467          *           of the response filled into the buffer (including status byte)
+    468          *
+    469          * This function starts recording (initializes internal recording variables 
+    470          * and flags)
+    471          *
+    472          ******************************************************************************/
+    473          
+
+   \                                 In section .text, align 2, keep-with-next
+    474          MC_BPTR MC_StartRec(MC_BPTR pMessageIO)
+    475          {
+   \                     MC_StartRec: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    476               MC_U8 nResponseCode;
+    477              /* must be configured */
+    478              if(!pcm_wRecFlags.flg.bIsConfigured)
+   \   00000002   0x2201             MOVS     R2,#+1
+   \   00000004   0x....             LDR      R1,??DataTable13
+   \   00000006   0x68CB             LDR      R3,[R1, #+12]
+   \   00000008   0x4013             ANDS     R3,R3,R2
+   \   0000000A   0xD019             BEQ      ??MC_StartRec_0
+    479              {
+    480          #if MC_REC_COMMON_ERR_CODES
+    481                  goto MC_StartRec_exit_error;
+    482          #else
+    483                  nResponseCode = MC_STC_NOTINIT;
+    484                  goto MC_StartRec_exit;
+    485          #endif
+    486              }
+    487                  
+    488              /* already running ? */
+    489              if(pcm_wRecFlags.flg.bIsRunning)
+   \   0000000C   0x68CB             LDR      R3,[R1, #+12]
+   \   0000000E   0x085B             LSRS     R3,R3,#+1
+   \   00000010   0x401A             ANDS     R2,R2,R3
+   \   00000012   0xD115             BNE      ??MC_StartRec_0
+    490              {
+    491          #if MC_REC_COMMON_ERR_CODES
+    492                  goto MC_StartRec_exit_error;
+    493          #else
+    494                  nResponseCode = MC_STS_RECRUN;
+    495                  goto MC_StartRec_exit;
+    496          #endif
+    497              }
+    498          
+    499          #if (MC_USE_FASTREC) == 0
+    500              /* initialize write pointer */
+    501              pcm_dwRecWritePtr = pcm_nRecBuffAddr;
+   \   00000014   0x6CCA             LDR      R2,[R1, #+76]
+   \   00000016   0x640A             STR      R2,[R1, #+64]
+    502          
+    503              /* current (first) sample index */
+    504              pcm_wRecBuffStartIx = 0U;
+   \   00000018   0x2200             MOVS     R2,#+0
+   \   0000001A   0x83CA             STRH     R2,[R1, #+30]
+    505          #endif /* (MC_USE_FASTREC) == 0 */
+    506          
+    507              /* initialize time divisor */
+    508          #if (MC_REC_STATIC_DIVISOR) != 1
+    509              pcm_wRecTimeDivCtr = 0U;
+   \   0000001C   0x834A             STRH     R2,[R1, #+26]
+    510          #endif
+    511          
+    512              /* initiate virgin cycle */
+    513              pcm_wRecFlags.flg.bIsStopping = 0U;          /* no trigger active */
+   \   0000001E   0x68CB             LDR      R3,[R1, #+12]
+   \   00000020   0x2404             MOVS     R4,#+4
+   \   00000022   0x43A3             BICS     R3,R3,R4
+   \   00000024   0x60CB             STR      R3,[R1, #+12]
+    514              pcm_wRecFlags.flg.bTrgCrossActive = 0U;      /* waiting for threshold crossing */
+   \   00000026   0x68CB             LDR      R3,[R1, #+12]
+   \   00000028   0x2410             MOVS     R4,#+16
+   \   0000002A   0x43A3             BICS     R3,R3,R4
+   \   0000002C   0x60CB             STR      R3,[R1, #+12]
+    515              pcm_wRecFlags.flg.bInvirginCycle = 1U;       /* initial cycle */
+   \   0000002E   0x68CB             LDR      R3,[R1, #+12]
+   \   00000030   0x2408             MOVS     R4,#+8
+   \   00000032   0x431C             ORRS     R4,R4,R3
+   \   00000034   0x60CC             STR      R4,[R1, #+12]
+    516              /* run now */
+    517          
+    518              /* start fast recorder */
+    519          #if MC_USE_FASTREC
+    520              MC_StartFastRec();
+    521          #endif /* (MSTR_USE_FASTREC */
+    522          
+    523              /* run now */
+    524              pcm_wRecFlags.flg.bIsRunning = 1U;           /* is running now! */
+   \   00000036   0x68CB             LDR      R3,[R1, #+12]
+   \   00000038   0x2402             MOVS     R4,#+2
+   \   0000003A   0x431C             ORRS     R4,R4,R3
+   \   0000003C   0x60CC             STR      R4,[R1, #+12]
+    525          
+    526              nResponseCode = MC_STS_OK;
+    527          #if MC_REC_COMMON_ERR_CODES
+    528              goto MC_StartRec_exit;
+   \   0000003E   0xE000             B        ??MC_StartRec_1
+    529          MC_StartRec_exit_error:
+    530              nResponseCode = MC_STC_NOTINIT;
+   \                     ??MC_StartRec_0: (+1)
+   \   00000040   0x2288             MOVS     R2,#+136
+    531          #endif
+    532          
+    533          MC_StartRec_exit:
+    534              return MC_ConstToBuffer8(pMessageIO, nResponseCode);
+   \                     ??MC_StartRec_1: (+1)
+   \   00000042   0x7002             STRB     R2,[R0, #+0]
+   \   00000044   0x1C40             ADDS     R0,R0,#+1
+   \   00000046   0xBC10             POP      {R4}
+   \   00000048   0x4770             BX       LR               ;; return
+    535          }
+    536          
+    537          /**************************************************************************//*!
+    538          *
+    539          * @brief    Handling STOPREC command
+    540          *
+    541          * @param    pMessageIO - original command (in) and response buffer (out) 
+    542          *
+    543          * @return   As all command handlers, the return value should be the length
+    544          *           of the response filled into the buffer (including status byte)
+    545          *
+    546          * This function stops recording (same as manual trigger)
+    547          *
+    548          ******************************************************************************/
+    549          
+
+   \                                 In section .text, align 2, keep-with-next
+    550          MC_BPTR MC_StopRec(MC_BPTR pMessageIO)
+    551          {
+    552              MC_U8 nResponseCode;
+    553              /* must be configured */
+    554              if(!pcm_wRecFlags.flg.bIsConfigured)
+   \                     MC_StopRec: (+1)
+   \   00000000   0x2201             MOVS     R2,#+1
+   \   00000002   0x....             LDR      R1,??DataTable13
+   \   00000004   0x68CB             LDR      R3,[R1, #+12]
+   \   00000006   0x4013             ANDS     R3,R3,R2
+   \   00000008   0xD101             BNE      ??MC_StopRec_0
+    555              {
+    556                  nResponseCode = MC_STC_NOTINIT;
+   \   0000000A   0x2188             MOVS     R1,#+136
+    557                  goto MC_StopRec_exit;
+   \   0000000C   0xE010             B        ??MC_StopRec_1
+    558              }
+    559                  
+    560              /* already stopped ? */
+    561              if(!pcm_wRecFlags.flg.bIsRunning)
+   \                     ??MC_StopRec_0: (+1)
+   \   0000000E   0x68CB             LDR      R3,[R1, #+12]
+   \   00000010   0x085B             LSRS     R3,R3,#+1
+   \   00000012   0x4013             ANDS     R3,R3,R2
+   \   00000014   0xD101             BNE      ??MC_StopRec_2
+    562              {
+    563                  nResponseCode = MC_STS_RECDONE;
+   \   00000016   0x2102             MOVS     R1,#+2
+    564                  goto MC_StopRec_exit;
+   \   00000018   0xE00A             B        ??MC_StopRec_1
+    565              }
+    566              
+    567              /* simulate trigger */
+    568              MC_TriggerRec();
+   \                     ??MC_StopRec_2: (+1)
+   \   0000001A   0x68CB             LDR      R3,[R1, #+12]
+   \   0000001C   0x089B             LSRS     R3,R3,#+2
+   \   0000001E   0x401A             ANDS     R2,R2,R3
+   \   00000020   0xD105             BNE      ??MC_StopRec_3
+   \   00000022   0x68CA             LDR      R2,[R1, #+12]
+   \   00000024   0x2304             MOVS     R3,#+4
+   \   00000026   0x4313             ORRS     R3,R3,R2
+   \   00000028   0x60CB             STR      R3,[R1, #+12]
+   \   0000002A   0x8ACA             LDRH     R2,[R1, #+22]
+   \   0000002C   0x838A             STRH     R2,[R1, #+28]
+    569              nResponseCode = MC_STS_OK;
+   \                     ??MC_StopRec_3: (+1)
+   \   0000002E   0x2100             MOVS     R1,#+0
+    570              
+    571          MC_StopRec_exit:
+    572              return MC_ConstToBuffer8(pMessageIO, nResponseCode);
+   \                     ??MC_StopRec_1: (+1)
+   \   00000030   0x7001             STRB     R1,[R0, #+0]
+   \   00000032   0x1C40             ADDS     R0,R0,#+1
+   \   00000034   0x4770             BX       LR               ;; return
+    573          }
+    574          
+    575          /**************************************************************************//*!
+    576          *
+    577          * @brief    Handling GETRECSTS command
+    578          *
+    579          * @param    pMessageIO - original command (in) and response buffer (out) 
+    580          *
+    581          * @return   As all command handlers, the return value should be the buffer 
+    582          *           pointer where the response output finished (except checksum)
+    583          *
+    584          * This function returns current recorder status
+    585          *
+    586          ******************************************************************************/
+    587          
+
+   \                                 In section .text, align 2, keep-with-next
+    588          MC_BPTR MC_GetRecStatus(MC_BPTR pMessageIO)
+    589          {
+    590              MC_U16 nResponseCode = (MC_U16) (pcm_wRecFlags.flg.bIsRunning ?
+    591                  MC_STS_RECRUN : MC_STS_RECDONE);
+   \                     MC_GetRecStatus: (+1)
+   \   00000000   0x2101             MOVS     R1,#+1
+   \   00000002   0x....             LDR      R2,??DataTable13
+   \   00000004   0x68D3             LDR      R3,[R2, #+12]
+   \   00000006   0x085B             LSRS     R3,R3,#+1
+   \   00000008   0x400B             ANDS     R3,R3,R1
+   \   0000000A   0xD100             BNE      ??MC_GetRecStatus_0
+   \   0000000C   0x2302             MOVS     R3,#+2
+    592              
+    593              /* must be configured */
+    594              if(!pcm_wRecFlags.flg.bIsConfigured)
+   \                     ??MC_GetRecStatus_0: (+1)
+   \   0000000E   0x68D2             LDR      R2,[R2, #+12]
+   \   00000010   0x4011             ANDS     R1,R1,R2
+   \   00000012   0xD100             BNE      ??MC_GetRecStatus_1
+    595              {
+    596                  nResponseCode = MC_STC_NOTINIT;
+   \   00000014   0x2388             MOVS     R3,#+136
+    597              }
+    598                  
+    599              /* get run/stop status */
+    600              return MC_ConstToBuffer8(pMessageIO, (MC_U8) nResponseCode);
+   \                     ??MC_GetRecStatus_1: (+1)
+   \   00000016   0x7003             STRB     R3,[R0, #+0]
+   \   00000018   0x1C40             ADDS     R0,R0,#+1
+   \   0000001A   0x4770             BX       LR               ;; return
+    601          }
+    602          
+    603          /* now follows the recorder only routines, skip that if FastRecorder is used */
+    604          #if (MC_USE_FASTREC) == 0
+    605          
+    606          /**************************************************************************//*!
+    607          *
+    608          * @brief    Get recorder memory size 
+    609          *
+    610          * @return   Recorder memory size in native sizeof units (=bytes on most platforms)
+    611          *
+    612          ******************************************************************************/
+    613          
+
+   \                                 In section .text, align 2, keep-with-next
+    614          MC_SIZE MC_GetRecBuffSize()
+    615          {
+    616          #if MC_REC_OWNBUFF
+    617              return pcm_wRecBuffSize;
+    618          #else
+    619              return (MC_SIZE) MC_REC_BUFF_SIZE;
+   \                     MC_GetRecBuffSize: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable16_1  ;; 0x1770
+   \   00000002   0x4770             BX       LR               ;; return
+    620          #endif
+    621          }
+    622          
+    623          /**************************************************************************//*!
+    624          *
+    625          * @brief    Check wether given memory region is inside the recorder buffer
+    626          *
+    627          * @param    dwAddr - address of the memory to be checked
+    628          * @param    wSize  - size of the memory to be checked
+    629          *
+    630          * @return   This function returns non-zero if user space is in recorder buffer
+    631          *
+    632          * This function is called as a part of TSA-checking process when the PC host
+    633          * is requesting memory contents
+    634          *
+    635          ******************************************************************************/
+    636          
+
+   \                                 In section .text, align 2, keep-with-next
+    637          MC_BOOL MC_IsInRecBuffer(MC_ADDR dwAddr, MC_SIZE8 nSize)
+    638          {
+   \                     MC_IsInRecBuffer: (+1)
+   \   00000000   0x0002             MOVS     R2,R0
+    639              MC_BOOL bRet = 0U;
+   \   00000002   0x2000             MOVS     R0,#+0
+   \   00000004   0x....             LDR      R3,??DataTable13
+   \   00000006   0x6CDB             LDR      R3,[R3, #+76]
+   \   00000008   0x429A             CMP      R2,R3
+   \   0000000A   0xD200             BCS      ??MC_IsInRecBuffer_0
+   \   0000000C   0x4770             BX       LR
+    640              
+    641              if(dwAddr >= pcm_nRecBuffAddr)
+    642              {
+    643                  bRet = (MC_BOOL)((dwAddr + nSize) <= (pcm_nRecBuffAddr + MC_GetRecBuffSize()) ? MC_TRUE : MC_FALSE);
+   \                     ??MC_IsInRecBuffer_0: (+1)
+   \   0000000E   0xB410             PUSH     {R4}
+   \   00000010   0x....             LDR      R4,??DataTable16_1  ;; 0x1770
+   \   00000012   0x191B             ADDS     R3,R3,R4
+   \   00000014   0x1851             ADDS     R1,R2,R1
+   \   00000016   0x428B             CMP      R3,R1
+   \   00000018   0xD300             BCC      ??MC_IsInRecBuffer_1
+   \   0000001A   0x2001             MOVS     R0,#+1
+    644              }
+    645              
+    646              return bRet;
+   \                     ??MC_IsInRecBuffer_1: (+1)
+   \   0000001C   0xBC10             POP      {R4}
+   \   0000001E   0x4770             BX       LR               ;; return
+    647          }
+    648          
+    649          
+    650          /**************************************************************************//*!
+    651          *
+    652          * @brief    Handling GETRECBUFF and GETRECBUFF_EX command
+    653          *
+    654          * @param    pMessageIO - original command (in) and response buffer (out) 
+    655          *
+    656          * @return   As all command handlers, the return value should be the buffer 
+    657          *           pointer where the response output finished (except checksum)
+    658          *
+    659          * This function returns recorder buffer information
+    660          *
+    661          ******************************************************************************/
+    662          
+
+   \                                 In section .text, align 2, keep-with-next
+    663          MC_BPTR MC_GetRecBuff(MC_BPTR pMessageIO)
+    664          {
+   \                     MC_GetRecBuff: (+1)
+   \   00000000   0xB51C             PUSH     {R2-R4,LR}
+    665              volatile MC_BPTR pResponse;
+    666              /* must be configured */
+    667              if(!pcm_wRecFlags.flg.bIsConfigured)
+   \   00000002   0x2101             MOVS     R1,#+1
+   \   00000004   0x....             LDR      R4,??DataTable13
+   \   00000006   0x68E2             LDR      R2,[R4, #+12]
+   \   00000008   0x400A             ANDS     R2,R2,R1
+   \   0000000A   0xD101             BNE      ??MC_GetRecBuff_0
+    668              {
+    669                  return MC_ConstToBuffer8(pMessageIO, MC_STC_NOTINIT);
+   \   0000000C   0x2188             MOVS     R1,#+136
+   \   0000000E   0xE004             B.N      ??MC_GetRecBuff_1
+    670              }
+    671              
+    672              /* must be stopped */
+    673              if(pcm_wRecFlags.flg.bIsRunning)
+   \                     ??MC_GetRecBuff_0: (+1)
+   \   00000010   0x68E2             LDR      R2,[R4, #+12]
+   \   00000012   0x0852             LSRS     R2,R2,#+1
+   \   00000014   0x4011             ANDS     R1,R1,R2
+   \   00000016   0xD003             BEQ      ??MC_GetRecBuff_2
+    674              {
+    675                  return MC_ConstToBuffer8(pMessageIO, MC_STC_SERVBUSY);
+   \   00000018   0x2187             MOVS     R1,#+135
+   \                     ??MC_GetRecBuff_1: (+1)
+   \   0000001A   0x7001             STRB     R1,[R0, #+0]
+   \   0000001C   0x1C40             ADDS     R0,R0,#+1
+    676              }
+   \   0000001E   0xBD16             POP      {R1,R2,R4,PC}
+    677              
+    678              /* fill the return info */
+    679              pResponse = MC_ConstToBuffer8(pMessageIO, MC_STS_OK);
+   \                     ??MC_GetRecBuff_2: (+1)
+   \   00000020   0x7001             STRB     R1,[R0, #+0]
+   \   00000022   0x1C40             ADDS     R0,R0,#+1
+   \   00000024   0x9000             STR      R0,[SP, #+0]
+    680              pResponse = MC_AddressToBuffer(pResponse, pcm_nRecBuffAddr);
+   \   00000026   0x6CE1             LDR      R1,[R4, #+76]
+   \   00000028   0x9800             LDR      R0,[SP, #+0]
+   \   0000002A   0x.... 0x....      BL       MC_AddressToBuffer
+   \   0000002E   0x9000             STR      R0,[SP, #+0]
+    681              return MC_ValueToBuffer16(pResponse, pcm_wRecBuffStartIx);
+   \   00000030   0x9800             LDR      R0,[SP, #+0]
+   \   00000032   0x8BE1             LDRH     R1,[R4, #+30]
+   \   00000034   0x466A             MOV      R2,SP
+   \   00000036   0x8091             STRH     R1,[R2, #+4]
+   \   00000038   0x2202             MOVS     R2,#+2
+   \   0000003A   0xA901             ADD      R1,SP,#+4
+   \   0000003C   0x.... 0x....      BL       MC_CopyToBuffer
+   \   00000040   0xBD16             POP      {R1,R2,R4,PC}    ;; return
+    682          }
+    683          
+    684          /**************************************************************************//*!
+    685          *
+    686          * @brief    Compare macro used in trigger detection
+    687          *
+    688          * @param    v - original command 
+    689          * @param    t - response buffer
+    690          *
+    691          * @return   zero when value is lower than threshold.
+    692          * @return   non-zero when value is greater than or equal as threshold
+    693          *
+    694          ******************************************************************************/
+    695          
+    696          #define CMP(v,t) ((MC_BOOL)(((v) < (t)) ? 0 : 1))
+    697          
+    698          #if MC_CFG_BUS_WIDTH == 1U
+    699          
+
+   \                                 In section .text, align 2, keep-with-next
+    700          static MC_BOOL MC_Compare8S()
+    701          {
+    702              return CMP(MC_GetS8(pcm_nTrgVarAddr), pcm_uTrgThreshold.s8);
+   \                     MC_Compare8S: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x6C81             LDR      R1,[R0, #+72]
+   \   00000004   0x2200             MOVS     R2,#+0
+   \   00000006   0x5689             LDRSB    R1,[R1, R2]
+   \   00000008   0x2210             MOVS     R2,#+16
+   \   0000000A   0x5680             LDRSB    R0,[R0, R2]
+   \   0000000C   0x4281             CMP      R1,R0
+   \   0000000E   0xDA01             BGE      ??MC_Compare8S_0
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x4770             BX       LR
+   \                     ??MC_Compare8S_0: (+1)
+   \   00000014   0x2001             MOVS     R0,#+1
+   \   00000016   0x4770             BX       LR               ;; return
+    703          }
+    704          
+
+   \                                 In section .text, align 2, keep-with-next
+    705          static MC_BOOL MC_Compare8U()
+    706          {
+    707              return CMP(MC_GetU8(pcm_nTrgVarAddr), pcm_uTrgThreshold.u8);
+   \                     MC_Compare8U: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x6C81             LDR      R1,[R0, #+72]
+   \   00000004   0x7809             LDRB     R1,[R1, #+0]
+   \   00000006   0x7C02             LDRB     R2,[R0, #+16]
+   \   00000008   0x....             B.N      ?Subroutine0
+    708          }
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \   00000000   0x4291             CMP      R1,R2
+   \                     ??Subroutine0_0: (+1)
+   \   00000002   0x4180             SBCS     R0,R0,R0
+   \   00000004   0x43C0             MVNS     R0,R0
+   \   00000006   0x0FC0             LSRS     R0,R0,#+31
+   \   00000008   0x4770             BX       LR               ;; return
+    709          
+    710          #endif
+    711          
+
+   \                                 In section .text, align 2, keep-with-next
+    712          static MC_BOOL MC_Compare16S()
+    713          {
+    714              return CMP(MC_GetS16(pcm_nTrgVarAddr), pcm_uTrgThreshold.s16);
+   \                     MC_Compare16S: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x6C81             LDR      R1,[R0, #+72]
+   \   00000004   0x2200             MOVS     R2,#+0
+   \   00000006   0x5E89             LDRSH    R1,[R1, R2]
+   \   00000008   0x2210             MOVS     R2,#+16
+   \   0000000A   0x5E80             LDRSH    R0,[R0, R2]
+   \   0000000C   0x4281             CMP      R1,R0
+   \   0000000E   0xDA01             BGE      ??MC_Compare16S_0
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x4770             BX       LR
+   \                     ??MC_Compare16S_0: (+1)
+   \   00000014   0x2001             MOVS     R0,#+1
+   \   00000016   0x4770             BX       LR               ;; return
+    715          }
+    716          
+
+   \                                 In section .text, align 2, keep-with-next
+    717          static MC_BOOL MC_Compare16U()
+    718          {
+    719              return CMP(MC_GetU16(pcm_nTrgVarAddr), pcm_uTrgThreshold.u16);
+   \                     MC_Compare16U: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x6C81             LDR      R1,[R0, #+72]
+   \   00000004   0x8809             LDRH     R1,[R1, #+0]
+   \   00000006   0x8A02             LDRH     R2,[R0, #+16]
+   \   00000008                      REQUIRE ?Subroutine0
+   \   00000008                      ;; // Fall through to label ?Subroutine0
+    720          }
+    721          
+
+   \                                 In section .text, align 2, keep-with-next
+    722          static MC_BOOL MC_Compare32S()
+    723          {
+    724              return CMP(MC_GetS32(pcm_nTrgVarAddr), pcm_uTrgThreshold.s32);
+   \                     MC_Compare32S: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x6C81             LDR      R1,[R0, #+72]
+   \   00000004   0x6809             LDR      R1,[R1, #+0]
+   \   00000006   0x6900             LDR      R0,[R0, #+16]
+   \   00000008   0x4281             CMP      R1,R0
+   \   0000000A   0xDA01             BGE      ??MC_Compare32S_0
+   \   0000000C   0x2000             MOVS     R0,#+0
+   \   0000000E   0x4770             BX       LR
+   \                     ??MC_Compare32S_0: (+1)
+   \   00000010   0x2001             MOVS     R0,#+1
+   \   00000012   0x4770             BX       LR               ;; return
+    725          }
+    726          
+
+   \                                 In section .text, align 2, keep-with-next
+    727          static MC_BOOL MC_Compare32U()
+    728          {
+    729              return CMP(MC_GetU32(pcm_nTrgVarAddr), pcm_uTrgThreshold.u32);
+   \                     MC_Compare32U: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x6C81             LDR      R1,[R0, #+72]
+   \   00000004   0x6809             LDR      R1,[R1, #+0]
+   \   00000006   0x6900             LDR      R0,[R0, #+16]
+   \   00000008   0x4281             CMP      R1,R0
+   \   0000000A   0x....             B.N      ??Subroutine0_0
+    730          }
+    731          
+    732          #if MC_REC_FLOAT_TRIG
+
+   \                                 In section .text, align 2, keep-with-next
+    733          static MC_BOOL MC_Comparefloat()
+    734          {
+   \                     MC_Comparefloat: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    735              return CMP(MC_GetFloat(pcm_nTrgVarAddr), pcm_uTrgThreshold.fp);
+   \   00000002   0x....             LDR      R1,??DataTable16_2
+   \   00000004   0x6C88             LDR      R0,[R1, #+72]
+   \   00000006   0x6800             LDR      R0,[R0, #+0]
+   \   00000008   0x6909             LDR      R1,[R1, #+16]
+   \   0000000A   0x.... 0x....      BL       __aeabi_cfcmple
+   \   0000000E   0xD201             BCS      ??MC_Comparefloat_0
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0xBD02             POP      {R1,PC}
+   \                     ??MC_Comparefloat_0: (+1)
+   \   00000014   0x2001             MOVS     R0,#+1
+   \   00000016   0xBD02             POP      {R1,PC}          ;; return
+    736          }
+    737          #endif
+    738          
+    739          /**************************************************************************//*!
+    740          *
+    741          * @brief    API: Recorder worker routine - can be called from application's timer ISR
+    742          *
+    743          *
+    744          * This returns quickly if recorder is not running, otherwise it calls quite lengthy 
+    745          * recorder routine which does all the recorder work (sampling, triggering)
+    746          *
+    747          ******************************************************************************/
+    748          
+    749          #if defined(MC_PLATFORM_56F8xxx) || defined(MC_PLATFORM_56F8xx)
+    750          #pragma interrupt called
+    751          #endif
+    752          
+
+   \                                 In section .text, align 2, keep-with-next
+    753          void MC_Recorder(void)
+    754          {
+    755              /* recorder not active */
+    756              if(!pcm_wRecFlags.flg.bIsRunning)
+   \                     MC_Recorder: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable16_2
+   \   00000002   0x68C0             LDR      R0,[R0, #+12]
+   \   00000004   0x0781             LSLS     R1,R0,#+30
+   \   00000006   0x0FC9             LSRS     R1,R1,#+31
+   \   00000008   0xD100             BNE      ??MC_Recorder_0
+   \   0000000A   0x4770             BX       LR
+    757              {
+    758                  return ;
+    759              }
+    760              
+    761              /* do the hard work      */
+    762              MC_Recorder2();
+   \                     ??MC_Recorder_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x.... 0x....      BL       MC_Recorder2
+    763          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+    764          
+    765          /**************************************************************************//*!
+    766          *
+    767          * @brief    Recorder function called when recorder is active
+    768          *
+    769          ******************************************************************************/
+    770          
+    771          #if defined(MC_PLATFORM_56F8xxx) || defined(MC_PLATFORM_56F8xx)
+    772          #pragma interrupt called
+    773          #endif
+    774          
+
+   \                                 In section .text, align 2, keep-with-next
+    775          static void MC_Recorder2(void)
+    776          {
+   \                     MC_Recorder2: (+1)
+   \   00000000   0xB5B0             PUSH     {R4,R5,R7,LR}
+    777              MC_SIZE8 sz;
+    778              MC_BOOL cmp;
+    779              MC_U8 i;
+    780          
+    781          #if (MC_REC_STATIC_DIVISOR) != 1
+    782              /* skip this call ? */
+    783              if(pcm_wRecTimeDivCtr)
+   \   00000002   0x....             LDR      R4,??DataTable16_2
+   \   00000004   0x8B60             LDRH     R0,[R4, #+26]
+   \   00000006   0x0001             MOVS     R1,R0
+   \   00000008   0xD002             BEQ      ??MC_Recorder2_0
+    784              {
+    785                  /* maybe next time... */
+    786                  pcm_wRecTimeDivCtr--;
+   \   0000000A   0x1E40             SUBS     R0,R0,#+1
+   \   0000000C   0x8360             STRH     R0,[R4, #+26]
+    787                  return;
+   \   0000000E   0xBDB0             POP      {R4,R5,R7,PC}
+    788              }
+    789              
+    790              /* re-initialize divider */
+    791          #if (MC_REC_STATIC_DIVISOR) == 0
+    792              pcm_wRecTimeDivCtr = pcm_wRecTimeDiv;
+   \                     ??MC_Recorder2_0: (+1)
+   \   00000010   0x8B20             LDRH     R0,[R4, #+24]
+   \   00000012   0x8360             STRH     R0,[R4, #+26]
+    793          #else 
+    794              pcm_wRecTimeDivCtr = MC_REC_STATIC_DIVISOR;
+    795          #endif /* (MC_REC_STATIC_DIVISOR) == 0 */
+    796          #endif /* (MC_REC_STATIC_DIVISOR) != 1 */
+    797          
+    798              /* take snapshot of variable values */
+    799              for (i=0U; i<pcm_nRecVarCount; i++)
+   \   00000014   0x2500             MOVS     R5,#+0
+   \   00000016   0xE00C             B        ??MC_Recorder2_1
+    800              {
+    801                  sz = pcm_pRecVarSize[i];
+   \                     ??MC_Recorder2_2: (+1)
+   \   00000018   0x1961             ADDS     R1,R4,R5
+   \   0000001A   0x790F             LDRB     R7,[R1, #+4]
+    802                  MC_CopyMemory(pcm_dwRecWritePtr, pcm_pRecVarAddr[i], sz);
+   \   0000001C   0x003A             MOVS     R2,R7
+   \   0000001E   0x00A9             LSLS     R1,R5,#+2
+   \   00000020   0x1861             ADDS     R1,R4,R1
+   \   00000022   0x6A09             LDR      R1,[R1, #+32]
+   \   00000024   0x.... 0x....      BL       MC_CopyMemory
+    803                  sz /= MC_CFG_BUS_WIDTH;
+    804                  pcm_dwRecWritePtr += sz;
+   \   00000028   0x6C20             LDR      R0,[R4, #+64]
+   \   0000002A   0x19C0             ADDS     R0,R0,R7
+   \   0000002C   0x6420             STR      R0,[R4, #+64]
+    805              }
+   \   0000002E   0x1C6D             ADDS     R5,R5,#+1
+   \   00000030   0xB2ED             UXTB     R5,R5
+   \                     ??MC_Recorder2_1: (+1)
+   \   00000032   0x6C20             LDR      R0,[R4, #+64]
+   \   00000034   0x7861             LDRB     R1,[R4, #+1]
+   \   00000036   0x428D             CMP      R5,R1
+   \   00000038   0xDBEE             BLT      ??MC_Recorder2_2
+    806              
+    807              /* another sample taken (startIx "points" after sample just taken) */
+    808              /* i.e. it points to the oldest sample */
+    809              pcm_wRecBuffStartIx++;
+   \   0000003A   0x8BE1             LDRH     R1,[R4, #+30]
+   \   0000003C   0x1C49             ADDS     R1,R1,#+1
+    810              
+    811              /* wrap around (circular buffer) ? */
+    812              if(pcm_dwRecWritePtr >= pcm_dwRecEndBuffPtr)
+   \   0000003E   0x6C62             LDR      R2,[R4, #+68]
+   \   00000040   0x4290             CMP      R0,R2
+   \   00000042   0xD306             BCC      ??MC_Recorder2_3
+    813              {   
+    814                  pcm_dwRecWritePtr = pcm_nRecBuffAddr;
+   \   00000044   0x6CE0             LDR      R0,[R4, #+76]
+   \   00000046   0x6420             STR      R0,[R4, #+64]
+    815                  pcm_wRecFlags.flg.bInvirginCycle = 0U;
+   \   00000048   0x68E0             LDR      R0,[R4, #+12]
+   \   0000004A   0x2108             MOVS     R1,#+8
+   \   0000004C   0x4388             BICS     R0,R0,R1
+   \   0000004E   0x60E0             STR      R0,[R4, #+12]
+    816                  pcm_wRecBuffStartIx = 0U;
+   \   00000050   0x2100             MOVS     R1,#+0
+   \                     ??MC_Recorder2_3: (+1)
+   \   00000052   0x83E1             STRH     R1,[R4, #+30]
+    817              }
+    818          
+    819              /* no trigger testing in virgin cycle */
+    820              if(pcm_wRecFlags.flg.bInvirginCycle)
+   \   00000054   0x2501             MOVS     R5,#+1
+   \   00000056   0x68E0             LDR      R0,[R4, #+12]
+   \   00000058   0x08C0             LSRS     R0,R0,#+3
+   \   0000005A   0x4028             ANDS     R0,R0,R5
+   \   0000005C   0xD12F             BNE      ??MC_Recorder2_4
+    821              {
+    822                  return;
+    823              }
+    824              
+    825              /* test trigger condition if still running */
+    826              if(!pcm_wRecFlags.flg.bIsStopping && pcm_pCompareFunc != NULL)
+   \   0000005E   0x68E0             LDR      R0,[R4, #+12]
+   \   00000060   0x0880             LSRS     R0,R0,#+2
+   \   00000062   0x4028             ANDS     R0,R0,R5
+   \   00000064   0xD10C             BNE      ??MC_Recorder2_5
+   \   00000066   0x6D20             LDR      R0,[R4, #+80]
+   \   00000068   0x0001             MOVS     R1,R0
+   \   0000006A   0xD009             BEQ      ??MC_Recorder2_5
+    827              {
+    828                  /* compare trigger threshold */
+    829                  cmp = pcm_pCompareFunc();
+   \   0000006C   0x4780             BLX      R0
+    830                  
+    831                  /* negated logic (falling-edge) ? */
+    832                  if(pcm_nRecTriggerMode == 2U)
+   \   0000006E   0x7821             LDRB     R1,[R4, #+0]
+   \   00000070   0x2902             CMP      R1,#+2
+   \   00000072   0xD111             BNE      ??MC_Recorder2_6
+    833                  {
+    834                      cmp = (MC_BOOL) !cmp;
+   \   00000074   0x2800             CMP      R0,#+0
+   \   00000076   0xD011             BEQ      ??MC_Recorder2_7
+    835                  }
+    836                  
+    837                  /* above threshold ? */
+    838                  if(cmp)
+    839                  {
+    840                      /* were we at least once below threshold ? */
+    841                      if(pcm_wRecFlags.flg.bTrgCrossActive)
+    842                      {
+    843                          /* EDGE TRIGGER ! */
+    844                          MC_TriggerRec();
+    845                      }
+    846                  }
+    847                  else
+    848                  {
+    849                      /* we got bellow threshold, now wait for being above threshold */
+    850                      pcm_wRecFlags.flg.bTrgCrossActive = 1U;
+   \                     ??MC_Recorder2_8: (+1)
+   \   00000078   0x68E0             LDR      R0,[R4, #+12]
+   \   0000007A   0x2110             MOVS     R1,#+16
+   \   0000007C   0x4301             ORRS     R1,R1,R0
+   \   0000007E   0x60E1             STR      R1,[R4, #+12]
+    851                  }
+    852              }
+    853              
+    854              /* in stopping mode ? (note that this bit might have been set just above!) */
+    855              if(pcm_wRecFlags.flg.bIsStopping)
+   \                     ??MC_Recorder2_5: (+1)
+   \   00000080   0x68E0             LDR      R0,[R4, #+12]
+   \   00000082   0x0880             LSRS     R0,R0,#+2
+   \   00000084   0x4005             ANDS     R5,R5,R0
+   \   00000086   0xD01A             BEQ      ??MC_Recorder2_4
+    856              {
+    857                  /* count down post-trigger samples expired ? */
+    858                  if(!pcm_wStoprecCountDown)
+   \   00000088   0x8BA0             LDRH     R0,[R4, #+28]
+   \   0000008A   0x0001             MOVS     R1,R0
+   \   0000008C   0xD115             BNE      ??MC_Recorder2_9
+    859                  {
+    860                      /* STOP RECORDER */
+    861                      pcm_wRecFlags.flg.bIsRunning = 0U;
+   \   0000008E   0x68E0             LDR      R0,[R4, #+12]
+   \   00000090   0x2102             MOVS     R1,#+2
+   \   00000092   0x4388             BICS     R0,R0,R1
+   \   00000094   0x60E0             STR      R0,[R4, #+12]
+    862                      return;
+   \   00000096   0xBDB0             POP      {R4,R5,R7,PC}
+    863                  }
+   \                     ??MC_Recorder2_6: (+1)
+   \   00000098   0x2800             CMP      R0,#+0
+   \   0000009A   0xD0ED             BEQ      ??MC_Recorder2_8
+   \                     ??MC_Recorder2_7: (+1)
+   \   0000009C   0x68E0             LDR      R0,[R4, #+12]
+   \   0000009E   0x0900             LSRS     R0,R0,#+4
+   \   000000A0   0x4028             ANDS     R0,R0,R5
+   \   000000A2   0xD0ED             BEQ      ??MC_Recorder2_5
+   \   000000A4   0x68E0             LDR      R0,[R4, #+12]
+   \   000000A6   0x0880             LSRS     R0,R0,#+2
+   \   000000A8   0x4028             ANDS     R0,R0,R5
+   \   000000AA   0xD1E9             BNE      ??MC_Recorder2_5
+   \   000000AC   0x68E0             LDR      R0,[R4, #+12]
+   \   000000AE   0x2104             MOVS     R1,#+4
+   \   000000B0   0x4301             ORRS     R1,R1,R0
+   \   000000B2   0x60E1             STR      R1,[R4, #+12]
+   \   000000B4   0x8AE0             LDRH     R0,[R4, #+22]
+   \   000000B6   0x83A0             STRH     R0,[R4, #+28]
+   \   000000B8   0xE7E2             B        ??MC_Recorder2_5
+    864                  
+    865                  /* perhaps next time */
+    866                  pcm_wStoprecCountDown--;
+   \                     ??MC_Recorder2_9: (+1)
+   \   000000BA   0x1E40             SUBS     R0,R0,#+1
+   \   000000BC   0x83A0             STRH     R0,[R4, #+28]
+    867              }
+    868          }
+   \                     ??MC_Recorder2_4: (+1)
+   \   000000BE   0xBDB0             POP      {R4,R5,R7,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13:
+   \   00000000   0x........         DC32     pcm_nRecTriggerMode
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15:
+   \   00000000   0x........         DC32     MC_Comparefloat
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_1:
+   \   00000000   0x........         DC32     MC_Compare8S
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_2:
+   \   00000000   0x........         DC32     MC_Compare8U
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_3:
+   \   00000000   0x........         DC32     MC_Compare16S
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_4:
+   \   00000000   0x........         DC32     MC_Compare16U
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_5:
+   \   00000000   0x........         DC32     MC_Compare32S
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_6:
+   \   00000000   0x........         DC32     MC_Compare32U
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable16:
+   \   00000000   0x00001771         DC32     0x1771
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable16_1:
+   \   00000000   0x00001770         DC32     0x1770
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable16_2:
+   \   00000000   0x........         DC32     pcm_nRecTriggerMode
+    869          
+    870          #endif /* (MC_USE_FASTREC) == 0 */
+    871          
+    872          #else /* MC_USE_RECORDER && (!MC_DISABLE) */
+    873          
+    874          /* use void recorder API functions */
+    875          void MC_Recorder(void)
+    876          { 
+    877          }
+    878          
+    879          void MC_TriggerRec(void)
+    880          { 
+    881          }
+    882          
+    883          void MC_SetUpRecBuff(MC_ADDR pBuffer, MC_SIZE wBuffSize)
+    884          { 
+    885              MC_UNUSED(pBuffer);
+    886              MC_UNUSED(wBuffSize);
+    887          }
+    888          
+    889          /*lint -efile(766, mc_protocol.h) include file is not used in this case */
+    890          
+    891          #endif /* MC_USE_RECORDER && (!MC_DISABLE) */
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   MC_Compare16S
+       0   MC_Compare16U
+       0   MC_Compare32S
+       0   MC_Compare32U
+       0   MC_Compare8S
+       0   MC_Compare8U
+       8   MC_Comparefloat
+         8 __aeabi_cfcmple
+      16   MC_GetRecBuff
+        16   -> MC_AddressToBuffer
+        16   -> MC_CopyToBuffer
+       0   MC_GetRecBuffSize
+       0   MC_GetRecStatus
+       0   MC_InitRec
+       4   MC_IsInRecBuffer
+       8   MC_Recorder
+         8   -> MC_Recorder2
+      16   MC_Recorder2
+        16   -- Indirect call
+        16   -> MC_CopyMemory
+      24   MC_SetUpRec
+        24   -> MC_AddressFromBuffer
+        24   -> MC_CopyFromBuffer
+       0   MC_SetUpRecBuff
+       4   MC_StartRec
+       0   MC_StopRec
+       0   MC_TriggerRec
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable13
+       4  ??DataTable15
+       4  ??DataTable15_1
+       4  ??DataTable15_2
+       4  ??DataTable15_3
+       4  ??DataTable15_4
+       4  ??DataTable15_5
+       4  ??DataTable15_6
+       4  ??DataTable16
+       4  ??DataTable16_1
+       4  ??DataTable16_2
+      10  ?Subroutine0
+      24  MC_Compare16S
+       8  MC_Compare16U
+      20  MC_Compare32S
+      12  MC_Compare32U
+      24  MC_Compare8S
+      10  MC_Compare8U
+      24  MC_Comparefloat
+      66  MC_GetRecBuff
+       4  MC_GetRecBuffSize
+      28  MC_GetRecStatus
+      14  MC_InitRec
+      32  MC_IsInRecBuffer
+      20  MC_Recorder
+     192  MC_Recorder2
+     262  MC_SetUpRec
+       2  MC_SetUpRecBuff
+      74  MC_StartRec
+      54  MC_StopRec
+      24  MC_TriggerRec
+    6084  pcm_nRecTriggerMode
+          pcm_nRecVarCount
+          pcm_nTrgVarSize
+          pcm_bTrgVarSigned
+          pcm_pRecVarSize
+          pcm_wRecFlags
+          pcm_uTrgThreshold
+          pcm_wRecTotalSmps
+          pcm_wRecPostTrigger
+          pcm_wRecTimeDiv
+          pcm_wRecTimeDivCtr
+          pcm_wStoprecCountDown
+          pcm_wRecBuffStartIx
+          pcm_pRecVarAddr
+          pcm_dwRecWritePtr
+          pcm_dwRecEndBuffPtr
+          pcm_nTrgVarAddr
+          pcm_nRecBuffAddr
+          pcm_pCompareFunc
+          pcm_pOwnRecBuffer
+
+ 
+ 6 084 bytes in section .bss
+   948 bytes in section .text
+ 
+   948 bytes of CODE memory
+ 6 084 bytes of DATA memory
+
+Errors: none
+Warnings: none

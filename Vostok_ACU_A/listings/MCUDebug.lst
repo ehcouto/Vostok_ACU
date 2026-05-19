@@ -1,0 +1,816 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:23
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/ProjectSpecific/Application/all/MCUDebug/MCUDebug.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\MCUDebug.lst -o
+#        obj\MCUDebug.obj
+#        source/ProjectSpecific/Application/all/MCUDebug/MCUDebug.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\MCUDebug.lst
+#    Object file  =  obj\MCUDebug.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\ProjectSpecific\Application\all\MCUDebug\MCUDebug.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Basic description of file contents
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8           *  @section    Applicable_Documents
+      9           *					List here all the applicable documents if needed. <tr>	
+     10           *
+     11           *  $Header: $
+     12           *
+     13           *  @copyright  Copyright 2022-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     14           */
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          //---------------------------------------------------------------------------------------------------------------------
+     17          
+     18          
+     19          //-------------------------------------- Include Files ----------------------------------------------------------------
+     20          #include "C_Extensions.h"
+     21          #include "MCUDebug.h"
+     22          #include "Mci.h"
+     23          #include "Mcl.h"
+     24          #include "Gpio.h"
+     25          #include "Micro.h"
+     26          
+     27          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     28          #ifndef SIL_MODE
+     29          	#define SIL_MODE    DISABLED
+     30          #endif
+     31          
+     32          #ifdef TIME_MEASUREMENT
+     33          #ifdef UC_STM32G0X_H_
+     34          #define TIMER_RESOLUTION_MHZ    64
+     35          #endif
+     36          #ifdef UC_RX130_H
+     37          #define TIMER_RESOLUTION_MHZ    32
+     38          #endif
+     39          
+     40          uint16 Measured_Time_US;
+     41          #endif
+     42          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     43          #if (SIL_MODE == ENABLED)
+     44          static uint8 Slow_Handler_Counter;
+     45          
+     46          static uint8 Dbg_Control_Mode;
+     47          static uint8 Dbg_MciSlfac_Last_Failure;
+     48          static uint8 Dbg_Failure_State;
+     49          static uint16 Dbg_Mcl_Main_Counter;
+     50          static uint8 Dbg_MciSlfac_Wash_Motor_Type;
+     51          static sint16 Dbg_bemf_volt_tmp;
+     52          static uint8 My_GetDigital_0;
+     53          static uint8 My_GetDigital_1;
+     54          static uint8 My_GetDigital_2;
+     55          static uint8 My_GetDigital_3;
+     56          
+     57          static sint32 My_GetAnalog_0;
+     58          static sint32 My_GetAnalog_1;
+     59          static sint32 My_GetAnalog_2;
+     60          
+     61          static uint8 Slow_Handler_Counter;
+     62          #endif
+     63          
+     64          #ifdef ENABLE_PILOT_MCI
+     65          static uint8 Pilot_Relay_Drive_Status;
+     66          static uint32 Pilot_Relay_Timer;
+     67          static BOOL_TYPE Pilot_Relay_Request;
+     68          
+     69          static void PilotRelay(void);
+     70          
+     71          //! Pilot relay port/pin defines
+     72          #define PILOT_RELAY_PORT  PORTB  //!< Use for toggling pilot relay output
+     73          #define PILOT_RELAY_PIN   14     //!< Use for toggling pilot relay output
+     74          
+     75          //! Pilot relay port/pin defines
+     76          #define PILOT_DRIVE_PORT  PORTC  //!< Use for toggling pilot relay output
+     77          #define PILOT_DRIVE_PIN   2     //!< Use for toggling pilot relay output
+     78          
+     79          //! Pilot relay delay periods defines
+     80          #define PILOT_RELAY_ENABLED_TIME        4 // @ 4000 Hz --> 1 ms
+     81          #define PILOT_RELAY_DISABLED_TIME     4 // @ 4000 Hz --> 1 ms
+     82          
+     83          static sint16 BD_MotorControl;
+     84          #endif
+     85          
+     86          #ifdef MCI_AUTOTESTING
+     87          static uint32 My_Mcislfac_Fault;
+     88          #endif
+     89          
+     90          #ifdef COMPILE_4_SIMULINK
+     91          	#define INITIALIZE_WASH_MOTOR
+     92          #endif
+     93          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     94          
+     95          //=====================================================================================================================
+     96          //-------------------------------------- Public Functions -------------------------------------------------------------
+     97          //=====================================================================================================================
+     98          
+     99          //---------------------------------------------------------------------------------------------------------------------
+    100          /**
+    101           *  @brief      It Initializes the module MCUDebug and its variables
+    102           *
+    103           */
+
+   \                                 In section .text, align 2, keep-with-next
+    104          void MCUDebug__Initialize(void)
+    105          {
+    106          #if (MCL_DEBUG_MODE == ENABLED)
+    107          #ifdef INITIALIZE_WASH_MOTOR
+    108          	Mci__SetWashMotorType(WM_SINGLE_SPEED_SYNCH_SPH_AW);
+    109          #endif
+    110          
+    111          #ifdef ENABLE_PILOT_MCI
+    112              Pilot_Relay_Drive_Status = DISABLED;
+    113              Pilot_Relay_Timer = 0;
+    114              Pilot_Relay_Request = FALSE;
+    115          
+    116              Gpio__PinConfig(PILOT_RELAY_PORT,PILOT_RELAY_PIN,OUTPUT_PUSHPULL);
+    117              Gpio__PinConfig(PILOT_DRIVE_PORT,PILOT_DRIVE_PIN,OUTPUT_PUSHPULL);
+    118          
+    119              // Default state of the pin
+    120              GPIO__PIN_CLR(PILOT_RELAY_PORT, PILOT_RELAY_PIN); //Pilot Relay OFF
+    121              GPIO__PIN_CLR(PILOT_DRIVE_PORT, PILOT_DRIVE_PIN); //Disable Pilot
+    122          
+    123              BD_MotorControl = 0;
+    124          #endif
+    125          
+    126          #ifdef MCI_AUTOTESTING
+    127              My_Mcislfac_Fault = 0;
+    128          #endif
+    129          
+    130          #ifdef TIME_MEASUREMENT
+    131          #ifdef UC_STM32G0X_H_
+    132          	    TIM_DEF_TYPE * tim;
+    133          	    tim = (TIM_DEF_TYPE *) TIM7_BASE;
+    134          
+    135          	    uint32 bus_freq;
+    136          	    bus_freq = Micro__GetClock()->PCLK1_Frequency;
+    137          
+    138          	    // 1. If the APB prescaler is set to 1, TIMPCLK frequency is equal to PCLK frequency.
+    139          	    // 2. Otherwise, the TIMPCLK frequency is set to twice the PCLK frequency.
+    140          	    if ((RCC.CFGR & RCC_CFGR_PPRE) != 0)
+    141          	    {
+    142          	        bus_freq = bus_freq * 2;
+    143          	    }
+    144          
+    145          	    //Enable the clock for TIM7 module
+    146          	    RCC.APBENR1 |= RCC_APBENR1_TIM7EN;
+    147          
+    148          	    tim->ARR = (uint16)(0xFFFF);
+    149          	    tim->PSC = (uint16)((bus_freq / (TIMER_RESOLUTION_MHZ*1000000)) - 1);
+    150          
+    151          
+    152          	    //Up-counter , edge-aligned
+    153          	    tim->CR1 = (uint16)0x0000; //Clear CR1 Register
+    154          	    tim->CR1  |= TIM_CR1_ARPE; //Enable the auto reload feature
+    155          	    tim->CR1  |= TIM_CR1_CEN;  //Enable the Timer
+    156          #endif
+    157          #ifdef UC_RX130_H
+    158          	    MSTP_MTU5 = 0;                            /*lint !e923 cast from int to pointer */
+    159          	    /*
+    160          	     *   PCLK/1   (32Mhz)   ----   0x00
+    161          	     *   PCLK/4   (16Mhz)   ----   0x01
+    162          	     *   PCLK/16  (2Mhz)    ----   0x02
+    163          	     *   PCLK/64  (500khz)  ----   0x03
+    164          	     */
+    165          	    MTU5.TCRU.BYTE        = 0x00;               //Rising Edge + PCLK (32Mhz) + No Clearing.
+    166          	    MTU5.TSTR.BIT.CSTU5   = 1;                  /*lint !e923 cast from int to pointer */
+    167          #endif
+    168          #endif
+    169          
+    170          #if (SIL_MODE == ENABLED)
+    171          	    Slow_Handler_Counter = 125;
+    172          #endif
+    173          #endif
+    174          }
+   \                     MCUDebug__Initialize: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    175          
+    176          
+    177          
+    178          
+    179          //---------------------------------------------------------------------------------------------------------------------
+    180          /**
+    181           *  @brief      ZC Handler
+    182           *
+    183           */
+
+   \                                 In section .text, align 2, keep-with-next
+    184          void MCUDebug_ZeroCross(void)
+    185          {
+    186          
+    187          }
+   \                     MCUDebug_ZeroCross: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    188          
+    189          
+    190          
+    191          
+    192          
+    193          //---------------------------------------------------------------------------------------------------------------------
+    194          /**
+    195           *  @brief      Slow Handler
+    196           *
+    197           */
+
+   \                                 In section .text, align 2, keep-with-next
+    198          void MCUDebug_SlowHandler(void)
+    199          {
+    200          #ifdef ENABLE_PILOT_MCI
+    201          	if(BD_MotorControl == 1)
+    202          	{
+    203          		if(MCI_RUN(MOTOR0) == MCI_CMD_ACCEPTED)
+    204          		{
+    205          			//Pilot_Relay_Request = TRUE;
+    206          			BD_MotorControl = -1;
+    207          		}
+    208          	}
+    209          
+    210          	if(BD_MotorControl == 2)
+    211          	{
+    212          		if(MCI_STOP(MOTOR0) == MCI_CMD_ACCEPTED)
+    213          		{
+    214          			//Pilot_Relay_Request = TRUE;
+    215          			BD_MotorControl = -2;
+    216          		}
+    217          	}
+    218          
+    219          	if(BD_MotorControl == 127)
+    220          	{
+    221          		BD_MotorControl = -127;
+    222          		Mci__SetWashMotorType(WM_SINGLE_SPEED_SYNCH_SPH_AW);
+    223          	}
+    224          #endif
+    225          }
+   \                     MCUDebug_SlowHandler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    226          
+    227          
+    228          
+    229          
+    230          //---------------------------------------------------------------------------------------------------------------------
+    231          /**
+    232           *  @brief      MC Handler
+    233           *
+    234           */
+
+   \                                 In section .text, align 2, keep-with-next
+    235          void MCUDebug_MCHandler(void)
+    236          {
+    237          #ifdef ENABLE_PILOT_MCI
+    238          	PilotRelay();
+    239          #endif
+    240          
+    241          #ifdef MCI_AUTOTESTING
+    242          	My_Mcislfac_Fault = Mcl__GetErrorList();
+    243          #endif
+    244          
+    245          #if (SIL_MODE == ENABLED)
+    246          
+    247          	Slow_Handler_Counter++;
+    248          	if(Slow_Handler_Counter >= 125) //25ms at 5000Hz
+    249          	{
+    250          		Slow_Handler_Counter = 0;
+    251          		Mci__SlowHandler();
+    252          	}
+    253          
+    254          	Dbg_Control_Mode = (uint8)Mci__GetAnalog(MOTOR0, MCI_AI_INTERNAL_MCI_STATE);
+    255          	Dbg_MciSlfac_Last_Failure = (uint8)Mci__GetErrorList(MOTOR0);
+    256          	Dbg_Failure_State = (uint8)Mcl__GetDataSIL(MCL_GD_FAILURE_STATE);
+    257          	Dbg_bemf_volt_tmp = (sint16)Mcl__GetDataSIL(MCL_GD_BACK_EMF);
+    258          	Dbg_Mcl_Main_Counter = (uint16)Mcl__GetDataSIL(MCL_GD_MAIN_COUNTER);
+    259          	Dbg_MciSlfac_Wash_Motor_Type = (uint8)Mcl__GetDataSIL(MCL_GD_MOTOR_TYPE);
+    260          
+    261          	//Digital Channels
+    262          	My_GetDigital_0 = Mci__GetDigital(MOTOR0,MCI_DI_MOTOR_STOP);
+    263          	My_GetDigital_1 = Mci__GetDigital(MOTOR0,MCI_DI_REACHED_TARGET_SPEED);
+    264          	My_GetDigital_2 = Mci__GetDigital(MOTOR0,MCI_DI_IDLE);
+    265          	My_GetDigital_3 = Mci__GetDigital(MOTOR0,MCI_DI_MOTOR_RUNNING);
+    266          
+    267          	// Analog Channels
+    268          	My_GetAnalog_0 = Mci__GetAnalog(MOTOR0,MCI_AI_CURR_PHASE_P2P);
+    269          	My_GetAnalog_1 = Mci__GetAnalog(MOTOR0,MCI_AI_VOLTAGE_PHASE_P2P);
+    270          	My_GetAnalog_2 = Mci__GetAnalog(MOTOR0,MCI_AI_LOAD_TORQUE_S16);
+    271          #endif
+    272          }
+   \                     MCUDebug_MCHandler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    273          
+    274          
+    275          #ifdef ENABLE_PILOT_MCI
+    276          void PilotRelay(void)
+    277          {
+    278              if (Pilot_Relay_Request)
+    279              {
+    280              	GPIO__PIN_SET(PILOT_DRIVE_PORT,PILOT_DRIVE_PIN); //Enable Pilot
+    281                  Pilot_Relay_Timer++;
+    282          
+    283                  //Pilot Relay ON
+    284                  if (Pilot_Relay_Drive_Status == DISABLED)
+    285                  {
+    286                      // time to switch ON?
+    287                      if (Pilot_Relay_Timer >= PILOT_RELAY_DISABLED_TIME)
+    288                      {
+    289                          GPIO__PIN_SET(PILOT_RELAY_PORT, PILOT_RELAY_PIN);
+    290                          Pilot_Relay_Drive_Status = ENABLED;
+    291                          Pilot_Relay_Timer = 0;
+    292                      }
+    293                  }
+    294                  else
+    295                  {
+    296                      // time to switch OFF?
+    297                      if (Pilot_Relay_Timer >= PILOT_RELAY_ENABLED_TIME)
+    298                      {
+    299                          GPIO__PIN_CLR(PILOT_RELAY_PORT, PILOT_RELAY_PIN);
+    300                          Pilot_Relay_Drive_Status = DISABLED;
+    301                          Pilot_Relay_Timer = 0;
+    302                      }
+    303                  }
+    304              }
+    305              else
+    306              {
+    307              	if(Pilot_Relay_Drive_Status == ENABLED)
+    308              	{
+    309              		Pilot_Relay_Timer = 0;
+    310              		GPIO__PIN_CLR(PILOT_RELAY_PORT, PILOT_RELAY_PIN);
+    311              		GPIO__PIN_CLR(PILOT_DRIVE_PORT,PILOT_DRIVE_PIN);
+    312              		Pilot_Relay_Drive_Status = DISABLED;
+    313              	}
+    314              }
+    315          }
+    316          #endif
+    317          
+    318          
+    319          
+    320          //=====================================================================================================================
+    321          //-------------------------------------- Private Functions ------------------------------------------------------------
+    322          //=====================================================================================================================
+    323          
+    324          #ifdef TIME_MEASUREMENT
+    325          
+    326          uint16 Measured_Time_Max;
+    327          uint16 Measured_Time_Temp;
+    328          uint16 Measured_Time_Counter;
+    329          
+    330          void MCUDebug__MeasTimeSlot(void)
+    331          {
+    332          #ifdef UC_STM32G0X_H_
+    333          	    TIM_DEF_TYPE * tim;
+    334          	    tim = (TIM_DEF_TYPE *) TIM7_BASE;
+    335          
+    336          	    uint32 get_time;
+    337          
+    338          	    get_time = (uint32)tim->CNT;
+    339          
+    340          	    Measured_Time_US = (uint16)((get_time)/TIMER_RESOLUTION_MHZ);
+    341          	    tim->CNT = 0;
+    342          #endif
+    343          #ifdef UC_RX130_H
+    344          	    uint32 get_time;
+    345          
+    346          	    get_time = (uint32)MTU5.TCNTU;
+    347          
+    348          	    Measured_Time_US = (uint16)((get_time+(TIMER_RESOLUTION_MHZ/2))/TIMER_RESOLUTION_MHZ);
+    349          	    MTU5.TCNTU = 0;
+    350          #endif
+    351          }
+    352          
+    353          
+    354          
+    355          void MCUDebug__MeasTimeReset(void)
+    356          {
+    357          #ifdef UC_STM32G0X_H_
+    358          	    TIM_DEF_TYPE * tim;
+    359          	    tim = (TIM_DEF_TYPE *) TIM7_BASE;
+    360          
+    361          	    tim->CNT = 0;
+    362          #endif
+    363          
+    364          #ifdef UC_RX130_H
+    365          	    MTU5.TCNTU = 0;
+    366          #endif
+    367          }
+    368          
+    369          
+    370          
+    371          void MCUDebug__MeasTimeSet(void)
+    372          {
+    373          #ifdef UC_STM32G0X_H_
+    374          	    TIM_DEF_TYPE * tim;
+    375          	    tim = (TIM_DEF_TYPE *) TIM7_BASE;
+    376          
+    377          	    uint32 get_time;
+    378          
+    379          	    get_time = (uint32)tim->CNT;
+    380          
+    381          	    Measured_Time_US = (uint16)((uint32)(get_time+32)/TIMER_RESOLUTION_MHZ);
+    382          	    tim->CNT = 0;
+    383          
+    384          	    if(Measured_Time_Temp < Measured_Time_US)
+    385          	    {
+    386          	    	Measured_Time_Temp = Measured_Time_US;
+    387          	    }
+    388          
+    389          	    Measured_Time_Counter++;
+    390          	    if(Measured_Time_Counter >= 5000)
+    391          	    {
+    392          	    	Measured_Time_Counter = 0;
+    393          	    	Measured_Time_Max = Measured_Time_Temp;
+    394          	    	Measured_Time_Temp = 0;
+    395          	    }
+    396          #endif
+    397          
+    398          #ifdef UC_RX130_H
+    399          	    uint32 get_time;
+    400          
+    401          	    get_time = (uint32)MTU5.TCNTU;
+    402          
+    403          	    Measured_Time_US = (uint16)((uint32)(get_time)/TIMER_RESOLUTION_MHZ);
+    404          	    MTU5.TCNTU = 0;
+    405          
+    406          	    if(Measured_Time_Temp < Measured_Time_US)
+    407          	    {
+    408          	    	Measured_Time_Temp = Measured_Time_US;
+    409          	    }
+    410          
+    411          	    Measured_Time_Counter++;
+    412          	    if(Measured_Time_Counter >= 5000)
+    413          	    {
+    414          	    	Measured_Time_Counter = 0;
+    415          	    	Measured_Time_Max = Measured_Time_Temp;
+    416          	    	Measured_Time_Temp = 0;
+    417          	    }
+    418          #endif
+    419          }
+    420          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   MCUDebug_MCHandler
+       0   MCUDebug_SlowHandler
+       0   MCUDebug_ZeroCross
+       0   MCUDebug__Initialize
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       2  MCUDebug_MCHandler
+       2  MCUDebug_SlowHandler
+       2  MCUDebug_ZeroCross
+       2  MCUDebug__Initialize
+
+ 
+ 8 bytes in section .text
+ 
+ 8 bytes of CODE memory
+
+Errors: none
+Warnings: none

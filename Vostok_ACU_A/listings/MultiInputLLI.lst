@@ -1,0 +1,711 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:27
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/MultiInputLLI/MultiInputLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\MultiInputLLI.lst -o
+#        obj\MultiInputLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/MultiInputLLI/MultiInputLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\MultiInputLLI.lst
+#    Object file  =  obj\MultiInputLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\MultiInputLLI\MultiInputLLI.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Low level input that handles inputs from multiple pins on the micro.
+      5           *
+      6           *  @details    Currently the module only supports Digital, Analog and Feedback type low level input types.
+      7           *
+      8           *  $Header: $
+      9           *
+     10           *  @copyright  Copyright 2016-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     11           */
+     12          //---------------------------------------------------------------------------------------------------------------------
+     13          //---------------------------------------------------------------------------------------------------------------------
+     14          
+     15          //-------------------------------------- Include Files ----------------------------------------------------------------
+     16          #include "SystemConfig.h"
+     17          #include "MultiInputLLI.h" 
+     18          
+     19          
+     20          #if (HBL_LLI_NUM_MULTIINPUT > 0)
+     21          #include <string.h>
+     22          
+     23          #if (HBL_LLI_NUM_ANALOG >  0)
+     24              #include "AnalogLLI.h"
+     25          #endif
+     26          
+     27          #if (HBL_LLI_NUM_DIGITAL > 0)
+     28              #include "DigitalLLI.h"
+     29          #endif
+     30          
+     31          #if (HBL_LLI_NUM_FEEDBACK > 0)
+     32              #include "FeedbackLLI.h"
+     33          #endif
+     34          
+     35          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     36          #if (HBL_LLI_NUM_ANALOG >  0)
+     37              #define MULTIINPUT_REGISTERED_LLI_ANALOG 1
+     38          #else
+     39              #define MULTIINPUT_REGISTERED_LLI_ANALOG 0
+     40          #endif
+     41          
+     42          #if (HBL_LLI_NUM_DIGITAL > 0)
+     43              #define MULTIINPUT_REGISTERED_LLI_DIGITAL 1
+     44          #else
+     45              #define MULTIINPUT_REGISTERED_LLI_ANALOG 0
+     46          #endif
+     47          
+     48          #if (HBL_LLI_NUM_FEEDBACK > 0)
+     49              #define MULTIINPUT_REGISTERED_LLI_FEEDBACK 1
+     50          #else
+     51              #define MULTIINPUT_REGISTERED_LLI_FEEDBACK 0
+     52          #endif
+     53          
+     54          //! Defines the number of LLI register definitions that will be supported based on the supported LLIs that are available in the system
+     55          #define MULTIINPUT_NUM_REGISTERED_INPUTS (MULTIINPUT_REGISTERED_LLI_ANALOG + MULTIINPUT_REGISTERED_LLI_DIGITAL + MULTIINPUT_REGISTERED_LLI_FEEDBACK)
+     56          
+     57          //! Maximum number of inputs that can be defined for a MultiInput LLI
+     58          #define MULTIINPUTLLI_MAX_INPUTS   4
+     59          
+     60          //! Definition of parameters taken from GESE used for a MultiInput LLI
+     61          typedef struct
+     62          {
+     63              HBL_LLI_ENUM_TYPE LLI_ID;
+     64              uint8 LLI_Params_Offset;
+     65          }MULTIINPUTLLI_PARAMETERS_TYPE;
+     66          
+     67          //! Definition of module data used to process a MultiInput LLI
+     68          PACKED typedef struct
+     69          {
+     70              HBL_LLI_TYPE LLI_Data[MULTIINPUTLLI_MAX_INPUTS];
+     71              uint8 Num_Of_Inputs;
+     72          }MULTIINPUTLLI_CONFIG_TYPE;
+     73          
+     74          //! Counts the number of MultiInput LLIs that are allocated for use. Used to know when the limitation in the firmware has been reached.
+     75          static uint8 MultiInputLLI_Allocation;
+     76          
+     77          //! Module data used to process a MultiInput LLI
+     78          static MULTIINPUTLLI_CONFIG_TYPE MultiInputLLI_Config[HBL_LLI_NUM_MULTIINPUT];
+     79          
+     80          //! Stores the data related to each input in each MultiInput LLI
+     81          static MULTIINPUTLLI_DATA_TYPE MultiInputLLI_Data[HBL_LLI_NUM_MULTIINPUT][MULTIINPUTLLI_MAX_INPUTS];
+     82          
+     83          //! Definition of the supported LLI register definitions
+     84          static const HBL_LLI_HANDLER_HOOK_TYPE MULTIINPUT_LLI_HANDLERS[MULTIINPUT_NUM_REGISTERED_INPUTS]  = {
+     85                                                                                                                  #if (HBL_LLI_NUM_DIGITAL > 0)
+     86                                                                                                                      {DIGITAL_LLI_REGISTER,  HBL_LLI_DIGITAL}
+     87                                                                                                                  #endif
+     88          
+     89                                                                                                                  #if (HBL_LLI_NUM_ANALOG > 0)
+     90                                                                                                                      ,{ANALOG_LLI_REGISTER,   HBL_LLI_ANALOG}
+     91                                                                                                                  #endif
+     92          
+     93                                                                                                                  #if (HBL_LLI_NUM_FEEDBACK > 0)
+     94                                                                                                                      ,{FEEDBACK_LLI_REGISTER, HBL_LLI_FEEDBACK}
+     95                                                                                                                  #endif
+     96                                                                                                               };
+     97          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     98          
+     99          //=====================================================================================================================
+    100          //-------------------------------------- Public Functions -------------------------------------------------------------
+    101          //=====================================================================================================================
+    102          
+    103          //---------------------------------------------------------------------------------------------------------------------
+    104          /**
+    105           *  @brief	Initializes the module MultiInputLLI and its variables
+    106           */
+    107          void MultiInputLLI__Initialize(void)
+    108          {
+    109              MultiInputLLI_Allocation = 0;
+    110              memset(&MultiInputLLI_Config, 0, sizeof(MultiInputLLI_Config));
+    111              memset(&MultiInputLLI_Data, 0, sizeof(MultiInputLLI_Data));
+    112          }
+    113          
+    114          //---------------------------------------------------------------------------------------------------------------------
+    115          /**
+    116           * @brief   Determines the destination (index) of the data for the LLI.
+    117           * @return  Index to a local buffer where the data will reside.
+    118           */
+    119          uint8 MultiInputLLI__Allocate(void)
+    120          {
+    121              uint8 retval;
+    122              retval = 0xFF;
+    123          
+    124              if (MultiInputLLI_Allocation < HBL_LLI_NUM_MULTIINPUT)
+    125              {
+    126                  retval = MultiInputLLI_Allocation;
+    127                  MultiInputLLI_Allocation++;
+    128              }
+    129          
+    130              return (retval);
+    131          }
+    132          
+    133          //---------------------------------------------------------------------------------------------------------------------
+    134          /**
+    135           * @brief   Initialize an instance of the MultiInput LLI by extracting parameter data and initializing variables.
+    136           * @param   input: data related to the instance of the LLI
+    137           * @param   status: see definition of HBL_LLI_STATUS
+    138           */
+    139          PASS_FAIL_TYPE MultiInputLLI__InitializeInstance(HBL_LLI_TYPE * input)
+    140          {
+    141              PASS_FAIL_TYPE retval;
+    142              MULTIINPUTLLI_PARAMETERS_TYPE * parameters;
+    143              uint8 index;
+    144              uint8 handler_index;
+    145          
+    146              retval = FAIL;
+    147          
+    148              if (input->Data_Index < MultiInputLLI_Allocation)
+    149              {
+    150              	// Adding 2 to skip the header for MultiInputLLI, as the parameters would have to apply to all the involved LLIs
+    151                  parameters = (MULTIINPUTLLI_PARAMETERS_TYPE *)(input->Parameter_Ptr.Data + 2);        //lint !e927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    152          
+    153                  if (input->LLI_ID == HBL_LLI_MULTIINPUT_2)
+    154                  {
+    155                      MultiInputLLI_Config[input->Data_Index].Num_Of_Inputs = 2;
+    156                  }
+    157                  else if (input->LLI_ID == HBL_LLI_MULTIINPUT_3)
+    158                  {
+    159                      MultiInputLLI_Config[input->Data_Index].Num_Of_Inputs = 3;
+    160                  }
+    161                  else if (input->LLI_ID == HBL_LLI_MULTIINPUT_4)
+    162                  {
+    163                      MultiInputLLI_Config[input->Data_Index].Num_Of_Inputs = 4;
+    164                  }
+    165          
+    166                  for (index = 0; index < MultiInputLLI_Config[input->Data_Index].Num_Of_Inputs; index++)
+    167                  {
+    168                      MultiInputLLI_Config[input->Data_Index].LLI_Data[index].LLI_Handler_Index = HBL_INDEX_INVALID;
+    169                      MultiInputLLI_Config[input->Data_Index].LLI_Data[index].Data_Index = HBL_INDEX_INVALID;
+    170          
+    171                      MultiInputLLI_Config[input->Data_Index].LLI_Data[index].LLI_ID = parameters[index].LLI_ID;
+    172                      MultiInputLLI_Config[input->Data_Index].LLI_Data[index].Pin_Ptr = &(input->Pin_Ptr[index]);
+    173          
+    174                      if (parameters[index].LLI_Params_Offset != 0xFF)   // Check for LLI with no parameters
+    175                      {
+    176                      	//NOTE: A board that is both an ACU and HMI cannot support the MultiInputLLI if it uses an LLI with parameters
+    177          #if (SYSTEM_ACU_HANDLING == ENABLED || SYSTEM_ACU_EXPANSION_HANDLING == ENABLED)
+    178                          SettingFile__BasicLoader(SF_PTR_ACU_IO_DEVICE, parameters[index].LLI_Params_Offset, &MultiInputLLI_Config[input->Data_Index].LLI_Data[index].Parameter_Ptr);
+    179          #elif (SYSTEM_HMI_HANDLING == ENABLED || SYSTEM_HMI_EXPANSION_HANDLING == ENABLED)
+    180                          SettingFile__BasicLoader(SF_PTR_UI_IO_DEVICE, parameters[index].LLI_Params_Offset, &MultiInputLLI_Config[input->Data_Index].LLI_Data[index].Parameter_Ptr);
+    181          #endif
+    182                      }
+    183                      else
+    184                      {
+    185                          MultiInputLLI_Config[input->Data_Index].LLI_Data[index].Parameter_Ptr.Data = NULL;
+    186                          MultiInputLLI_Config[input->Data_Index].LLI_Data[index].Parameter_Ptr.Length = 0;
+    187                      }
+    188          
+    189                      MultiInputLLI_Config[input->Data_Index].LLI_Data[index].LLI_Mux = 0;            // Mux not allowed for MultiInput LLI
+    190                      MultiInputLLI_Config[input->Data_Index].LLI_Data[index].LLI_Position = 0x7F;    // Don't care about LLI position for MultiInput LLI
+    191          
+    192                      retval = PASS;
+    193          
+    194                      for (handler_index = 0; handler_index < MULTIINPUT_NUM_REGISTERED_INPUTS; handler_index++)
+    195                      {
+    196                          if (MultiInputLLI_Config[input->Data_Index].LLI_Data[index].LLI_ID == MULTIINPUT_LLI_HANDLERS[handler_index].LLI_ID)
+    197                          {
+    198                              MultiInputLLI_Config[input->Data_Index].LLI_Data[index].LLI_Handler_Index = handler_index;
+    199                              MultiInputLLI_Config[input->Data_Index].LLI_Data[index].Data_Index = MULTIINPUT_LLI_HANDLERS[handler_index].Allocate();
+    200                              retval &= MULTIINPUT_LLI_HANDLERS[handler_index].InitializeInstance(&MultiInputLLI_Config[input->Data_Index].LLI_Data[index]);
+    201                              break;
+    202                          }
+    203                      }
+    204                  }
+    205              }
+    206          
+    207              return (retval);
+    208          }
+    209          
+    210          //---------------------------------------------------------------------------------------------------------------------
+    211          /**
+    212           * @brief   Retrieves the current value of each input assigned to a MultiInput LLI based on the input type.
+    213           * @param   input: data related to the instance of the LLI
+    214           * @param   status: see definition of HBL_LLI_STATUS
+    215           * @return  The current value of each input assigned to a MultiInput LLI based on the input type.
+    216           */
+    217          void * MultiInputLLI__Get(HBL_LLI_TYPE * input)
+    218          {
+    219              uint8 handler_index;
+    220              uint8 index;
+    221              BOOL_TYPE * digital_lli_data_ptr;
+    222              uint16 * analog_lli_data_ptr;
+    223              uint8 * feedback_lli_data_ptr;
+    224          
+    225              if (input->Data_Index < MultiInputLLI_Allocation)
+    226              {
+    227                  // Iterate through all the inputs of the Multi Input LLI to get the data for each input
+    228                  for (index = 0; index < MultiInputLLI_Config[input->Data_Index].Num_Of_Inputs; index++)
+    229                  {
+    230                      // Iterate through all the registered Multi Input LLI handlers
+    231                      for (handler_index = 0; handler_index < MULTIINPUT_NUM_REGISTERED_INPUTS; handler_index++)
+    232                      {
+    233                          // Look for a match on the LLI ID for the individual input of the Multi Input LLI
+    234                          if (MultiInputLLI_Config[input->Data_Index].LLI_Data[index].LLI_ID == MULTIINPUT_LLI_HANDLERS[handler_index].LLI_ID)
+    235                          {
+    236                              if (MULTIINPUT_LLI_HANDLERS[handler_index].Get != NULL)
+    237                              {
+    238                                  // Set the data for the individual input of the Multi Input LLI based on the LLI ID
+    239                                  // This must be handled this way because the LLI Get() functions return a void pointer and each LLI has a different data size
+    240                                  switch (MultiInputLLI_Config[input->Data_Index].LLI_Data[index].LLI_ID)
+    241                                  {
+    242                                      case HBL_LLI_DIGITAL:
+    243                                          digital_lli_data_ptr = MULTIINPUT_LLI_HANDLERS[handler_index].Get(&MultiInputLLI_Config[input->Data_Index].LLI_Data[index]);
+    244                                          MultiInputLLI_Data[input->Data_Index][index] = (uint16)(digital_lli_data_ptr[0]);
+    245                                          break;
+    246                                      case HBL_LLI_ANALOG:
+    247                                          analog_lli_data_ptr = MULTIINPUT_LLI_HANDLERS[handler_index].Get(&MultiInputLLI_Config[input->Data_Index].LLI_Data[index]);
+    248                                          MultiInputLLI_Data[input->Data_Index][index] = (uint16)(analog_lli_data_ptr[0]);
+    249                                          break;
+    250                                      case HBL_LLI_FEEDBACK:
+    251                                          feedback_lli_data_ptr = MULTIINPUT_LLI_HANDLERS[handler_index].Get(&MultiInputLLI_Config[input->Data_Index].LLI_Data[index]);
+    252                                          MultiInputLLI_Data[input->Data_Index][index] = (uint16)(feedback_lli_data_ptr[0]);
+    253                                          break;
+    254                                      default:
+    255                                          break;
+    256                                  }
+    257                              }
+    258                              break;
+    259                          }
+    260                      }
+    261                  }
+    262                  return ((void *)&MultiInputLLI_Data[input->Data_Index]);
+    263              }
+    264              else
+    265              {
+    266                  return (NULL);
+    267              }
+    268          }
+    269          
+    270          //---------------------------------------------------------------------------------------------------------------------
+    271          /**
+    272           * @brief   Asynchronous processing of a MultiInput LLI.
+    273           * @param   input: data related to the instance of the LLI
+    274           * @param   status: see definition of HBL_LLI_STATUS
+    275           * @return  PASS if the LLI was successfully processed, else FAIL.
+    276           */
+    277          BOOL_TYPE MultiInputLLI__AsynchProcess(HBL_LLI_TYPE * input)
+    278          {
+    279              BOOL_TYPE retval;
+    280              uint8 handler_index;
+    281              uint8 index;
+    282          
+    283              retval = FALSE;
+    284          
+    285              if (input->Data_Index < MultiInputLLI_Allocation)
+    286              {
+    287                  for (index = 0; index < MultiInputLLI_Config[input->Data_Index].Num_Of_Inputs; index++)
+    288                  {
+    289                      for (handler_index = 0; handler_index < MULTIINPUT_NUM_REGISTERED_INPUTS; handler_index++)
+    290                      {
+    291                          if (MultiInputLLI_Config[input->Data_Index].LLI_Data[index].LLI_ID == MULTIINPUT_LLI_HANDLERS[handler_index].LLI_ID)
+    292                          {
+    293                              if (MULTIINPUT_LLI_HANDLERS[handler_index].AsynchProcess != NULL)
+    294                              {
+    295                                  retval |= MULTIINPUT_LLI_HANDLERS[handler_index].AsynchProcess(&MultiInputLLI_Config[input->Data_Index].LLI_Data[index]);
+    296                              }
+    297                              break;
+    298                          }
+    299                      }
+    300                  }
+    301              }
+    302          
+    303              return (retval);
+    304          }
+    305          
+    306          //---------------------------------------------------------------------------------------------------------------------
+    307          /**
+    308           * @brief   Peak processing of a MultiInput LLI.
+    309           * @param   input: data related to the instance of the LLI
+    310           * @param   status: see definition of HBL_LLI_STATUS
+    311           * @param   peak_polarity:
+    312           * @return  PASS if the LLI was successfully processed, else FAIL.
+    313           */
+    314          BOOL_TYPE MultiInputLLI__PeakProcess(HBL_LLI_TYPE * input, BOOL_TYPE peak_polarity)
+    315          {
+    316              BOOL_TYPE retval;
+    317              uint8 handler_index;
+    318              uint8 index;
+    319          
+    320              retval = FALSE;
+    321          
+    322              if (input->Data_Index < MultiInputLLI_Allocation)
+    323              {
+    324                  for (index = 0; index < MultiInputLLI_Config[input->Data_Index].Num_Of_Inputs; index++)
+    325                  {
+    326                      for (handler_index = 0; handler_index < MULTIINPUT_NUM_REGISTERED_INPUTS; handler_index++)
+    327                      {
+    328                          if (MultiInputLLI_Config[input->Data_Index].LLI_Data[index].LLI_ID == MULTIINPUT_LLI_HANDLERS[handler_index].LLI_ID)
+    329                          {
+    330                              if (MULTIINPUT_LLI_HANDLERS[handler_index].PeakProcess != NULL)
+    331                              {
+    332                                  retval |= MULTIINPUT_LLI_HANDLERS[handler_index].PeakProcess(&MultiInputLLI_Config[input->Data_Index].LLI_Data[index], peak_polarity);
+    333                              }
+    334                              break;
+    335                          }
+    336                      }
+    337                  }
+    338              }
+    339          
+    340              return (retval);
+    341          }
+    342          
+    343          
+    344          //=====================================================================================================================
+    345          //-------------------------------------- Private Functions ------------------------------------------------------------
+    346          //=====================================================================================================================
+    347          
+    348          #endif // (HBL_LLI_NUM_MULTIINPUT > 0)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

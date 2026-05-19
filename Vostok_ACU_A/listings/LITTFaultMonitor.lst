@@ -1,0 +1,1151 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:23
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Monitors/LITTFaultMonitor/LITTFaultMonitor.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\LITTFaultMonitor.lst
+#        -o obj\LITTFaultMonitor.obj
+#        source/Category/Application/acu/Monitors/LITTFaultMonitor/LITTFaultMonitor.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\LITTFaultMonitor.lst
+#    Object file  =  obj\LITTFaultMonitor.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Monitors\LITTFaultMonitor\LITTFaultMonitor.c
+      1          /*
+      2           *  *  @file       LITTFaultMonitor.c
+      3           *
+      4           *  @brief      Basic description of file contents
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8           *
+      9           *
+     10           *
+     11           *  Created on: 6 lis 2018
+     12           *      Author: WAZNYP
+     13           */
+     14          
+     15          
+     16          /**
+     17          
+     18             @startuml{LITTFaultMonitor State Machine.jpg}
+     19                  title Light In The Tub Fault Monitor State Machine
+     20          
+     21                  [*] --> INITIALIZE
+     22          
+     23                  INITIALIZE : entry / InitializeModule()
+     24                  INITIALIZE --> NO_FAILURE  : evStartMonitor
+     25                  INITIALIZE --> [*]         : evSettingDataMissing
+     26          
+     27                  NO_FAILURE : entry / ResetFailureDetection()
+     28                  NO_FAILURE : do /\t CheckForFailure()
+     29                  NO_FAILURE --> FAILURE_DETECTED  : evFailureDetected
+     30          
+     31                  FAILURE_DETECTED : entry /\t SetFailureDetection()
+     32                  FAILURE_DETECTED : do /\t CheckFailureRemoval()
+     33                  FAILURE_DETECTED --> NO_FAILURE  : evNoFailurePresent
+     34                  FAILURE_DETECTED --> FAULT       : evDebounceCompleted
+     35          
+     36                  FAULT : do /\t MonitorFaultState()
+     37                  FAULT --> NO_FAILURE : evLITTFaultReset
+     38          
+     39              @enduml
+     40          
+     41           *  @copyright  Copyright 2017-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     42           */
+     43          //---------------------------------------------------------------------------------------------------------------------
+     44          //---------------------------------------------------------------------------------------------------------------------
+     45          
+     46          
+     47          //-------------------------------------- Include Files ----------------------------------------------------------------
+     48          // -- This Module --
+     49          #include "SystemConfig.h"
+     50          #include "LITTFaultMonitor.h"
+     51          
+     52          // -- Other Modules --
+     53          #include "Fault.h"
+     54          #include "Hbl.h"
+     55          #include "Log.h"
+     56          #include "Micro.h"
+     57          #include "Supervisor.h"
+     58          
+     59          //=====================================================================================================================
+     60          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Light In The Tub Fault Monitor State Machine
+     61          //=====================================================================================================================
+     62          // !! StateEngineCrank cannot update this code if you change the header !!
+     63          
+     64          
+     65          //! Unique names used to identify states of the Light In The Tub Fault Monitor state machine.
+     66          typedef enum LIGHT_IN_THE_TUB_FAULT_MONITOR_STATE_ENUM
+     67          {
+     68              STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_NONE             = 0,
+     69          
+     70              STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_INITIALIZE       = 1, //!< (initial_state)
+     71              STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_NO_FAILURE       = 2,
+     72              STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_FAILURE_DETECTED = 3,
+     73              STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_FAULT            = 4,
+     74          
+     75              STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_END              = 5
+     76          } LIGHT_IN_THE_TUB_FAULT_MONITOR_STATE_TYPE;
+     77          
+     78          //! The state variable for the Light In The Tub Fault Monitor state machine.
+     79          //! State machines with a history pseudostate may write to this variable during initialization.
+     80          //! Other state machines must only write to this variable through auto-generated functions.
+
+   \                                 In section .bss, align 1
+     81          static LIGHT_IN_THE_TUB_FAULT_MONITOR_STATE_TYPE Light_In_The_Tub_Fault_Monitor_State;
+   \                     Light_In_The_Tub_Fault_Monitor_State:
+   \   00000000                      DS8 1
+     82          
+     83          // -- Private Function Prototypes used by the state machine for customization functions --
+     84          static void CheckFailureRemoval(void);
+     85          static void CheckForFailure(void);
+     86          static void InitializeModule(void);
+     87          static void MonitorFaultState(void);
+     88          static void ResetFailureDetection(void);
+     89          static void SetFailureDetection(void);
+     90          
+     91          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+     92          static void EventDebounceCompleted(void);
+     93          static void EventFailureDetected(void);
+     94          static void EventLITTFaultReset(void);
+     95          static void EventNoFailurePresent(void);
+     96          static void EventSettingDataMissing(void);
+     97          static void EventStartMonitor(void);
+     98          static void LightInTheTubFaultMonitorExecute(void);
+     99          static void LightInTheTubFaultMonitorInitialize(void);
+    100          
+    101          // !! StateEngineCrank cannot update this code if you change the footer !!
+    102          // End of StateEngineCrank Auto-Generated Code.
+    103          
+    104          
+    105          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+    106          
+    107          
+    108          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    109          
+    110          #define MODULE_NAME MODULE_LITT_FAULT_MONITOR
+    111          
+    112          
+    113          
+    114          typedef enum MODULE_LITT_FAULT_MONITOR_LOG_MESSAGE_ID_ENUM
+    115          {
+    116          	ERROR_MISSING_COMPONENTS  = 1
+    117          } MODULE_LITT_FAULT_MONITOR_LOG_MESSAGE_ID_TYPE;
+    118          
+    119          //! The consistency of the LITT load
+
+   \                                 In section .bss, align 1
+    120          static uint8 LITT_Load_Consistency;
+   \                     LITT_Load_Consistency:
+   \   00000000                      DS8 1
+    121          
+    122          
+    123          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    124          
+    125          
+    126          //=====================================================================================================================
+    127          //-------------------------------------- Public Functions -------------------------------------------------------------
+    128          //=====================================================================================================================
+    129          
+    130          //----------------------------------------------------------------------------
+    131          /**
+    132           *  @brief      LITTFaultMonitor__Initialize
+    133           *  @details    Function used to initialize the Light In The Tub Fault monitor.
+    134           *
+    135           */
+
+   \                                 In section .text, align 2, keep-with-next
+    136          void LITTFaultMonitor__Initialize(void)
+    137          {
+   \                     LITTFaultMonitor__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    138          	if (Micro__GetResetMode() == MICRO_RESET_MODE_COLD)
+   \   00000002   0x.... 0x....      BL       Micro__GetResetMode
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD101             BNE      ??LITTFaultMonitor__Initialize_0
+    139          	{
+    140          		LightInTheTubFaultMonitorInitialize();
+   \   0000000A   0x.... 0x....      BL       LightInTheTubFaultMonitorInitialize
+    141          	}
+    142          }
+   \                     ??LITTFaultMonitor__Initialize_0: (+1)
+   \   0000000E   0xBD01             POP      {R0,PC}          ;; return
+    143          
+    144          
+    145          //----------------------------------------------------------------------------
+    146          /**
+    147           *  @brief      LITTFaultMonitor__Execution
+    148           *  @details    Function used to perform the LITT Fault monitor.
+    149           *
+    150           */
+
+   \                                 In section .text, align 2, keep-with-next
+    151          void LITTFaultMonitor__Execution(void)
+    152          {
+   \                     LITTFaultMonitor__Execution: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    153          	LITT_Load_Consistency = Hbl__GetLoadConsistency(Hbl__GetLoadIndexByLoadID(HBL_LOAD_LITT));
+   \   00000002   0x2070             MOVS     R0,#+112
+   \   00000004   0x.... 0x....      BL       Hbl__GetLoadIndexByLoadID
+   \   00000008   0x.... 0x....      BL       Hbl__GetLoadConsistency
+   \   0000000C   0x....             LDR      R1,??DataTable11
+   \   0000000E   0x7008             STRB     R0,[R1, #+0]
+    154          
+    155          	LightInTheTubFaultMonitorExecute();
+   \   00000010   0x.... 0x....      BL       LightInTheTubFaultMonitorExecute
+    156          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+    157          
+    158          
+    159          //----------------------------------------------------------------------------
+    160          /**
+    161           *  @brief      LITTFaultMonitor__CycleStarted
+    162           *  @details    Function to be called when a cycle is started to remove the LITT Fault.
+    163           *
+    164           */
+
+   \                                 In section .text, align 2, keep-with-next
+    165          void LITTFaultMonitor__CycleStarted(void)
+    166          {
+   \                     LITTFaultMonitor__CycleStarted: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    167          	EventLITTFaultReset();
+   \   00000002   0x.... 0x....      BL       EventLITTFaultReset
+    168          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    169          
+    170          //=====================================================================================================================
+    171          //-------------------------------------- Private Functions ------------------------------------------------------------
+    172          //=====================================================================================================================
+    173          
+    174          
+    175          //=====================================================================================================================
+    176          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    177          //=====================================================================================================================
+    178          
+    179          
+    180          //---------------------------------------------------------------------------------------------------------------------
+    181          /**
+    182           *
+    183           */
+
+   \                                 In section .text, align 2, keep-with-next
+    184          static void CheckFailureRemoval(void)
+    185          {
+   \                     CheckFailureRemoval: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    186          	if ((uint8)Fault__IsInFaultState(FAULT_ID_LITT_FAILURE) == (uint8)TRUE)
+   \   00000002   0x2024             MOVS     R0,#+36
+   \   00000004   0x.... 0x....      BL       Fault__IsInFaultState
+   \   00000008   0x2801             CMP      R0,#+1
+   \   0000000A   0xD102             BNE      ??CheckFailureRemoval_0
+    187          	{
+    188          		EventDebounceCompleted();
+   \   0000000C   0x.... 0x....      BL       EventDebounceCompleted
+   \   00000010   0xBD01             POP      {R0,PC}
+    189          	}
+    190          	else
+    191          	{
+    192          		if ((Fault__IsObserverActive(FAULT_ID_LITT_FAILURE) == FALSE) || (LITT_Load_Consistency != COMBINE_NIBBLES(HBL_CONSISTENCY_TABLE_ON, HBL_CONSISTENCY_OPEN_CIRCUIT)))
+   \                     ??CheckFailureRemoval_0: (+1)
+   \   00000012   0x2024             MOVS     R0,#+36
+   \   00000014   0x.... 0x....      BL       Fault__IsObserverActive
+   \   00000018   0x2800             CMP      R0,#+0
+   \   0000001A   0xD003             BEQ      ??CheckFailureRemoval_1
+   \   0000001C   0x....             LDR      R0,??DataTable11
+   \   0000001E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000020   0x2814             CMP      R0,#+20
+   \   00000022   0xD001             BEQ      ??CheckFailureRemoval_2
+    193          		{
+    194          			EventNoFailurePresent();
+   \                     ??CheckFailureRemoval_1: (+1)
+   \   00000024   0x.... 0x....      BL       EventNoFailurePresent
+    195          		}
+    196          	}
+    197          }
+   \                     ??CheckFailureRemoval_2: (+1)
+   \   00000028   0xBD01             POP      {R0,PC}          ;; return
+    198          
+    199          
+    200          //---------------------------------------------------------------------------------------------------------------------
+    201          /**
+    202           *
+    203           */
+
+   \                                 In section .text, align 2, keep-with-next
+    204          static void CheckForFailure(void)
+    205          {
+   \                     CheckForFailure: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    206          	if (((uint8)Supervisor__IsTestCycleActive() == (uint8)TRUE) && (LITT_Load_Consistency == COMBINE_NIBBLES(HBL_CONSISTENCY_TABLE_ON, HBL_CONSISTENCY_OPEN_CIRCUIT)))
+   \   00000002   0x.... 0x....      BL       Supervisor__IsTestCycleActive
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD105             BNE      ??CheckForFailure_0
+   \   0000000A   0x....             LDR      R0,??DataTable11
+   \   0000000C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000000E   0x2814             CMP      R0,#+20
+   \   00000010   0xD101             BNE      ??CheckForFailure_0
+    207          	{
+    208          		EventFailureDetected();
+   \   00000012   0x.... 0x....      BL       EventFailureDetected
+    209          	}
+    210          }
+   \                     ??CheckForFailure_0: (+1)
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    211          
+    212          
+    213          //---------------------------------------------------------------------------------------------------------------------
+    214          /**
+    215           *
+    216           */
+
+   \                                 In section .text, align 2, keep-with-next
+    217          static void InitializeModule(void)
+    218          {
+   \                     InitializeModule: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    219          	LITT_Load_Consistency = COMBINE_NIBBLES(HBL_CONSISTENCY_TABLE_INVALID, HBL_CONSISTENCY_INVALID_VALUE);
+   \   00000002   0x20FF             MOVS     R0,#+255
+   \   00000004   0x....             LDR      R1,??DataTable11
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+    220          	if (Hbl__GetLoadIndexByLoadID(HBL_LOAD_LITT) != (uint8)HBL_INDEX_INVALID)
+   \   00000008   0x2070             MOVS     R0,#+112
+   \   0000000A   0x.... 0x....      BL       Hbl__GetLoadIndexByLoadID
+   \   0000000E   0x28FF             CMP      R0,#+255
+   \   00000010   0xD002             BEQ      ??InitializeModule_0
+    221          	{
+    222          	    EventStartMonitor();
+   \   00000012   0x.... 0x....      BL       EventStartMonitor
+   \   00000016   0xBD01             POP      {R0,PC}
+    223          	}
+    224          	else
+    225          	{
+    226          		EventSettingDataMissing();
+   \                     ??InitializeModule_0: (+1)
+   \   00000018   0x.... 0x....      BL       EventSettingDataMissing
+    227          		LOG_ADD_EXCEPTION (ERROR_MISSING_COMPONENTS, 0);
+   \   0000001C   0x2300             MOVS     R3,#+0
+   \   0000001E   0x2201             MOVS     R2,#+1
+   \   00000020   0x4611             MOV      R1,R2
+   \   00000022   0x2030             MOVS     R0,#+48
+   \   00000024   0x.... 0x....      BL       Log__AddMessage
+    228          	}
+    229          }
+   \   00000028   0xBD01             POP      {R0,PC}          ;; return
+    230          
+    231          
+    232          //---------------------------------------------------------------------------------------------------------------------
+    233          /**
+    234           *
+    235           */
+
+   \                                 In section .text, align 2, keep-with-next
+    236          static void ResetFailureDetection(void)
+    237          {
+   \                     ResetFailureDetection: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    238          	Fault__ConditionRemoved(FAULT_ID_LITT_FAILURE);
+   \   00000002   0x2024             MOVS     R0,#+36
+   \   00000004   0x.... 0x....      BL       Fault__ConditionRemoved
+    239          }
+   \   00000008   0xBD01             POP      {R0,PC}          ;; return
+    240          
+    241          
+    242          //---------------------------------------------------------------------------------------------------------------------
+    243          /**
+    244           *
+    245           */
+
+   \                                 In section .text, align 2, keep-with-next
+    246          static void SetFailureDetection(void)
+    247          {
+   \                     SetFailureDetection: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    248          	Fault__ConditionDetected(FAULT_ID_LITT_FAILURE);
+   \   00000002   0x2024             MOVS     R0,#+36
+   \   00000004   0x.... 0x....      BL       Fault__ConditionDetected
+    249          }
+   \   00000008   0xBD01             POP      {R0,PC}          ;; return
+    250          
+    251          
+    252          //---------------------------------------------------------------------------------------------------------------------
+    253          /**
+    254           *
+    255           */
+
+   \                                 In section .text, align 2, keep-with-next
+    256          static void MonitorFaultState(void)
+    257          {
+   \                     MonitorFaultState: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    258          	if (Fault__IsInFaultState(FAULT_ID_LITT_FAILURE) == FALSE)
+   \   00000002   0x2024             MOVS     R0,#+36
+   \   00000004   0x.... 0x....      BL       Fault__IsInFaultState
+   \   00000008   0x2800             CMP      R0,#+0
+   \   0000000A   0xD101             BNE      ??MonitorFaultState_0
+    259          	{
+    260          		EventLITTFaultReset();
+   \   0000000C   0x.... 0x....      BL       EventLITTFaultReset
+    261          	}
+    262          }
+   \                     ??MonitorFaultState_0: (+1)
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+    263          
+    264          
+    265          
+    266          
+    267          
+    268          //=====================================================================================================================
+    269          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Light In The Tub Fault Monitor State Machine
+    270          //=====================================================================================================================
+    271          // !! StateEngineCrank cannot update this code if you change the header !!
+    272          
+    273          
+    274          //---------------------------------------------------------------------------------------------------------------------
+    275          /**
+    276           * Process the Debounce Completed Event for the Light In The Tub Fault Monitor state machine.
+    277           *
+    278           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    279           *
+    280           * This function was auto-generated and must not be edited manually.
+    281           * Change the UML used to generate this function and regenerate the source code.
+    282           */
+
+   \                                 In section .text, align 2, keep-with-next
+    283          static void EventDebounceCompleted(void)
+    284          {
+    285              switch (Light_In_The_Tub_Fault_Monitor_State)
+   \                     EventDebounceCompleted: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable11_1
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2903             CMP      R1,#+3
+   \   00000006   0xD101             BNE      ??EventDebounceCompleted_0
+    286              {
+    287                  case STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_FAILURE_DETECTED:
+    288                      Light_In_The_Tub_Fault_Monitor_State = STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_FAULT;
+   \   00000008   0x2104             MOVS     R1,#+4
+   \   0000000A   0x7001             STRB     R1,[R0, #+0]
+    289                      break;
+    290          
+    291                  default:
+    292                      // Event is ignored for all other values of Light_In_The_Tub_Fault_Monitor_State.
+    293                      break;
+    294              }
+    295          }
+   \                     ??EventDebounceCompleted_0: (+1)
+   \   0000000C   0x4770             BX       LR               ;; return
+    296          
+    297          
+    298          //---------------------------------------------------------------------------------------------------------------------
+    299          /**
+    300           * Process the Failure Detected Event for the Light In The Tub Fault Monitor state machine.
+    301           *
+    302           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    303           *
+    304           * This function was auto-generated and must not be edited manually.
+    305           * Change the UML used to generate this function and regenerate the source code.
+    306           */
+
+   \                                 In section .text, align 2, keep-with-next
+    307          static void EventFailureDetected(void)
+    308          {
+    309              switch (Light_In_The_Tub_Fault_Monitor_State)
+   \                     EventFailureDetected: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable11_1
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2902             CMP      R1,#+2
+   \   00000006   0xD000             BEQ      ??EventFailureDetected_0
+   \   00000008   0x4770             BX       LR
+    310              {
+    311                  case STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_NO_FAILURE:
+    312                      Light_In_The_Tub_Fault_Monitor_State = STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_FAILURE_DETECTED;
+   \                     ??EventFailureDetected_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2103             MOVS     R1,#+3
+   \   0000000E   0x7001             STRB     R1,[R0, #+0]
+    313                      SetFailureDetection();                  // Entry Function.
+   \   00000010   0x.... 0x....      BL       SetFailureDetection
+    314                      break;
+    315          
+    316                  default:
+    317                      // Event is ignored for all other values of Light_In_The_Tub_Fault_Monitor_State.
+    318                      break;
+    319              }
+    320          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+    321          
+    322          
+    323          //---------------------------------------------------------------------------------------------------------------------
+    324          /**
+    325           * Process the LITT Fault Reset Event for the Light In The Tub Fault Monitor state machine.
+    326           *
+    327           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    328           *
+    329           * This function was auto-generated and must not be edited manually.
+    330           * Change the UML used to generate this function and regenerate the source code.
+    331           */
+
+   \                                 In section .text, align 2, keep-with-next
+    332          static void EventLITTFaultReset(void)
+    333          {
+    334              switch (Light_In_The_Tub_Fault_Monitor_State)
+   \                     EventLITTFaultReset: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable11_1
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2904             CMP      R1,#+4
+   \   00000006   0xD000             BEQ      ??EventLITTFaultReset_0
+   \   00000008   0x4770             BX       LR
+    335              {
+    336                  case STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_FAULT:
+    337                      Light_In_The_Tub_Fault_Monitor_State = STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_NO_FAILURE;
+   \                     ??EventLITTFaultReset_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2102             MOVS     R1,#+2
+   \   0000000E   0x7001             STRB     R1,[R0, #+0]
+    338                      ResetFailureDetection();                // Entry Function.
+   \   00000010   0x.... 0x....      BL       ResetFailureDetection
+    339                      break;
+    340          
+    341                  default:
+    342                      // Event is ignored for all other values of Light_In_The_Tub_Fault_Monitor_State.
+    343                      break;
+    344              }
+    345          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+    346          
+    347          
+    348          //---------------------------------------------------------------------------------------------------------------------
+    349          /**
+    350           * Process the No Failure Present Event for the Light In The Tub Fault Monitor state machine.
+    351           *
+    352           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    353           *
+    354           * This function was auto-generated and must not be edited manually.
+    355           * Change the UML used to generate this function and regenerate the source code.
+    356           */
+
+   \                                 In section .text, align 2, keep-with-next
+    357          static void EventNoFailurePresent(void)
+    358          {
+    359              switch (Light_In_The_Tub_Fault_Monitor_State)
+   \                     EventNoFailurePresent: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable11_1
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2903             CMP      R1,#+3
+   \   00000006   0xD000             BEQ      ??EventNoFailurePresent_0
+   \   00000008   0x4770             BX       LR
+    360              {
+    361                  case STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_FAILURE_DETECTED:
+    362                      Light_In_The_Tub_Fault_Monitor_State = STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_NO_FAILURE;
+   \                     ??EventNoFailurePresent_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2102             MOVS     R1,#+2
+   \   0000000E   0x7001             STRB     R1,[R0, #+0]
+    363                      ResetFailureDetection();                // Entry Function.
+   \   00000010   0x.... 0x....      BL       ResetFailureDetection
+    364                      break;
+    365          
+    366                  default:
+    367                      // Event is ignored for all other values of Light_In_The_Tub_Fault_Monitor_State.
+    368                      break;
+    369              }
+    370          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+    371          
+    372          
+    373          //---------------------------------------------------------------------------------------------------------------------
+    374          /**
+    375           * Process the Setting Data Missing Event for the Light In The Tub Fault Monitor state machine.
+    376           *
+    377           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    378           *
+    379           * This function was auto-generated and must not be edited manually.
+    380           * Change the UML used to generate this function and regenerate the source code.
+    381           */
+
+   \                                 In section .text, align 2, keep-with-next
+    382          static void EventSettingDataMissing(void)
+    383          {
+    384              switch (Light_In_The_Tub_Fault_Monitor_State)
+   \                     EventSettingDataMissing: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable11_1
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2901             CMP      R1,#+1
+   \   00000006   0xD101             BNE      ??EventSettingDataMissing_0
+    385              {
+    386                  case STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_INITIALIZE:
+    387                      Light_In_The_Tub_Fault_Monitor_State = STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_NONE; // Terminate Light In The Tub Fault Monitor state machine execution.
+   \   00000008   0x2100             MOVS     R1,#+0
+   \   0000000A   0x7001             STRB     R1,[R0, #+0]
+    388                      break;
+    389          
+    390                  default:
+    391                      // Event is ignored for all other values of Light_In_The_Tub_Fault_Monitor_State.
+    392                      break;
+    393              }
+    394          }
+   \                     ??EventSettingDataMissing_0: (+1)
+   \   0000000C   0x4770             BX       LR               ;; return
+    395          
+    396          
+    397          //---------------------------------------------------------------------------------------------------------------------
+    398          /**
+    399           * Process the Start Monitor Event for the Light In The Tub Fault Monitor state machine.
+    400           *
+    401           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    402           *
+    403           * This function was auto-generated and must not be edited manually.
+    404           * Change the UML used to generate this function and regenerate the source code.
+    405           */
+
+   \                                 In section .text, align 2, keep-with-next
+    406          static void EventStartMonitor(void)
+    407          {
+    408              switch (Light_In_The_Tub_Fault_Monitor_State)
+   \                     EventStartMonitor: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable11_1
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2901             CMP      R1,#+1
+   \   00000006   0xD000             BEQ      ??EventStartMonitor_0
+   \   00000008   0x4770             BX       LR
+    409              {
+    410                  case STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_INITIALIZE:
+    411                      Light_In_The_Tub_Fault_Monitor_State = STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_NO_FAILURE;
+   \                     ??EventStartMonitor_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2102             MOVS     R1,#+2
+   \   0000000E   0x7001             STRB     R1,[R0, #+0]
+    412                      ResetFailureDetection();                // Entry Function.
+   \   00000010   0x.... 0x....      BL       ResetFailureDetection
+    413                      break;
+    414          
+    415                  default:
+    416                      // Event is ignored for all other values of Light_In_The_Tub_Fault_Monitor_State.
+    417                      break;
+    418              }
+    419          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+    420          
+    421          
+    422          //---------------------------------------------------------------------------------------------------------------------
+    423          /**
+    424           * The main execution function for the Light In The Tub Fault Monitor state machine.
+    425           * This function should be called periodically while the state machine is running.
+    426           *
+    427           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    428           *
+    429           * This function was auto-generated and must not be edited manually.
+    430           * Change the UML used to generate this function and regenerate the source code.
+    431           */
+
+   \                                 In section .text, align 2, keep-with-next
+    432          static void LightInTheTubFaultMonitorExecute(void)
+    433          {
+   \                     LightInTheTubFaultMonitorExecute: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    434              switch(Light_In_The_Tub_Fault_Monitor_State)
+   \   00000002   0x....             LDR      R0,??DataTable11_1
+   \   00000004   0x7800             LDRB     R0,[R0, #+0]
+   \   00000006   0x2802             CMP      R0,#+2
+   \   00000008   0xD004             BEQ      ??LightInTheTubFaultMonitorExecute_0
+   \   0000000A   0xD30B             BCC      ??LightInTheTubFaultMonitorExecute_1
+   \   0000000C   0x2804             CMP      R0,#+4
+   \   0000000E   0xD007             BEQ      ??LightInTheTubFaultMonitorExecute_2
+   \   00000010   0xD303             BCC      ??LightInTheTubFaultMonitorExecute_3
+   \   00000012   0xBD01             POP      {R0,PC}
+    435              {
+    436                  case STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_NO_FAILURE:
+    437                      CheckForFailure();                      // Do function.
+   \                     ??LightInTheTubFaultMonitorExecute_0: (+1)
+   \   00000014   0x.... 0x....      BL       CheckForFailure
+    438                      break;
+   \   00000018   0xBD01             POP      {R0,PC}
+    439          
+    440                  case STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_FAILURE_DETECTED:
+    441                      CheckFailureRemoval();                  // Do function.
+   \                     ??LightInTheTubFaultMonitorExecute_3: (+1)
+   \   0000001A   0x.... 0x....      BL       CheckFailureRemoval
+    442                      break;
+   \   0000001E   0xBD01             POP      {R0,PC}
+    443          
+    444                  case STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_FAULT:
+    445                      MonitorFaultState();                    // Do function.
+   \                     ??LightInTheTubFaultMonitorExecute_2: (+1)
+   \   00000020   0x.... 0x....      BL       MonitorFaultState
+    446                      break;
+    447          
+    448                  default:
+    449                      // There is nothing to do for all other values of Light_In_The_Tub_Fault_Monitor_State.
+    450                      break;
+    451              }
+    452          }
+   \                     ??LightInTheTubFaultMonitorExecute_1: (+1)
+   \   00000024   0xBD01             POP      {R0,PC}          ;; return
+    453          
+    454          
+    455          //---------------------------------------------------------------------------------------------------------------------
+    456          /**
+    457           * The initialization function for the Light In The Tub Fault Monitor state machine.
+    458           * This function resets the state machine to the initial state and executes the initial state's
+    459           * entry function.
+    460           *
+    461           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    462           *
+    463           * This function was auto-generated and must not be edited manually.
+    464           * Change the UML used to generate this function and regenerate the source code.
+    465           */
+
+   \                                 In section .text, align 2, keep-with-next
+    466          static void LightInTheTubFaultMonitorInitialize(void)
+    467          {
+   \                     LightInTheTubFaultMonitorInitialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    468              Light_In_The_Tub_Fault_Monitor_State = STATE_LIGHT_IN_THE_TUB_FAULT_MONITOR_INITIALIZE;
+   \   00000002   0x2001             MOVS     R0,#+1
+   \   00000004   0x....             LDR      R1,??DataTable11_1
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+    469              InitializeModule();                             // Entry Function.
+   \   00000008   0x.... 0x....      BL       InitializeModule
+    470          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11:
+   \   00000000   0x........         DC32     LITT_Load_Consistency
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_1:
+   \   00000000   0x........         DC32     Light_In_The_Tub_Fault_Monitor_State
+    471          
+    472          
+    473          // !! StateEngineCrank cannot update this code if you change the footer !!
+    474          // End of StateEngineCrank Auto-Generated Code.
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   CheckFailureRemoval
+         8   -> EventDebounceCompleted
+         8   -> EventNoFailurePresent
+         8   -> Fault__IsInFaultState
+         8   -> Fault__IsObserverActive
+       8   CheckForFailure
+         8   -> EventFailureDetected
+         8   -> Supervisor__IsTestCycleActive
+       0   EventDebounceCompleted
+       8   EventFailureDetected
+         8   -> SetFailureDetection
+       8   EventLITTFaultReset
+         8   -> ResetFailureDetection
+       8   EventNoFailurePresent
+         8   -> ResetFailureDetection
+       0   EventSettingDataMissing
+       8   EventStartMonitor
+         8   -> ResetFailureDetection
+       8   InitializeModule
+         8   -> EventSettingDataMissing
+         8   -> EventStartMonitor
+         8   -> Hbl__GetLoadIndexByLoadID
+         8   -> Log__AddMessage
+       8   LITTFaultMonitor__CycleStarted
+         8   -> EventLITTFaultReset
+       8   LITTFaultMonitor__Execution
+         8   -> Hbl__GetLoadConsistency
+         8   -> Hbl__GetLoadIndexByLoadID
+         8   -> LightInTheTubFaultMonitorExecute
+       8   LITTFaultMonitor__Initialize
+         8   -> LightInTheTubFaultMonitorInitialize
+         8   -> Micro__GetResetMode
+       8   LightInTheTubFaultMonitorExecute
+         8   -> CheckFailureRemoval
+         8   -> CheckForFailure
+         8   -> MonitorFaultState
+       8   LightInTheTubFaultMonitorInitialize
+         8   -> InitializeModule
+       8   MonitorFaultState
+         8   -> EventLITTFaultReset
+         8   -> Fault__IsInFaultState
+       8   ResetFailureDetection
+         8   -> Fault__ConditionRemoved
+       8   SetFailureDetection
+         8   -> Fault__ConditionDetected
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable11
+       4  ??DataTable11_1
+      42  CheckFailureRemoval
+      24  CheckForFailure
+      14  EventDebounceCompleted
+      22  EventFailureDetected
+      22  EventLITTFaultReset
+      22  EventNoFailurePresent
+      14  EventSettingDataMissing
+      22  EventStartMonitor
+      42  InitializeModule
+       8  LITTFaultMonitor__CycleStarted
+      22  LITTFaultMonitor__Execution
+      16  LITTFaultMonitor__Initialize
+       1  LITT_Load_Consistency
+      38  LightInTheTubFaultMonitorExecute
+      14  LightInTheTubFaultMonitorInitialize
+       1  Light_In_The_Tub_Fault_Monitor_State
+      18  MonitorFaultState
+      10  ResetFailureDetection
+      10  SetFailureDetection
+
+ 
+   2 bytes in section .bss
+ 368 bytes in section .text
+ 
+ 368 bytes of CODE memory
+   2 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,697 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:19
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Common/all/Common/I2cMgr/I2cMgr.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\I2cMgr.lst -o
+#        obj\I2cMgr.obj source/XCategory/Common/all/Common/I2cMgr/I2cMgr.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\I2cMgr.lst
+#    Object file  =  obj\I2cMgr.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\Common\I2cMgr\I2cMgr.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      This module acts as the manager for all the I2c channels on the micro-controller
+      5           *
+      6           *  @details    The module will grant or deny an i2c driver module access to a specific I2c channel on the micro-controller\n
+      7           *  This module will ensure that only one device can operate over the I2c module at a time. The module will also\n
+      8           *  ensure that each device will only operate over the bus for a predefined time. If the device maintains control of\n
+      9           *  the I2C channel for too long, this module will kick the device from the bus.\n
+     10           *
+     11           *  $Header: I2cMgr.c 1.1 2016/08/31 13:12:31EDT Seth Herndon (HERNDS) Exp  $
+     12           *
+     13           *  @copyright  Copyright 2016-$Date: 2016/08/31 13:12:31EDT$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     14           */
+     15          //---------------------------------------------------------------------------------------------------------------------
+     16          //---------------------------------------------------------------------------------------------------------------------
+     17          #include "SystemConfig.h"
+     18          
+     19          #ifndef I2CMGR_FEATURE
+     20              #error: I2CMGR_FEATURE must be defined in SystemConfig_prm.h as ENABLED or DISABLED
+     21          #endif
+     22          
+     23          #if (I2CMGR_FEATURE == ENABLED)
+     24          //-------------------------------------- Include Files ----------------------------------------------------------------
+     25          #include "I2cMgr.h"
+     26          #include "I2cMgr_prv.h"
+     27          #include "Millis.h"
+     28          #include <string.h>
+     29          
+     30          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     31          
+     32          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     33          //---------------------------------------------------------------------------------------------------------------------
+     34          /**
+     35           * @brief Define invalid i2c channel value
+     36           * @note  This value is always 0xFF since there will never be 255 i2c channels.\n
+     37           * #define I2CMGR_CHANNEL_INVALID       (0xFF)
+     38           *
+     39           */
+     40          #define I2CMGR_CHANNEL_INVALID       (0xFF)
+     41          
+     42          typedef struct _I2CMGR_QUEUE_TYPE
+     43          {
+     44              uint8 I2cMgr_TokenQueue[I2CMGR_QUEUE_SIZE];
+     45              uint8 I2cMgr_WriteIndex;
+     46              uint8 I2cMgr_ReadIndex;
+     47          }I2CMGR_QUEUE_TYPE;
+     48          
+     49          typedef struct _I2CMGR_HANDLE_TYPE
+     50          {
+     51              I2C_ENUM_TYPE i2c_channel;
+     52          }I2CMGR_HANDLE_TYPE;
+     53          
+     54          static I2CMGR_HANDLE_TYPE I2cMgr_DeviceHandle[I2CMGR_NUM_DEVICES];
+     55          static MILLIS_TIMER_TYPE I2cMgr_TimeoutHandle[I2CMGR_NUM_CHANNELS];
+     56          
+     57          #if(I2CMGR_NUM_DEVICES > 1)
+     58          static I2CMGR_QUEUE_TYPE I2cMgr_RequestQueue[I2CMGR_NUM_CHANNELS];
+     59          #endif
+     60          
+     61          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     62          static void TimeoutAction(I2C_ENUM_TYPE i2c_channel);
+     63          #if(I2CMGR_NUM_DEVICES > 1)
+     64          static void AddItemToQueue(uint8 device_id);
+     65          static void RemoveItemFromQueue(uint8 device_id);
+     66          #endif
+     67          
+     68          //=====================================================================================================================
+     69          //-------------------------------------- Public Functions -------------------------------------------------------------
+     70          //=====================================================================================================================
+     71          
+     72          //---------------------------------------------------------------------------------------------------------------------
+     73          /**
+     74           *  @brief      It Initializes the module I2cMgr and its variables
+     75           *
+     76           */
+     77          void I2cMgr__Initialize(void)
+     78          {
+     79              uint8 index;
+     80          
+     81              memset(I2cMgr_DeviceHandle, I2CMGR_CHANNEL_INVALID, sizeof(I2cMgr_DeviceHandle));
+     82              memset(I2cMgr_TimeoutHandle, 0, sizeof(I2cMgr_TimeoutHandle));
+     83          
+     84          #if(I2CMGR_NUM_DEVICES > 1)
+     85              memset(I2cMgr_RequestQueue, 0, sizeof(I2cMgr_RequestQueue));
+     86          #endif
+     87          
+     88              for(index= 0; index < I2CMGR_NUM_CHANNELS; index++)
+     89              {
+     90                  Millis__Reset(&I2cMgr_TimeoutHandle[index]);
+     91          
+     92          #if(I2CMGR_NUM_DEVICES > 1)
+     93                  memset(I2cMgr_RequestQueue[index].I2cMgr_TokenQueue, I2CMGR_HANDLE_INVALID, sizeof(I2cMgr_RequestQueue[index].I2cMgr_TokenQueue));
+     94          #endif
+     95              }
+     96          }
+     97          
+     98          //---------------------------------------------------------------------------------------------------------------------
+     99          /**
+    100           * @brief This method obtains a handle from the array for the requesting device
+    101           * @details This method is necessary to prepare a device to be used with I2C correctly. It lets the manager know which\n
+    102           * channel the device needs to operate on as well.
+    103           *
+    104           * @param i2c_channel - define the i2c channel the calling device is operating on
+    105           * @retval uint8 device_id - define the index into the handle array for devices
+    106           */
+    107          uint8 I2cMgr__GetDeviceHandle(I2C_ENUM_TYPE i2c_channel)
+    108          {
+    109              uint8 device_id = I2CMGR_HANDLE_INVALID;
+    110              uint8 index;
+    111          
+    112              if(i2c_channel < I2CMGR_NUM_CHANNELS)
+    113              {
+    114                  for(index = 0; index < I2CMGR_NUM_DEVICES; index++)
+    115                  {
+    116                      if(I2cMgr_DeviceHandle[index].i2c_channel == (I2C_ENUM_TYPE) I2CMGR_CHANNEL_INVALID)
+    117                      {
+    118                          I2cMgr_DeviceHandle[index].i2c_channel = i2c_channel;
+    119                          device_id = index;
+    120                          break; // Break when a free handle is found
+    121                      }
+    122                  }
+    123              }
+    124          
+    125              return device_id;
+    126          }
+    127          
+    128          //---------------------------------------------------------------------------------------------------------------------
+    129          /**
+    130           * @brief This method releases a handle from the array for the requesting device
+    131           * @details This method releases a device from the handle array and creates room for a new device.
+    132           *
+    133           * @param uint8 device_id - define the index into the handle array for devices
+    134           */
+    135          void I2cMgr__ReleaseDeviceHandle(uint8 device_id)
+    136          {
+    137              if(device_id < I2CMGR_NUM_DEVICES)
+    138              {
+    139                  I2cMgr_DeviceHandle[device_id].i2c_channel = (I2C_ENUM_TYPE) I2CMGR_CHANNEL_INVALID;
+    140              }
+    141          }
+    142          
+    143          //---------------------------------------------------------------------------------------------------------------------
+    144          /**
+    145           * @brief This method gives a calling device access to an I2c channel.
+    146           * @details The method is used to grant access to a specific i2c channel's bus. The method returns true to allow\n
+    147           * the calling device to operate over i2c. It will return false if the i2c bus is not free
+    148           *
+    149           * @param uint8 device_id - define the index into the handle array for devices
+    150           *
+    151           * @retval FALSE which means the the requested i2c write operation cannot be performed since i2c bus is busy
+    152           * @retval TRUE which means the requested i2c write operation is completed
+    153           */
+    154          BOOL_TYPE I2cMgr__RequestBus(uint8 device_id)
+    155          {
+    156              BOOL_TYPE response = FALSE;
+    157              BOOL_TYPE exists = FALSE;
+    158              uint8 index;
+    159          
+    160              if(device_id < I2CMGR_NUM_DEVICES)
+    161              {
+    162                  if(I2cMgr_DeviceHandle[device_id].i2c_channel != (I2C_ENUM_TYPE) I2CMGR_CHANNEL_INVALID)
+    163                  {
+    164          #if(I2CMGR_NUM_DEVICES > 1)
+    165                      // See if the device is already in the queue
+    166                      for(index = 0; index < I2CMGR_QUEUE_SIZE; index++)
+    167                      {
+    168                          if(I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_TokenQueue[index] == device_id)
+    169                          {
+    170                              exists = TRUE;
+    171                              break;
+    172                          }
+    173                      }
+    174          
+    175                      // Add the device to the queue if it isnt already in
+    176                      if((I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_TokenQueue[I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_WriteIndex] == I2CMGR_HANDLE_INVALID) &&
+    177                         (exists == FALSE))
+    178                      {
+    179                          AddItemToQueue(device_id);
+    180                      }
+    181          
+    182                      // Process the next item in the queue for request
+    183                      // The device gets access if it is the current device at the read index of the queue
+    184                      if(I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_TokenQueue[I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_ReadIndex] == device_id)
+    185                      {
+    186                          // Prepare timeout timer for countdown
+    187                          Millis__Start(&I2cMgr_TimeoutHandle[I2cMgr_DeviceHandle[device_id].i2c_channel]);
+    188                          response = TRUE;
+    189                      }
+    190          #else       // Return true is only 1 device exists since there is no possible interference
+    191                      // Prepare timeout timer for countdown
+    192                      Millis__Start(&I2cMgr_TimeoutHandle[I2cMgr_DeviceHandle[device_id].i2c_channel]);
+    193          
+    194                      response = TRUE;
+    195          #endif
+    196                  }
+    197              }
+    198          
+    199              return response;
+    200          }
+    201          
+    202          //---------------------------------------------------------------------------------------------------------------------
+    203          /**
+    204           * @brief This method releases the i2c bus if it is being used by the calling device.
+    205           * @details The method will only release the bus if the calling device currently owns the bus operation
+    206           *
+    207           * @param uint8 device_id - define the index into the handle array for devices
+    208           *
+    209           *  @retval TRUE which means the i2c bus was released successfully
+    210           *  @retval FALSE which means the i2c bus was not released
+    211           */
+    212          BOOL_TYPE I2cMgr__ReleaseBus(uint8 device_id)
+    213          {
+    214              BOOL_TYPE response = FALSE;
+    215          
+    216              if(device_id < I2CMGR_NUM_DEVICES)
+    217              {
+    218                  if(I2cMgr_DeviceHandle[device_id].i2c_channel != (I2C_ENUM_TYPE) I2CMGR_CHANNEL_INVALID)
+    219                  {
+    220          #if(I2CMGR_NUM_DEVICES > 1)
+    221                      // The device can only release the bus if it currently has control
+    222                      if(I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_TokenQueue[I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_ReadIndex] == device_id)
+    223                      {
+    224                          RemoveItemFromQueue(device_id);
+    225          
+    226                          // Invalidate timeout for the channel
+    227                          Millis__Reset(&I2cMgr_TimeoutHandle[I2cMgr_DeviceHandle[device_id].i2c_channel]);
+    228          
+    229                          response = TRUE;
+    230                      }
+    231          #else       // Return true is only 1 device exists since there is no possible interference
+    232                      // Invalidate timeout for the channel
+    233                      Millis__Reset(&I2cMgr_TimeoutHandle[I2cMgr_DeviceHandle[device_id].i2c_channel]);
+    234          
+    235                      response = TRUE;
+    236          #endif
+    237                  }
+    238              }
+    239          
+    240              return response;
+    241          }
+    242          
+    243          //---------------------------------------------------------------------------------------------------------------------
+    244          /**
+    245           * @brief This handler is called constantly by the OS to calculate timeouts
+    246           * @details This method will call the timeout action when a timeout occurs. The method will also keep track of the\n
+    247           * timeout for each i2c channel.
+    248           */
+    249          void I2cMgr__Handler(void)
+    250          {
+    251              uint8 index;
+    252          
+    253              // Process each timeout variable to see if time has expired for the channel
+    254              for(index = 0; index < I2CMGR_NUM_CHANNELS; index++)
+    255              {
+    256          
+    257          #if(I2CMGR_NUM_DEVICES > 1)
+    258                  if((Millis__IsTimerPaused(&I2cMgr_TimeoutHandle[index]) != FALSE) &&
+    259                     ((I2cMgr_RequestQueue[index].I2cMgr_TokenQueue[I2cMgr_RequestQueue[index].I2cMgr_ReadIndex]) != I2CMGR_HANDLE_INVALID))
+    260                  {
+    261                       Millis__Start(&I2cMgr_TimeoutHandle[index]);
+    262                  }
+    263          #endif
+    264          
+    265                  if(Millis__ReachedTarget(&I2cMgr_TimeoutHandle[index], I2CMGR_TIMEOUT_VALUE))
+    266                  {
+    267                      TimeoutAction((I2C_ENUM_TYPE) index);
+    268                  }
+    269              }
+    270          }
+    271          //=====================================================================================================================
+    272          //-------------------------------------- Private Functions ------------------------------------------------------------
+    273          //=====================================================================================================================
+    274          //---------------------------------------------------------------------------------------------------------------------
+    275          /**
+    276           * @brief This method is used to process a timeout for an i2c channel
+    277           * @details This method will either reset the i2c bus if it is locked or it will remove the token from the device\n
+    278           * currently holding it.
+    279           *
+    280           * @param i2c_channel - define the i2c channel the calling device is operating on
+    281           */
+    282          static void TimeoutAction(I2C_ENUM_TYPE i2c_channel)
+    283          {
+    284              // Only reset the I2c bus if it is locked up
+    285              if(I2c__GetStatus(i2c_channel, I2C_STATUS_ERROR) == I2C_ERROR_BUS_LOCKED)
+    286              {
+    287                  I2c__ResetBus(i2c_channel);
+    288              }
+    289          
+    290              // Invalidate the timeout variable
+    291              Millis__Reset(&I2cMgr_TimeoutHandle[i2c_channel]);
+    292          
+    293          #if(I2CMGR_NUM_DEVICES > 1)
+    294              // Remove the current item at the read index for the channel that has timed out
+    295              RemoveItemFromQueue(I2cMgr_RequestQueue[i2c_channel].I2cMgr_TokenQueue[I2cMgr_RequestQueue[i2c_channel].I2cMgr_ReadIndex]);
+    296          #endif
+    297          }
+    298          
+    299          //---------------------------------------------------------------------------------------------------------------------
+    300          /**
+    301           * @brief This method is used to add a device to the i2c channel request queue
+    302           * @details This method will add the current device id passed to the position in the token queue pointed to by the\n
+    303           * write index.
+    304           *
+    305          * @param uint8 device_id - define the index into the handle array for devices
+    306           */
+    307          #if(I2CMGR_NUM_DEVICES > 1)
+    308          static void AddItemToQueue(uint8 device_id)
+    309          {
+    310              // Add device to the current queue
+    311              I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_TokenQueue[I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_WriteIndex] = device_id;
+    312          
+    313              // Move the token queue pointer to the next write spot
+    314              I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_WriteIndex++;
+    315              I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_WriteIndex %= I2CMGR_QUEUE_SIZE;
+    316          }
+    317          
+    318          //---------------------------------------------------------------------------------------------------------------------
+    319          /**
+    320           * @brief This method is used to remove a device from the i2c channel request queue
+    321           * @details This method will remove the current device id passed from the position in the token queue pointed to by the\n
+    322           * read index.
+    323           *
+    324          * @param uint8 device_id - define the index into the handle array for devices
+    325           */
+    326          static void RemoveItemFromQueue(uint8 device_id)
+    327          {
+    328              // Remove device to the current queue
+    329              I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_TokenQueue[I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_ReadIndex] = I2CMGR_HANDLE_INVALID;
+    330          
+    331              // Move the token queue pointer to read next device
+    332              I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_ReadIndex++;
+    333              I2cMgr_RequestQueue[I2cMgr_DeviceHandle[device_id].i2c_channel].I2cMgr_ReadIndex %= I2CMGR_QUEUE_SIZE;
+    334          }
+    335          #endif  //I2CMGR_NUM_DEVICES > 1
+    336          #endif  //I2CMGR_FEATURE == ENABLED
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

@@ -1,0 +1,1054 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DatasetReadWrite</name>
+    </assembly>
+    <members>
+        <member name="T:DatasetReadWrite.BinaryRecord">
+            <summary>
+            Extends a Memory reco
+            </summary>
+            <seealso cref="T:DatasetReadWrite.MemoryRecord" />
+        </member>
+        <member name="M:DatasetReadWrite.BinaryRecord.#ctor(System.IO.BinaryReader)">
+            <summary>
+            Initialize a BinaryRecord with the specified stream
+            </summary>
+            <param name="sr"></param>
+        </member>
+        <member name="M:DatasetReadWrite.BinaryRecord.#ctor">
+            <summary>
+            Initialize the Binary Record without any data
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.BinaryRecord.ToString(System.Int32)">
+            <summary>
+            Returns the String/File representation of the Data inside this memory record
+            </summary>
+            <param name="line_size">does not matter</param>
+            <returns></returns>
+        </member>
+        <member name="T:DatasetReadWrite.Crc16">
+            <summary>
+            Implements a 16-bit CRC hash algorithm compatible.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.Crc16.Tab_Crc16_Hi">
+            <summary>
+            The tab CRC16 hi
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.Crc16.Tab_Crc16_Lo">
+            <summary>
+            The tab CRC16 lo
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.Crc16.DefaultSeed">
+            <summary>
+            The default seed
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.Crc16.seed">
+            <summary>
+            The seed
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.Crc16.hash">
+            <summary>
+            The hash
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.Crc16.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.Crc16"/> class.
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.Crc16.#ctor(System.UInt16)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.Crc16" /> class.
+            </summary>
+            <param name="seed">The seed.</param>
+        </member>
+        <member name="M:DatasetReadWrite.Crc16.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.Crc16.HashCore(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Hashes the core.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="ibStart">The ib start.</param>
+            <param name="cbSize">Size of the cb.</param>
+        </member>
+        <member name="M:DatasetReadWrite.Crc16.HashFinal">
+            <summary>
+            Hashes the final.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.Crc16.UInt16ToBigEndianBytes(System.UInt16)">
+            <summary>
+            us the int16 to big endian bytes.
+            </summary>
+            <param name="uInt16">The u int16.</param>
+            <returns></returns>
+        </member>
+        <member name="P:DatasetReadWrite.Crc16.HashSize">
+            <summary>
+            Gets the size of the hash.
+            </summary>
+            <value>
+            The size of the hash.
+            </value>
+        </member>
+        <member name="M:DatasetReadWrite.Crc16.Compute(System.Byte[])">
+            <summary>
+            Computes the specified buffer.
+            </summary>
+            <param name="buffer">The buffer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.Crc16.Compute(System.UInt16,System.Byte[])">
+            <summary>
+            Computes the specified seed.
+            </summary>
+            <param name="seed">The seed.</param>
+            <param name="buffer">The buffer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.Crc16.CalculateHash(System.UInt16,System.Collections.Generic.IList{System.Byte},System.Int32,System.Int32)">
+            <summary>
+            Calculates the hash.
+            </summary>
+            <param name="seed">The seed.</param>
+            <param name="buffer">The buffer.</param>
+            <param name="start">The start.</param>
+            <param name="size">The size.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.Crc16.FastCRCUpdate(System.UInt16,System.Byte)">
+            <summary>
+            Fasts the CRC update.
+            </summary>
+            <param name="crc_accum">The CRC accum.</param>
+            <param name="data_byte">The data byte.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DatasetReadWrite.Crc32">
+            <summary>
+            Implements a 32-bit CRC hash algorithm compatible with Zip etc.
+            </summary>
+            <remarks>
+            Crc32 should only be used for backward compatibility with older file formats
+            and algorithms. It is not secure enough for new applications.
+            If you need to call multiple times for the same data either use the HashAlgorithm
+            interface or remember that the result of one Compute call needs to be ~ (XOR) before
+            being passed in as the seed for the next Compute call.
+            </remarks>
+        </member>
+        <member name="P:DatasetReadWrite.Crc32.DefaultPolynomial">
+            <summary>
+            The default polynomial
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.Crc32.DefaultSeed">
+            <summary>
+            The default seed
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.Crc32.defaultTable">
+            <summary>
+            The default table
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.Crc32.seed">
+            <summary>
+            The seed
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.Crc32.table">
+            <summary>
+            The table
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.Crc32.hash">
+            <summary>
+            The hash
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.Crc32"/> class.
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.#ctor(System.UInt32,System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.Crc32"/> class.
+            </summary>
+            <param name="polynomial">The polynomial.</param>
+            <param name="seed">The seed.</param>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.HashCore(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Hashes the core.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="ibStart">The ib start.</param>
+            <param name="cbSize">Size of the cb.</param>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.HashFinal">
+            <summary>
+            Hashes the final.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DatasetReadWrite.Crc32.HashSize">
+            <summary>
+            Gets the size of the hash.
+            </summary>
+            <value>
+            The size of the hash.
+            </value>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.Compute(System.Byte[])">
+            <summary>
+            Computes the specified buffer.
+            </summary>
+            <param name="buffer">The buffer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.Compute(System.UInt32,System.Byte[])">
+            <summary>
+            Computes the specified seed.
+            </summary>
+            <param name="seed">The seed.</param>
+            <param name="buffer">The buffer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.Compute(System.UInt32,System.UInt32,System.Byte[])">
+            <summary>
+            Computes the specified polynomial.
+            </summary>
+            <param name="polynomial">The polynomial.</param>
+            <param name="seed">The seed.</param>
+            <param name="buffer">The buffer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.InitializeTable(System.UInt32)">
+            <summary>
+            Initializes the table.
+            </summary>
+            <param name="polynomial">The polynomial.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.CalculateHash(System.UInt32[],System.UInt32,System.Collections.Generic.IList{System.Byte},System.Int32,System.Int32)">
+            <summary>
+            Calculates the hash.
+            </summary>
+            <param name="table">The table.</param>
+            <param name="seed">The seed.</param>
+            <param name="buffer">The buffer.</param>
+            <param name="start">The start.</param>
+            <param name="size">The size.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.Crc32.UInt32ToBigEndianBytes(System.UInt32)">
+            <summary>
+            us the int32 to big endian bytes.
+            </summary>
+            <param name="uint32">The uint32.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.Gap.FindGaps(System.Collections.Generic.List{DatasetReadWrite.HexData})">
+            <summary>
+            Find existent gaps on current Data
+            an Hex Record must have no gaps
+            </summary>
+            <param name="gapped_data">data to find gaps</param>
+            <returns></returns>
+        </member>
+        <member name="T:DatasetReadWrite.HexData">
+            <summary>
+            Represents a Hex Data composed by Address and Value. In a list sorts will by Address
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.HexData.#ctor(System.UInt32,System.Byte)">
+            <summary>
+            Initialize a new instance of HexData with specific address and value
+            </summary>
+            <param name="address">Address of the HexData</param>
+            <param name="value">Value of the HexData</param>
+        </member>
+        <member name="P:DatasetReadWrite.HexData.Address">
+            <summary>
+            Get or Set the Data Address
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.HexData.Value">
+            <summary>
+            Get or Set the Data Value
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.HexData.CompareTo(System.Object)">
+            <summary>
+            Compare HexData by addresses.
+            </summary>
+            <param name="obj">HexData to compare</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.HexData.ToString">
+            <summary>
+            Returns a Hexdecimal representation of the Data Value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.HexData.Equals(DatasetReadWrite.HexData)">
+            <summary>
+            Compare both Address and Value
+            </summary>
+            <param name="other">Hex Data to compare</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.HexData.Equals(System.UInt32)">
+            <summary>
+            Compare just the Address
+            </summary>
+            <param name="otherAddress">address to compare</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.HexData.Equals(System.Byte)">
+            <summary>
+            Compare just the value
+            </summary>
+            <param name="otherValue">value to compare</param>
+            <returns></returns>
+        </member>
+        <member name="T:DatasetReadWrite.HexDataAddressComparer">
+            <summary>
+            Represents a Hex Data composed by Address and Value. In a list sorts will by Address
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.HexDataAddressComparer.Equals(DatasetReadWrite.HexData,DatasetReadWrite.HexData)">
+            <summary>
+            Compare two HexData by their addresses
+            </summary>
+            <param name="x">HexData to compare with y</param>
+            <param name="y">HexData to compare with x</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.HexDataAddressComparer.GetHashCode(DatasetReadWrite.HexData)">
+            <summary>
+            Get Address as a HashCode
+            </summary>
+            <param name="obj">HexData to get the Hash</param>
+            <returns></returns>
+        </member>
+        <member name="T:DatasetReadWrite.HexRecord">
+            <summary>
+            Extend memory record to read and write into a Intel Hex file.
+            </summary>
+            <seealso cref="T:DatasetReadWrite.MemoryRecord" />
+        </member>
+        <member name="F:DatasetReadWrite.HexRecord.Lines">
+            <summary>
+            The lines of this record.
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.HexRecord.ToString(System.Int32)">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <param name="line_size">The line_size.</param>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:DatasetReadWrite.HexRecord.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.HexRecord"/> class.
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.HexRecord.#ctor(System.IO.StreamReader)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.HexRecord"/> class.
+            </summary>
+            <param name="sr">The sr.</param>
+        </member>
+        <member name="T:DatasetReadWrite.HexRecordLine">
+            <summary>
+            Represents a line of a Intel Hex file.
+            </summary>
+            <seealso cref="T:DatasetReadWrite.RecordLine" />
+        </member>
+        <member name="F:DatasetReadWrite.HexRecordLine.recordType">
+            <summary>
+            The record type
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.HexRecordLine.RecordType">
+            <summary>
+            Gets or sets the type of the record.
+            </summary>
+            <value>
+            The type of the record.
+            </value>
+        </member>
+        <member name="M:DatasetReadWrite.HexRecordLine.UpdateChecksum">
+            <summary>
+            Updates the checksum.
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.HexRecordLine.#ctor(DatasetReadWrite.HexRecordTypeDef)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.HexRecordLine"/> class.
+            </summary>
+            <param name="record_type">The record_type.</param>
+        </member>
+        <member name="M:DatasetReadWrite.HexRecordLine.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.HexRecordLine"/> class.
+            </summary>
+            <param name="line">The line.</param>
+        </member>
+        <member name="M:DatasetReadWrite.HexRecordLine.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:DatasetReadWrite.HexRecordLine.EndBlockLine">
+            <summary>
+            Get the end block line.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DatasetReadWrite.HexRecordTypeDef">
+            <summary>
+            Intel HEX has six standard record types.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.HexRecordTypeDef.DATA_RECORD">
+            <summary>
+            Contains data and a 16-bit starting address for the data. 
+            The byte count specifies number of data bytes in the record. 
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.HexRecordTypeDef.END_OF_FILE_RECORD">
+            <summary>
+            Must occur exactly once per file in the last line of the file. 
+            The data field is empty (thus byte count is 00) and the address field is typically 0000.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.HexRecordTypeDef.EXTENDED_SEGMENT_ADDRESS">
+            <summary>
+            The data field contains a 16-bit segment base address (thus byte count is 02) compatible with 80x86 real mode addressing. 
+            The address field (typically 0000) is ignored. 
+            The segment address from the most recent 02 record is multiplied by 16 and added to each subsequent data record address to form the physical starting address for the data. 
+            This allows addressing up to one megabyte of address space.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.HexRecordTypeDef.START_SEGMENT_ADDRESS">
+            <summary>
+            For 80x86 processors, specifies the initial content of the CS:IP registers. 
+            The address field is 0000, the byte count is 04, the first two bytes are the CS value, the latter two are the IP value.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.HexRecordTypeDef.EXTENDED_LINEAR_ADDRESS">
+            <summary>
+            Allows for 32 bit addressing (up to 4GiB). 
+            The address field is ignored (typically 0000) and the byte count is always 02. 
+            The two encoded, big endian data bytes specify the upper 16 bits of the 32 bit absolute address for all subsequent type 00 records; these upper address bits apply until the next 04 record. If no type 04 record precedes a 00 record, the upper 16 address bits default to 0000. The absolute address for a type 00 record is formed by combining the upper 16 address bits of the most recent 04 record with the low 16 address bits of the 00 record.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.HexRecordTypeDef.START_LINEAR_ADDRESS">
+            <summary>
+            The address field is 0000 (not used) and the byte count is 04. 
+            The four data bytes represent the 32-bit value loaded into the EIP register of the 80386 and higher CPU
+            </summary>
+        </member>
+        <member name="T:DatasetReadWrite.ListChangeEventArgs">
+            <summary>
+            Arguments of the ListChange event
+            </summary>
+        </member>
+        <member name="T:DatasetReadWrite.ListChangeEventArgs.ListChangeType">
+            <summary>
+            Represent the types of changes that can occur.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.ListChangeEventArgs.ListChangeType.Added">
+            <summary>
+            The added
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.ListChangeEventArgs.ListChangeType.Changed">
+            <summary>
+            The changed
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.ListChangeEventArgs.ListChangeType.Removed">
+            <summary>
+            The removed
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.ListChangeEventArgs.#ctor(System.Int32,System.Object,DatasetReadWrite.ListChangeEventArgs.ListChangeType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.ListChangeEventArgs"/> class.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="item">The item.</param>
+            <param name="change">The change.</param>
+        </member>
+        <member name="P:DatasetReadWrite.ListChangeEventArgs.Index">
+            <summary>
+            Index of the item changed (Removed, Updated or Added to the list)
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.ListChangeEventArgs.Item">
+            <summary>
+            Item Changed (Removed, Updated or Added to the list)
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.ListChangeEventArgs.Change">
+            <summary>
+            Type of the change
+            </summary>
+        </member>
+        <member name="T:DatasetReadWrite.ListChangedEventHandler">
+            <summary>
+            Public delegate for list changed events.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:DatasetReadWrite.ListChangeEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:DatasetReadWrite.ListEvent`1">
+            <summary>
+            A List that generate an event every time that the list changes
+            Any type of change, Removing, Inserting, Updating and Adding will generate a ListChanged event
+            </summary>
+            <typeparam name="T">Type of the objects in the list</typeparam>
+        </member>
+        <member name="E:DatasetReadWrite.ListEvent`1.ListChanged">
+            <summary>
+            Occurs when [list changed].
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.ListEvent`1.OnListChanged(DatasetReadWrite.ListChangeEventArgs)">
+            <summary>
+            Raises the <see cref="E:ListChanged" /> event.
+            </summary>
+            <param name="e">The <see cref="T:DatasetReadWrite.ListChangeEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:DatasetReadWrite.ListEvent`1.Item(System.Int32)">
+            <summary>
+            Gets or sets this object at the specified index.
+            </summary>
+            <value>
+            The object.
+            </value>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.ListEvent`1.Add(`0)">
+            <summary>
+            Adds an object to the end of the <see cref="T:System.Collections.Generic.List`1" />.
+            </summary>
+            <param name="item">The object to be added to the end of the <see cref="T:System.Collections.Generic.List`1" />. The value can be null for reference types.</param>
+        </member>
+        <member name="M:DatasetReadWrite.ListEvent`1.Insert(System.Int32,`0)">
+            <summary>
+            Inserts an element into the <see cref="T:System.Collections.Generic.List`1" /> at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which <paramref name="item" /> should be inserted.</param>
+            <param name="item">The object to insert. The value can be null for reference types.</param>
+        </member>
+        <member name="M:DatasetReadWrite.ListEvent`1.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index of the <see cref="T:System.Collections.Generic.List`1" />.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+        </member>
+        <member name="T:DatasetReadWrite.MemoryRecord">
+            <summary>
+            Represents a Memory Record type. Provides methods to Fill, Merge and Trim the data.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.MemoryRecord.data">
+            <summary>
+            Data from the Data Blocks in the SRecord
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.MemoryRecord.Data">
+            <summary>
+            Get or Set the Hex Data from this memory record
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.GetStartAddress">
+            <summary>
+            Gets the start address.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.CalculateDataCrc32(System.UInt32)">
+            <summary>
+            Calculates the data CRC32.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.CalculateDataCrc16(System.UInt16)">
+            <summary>
+            Calculates the data CRC16.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.ListValue">
+            <summary>
+            List all Values in HexData array in Address order
+            </summary>
+            <returns>Byte Array of Values in Data</returns>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.FillData(System.Byte[],System.UInt32)">
+            <summary>
+            Insert Data values with a start address to fill
+            </summary>
+            <param name="data_values"></param>
+            <param name="start_address"></param>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.FillData(System.Byte,System.UInt32,System.UInt32)">
+            <summary>
+            Fills the data starting from the given address with the same data byte.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="startAddress">The start address.</param>
+            <param name="endAddress">The end address.</param>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.TrimData(System.Int32)">
+            <summary>
+            Trim the Data on specified size
+            </summary>
+            <param name="size"></param>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.MergeMemoryRecords(DatasetReadWrite.MemoryRecord)">
+            <summary>
+            Merge 2 memory records by replacing or adding data to actual memory record data
+            If the memoryToMerge fall in the same address of the old data
+            the old data get replaced by the memoryToMerge data
+            </summary>
+            <param name="memoryToMerge">Memory to be merged on actual data</param>
+            <returns>return true if addresses was overwritten</returns>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.FillAddressGapsOnData(System.Byte)">
+            <summary>
+            Fill the empty spaces between addresses with given Value
+            </summary>
+            <param name="value">Value to fill the gaps</param>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.RemoveAddressGapsOnData">
+            <summary>
+            Remove the Gaps on the Address in the Data by sitting them next to each other
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.ToString">
+            <summary>
+            Return the MemoryRecord Data with 16 bytes of data in each line
+            The format is based on the child record type
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.ToString(System.Int32)">
+            <summary>
+            Return the MemoryRecord Data with line_size bytes of data in each line
+            The format is based on the child record type
+            </summary>
+            <param name="line_size">Size in bytes of each line</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.FixEndianess(System.Byte[],System.Boolean)">
+            <summary>
+            Fix the endianess of bytes sequence to use the bit converter
+            </summary>
+            <param name="bytes">Bytes to be converted</param>
+            <param name="isLittleEndian">true if the bytes are in a little endian sequence</param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            An enumerator that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:DatasetReadWrite.MemoryRecord.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator"></see> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="P:DatasetReadWrite.MemoryRecord.Item(System.UInt32)">
+            <summary>
+            Gets or sets the <see cref="T:System.Byte"/> with the specified address.
+            </summary>
+            <value>
+            The <see cref="T:System.Byte"/>.
+            </value>
+            <param name="address">The address.</param>
+            <returns></returns>
+        </member>
+        <member name="P:DatasetReadWrite.MemoryRecord.HaveSpecialLines">
+            <summary>
+            Indicates that this MemoryRecord was loaded from a file and contains special lines that is not regular Data.
+            </summary>
+        </member>
+        <member name="T:DatasetReadWrite.RecordFile">
+            <summary>
+            Represents a file that contains a memory record.
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.RecordFile.GetExtension(DatasetReadWrite.RecordFile.RecordType)">
+            <summary>
+            Get the default extension for a given type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.RecordFile.GetExtension">
+            <summary>
+            Get the default extension for this record file Record Type
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DatasetReadWrite.RecordFile.PreferredLineSize">
+            <summary>
+            Line Size Type on preferred sizes on lines
+            </summary>
+        </member>
+        <member name="T:DatasetReadWrite.RecordFile.RecordType">
+            <summary>
+            File Record Typedef
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.RecordFile.RecordType.INTEL_HEX">
+            <summary>
+            Intel Hex file type (lines starts with ':')
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.RecordFile.RecordType.MOTOROLA_SREC">
+            <summary>
+            Motorola SRecord file type (lines starts with 's')
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.RecordFile.RecordType.BINARY">
+            <summary>
+            Binary File Type (contiguous binary bytes)
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.RecordFile.FileRecordType">
+            <summary>
+            Record file type
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.RecordFile.isS19">
+            <summary>
+            Return if is s19 file type
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.RecordFile.isBinary">
+            <summary>
+            Return if is binary file type
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.RecordFile.MemoryRecord">
+            <summary>
+            Memory Record in the file
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.RecordFile.#ctor(System.IO.Stream)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.RecordFile" /> class.
+            Set the file record as s19.
+            </summary>
+            <param name="dataStream">The data stream.</param>
+        </member>
+        <member name="M:DatasetReadWrite.RecordFile.#ctor(System.IO.Stream,System.Boolean)">
+            <summary>
+            Create a new RecordFile using the given file path
+            </summary>
+            <param name="dataStream">The data stream.</param>
+            <param name="isBinary">if set to <c>true</c> [is binary].</param>
+        </member>
+        <member name="M:DatasetReadWrite.RecordFile.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            Create a empty RecordFile
+            MemoryRecord can be filled after
+            </summary>
+            <param name="line_size"></param>
+            <param name="isS19"></param>
+        </member>
+        <member name="M:DatasetReadWrite.RecordFile.#ctor(System.Int32,DatasetReadWrite.RecordFile.RecordType)">
+            <summary>
+            Create a empty RecordFile
+            MemoryRecord can be filled after
+            </summary>
+            <param name="line_size"></param>
+            <param name="recType"></param>
+        </member>
+        <member name="M:DatasetReadWrite.RecordFile.SaveRecord(System.IO.Stream)">
+            <summary>
+            Save the MemoryRecord into a Stream
+            </summary>
+            <param name="dataStream">path to save the file</param>
+        </member>
+        <member name="M:DatasetReadWrite.RecordFile.SaveRecord(System.IO.Stream,System.Int32)">
+            <summary>
+            Save the MemoryRecord into a file trimming to a file size
+            </summary>
+            <param name="dataStream">The data stream.</param>
+            <param name="trim_position">trim to the end position</param>
+        </member>
+        <member name="T:DatasetReadWrite.RecordLine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.RecordLine.data">
+            <summary>
+            The data
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.RecordLine.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="F:DatasetReadWrite.RecordLine.byteCount">
+            <summary>
+            The byte count
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.RecordLine.ByteCount">
+            <summary>
+            Gets or sets the byte count.
+            </summary>
+            <value>
+            The byte count.
+            </value>
+        </member>
+        <member name="F:DatasetReadWrite.RecordLine.address">
+            <summary>
+            The address
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.RecordLine.Address">
+            <summary>
+            Gets or sets the address.
+            </summary>
+            <value>
+            The address.
+            </value>
+        </member>
+        <member name="P:DatasetReadWrite.RecordLine.Checksum">
+            <summary>
+            Gets or sets the checksum.
+            </summary>
+            <value>
+            The checksum.
+            </value>
+        </member>
+        <member name="P:DatasetReadWrite.RecordLine.CalcChecksum">
+            <summary>
+            Gets or sets the calculate checksum.
+            </summary>
+            <value>
+            The calculate checksum.
+            </value>
+        </member>
+        <member name="P:DatasetReadWrite.RecordLine.IsDataValid">
+            <summary>
+            Gets or sets a value indicating whether this instance is data valid.
+            </summary>
+            <value>
+            <c>true</c> if this instance is data valid; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:DatasetReadWrite.RecordLine.DataChanged(System.Object,DatasetReadWrite.ListChangeEventArgs)">
+            <summary>
+            Datas the changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:DatasetReadWrite.ListChangeEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:DatasetReadWrite.RecordLine.UpdateChecksum">
+            <summary>
+            Updates the checksum.
+            </summary>
+        </member>
+        <member name="T:DatasetReadWrite.SRecord">
+            <summary>
+            Represent a S19/S28/S37 Motorola Memory Record type
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.SRecord.Lines">
+            <summary>
+            Lines of this Memory Record
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.SRecord.ToString(System.Int32)">
+            <summary>
+            Returns the String/File representation of the Data inside this memory record
+            </summary>
+            <param name="line_size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DatasetReadWrite.SRecord.#ctor">
+            <summary>
+            Initialize a SRecord without any Line or Data
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.SRecord.#ctor(System.IO.StreamReader)">
+            <summary>
+            Initialize a SRecord with the specified stream
+            </summary>
+            <param name="sr"></param>
+        </member>
+        <member name="T:DatasetReadWrite.SRecordLine">
+            <summary>
+            Represent a Motorola Srecord line.
+            </summary>
+            <seealso cref="T:DatasetReadWrite.RecordLine" />
+        </member>
+        <member name="P:DatasetReadWrite.SRecordLine.RecordType">
+            <summary>
+            Gets or sets the type of the record.
+            </summary>
+            <value>
+            The type of the record.
+            </value>
+        </member>
+        <member name="F:DatasetReadWrite.SRecordLine.addressSize">
+            <summary>
+            Size of the Address field
+            </summary>
+        </member>
+        <member name="P:DatasetReadWrite.SRecordLine.AddressSize">
+            <summary>
+            Gets the size of the address.
+            </summary>
+            <value>
+            The size of the address.
+            </value>
+        </member>
+        <member name="M:DatasetReadWrite.SRecordLine.UpdateChecksum">
+            <summary>
+            Update Checksum method for SRecord lines
+            </summary>
+        </member>
+        <member name="M:DatasetReadWrite.SRecordLine.#ctor(DatasetReadWrite.SRecordTypeDef)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.SRecordLine"/> class.
+            </summary>
+            <param name="record_type">The record_type.</param>
+        </member>
+        <member name="M:DatasetReadWrite.SRecordLine.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DatasetReadWrite.SRecordLine"/> class.
+            </summary>
+            <param name="line">The line.</param>
+        </member>
+        <member name="M:DatasetReadWrite.SRecordLine.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:DatasetReadWrite.SRecordLine.EndBlockLine(DatasetReadWrite.SRecordTypeDef)">
+            <summary>
+            Get the end block line.
+            </summary>
+            <param name="end_block_type">The end_block_type.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DatasetReadWrite.SRecordTypeDef">
+            <summary>
+            The following table describes 10 possible S-records. 
+            S4 is reserved and not currently defined. 
+            S6 was originally reserved but was later redefined at some point.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.SRecordTypeDef.BLOCK_HEADER">
+            <summary>
+            This record contains vendor specific ASCII text represented as a series of hex digit pairs. 
+            It is common to see the data for this record in the format of a null-terminated string. The text data can be anything including a mixture of the following information: file/module name, version/revision number, date/time, product name, vendor name, memory designator on PCB, copyright notice.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.SRecordTypeDef.DATA_BLOCK_16BITS">
+            <summary>
+            This record contains data that starts at the 16-bit address field.
+            This record is typically used for 8-bit microcontrollers, such as AVR, PIC, 8051, 68xx, 6502, 80xx, Z80. 
+            The number of bytes of data contained in this record is "Byte Count Field" minus 3, which is 2 bytes for "16-bit Address Field" and 1 byte for "Checksum Field".
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.SRecordTypeDef.DATA_BLOCK_24BITS">
+            <summary>
+            This record contains data that starts at a 24-bit address.
+            The number of bytes of data contained in this record is "Byte Count Field" minus 4, which is 3 bytes for "24-bit Address Field" and 1 byte for "Checksum Field".
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.SRecordTypeDef.DATA_BLOCK_32BITS">
+            <summary>
+            This record contains data that starts at a 32-bit address.
+            This record is typically used for 32-bit microcontrollers, such as ARM and 680x0. The number of bytes of data contained in this record is "Byte Count Field" minus 5, which is 4 bytes for "32-bit Address Field" and 1 byte for "Checksum Field".
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.SRecordTypeDef.RECORD_COUNT">
+            <summary>
+            This optional record contains a 16-bit count of S1 / S2 / S3 records. 
+            This record is used if the record count is less than or equal to 65,535 (0xFFFF), otherwise S6 record would be used.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.SRecordTypeDef.RECORD_COUNT_3B">
+            <summary>
+            This optional record contains a 24-bit count of S1 / S2 / S3 records. 
+            This record is used if the record count is less than or equal to 16,777,215 (0xFFFFFF). 
+            If less than 65,536 (0x010000), then S5 record would be used. NOTE: This newer record is the most recent change (not sure if official).
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.SRecordTypeDef.END_OF_BLOCK_4B">
+            <summary>
+            This record contains the starting execution location at a 32-bit address.
+            This is used to terminate a series of S3 records. 
+            If a SREC file is only used to program a memory device and the execution location is ignored, then an address of zero could be used.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.SRecordTypeDef.END_OF_BLOCK_3B">
+            <summary>
+            This record contains the starting execution location at a 32-bit address.
+            This is used to terminate a series of S2 records. 
+            If a SREC file is only used to program a memory device and the execution location is ignored, then an address of zero could be used.
+            </summary>
+        </member>
+        <member name="F:DatasetReadWrite.SRecordTypeDef.END_OF_BLOCK_2B">
+            <summary>
+            This record contains the starting execution location at a 32-bit address.
+            This is used to terminate a series of S1 records. 
+            If a SREC file is only used to program a memory device and the execution location is ignored, then an address of zero could be used.
+            </summary>
+        </member>
+    </members>
+</doc>

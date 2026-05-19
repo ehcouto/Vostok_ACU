@@ -1,0 +1,1651 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:27
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Application/all/Mode/Mode.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Mode.lst -o
+#        obj\Mode.obj source/XCategory/Application/all/Mode/Mode.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Mode.lst
+#    Object file  =  obj\Mode.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Application\all\Mode\Mode.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      This module controls the overall mode (state) of the appliance
+      5           *
+      6           *  @details
+      7          
+      8              @startuml {SubMode_state_machine.jpg}
+      9                  title SubMode State Machine
+     10          
+     11                  State Initialize
+     12                  State SubModeNormalSupervisor
+     13                  State SubModeError
+     14                  State SubModeNormalExtControlEntering
+     15                  State SubModeNormalExtControlEngaged
+     16          
+     17          
+     18                  [*] --> Initialize
+     19          
+     20                  Initialize : do /\t HandleRequestedSubMode()
+     21                  Initialize --> SubModeNormalSupervisor : evReqSubModeSupervisor \n [IsReqSubModeInitialize()]
+     22                  Initialize --> SubModeError : evReqSubModeError \n [IsReqSubModeError()]
+     23          
+     24                  SubModeNormalSupervisor : enter /\t SetReqSubModeNone() \n\t\t PublishMode()
+     25                  SubModeNormalSupervisor : do /\t HandleRequestedSubMode()
+     26                  SubModeNormalSupervisor --> SubModeError                    : evReqSubModeError
+     27                  SubModeNormalSupervisor --> SubModeNormalExtControlEntering : evReqSubModeExtControlEntering \n/ StartTimer()
+     28                  SubModeNormalSupervisor --> SubModeNormalSupervisor         : evReqSubModeSupervisor
+     29          
+     30                  SubModeNormalExtControlEntering : do /\t VerifyEnteringTimerIsRunning() \n\t HandleRequestedSubMode()
+     31                  SubModeNormalExtControlEntering --> SubModeNormalExtControlEngaged  : evReqSubModeExtControlEngaged
+     32                  SubModeNormalExtControlEntering --> SubModeNormalSupervisor         : evReqSubModeSupervisor
+     33                  SubModeNormalExtControlEntering --> SubModeNormalSupervisor         : evTimerExpired
+     34          
+     35                  SubModeNormalExtControlEngaged : enter /\t StartTimer() \n\t\t PublishMode()
+     36                  SubModeNormalExtControlEngaged : do /\t VerifyEngagedTimerIsRunning() \n\t HandleRequestedSubMode()
+     37                  SubModeNormalExtControlEngaged : exit
+     38                  SubModeNormalExtControlEngaged --> SubModeNormalSupervisor  : evReqSubModeSupervisor
+     39                  SubModeNormalExtControlEngaged --> SubModeNormalSupervisor  : evTimerExpired
+     40          
+     41              @enduml
+     42          
+     43           *
+     44           *  @copyright  Copyright 2015-$Date: 2015/08/06 16:33:50EDT $. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     45           */
+     46          //---------------------------------------------------------------------------------------------------------------------
+     47          //---------------------------------------------------------------------------------------------------------------------
+     48          
+     49          //-------------------------------------- Include Files ----------------------------------------------------------------
+     50          #include "SystemConfig.h"
+     51          
+     52          #include "API011AppCtrl.h"
+     53          #include "Millis.h"
+     54          #include "Mode.h"
+     55          #include "SRMicro.h"
+     56          
+     57          //=====================================================================================================================
+     58          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Sub Mode State Machine
+     59          //=====================================================================================================================
+     60          // !! StateEngineCrank cannot update this code if you change the header !!
+     61          
+     62          
+     63          //! Unique names used to identify states of the Sub Mode state machine.
+     64          typedef enum SUB_MODE_STATE_ENUM
+     65          {
+     66              STATE_SUB_MODE_NONE                        = 0,
+     67          
+     68              STATE_SUB_MODE_INITIALIZE                  = 1, //!< (initial_state)
+     69              STATE_SUB_MODE_NORMAL_SUPERVISOR           = 2,
+     70              STATE_SUB_MODE_ERROR                       = 3,
+     71              STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENTERING = 4,
+     72              STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENGAGED  = 5,
+     73          
+     74              STATE_SUB_MODE_END                         = 6
+     75          } SUB_MODE_STATE_TYPE;
+     76          
+     77          //! The state variable for the Sub Mode state machine.
+     78          //! State machines with a history pseudostate may write to this variable during initialization.
+     79          //! Other state machines must only write to this variable through auto-generated functions.
+
+   \                                 In section .bss, align 1
+     80          static SUB_MODE_STATE_TYPE Sub_Mode_State;
+   \                     Sub_Mode_State:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 1
+   \   00000002                      DS8 1
+   \   00000003                      DS8 1
+   \   00000004                      DS8 1
+   \   00000005                      DS8 1
+     81          
+     82          //! The transition variable for the Sub Mode state machine.
+     83          //! Flag used by the state machine to track when a transition occurs in the middle of a state's
+     84          //! Entry() or Do() action that contains more than one function.
+     85          static BOOL_TYPE Sub_Mode_Transitioned;
+     86          
+     87          // -- Private Function Prototypes used by the state machine for customization functions --
+     88          static void HandleRequestedSubMode(void);
+     89          static BOOL_TYPE IsReqSubModeError(void);
+     90          static BOOL_TYPE IsReqSubModeInitialize(void);
+     91          static void PublishMode(void);
+     92          static void SetReqSubModeNone(void);
+     93          static void StartTimer(void);
+     94          static void VerifyEngagedTimerIsRunning(void);
+     95          static void VerifyEnteringTimerIsRunning(void);
+     96          
+     97          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+     98          static void EventReqSubModeError(void);
+     99          static void EventReqSubModeExtControlEngaged(void);
+    100          static void EventReqSubModeExtControlEntering(void);
+    101          static void EventReqSubModeSupervisor(void);
+    102          static void EventTimerExpired(void);
+    103          static void SubModeExecute(void);
+    104          static void SubModeInitialize(void);
+    105          
+    106          // !! StateEngineCrank cannot update this code if you change the footer !!
+    107          // End of StateEngineCrank Auto-Generated Code.
+    108          
+    109          
+    110          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    111          
+    112          //! SubMode that is used only in the core.  Not defined in SUBMODE_TYPE because it is not needed in the API.
+    113          #define SUBMODE_NONE    ((SUBMODE_TYPE)(SUBMODE_NORMAL_EXT_CONTROL_ENGAGED + 1))
+    114          
+    115          //! time out for keeping the SUBMODE_NORMAL_EXT_CONTROL_ENTERING active
+    116          #define SUB_MODE_EXT_ENTERING_TIMEOUT   (5000)
+    117          
+    118          //! time out for keeping the SUBMODE_NORMAL_EXT_CONTROL_ENGAGED active
+    119          #define SUB_MODE_EXT_ENGAGED_TIMEOUT    (30000)
+    120          
+    121          static MODE_TYPE Mode;
+    122          static MODE_TYPE Remote_Mode;
+    123          static uint8 N_Mode;
+    124          static SUBMODE_TYPE Requested_Sub_Mode;
+
+   \                                 In section .bss, align 4
+    125          static MILLIS_TIMER_TYPE Timer_PC_Control_Handle;
+   \                     Timer_PC_Control_Handle:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 1
+    126          static SUBMODE_TYPE Remote_SubMode;
+   \                     Remote_SubMode:
+   \   00000000                      DS8 1
+    127          
+    128          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    129          
+    130          //=====================================================================================================================
+    131          //-------------------------------------- Public Functions -------------------------------------------------------------
+    132          //=====================================================================================================================
+    133          
+    134          //---------------------------------------------------------------------------------------------------------------------
+    135          /**
+    136           *  @brief      It Initializes the module Mode and its variables
+    137           *
+    138           */
+
+   \                                 In section .text, align 2, keep-with-next
+    139          void Mode__Initialize(void)
+    140          {
+   \                     Mode__Initialize: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    141              Remote_Mode = MODE_NORMAL;
+   \   00000002   0x....             LDR      R4,??DataTable25
+   \   00000004   0x2500             MOVS     R5,#+0
+   \   00000006   0x70E5             STRB     R5,[R4, #+3]
+    142          
+    143              if ((Mode > MODE_LOWPOWER) ||
+    144                  (N_Mode != ((uint8)(~Mode))) ||
+    145                  (SRMicro__GetResetMode() == MICRO_RESET_MODE_COLD) ||
+    146                  (Sub_Mode_State == STATE_SUB_MODE_NONE))
+   \   00000008   0x78A0             LDRB     R0,[R4, #+2]
+   \   0000000A   0x2804             CMP      R0,#+4
+   \   0000000C   0xDA0B             BGE      ??Mode__Initialize_0
+   \   0000000E   0x7921             LDRB     R1,[R4, #+4]
+   \   00000010   0x43C2             MVNS     R2,R0
+   \   00000012   0xB2D2             UXTB     R2,R2
+   \   00000014   0x4291             CMP      R1,R2
+   \   00000016   0xD106             BNE      ??Mode__Initialize_0
+   \   00000018   0x.... 0x....      BL       Micro__GetResetMode
+   \   0000001C   0x2800             CMP      R0,#+0
+   \   0000001E   0xD002             BEQ      ??Mode__Initialize_0
+   \   00000020   0x7820             LDRB     R0,[R4, #+0]
+   \   00000022   0x2800             CMP      R0,#+0
+   \   00000024   0xD105             BNE      ??Mode__Initialize_1
+    147              {
+    148                  Mode = MODE_NORMAL;
+   \                     ??Mode__Initialize_0: (+1)
+   \   00000026   0x70A5             STRB     R5,[R4, #+2]
+    149                  N_Mode = (uint8)(~MODE_NORMAL);
+   \   00000028   0x20FF             MOVS     R0,#+255
+   \   0000002A   0x7120             STRB     R0,[R4, #+4]
+    150                  Requested_Sub_Mode = SUBMODE_NORMAL_INITIALIZE;
+   \   0000002C   0x7165             STRB     R5,[R4, #+5]
+    151                  SubModeInitialize();
+   \   0000002E   0x.... 0x....      BL       SubModeInitialize
+    152              }
+    153          }
+   \                     ??Mode__Initialize_1: (+1)
+   \   00000032   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    154          
+    155          //---------------------------------------------------------------------------------------------------------------------
+    156          /**
+    157           * @brief   Sets the mode of the machine and causes a warm reset (except for MODE_SETTINGFILE_NOT_CONSISTENT)
+    158           * @param   mode: See MODE_TYPE
+    159           */
+
+   \                                 In section .text, align 2, keep-with-next
+    160          void Mode__SetMode(MODE_TYPE mode)
+    161          {
+    162              if (Mode != mode)
+   \                     Mode__SetMode: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable25
+   \   00000002   0x788A             LDRB     R2,[R1, #+2]
+   \   00000004   0x0003             MOVS     R3,R0
+   \   00000006   0x429A             CMP      R2,R3
+   \   00000008   0xD100             BNE      ??Mode__SetMode_0
+   \   0000000A   0x4770             BX       LR
+    163              {
+    164                  Mode = mode;
+   \                     ??Mode__SetMode_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x7088             STRB     R0,[R1, #+2]
+    165                  N_Mode = (uint8)(~mode);
+   \   00000010   0x43C2             MVNS     R2,R0
+   \   00000012   0x710A             STRB     R2,[R1, #+4]
+    166          
+    167                  if (mode != MODE_SETTINGFILE_NOT_CONSISTENT)
+   \   00000014   0x2802             CMP      R0,#+2
+   \   00000016   0xD002             BEQ      ??Mode__SetMode_1
+    168                  {
+    169                      SRMicro__ForceReset(MICRO_RESET_MODE_WARM);
+   \   00000018   0x2001             MOVS     R0,#+1
+   \   0000001A   0x.... 0x....      BL       Micro__ForceReset
+    170                  }
+    171              }
+    172          }
+   \                     ??Mode__SetMode_1: (+1)
+   \   0000001E   0xBD01             POP      {R0,PC}          ;; return
+    173          
+    174          //---------------------------------------------------------------------------------------------------------------------
+    175          /**
+    176           *
+    177           * @param mode
+    178           * @param sub_mode
+    179           */
+
+   \                                 In section .text, align 2, keep-with-next
+    180          void Mode__SetModeExtended(MODE_TYPE mode, SUBMODE_TYPE sub_mode)
+    181          {
+   \                     Mode__SetModeExtended: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    182              if (Mode != mode)
+   \   00000002   0x....             LDR      R2,??DataTable25
+   \   00000004   0x7893             LDRB     R3,[R2, #+2]
+   \   00000006   0x0004             MOVS     R4,R0
+   \   00000008   0x42A3             CMP      R3,R4
+   \   0000000A   0xD009             BEQ      ??Mode__SetModeExtended_0
+    183              {
+    184                  Mode = mode;
+   \   0000000C   0x7090             STRB     R0,[R2, #+2]
+    185                  N_Mode = (uint8)(~mode);
+   \   0000000E   0x43C3             MVNS     R3,R0
+   \   00000010   0x7113             STRB     R3,[R2, #+4]
+    186                  Requested_Sub_Mode = sub_mode;
+   \   00000012   0x7151             STRB     R1,[R2, #+5]
+    187                  if (mode != MODE_SETTINGFILE_NOT_CONSISTENT)
+   \   00000014   0x2802             CMP      R0,#+2
+   \   00000016   0xD004             BEQ      ??Mode__SetModeExtended_1
+    188                  {
+    189                      SRMicro__ForceReset(MICRO_RESET_MODE_WARM);
+   \   00000018   0x2001             MOVS     R0,#+1
+   \   0000001A   0x.... 0x....      BL       Micro__ForceReset
+   \   0000001E   0xBD10             POP      {R4,PC}
+    190                  }
+    191              }
+    192              else
+    193              {
+    194                  Requested_Sub_Mode = sub_mode;
+   \                     ??Mode__SetModeExtended_0: (+1)
+   \   00000020   0x7151             STRB     R1,[R2, #+5]
+    195              }
+    196          }
+   \                     ??Mode__SetModeExtended_1: (+1)
+   \   00000022   0xBD10             POP      {R4,PC}          ;; return
+    197          
+    198          //---------------------------------------------------------------------------------------------------------------------
+    199          /**
+    200           * @brief   Get the current mode of the machine.
+    201           * @return  See MODE_TYPE.
+    202           */
+
+   \                                 In section .text, align 2, keep-with-next
+    203          MODE_TYPE Mode__GetMode(void)
+    204          {
+    205              return (Mode);
+   \                     Mode__GetMode: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable25
+   \   00000002   0x7880             LDRB     R0,[R0, #+2]
+   \   00000004   0x4770             BX       LR               ;; return
+    206          }
+    207          
+    208          //---------------------------------------------------------------------------------------------------------------------
+    209          /**
+    210           * @brief   Get the current sub-mode of the machine.
+    211           * @return  See SUBMODE_TYPE.
+    212           */
+
+   \                                 In section .text, align 4, keep-with-next
+    213          SUBMODE_TYPE Mode__GetSubMode(void)
+    214          {
+    215              static const SUBMODE_TYPE SUBMODE_STATE_MAP[] =
+    216              {
+    217                  SUBMODE_NORMAL_SUPERVISOR,              // STATE_SUB_MODE_NONE
+    218                  SUBMODE_NORMAL_SUPERVISOR,              // STATE_SUB_MODE_INITIALIZE
+    219                  SUBMODE_NORMAL_SUPERVISOR,              // STATE_SUB_MODE_NORMAL_SUPERVISOR
+    220                  SUBMODE_NORMAL_ERROR,                   // STATE_SUB_MODE_ERROR
+    221                  SUBMODE_NORMAL_EXT_CONTROL_ENTERING,    // STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENTERING
+    222                  SUBMODE_NORMAL_EXT_CONTROL_ENGAGED      // STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENGAGED
+    223              };
+    224              CT_ASSERT((sizeof(SUBMODE_STATE_MAP) / sizeof(SUBMODE_TYPE)) == STATE_SUB_MODE_END);
+    225              return (SUBMODE_STATE_MAP[Sub_Mode_State]);
+   \                     Mode__GetSubMode: (+1)
+   \   00000000   0x....             ADR.N    R0,`Mode__GetSubMode::SUBMODE_STATE_MAP`
+   \   00000002   0x....             LDR      R1,??DataTable25
+   \   00000004   0x7809             LDRB     R1,[R1, #+0]
+   \   00000006   0x5C40             LDRB     R0,[R0, R1]
+   \   00000008   0x4770             BX       LR               ;; return
+    226          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     `Mode__GetSubMode::SUBMODE_STATE_MAP`:
+   \   00000000   0x01 0x01          DC8 1, 1, 1, 2, 3, 4, 0, 0
+   \              0x01 0x02    
+   \              0x03 0x04    
+   \              0x00 0x00    
+    227          
+    228          //---------------------------------------------------------------------------------------------------------------------
+    229          /**
+    230           * @brief   Background tasks for the module.
+    231           */
+
+   \                                 In section .text, align 2, keep-with-next
+    232          void Mode__Handler(void)
+    233          {
+   \                     Mode__Handler: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    234              switch (Mode)
+   \   00000002   0x....             LDR      R0,??DataTable25
+   \   00000004   0x7880             LDRB     R0,[R0, #+2]
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD003             BEQ      ??Mode__Handler_0
+   \   0000000A   0x1E40             SUBS     R0,R0,#+1
+   \   0000000C   0x2802             CMP      R0,#+2
+   \   0000000E   0xD906             BLS      ??Mode__Handler_1
+   \   00000010   0xE002             B        ??Mode__Handler_2
+    235              {
+    236                  case MODE_NORMAL:
+    237                      SubModeExecute();
+   \                     ??Mode__Handler_0: (+1)
+   \   00000012   0x.... 0x....      BL       SubModeExecute
+    238                      break;
+   \   00000016   0xBD01             POP      {R0,PC}
+    239                  case MODE_PROGRAMMING:
+    240                  case MODE_SETTINGFILE_NOT_CONSISTENT:
+    241                  case MODE_LOWPOWER:
+    242                      #if (SYSTEM_ACU_HANDLING == DISABLED) && (SYSTEM_HMI_HANDLING == DISABLED)
+    243                          // Modes not handled on a pure expansion board
+    244                          SubModeInitialize();
+    245                      #endif
+    246                      break;
+    247                  default:
+    248                      SRMicro__ForceReset(MICRO_RESET_MODE_COLD);
+   \                     ??Mode__Handler_2: (+1)
+   \   00000018   0x2000             MOVS     R0,#+0
+   \   0000001A   0x.... 0x....      BL       Micro__ForceReset
+    249                      break;
+    250              }
+    251          }
+   \                     ??Mode__Handler_1: (+1)
+   \   0000001E   0xBD01             POP      {R0,PC}          ;; return
+    252          
+    253          //---------------------------------------------------------------------------------------------------------------------
+    254          /**
+    255           *
+    256           * @param heartbeat_code
+    257           */
+
+   \                                 In section .text, align 2, keep-with-next
+    258          void Mode__SpecialHeartBeat(MODE_SPECIAL_HEARTBEAT_TYPE heartbeat_code)
+    259          {
+   \                     Mode__SpecialHeartBeat: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    260              if (Mode__IsPCControlEngaged() == TRUE)
+   \   00000002   0x.... 0x....      BL       Mode__IsPCControlEngaged
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD101             BNE      ??Mode__SpecialHeartBeat_0
+    261              {
+    262                  StartTimer();
+   \   0000000A   0x.... 0x....      BL       StartTimer
+    263              }
+    264          }
+   \                     ??Mode__SpecialHeartBeat_0: (+1)
+   \   0000000E   0xBD01             POP      {R0,PC}          ;; return
+    265          
+    266          //---------------------------------------------------------------------------------------------------------------------
+    267          /**
+    268           *  @brief  Determines if the Mode and Sub-Mode have the values that indicate the product is engaged in PC control
+    269           *  @return True if PC Control is engaged, else FALSE
+    270           */
+
+   \                                 In section .text, align 2, keep-with-next
+    271          BOOL_TYPE Mode__IsPCControlEngaged(void)
+    272          {
+   \                     Mode__IsPCControlEngaged: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    273              return (((Mode == MODE_NORMAL) && (Mode__GetSubMode() == SUBMODE_NORMAL_EXT_CONTROL_ENGAGED)) ? TRUE : FALSE);
+   \   00000002   0x....             LDR      R0,??DataTable25
+   \   00000004   0x7880             LDRB     R0,[R0, #+2]
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD105             BNE      ??Mode__IsPCControlEngaged_0
+   \   0000000A   0x.... 0x....      BL       Mode__GetSubMode
+   \   0000000E   0x2804             CMP      R0,#+4
+   \   00000010   0xD101             BNE      ??Mode__IsPCControlEngaged_0
+   \   00000012   0x2001             MOVS     R0,#+1
+   \   00000014   0xBD02             POP      {R1,PC}
+   \                     ??Mode__IsPCControlEngaged_0: (+1)
+   \   00000016   0x2000             MOVS     R0,#+0
+   \   00000018   0xBD02             POP      {R1,PC}          ;; return
+    274          }
+    275          
+    276          //---------------------------------------------------------------------------------------------------------------------
+    277          /**
+    278           * @brief This method exposes if the board is in programming allowed mode
+    279           * @return BOOL_TYPE
+    280           *    @retval TRUE - Programming allowed .
+    281           *    @retval FALSE - Programming not allowed .
+    282           */
+
+   \                                 In section .text, align 2, keep-with-next
+    283          BOOL_TYPE Mode__IsProgrammingEngaged(void)
+   \                     Mode__IsProgrammingEngaged: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable25
+   \   00000002   0x7880             LDRB     R0,[R0, #+2]
+   \   00000004   0x2801             CMP      R0,#+1
+   \   00000006   0xD001             BEQ      ??Mode__IsProgrammingEngaged_0
+   \   00000008   0x2802             CMP      R0,#+2
+   \   0000000A   0xD101             BNE      ??Mode__IsProgrammingEngaged_1
+   \                     ??Mode__IsProgrammingEngaged_0: (+1)
+   \   0000000C   0x2001             MOVS     R0,#+1
+   \   0000000E   0x4770             BX       LR
+   \                     ??Mode__IsProgrammingEngaged_1: (+1)
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x4770             BX       LR               ;; return
+    284          {
+    285              return (((Mode == MODE_PROGRAMMING) || (Mode == MODE_SETTINGFILE_NOT_CONSISTENT)) ? TRUE : FALSE);
+    286          }
+    287          
+    288          //---------------------------------------------------------------------------------------------------------------------
+    289          /**
+    290           *  @brief  Saves the remote mode
+    291           *  @param  mode: the remote mode to save
+    292           */
+
+   \                                 In section .text, align 2, keep-with-next
+    293          void Mode__SaveRemoteMode(MODE_TYPE mode)
+    294          {
+    295              Remote_Mode = mode;
+   \                     Mode__SaveRemoteMode: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable25
+   \   00000002   0x70C8             STRB     R0,[R1, #+3]
+    296          }
+   \   00000004   0x4770             BX       LR               ;; return
+    297          
+    298          //---------------------------------------------------------------------------------------------------------------------
+    299          /**
+    300           *  @brief  Get the current remote mode
+    301           *  @return Returns the current remote mode
+    302           */
+
+   \                                 In section .text, align 2, keep-with-next
+    303          MODE_TYPE Mode__GetRemoteMode(void)
+    304          {
+    305              return (Remote_Mode);
+   \                     Mode__GetRemoteMode: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable25
+   \   00000002   0x78C0             LDRB     R0,[R0, #+3]
+   \   00000004   0x4770             BX       LR               ;; return
+    306          }
+    307          
+    308          //---------------------------------------------------------------------------------------------------------------------
+    309          /**
+    310           *  @brief  Saves the remote Sub Mode
+    311           *  @param  submode: the Sub Mode to save
+    312           */
+
+   \                                 In section .text, align 2, keep-with-next
+    313          void Mode__SaveRemoteSubMode(SUBMODE_TYPE submode)
+    314          {
+    315              Remote_SubMode = submode;
+   \                     Mode__SaveRemoteSubMode: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable26
+   \   00000002   0x7008             STRB     R0,[R1, #+0]
+    316          }
+   \   00000004   0x4770             BX       LR               ;; return
+    317          
+    318          //---------------------------------------------------------------------------------------------------------------------
+    319          /**
+    320           *  @brief  Get the current remote Sub Mode
+    321           *  @return Returns the current remote Sub Mode
+    322           */
+
+   \                                 In section .text, align 2, keep-with-next
+    323          SUBMODE_TYPE Mode__GetRemoteSubMode(void)
+    324          {
+    325              return (Remote_SubMode);
+   \                     Mode__GetRemoteSubMode: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable26
+   \   00000002   0x7800             LDRB     R0,[R0, #+0]
+   \   00000004   0x4770             BX       LR               ;; return
+    326          }
+    327          
+    328          //=====================================================================================================================
+    329          //-------------------------------------- Private Functions ------------------------------------------------------------
+    330          //=====================================================================================================================
+    331          
+    332          //=====================================================================================================================
+    333          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    334          //=====================================================================================================================
+    335          
+    336          //---------------------------------------------------------------------------------------------------------------------
+    337          /**
+    338           *  Handles the static variable Requested_Sub_Mode.
+    339           */
+
+   \                                 In section .text, align 2, keep-with-next
+    340          static void HandleRequestedSubMode(void)
+    341          {
+   \                     HandleRequestedSubMode: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    342              switch ( Requested_Sub_Mode )
+   \   00000002   0x....             LDR      R0,??DataTable25
+   \   00000004   0x7940             LDRB     R0,[R0, #+5]
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD00F             BEQ      ??HandleRequestedSubMode_0
+   \   0000000A   0x2802             CMP      R0,#+2
+   \   0000000C   0xD004             BEQ      ??HandleRequestedSubMode_1
+   \   0000000E   0xD30C             BCC      ??HandleRequestedSubMode_0
+   \   00000010   0x2804             CMP      R0,#+4
+   \   00000012   0xD007             BEQ      ??HandleRequestedSubMode_2
+   \   00000014   0xD303             BCC      ??HandleRequestedSubMode_3
+   \   00000016   0xBD01             POP      {R0,PC}
+    343              {
+    344                  case SUBMODE_NORMAL_SUPERVISOR:
+    345                      EventReqSubModeSupervisor();
+    346                      break;
+    347                  case SUBMODE_NORMAL_ERROR:
+    348                      EventReqSubModeError();
+   \                     ??HandleRequestedSubMode_1: (+1)
+   \   00000018   0x.... 0x....      BL       EventReqSubModeError
+    349                      break;
+   \   0000001C   0xBD01             POP      {R0,PC}
+    350                  case SUBMODE_NORMAL_EXT_CONTROL_ENTERING:
+    351                      EventReqSubModeExtControlEntering();
+   \                     ??HandleRequestedSubMode_3: (+1)
+   \   0000001E   0x.... 0x....      BL       EventReqSubModeExtControlEntering
+    352                      break;
+   \   00000022   0xBD01             POP      {R0,PC}
+    353                  case SUBMODE_NORMAL_EXT_CONTROL_ENGAGED:
+    354                      EventReqSubModeExtControlEngaged();
+   \                     ??HandleRequestedSubMode_2: (+1)
+   \   00000024   0x.... 0x....      BL       EventReqSubModeExtControlEngaged
+    355                      break;
+   \   00000028   0xBD01             POP      {R0,PC}
+    356                  case SUBMODE_NORMAL_INITIALIZE:
+    357                      EventReqSubModeSupervisor();
+   \                     ??HandleRequestedSubMode_0: (+1)
+   \   0000002A   0x.... 0x....      BL       EventReqSubModeSupervisor
+    358                      break;
+    359                  default:
+    360                      // do nothing
+    361                      break;
+    362              }
+    363          }
+   \   0000002E   0xBD01             POP      {R0,PC}          ;; return
+    364          
+    365          
+    366          //---------------------------------------------------------------------------------------------------------------------
+    367          /**
+    368           *  Publishes the current Mode to Reveal.
+    369           */
+
+   \                                 In section .text, align 2, keep-with-next
+    370          static void PublishMode(void)
+    371          {
+   \                     PublishMode: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    372              API011AppCtrl__PubMode();   // Main ACU/HMI publishes mode change
+   \   00000002   0x.... 0x....      BL       API011AppCtrl__PubMode
+    373          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    374          
+    375          
+    376          //---------------------------------------------------------------------------------------------------------------------
+    377          /**
+    378           *
+    379           */
+
+   \                                 In section .text, align 2, keep-with-next
+    380          static void SetReqSubModeNone(void)
+    381          {
+    382              Requested_Sub_Mode = SUBMODE_NONE;
+   \                     SetReqSubModeNone: (+1)
+   \   00000000   0x2005             MOVS     R0,#+5
+   \   00000002   0x....             LDR      R1,??DataTable25
+   \   00000004   0x7148             STRB     R0,[R1, #+5]
+    383          }
+   \   00000006   0x4770             BX       LR               ;; return
+    384          
+    385          
+    386          //---------------------------------------------------------------------------------------------------------------------
+    387          /**
+    388           * @brief   Determines if the requested sub mode is ERROR or not
+    389           * @return  TRUE if the requested sub mode is ERROR, else FALSE
+    390           */
+
+   \                                 In section .text, align 2, keep-with-next
+    391          static BOOL_TYPE IsReqSubModeError(void)
+    392          {
+    393              return ((BOOL_TYPE)(Requested_Sub_Mode == SUBMODE_NORMAL_ERROR));
+   \                     IsReqSubModeError: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable25
+   \   00000002   0x7940             LDRB     R0,[R0, #+5]
+   \   00000004   0x2802             CMP      R0,#+2
+   \   00000006   0xD101             BNE      ??IsReqSubModeError_0
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x4770             BX       LR
+   \                     ??IsReqSubModeError_0: (+1)
+   \   0000000C   0x2000             MOVS     R0,#+0
+   \   0000000E   0x4770             BX       LR               ;; return
+    394          }
+    395          
+    396          
+    397          //---------------------------------------------------------------------------------------------------------------------
+    398          /**
+    399           * @brief   Determines if the requested sub mode is INITIALIZE or not
+    400           * @return  TRUE if the requested sub mode is INITIALIZE, else FALSE
+    401           */
+
+   \                                 In section .text, align 2, keep-with-next
+    402          static BOOL_TYPE IsReqSubModeInitialize(void)
+    403          {
+    404              return ((BOOL_TYPE)(Requested_Sub_Mode == SUBMODE_NORMAL_INITIALIZE));
+   \                     IsReqSubModeInitialize: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable25
+   \   00000002   0x7941             LDRB     R1,[R0, #+5]
+   \   00000004   0x1E48             SUBS     R0,R1,#+1
+   \   00000006   0x4180             SBCS     R0,R0,R0
+   \   00000008   0x0FC0             LSRS     R0,R0,#+31
+   \   0000000A   0x4770             BX       LR               ;; return
+    405          }
+    406          
+    407          //---------------------------------------------------------------------------------------------------------------------
+    408          /**
+    409           * @brief  Starts Millis timer.
+    410           */
+
+   \                                 In section .text, align 2, keep-with-next
+    411          static void StartTimer(void)
+    412          {
+   \                     StartTimer: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    413              Millis__Start(&Timer_PC_Control_Handle);
+   \   00000002   0x....             LDR      R0,??DataTable26_1
+   \   00000004   0x.... 0x....      BL       Millis__Start
+    414          }
+   \   00000008   0xBD01             POP      {R0,PC}          ;; return
+    415          
+    416          
+    417          //---------------------------------------------------------------------------------------------------------------------
+    418          /**
+    419           * Verifies the millis timer is reached timeout or not
+    420           */
+
+   \                                 In section .text, align 2, keep-with-next
+    421          static void VerifyEngagedTimerIsRunning(void)
+    422          {
+   \                     VerifyEngagedTimerIsRunning: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    423              if (Millis__ReachedTarget(&Timer_PC_Control_Handle, SUB_MODE_EXT_ENGAGED_TIMEOUT) != FALSE)
+   \   00000002   0x....             LDR      R1,??DataTable26_2  ;; 0x7530
+   \   00000004   0x....             LDR      R0,??DataTable26_1
+   \   00000006   0x.... 0x....      BL       Millis__ReachedTarget
+   \   0000000A   0x2800             CMP      R0,#+0
+   \   0000000C   0xD001             BEQ      ??VerifyEngagedTimerIsRunning_0
+    424              {
+    425                  EventTimerExpired();
+   \   0000000E   0x.... 0x....      BL       EventTimerExpired
+    426              }
+    427          }
+   \                     ??VerifyEngagedTimerIsRunning_0: (+1)
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+    428          
+    429          
+    430          //---------------------------------------------------------------------------------------------------------------------
+    431          /**
+    432           * Verifies the millis timer is reached timeout or not
+    433           */
+
+   \                                 In section .text, align 2, keep-with-next
+    434          static void VerifyEnteringTimerIsRunning(void)
+    435          {
+   \                     VerifyEnteringTimerIsRunning: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    436              if (Millis__ReachedTarget(&Timer_PC_Control_Handle, SUB_MODE_EXT_ENTERING_TIMEOUT) != FALSE)
+   \   00000002   0x....             LDR      R1,??DataTable26_3  ;; 0x1388
+   \   00000004   0x....             LDR      R0,??DataTable26_1
+   \   00000006   0x.... 0x....      BL       Millis__ReachedTarget
+   \   0000000A   0x2800             CMP      R0,#+0
+   \   0000000C   0xD001             BEQ      ??VerifyEnteringTimerIsRunning_0
+    437              {
+    438                  EventTimerExpired();
+   \   0000000E   0x.... 0x....      BL       EventTimerExpired
+    439              }
+    440          }
+   \                     ??VerifyEnteringTimerIsRunning_0: (+1)
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+    441          
+    442          
+    443          //=====================================================================================================================
+    444          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Sub Mode State Machine
+    445          //=====================================================================================================================
+    446          // !! StateEngineCrank cannot update this code if you change the header !!
+    447          
+    448          
+    449          //---------------------------------------------------------------------------------------------------------------------
+    450          /**
+    451           * Process the Req Sub Mode Error Event for the Sub Mode state machine.
+    452           *
+    453           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    454           *
+    455           * This function was auto-generated and must not be edited manually.
+    456           * Change the UML used to generate this function and regenerate the source code.
+    457           */
+
+   \                                 In section .text, align 2, keep-with-next
+    458          static void EventReqSubModeError(void)
+    459          {
+   \                     EventReqSubModeError: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    460              switch (Sub_Mode_State)
+   \   00000002   0x....             LDR      R4,??DataTable25
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD002             BEQ      ??EventReqSubModeError_0
+   \   0000000A   0x2802             CMP      R0,#+2
+   \   0000000C   0xD004             BEQ      ??EventReqSubModeError_1
+   \   0000000E   0xBD10             POP      {R4,PC}
+    461              {
+    462                  case STATE_SUB_MODE_INITIALIZE:
+    463                      if (IsReqSubModeError() == TRUE)
+   \                     ??EventReqSubModeError_0: (+1)
+   \   00000010   0x.... 0x....      BL       IsReqSubModeError
+   \   00000014   0x2801             CMP      R0,#+1
+   \   00000016   0xD103             BNE      ??EventReqSubModeError_2
+    464                      {
+    465                          Sub_Mode_State = STATE_SUB_MODE_ERROR;
+    466                          Sub_Mode_Transitioned = TRUE;
+    467                      }
+    468                      break;
+    469          
+    470                  case STATE_SUB_MODE_NORMAL_SUPERVISOR:
+    471                      Sub_Mode_State = STATE_SUB_MODE_ERROR;
+   \                     ??EventReqSubModeError_1: (+1)
+   \   00000018   0x2003             MOVS     R0,#+3
+   \   0000001A   0x7020             STRB     R0,[R4, #+0]
+    472                      Sub_Mode_Transitioned = TRUE;
+   \   0000001C   0x2001             MOVS     R0,#+1
+   \   0000001E   0x7060             STRB     R0,[R4, #+1]
+    473                      break;
+    474          
+    475                  default:
+    476                      // Event is ignored for all other values of Sub_Mode_State.
+    477                      break;
+    478              }
+    479          }
+   \                     ??EventReqSubModeError_2: (+1)
+   \   00000020   0xBD10             POP      {R4,PC}          ;; return
+    480          
+    481          
+    482          //---------------------------------------------------------------------------------------------------------------------
+    483          /**
+    484           * Process the Req Sub Mode Ext Control Engaged Event for the Sub Mode state machine.
+    485           *
+    486           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    487           *
+    488           * This function was auto-generated and must not be edited manually.
+    489           * Change the UML used to generate this function and regenerate the source code.
+    490           */
+
+   \                                 In section .text, align 2, keep-with-next
+    491          static void EventReqSubModeExtControlEngaged(void)
+    492          {
+   \                     EventReqSubModeExtControlEngaged: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    493              switch (Sub_Mode_State)
+   \   00000002   0x....             LDR      R4,??DataTable25
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2804             CMP      R0,#+4
+   \   00000008   0xD10C             BNE      ??EventReqSubModeExtControlEngaged_0
+    494              {
+    495                  case STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENTERING:
+    496                      Sub_Mode_State = STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENGAGED;
+   \   0000000A   0x2005             MOVS     R0,#+5
+   \   0000000C   0x7020             STRB     R0,[R4, #+0]
+    497                      Sub_Mode_Transitioned = FALSE;
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x7060             STRB     R0,[R4, #+1]
+    498                      StartTimer();                           // Entry Function.
+   \   00000012   0x.... 0x....      BL       StartTimer
+    499                      if (Sub_Mode_Transitioned == FALSE)
+   \   00000016   0x7860             LDRB     R0,[R4, #+1]
+   \   00000018   0x2800             CMP      R0,#+0
+   \   0000001A   0xD101             BNE      ??EventReqSubModeExtControlEngaged_1
+    500                      {
+    501                          PublishMode();                      // Entry Function.
+   \   0000001C   0x.... 0x....      BL       PublishMode
+    502                      }
+    503                      Sub_Mode_Transitioned = TRUE;
+   \                     ??EventReqSubModeExtControlEngaged_1: (+1)
+   \   00000020   0x2001             MOVS     R0,#+1
+   \   00000022   0x7060             STRB     R0,[R4, #+1]
+    504                      break;
+    505          
+    506                  default:
+    507                      // Event is ignored for all other values of Sub_Mode_State.
+    508                      break;
+    509              }
+    510          }
+   \                     ??EventReqSubModeExtControlEngaged_0: (+1)
+   \   00000024   0xBD10             POP      {R4,PC}          ;; return
+    511          
+    512          
+    513          //---------------------------------------------------------------------------------------------------------------------
+    514          /**
+    515           * Process the Req Sub Mode Ext Control Entering Event for the Sub Mode state machine.
+    516           *
+    517           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    518           *
+    519           * This function was auto-generated and must not be edited manually.
+    520           * Change the UML used to generate this function and regenerate the source code.
+    521           */
+
+   \                                 In section .text, align 2, keep-with-next
+    522          static void EventReqSubModeExtControlEntering(void)
+    523          {
+   \                     EventReqSubModeExtControlEntering: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    524              switch (Sub_Mode_State)
+   \   00000002   0x....             LDR      R4,??DataTable25
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2802             CMP      R0,#+2
+   \   00000008   0xD105             BNE      ??EventReqSubModeExtControlEntering_0
+    525              {
+    526                  case STATE_SUB_MODE_NORMAL_SUPERVISOR:
+    527                      StartTimer();                           // Transition action function.
+   \   0000000A   0x.... 0x....      BL       StartTimer
+    528                      Sub_Mode_State = STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENTERING;
+   \   0000000E   0x2004             MOVS     R0,#+4
+   \   00000010   0x7020             STRB     R0,[R4, #+0]
+    529                      Sub_Mode_Transitioned = TRUE;
+   \   00000012   0x2001             MOVS     R0,#+1
+   \   00000014   0x7060             STRB     R0,[R4, #+1]
+    530                      break;
+    531          
+    532                  default:
+    533                      // Event is ignored for all other values of Sub_Mode_State.
+    534                      break;
+    535              }
+    536          }
+   \                     ??EventReqSubModeExtControlEntering_0: (+1)
+   \   00000016   0xBD10             POP      {R4,PC}          ;; return
+    537          
+    538          
+    539          //---------------------------------------------------------------------------------------------------------------------
+    540          /**
+    541           * Process the Req Sub Mode Supervisor Event for the Sub Mode state machine.
+    542           *
+    543           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    544           *
+    545           * This function was auto-generated and must not be edited manually.
+    546           * Change the UML used to generate this function and regenerate the source code.
+    547           */
+
+   \                                 In section .text, align 2, keep-with-next
+    548          static void EventReqSubModeSupervisor(void)
+    549          {
+   \                     EventReqSubModeSupervisor: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    550              switch (Sub_Mode_State)
+   \   00000002   0x....             LDR      R4,??DataTable25
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x1E40             SUBS     R0,R0,#+1
+   \   00000008   0xD005             BEQ      ??EventReqSubModeSupervisor_0
+   \   0000000A   0x1E40             SUBS     R0,R0,#+1
+   \   0000000C   0xD012             BEQ      ??EventReqSubModeSupervisor_1
+   \   0000000E   0x1E80             SUBS     R0,R0,#+2
+   \   00000010   0x2801             CMP      R0,#+1
+   \   00000012   0xD904             BLS      ??EventReqSubModeSupervisor_2
+   \   00000014   0xBD10             POP      {R4,PC}
+    551              {
+    552                  case STATE_SUB_MODE_INITIALIZE:
+    553                      if (IsReqSubModeInitialize() == TRUE)
+   \                     ??EventReqSubModeSupervisor_0: (+1)
+   \   00000016   0x.... 0x....      BL       IsReqSubModeInitialize
+   \   0000001A   0x2801             CMP      R0,#+1
+   \   0000001C   0xD109             BNE      ??EventReqSubModeSupervisor_3
+    554                      {
+    555                          Sub_Mode_State = STATE_SUB_MODE_NORMAL_SUPERVISOR;
+    556                          Sub_Mode_Transitioned = FALSE;
+    557                          SetReqSubModeNone();                // Entry Function.
+    558                          if (Sub_Mode_Transitioned == FALSE)
+    559                          {
+    560                              PublishMode();                  // Entry Function.
+    561                          }
+    562                          Sub_Mode_Transitioned = TRUE;
+    563                      }
+    564                      break;
+    565          
+    566                  case STATE_SUB_MODE_NORMAL_SUPERVISOR:
+    567                      Sub_Mode_State = STATE_SUB_MODE_NORMAL_SUPERVISOR;
+    568                      Sub_Mode_Transitioned = FALSE;
+    569                      SetReqSubModeNone();                    // Entry Function.
+    570                      if (Sub_Mode_Transitioned == FALSE)
+    571                      {
+    572                          PublishMode();                      // Entry Function.
+    573                      }
+    574                      Sub_Mode_Transitioned = TRUE;
+    575                      break;
+    576          
+    577                  case STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENTERING:
+    578                      Sub_Mode_State = STATE_SUB_MODE_NORMAL_SUPERVISOR;
+    579                      Sub_Mode_Transitioned = FALSE;
+    580                      SetReqSubModeNone();                    // Entry Function.
+    581                      if (Sub_Mode_Transitioned == FALSE)
+    582                      {
+    583                          PublishMode();                      // Entry Function.
+    584                      }
+    585                      Sub_Mode_Transitioned = TRUE;
+    586                      break;
+    587          
+    588                  case STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENGAGED:
+    589                      Sub_Mode_State = STATE_SUB_MODE_NORMAL_SUPERVISOR;
+   \                     ??EventReqSubModeSupervisor_2: (+1)
+   \   0000001E   0x2002             MOVS     R0,#+2
+   \   00000020   0x7020             STRB     R0,[R4, #+0]
+    590                      Sub_Mode_Transitioned = FALSE;
+   \   00000022   0x2000             MOVS     R0,#+0
+   \   00000024   0x7060             STRB     R0,[R4, #+1]
+    591                      SetReqSubModeNone();                    // Entry Function.
+   \   00000026   0x.... 0x....      BL       SetReqSubModeNone
+    592                      if (Sub_Mode_Transitioned == FALSE)
+    593                      {
+    594                          PublishMode();                      // Entry Function.
+   \   0000002A   0x.... 0x....      BL       PublishMode
+    595                      }
+    596                      Sub_Mode_Transitioned = TRUE;
+   \                     ??EventReqSubModeSupervisor_4: (+1)
+   \   0000002E   0x2001             MOVS     R0,#+1
+   \   00000030   0x7060             STRB     R0,[R4, #+1]
+    597                      break;
+    598          
+    599                  default:
+    600                      // Event is ignored for all other values of Sub_Mode_State.
+    601                      break;
+    602              }
+    603          }
+   \                     ??EventReqSubModeSupervisor_3: (+1)
+   \   00000032   0xBD10             POP      {R4,PC}          ;; return
+   \                     ??EventReqSubModeSupervisor_1: (+1)
+   \   00000034   0x2000             MOVS     R0,#+0
+   \   00000036   0x7060             STRB     R0,[R4, #+1]
+   \   00000038   0x.... 0x....      BL       SetReqSubModeNone
+   \   0000003C   0x.... 0x....      BL       PublishMode
+   \   00000040   0xE7F5             B        ??EventReqSubModeSupervisor_4
+    604          
+    605          
+    606          //---------------------------------------------------------------------------------------------------------------------
+    607          /**
+    608           * Process the Timer Expired Event for the Sub Mode state machine.
+    609           *
+    610           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    611           *
+    612           * This function was auto-generated and must not be edited manually.
+    613           * Change the UML used to generate this function and regenerate the source code.
+    614           */
+
+   \                                 In section .text, align 2, keep-with-next
+    615          static void EventTimerExpired(void)
+    616          {
+   \                     EventTimerExpired: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    617              switch (Sub_Mode_State)
+   \   00000002   0x....             LDR      R4,??DataTable25
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x1F00             SUBS     R0,R0,#+4
+   \   00000008   0x2801             CMP      R0,#+1
+   \   0000000A   0xD809             BHI      ??EventTimerExpired_0
+    618              {
+    619                  case STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENTERING:
+    620                      Sub_Mode_State = STATE_SUB_MODE_NORMAL_SUPERVISOR;
+    621                      Sub_Mode_Transitioned = FALSE;
+    622                      SetReqSubModeNone();                    // Entry Function.
+    623                      if (Sub_Mode_Transitioned == FALSE)
+    624                      {
+    625                          PublishMode();                      // Entry Function.
+    626                      }
+    627                      Sub_Mode_Transitioned = TRUE;
+    628                      break;
+    629          
+    630                  case STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENGAGED:
+    631                      Sub_Mode_State = STATE_SUB_MODE_NORMAL_SUPERVISOR;
+   \   0000000C   0x2002             MOVS     R0,#+2
+   \   0000000E   0x7020             STRB     R0,[R4, #+0]
+    632                      Sub_Mode_Transitioned = FALSE;
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x7060             STRB     R0,[R4, #+1]
+    633                      SetReqSubModeNone();                    // Entry Function.
+   \   00000014   0x.... 0x....      BL       SetReqSubModeNone
+    634                      if (Sub_Mode_Transitioned == FALSE)
+    635                      {
+    636                          PublishMode();                      // Entry Function.
+   \   00000018   0x.... 0x....      BL       PublishMode
+    637                      }
+    638                      Sub_Mode_Transitioned = TRUE;
+   \   0000001C   0x2001             MOVS     R0,#+1
+   \   0000001E   0x7060             STRB     R0,[R4, #+1]
+    639                      break;
+    640          
+    641                  default:
+    642                      // Event is ignored for all other values of Sub_Mode_State.
+    643                      break;
+    644              }
+    645          }
+   \                     ??EventTimerExpired_0: (+1)
+   \   00000020   0xBD10             POP      {R4,PC}          ;; return
+    646          
+    647          
+    648          //---------------------------------------------------------------------------------------------------------------------
+    649          /**
+    650           * The main execution function for the Sub Mode state machine.
+    651           * This function should be called periodically while the state machine is running.
+    652           *
+    653           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    654           *
+    655           * This function was auto-generated and must not be edited manually.
+    656           * Change the UML used to generate this function and regenerate the source code.
+    657           */
+
+   \                                 In section .text, align 2, keep-with-next
+    658          static void SubModeExecute(void)
+    659          {
+   \                     SubModeExecute: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    660              Sub_Mode_Transitioned = FALSE;
+   \   00000002   0x....             LDR      R4,??DataTable25
+   \   00000004   0x2000             MOVS     R0,#+0
+   \   00000006   0x7060             STRB     R0,[R4, #+1]
+    661              switch(Sub_Mode_State)
+   \   00000008   0x7820             LDRB     R0,[R4, #+0]
+   \   0000000A   0x1E40             SUBS     R0,R0,#+1
+   \   0000000C   0x2801             CMP      R0,#+1
+   \   0000000E   0xD904             BLS      ??SubModeExecute_0
+   \   00000010   0x1EC0             SUBS     R0,R0,#+3
+   \   00000012   0xD005             BEQ      ??SubModeExecute_1
+   \   00000014   0x1E40             SUBS     R0,R0,#+1
+   \   00000016   0xD00B             BEQ      ??SubModeExecute_2
+   \   00000018   0xBD10             POP      {R4,PC}
+    662              {
+    663                  case STATE_SUB_MODE_INITIALIZE:
+    664                  case STATE_SUB_MODE_NORMAL_SUPERVISOR:
+    665                      HandleRequestedSubMode();               // Do function.
+   \                     ??SubModeExecute_0: (+1)
+   \   0000001A   0x.... 0x....      BL       HandleRequestedSubMode
+    666                      break;
+   \   0000001E   0xBD10             POP      {R4,PC}
+    667          
+    668                  case STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENTERING:
+    669                      VerifyEnteringTimerIsRunning();         // Do function.
+   \                     ??SubModeExecute_1: (+1)
+   \   00000020   0x.... 0x....      BL       VerifyEnteringTimerIsRunning
+    670                      if (Sub_Mode_Transitioned == FALSE)
+   \   00000024   0x7860             LDRB     R0,[R4, #+1]
+   \   00000026   0x2800             CMP      R0,#+0
+   \   00000028   0xD109             BNE      ??SubModeExecute_3
+    671                      {
+    672                          HandleRequestedSubMode();           // Do function.
+   \   0000002A   0x.... 0x....      BL       HandleRequestedSubMode
+   \   0000002E   0xBD10             POP      {R4,PC}
+    673                      }
+    674                      break;
+    675          
+    676                  case STATE_SUB_MODE_NORMAL_EXT_CONTROL_ENGAGED:
+    677                      VerifyEngagedTimerIsRunning();          // Do function.
+   \                     ??SubModeExecute_2: (+1)
+   \   00000030   0x.... 0x....      BL       VerifyEngagedTimerIsRunning
+    678                      if (Sub_Mode_Transitioned == FALSE)
+   \   00000034   0x7860             LDRB     R0,[R4, #+1]
+   \   00000036   0x2800             CMP      R0,#+0
+   \   00000038   0xD101             BNE      ??SubModeExecute_3
+    679                      {
+    680                          HandleRequestedSubMode();           // Do function.
+   \   0000003A   0x.... 0x....      BL       HandleRequestedSubMode
+    681                      }
+    682                      break;
+    683          
+    684                  default:
+    685                      // There is nothing to do for all other values of Sub_Mode_State.
+    686                      break;
+    687              }
+    688          }
+   \                     ??SubModeExecute_3: (+1)
+   \   0000003E   0xBD10             POP      {R4,PC}          ;; return
+    689          
+    690          
+    691          //---------------------------------------------------------------------------------------------------------------------
+    692          /**
+    693           * The initialization function for the Sub Mode state machine.
+    694           * This function resets the state machine to the initial state.
+    695           *
+    696           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    697           *
+    698           * This function was auto-generated and must not be edited manually.
+    699           * Change the UML used to generate this function and regenerate the source code.
+    700           */
+
+   \                                 In section .text, align 2, keep-with-next
+    701          static void SubModeInitialize(void)
+    702          {
+    703              Sub_Mode_State = STATE_SUB_MODE_INITIALIZE;
+   \                     SubModeInitialize: (+1)
+   \   00000000   0x2001             MOVS     R0,#+1
+   \   00000002   0x....             LDR      R1,??DataTable26_4
+   \   00000004   0x0002             MOVS     R2,R0
+   \   00000006   0x700A             STRB     R2,[R1, #+0]
+    704              Sub_Mode_Transitioned = TRUE;
+   \   00000008   0x7048             STRB     R0,[R1, #+1]
+    705          }
+   \   0000000A   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable25:
+   \   00000000   0x........         DC32     Sub_Mode_State
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable26:
+   \   00000000   0x........         DC32     Remote_SubMode
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable26_1:
+   \   00000000   0x........         DC32     Timer_PC_Control_Handle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable26_2:
+   \   00000000   0x00007530         DC32     0x7530
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable26_3:
+   \   00000000   0x00001388         DC32     0x1388
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable26_4:
+   \   00000000   0x........         DC32     Sub_Mode_State
+    706          
+    707          
+    708          // !! StateEngineCrank cannot update this code if you change the footer !!
+    709          // End of StateEngineCrank Auto-Generated Code.
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   EventReqSubModeError
+         8   -> IsReqSubModeError
+       8   EventReqSubModeExtControlEngaged
+         8   -> PublishMode
+         8   -> StartTimer
+       8   EventReqSubModeExtControlEntering
+         8   -> StartTimer
+       8   EventReqSubModeSupervisor
+         8   -> IsReqSubModeInitialize
+         8   -> PublishMode
+         8   -> SetReqSubModeNone
+       8   EventTimerExpired
+         8   -> PublishMode
+         8   -> SetReqSubModeNone
+       8   HandleRequestedSubMode
+         8   -> EventReqSubModeError
+         8   -> EventReqSubModeExtControlEngaged
+         8   -> EventReqSubModeExtControlEntering
+         8   -> EventReqSubModeSupervisor
+       0   IsReqSubModeError
+       0   IsReqSubModeInitialize
+       0   Mode__GetMode
+       0   Mode__GetRemoteMode
+       0   Mode__GetRemoteSubMode
+       0   Mode__GetSubMode
+       8   Mode__Handler
+         8   -> Micro__ForceReset
+         8   -> SubModeExecute
+      16   Mode__Initialize
+        16   -> Micro__GetResetMode
+        16   -> SubModeInitialize
+       8   Mode__IsPCControlEngaged
+         8   -> Mode__GetSubMode
+       0   Mode__IsProgrammingEngaged
+       0   Mode__SaveRemoteMode
+       0   Mode__SaveRemoteSubMode
+       8   Mode__SetMode
+         8   -> Micro__ForceReset
+       8   Mode__SetModeExtended
+         8   -> Micro__ForceReset
+       8   Mode__SpecialHeartBeat
+         8   -> Mode__IsPCControlEngaged
+         8   -> StartTimer
+       8   PublishMode
+         8   -> API011AppCtrl__PubMode
+       0   SetReqSubModeNone
+       8   StartTimer
+         8   -> Millis__Start
+       8   SubModeExecute
+         8   -> HandleRequestedSubMode
+         8   -> VerifyEngagedTimerIsRunning
+         8   -> VerifyEnteringTimerIsRunning
+       0   SubModeInitialize
+       8   VerifyEngagedTimerIsRunning
+         8   -> EventTimerExpired
+         8   -> Millis__ReachedTarget
+       8   VerifyEnteringTimerIsRunning
+         8   -> EventTimerExpired
+         8   -> Millis__ReachedTarget
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable25
+       4  ??DataTable26
+       4  ??DataTable26_1
+       4  ??DataTable26_2
+       4  ??DataTable26_3
+       4  ??DataTable26_4
+      34  EventReqSubModeError
+      38  EventReqSubModeExtControlEngaged
+      24  EventReqSubModeExtControlEntering
+      66  EventReqSubModeSupervisor
+      34  EventTimerExpired
+      48  HandleRequestedSubMode
+      16  IsReqSubModeError
+      12  IsReqSubModeInitialize
+       6  Mode__GetMode
+       6  Mode__GetRemoteMode
+       6  Mode__GetRemoteSubMode
+      10  Mode__GetSubMode
+      32  Mode__Handler
+      52  Mode__Initialize
+      26  Mode__IsPCControlEngaged
+      20  Mode__IsProgrammingEngaged
+       6  Mode__SaveRemoteMode
+       6  Mode__SaveRemoteSubMode
+      32  Mode__SetMode
+      36  Mode__SetModeExtended
+      16  Mode__SpecialHeartBeat
+       8  PublishMode
+       1  Remote_SubMode
+       8  SUBMODE_STATE_MAP
+       8  SetReqSubModeNone
+      10  StartTimer
+      64  SubModeExecute
+      12  SubModeInitialize
+       6  Sub_Mode_State
+          Sub_Mode_Transitioned
+          Mode
+          Remote_Mode
+          N_Mode
+          Requested_Sub_Mode
+       4  Timer_PC_Control_Handle
+      20  VerifyEngagedTimerIsRunning
+      20  VerifyEnteringTimerIsRunning
+
+ 
+  11 bytes in section .bss
+ 700 bytes in section .text
+ 
+ 700 bytes of CODE memory
+  11 bytes of DATA memory
+
+Errors: none
+Warnings: none

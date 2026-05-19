@@ -1,0 +1,1722 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:19
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI/I2CInfraredLLI.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\I2CInfraredLLI.lst -o
+#        obj\I2CInfraredLLI.obj
+#        source/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI/I2CInfraredLLI.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\I2CInfraredLLI.lst
+#    Object file  =  obj\I2CInfraredLLI.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Hbl\all\LLIHandler\I2CInfraredLLI\I2CInfraredLLI.c
+      1          /**
+      2           * @file
+      3           * @brief       Low-Level Input for the Melexis MLX90621 16x4 infrared array sensor.
+      4           *
+      5           * @details     This LLI initializes and reads the MLX90621 16x4 infrared array sensor.
+      6           *              For details of the implementation, refer to the MLX90621 data sheet.
+      7           *
+      8           *              This LLI performs the following actions:
+      9           *                  - Read LLI configuration from the setting file
+     10           *                  - Initialization of the MLX90621
+     11           *                  - Read the MLX90621 EEPROM data
+     12           *                  - Write oscillator trimming value
+     13           *                  - Write device configuration value
+     14           *                  - Read the raw (uncompensated) 16x4 infrared array data
+     15           *
+     16              @startuml
+     17                  title IR LLI State Machine
+     18                  ' Use state = I2c_Infrared_Lli.State
+     19                  [*] --> SetupEepromRead
+     20          
+     21                  SetupEepromRead : do / ConfigureI2CForEeprom()
+     22                  SetupEepromRead --> ReadEeprom : evProceed
+     23                  SetupEepromRead -> [*] : evFail
+     24          
+     25                  ReadEeprom : entry / StartTimer()\n\t RequestEepromRead()
+     26                  ReadEeprom : do / DoEepromRead()
+     27                  ReadEeprom --> ReadEeprom : evReadNextSection
+     28                  ReadEeprom --> SetupEepromRead : evFail
+     29                  ReadEeprom --> SetupTrimValueWrite : evReadComplete
+     30          
+     31                  SetupTrimValueWrite : do / ConfigureI2CForRam()
+     32                  SetupTrimValueWrite --> WriteTrimValue : evProceed
+     33                  SetupTrimValueWrite --> SetupTrimValueWrite : evFail
+     34          
+     35                  WriteTrimValue : entry / StartTimer()\n\t WriteOscillatorTrim()
+     36                  WriteTrimValue : do / WaitForI2cIdle()
+     37                  WriteTrimValue --> ReadTrimValue : evWriteComplete
+     38                  WriteTrimValue --> SetupTrimValueWrite : evFail
+     39          
+     40                  ReadTrimValue : entry / StartTimer()\n\t RequestOscTrimRead()
+     41                  ReadTrimValue : do / DoOscTrimRead()
+     42                  ReadTrimValue --> SetupConfigValueWrite : evReadComplete
+     43                  ReadTrimValue --> SetupTrimValueWrite : evFail
+     44          
+     45                  SetupConfigValueWrite : do / ConfigureI2CForRam()
+     46                  SetupConfigValueWrite --> WriteConfigValue : evProceed
+     47                  SetupConfigValueWrite --> SetupConfigValueWrite : evFail
+     48          
+     49                  WriteConfigValue : entry / StartTimer()\n\t WriteConfiguration()
+     50                  WriteConfigValue : do / WaitForI2cIdle()
+     51                  WriteConfigValue --> ReadConfigValue : evWriteComplete
+     52                  WriteConfigValue --> SetupConfigValueWrite : evFail
+     53          
+     54                  ReadConfigValue : entry / StartTimer()\n\t RequestStatusRead()
+     55                  ReadConfigValue : do / DoConfigRead()
+     56                  ReadConfigValue --> WaitForNextStep : evReadComplete
+     57                  ReadConfigValue --> SetupConfigValueWrite : evFail
+     58          
+     59                  WaitForNextStep : do / WaitForNextStep()
+     60                  WaitForNextStep --> StartStep : evStart
+     61          
+     62                  StartStep : entry / StartAcquisition()
+     63                  StartStep : do / WaitForI2cIdle()
+     64                  StartStep --> ReadStatus : evWriteComplete
+     65                  StartStep --> SetupTrimValueWrite : evFail
+     66          
+     67                  ReadStatus : entry / RequestStatusRead()
+     68                  ReadStatus : do / DoStatusRead()
+     69                  ReadStatus --> SetupEepromRead : evPowerOnReset
+     70                  ReadStatus --> ReadStatus : evReadComplete
+     71                  ReadStatus --> ReadPixels : evDataReady
+     72                  ReadStatus --> SetupTrimValueWrite : evFail
+     73          
+     74                  ReadPixels : entry / RequestPixelsRead()
+     75                  ReadPixels : do / DoPixelsRead()
+     76                  ReadPixels --> DataReady : evReadComplete
+     77                  ReadPixels --> SetupTrimValueWrite : evFail
+     78          
+     79                  DataReady : entry / SetDataReadyFlag()
+     80                  'DataReady : do / EventGIRead()
+     81                  DataReady --> WaitForNextStep : evGIRead
+     82              @enduml
+     83           *
+     84           * @copyright   Copyright 2018 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     85           */
+     86          
+     87          //  --- Include Files -------------------------------------------------------------------------------------------------
+     88          
+     89          // -- This Module --
+     90          #include "SystemConfig.h"
+     91          #include "I2CInfraredLLI.h"
+     92          
+     93          #if (HBL_LLI_NUM_I2C_INFRARED_SENSOR > 0)
+     94          CT_ASSERT(HBL_LLI_NUM_I2C_INFRARED_SENSOR == 1);
+     95          // -- Other Modules --
+     96          #include "I2c.h"
+     97          #include "Millis.h"
+     98          #include <string.h>
+     99          
+    100          
+    101          //=====================================================================================================================
+    102          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Ir Lli State Machine
+    103          //=====================================================================================================================
+    104          // !! StateEngineCrank cannot update this code if you change the header !!
+    105          
+    106          
+    107          //! Unique names used to identify states of the Ir Lli state machine.
+    108          typedef enum IR_LLI_STATE_ENUM
+    109          {
+    110              STATE_IR_LLI_NONE                     = 0,
+    111          
+    112              STATE_IR_LLI_SETUP_EEPROM_READ        = 1,      //!< (initial_state)
+    113              STATE_IR_LLI_READ_EEPROM              = 2,
+    114              STATE_IR_LLI_SETUP_TRIM_VALUE_WRITE   = 3,
+    115              STATE_IR_LLI_WRITE_TRIM_VALUE         = 4,
+    116              STATE_IR_LLI_READ_TRIM_VALUE          = 5,
+    117              STATE_IR_LLI_SETUP_CONFIG_VALUE_WRITE = 6,
+    118              STATE_IR_LLI_WRITE_CONFIG_VALUE       = 7,
+    119              STATE_IR_LLI_READ_CONFIG_VALUE        = 8,
+    120              STATE_IR_LLI_WAIT_FOR_NEXT_STEP       = 9,
+    121              STATE_IR_LLI_START_STEP               = 10,
+    122              STATE_IR_LLI_READ_STATUS              = 11,
+    123              STATE_IR_LLI_READ_PIXELS              = 12,
+    124              STATE_IR_LLI_DATA_READY               = 13,
+    125          
+    126              STATE_IR_LLI_END                      = 14
+    127          } IR_LLI_STATE_TYPE;
+    128          
+    129          //! The transition variable for the Ir Lli state machine.
+    130          //! Flag used by the state machine to track when a transition occurs in the middle of a state's
+    131          //! Entry() or Do() action that contains more than one function.
+    132          static BOOL_TYPE Ir_Lli_Transitioned;
+    133          
+    134          // -- Private Function Prototypes used by the state machine for customization functions --
+    135          static void ConfigureI2CForEeprom(void);
+    136          static void ConfigureI2CForRam(void);
+    137          static void DoConfigRead(void);
+    138          static void DoEepromRead(void);
+    139          static void DoOscTrimRead(void);
+    140          static void DoPixelsRead(void);
+    141          static void DoStatusRead(void);
+    142          static void RequestEepromRead(void);
+    143          static void RequestOscTrimRead(void);
+    144          static void RequestPixelsRead(void);
+    145          static void RequestStatusRead(void);
+    146          static void SetDataReadyFlag(void);
+    147          static void StartAcquisition(void);
+    148          static void StartTimer(void);
+    149          static void WaitForI2cIdle(void);
+    150          static void WaitForNextStep(void);
+    151          static void WriteConfiguration(void);
+    152          static void WriteOscillatorTrim(void);
+    153          
+    154          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+    155          static void EventDataReady(void);
+    156          static void EventFail(void);
+    157          static void EventGIRead(void);
+    158          static void EventPowerOnReset(void);
+    159          static void EventProceed(void);
+    160          static void EventReadComplete(void);
+    161          static void EventReadNextSection(void);
+    162          static void EventStart(void);
+    163          static void EventWriteComplete(void);
+    164          static void IrLliExecute(void);
+    165          static void IrLliInitialize(void);
+    166          
+    167          // !! StateEngineCrank cannot update this code if you change the footer !!
+    168          // End of StateEngineCrank Auto-Generated Code.
+    169          
+    170          
+    171          //  --- Private Declarations ------------------------------------------------------------------------------------------
+    172          
+    173          
+    174          // -- Private Constant Declarations --
+    175          
+    176          #define CONFIG_VERIFIABLE_FIELDS_MASK 0x5CFF        //!< Bitmask of verifiable bits in the configuration register.
+    177          #define I2C_NOT_IDLE_MS_TIMEOUT 8                   //!< The maximum milliseconds for writing a message on the I2C bus.
+    178          #define MLX_EEPROM_DEVICE_ADDRESS (2 * 0x50)        //!< The I2C slave address for the Melexis 90621 device EEPROM.
+    179          #define MLX_RAM_DEVICE_ADDRESS (2 * 0x60)           //!< The I2C slave address for the Melexis 90621 device RAM.
+    180          #define MODULE_NAME MODULE_I2C_INFRARED_LLI         //!< The name of this module for use by the Log module.
+    181          #define RAM_OSC_TRIM_READ_ADDRESS 0x93              //!< Address of the sensor's oscillator trim register.
+    182          //! The number of bytes read when reading the oscillator trim register.
+    183          #define RAM_OSC_TRIM_READ_SIZE (sizeof(I2c_Infrared_Lli.Config.Osc_Trim))
+    184          #define RAM_PIXEL_READ_ADDRESS 0                    //!< Address of the sensor's pixel data registers.
+    185          //! The number of bytes read when reading the IR pixel data.
+    186          #define RAM_PIXEL_READ_SIZE (sizeof(I2c_Infrared_Lli.Sensor.Pixel) + sizeof(I2c_Infrared_Lli.Sensor.PTAT) + sizeof(I2c_Infrared_Lli.Sensor.V_CP))
+    187          #define RAM_STATUS_READ_ADDRESS 0x92                //!< Address of the sensor's status register.
+    188          //! The number of bytes read when reading the configuration or status register.
+    189          #define RAM_STATUS_READ_SIZE (sizeof(MELEXIS_90621_CONFIG_REG_STRUCT_TYPE))
+    190          
+    191          
+    192          // -- Private Enumerated Constant Declarations --
+    193          
+    194          //! Refresh rates for the IR sensor.
+    195          typedef enum IR_REFRESH_RATE_ENUM
+    196          {
+    197              IR_REFRESH_512_HZ               = 5,
+    198              IR_REFRESH_256_HZ               = 6,
+    199              IR_REFRESH_128_HZ               = 7,
+    200              IR_REFRESH_64_HZ                = 8,
+    201              IR_REFRESH_32_HZ                = 9,
+    202              IR_REFRESH_16_HZ                = 10,
+    203              IR_REFRESH_8_HZ                 = 11,
+    204              IR_REFRESH_4_HZ                 = 12,
+    205              IR_REFRESH_2_HZ                 = 13,
+    206              IR_REFRESH_1_HZ                 = 14,
+    207              IR_REFRESH_HALF_HZ              = 15
+    208          } IR_REFRESH_RATE_TYPE;
+    209          
+    210          //! Commands accepted by the Melexis 90621 sensor.
+    211          typedef enum MELEXIS_CMD_ENUM
+    212          {
+    213              MLX_CMD_READ_EEPROM         = 0,
+    214              MLX_CMD_START_STEP_LO_BYTE  = 1,
+    215              MLX_CMD_READ_RAM            = 2,
+    216              MLX_CMD_WRITE_CONFIG        = 3,
+    217              MLX_CMD_WRITE_OSC_TRIM      = 4,
+    218              MLX_CMD_START_STEP_HI_BYTE  = 8
+    219          } MELEXIS_CMD_TYPE;
+    220          
+    221          //! A list of log message IDs that are generated by this module.
+    222          typedef enum MODULE_I2C_INFRARED_LLI_LOG_MESSAGE_ID_ENUM
+    223          {
+    224              ERROR_COMMUNICATION  = 1,
+    225              ERROR_DATA_STUCK,
+    226          } MODULE_I2C_INFRARED_LLI_LOG_MESSAGE_ID_TYPE;
+    227          
+    228          
+    229          // -- Private Structure Type Declarations --
+    230          
+    231          //! A data structure to organize memory transfer instructions.
+    232          typedef struct I2C_MEMORY_TRANSFER_STRUCT
+    233          {
+    234              void* Destination;
+    235              uint8 Read_Address;
+    236              uint8 Read_Size;
+    237          } I2C_MEMORY_TRANSFER_TYPE;
+    238          
+    239          //! The configuration data structure of the Melexis 90621 Sensor.
+    240          //! These values are stored in EEPROM at 0xF5 to 0xF7.
+    241          typedef /*NOT PACKED*/ struct MELEXIS_90621_CONFIG_REG_STRUCT
+    242          {
+    243              uint16 IR_Refresh_Rate      : 4;
+    244              uint16 Bit_Resolution       : 2;
+    245              uint16 Step_Mode            : 1;
+    246              uint16 Sleep_Mode           : 1;
+    247              uint16 Reserved1            : 1;
+    248              uint16 Measuring            : 1;
+    249              uint16 Configuration_Loaded : 1;
+    250              uint16 I2C_400KHz_Limit     : 1;
+    251              uint16 EEPROM_Disabled      : 1;
+    252              uint16 Reserved2            : 3;
+    253          } MELEXIS_90621_CONFIG_REG_STRUCT_TYPE;
+    254          
+    255          //! A union that holds the configuration data as fields and as a word.
+    256          typedef union MELEXIS_90621_CONFIG_REG_UNION
+    257          {
+    258              uint16 Whole;
+    259              MELEXIS_90621_CONFIG_REG_STRUCT_TYPE Field;
+    260          } MELEXIS_90621_CONFIG_REG_TYPE;
+    261          
+    262          //! A data structure that holds the Melexis 90621 sensor configuration.
+    263          typedef struct MELEXIS_90621_CONFIG_STRUCT
+    264          {
+    265              MELEXIS_90621_CONFIG_REG_TYPE Cfg_Reg;
+    266              uint16 Osc_Trim;
+    267          } MELEXIS_90621_CONFIG_TYPE;
+    268          
+    269          //! The setting file configuration data structure used by the I2CInfraredLLI module.
+    270          typedef struct SF_I2C_INFRARED_LLI_STRUCT
+    271          {
+    272              uint16 Step_Period_Milliseconds;
+    273              I2C_ENUM_TYPE I2c_Channel;
+    274              uint8 IR_Refresh_Rate       : 4;
+    275              uint8 Bit_Resolution        : 2;
+    276          } SF_I2C_INFRARED_LLI_TYPE;
+    277          
+    278          //! The main structure for variables used by the I2CInfraredLLI module.
+    279          typedef struct I2C_INFRARED_LLI_DATA_STRUCT
+    280          {
+    281              //! EEPROM data from Melexis 90621 sensors. Must be first in data structure to preserve memory alignment.
+    282              MELEXIS_90621_EEPROM_TYPE Eeprom;
+    283          
+    284              //! The setting file configuration for the LLI.
+    285              const SF_I2C_INFRARED_LLI_TYPE* Sf;
+    286          
+    287              //! Data from Melexis 90621 sensors.
+    288              MELEXIS_90621_DATA_TYPE Sensor;
+    289          
+    290              //! The configuration data read from the Melexis 90621 Sensor EEPROM.
+    291              MELEXIS_90621_CONFIG_TYPE Config;
+    292          
+    293              //! Timer to measure times spent in states.
+    294              uint16 Start_Milliseconds;
+    295          
+    296              //! The number of sensors allocated for this module.
+    297              uint8 Allocation;
+    298          
+    299              //! Event flag that indicates that new data is ready.
+    300              //! Event is synchronized to the I2CInfraredLLI__AsynchProcess() function.
+    301              BOOL_TYPE Data_Ready;
+    302          
+    303              //! The state of the state machine.
+    304              IR_LLI_STATE_TYPE State;
+    305          
+    306              //! The EEPROM read transfer step being taken in the I2C_READ_INSTRUCTIONS[] array.
+    307              uint8 Transfer_Step;
+    308          } I2C_INFRARED_LLI_DATA_TYPE;
+    309          
+    310          
+    311          //  --- Private Definitions -------------------------------------------------------------------------------------------
+    312          
+    313          
+    314          // -- Private Variable Definitions --
+    315          
+    316          //! The data used by this module.
+    317          static I2C_INFRARED_LLI_DATA_TYPE I2c_Infrared_Lli;
+    318          
+    319          
+    320          // -- Private Flash-Based Constant Definitions --
+    321          
+    322          //! Default hard-coded configuration to use before GESE is ready.
+    323          static const SF_I2C_INFRARED_LLI_TYPE I2C_INFRARED_LLI_HARD_CODED_CONFIG =
+    324          {
+    325              500,                                            // Step_Period_Milliseconds
+    326              I2C1,                                           // I2c_Channel
+    327              IR_REFRESH_4_HZ,                                // IR_Refresh_Rate
+    328              IR_RESOLUTION_18_BIT,                           // Bit_Resolution
+    329          };
+    330          
+    331          //! A series of read instructions to read the Melexis 90621 sensor EEPROM.
+    332          //! This strategy allows the unused areas of the EEPROM to not consume RAM.
+    333          static const I2C_MEMORY_TRANSFER_TYPE I2C_READ_INSTRUCTIONS[] =
+    334          {
+    335          //  Destination                                     Read Address,   Read Size,
+    336              &I2c_Infrared_Lli.Eeprom.Ai_Pixel_Offset[0],    0x00,           0x80,
+    337              &I2c_Infrared_Lli.Eeprom.Sensitivity[0],        0x80,           0x40,
+    338              &I2c_Infrared_Lli.Eeprom.A_Common_Offset,       0xD0,           0x18,
+    339              &I2c_Infrared_Lli.Config,                       0xF5,           0x03
+    340          };
+    341          
+    342          
+    343          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    344          
+    345          static uint16 GetMilliseconds(void);
+    346          static BOOL_TYPE IsI2cIdle(void);
+    347          static BOOL_TYPE ReadMelexisValues(uint8 address, uint8 size);
+    348          static BOOL_TYPE WriteMelexisValue(MELEXIS_CMD_TYPE command, uint16 value, uint8 check);
+    349          
+    350          
+    351          //=====================================================================================================================
+    352          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    353          //=====================================================================================================================
+    354          
+    355          
+    356          //---------------------------------------------------------------------------------------------------------------------
+    357          /**
+    358           * Initialize the I2CInfraredLLI module's variables.
+    359           */
+    360          void I2CInfraredLLI__Initialize(void)
+    361          {
+    362              memset(&I2c_Infrared_Lli, 0, sizeof(I2c_Infrared_Lli));
+    363          }
+    364          
+    365          
+    366          //---------------------------------------------------------------------------------------------------------------------
+    367          /**
+    368           * Allocate memory out of the pre-allocated RAM for the next LLI of this type.
+    369           * @return The index to the new LLIs allocated memory.
+    370           *         Returns HBL_INDEX_INVALID if there is no more memory reserved.
+    371           */
+    372          uint8 I2CInfraredLLI__Allocate(void)
+    373          {
+    374              uint8 index = HBL_INDEX_INVALID;
+    375              if (I2c_Infrared_Lli.Allocation < HBL_LLI_NUM_I2C_INFRARED_SENSOR)
+    376              {
+    377                  index = I2c_Infrared_Lli.Allocation;
+    378                  I2c_Infrared_Lli.Allocation++;
+    379              }
+    380              return index;
+    381          }
+    382          
+    383          
+    384          //---------------------------------------------------------------------------------------------------------------------
+    385          /**
+    386           * Initialize an instance of the LLI by reading and updating HBL's data structure.
+    387           * @param input = Pointer to the HBL data structure that references the LLI instance.
+    388           * @return PASS if the initialization was successful; otherwise FAIL.
+    389           */
+    390          PASS_FAIL_TYPE I2CInfraredLLI__InitializeInstance(HBL_LLI_TYPE* input)
+    391          {
+    392              PASS_FAIL_TYPE result = FAIL;
+    393              if (input != NULL)
+    394              {
+    395                  if ((input->Parameter_Ptr.Data != NULL) && (input->Parameter_Ptr.Length > 2))
+    396                  {
+    397                      I2c_Infrared_Lli.Sf = (SF_I2C_INFRARED_LLI_TYPE*)(void*)&input->Parameter_Ptr.Data[2];
+    398                  }
+    399                  else
+    400                  {
+    401                      I2c_Infrared_Lli.Sf = &I2C_INFRARED_LLI_HARD_CODED_CONFIG;
+    402                  }
+    403                  IrLliInitialize();
+    404                  if (I2c_Infrared_Lli.State != STATE_IR_LLI_NONE)
+    405                  {
+    406                      I2c_Infrared_Lli.Sensor.Eeprom = &I2c_Infrared_Lli.Eeprom;
+    407                      I2c_Infrared_Lli.Sensor.LLI_Status = I2C_IR_LLI_INITIALIZING;
+    408                      result = PASS;
+    409                  }
+    410              }
+    411              return result;
+    412          }
+    413          
+    414          
+    415          //---------------------------------------------------------------------------------------------------------------------
+    416          /**
+    417           * Get the current data of the referenced LLI.
+    418           * @param input = Pointer to the HBL data structure that references the LLI instance.
+    419           * @return Pointer to the current data of the referenced LLI.
+    420           */
+    421          void* I2CInfraredLLI__Get(HBL_LLI_TYPE* input)
+    422          {
+    423              void* data = NULL;
+    424              if ((input != NULL) &&
+    425                  (input->Data_Index == 0))
+    426              {
+    427                  data = (void*)&I2c_Infrared_Lli.Sensor;
+    428                  if (I2c_Infrared_Lli.Sensor.LLI_Status == I2C_IR_LLI_DATA_READY)
+    429                  {
+    430                      EventGIRead();
+    431                  }
+    432              }
+    433              return data;
+    434          }
+    435          
+    436          
+    437          //---------------------------------------------------------------------------------------------------------------------
+    438          /**
+    439           * Background function for the referenced LLI.
+    440           * Called every 5ms.
+    441           * @param input = Pointer to the HBL data structure that references the LLI instance.
+    442           * @return Returns TRUE if new data is available. Otherwise FALSE.
+    443           */
+    444          BOOL_TYPE I2CInfraredLLI__AsynchProcess(HBL_LLI_TYPE* input)
+    445          {
+    446              if (input->Data_Index < I2c_Infrared_Lli.Allocation)
+    447              {
+    448                  IrLliExecute();
+    449                  switch (I2c_Infrared_Lli.State)
+    450                  {
+    451                      case STATE_IR_LLI_SETUP_EEPROM_READ:
+    452                      case STATE_IR_LLI_READ_EEPROM:
+    453                      case STATE_IR_LLI_SETUP_TRIM_VALUE_WRITE:
+    454                      case STATE_IR_LLI_WRITE_TRIM_VALUE:
+    455                      case STATE_IR_LLI_READ_TRIM_VALUE:
+    456                      case STATE_IR_LLI_SETUP_CONFIG_VALUE_WRITE:
+    457                      case STATE_IR_LLI_WRITE_CONFIG_VALUE:
+    458                      case STATE_IR_LLI_READ_CONFIG_VALUE:
+    459                          I2c_Infrared_Lli.Sensor.LLI_Status = I2C_IR_LLI_INITIALIZING;
+    460                          break;
+    461          
+    462                      case STATE_IR_LLI_WAIT_FOR_NEXT_STEP:
+    463                          I2c_Infrared_Lli.Sensor.LLI_Status = I2C_IR_LLI_WAITING_FOR_DATA;
+    464                          break;
+    465          
+    466                      case STATE_IR_LLI_START_STEP:
+    467                      case STATE_IR_LLI_READ_STATUS:
+    468                      case STATE_IR_LLI_READ_PIXELS:
+    469                          I2c_Infrared_Lli.Sensor.LLI_Status = I2C_IR_LLI_ACQUIRING_DATA;
+    470                          break;
+    471          
+    472                      case STATE_IR_LLI_DATA_READY:
+    473                          I2c_Infrared_Lli.Sensor.LLI_Status = I2C_IR_LLI_DATA_READY;
+    474                          break;
+    475          
+    476                      default:
+    477                          I2c_Infrared_Lli.Sensor.LLI_Status = I2C_IR_LLI_ERROR;
+    478                          break;
+    479                  }
+    480              }
+    481          
+    482              BOOL_TYPE data_ready = I2c_Infrared_Lli.Data_Ready;
+    483              I2c_Infrared_Lli.Data_Ready = FALSE;
+    484              return data_ready;
+    485          }
+    486          
+    487          
+    488          //=====================================================================================================================
+    489          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    490          //=====================================================================================================================
+    491          
+    492          
+    493          //---------------------------------------------------------------------------------------------------------------------
+    494          /**
+    495           * Get the number of milliseconds since the StartTimer() function was called.
+    496           * @return The number of milliseconds since the StartTimer() function was called.
+    497           */
+    498          static uint16 GetMilliseconds(void)
+    499          {
+    500              return (uint16)(Millis__GetFreeRunningCounter() - I2c_Infrared_Lli.Start_Milliseconds);
+    501          }
+    502          
+    503          
+    504          //---------------------------------------------------------------------------------------------------------------------
+    505          /**
+    506           * Determine whether the I2C bus is idle and ready for the next message.
+    507           * @return TRUE if the I2C bus is idle and ready for the next message; otherwise FALSE.
+    508           */
+    509          static BOOL_TYPE IsI2cIdle(void)
+    510          {
+    511              return (BOOL_TYPE)(I2c__GetStatus(I2c_Infrared_Lli.Sf->I2c_Channel, I2C_STATUS_STATE) == I2C_STATE_IDLE);
+    512          }
+    513          
+    514          
+    515          //---------------------------------------------------------------------------------------------------------------------
+    516          /**
+    517           * Read RAM data from the Melexis 90621 sensor.
+    518           * @param address = The address of the first value to read.
+    519           * @param size = The number of bytes to read. Must be an even number.
+    520           * @return TRUE if request was successful.
+    521           */
+    522          static BOOL_TYPE ReadMelexisValues(uint8 address, uint8 size)
+    523          {
+    524              // Write buffer consists of address, step size, and number of values to read.
+    525              uint8 write_buffer[] = { MLX_CMD_READ_RAM, address, ((size > 2) ? 1 : 0), size / sizeof(uint16) };
+    526              return I2c__WriteThenRead(I2c_Infrared_Lli.Sf->I2c_Channel, write_buffer, sizeof(write_buffer), size);
+    527          }
+    528          
+    529          
+    530          //---------------------------------------------------------------------------------------------------------------------
+    531          /**
+    532           * Write a checked 16-bit value to a Melexis 90621 sensor RAM address.
+    533           * The value is sent with redundant data to reduce the likelihood of communication failures.
+    534           * @param command = The command to send to the Melexis 90621 sensor.
+    535           * @param value = The 16-bit value to write.
+    536           * @param check = Redundant data generator for better communication robustness.
+    537           * @return TRUE if the message was successfully queued.
+    538           */
+    539          static BOOL_TYPE WriteMelexisValue(MELEXIS_CMD_TYPE command, uint16 value, uint8 check)
+    540          {
+    541              uint8 write_buffer[] =
+    542              {
+    543                  (uint8)(LOBYTE(value) - check),
+    544                  (uint8)(LOBYTE(value)),
+    545                  (uint8)(HIBYTE(value) - check),
+    546                  (uint8)(HIBYTE(value))
+    547              };
+    548              return I2c__Write(I2c_Infrared_Lli.Sf->I2c_Channel, command, write_buffer, sizeof(write_buffer));
+    549          }
+    550          
+    551          
+    552          //=====================================================================================================================
+    553          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    554          //=====================================================================================================================
+    555          
+    556          
+    557          //---------------------------------------------------------------------------------------------------------------------
+    558          /**
+    559           * Configure the I2C bus to access the slave address of the Melexis 90621 EEPROM device.
+    560           */
+    561          static void ConfigureI2CForEeprom(void)
+    562          {
+    563              // Setup the I2C peripheral to read the EEPROM device slave address.
+    564              // NOTE: The I2C module includes the I2C R/W bit as part of the address.
+    565              if (I2c__Initialize(I2c_Infrared_Lli.Sf->I2c_Channel, I2C_400KHZ, I2C_ADDR_7BITS, MLX_EEPROM_DEVICE_ADDRESS) == TRUE)
+    566              {
+    567                  EventProceed();
+    568              }
+    569              else
+    570              {
+    571                  EventFail();
+    572              }
+    573          }
+    574          
+    575          
+    576          //---------------------------------------------------------------------------------------------------------------------
+    577          /**
+    578           * Configure the I2C bus to access the slave address of the Melexis 90621 RAM device.
+    579           */
+    580          static void ConfigureI2CForRam(void)
+    581          {
+    582              // Setup the I2C peripheral to write the Melexis 90621 RAM slave address.
+    583              // NOTE: The I2C module includes the I2C R/W bit as part of the address.
+    584              if (I2c__Initialize(I2c_Infrared_Lli.Sf->I2c_Channel, I2C_400KHZ, I2C_ADDR_7BITS, MLX_RAM_DEVICE_ADDRESS) == TRUE)
+    585              {
+    586                  EventProceed();
+    587              }
+    588              else
+    589              {
+    590                  EventFail();
+    591              }
+    592          }
+    593          
+    594          
+    595          //---------------------------------------------------------------------------------------------------------------------
+    596          /**
+    597           * Read the configuration register and confirm that it was written correctly.
+    598           * This function reads and processes the received data.
+    599           * It assumes that the read request was already made.
+    600           */
+    601          static void DoConfigRead(void)
+    602          {
+    603              I2c_Infrared_Lli.Sensor.Resolution = IR_RESOLUTION_15_BIT;
+    604              if (IsI2cIdle() == TRUE)
+    605              {
+    606                  uint16 value;
+    607                  if (I2c__Read(I2c_Infrared_Lli.Sf->I2c_Channel, (void*)&value, sizeof(value)) == TRUE)
+    608                  {
+    609                      value &= CONFIG_VERIFIABLE_FIELDS_MASK;
+    610                      if (value == (I2c_Infrared_Lli.Config.Cfg_Reg.Whole & CONFIG_VERIFIABLE_FIELDS_MASK))
+    611                      {
+    612                          I2c_Infrared_Lli.Sensor.Resolution = (IR_BIT_RESOLUTION_TYPE)I2c_Infrared_Lli.Config.Cfg_Reg.Field.Bit_Resolution;
+    613                          EventReadComplete();
+    614                      }
+    615                      else
+    616                      {
+    617                          EventFail();
+    618                      }
+    619                  }
+    620                  else
+    621                  {
+    622                      EventFail();
+    623                  }
+    624              }
+    625              else if (GetMilliseconds() >= I2C_NOT_IDLE_MS_TIMEOUT)
+    626              {
+    627                  EventFail();
+    628              }
+    629          }
+    630          
+    631          
+    632          //---------------------------------------------------------------------------------------------------------------------
+    633          /**
+    634           * Copy the next block of data received on I2C into the RAM copy of the Melexis 90621 Sensor EEPROM.
+    635           * This function reads and processes the received data.
+    636           * It assumes that the read request was already made.
+    637           */
+    638          static void DoEepromRead(void)
+    639          {
+    640              if (IsI2cIdle() == TRUE)
+    641              {
+    642                  // Get the pointer to the RAM copy of the Melexis 90621 EEPROM.
+    643                  uint8* destination = I2C_READ_INSTRUCTIONS[I2c_Infrared_Lli.Transfer_Step].Destination;
+    644                  uint8 read_size = I2C_READ_INSTRUCTIONS[I2c_Infrared_Lli.Transfer_Step].Read_Size;
+    645                  if (I2c__Read(I2c_Infrared_Lli.Sf->I2c_Channel, destination, read_size) == TRUE)
+    646                  {
+    647                      I2c_Infrared_Lli.Transfer_Step++;
+    648                      if (I2c_Infrared_Lli.Transfer_Step >= ELEMENTS_IN_ARRAY(I2C_READ_INSTRUCTIONS))
+    649                      {
+    650                          EventReadComplete();
+    651                      }
+    652                      else
+    653                      {
+    654                          EventReadNextSection();
+    655                      }
+    656                  }
+    657                  else
+    658                  {
+    659                      EventFail();
+    660                  }
+    661              }
+    662              else if (GetMilliseconds() >= I2C_NOT_IDLE_MS_TIMEOUT)
+    663              {
+    664                  EventFail();
+    665              }
+    666          }
+    667          
+    668          
+    669          //---------------------------------------------------------------------------------------------------------------------
+    670          /**
+    671           * Read the oscillator trim value and confirm that it was written correctly.
+    672           * This function reads and processes the received data.
+    673           * It assumes that the read request was already made.
+    674           */
+    675          static void DoOscTrimRead(void)
+    676          {
+    677              if (IsI2cIdle() == TRUE)
+    678              {
+    679                  uint16 value = 0;
+    680                  if (I2c__Read(I2c_Infrared_Lli.Sf->I2c_Channel, (void*)&value, sizeof(value)) == TRUE)
+    681                  {
+    682                      if (value == I2c_Infrared_Lli.Config.Osc_Trim)
+    683                      {
+    684                          EventReadComplete();
+    685                      }
+    686                      else
+    687                      {
+    688                          EventFail();
+    689                      }
+    690                  }
+    691                  else
+    692                  {
+    693                      EventFail();
+    694                  }
+    695              }
+    696              else if (GetMilliseconds() >= I2C_NOT_IDLE_MS_TIMEOUT)
+    697              {
+    698                  EventFail();
+    699              }
+    700          }
+    701          
+    702          
+    703          //---------------------------------------------------------------------------------------------------------------------
+    704          /**
+    705           * Read the pixel data from the Melexis 90621 sensor.
+    706           * This function reads and processes the received data.
+    707           * It assumes that the read request was already made.
+    708           */
+    709          static void DoPixelsRead(void)
+    710          {
+    711              if (IsI2cIdle() == TRUE)
+    712              {
+    713                  if (I2c__Read(I2c_Infrared_Lli.Sf->I2c_Channel, (void*)I2c_Infrared_Lli.Sensor.Pixel, RAM_PIXEL_READ_SIZE) == TRUE)
+    714                  {
+    715                      EventReadComplete();
+    716                  }
+    717                  else
+    718                  {
+    719                      EventFail();
+    720                  }
+    721              }
+    722              else if (GetMilliseconds() >= I2c_Infrared_Lli.Sf->Step_Period_Milliseconds)
+    723              {
+    724                  EventFail();
+    725              }
+    726          }
+    727          
+    728          
+    729          //---------------------------------------------------------------------------------------------------------------------
+    730          /**
+    731           * Read the status from the Melexis 90621 sensor.
+    732           * This function reads and processes the received data.
+    733           * It assumes that the read request was already made.
+    734           */
+    735          static void DoStatusRead(void)
+    736          {
+    737              if (IsI2cIdle() == TRUE)
+    738              {
+    739                  // Get the status register from the Melexis 90621 sensor.
+    740                  if (I2c__Read(I2c_Infrared_Lli.Sf->I2c_Channel,
+    741                                (void*)(&I2c_Infrared_Lli.Config.Cfg_Reg.Whole),
+    742                                sizeof(I2c_Infrared_Lli.Config.Cfg_Reg.Whole)) == TRUE)
+    743                  {
+    744                      if (I2c_Infrared_Lli.Config.Cfg_Reg.Field.Configuration_Loaded == FALSE)
+    745                      {
+    746                          // The Melexis 90621 sensor experienced a reset.
+    747                          EventPowerOnReset();
+    748                      }
+    749                      else if (I2c_Infrared_Lli.Config.Cfg_Reg.Field.Measuring == FALSE)
+    750                      {
+    751                          // The Melexis 90621 sensor finished acquiring pixel data.
+    752                          EventDataReady();
+    753                      }
+    754                      else
+    755                      {
+    756                          // The Melexis 90621 sensor is still acquiring data.
+    757                          EventReadComplete();
+    758                      }
+    759                  }
+    760                  else
+    761                  {
+    762                      EventFail();
+    763                  }
+    764              }
+    765              else if (GetMilliseconds() >= I2c_Infrared_Lli.Sf->Step_Period_Milliseconds)
+    766              {
+    767                  EventFail();
+    768              }
+    769          }
+    770          
+    771          
+    772          //---------------------------------------------------------------------------------------------------------------------
+    773          /**
+    774           * Start reading the next block of EEPROM data on the I2C bus from the Melexis 90621 Sensor.
+    775           */
+    776          static void RequestEepromRead(void)
+    777          {
+    778              uint8 address = I2C_READ_INSTRUCTIONS[I2c_Infrared_Lli.Transfer_Step].Read_Address;
+    779              uint8 size = I2C_READ_INSTRUCTIONS[I2c_Infrared_Lli.Transfer_Step].Read_Size;
+    780              if (I2c__WriteThenRead(I2c_Infrared_Lli.Sf->I2c_Channel, &address, sizeof(address), size) == FALSE)
+    781              {
+    782                  EventFail();
+    783              }
+    784          }
+    785          
+    786          
+    787          //---------------------------------------------------------------------------------------------------------------------
+    788          /**
+    789           * Start reading the oscillator trim value from the Melexis 90621 Sensor.
+    790           */
+    791          static void RequestOscTrimRead(void)
+    792          {
+    793              if (ReadMelexisValues(RAM_OSC_TRIM_READ_ADDRESS, RAM_OSC_TRIM_READ_SIZE) == FALSE)
+    794              {
+    795                  EventFail();
+    796              }
+    797          }
+    798          
+    799          
+    800          //---------------------------------------------------------------------------------------------------------------------
+    801          /**
+    802           * Start reading the pixel data from the Melexis 90621 sensor.
+    803           */
+    804          static void RequestPixelsRead(void)
+    805          {
+    806              if (ReadMelexisValues(RAM_PIXEL_READ_ADDRESS, RAM_PIXEL_READ_SIZE) == FALSE)
+    807              {
+    808                  EventFail();
+    809              }
+    810          }
+    811          
+    812          
+    813          //---------------------------------------------------------------------------------------------------------------------
+    814          /**
+    815           * Start reading the status of the Melexis 90621 sensor.
+    816           */
+    817          static void RequestStatusRead(void)
+    818          {
+    819              if (ReadMelexisValues(RAM_STATUS_READ_ADDRESS, RAM_STATUS_READ_SIZE) == FALSE)
+    820              {
+    821                  EventFail();
+    822              }
+    823          }
+    824          
+    825          
+    826          //---------------------------------------------------------------------------------------------------------------------
+    827          /**
+    828           * Set the data ready flag to let HBL know that new data is ready.
+    829           * It will be cleared in the DO function.
+    830           */
+    831          static void SetDataReadyFlag(void)
+    832          {
+    833              I2c_Infrared_Lli.Data_Ready = TRUE;
+    834          }
+    835          
+    836          
+    837          //---------------------------------------------------------------------------------------------------------------------
+    838          /**
+    839           * Send the start command to start a new acquisition.
+    840           */
+    841          static void StartAcquisition(void)
+    842          {
+    843              uint8 data = MLX_CMD_START_STEP_HI_BYTE;
+    844              if (I2c__Write(I2c_Infrared_Lli.Sf->I2c_Channel, MLX_CMD_START_STEP_LO_BYTE, &data, sizeof(data)) == FALSE)
+    845              {
+    846                  EventFail();
+    847              }
+    848          }
+    849          
+    850          
+    851          //---------------------------------------------------------------------------------------------------------------------
+    852          /**
+    853           * Start the timer.
+    854           * Elapsed time is available from the GetMilliseconds() function.
+    855           */
+    856          static void StartTimer(void)
+    857          {
+    858              I2c_Infrared_Lli.Start_Milliseconds = (uint16)Millis__GetFreeRunningCounter();
+    859          }
+    860          
+    861          
+    862          //---------------------------------------------------------------------------------------------------------------------
+    863          /**
+    864           * Wait for the I2C bus to become idle with a short timeout.
+    865           * Timeout is based on the expected I2c access time.
+    866           */
+    867          static void WaitForI2cIdle(void)
+    868          {
+    869              if (IsI2cIdle() == TRUE)
+    870              {
+    871                  EventWriteComplete();
+    872              }
+    873              else if (GetMilliseconds() >= I2C_NOT_IDLE_MS_TIMEOUT)
+    874              {
+    875                  EventFail();
+    876              }
+    877          }
+    878          
+    879          
+    880          //---------------------------------------------------------------------------------------------------------------------
+    881          /**
+    882           * Wait for time to start the next acquisition step.
+    883           * The method used will run at the specified requested refresh rate or as fast as possible if the
+    884           * requested refresh rate cannot be maintained.
+    885           */
+    886          static void WaitForNextStep(void)
+    887          {
+    888              uint16 elapsed = GetMilliseconds();
+    889              uint16 step_ms = I2c_Infrared_Lli.Sf->Step_Period_Milliseconds;
+    890              if (elapsed >= step_ms)
+    891              {
+    892                  if (elapsed < 2 * step_ms)
+    893                  {
+    894                      I2c_Infrared_Lli.Start_Milliseconds += step_ms;
+    895                  }
+    896                  else
+    897                  {
+    898                      // Accommodate unrecoverable slip.
+    899                      StartTimer();
+    900                  }
+    901                  EventStart();
+    902              }
+    903          }
+    904          
+    905          
+    906          //---------------------------------------------------------------------------------------------------------------------
+    907          /**
+    908           * Write the configuration value to the Melexis 90621 Sensor.
+    909           */
+    910          static void WriteConfiguration(void)
+    911          {
+    912              // Write the trim value to the Melexis 90621 Sensor.
+    913              I2c_Infrared_Lli.Config.Cfg_Reg.Field.IR_Refresh_Rate = I2c_Infrared_Lli.Sf->IR_Refresh_Rate;
+    914              I2c_Infrared_Lli.Config.Cfg_Reg.Field.Bit_Resolution = I2c_Infrared_Lli.Sf->Bit_Resolution;
+    915              I2c_Infrared_Lli.Config.Cfg_Reg.Field.Step_Mode = TRUE;
+    916              I2c_Infrared_Lli.Config.Cfg_Reg.Field.Sleep_Mode = FALSE;
+    917              I2c_Infrared_Lli.Config.Cfg_Reg.Field.Configuration_Loaded = TRUE;
+    918              I2c_Infrared_Lli.Config.Cfg_Reg.Field.I2C_400KHz_Limit = TRUE;
+    919              I2c_Infrared_Lli.Config.Cfg_Reg.Field.EEPROM_Disabled = FALSE;
+    920              // 0x55 is the check byte used to send redundant data for error checking.
+    921              if (WriteMelexisValue(MLX_CMD_WRITE_CONFIG, I2c_Infrared_Lli.Config.Cfg_Reg.Whole, 0x55) == FALSE)
+    922              {
+    923                  EventFail();
+    924              }
+    925          }
+    926          
+    927          
+    928          //---------------------------------------------------------------------------------------------------------------------
+    929          /**
+    930           * Write the oscillator trim value to the Melexis 90621 Sensor.
+    931           */
+    932          static void WriteOscillatorTrim(void)
+    933          {
+    934              // Write the trim value to the Melexis 90621 Sensor.
+    935              //  0xAA is the check byte used to send redundant data for error checking.
+    936              if (WriteMelexisValue(MLX_CMD_WRITE_OSC_TRIM, I2c_Infrared_Lli.Config.Osc_Trim, 0xAA) == FALSE)
+    937              {
+    938                  EventFail();
+    939              }
+    940          }
+    941          
+    942          
+    943          //=====================================================================================================================
+    944          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Ir Lli State Machine
+    945          //=====================================================================================================================
+    946          // !! StateEngineCrank cannot update this code if you change the header !!
+    947          
+    948          
+    949          //---------------------------------------------------------------------------------------------------------------------
+    950          /**
+    951           * Process the Data Ready Event for the Ir Lli state machine.
+    952           *
+    953           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    954           *
+    955           * This function was auto-generated and must not be edited manually.
+    956           * Change the UML used to generate this function and regenerate the source code.
+    957           */
+    958          static void EventDataReady(void)
+    959          {
+    960              switch (I2c_Infrared_Lli.State)
+    961              {
+    962                  case STATE_IR_LLI_READ_STATUS:
+    963                      I2c_Infrared_Lli.State = STATE_IR_LLI_READ_PIXELS;
+    964                      RequestPixelsRead();                    // Entry Function.
+    965                      Ir_Lli_Transitioned = TRUE;
+    966                      break;
+    967          
+    968                  default:
+    969                      // Event is ignored for all other values of I2c_Infrared_Lli.State.
+    970                      break;
+    971              }
+    972          }
+    973          
+    974          
+    975          //---------------------------------------------------------------------------------------------------------------------
+    976          /**
+    977           * Process the Fail Event for the Ir Lli state machine.
+    978           *
+    979           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    980           *
+    981           * This function was auto-generated and must not be edited manually.
+    982           * Change the UML used to generate this function and regenerate the source code.
+    983           */
+    984          static void EventFail(void)
+    985          {
+    986              switch (I2c_Infrared_Lli.State)
+    987              {
+    988                  case STATE_IR_LLI_SETUP_EEPROM_READ:
+    989                      I2c_Infrared_Lli.State = STATE_IR_LLI_NONE; // Terminate Ir Lli state machine execution.
+    990                      Ir_Lli_Transitioned = TRUE;
+    991                      break;
+    992          
+    993                  case STATE_IR_LLI_READ_EEPROM:
+    994                      I2c_Infrared_Lli.State = STATE_IR_LLI_SETUP_EEPROM_READ;
+    995                      Ir_Lli_Transitioned = TRUE;
+    996                      break;
+    997          
+    998                  case STATE_IR_LLI_SETUP_TRIM_VALUE_WRITE:
+    999                  case STATE_IR_LLI_WRITE_TRIM_VALUE:
+   1000                  case STATE_IR_LLI_READ_TRIM_VALUE:
+   1001                  case STATE_IR_LLI_START_STEP:
+   1002                  case STATE_IR_LLI_READ_STATUS:
+   1003                  case STATE_IR_LLI_READ_PIXELS:
+   1004                      I2c_Infrared_Lli.State = STATE_IR_LLI_SETUP_TRIM_VALUE_WRITE;
+   1005                      Ir_Lli_Transitioned = TRUE;
+   1006                      break;
+   1007          
+   1008                  case STATE_IR_LLI_SETUP_CONFIG_VALUE_WRITE:
+   1009                  case STATE_IR_LLI_WRITE_CONFIG_VALUE:
+   1010                  case STATE_IR_LLI_READ_CONFIG_VALUE:
+   1011                      I2c_Infrared_Lli.State = STATE_IR_LLI_SETUP_CONFIG_VALUE_WRITE;
+   1012                      Ir_Lli_Transitioned = TRUE;
+   1013                      break;
+   1014          
+   1015                  default:
+   1016                      // Event is ignored for all other values of I2c_Infrared_Lli.State.
+   1017                      break;
+   1018              }
+   1019          }
+   1020          
+   1021          
+   1022          //---------------------------------------------------------------------------------------------------------------------
+   1023          /**
+   1024           * Process the GI Read Event for the Ir Lli state machine.
+   1025           *
+   1026           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1027           *
+   1028           * This function was auto-generated and must not be edited manually.
+   1029           * Change the UML used to generate this function and regenerate the source code.
+   1030           */
+   1031          static void EventGIRead(void)
+   1032          {
+   1033              switch (I2c_Infrared_Lli.State)
+   1034              {
+   1035                  case STATE_IR_LLI_DATA_READY:
+   1036                      I2c_Infrared_Lli.State = STATE_IR_LLI_WAIT_FOR_NEXT_STEP;
+   1037                      Ir_Lli_Transitioned = TRUE;
+   1038                      break;
+   1039          
+   1040                  default:
+   1041                      // Event is ignored for all other values of I2c_Infrared_Lli.State.
+   1042                      break;
+   1043              }
+   1044          }
+   1045          
+   1046          
+   1047          //---------------------------------------------------------------------------------------------------------------------
+   1048          /**
+   1049           * Process the Power On Reset Event for the Ir Lli state machine.
+   1050           *
+   1051           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1052           *
+   1053           * This function was auto-generated and must not be edited manually.
+   1054           * Change the UML used to generate this function and regenerate the source code.
+   1055           */
+   1056          static void EventPowerOnReset(void)
+   1057          {
+   1058              switch (I2c_Infrared_Lli.State)
+   1059              {
+   1060                  case STATE_IR_LLI_READ_STATUS:
+   1061                      I2c_Infrared_Lli.State = STATE_IR_LLI_SETUP_EEPROM_READ;
+   1062                      Ir_Lli_Transitioned = TRUE;
+   1063                      break;
+   1064          
+   1065                  default:
+   1066                      // Event is ignored for all other values of I2c_Infrared_Lli.State.
+   1067                      break;
+   1068              }
+   1069          }
+   1070          
+   1071          
+   1072          //---------------------------------------------------------------------------------------------------------------------
+   1073          /**
+   1074           * Process the Proceed Event for the Ir Lli state machine.
+   1075           *
+   1076           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1077           *
+   1078           * This function was auto-generated and must not be edited manually.
+   1079           * Change the UML used to generate this function and regenerate the source code.
+   1080           */
+   1081          static void EventProceed(void)
+   1082          {
+   1083              switch (I2c_Infrared_Lli.State)
+   1084              {
+   1085                  case STATE_IR_LLI_SETUP_EEPROM_READ:
+   1086                      I2c_Infrared_Lli.State = STATE_IR_LLI_READ_EEPROM;
+   1087                      Ir_Lli_Transitioned = FALSE;
+   1088                      StartTimer();                           // Entry Function.
+   1089                      if (Ir_Lli_Transitioned == FALSE)
+   1090                      {
+   1091                          RequestEepromRead();                // Entry Function.
+   1092                      }
+   1093                      Ir_Lli_Transitioned = TRUE;
+   1094                      break;
+   1095          
+   1096                  case STATE_IR_LLI_SETUP_TRIM_VALUE_WRITE:
+   1097                      I2c_Infrared_Lli.State = STATE_IR_LLI_WRITE_TRIM_VALUE;
+   1098                      Ir_Lli_Transitioned = FALSE;
+   1099                      StartTimer();                           // Entry Function.
+   1100                      if (Ir_Lli_Transitioned == FALSE)
+   1101                      {
+   1102                          WriteOscillatorTrim();              // Entry Function.
+   1103                      }
+   1104                      Ir_Lli_Transitioned = TRUE;
+   1105                      break;
+   1106          
+   1107                  case STATE_IR_LLI_SETUP_CONFIG_VALUE_WRITE:
+   1108                      I2c_Infrared_Lli.State = STATE_IR_LLI_WRITE_CONFIG_VALUE;
+   1109                      Ir_Lli_Transitioned = FALSE;
+   1110                      StartTimer();                           // Entry Function.
+   1111                      if (Ir_Lli_Transitioned == FALSE)
+   1112                      {
+   1113                          WriteConfiguration();               // Entry Function.
+   1114                      }
+   1115                      Ir_Lli_Transitioned = TRUE;
+   1116                      break;
+   1117          
+   1118                  default:
+   1119                      // Event is ignored for all other values of I2c_Infrared_Lli.State.
+   1120                      break;
+   1121              }
+   1122          }
+   1123          
+   1124          
+   1125          //---------------------------------------------------------------------------------------------------------------------
+   1126          /**
+   1127           * Process the Read Complete Event for the Ir Lli state machine.
+   1128           *
+   1129           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1130           *
+   1131           * This function was auto-generated and must not be edited manually.
+   1132           * Change the UML used to generate this function and regenerate the source code.
+   1133           */
+   1134          static void EventReadComplete(void)
+   1135          {
+   1136              switch (I2c_Infrared_Lli.State)
+   1137              {
+   1138                  case STATE_IR_LLI_READ_EEPROM:
+   1139                      I2c_Infrared_Lli.State = STATE_IR_LLI_SETUP_TRIM_VALUE_WRITE;
+   1140                      Ir_Lli_Transitioned = TRUE;
+   1141                      break;
+   1142          
+   1143                  case STATE_IR_LLI_READ_TRIM_VALUE:
+   1144                      I2c_Infrared_Lli.State = STATE_IR_LLI_SETUP_CONFIG_VALUE_WRITE;
+   1145                      Ir_Lli_Transitioned = TRUE;
+   1146                      break;
+   1147          
+   1148                  case STATE_IR_LLI_READ_CONFIG_VALUE:
+   1149                      I2c_Infrared_Lli.State = STATE_IR_LLI_WAIT_FOR_NEXT_STEP;
+   1150                      Ir_Lli_Transitioned = TRUE;
+   1151                      break;
+   1152          
+   1153                  case STATE_IR_LLI_READ_STATUS:
+   1154                      I2c_Infrared_Lli.State = STATE_IR_LLI_READ_STATUS;
+   1155                      RequestStatusRead();                    // Entry Function.
+   1156                      Ir_Lli_Transitioned = TRUE;
+   1157                      break;
+   1158          
+   1159                  case STATE_IR_LLI_READ_PIXELS:
+   1160                      I2c_Infrared_Lli.State = STATE_IR_LLI_DATA_READY;
+   1161                      SetDataReadyFlag();                     // Entry Function.
+   1162                      Ir_Lli_Transitioned = TRUE;
+   1163                      break;
+   1164          
+   1165                  default:
+   1166                      // Event is ignored for all other values of I2c_Infrared_Lli.State.
+   1167                      break;
+   1168              }
+   1169          }
+   1170          
+   1171          
+   1172          //---------------------------------------------------------------------------------------------------------------------
+   1173          /**
+   1174           * Process the Read Next Section Event for the Ir Lli state machine.
+   1175           *
+   1176           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1177           *
+   1178           * This function was auto-generated and must not be edited manually.
+   1179           * Change the UML used to generate this function and regenerate the source code.
+   1180           */
+   1181          static void EventReadNextSection(void)
+   1182          {
+   1183              switch (I2c_Infrared_Lli.State)
+   1184              {
+   1185                  case STATE_IR_LLI_READ_EEPROM:
+   1186                      I2c_Infrared_Lli.State = STATE_IR_LLI_READ_EEPROM;
+   1187                      Ir_Lli_Transitioned = FALSE;
+   1188                      StartTimer();                           // Entry Function.
+   1189                      if (Ir_Lli_Transitioned == FALSE)
+   1190                      {
+   1191                          RequestEepromRead();                // Entry Function.
+   1192                      }
+   1193                      Ir_Lli_Transitioned = TRUE;
+   1194                      break;
+   1195          
+   1196                  default:
+   1197                      // Event is ignored for all other values of I2c_Infrared_Lli.State.
+   1198                      break;
+   1199              }
+   1200          }
+   1201          
+   1202          
+   1203          //---------------------------------------------------------------------------------------------------------------------
+   1204          /**
+   1205           * Process the Start Event for the Ir Lli state machine.
+   1206           *
+   1207           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1208           *
+   1209           * This function was auto-generated and must not be edited manually.
+   1210           * Change the UML used to generate this function and regenerate the source code.
+   1211           */
+   1212          static void EventStart(void)
+   1213          {
+   1214              switch (I2c_Infrared_Lli.State)
+   1215              {
+   1216                  case STATE_IR_LLI_WAIT_FOR_NEXT_STEP:
+   1217                      I2c_Infrared_Lli.State = STATE_IR_LLI_START_STEP;
+   1218                      StartAcquisition();                     // Entry Function.
+   1219                      Ir_Lli_Transitioned = TRUE;
+   1220                      break;
+   1221          
+   1222                  default:
+   1223                      // Event is ignored for all other values of I2c_Infrared_Lli.State.
+   1224                      break;
+   1225              }
+   1226          }
+   1227          
+   1228          
+   1229          //---------------------------------------------------------------------------------------------------------------------
+   1230          /**
+   1231           * Process the Write Complete Event for the Ir Lli state machine.
+   1232           *
+   1233           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1234           *
+   1235           * This function was auto-generated and must not be edited manually.
+   1236           * Change the UML used to generate this function and regenerate the source code.
+   1237           */
+   1238          static void EventWriteComplete(void)
+   1239          {
+   1240              switch (I2c_Infrared_Lli.State)
+   1241              {
+   1242                  case STATE_IR_LLI_WRITE_TRIM_VALUE:
+   1243                      I2c_Infrared_Lli.State = STATE_IR_LLI_READ_TRIM_VALUE;
+   1244                      Ir_Lli_Transitioned = FALSE;
+   1245                      StartTimer();                           // Entry Function.
+   1246                      if (Ir_Lli_Transitioned == FALSE)
+   1247                      {
+   1248                          RequestOscTrimRead();               // Entry Function.
+   1249                      }
+   1250                      Ir_Lli_Transitioned = TRUE;
+   1251                      break;
+   1252          
+   1253                  case STATE_IR_LLI_WRITE_CONFIG_VALUE:
+   1254                      I2c_Infrared_Lli.State = STATE_IR_LLI_READ_CONFIG_VALUE;
+   1255                      Ir_Lli_Transitioned = FALSE;
+   1256                      StartTimer();                           // Entry Function.
+   1257                      if (Ir_Lli_Transitioned == FALSE)
+   1258                      {
+   1259                          RequestStatusRead();                // Entry Function.
+   1260                      }
+   1261                      Ir_Lli_Transitioned = TRUE;
+   1262                      break;
+   1263          
+   1264                  case STATE_IR_LLI_START_STEP:
+   1265                      I2c_Infrared_Lli.State = STATE_IR_LLI_READ_STATUS;
+   1266                      RequestStatusRead();                    // Entry Function.
+   1267                      Ir_Lli_Transitioned = TRUE;
+   1268                      break;
+   1269          
+   1270                  default:
+   1271                      // Event is ignored for all other values of I2c_Infrared_Lli.State.
+   1272                      break;
+   1273              }
+   1274          }
+   1275          
+   1276          
+   1277          //---------------------------------------------------------------------------------------------------------------------
+   1278          /**
+   1279           * The main execution function for the Ir Lli state machine.
+   1280           * This function should be called periodically while the state machine is running.
+   1281           *
+   1282           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1283           *
+   1284           * This function was auto-generated and must not be edited manually.
+   1285           * Change the UML used to generate this function and regenerate the source code.
+   1286           */
+   1287          static void IrLliExecute(void)
+   1288          {
+   1289              Ir_Lli_Transitioned = FALSE;
+   1290              switch(I2c_Infrared_Lli.State)
+   1291              {
+   1292                  case STATE_IR_LLI_SETUP_EEPROM_READ:
+   1293                      ConfigureI2CForEeprom();                // Do function.
+   1294                      break;
+   1295          
+   1296                  case STATE_IR_LLI_READ_EEPROM:
+   1297                      DoEepromRead();                         // Do function.
+   1298                      break;
+   1299          
+   1300                  case STATE_IR_LLI_SETUP_TRIM_VALUE_WRITE:
+   1301                  case STATE_IR_LLI_SETUP_CONFIG_VALUE_WRITE:
+   1302                      ConfigureI2CForRam();                   // Do function.
+   1303                      break;
+   1304          
+   1305                  case STATE_IR_LLI_WRITE_TRIM_VALUE:
+   1306                  case STATE_IR_LLI_WRITE_CONFIG_VALUE:
+   1307                  case STATE_IR_LLI_START_STEP:
+   1308                      WaitForI2cIdle();                       // Do function.
+   1309                      break;
+   1310          
+   1311                  case STATE_IR_LLI_READ_TRIM_VALUE:
+   1312                      DoOscTrimRead();                        // Do function.
+   1313                      break;
+   1314          
+   1315                  case STATE_IR_LLI_READ_CONFIG_VALUE:
+   1316                      DoConfigRead();                         // Do function.
+   1317                      break;
+   1318          
+   1319                  case STATE_IR_LLI_WAIT_FOR_NEXT_STEP:
+   1320                      WaitForNextStep();                      // Do function.
+   1321                      break;
+   1322          
+   1323                  case STATE_IR_LLI_READ_STATUS:
+   1324                      DoStatusRead();                         // Do function.
+   1325                      break;
+   1326          
+   1327                  case STATE_IR_LLI_READ_PIXELS:
+   1328                      DoPixelsRead();                         // Do function.
+   1329                      break;
+   1330          
+   1331                  default:
+   1332                      // There is nothing to do for all other values of I2c_Infrared_Lli.State.
+   1333                      break;
+   1334              }
+   1335          }
+   1336          
+   1337          
+   1338          //---------------------------------------------------------------------------------------------------------------------
+   1339          /**
+   1340           * The initialization function for the Ir Lli state machine.
+   1341           * This function resets the state machine to the initial state.
+   1342           *
+   1343           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+   1344           *
+   1345           * This function was auto-generated and must not be edited manually.
+   1346           * Change the UML used to generate this function and regenerate the source code.
+   1347           */
+   1348          static void IrLliInitialize(void)
+   1349          {
+   1350              I2c_Infrared_Lli.State = STATE_IR_LLI_SETUP_EEPROM_READ;
+   1351              Ir_Lli_Transitioned = TRUE;
+   1352          }
+   1353          
+   1354          
+   1355          // !! StateEngineCrank cannot update this code if you change the footer !!
+   1356          // End of StateEngineCrank Auto-Generated Code.
+   1357          
+   1358          
+   1359          #endif      // #if (HBL_LLI_NUM_I2C_INFRARED_SENSOR > 0)
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

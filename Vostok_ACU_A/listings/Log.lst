@@ -1,0 +1,812 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:23
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Common/all/Common/Log/Log.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Log.lst -o
+#        obj\Log.obj source/XCategory/Common/all/Common/Log/Log.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Log.lst
+#    Object file  =  obj\Log.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\Common\Log\Log.c
+      1          /**
+      2           * @file
+      3           * @brief       Implements a FIFO queue for debug messages generated by project modules.
+      4           * @details
+      5           *
+      6           * The Log module provides the following project-level features:
+      7           *  - Macros for publishing log messages (with data) with varying severities.
+      8           *  - A chronologically ordered record of debugging messages generated by the application.
+      9           *  - Automatic publication of log messages over Reveal.
+     10           *  - An optional method of filtering specific groups of messages so that they cannot be added.
+     11           *
+     12           * Each Log Message consists of four fields:
+     13           *  - A Module Identifier to link the debug message to a specific module in the project.
+     14           *  - A Message Identifier to specify a debug message unique to the module.
+     15           *  - A Message Severity to classify the debug message. (Refer to #LOG_SEVERITY_ID_TYPE)
+     16           *  - Associated data that can be used to further diagnose the reason for the debug message.
+     17           *
+     18           * The Log module works in conjunction with an external tool (LogPreprocessor) that can be run as
+     19           * part of the build environment. The external tool scans all project modules looking for log
+     20           * messages. It searches for a type definition with the name "MODULE_X_LOG_MESSAGE_ID_TYPE" where
+     21           * 'X' is the name of the module. It then updates the Log module's parameter files to add the
+     22           * module's name and log messages automatically.
+     23           *
+     24           * @copyright  Copyright 2013-2017 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     25           */
+     26          
+     27          
+     28          //  --- Include Files -------------------------------------------------------------------------------------------------
+     29          
+     30          // -- This Module --
+     31          #include "SystemConfig.h"
+     32          #include "Log.h"
+     33          #if (LOG_MODULE_ENABLE == ENABLED)
+     34          #include "Log_prv.h"
+     35          
+     36          // -- Other Modules --
+     37          #include "Reveal.h"
+     38          #include "string.h"
+     39          #include "API004Debug.h"
+     40          
+     41          
+     42          //  --- Private Properties --------------------------------------------------------------------------------------------
+     43          
+     44          
+     45          // -- Private Constant Declarations --
+     46          
+     47          #ifndef LOG_RATE_CHECK_PERIOD
+     48              //! The period over which the message rate is checked.
+     49              //! This is also the period between two published messages when the message rate is exceeded.
+     50              //! Each count represents one call to the Log__Background() function.
+     51              //! Typically, 1 count equals 25ms, or 40 counts equals 1 second.
+     52              #define LOG_RATE_CHECK_PERIOD 80
+     53          #endif
+     54          
+     55          #ifndef LOG_MAX_RATE
+     56              //! As long as more than LOG_MAX_RATE log messages are generated over the LOG_RATE_CHECK_PERIOD,
+     57              //! the Log module will slow the publication rate down to one message per LOG_RATE_CHECK_PERIOD.
+     58              #define LOG_MAX_RATE 18
+     59          #endif
+     60          
+     61          
+     62          // -- Private Type Declarations --
+     63          
+     64          
+     65          // -- Private Variables --
+     66          
+     67          //! The memory buffer that holds the log messages in the Log Message Queue.
+
+   \                                 In section .bss, align 4
+     68          static LOG_MODULE_MESSAGE_ID_TYPE Log_Messages[LOG_MAX_MESSAGES];
+     69          
+     70          //! The memory buffer that holds the data associated with the log messages in the Log Message Queue.
+     71          static LOG_DATA_TYPE Log_Data[LOG_MAX_MESSAGES];
+     72          
+     73          //! The number of Log Messages currently in the Message Queue that have not been published.
+     74          static uint8 Num_Of_Messages;
+   \                     Num_Of_Messages:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 1
+   \   00000002                      DS8 1
+   \   00000003                      DS8 1
+   \   00000004                      DS8 1
+   \   00000005                      DS8 3
+   \   00000008                      DS8 20
+   \   0000001C                      DS8 20
+     75          
+     76          //! A counter to measure the number of messages generated over the LOG_RATE_CHECK_PERIOD.
+     77          static uint8 Log_Msg_Per_Period;
+     78          
+     79          //! A counter to measure the LOG_RATE_CHECK_PERIOD.
+     80          static uint8 Log_Period_Counter;
+     81          
+     82          //! A flag that indicates that the message generation rate exceeded the acceptable threshold.
+     83          //! When this flag is set, the publication rate is reduced.
+     84          static BOOL_TYPE Log_Too_Fast;
+     85          
+     86          //! An Message Severity filter
+     87          static LOG_SEVERITY_FILTER_TYPE Severity_Filter;
+     88          
+     89          //  --- Compile-Time Assertions ---------------------------------------------------------------------------------------
+     90          
+     91          // Verify that the LOG_MODULE_MESSAGE_ID_TYPE exactly overlaps the concatenation of the
+     92          // LOG_MODULE_ID_TYPE and the LOG_MESSAGE_ID_TYPE.
+     93          CT_ASSERT(sizeof(LOG_MODULE_MESSAGE_ID_TYPE) == (sizeof(LOG_MODULE_ID_TYPE) + sizeof(LOG_MESSAGE_ID_TYPE)));
+     94          
+     95          // Verify that the LOG_MAX_MESSAGES is in the expected range.
+     96          CT_ASSERT((0 < LOG_MAX_MESSAGES) && (LOG_MAX_MESSAGES <= 255));
+     97          
+     98          // Verify that the NUMBER_OF_MODULES is in the expected range.
+     99          CT_ASSERT((0 < NUMBER_OF_MODULES) && (NUMBER_OF_MODULES <= 255));
+    100          
+    101          
+    102          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    103          
+    104          
+    105          //=====================================================================================================================
+    106          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    107          //=====================================================================================================================
+    108          
+    109          
+    110          
+    111          //---------------------------------------------------------------------------------------------------------------------
+    112          /**
+    113           * Initialize all Log module variables.
+    114           *
+    115           * Reset the Message Queue variables to an empty Message Queue.
+    116           * Fill the Message Queue memory with invalid Log Messages.
+    117           * Set the 'Severity Filter'
+    118           */
+
+   \                                 In section .text, align 2, keep-with-next
+    119          void Log__Initialize(void)
+    120          {
+   \                     Log__Initialize: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    121              // Set the variables for an empty Message Queue.
+    122              Num_Of_Messages = 0;
+   \   00000002   0x2100             MOVS     R1,#+0
+   \   00000004   0x....             LDR      R0,??DataTable4
+   \   00000006   0x000A             MOVS     R2,R1
+   \   00000008   0x7002             STRB     R2,[R0, #+0]
+    123          
+    124              // Fill the Log's memory buffer with invalid messages.
+    125              for (uint8 i = 0; i < LOG_MAX_MESSAGES; i++)
+   \   0000000A   0xE006             B        ??Log__Initialize_0
+    126              {
+    127                  Log_Messages[i] = MODULE_LOG_INVALID_MESSAGE;
+   \                     ??Log__Initialize_1: (+1)
+   \   0000000C   0x0053             LSLS     R3,R2,#+1
+   \   0000000E   0x18C3             ADDS     R3,R0,R3
+   \   00000010   0x....             LDR      R4,??DataTable4_1  ;; 0xffff
+   \   00000012   0x811C             STRH     R4,[R3, #+8]
+    128                  Log_Data[i] = 0;
+   \   00000014   0x000C             MOVS     R4,R1
+   \   00000016   0x839C             STRH     R4,[R3, #+28]
+    129              }
+   \   00000018   0x1C52             ADDS     R2,R2,#+1
+   \                     ??Log__Initialize_0: (+1)
+   \   0000001A   0x2A0A             CMP      R2,#+10
+   \   0000001C   0xDBF6             BLT      ??Log__Initialize_1
+    130          
+    131              // Reset the message filters.
+    132              Severity_Filter = (LOG_SEVERITY_FILTER_TYPE)(LOG_ALLOW_EXCEPTION | LOG_ALLOW_EVENT | LOG_ALLOW_ERROR);
+   \   0000001E   0x210E             MOVS     R1,#+14
+   \   00000020   0x7101             STRB     R1,[R0, #+4]
+    133          }
+   \   00000022   0xBC10             POP      {R4}
+   \   00000024   0x4770             BX       LR               ;; return
+    134          
+    135          
+    136          //---------------------------------------------------------------------------------------------------------------------
+    137          /**
+    138           * Check for a message in the Log buffer and send it if Reveal is not busy.
+    139           */
+
+   \                                 In section .text, align 2, keep-with-next
+    140          void Log__Background(void)
+    141          {
+   \                     Log__Background: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+    142              // Check for a message rate that is too fast.
+    143              Log_Period_Counter++;
+   \   00000002   0x....             LDR      R4,??DataTable4
+   \   00000004   0x78A0             LDRB     R0,[R4, #+2]
+   \   00000006   0x1C40             ADDS     R0,R0,#+1
+   \   00000008   0x70A0             STRB     R0,[R4, #+2]
+    144              if (Log_Period_Counter >= LOG_RATE_CHECK_PERIOD)
+   \   0000000A   0xB2C0             UXTB     R0,R0
+   \   0000000C   0x2850             CMP      R0,#+80
+   \   0000000E   0xDB0B             BLT      ??Log__Background_0
+    145              {
+    146                  Log_Too_Fast = (BOOL_TYPE)(Log_Msg_Per_Period > LOG_MAX_RATE);
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x7861             LDRB     R1,[R4, #+1]
+   \   00000014   0x2913             CMP      R1,#+19
+   \   00000016   0xDB02             BLT      ??Log__Background_1
+   \   00000018   0x2101             MOVS     R1,#+1
+   \   0000001A   0x70E1             STRB     R1,[R4, #+3]
+   \   0000001C   0xE001             B        ??Log__Background_2
+   \                     ??Log__Background_1: (+1)
+   \   0000001E   0x0001             MOVS     R1,R0
+   \   00000020   0x70E1             STRB     R1,[R4, #+3]
+    147                  Log_Msg_Per_Period = 0;
+   \                     ??Log__Background_2: (+1)
+   \   00000022   0x0001             MOVS     R1,R0
+   \   00000024   0x7061             STRB     R1,[R4, #+1]
+    148                  Log_Period_Counter = 0;
+   \   00000026   0x70A0             STRB     R0,[R4, #+2]
+    149              }
+    150          
+    151              // Check if Log Buffer is not empty and Reveal queue is empty.
+    152              if (((Log_Too_Fast == FALSE) ||
+    153                   (Log_Period_Counter == 0)) &&
+    154                  (Num_Of_Messages > 0) &&
+    155                  (Reveal__GetNumMessagesQueue() == 0))
+   \                     ??Log__Background_0: (+1)
+   \   00000028   0x78E0             LDRB     R0,[R4, #+3]
+   \   0000002A   0x2800             CMP      R0,#+0
+   \   0000002C   0xD002             BEQ      ??Log__Background_3
+   \   0000002E   0x78A0             LDRB     R0,[R4, #+2]
+   \   00000030   0x2800             CMP      R0,#+0
+   \   00000032   0xD127             BNE      ??Log__Background_4
+   \                     ??Log__Background_3: (+1)
+   \   00000034   0x7820             LDRB     R0,[R4, #+0]
+   \   00000036   0x2800             CMP      R0,#+0
+   \   00000038   0xD024             BEQ      ??Log__Background_4
+   \   0000003A   0x.... 0x....      BL       Reveal__GetNumMessagesQueue
+   \   0000003E   0x2800             CMP      R0,#+0
+   \   00000040   0xD120             BNE      ??Log__Background_4
+    156              {
+    157                  // Send the available Log message on Reveal.
+    158                  REVEAL_COMMAND_TYPE* ptr = Reveal__NewFeedback(API004DEBUG_NUM, API004_FBK_PUBLISH_LOG_MESSAGES, REVEAL_BROADCAST_NODE,
+    159                                                                 sizeof(LOG_MODULE_MESSAGE_ID_TYPE) + sizeof(LOG_DATA_TYPE));
+   \   00000042   0x2304             MOVS     R3,#+4
+   \   00000044   0x220F             MOVS     R2,#+15
+   \   00000046   0x4611             MOV      R1,R2
+   \   00000048   0x4618             MOV      R0,R3
+   \   0000004A   0x.... 0x....      BL       Reveal__NewFeedback
+   \   0000004E   0x0005             MOVS     R5,R0
+    160                  if (ptr != (REVEAL_COMMAND_TYPE *)NULL)
+   \   00000050   0xD018             BEQ      ??Log__Background_4
+    161                  {
+    162                      uint8 index = Num_Of_Messages - 1;
+   \   00000052   0x7820             LDRB     R0,[R4, #+0]
+   \   00000054   0x1E40             SUBS     R0,R0,#+1
+   \   00000056   0xB2C0             UXTB     R0,R0
+    163                      if ((Reveal__AddDataU16(ptr, Log_Messages[index]) == PASS) &&
+    164                          (Reveal__AddDataU16(ptr, Log_Data[index]) == PASS) &&
+    165                          (Reveal__QueueCommand(ptr) == TRUE))
+   \   00000058   0x0040             LSLS     R0,R0,#+1
+   \   0000005A   0x1826             ADDS     R6,R4,R0
+   \   0000005C   0x8931             LDRH     R1,[R6, #+8]
+   \   0000005E   0x0028             MOVS     R0,R5
+   \   00000060   0x.... 0x....      BL       Reveal__AddDataU16
+   \   00000064   0x2801             CMP      R0,#+1
+   \   00000066   0xD10D             BNE      ??Log__Background_4
+   \   00000068   0x8BB1             LDRH     R1,[R6, #+28]
+   \   0000006A   0x0028             MOVS     R0,R5
+   \   0000006C   0x.... 0x....      BL       Reveal__AddDataU16
+   \   00000070   0x2801             CMP      R0,#+1
+   \   00000072   0xD107             BNE      ??Log__Background_4
+   \   00000074   0x0028             MOVS     R0,R5
+   \   00000076   0x.... 0x....      BL       Reveal__QueueCommand
+   \   0000007A   0x2801             CMP      R0,#+1
+   \   0000007C   0xD102             BNE      ??Log__Background_4
+    166                      {
+    167                          Num_Of_Messages--;
+   \   0000007E   0x7820             LDRB     R0,[R4, #+0]
+   \   00000080   0x1E40             SUBS     R0,R0,#+1
+   \   00000082   0x7020             STRB     R0,[R4, #+0]
+    168                      }
+    169                  }
+    170              }
+    171          }
+   \                     ??Log__Background_4: (+1)
+   \   00000084   0xBD70             POP      {R4-R6,PC}       ;; return
+    172          
+    173          
+    174          //---------------------------------------------------------------------------------------------------------------------
+    175          /**
+    176           * Add a new Log Message to the Message Queue.
+    177           *
+    178           * Log Messages that are disabled through a filter will not be added to the Message Queue.
+    179           *
+    180           * If the Message Queue is full when this function is called, then the passed information will be
+    181           * discarded. The alternative solution of dropping the oldest Log Message is not used. If a
+    182           * project module floods the Message Queue, the Log Messages leading up to the flood are typically
+    183           * more useful than the repeated Log Message that generates the flood.
+    184           *
+    185           * @param module_id = Module Identifier value to use in the 'Module' field of the Log Message.
+    186           * @param message_id = Message Identifier value to use in the 'Id' field of the Log Message.
+    187           * @param severity_id = Message Severity value to use in the 'Severity' field of the Log Message.
+    188           * @param data = Data value to use in the 'Data' field of the Log Message.
+    189           */
+
+   \                                 In section .text, align 2, keep-with-next
+    190          void Log__AddMessage(LOG_MODULE_ID_TYPE module_id, LOG_MESSAGE_ID_TYPE message_id, LOG_SEVERITY_ID_TYPE severity_id, LOG_DATA_TYPE data)
+    191          {
+   \                     Log__AddMessage: (+1)
+   \   00000000   0xB5F2             PUSH     {R1,R4-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x001D             MOVS     R5,R3
+    192              if (Num_Of_Messages < LOG_MAX_MESSAGES)
+   \   00000006   0x....             LDR      R6,??DataTable4
+   \   00000008   0x7837             LDRB     R7,[R6, #+0]
+   \   0000000A   0x2F0A             CMP      R7,#+10
+   \   0000000C   0xDA1F             BGE      ??Log__AddMessage_0
+    193              {
+    194                  if ((Severity_Filter & (1 << severity_id)) != 0)
+   \   0000000E   0x7930             LDRB     R0,[R6, #+4]
+   \   00000010   0x2101             MOVS     R1,#+1
+   \   00000012   0x4091             LSLS     R1,R1,R2
+   \   00000014   0x4208             TST      R0,R1
+   \   00000016   0xD01A             BEQ      ??Log__AddMessage_0
+    195                  {
+    196                      // Log_Messages[] and Log_Data[] arrays are FIFOs.
+    197                      // Shift all the messages down by one and write the newest message to index 0.
+    198                      memmove(&Log_Messages[1], &Log_Messages[0], (LOG_MAX_MESSAGES - 1) * sizeof(LOG_MODULE_MESSAGE_ID_TYPE));
+   \   00000018   0x2212             MOVS     R2,#+18
+   \   0000001A   0x0031             MOVS     R1,R6
+   \   0000001C   0x3108             ADDS     R1,R1,#+8
+   \   0000001E   0x0030             MOVS     R0,R6
+   \   00000020   0x300A             ADDS     R0,R0,#+10
+   \   00000022   0x.... 0x....      BL       __aeabi_memmove
+    199                      memmove(&Log_Data[1], &Log_Data[0], (LOG_MAX_MESSAGES - 1) * sizeof(LOG_DATA_TYPE));
+   \   00000026   0x2212             MOVS     R2,#+18
+   \   00000028   0x0031             MOVS     R1,R6
+   \   0000002A   0x311C             ADDS     R1,R1,#+28
+   \   0000002C   0x0030             MOVS     R0,R6
+   \   0000002E   0x301E             ADDS     R0,R0,#+30
+   \   00000030   0x.... 0x....      BL       __aeabi_memmove
+    200                      Log_Messages[0] = (LOG_MODULE_MESSAGE_ID_TYPE)COMBINE_BYTES(module_id, message_id);
+   \   00000034   0x0220             LSLS     R0,R4,#+8
+   \   00000036   0x4669             MOV      R1,SP
+   \   00000038   0x7809             LDRB     R1,[R1, #+0]
+   \   0000003A   0x4308             ORRS     R0,R0,R1
+   \   0000003C   0x8130             STRH     R0,[R6, #+8]
+    201                      Log_Data[0] = data;
+   \   0000003E   0x83B5             STRH     R5,[R6, #+28]
+    202          
+    203                      // increment the number of messages to publish by one.
+    204                      // Num_Of_Messages is known to be less than the max due to the check at the start of the function.
+    205                      Num_Of_Messages++;
+   \   00000040   0x1C7F             ADDS     R7,R7,#+1
+   \   00000042   0x7037             STRB     R7,[R6, #+0]
+    206          
+    207                      // Count the number of requested messages independent of the number of published messages.
+    208                      if (Log_Msg_Per_Period < 0xFF)
+   \   00000044   0x7870             LDRB     R0,[R6, #+1]
+   \   00000046   0x28FF             CMP      R0,#+255
+   \   00000048   0xD001             BEQ      ??Log__AddMessage_0
+    209                      {
+    210                          Log_Msg_Per_Period++;
+   \   0000004A   0x1C40             ADDS     R0,R0,#+1
+   \   0000004C   0x7070             STRB     R0,[R6, #+1]
+    211                      }
+    212                  }
+    213              }
+    214          }
+   \                     ??Log__AddMessage_0: (+1)
+   \   0000004E   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+    215          
+    216          
+    217          //---------------------------------------------------------------------------------------------------------------------
+    218          /**
+    219           * @brief Implement a filter to enable/disable Log Messages based on the severity IDs.
+    220           * @details  Log Messages that are disabled through a filter will not be added to the Message Queue.
+    221           *
+    222           * @param severities_allowed = The combination of Message Severities that will be allowed.
+    223           *          Log Messages with other Message Severities will not be added to the Message Queue.
+    224           */
+
+   \                                 In section .text, align 2, keep-with-next
+    225          void Log__SetMessageSeverityFilter(LOG_SEVERITY_FILTER_TYPE severities_allowed)
+    226          {
+    227              Severity_Filter = severities_allowed;
+   \                     Log__SetMessageSeverityFilter: (+1)
+   \   00000000   0x....             LDR      R1,??DataTable4
+   \   00000002   0x7108             STRB     R0,[R1, #+4]
+    228          }
+   \   00000004   0x4770             BX       LR               ;; return
+    229          
+    230          
+    231          //---------------------------------------------------------------------------------------------------------------------
+    232          /**
+    233           * @brief Read the configuration of the 'Severity Filter' which enable/disable's which Log Messages are allowed to publish
+    234           *
+    235           * @return LOG_SEVERITY_FILTER_TYPE
+    236           */
+
+   \                                 In section .text, align 2, keep-with-next
+    237          LOG_SEVERITY_FILTER_TYPE Log__GetMessageSeverityFilter(void)
+    238          {
+    239              return Severity_Filter;
+   \                     Log__GetMessageSeverityFilter: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable4
+   \   00000002   0x7900             LDRB     R0,[R0, #+4]
+   \   00000004   0x4770             BX       LR               ;; return
+    240          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4:
+   \   00000000   0x........         DC32     Num_Of_Messages
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_1:
+   \   00000000   0x0000FFFF         DC32     0xffff
+    241          
+    242          
+    243          //=====================================================================================================================
+    244          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    245          //=====================================================================================================================
+    246          
+    247          
+    248          #endif  // #if (LOG_MODULE_ENABLE == ENABLED)
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   Log__AddMessage
+        24   -> __aeabi_memmove
+      16   Log__Background
+        16   -> Reveal__AddDataU16
+        16   -> Reveal__GetNumMessagesQueue
+        16   -> Reveal__NewFeedback
+        16   -> Reveal__QueueCommand
+       0   Log__GetMessageSeverityFilter
+       4   Log__Initialize
+       0   Log__SetMessageSeverityFilter
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+       4  ??DataTable4_1
+      80  Log__AddMessage
+     134  Log__Background
+       6  Log__GetMessageSeverityFilter
+      38  Log__Initialize
+       6  Log__SetMessageSeverityFilter
+      48  Num_Of_Messages
+          Log_Msg_Per_Period
+          Log_Period_Counter
+          Log_Too_Fast
+          Severity_Filter
+          Log_Messages
+          Log_Data
+
+ 
+  48 bytes in section .bss
+ 272 bytes in section .text
+ 
+ 272 bytes of CODE memory
+  48 bytes of DATA memory
+
+Errors: none
+Warnings: none

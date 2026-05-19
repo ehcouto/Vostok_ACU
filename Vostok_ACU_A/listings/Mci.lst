@@ -1,0 +1,1315 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:25
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/Category/Hbl/all/Mci/Mci.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Oh --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Mci.lst -o
+#        obj\Mci.obj source/Category/Hbl/all/Mci/Mci.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Mci.lst
+#    Object file  =  obj\Mci.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Hbl\all\Mci\Mci.c
+      1          /**
+      2           *  @file
+      3           *  @brief      Motor Control Interface
+      4           *
+      5           *  @details    One interface for any motor present in system
+      6           *
+      7           *  @Module_Owner Leonardo Ricupero / Eduardo H Couto
+      8           *  $Header: Mci.c 1.00 - July/2020
+      9           *
+     10           *  @copyright  Copyright 2020 - Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     11           */
+     12          
+     13          //  --- Include Files -------------------------------------------------------------------------------------------------
+     14          
+     15          // -- This Module --
+     16          #include "C_Extensions.h"
+     17          #include "Mci.h"
+     18          
+     19          #include "Mcl.h"
+     20          #include "MotorTypeDefs.h"
+     21          #include "TimerInterruptExt.h"
+     22          
+     23          // -- ANSI/ISO --
+     24          
+     25          // -- Project --
+     26          #include "Micro.h"
+     27          
+     28          #include "Mci_prv.h"
+     29          #include "SettingFile.h"
+     30          
+     31          //  --- Public Variables ----------------------------------------------------------------------------------------------
+     32          
+     33          #include "Log.h"
+     34          
+     35          // --- LOG MODULE SETTINGS ---------------------------
+     36          //! A list of log message IDs that are generated by this module.
+     37          typedef enum MODULE_MCI_LOG_MESSAGE_ID_ENUM
+     38          {
+     39          	//Event
+     40          	MCI_EVENT_GWS_INITIALIZED                        = 1,    //!< GWS Initialized and Parameters loaded!
+     41          	MCI_EVENT_RIF_INITIALIZED                        = 2,    //!< RIF pump initialized (Active Power Module)
+     42          	/* ---- */
+     43          	MCI_EVENT_FAULT_CLEARED                          = 5,    //!< MCI Fault has been cleared.
+     44          
+     45          	//Exception
+     46          	MCI_EXCEPTION_PARAMETERS_NOT_LOADED              = 10,   //!< Error to load MCI parameters.
+     47          
+     48          } MODULE_MCI_LOG_MESSAGE_ID_TYPE;
+     49          
+     50          //! The name of this module for use by the Log module.
+     51          #define MODULE_NAME  MODULE_MCI
+     52          
+     53          //  --- Private Properties --------------------------------------------------------------------------------------------
+
+   \                                 In section .bss, align 1
+     54          static APL_WASH_MOTOR_TYPE Mci_Wash_Motor_Type;
+   \                     Mci_Wash_Motor_Type:
+   \   00000000                      DS8 1
+   \   00000001                      DS8 1
+     55          static BOOL_TYPE Mci_Params_Loaded;
+     56          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+     57          static void Mci__ParameterLoading(void);
+     58          
+     59          
+     60          #ifdef ENABLE_API220_CALLBACKS
+     61          
+     62              #include "APIMotorControl.h"
+     63          
+     64              #define API220_PUBLISHDIGITAL_CALLBACK(motor, write_data, value, ret_val)   APIMotorControl__PublishSetDigital((motor), (write_data), (value), (ret_val))
+     65              #define API220_PUBLISHANALOG_CALLBACK(motor, write_data, value, ret_val)    APIMotorControl__PublishSetAnalog((motor), (write_data), (value), (ret_val))
+     66              #define API220_RUN_CALLBACK(motor, speed_rpm, ramp_rpm_per_s, response)     APIMotorControl__PublishRun((motor), (speed_rpm), (ramp_rpm_per_s), (response))
+     67          	#define API220_MANUAL_INJECTION_CALLBACK(motor, 			\
+     68          											method, 			\
+     69          											level_x32, 			\
+     70          											level_rate_x32, 	\
+     71          											param_x32, 			\
+     72          											param_rate_x32, 	\
+     73          											response)							// todo Luigi needs to implement the API220 call back of manual injection
+     74              #define API220_STOP_CALLBACK(motor, ramp_rpm_per_s, response)               APIMotorControl__PublishStop((motor), (ramp_rpm_per_s), (response))
+     75          
+     76          #else
+     77          
+     78              #define API220_PUBLISHDIGITAL_CALLBACK(motor, write_data, value, ret_val)
+     79              #define API220_PUBLISHANALOG_CALLBACK(motor, write_data, value, ret_val)
+     80              #define API220_RUN_CALLBACK(motor, speed_rpm, ramp_rpm_per_s, response)
+     81          	#define API220_MANUAL_INJECTION_CALLBACK(motor, 			\
+     82          											method, 			\
+     83          											level_x32, 			\
+     84          											level_rate_x32, 	\
+     85          											param_x32, 			\
+     86          											param_rate_x32, 	\
+     87          											response)
+     88          	#define API220_STOP_CALLBACK(motor, ramp_rpm_per_s, response)
+     89          
+     90          #endif
+     91          
+     92          
+     93          #ifndef MCISLFAC__DEBUG_INITIALIZE
+     94          	#define MCISLFAC__DEBUG_INITIALIZE()
+     95          #endif
+     96          
+     97          #ifndef MCISLFAC__DEBUG_FASTHANDLER
+     98          	#define MCISLFAC__DEBUG_FASTHANDLER()
+     99          #endif
+    100          
+    101          #ifndef MCISLFAC__DEBUG_SLOWHANDLER
+    102          	#define MCISLFAC__DEBUG_SLOWHANDLER()
+    103          #endif
+    104          
+    105          #ifndef MCISLFAC__DEBUG_250USHANDLER
+    106          	#define MCISLFAC__DEBUG_250USHANDLER()
+    107          #endif
+    108          
+    109          #ifndef MCISLFAC__DEBUG_ZEROCROSSHANDLER
+    110          	#define MCISLFAC__DEBUG_ZEROCROSSHANDLER()
+    111          #endif
+    112          
+    113          #ifndef MCISLFAC__DEBUG_TRIACHANDLER
+    114          	#define MCISLFAC__DEBUG_TRIACHANDLER()
+    115          #endif
+    116          
+    117          #ifndef MCISLFAC__DEBUG_1MSHANDLER
+    118          	#define MCISLFAC__DEBUG_1MSHANDLER()
+    119          #endif
+    120          
+    121          #ifndef MCISLFAC__DEBUG_5MSHANDLER
+    122          	#define MCISLFAC__DEBUG_5MSHANDLER()
+    123          #endif
+    124          
+    125          #ifndef MCISLFAC__FASTHANDLER_ENTRY
+    126          	#define MCISLFAC__FASTHANDLER_ENTRY()
+    127          #endif
+    128          
+    129          //=====================================================================================================================
+    130          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    131          //=====================================================================================================================
+    132          //---------------------------------------------------------------------------------------------------------------------
+    133          /**
+    134           * Initialize the Mci module.
+    135           * Set initial values for all module variables.
+    136           */
+
+   \                                 In section .text, align 2, keep-with-next
+    137          void Mci__Initialize(void)
+    138          {
+   \                     Mci__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    139          	Mci_Params_Loaded = FALSE;
+   \   00000002   0x2000             MOVS     R0,#+0
+   \   00000004   0x....             LDR      R1,??DataTable13
+   \   00000006   0x7048             STRB     R0,[R1, #+1]
+    140              MCISLFAC__DEBUG_INITIALIZE();
+   \   00000008   0x.... 0x....      BL       BoardDebugging__Initialize
+   \   0000000C   0x.... 0x....      BL       MCUDebug__Initialize
+    141          }
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+    142          
+    143          
+    144          
+    145          
+    146          
+    147          //---------------------------------------------------------------------------------------------------------------------
+    148          /**
+    149           * This function is called every 250 us
+    150           *
+    151           */
+
+   \                                 In section .text, align 2, keep-with-next
+    152          void Mci__250usHandler(void)
+    153          {
+    154              MCISLFAC__DEBUG_250USHANDLER();
+    155          }
+   \                     Mci__250usHandler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    156          
+    157          
+    158          
+    159          
+    160          
+    161          //---------------------------------------------------------------------------------------------------------------------
+    162          /**
+    163           * This function is called every 25 ms
+    164           *
+    165           */
+
+   \                                 In section .text, align 2, keep-with-next
+    166          void Mci__SlowHandler(void)
+    167          {
+   \                     Mci__SlowHandler: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    168          	if(Mci_Params_Loaded == TRUE)
+   \   00000002   0x....             LDR      R0,??DataTable13
+   \   00000004   0x7840             LDRB     R0,[R0, #+1]
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD101             BNE      ??Mci__SlowHandler_0
+    169              {
+    170              	Mcl__SlowHandler();
+   \   0000000A   0x.... 0x....      BL       Mcl__SlowHandler
+    171              }
+    172              MCISLFAC__DEBUG_SLOWHANDLER();
+   \                     ??Mci__SlowHandler_0: (+1)
+   \   0000000E   0x.... 0x....      BL       BoardDebugging__25msHandler
+   \   00000012   0x.... 0x....      BL       MCUDebug_SlowHandler
+    173          }
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    174          
+    175          
+    176          
+    177          
+    178          //---------------------------------------------------------------------------------------------------------------------
+    179          /**
+    180           * This function is called every 1 ms
+    181           *
+    182           */
+
+   \                                 In section .text, align 2, keep-with-next
+    183          void Mci__1msHandler(void)
+    184          {
+    185              MCISLFAC__DEBUG_1MSHANDLER();
+    186          }
+   \                     Mci__1msHandler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    187          
+    188          
+    189          
+    190          //---------------------------------------------------------------------------------------------------------------------
+    191          /**
+    192           * This function is called every 5 ms
+    193           *
+    194           */
+
+   \                                 In section .text, align 2, keep-with-next
+    195          void Mci__5msHandler(void)
+    196          {
+    197              MCISLFAC__DEBUG_5MSHANDLER();
+    198          }
+   \                     Mci__5msHandler: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    199          
+    200          
+    201          
+    202          //---------------------------------------------------------------------------------------------------------------------
+    203          /**
+    204           * This routine will run the motor with speed_rpm speed and ramp_rpm_per_s acceleration
+    205           *
+    206           * And also, is the acceleration to the next speed. This parameter is POSITIVE the MciHsfac will take care of its
+    207           *           sign if a negative speed or deceleration is needed.
+    208           * @return  MCI_CMD_ACCEPTED - command accepted
+    209           *          MCI_CMD_DENIED - command denied.
+    210           *          MCI_CMD_SPEED_OUT_OF_RANGE - the speed is bigger or smaller than the supported limits.
+    211           *          MCI_CMD_RAMP_OUT_OF_RANGE - the ramp is faster or slower than the supported limits.
+    212           */
+
+   \                                 In section .text, align 2, keep-with-next
+    213          MCI_CMD_RESPONSE_TYPE Mci__Run(MOTOR_ENUM_TYPE motor, sint16 speed_rpm, sint16 ramp_rpm_per_s)
+    214          {
+   \                     Mci__Run: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0005             MOVS     R5,R0
+   \   00000004   0x000F             MOVS     R7,R1
+   \   00000006   0x0016             MOVS     R6,R2
+    215              MCI_CMD_RESPONSE_TYPE ret_val = MCI_CMD_PARAM_NOT_LOADED;
+   \   00000008   0x2404             MOVS     R4,#+4
+   \   0000000A   0x43E4             MVNS     R4,R4            ;; #-5
+    216          
+    217              if(Mci_Params_Loaded == TRUE)
+   \   0000000C   0x....             LDR      R0,??DataTable13
+   \   0000000E   0x7840             LDRB     R0,[R0, #+1]
+   \   00000010   0x2801             CMP      R0,#+1
+   \   00000012   0xD104             BNE      ??Mci__Run_0
+    218              {
+    219              	ret_val = Mcl__Run(motor, speed_rpm, 0);
+   \   00000014   0x2200             MOVS     R2,#+0
+   \   00000016   0x0028             MOVS     R0,R5
+   \   00000018   0x.... 0x....      BL       Mcl__Run
+   \   0000001C   0x0004             MOVS     R4,R0
+    220              }
+    221          
+    222          	API220_RUN_CALLBACK(motor, speed_rpm, ramp_rpm_per_s, ret_val);
+   \                     ??Mci__Run_0: (+1)
+   \   0000001E   0x0023             MOVS     R3,R4
+   \   00000020   0x0032             MOVS     R2,R6
+   \   00000022   0x0039             MOVS     R1,R7
+   \   00000024   0x0028             MOVS     R0,R5
+   \   00000026   0x.... 0x....      BL       APIMotorControl__PublishRun
+    223              return ret_val;
+   \   0000002A   0x0020             MOVS     R0,R4
+   \   0000002C   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    224          }
+    225          
+    226          
+    227          
+    228          
+    229          
+    230          //---------------------------------------------------------------------------------------------------------------------
+    231          /**
+    232           * Stop the motor regardless its speed with a desired rate. This commands always accepted.
+    233           *
+    234           * @param   ramp_rpm_per_s
+    235           * @return  MCIHSFAC_CMD_ACCEPTED - command accepted
+    236           *          MCIHSFAC_CMD_DENIED - command denied.
+    237           */
+
+   \                                 In section .text, align 2, keep-with-next
+    238          MCI_CMD_RESPONSE_TYPE Mci__Stop(MOTOR_ENUM_TYPE motor, sint16 ramp_rpm_per_s)
+    239          {
+   \                     Mci__Stop: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000E             MOVS     R6,R1
+    240              MCI_CMD_RESPONSE_TYPE ret_val = MCI_CMD_PARAM_NOT_LOADED;
+   \   00000006   0x2504             MOVS     R5,#+4
+   \   00000008   0x43ED             MVNS     R5,R5            ;; #-5
+    241          
+    242              if(Mci_Params_Loaded == TRUE)
+   \   0000000A   0x....             LDR      R0,??DataTable13
+   \   0000000C   0x7840             LDRB     R0,[R0, #+1]
+   \   0000000E   0x2801             CMP      R0,#+1
+   \   00000010   0xD103             BNE      ??Mci__Stop_0
+    243              {
+    244              	ret_val = Mcl__Stop(motor, ramp_rpm_per_s);
+   \   00000012   0x0020             MOVS     R0,R4
+   \   00000014   0x.... 0x....      BL       Mcl__Stop
+   \   00000018   0x0005             MOVS     R5,R0
+    245              }
+    246          
+    247              API220_STOP_CALLBACK(motor, ramp_rpm_per_s, ret_val);
+   \                     ??Mci__Stop_0: (+1)
+   \   0000001A   0x002A             MOVS     R2,R5
+   \   0000001C   0x0031             MOVS     R1,R6
+   \   0000001E   0x0020             MOVS     R0,R4
+   \   00000020   0x.... 0x....      BL       APIMotorControl__PublishStop
+    248              return ret_val;
+   \   00000024   0x0028             MOVS     R0,R5
+   \   00000026   0xBD70             POP      {R4-R6,PC}       ;; return
+    249          }
+    250          
+    251          
+    252          
+    253          
+    254          
+    255          //---------------------------------------------------------------------------------------------------------------------
+    256          /**
+    257           * Get the error structure
+    258           * @param motor =  index to the motor. See the Mci.h file
+    259           * @return ret_val = MciSlfac_Last_Failure variable value.
+    260           */
+
+   \                                 In section .text, align 2, keep-with-next
+    261          uint32 Mci__GetErrorList(MOTOR_ENUM_TYPE motor)
+    262          {
+    263              uint32 ret_val = 0;
+   \                     Mci__GetErrorList: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+    264              if(Mci_Params_Loaded == TRUE)
+   \   00000002   0x....             LDR      R1,??DataTable13
+   \   00000004   0x7849             LDRB     R1,[R1, #+1]
+   \   00000006   0x2901             CMP      R1,#+1
+   \   00000008   0xD000             BEQ      ??Mci__GetErrorList_0
+   \   0000000A   0x4770             BX       LR
+    265              {
+    266              	ret_val = Mcl__GetErrorList();
+   \                     ??Mci__GetErrorList_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x.... 0x....      BL       Mcl__GetErrorList
+    267              }
+    268          
+    269              return(ret_val);
+   \   00000012   0xBD02             POP      {R1,PC}          ;; return
+    270          }
+    271          
+    272          
+    273          
+    274          
+    275          //---------------------------------------------------------------------------------------------------------------------
+    276          /**
+    277           * Get the digital structure
+    278           * @param motor =  index to the motor. See the Mci.h file
+    279           * @return ret_val = Mci status control variable value.
+    280           */
+
+   \                                 In section .text, align 2, keep-with-next
+    281          uint32 Mci__GetDigitalList(MOTOR_ENUM_TYPE motor)
+    282          {
+    283              uint32 ret_val;
+    284              ret_val = 0;
+   \                     Mci__GetDigitalList: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+    285          
+    286              if(Mci_Params_Loaded == TRUE)
+   \   00000002   0x....             LDR      R1,??DataTable13
+   \   00000004   0x7849             LDRB     R1,[R1, #+1]
+   \   00000006   0x2901             CMP      R1,#+1
+   \   00000008   0xD000             BEQ      ??Mci__GetDigitalList_0
+   \   0000000A   0x4770             BX       LR
+    287              {
+    288              	ret_val = (uint32)Mcl__GetDigital(MCI_DI_REACHED_TARGET_SPEED);
+   \                     ??Mci__GetDigitalList_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x2002             MOVS     R0,#+2
+   \   00000010   0x.... 0x....      BL       Mcl__GetDigital
+    289              }
+    290          
+    291              return(ret_val);
+   \   00000014   0xBD02             POP      {R1,PC}          ;; return
+    292          }
+    293          
+    294          
+    295          
+    296          
+    297          //---------------------------------------------------------------------------------------------------------------------
+    298          /**
+    299           * Read any digital data from the Mci
+    300           *
+    301           * @param   read_data is index of the parameter. See the Mci.h file
+    302           * @return  TRUE/FALSE according to the type of the passed parameter. The default return is FALSE.
+    303           */
+
+   \                                 In section .text, align 2, keep-with-next
+    304          uint8 Mci__GetDigital(MOTOR_ENUM_TYPE motor, MCI_DI_TYPE read_data)
+    305          {
+    306              uint8  ret_val = 255; //Default response
+   \                     Mci__GetDigital: (+1)
+   \   00000000   0x20FF             MOVS     R0,#+255
+    307          
+    308              if(Mci_Params_Loaded == TRUE)
+   \   00000002   0x....             LDR      R2,??DataTable13
+   \   00000004   0x7852             LDRB     R2,[R2, #+1]
+   \   00000006   0x2A01             CMP      R2,#+1
+   \   00000008   0xD000             BEQ      ??Mci__GetDigital_0
+   \   0000000A   0x4770             BX       LR
+    309              {
+    310              	ret_val = Mcl__GetDigital(read_data);
+   \                     ??Mci__GetDigital_0: (+1)
+   \   0000000C   0xB580             PUSH     {R7,LR}
+   \   0000000E   0x0008             MOVS     R0,R1
+   \   00000010   0x.... 0x....      BL       Mcl__GetDigital
+    311              }
+    312          
+    313              return ret_val;
+   \   00000014   0xBD02             POP      {R1,PC}          ;; return
+    314          }
+    315          
+    316          
+    317          
+    318          
+    319          
+    320          //---------------------------------------------------------------------------------------------------------------------
+    321          /**
+    322           * Write a digital data to the Mci.
+    323           *
+    324           * @param   write_data is the index to the data. See the Mci.h file.
+    325           * @param   value TRUE/FALSE according to the selected data
+    326           * @return  TRUE - value accepted
+    327           *          FALSE - value denied - default answer.
+    328           */
+
+   \                                 In section .text, align 2, keep-with-next
+    329          uint8 Mci__SetDigital(MOTOR_ENUM_TYPE motor, MCI_DO_TYPE write_data, unsigned char value)
+    330          {
+    331          	uint8  ret_val;
+    332              ret_val = 0;
+    333          
+    334              return ret_val;
+   \                     Mci__SetDigital: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    335          }
+    336          
+    337          
+    338          
+    339          
+    340          
+    341          //---------------------------------------------------------------------------------------------------------------------
+    342          /**
+    343           * Read analog data from the Mci.
+    344           *
+    345           * @param  read_data index to the parameter. See the Mci.h file
+    346           * @return the parameter value. The default return is zero.
+    347           */
+
+   \                                 In section .text, align 2, keep-with-next
+    348          sint32 Mci__GetAnalog(MOTOR_ENUM_TYPE motor, MCI_AI_TYPE read_data)
+    349          {
+   \                     Mci__GetAnalog: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    350          	sint32 ret_val;
+    351          	ret_val = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+    352          
+    353          	if(Mci_Params_Loaded == TRUE)
+   \   00000004   0x....             LDR      R2,??DataTable13
+   \   00000006   0x7853             LDRB     R3,[R2, #+1]
+   \   00000008   0x2B01             CMP      R3,#+1
+   \   0000000A   0xD103             BNE      ??Mci__GetAnalog_0
+    354          	{
+    355          		ret_val = Mcl__GetAnalog(read_data);
+   \   0000000C   0x0008             MOVS     R0,R1
+   \   0000000E   0x.... 0x....      BL       Mcl__GetAnalog
+   \   00000012   0xBD02             POP      {R1,PC}
+    356          	}
+    357          	else if(Mci_Wash_Motor_Type == WM_SINGLE_SPEED_ASYNCH_SPH_PSC)
+   \                     ??Mci__GetAnalog_0: (+1)
+   \   00000014   0x7812             LDRB     R2,[R2, #+0]
+   \   00000016   0x2A02             CMP      R2,#+2
+   \   00000018   0xD102             BNE      ??Mci__GetAnalog_1
+    358          	{
+    359          		ret_val = MCI_GET_ANALOG_ALT_MOTOR(read_data);
+   \   0000001A   0x0008             MOVS     R0,R1
+   \   0000001C   0x.... 0x....      BL       ActivePower__GetData
+    360          	}
+    361          
+    362          	return ret_val;
+   \                     ??Mci__GetAnalog_1: (+1)
+   \   00000020   0xBD02             POP      {R1,PC}          ;; return
+    363          }
+    364          
+    365          
+    366          
+    367          
+    368          //---------------------------------------------------------------------------------------------------------------------
+    369          /**
+    370           * Set analog data from the Mci.
+    371           *
+    372           * @param  Motor, index and data
+    373           * @return FALSE/TRUE
+    374           */
+
+   \                                 In section .text, align 2, keep-with-next
+    375          uint8 Mci__SetAnalog(MOTOR_ENUM_TYPE motor, MCI_AO_TYPE write_data, sint32 value)
+    376          {
+    377              uint8 ret_val = FALSE;
+    378          
+    379          
+    380              //API220_PUBLISHANALOG_CALLBACK(motor, write_data, value, ret_val);
+    381              return(ret_val);
+   \                     Mci__SetAnalog: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    382          }
+    383          
+    384          
+    385          
+    386          
+    387          //---------------------------------------------------------------------------------------------------------------------
+    388          /**
+    389           * Clear Error
+    390           *
+    391           */
+
+   \                                 In section .text, align 2, keep-with-next
+    392          uint8 Mci__ClearError(MOTOR_ENUM_TYPE motor)
+    393          {
+   \                     Mci__ClearError: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    394              uint8 ret_val = (uint8)TRUE;
+   \   00000002   0x2401             MOVS     R4,#+1
+    395          
+    396              if(Mci_Params_Loaded == TRUE)
+   \   00000004   0x....             LDR      R0,??DataTable13
+   \   00000006   0x7840             LDRB     R0,[R0, #+1]
+   \   00000008   0x2801             CMP      R0,#+1
+   \   0000000A   0xD108             BNE      ??Mci__ClearError_0
+    397              {
+    398              	ret_val = Mcl__ClearError();
+   \   0000000C   0x.... 0x....      BL       Mcl__ClearError
+   \   00000010   0x0004             MOVS     R4,R0
+    399              	LOG_ADD_EVENT(MCI_EVENT_FAULT_CLEARED, (uint16)ret_val);
+   \   00000012   0x0023             MOVS     R3,R4
+   \   00000014   0x2202             MOVS     R2,#+2
+   \   00000016   0x2105             MOVS     R1,#+5
+   \   00000018   0x2037             MOVS     R0,#+55
+   \   0000001A   0x.... 0x....      BL       Log__AddMessage
+    400              }
+    401          
+    402              return(ret_val);
+   \                     ??Mci__ClearError_0: (+1)
+   \   0000001E   0x0020             MOVS     R0,R4
+   \   00000020   0xBD10             POP      {R4,PC}          ;; return
+    403          }
+    404          
+    405          
+    406          
+    407          
+    408          //---------------------------------------------------------------------------------------------------------------------
+    409          /**
+    410           * Get Error Flag
+    411           *
+    412           */
+
+   \                                 In section .text, align 2, keep-with-next
+    413          uint8 Mci__GetError(MOTOR_ENUM_TYPE motor)
+    414          {
+   \                     Mci__GetError: (+1)
+   \   00000000   0x0001             MOVS     R1,R0
+    415              uint8 ret_val = 0;
+   \   00000002   0x2000             MOVS     R0,#+0
+    416          
+    417              if(Mci_Params_Loaded == TRUE)
+   \   00000004   0x....             LDR      R2,??DataTable13
+   \   00000006   0x7852             LDRB     R2,[R2, #+1]
+   \   00000008   0x2A01             CMP      R2,#+1
+   \   0000000A   0xD000             BEQ      ??Mci__GetError_0
+   \   0000000C   0x4770             BX       LR
+    418              {
+    419              	ret_val = Mcl__GetError(motor);
+   \                     ??Mci__GetError_0: (+1)
+   \   0000000E   0xB580             PUSH     {R7,LR}
+   \   00000010   0x0008             MOVS     R0,R1
+   \   00000012   0x.... 0x....      BL       Mcl__GetError
+    420              }
+    421          
+    422              return ret_val;
+   \   00000016   0xBD02             POP      {R1,PC}          ;; return
+    423          }
+    424          
+    425          
+    426          
+    427          
+    428          //---------------------------------------------------------------------------------------------------------------------
+    429          /**
+    430           * Set wash motor type. Call it after Mci__SetModuleType
+    431           *
+    432           */
+
+   \                                 In section .text, align 2, keep-with-next
+    433          void Mci__SetWashMotorType(APL_WASH_MOTOR_TYPE wash_type)
+    434          {
+   \                     Mci__SetWashMotorType: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+   \   00000002   0xB083             SUB      SP,SP,#+12
+   \   00000004   0x0005             MOVS     R5,R0
+    435          	Mci_Wash_Motor_Type = wash_type; /* Set Mci Wash Pump */
+   \   00000006   0x....             LDR      R4,??DataTable13
+   \   00000008   0x7025             STRB     R5,[R4, #+0]
+    436          
+    437          	if((wash_type == WM_SINGLE_SPEED_SYNCH_SPH_AW)  ||
+    438          	   (wash_type == WM_SINGLE_SPEED_SYNCH_SPH_PW))
+   \   0000000A   0x2806             CMP      R0,#+6
+   \   0000000C   0xD001             BEQ      ??Mci__SetWashMotorType_0
+   \   0000000E   0x2805             CMP      R0,#+5
+   \   00000010   0xD125             BNE      ??Mci__SetWashMotorType_1
+    439          	{
+    440          		if(Mci_Params_Loaded == FALSE)
+   \                     ??Mci__SetWashMotorType_0: (+1)
+   \   00000012   0x7860             LDRB     R0,[R4, #+1]
+   \   00000014   0x2800             CMP      R0,#+0
+   \   00000016   0xD12C             BNE      ??Mci__SetWashMotorType_2
+    441          		{
+    442          			Mci__ParameterLoading();
+   \   00000018   0x466A             MOV      R2,SP
+   \   0000001A   0x2100             MOVS     R1,#+0
+   \   0000001C   0x2084             MOVS     R0,#+132
+   \   0000001E   0x0080             LSLS     R0,R0,#+2        ;; #+528
+   \   00000020   0x.... 0x....      BL       SettingFile__BasicLoader
+   \   00000024   0x2801             CMP      R0,#+1
+   \   00000026   0xD106             BNE      ??Mci__SetWashMotorType_3
+   \   00000028   0x9800             LDR      R0,[SP, #+0]
+   \   0000002A   0x.... 0x....      BL       Mcl__SetParams
+   \   0000002E   0x2801             CMP      R0,#+1
+   \   00000030   0xD107             BNE      ??Mci__SetWashMotorType_4
+   \   00000032   0x7060             STRB     R0,[R4, #+1]
+   \   00000034   0xE008             B        ??Mci__SetWashMotorType_5
+   \                     ??Mci__SetWashMotorType_3: (+1)
+   \   00000036   0x7863             LDRB     R3,[R4, #+1]
+   \   00000038   0x2201             MOVS     R2,#+1
+   \   0000003A   0x210A             MOVS     R1,#+10
+   \   0000003C   0x2037             MOVS     R0,#+55
+   \   0000003E   0x.... 0x....      BL       Log__AddMessage
+    443          			if(Mci_Params_Loaded == TRUE)
+   \                     ??Mci__SetWashMotorType_4: (+1)
+   \   00000042   0x7860             LDRB     R0,[R4, #+1]
+   \   00000044   0x2801             CMP      R0,#+1
+   \   00000046   0xD114             BNE      ??Mci__SetWashMotorType_2
+    444          			{
+    445          				Mcl__Initialize();
+   \                     ??Mci__SetWashMotorType_5: (+1)
+   \   00000048   0x.... 0x....      BL       Mcl__Initialize
+    446          				Mcl__SetWashMotorType(wash_type);
+   \   0000004C   0x0028             MOVS     R0,R5
+   \   0000004E   0x.... 0x....      BL       Mcl__SetWashMotorType
+    447          				LOG_ADD_EVENT(MCI_EVENT_GWS_INITIALIZED, Mcl__GetParamsID());
+   \   00000052   0x.... 0x....      BL       Mcl__GetParamsID
+   \   00000056   0x0003             MOVS     R3,R0
+   \   00000058   0x2202             MOVS     R2,#+2
+   \   0000005A   0x2101             MOVS     R1,#+1
+   \   0000005C   0xE006             B        ??Mci__SetWashMotorType_6
+    448          			}
+    449          		}
+    450          	}
+    451          	else if(wash_type == WM_SINGLE_SPEED_ASYNCH_SPH_PSC)
+   \                     ??Mci__SetWashMotorType_1: (+1)
+   \   0000005E   0x2802             CMP      R0,#+2
+   \   00000060   0xD107             BNE      ??Mci__SetWashMotorType_2
+    452          	{
+    453          		MCI_INITIALIZE_ALT_MOTOR(wash_type); //Initialize Active Power for RIF Motor
+   \   00000062   0x.... 0x....      BL       ActivePower__Initialize
+    454          		LOG_ADD_EVENT(MCI_EVENT_RIF_INITIALIZED, Mci_Wash_Motor_Type);
+   \   00000066   0x7823             LDRB     R3,[R4, #+0]
+   \   00000068   0x2202             MOVS     R2,#+2
+   \   0000006A   0x2102             MOVS     R1,#+2
+   \                     ??Mci__SetWashMotorType_6: (+1)
+   \   0000006C   0x2037             MOVS     R0,#+55
+   \   0000006E   0x.... 0x....      BL       Log__AddMessage
+    455          	}
+    456          }
+   \                     ??Mci__SetWashMotorType_2: (+1)
+   \   00000072   0xB003             ADD      SP,SP,#+12
+   \   00000074   0xBD30             POP      {R4,R5,PC}       ;; return
+    457          
+    458          
+    459          
+    460          
+    461          //---------------------------------------------------------------------------------------------------------------------
+    462          /**
+    463           *
+    464           *
+    465           */
+
+   \                                 In section .text, align 2, keep-with-next
+    466          void Mci__MotorControlHandler(void)
+    467          {
+   \                     Mci__MotorControlHandler: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    468          	MCISLFAC__FASTHANDLER_ENTRY();
+   \   00000002   0x2000             MOVS     R0,#+0
+   \   00000004   0x.... 0x....      BL       MciZeroCross__GetEvent
+    469          
+    470              if(Mci_Params_Loaded == TRUE)
+   \   00000008   0x....             LDR      R0,??DataTable13
+   \   0000000A   0x7841             LDRB     R1,[R0, #+1]
+   \   0000000C   0x2901             CMP      R1,#+1
+   \   0000000E   0xD102             BNE      ??Mci__MotorControlHandler_0
+    471              {
+    472          		Mcl__RunningHandler();
+   \   00000010   0x.... 0x....      BL       Mcl__RunningHandler
+   \   00000014   0xE004             B        ??Mci__MotorControlHandler_1
+    473          	}
+    474          	else if(Mci_Wash_Motor_Type == WM_SINGLE_SPEED_ASYNCH_SPH_PSC)
+   \                     ??Mci__MotorControlHandler_0: (+1)
+   \   00000016   0x7800             LDRB     R0,[R0, #+0]
+   \   00000018   0x2802             CMP      R0,#+2
+   \   0000001A   0xD101             BNE      ??Mci__MotorControlHandler_1
+    475          	{
+    476          		MCI_RUNNING_ALT_MOTOR(); //Run alternative motor (RIF, for instance).
+   \   0000001C   0x.... 0x....      BL       ActivePower__FastHandler
+    477          	}
+    478          
+    479          	MCISLFAC__DEBUG_FASTHANDLER();
+   \                     ??Mci__MotorControlHandler_1: (+1)
+   \   00000020   0x.... 0x....      BL       MCUDebug_MCHandler
+   \   00000024   0x.... 0x....      BL       BoardDebugging__PwmHandler
+   \   00000028   0x.... 0x....      BL       BoardDebugging__250usHandler
+    480          }
+   \   0000002C   0xBD01             POP      {R0,PC}          ;; return
+    481          
+    482          
+    483          
+    484          
+    485          //---------------------------------------------------------------------------------------------------------------------
+    486          /**
+    487           * VZC event handler
+    488           *
+    489           */
+
+   \                                 In section .text, align 2, keep-with-next
+    490          void Mci__ZeroCrossHandler(TC_EVENT_TYPE event, uint16 ccr_value)
+    491          {
+    492              if(Mci_Params_Loaded == TRUE)
+   \                     Mci__ZeroCrossHandler: (+1)
+   \   00000000   0x....             LDR      R2,??DataTable13
+   \   00000002   0x7852             LDRB     R2,[R2, #+1]
+   \   00000004   0x2A01             CMP      R2,#+1
+   \   00000006   0xD000             BEQ      ??Mci__ZeroCrossHandler_0
+   \   00000008   0x4770             BX       LR
+    493              {
+    494          		Mcl__ZeroCrossHandler(event, ccr_value);
+   \                     ??Mci__ZeroCrossHandler_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x.... 0x....      BL       Mcl__ZeroCrossHandler
+    495          	}
+    496              MCISLFAC__DEBUG_ZEROCROSSHANDLER();
+    497          }
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+    498          
+    499          
+    500          
+    501          
+    502          //---------------------------------------------------------------------------------------------------------------------
+    503          /**
+    504           * Triac fire event handler
+    505           *
+    506           */
+
+   \                                 In section .text, align 2, keep-with-next
+    507          void Mci__TriacFireHandler(void)
+    508          {
+    509              if(Mci_Params_Loaded == TRUE)
+   \                     Mci__TriacFireHandler: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable13
+   \   00000002   0x7840             LDRB     R0,[R0, #+1]
+   \   00000004   0x2801             CMP      R0,#+1
+   \   00000006   0xD000             BEQ      ??Mci__TriacFireHandler_0
+   \   00000008   0x4770             BX       LR
+    510              {
+    511          		Mcl__TriacFireHandler(TC_UNKNOWN_EVENT);
+   \                     ??Mci__TriacFireHandler_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2002             MOVS     R0,#+2
+   \   0000000E   0x.... 0x....      BL       Mcl__TriacFireHandler
+    512          	}
+    513              MCISLFAC__DEBUG_TRIACHANDLER();
+    514          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable13:
+   \   00000000   0x........         DC32     Mci_Wash_Motor_Type
+    515          
+    516          
+    517          
+    518          
+    519          
+    520          //=====================================================================================================================
+    521          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    522          //=====================================================================================================================
+    523          
+    524          #ifdef MCI_INTERNAL_PARAMETERS
+    525          #include "Mci_GWS_Params_prm.h"
+    526          #endif
+    527          //---------------------------------------------------------------------------------------------------------------------
+    528          /**
+    529           * Function for loading parameters from setting file
+    530           *
+    531           */
+    532          void Mci__ParameterLoading(void)
+    533          {
+    534              MCL_PARAMS_TYPE* mcl_params;
+    535          #ifndef MCI_INTERNAL_PARAMETERS
+    536              SETTINGFILE_LOADER_TYPE params;
+    537          
+    538              //Initializing default variables
+    539              Mci_Params_Loaded = FALSE;
+    540          
+    541              //Load parameters
+    542              if (SettingFile__BasicLoader(SF_PTR_MCU_CLASS_A_MCI, SF_DISPL_MOTOR_PARAMS_GLOBAL_WASH_SYSTEM, &params) == PASS)
+    543              {
+    544                  mcl_params = (MCL_PARAMS_TYPE*)(params.Data); //copying data into stack.
+    545                  if(Mcl__SetParams(mcl_params) == TRUE)
+    546                  {
+    547                      //If parameters properly loaded into Motor Control Module...
+    548                      Mci_Params_Loaded = TRUE;
+    549                  }
+    550              }
+    551              else
+    552              {
+    553              	LOG_ADD_EXCEPTION(MCI_EXCEPTION_PARAMETERS_NOT_LOADED, (uint16)Mci_Params_Loaded);
+    554              }
+    555          
+    556          #else
+    557              //copying data into stack...
+    558              mcl_params = (MCL_PARAMS_TYPE*)Mci_GWS_Params_SF; //lint !e927 Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+    559              if(Mcl__SetParams(mcl_params) == TRUE)
+    560              {
+    561                  //If parameters properly loaded into Motor Control Module...
+    562                  Mci_Params_Loaded = TRUE;
+    563              }
+    564          #endif
+    565          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   Mci__1msHandler
+       0   Mci__250usHandler
+       0   Mci__5msHandler
+       8   Mci__ClearError
+         8   -> Log__AddMessage
+         8   -> Mcl__ClearError
+       8   Mci__GetAnalog
+         8   -> ActivePower__GetData
+         8   -> Mcl__GetAnalog
+       8   Mci__GetDigital
+         8   -> Mcl__GetDigital
+       8   Mci__GetDigitalList
+         8   -> Mcl__GetDigital
+       8   Mci__GetError
+         8   -> Mcl__GetError
+       8   Mci__GetErrorList
+         8   -> Mcl__GetErrorList
+       8   Mci__Initialize
+         8   -> BoardDebugging__Initialize
+         8   -> MCUDebug__Initialize
+       8   Mci__MotorControlHandler
+         8   -> ActivePower__FastHandler
+         8   -> BoardDebugging__250usHandler
+         8   -> BoardDebugging__PwmHandler
+         8   -> MCUDebug_MCHandler
+         8   -> MciZeroCross__GetEvent
+         8   -> Mcl__RunningHandler
+      24   Mci__Run
+        24   -> APIMotorControl__PublishRun
+        24   -> Mcl__Run
+       0   Mci__SetAnalog
+       0   Mci__SetDigital
+      24   Mci__SetWashMotorType
+        24   -> ActivePower__Initialize
+        24   -> Log__AddMessage
+        24   -> Mcl__GetParamsID
+        24   -> Mcl__Initialize
+        24   -> Mcl__SetParams
+        24   -> Mcl__SetWashMotorType
+        24   -> SettingFile__BasicLoader
+       8   Mci__SlowHandler
+         8   -> BoardDebugging__25msHandler
+         8   -> MCUDebug_SlowHandler
+         8   -> Mcl__SlowHandler
+      16   Mci__Stop
+        16   -> APIMotorControl__PublishStop
+        16   -> Mcl__Stop
+       8   Mci__TriacFireHandler
+         8   -> Mcl__TriacFireHandler
+       8   Mci__ZeroCrossHandler
+         8   -> Mcl__ZeroCrossHandler
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable13
+       2  Mci_Wash_Motor_Type
+          Mci_Params_Loaded
+       2  Mci__1msHandler
+       2  Mci__250usHandler
+       2  Mci__5msHandler
+      34  Mci__ClearError
+      34  Mci__GetAnalog
+      22  Mci__GetDigital
+      22  Mci__GetDigitalList
+      24  Mci__GetError
+      20  Mci__GetErrorList
+      18  Mci__Initialize
+      46  Mci__MotorControlHandler
+      46  Mci__Run
+       4  Mci__SetAnalog
+       4  Mci__SetDigital
+     118  Mci__SetWashMotorType
+      24  Mci__SlowHandler
+      40  Mci__Stop
+      20  Mci__TriacFireHandler
+      18  Mci__ZeroCrossHandler
+
+ 
+   2 bytes in section .bss
+ 504 bytes in section .text
+ 
+ 504 bytes of CODE memory
+   2 bytes of DATA memory
+
+Errors: none
+Warnings: none

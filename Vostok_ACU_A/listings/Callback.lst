@@ -1,0 +1,971 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:03
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  source/XCategory/Common/all/Common/Callback/Callback.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l listings\Callback.lst -o
+#        obj\Callback.obj
+#        source/XCategory/Common/all/Common/Callback/Callback.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\Callback.lst
+#    Object file  =  obj\Callback.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\XCategory\Common\all\Common\Callback\Callback.c
+      1          /**
+      2           *  @brief      Module to provide a standardized method of implementing callbacks.
+      3           *
+      4           *  @details    A callback is a function that is passed as an argument to another software module,
+      5           *              which is expected to execute (call back) the argument at some convenient time.
+      6           *
+      7           *              This module implements synchronous callbacks. This means that when the event occurs,
+      8           *              the callbacks are executed immediately. Because of the immediate nature,
+      9           *              the designer should carefully consider what actions are taken at the time that the
+     10           *              callback is executed. The user should avoid calling these functions from an interrupt service routine.
+     11           *
+     12           *              Register, Unregister and Notify functions call ChecksumOK to test the control registry
+     13           *              before attempting any operations using the control. If ChecksumOK detects a corrupted
+     14           *              registry it will re-intialize the registry and throw a CALLBACK_REGISTRY_CORRUPTED exception.
+     15           *
+     16           *
+     17                          @startuml{Callback Sequence.jpg}
+     18                              title Methodology For Using The Callback Module
+     19          
+     20                              hide footbox
+     21                              autonumber
+     22          
+     23                              participant "Application Module" as Application
+     24                              participant "Module With Callbacks" as mwc
+     25                              participant Callback
+     26          
+     27                              ==Add Callback functionality to a module==
+     28                              mwc -> mwc : typedef enum{MODULE_EVENT_ONE} MODULE_EVENT_TYPE
+     29                              note left
+     30                                  Define the callback events
+     31                                  Range: 1 to 255
+     32                              end note
+     33          
+     34                              mwc -> mwc : typedef void (*MODULE_EVENT_HANDLER_TYPE)(MODULE_EVENT_TYPE)
+     35                              note left
+     36                                  Define the event handler function prototype
+     37                              end note
+     38          
+     39                              mwc -> mwc : void Module__RegisterForEvents(MODULE_EVENT_HANDLER_TYPE)
+     40                              note left
+     41                                  Define a public function prototype for registering event handler functions
+     42                              end note
+     43          
+     44                              mwc -> mwc : void Module__UnregisterForEvents(MODULE_EVENT_HANDLER_TYPE)
+     45                              note left
+     46                                  Optional - define a public function prototype for unregistering event handler functions
+     47                              end note
+     48          
+     49                              mwc -> Callback : DEFINE_CALLBACK_CONTROL_STRUCTURE(Callback_Registry, 2)
+     50                              note left
+     51                                  Declare dynamic RAM for storing event handler functions
+     52                              end note
+     53          
+     54                              mwc -> Callback : Callback__Initialize(&Callback_Registry)
+     55                              note left
+     56                                  Initialize the dynamic RAM
+     57                              end note
+     58          
+     59                              ==Adding capability to the Application to receive and process callback events==
+     60                              Application -> Application : void ApplicationEventHandlerFunction(MODULE_EVENT_TYPE)
+     61                              note left
+     62                                  Define function for processing callback events
+     63                              end note
+     64          
+     65                              Application -> mwc : Module__RegisterForEvents(&ApplicationEventHandlerFunction)
+     66                              note left
+     67                                  Register the event handler function
+     68                              end note
+     69                              activate mwc
+     70                                  mwc -> Callback : Callback__Register(&Callback_Registry, (CALLBACK_HANDLER_TYPE)(void*)event_handler)
+     71                              deactivate mwc
+     72          
+     73                              ==Post a Callback event==
+     74                              loop
+     75                                  mwc -> Callback : Callback__Notify(&Callback_Registry, (CALLBACK_EVENT_TYPE)MODULE_EVENT_ONE)
+     76                                  activate Callback
+     77                                      Application <- Callback : ApplicationEventHandlerFunction(MODULE_EVENT_ONE)
+     78                                  deactivate Callback
+     79          
+     80                              ==Optional - unregister the event handler function==
+     81                              Application -> mwc : Module__UnregisterForEvents(&ApplicationEventHandlerFunction)
+     82                              activate mwc
+     83                                  mwc -> Callback : Callback__Unregister(&Callback_Registry, (CALLBACK_HANDLER_TYPE)(void*)event_handler)
+     84                              deactivate mwc
+     85          
+     86                        @enduml
+     87           *
+     88           *
+     89           *  @copyright  Copyright (c) 2013, 2022 WhirlpoolCorporation
+     90           */
+     91          
+     92          //-------------------------------------- Include Files ----------------------------------------------------------------
+     93          #include "SystemConfig.h"
+     94          #include "Callback.h"
+     95          #include "Callback_prv.h"
+     96          #include "RTOS.h"
+     97          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     98          
+     99          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    100          //! Macro to get the number of handlers referenced by the control structure.
+    101          #define NUM_OF_HANDLERS     (control->Registry_Size)
+    102          
+    103          //! Macro to get a pointer to the first handler referenced by the control structure.
+    104          #define HANDLERS            ((CALLBACK_HANDLER_TYPE *)(void *)(control->Registry))
+    105          
+    106          //! Macro to access last byte of registry used to store the registry checksum.
+    107          #define CONTROL_CHECKSUM    (control->Registry[(control->Registry_Size * sizeof(CALLBACK_HANDLER_TYPE))])
+    108          
+    109          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    110          static void UpdateChecksum(CALLBACK_CONTROL_TYPE const * control);
+    111          static BOOL_TYPE ChecksumOK(CALLBACK_CONTROL_TYPE const * control);
+    112          
+    113          //=====================================================================================================================
+    114          //-------------------------------------- Public Functions -------------------------------------------------------------
+    115          //=====================================================================================================================
+    116          //---------------------------------------------------------------------------------------------------------------------
+    117          /**
+    118           * Function used to initialize control.
+    119           * Set all control registry locations to NULL and initialize registry checksum.
+    120           *
+    121           * @param control = Reference to the control structure used to implement the callback functionality.
+    122           */
+
+   \                                 In section .text, align 2, keep-with-next
+    123          void Callback__Initialize(CALLBACK_CONTROL_TYPE const * control)
+    124          {
+    125             uint8 index;
+    126          
+    127              if (control == NULL)
+   \                     Callback__Initialize: (+1)
+   \   00000000   0x2800             CMP      R0,#+0
+   \   00000002   0xD100             BNE      ??Callback__Initialize_0
+   \   00000004   0x4770             BX       LR
+    128              {
+    129                  CALLBACK_CONTROL_IS_NULL();
+    130              }
+    131              else
+    132              {
+    133                  for (index = 0; index < NUM_OF_HANDLERS; index++)
+   \                     ??Callback__Initialize_0: (+1)
+   \   00000006   0xB510             PUSH     {R4,LR}
+   \   00000008   0x2100             MOVS     R1,#+0
+   \   0000000A   0x000A             MOVS     R2,R1
+   \   0000000C   0xE004             B        ??Callback__Initialize_1
+    134                  {
+    135                      HANDLERS[index] = NULL;
+   \                     ??Callback__Initialize_2: (+1)
+   \   0000000E   0x6803             LDR      R3,[R0, #+0]
+   \   00000010   0xB2D2             UXTB     R2,R2
+   \   00000012   0x0094             LSLS     R4,R2,#+2
+   \   00000014   0x5119             STR      R1,[R3, R4]
+    136                  }
+   \   00000016   0x1C52             ADDS     R2,R2,#+1
+   \                     ??Callback__Initialize_1: (+1)
+   \   00000018   0x0013             MOVS     R3,R2
+   \   0000001A   0x7904             LDRB     R4,[R0, #+4]
+   \   0000001C   0xB2DB             UXTB     R3,R3
+   \   0000001E   0x42A3             CMP      R3,R4
+   \   00000020   0xD3F5             BCC      ??Callback__Initialize_2
+    137          
+    138                  UpdateChecksum(control);
+   \   00000022   0x.... 0x....      BL       UpdateChecksum
+    139              }
+    140          }
+   \   00000026   0xBD10             POP      {R4,PC}          ;; return
+    141          
+    142          //---------------------------------------------------------------------------------------------------------------------
+    143          /**
+    144           * Function used to register handler with control (Add handler to control registry).
+    145           *
+    146           * If handler is already registered in control, then this function will call the
+    147           * HANDLER_IS_ALREADY_REGISTERED() debug macro. If the callback handler cannot be registered
+    148           * because of lack of space, then this function will call the NO_SPACE_TO_REGISTER_HANDLER() debug
+    149           * macro.
+    150           *
+    151           * @param control = Reference to the control structure used to implement the callback functionality.
+    152           * @param handler = The function handler to be registered in the control structure.
+    153           */
+
+   \                                 In section .text, align 2, keep-with-next
+    154          void Callback__Register(CALLBACK_CONTROL_TYPE const * control, CALLBACK_HANDLER_TYPE handler)
+    155          {
+   \                     Callback__Register: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0005             MOVS     R5,R0
+   \   00000004   0x000C             MOVS     R4,R1
+    156              uint8 available_slot;
+    157              uint8 index;
+    158          
+    159              if (control == NULL)
+   \   00000006   0x2D00             CMP      R5,#+0
+   \   00000008   0xD02D             BEQ      ??Callback__Register_0
+    160              {
+    161                  CALLBACK_CONTROL_IS_NULL();
+    162              }
+    163              else if (handler == NULL)
+   \   0000000A   0x0020             MOVS     R0,R4
+   \   0000000C   0xD02B             BEQ      ??Callback__Register_0
+    164              {
+    165                  ATTEMPT_TO_REGISTER_NULL_HANDLER();
+    166              }
+    167              else
+    168              {
+    169                  OS_EnterRegion();    //Stop other threads preempting the current thread until the checksum is checked and recalculated.
+   \   0000000E   0x....             LDR      R0,??DataTable2
+   \   00000010   0x7801             LDRB     R1,[R0, #+0]
+   \   00000012   0x1C49             ADDS     R1,R1,#+1
+   \   00000014   0x7001             STRB     R1,[R0, #+0]
+    170                  // Check integrity of control structure before use
+    171                  if (ChecksumOK(control))
+   \   00000016   0x0028             MOVS     R0,R5
+   \   00000018   0x.... 0x....      BL       ChecksumOK
+   \   0000001C   0x2800             CMP      R0,#+0
+   \   0000001E   0xD020             BEQ      ??Callback__Register_1
+    172                  {
+    173                      // Scan the whole list of handlers.
+    174                      available_slot = NUM_OF_HANDLERS;
+   \   00000020   0x7928             LDRB     R0,[R5, #+4]
+    175                      for (index = 0; index < NUM_OF_HANDLERS; index++)
+   \   00000022   0x2100             MOVS     R1,#+0
+   \   00000024   0xE003             B        ??Callback__Register_2
+    176                      {
+    177                          // Check if the handler being registered is already registered.
+    178                          if (HANDLERS[index] == handler)
+    179                          {
+    180                              // Application-specific debug macro
+    181                              HANDLER_IS_ALREADY_REGISTERED(handler);
+    182                              OS_LeaveRegion();
+    183                              return;
+    184                          }
+    185          
+    186                          // Look for an available slot to put the handler that is being registered.
+    187                          if (HANDLERS[index] == NULL)
+   \                     ??Callback__Register_3: (+1)
+   \   00000026   0x2A00             CMP      R2,#+0
+   \   00000028   0xD100             BNE      ??Callback__Register_4
+    188                          {
+    189                              available_slot = index;
+   \   0000002A   0x0008             MOVS     R0,R1
+    190                          }
+   \                     ??Callback__Register_4: (+1)
+   \   0000002C   0x1C49             ADDS     R1,R1,#+1
+   \                     ??Callback__Register_2: (+1)
+   \   0000002E   0x792A             LDRB     R2,[R5, #+4]
+   \   00000030   0x000B             MOVS     R3,R1
+   \   00000032   0x0016             MOVS     R6,R2
+   \   00000034   0xB2DB             UXTB     R3,R3
+   \   00000036   0x42B3             CMP      R3,R6
+   \   00000038   0xD20A             BCS      ??Callback__Register_5
+   \   0000003A   0x682A             LDR      R2,[R5, #+0]
+   \   0000003C   0xB2C9             UXTB     R1,R1
+   \   0000003E   0x008B             LSLS     R3,R1,#+2
+   \   00000040   0x58D2             LDR      R2,[R2, R3]
+   \   00000042   0x0013             MOVS     R3,R2
+   \   00000044   0x0026             MOVS     R6,R4
+   \   00000046   0x42B3             CMP      R3,R6
+   \   00000048   0xD1ED             BNE      ??Callback__Register_3
+   \   0000004A   0x.... 0x....      BL       OS_LeaveRegion
+   \   0000004E   0xBD70             POP      {R4-R6,PC}
+    191                      }
+    192          
+    193                      if (available_slot < NUM_OF_HANDLERS)
+   \                     ??Callback__Register_5: (+1)
+   \   00000050   0x0001             MOVS     R1,R0
+   \   00000052   0x4291             CMP      R1,R2
+   \   00000054   0xD205             BCS      ??Callback__Register_1
+    194                      {
+    195                          // Register the handler
+    196                          HANDLERS[available_slot] = handler;
+   \   00000056   0x6829             LDR      R1,[R5, #+0]
+   \   00000058   0x0080             LSLS     R0,R0,#+2
+   \   0000005A   0x500C             STR      R4,[R1, R0]
+    197                          UpdateChecksum(control);
+   \   0000005C   0x0028             MOVS     R0,R5
+   \   0000005E   0x.... 0x....      BL       UpdateChecksum
+    198                      }
+    199                      else
+    200                      {
+    201                          // Application-specific debug macro
+    202                          NO_SPACE_TO_REGISTER_HANDLER(control);
+    203                      }
+    204                  }
+    205                  OS_LeaveRegion();
+   \                     ??Callback__Register_1: (+1)
+   \   00000062   0x.... 0x....      BL       OS_LeaveRegion
+    206              }
+    207          }
+   \                     ??Callback__Register_0: (+1)
+   \   00000066   0xBD70             POP      {R4-R6,PC}       ;; return
+    208          
+    209          //---------------------------------------------------------------------------------------------------------------------
+    210          /**
+    211           * Function used to unregister handler from control (Remove handler from control registry).
+    212           *
+    213           * If the callback handler is not already registered, then this function will call the
+    214           * HANDLER_IS_ALREADY_UNREGISTERED() debug macro.
+    215           *
+    216           * @param control = Reference to the control structure used to implement the callback functionality.
+    217           * @param handler = The function handler that should be unregistered from the control structure.
+    218           */
+
+   \                                 In section .text, align 2, keep-with-next
+    219          void Callback__Unregister(CALLBACK_CONTROL_TYPE const * control, CALLBACK_HANDLER_TYPE handler)
+    220          {
+   \                     Callback__Unregister: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0005             MOVS     R5,R0
+   \   00000004   0x000C             MOVS     R4,R1
+    221             uint8 index;
+    222          
+    223              if (control == NULL)
+   \   00000006   0x2D00             CMP      R5,#+0
+   \   00000008   0xD024             BEQ      ??Callback__Unregister_0
+    224              {
+    225                  CALLBACK_CONTROL_IS_NULL();
+    226              }
+    227              else if (handler == NULL)
+   \   0000000A   0x0020             MOVS     R0,R4
+   \   0000000C   0xD022             BEQ      ??Callback__Unregister_0
+    228              {
+    229                  ATTEMPT_TO_UNREGISTER_NULL_HANDLER();
+    230              }
+    231              else
+    232              {
+    233                  OS_EnterRegion();     //Stop other threads preempting the current thread until the checksum is checked and recalculated.
+   \   0000000E   0x....             LDR      R0,??DataTable2
+   \   00000010   0x7801             LDRB     R1,[R0, #+0]
+   \   00000012   0x1C49             ADDS     R1,R1,#+1
+   \   00000014   0x7001             STRB     R1,[R0, #+0]
+    234                  // Check integrity of control structure before use
+    235                  if (ChecksumOK(control))
+   \   00000016   0x0028             MOVS     R0,R5
+   \   00000018   0x.... 0x....      BL       ChecksumOK
+   \   0000001C   0x2800             CMP      R0,#+0
+   \   0000001E   0xD017             BEQ      ??Callback__Unregister_1
+    236                  {
+    237                      for (index = 0; index < NUM_OF_HANDLERS; index++)
+   \   00000020   0x2000             MOVS     R0,#+0
+   \   00000022   0x0001             MOVS     R1,R0
+   \   00000024   0x0026             MOVS     R6,R4
+   \   00000026   0xE000             B        ??Callback__Unregister_2
+   \                     ??Callback__Unregister_3: (+1)
+   \   00000028   0x1C49             ADDS     R1,R1,#+1
+   \                     ??Callback__Unregister_2: (+1)
+   \   0000002A   0x000A             MOVS     R2,R1
+   \   0000002C   0x792B             LDRB     R3,[R5, #+4]
+   \   0000002E   0xB2D2             UXTB     R2,R2
+   \   00000030   0x429A             CMP      R2,R3
+   \   00000032   0xD20D             BCS      ??Callback__Unregister_1
+    238                      {
+    239                          if (HANDLERS[index] == handler)
+   \   00000034   0x682A             LDR      R2,[R5, #+0]
+   \   00000036   0xB2C9             UXTB     R1,R1
+   \   00000038   0x008B             LSLS     R3,R1,#+2
+   \   0000003A   0x18D2             ADDS     R2,R2,R3
+   \   0000003C   0x6813             LDR      R3,[R2, #+0]
+   \   0000003E   0x42B3             CMP      R3,R6
+   \   00000040   0xD1F2             BNE      ??Callback__Unregister_3
+    240                          {
+    241                              // Unregister the handler
+    242                              HANDLERS[index] = NULL;
+   \   00000042   0x6010             STR      R0,[R2, #+0]
+    243          
+    244                              UpdateChecksum(control);
+   \   00000044   0x0028             MOVS     R0,R5
+   \   00000046   0x.... 0x....      BL       UpdateChecksum
+    245                              OS_LeaveRegion();
+   \   0000004A   0x.... 0x....      BL       OS_LeaveRegion
+    246                              return;
+   \   0000004E   0xBD70             POP      {R4-R6,PC}
+    247                          }
+    248                      }
+    249                  }
+    250                  OS_LeaveRegion();
+   \                     ??Callback__Unregister_1: (+1)
+   \   00000050   0x.... 0x....      BL       OS_LeaveRegion
+    251                  // Application-specific debug macro
+    252                  HANDLER_IS_ALREADY_UNREGISTERED(handler);
+    253              }
+    254          }
+   \                     ??Callback__Unregister_0: (+1)
+   \   00000054   0xBD70             POP      {R4-R6,PC}       ;; return
+    255          
+    256          //---------------------------------------------------------------------------------------------------------------------
+    257          /**
+    258           * Function used to notify registered callback handlers.
+    259           * All handlers in control registry are called with event as an argument.
+    260           *
+    261           * @param control = Reference to the control structure used to implement the callback functionality.
+    262           * @param event = The type of action or occurrence detected by the caller.
+    263           */
+
+   \                                 In section .text, align 2, keep-with-next
+    264          void Callback__Notify(CALLBACK_CONTROL_TYPE const * control, CALLBACK_EVENT_TYPE event)
+    265          {
+   \                     Callback__Notify: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0005             MOVS     R5,R0
+   \   00000004   0x000C             MOVS     R4,R1
+    266              uint8 index;
+    267          
+    268              if (control == NULL)
+   \   00000006   0x2D00             CMP      R5,#+0
+   \   00000008   0xD019             BEQ      ??Callback__Notify_0
+    269              {
+    270                  CALLBACK_CONTROL_IS_NULL();
+    271              }
+    272              else
+    273              {
+    274                  OS_EnterRegion();     //Stop other threads preempting the current thread until the checksum is checked.
+   \   0000000A   0x....             LDR      R0,??DataTable2
+   \   0000000C   0x7801             LDRB     R1,[R0, #+0]
+   \   0000000E   0x1C49             ADDS     R1,R1,#+1
+   \   00000010   0x7001             STRB     R1,[R0, #+0]
+    275                  BOOL_TYPE is_checksum_ok = ChecksumOK(control);
+   \   00000012   0x0028             MOVS     R0,R5
+   \   00000014   0x.... 0x....      BL       ChecksumOK
+   \   00000018   0x0006             MOVS     R6,R0
+    276                  OS_LeaveRegion();
+   \   0000001A   0x.... 0x....      BL       OS_LeaveRegion
+    277          
+    278                  // Check integrity of control structure before use
+    279                  if (is_checksum_ok == TRUE)
+   \   0000001E   0x2E01             CMP      R6,#+1
+   \   00000020   0xD10D             BNE      ??Callback__Notify_0
+    280                  {
+    281                      // Call each registered callback and pass the event as a parameter.
+    282                      for (index = 0; index < NUM_OF_HANDLERS; index++)
+   \   00000022   0x2600             MOVS     R6,#+0
+   \   00000024   0xE008             B        ??Callback__Notify_1
+    283                      {
+    284                          if (HANDLERS[index] != NULL )
+   \                     ??Callback__Notify_2: (+1)
+   \   00000026   0x6828             LDR      R0,[R5, #+0]
+   \   00000028   0x00B1             LSLS     R1,R6,#+2
+   \   0000002A   0x5841             LDR      R1,[R0, R1]
+   \   0000002C   0x0008             MOVS     R0,R1
+   \   0000002E   0xD001             BEQ      ??Callback__Notify_3
+    285                          {
+    286                              HANDLERS[index](event);
+   \   00000030   0x0020             MOVS     R0,R4
+   \   00000032   0x4788             BLX      R1
+    287                          }
+    288                      }
+   \                     ??Callback__Notify_3: (+1)
+   \   00000034   0x1C76             ADDS     R6,R6,#+1
+   \   00000036   0xB2F6             UXTB     R6,R6
+   \                     ??Callback__Notify_1: (+1)
+   \   00000038   0x7928             LDRB     R0,[R5, #+4]
+   \   0000003A   0x4286             CMP      R6,R0
+   \   0000003C   0xDBF3             BLT      ??Callback__Notify_2
+    289                  }
+    290              }
+    291          }
+   \                     ??Callback__Notify_0: (+1)
+   \   0000003E   0xBD70             POP      {R4-R6,PC}       ;; return
+    292          
+    293          //=====================================================================================================================
+    294          //-------------------------------------- Private Functions ------------------------------------------------------------
+    295          //=====================================================================================================================
+    296          //---------------------------------------------------------------------------------------------------------------------
+    297          /**
+    298           * Function to test control registry checksum.
+    299           * Throws CALLBACK_REGISTRY_CORRUPTED exception if detected.
+    300           * Initializes control registry if corruption detected.
+    301           *
+    302           * @param control = Reference to the control structure used to implement the callback functionality.
+    303           */
+
+   \                                 In section .text, align 2, keep-with-next
+    304          static BOOL_TYPE ChecksumOK(CALLBACK_CONTROL_TYPE* control)
+    305          {
+   \                     ChecksumOK: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    306              uint8 index;
+    307              uint8 checksum;
+    308              BOOL_TYPE checksum_ok;
+    309          
+    310              checksum_ok = FALSE;
+   \   00000002   0x2100             MOVS     R1,#+0
+   \   00000004   0x000C             MOVS     R4,R1
+    311          
+    312              checksum = 0;
+   \   00000006   0x000A             MOVS     R2,R1
+    313              // Sum all the bytes (including checksum byte) of the registry, keeping only the least significant byte.
+    314              for (index = 0; index < ((control->Registry_Size * sizeof(CALLBACK_HANDLER_TYPE)) + 1); index++)
+   \   00000008   0xE004             B        ??ChecksumOK_0
+    315              {
+    316                  checksum += control->Registry[index];
+   \                     ??ChecksumOK_1: (+1)
+   \   0000000A   0x6803             LDR      R3,[R0, #+0]
+   \   0000000C   0x5C5B             LDRB     R3,[R3, R1]
+   \   0000000E   0x18D2             ADDS     R2,R2,R3
+   \   00000010   0xB2D2             UXTB     R2,R2
+    317              }
+   \   00000012   0x1C49             ADDS     R1,R1,#+1
+   \                     ??ChecksumOK_0: (+1)
+   \   00000014   0xB2C9             UXTB     R1,R1
+   \   00000016   0x7903             LDRB     R3,[R0, #+4]
+   \   00000018   0x009B             LSLS     R3,R3,#+2
+   \   0000001A   0x1C5B             ADDS     R3,R3,#+1
+   \   0000001C   0x4299             CMP      R1,R3
+   \   0000001E   0xD3F4             BCC      ??ChecksumOK_1
+    318          
+    319              if (checksum == 0xFF)
+   \   00000020   0x2AFF             CMP      R2,#+255
+   \   00000022   0xD101             BNE      ??ChecksumOK_2
+    320              {
+    321                  checksum_ok = TRUE;
+   \   00000024   0x2401             MOVS     R4,#+1
+   \   00000026   0xE001             B        ??ChecksumOK_3
+    322              }
+    323              else
+    324              {
+    325                  CALLBACK_REGISTRY_CORRUPTED(control);
+    326                  Callback__Initialize(control);
+   \                     ??ChecksumOK_2: (+1)
+   \   00000028   0x.... 0x....      BL       Callback__Initialize
+    327              }
+    328          
+    329              return (checksum_ok);
+   \                     ??ChecksumOK_3: (+1)
+   \   0000002C   0x0020             MOVS     R0,R4
+   \   0000002E   0xBD10             POP      {R4,PC}          ;; return
+    330          }
+    331          
+    332          //---------------------------------------------------------------------------------------------------------------------
+    333          /**
+    334           * Function to update control registry checksum. Uses same checksum algorithm (Ones Complement) as Motorola S-Record.
+    335           *
+    336           * @param control = Reference to the control structure used to implement the callback functionality.
+    337           */
+
+   \                                 In section .text, align 2, keep-with-next
+    338          static void UpdateChecksum(CALLBACK_CONTROL_TYPE* control)
+    339          {
+   \                     UpdateChecksum: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    340              uint8 index;
+    341          
+    342              CONTROL_CHECKSUM = 0xFF;
+   \   00000002   0x6801             LDR      R1,[R0, #+0]
+   \   00000004   0x7902             LDRB     R2,[R0, #+4]
+   \   00000006   0x0092             LSLS     R2,R2,#+2
+   \   00000008   0x23FF             MOVS     R3,#+255
+   \   0000000A   0x548B             STRB     R3,[R1, R2]
+    343          
+    344              // Subtract all the bytes of the registry callbacks, keeping only the least significant byte.
+    345              for (index = 0; index < control->Registry_Size * sizeof(CALLBACK_HANDLER_TYPE); index++)
+   \   0000000C   0x2100             MOVS     R1,#+0
+   \   0000000E   0xE006             B        ??UpdateChecksum_0
+    346              {
+    347                  CONTROL_CHECKSUM -= control->Registry[index];
+   \                     ??UpdateChecksum_1: (+1)
+   \   00000010   0x6802             LDR      R2,[R0, #+0]
+   \   00000012   0x18D3             ADDS     R3,R2,R3
+   \   00000014   0x781C             LDRB     R4,[R3, #+0]
+   \   00000016   0x5C52             LDRB     R2,[R2, R1]
+   \   00000018   0x1AA2             SUBS     R2,R4,R2
+   \   0000001A   0x701A             STRB     R2,[R3, #+0]
+    348              }
+   \   0000001C   0x1C49             ADDS     R1,R1,#+1
+   \                     ??UpdateChecksum_0: (+1)
+   \   0000001E   0x7902             LDRB     R2,[R0, #+4]
+   \   00000020   0x0093             LSLS     R3,R2,#+2
+   \   00000022   0xB2C9             UXTB     R1,R1
+   \   00000024   0x4299             CMP      R1,R3
+   \   00000026   0xD3F3             BCC      ??UpdateChecksum_1
+    349          }
+   \   00000028   0xBC10             POP      {R4}
+   \   0000002A   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x........         DC32     OS_Global
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   Callback__Initialize
+         8   -> UpdateChecksum
+      16   Callback__Notify
+        16   -- Indirect call
+        16   -> ChecksumOK
+        16   -> OS_LeaveRegion
+      16   Callback__Register
+        16   -> ChecksumOK
+        16   -> OS_LeaveRegion
+        16   -> UpdateChecksum
+      16   Callback__Unregister
+        16   -> ChecksumOK
+        16   -> OS_LeaveRegion
+        16   -> UpdateChecksum
+       8   ChecksumOK
+         8   -> Callback__Initialize
+       4   UpdateChecksum
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+      40  Callback__Initialize
+      64  Callback__Notify
+     104  Callback__Register
+      86  Callback__Unregister
+      48  ChecksumOK
+      44  UpdateChecksum
+
+ 
+ 390 bytes in section .text
+ 
+ 390 bytes of CODE memory
+
+Errors: none
+Warnings: none

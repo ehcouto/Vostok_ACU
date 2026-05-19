@@ -1,0 +1,1128 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.70.1.11437/W32 for ARM       28/Feb/2025  14:17:33
+# Copyright 1999-2016 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        source/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor/PilotRelayStuckOpenMonitor.c
+#    Command line =  
+#        --cpu Cortex-M0+ -Om --debug -e --only_stdout --silent -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE --no_wrap_diagnostics
+#        -f config\tmp\include_path.lnt
+#        (-I../Nucleus-Tools-SDK/embOS/arm/v4.26/source\
+#        -I../Nucleus-Tools-SDK/iar/arm/v7.70/cx/inc\
+#        -Isource/Category/Application/acu/CycleResume\
+#        -Isource/Category/Application/acu/Monitors/AutostartFactoryCycleMonitor\
+#        -Isource/Category/Application/acu/Monitors/CartridgeDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/DCLoadCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DiverterLeakFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorMonitor\
+#        -Isource/Category/Application/acu/Monitors/DoorOpeningSystemMonitor\
+#        -Isource/Category/Application/acu/Monitors/FanMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/FaultStatusMonitor\
+#        -Isource/Category/Application/acu/Monitors/FillValveStuckOn\
+#        -Isource/Category/Application/acu/Monitors/FlowMeterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/HeatMonitor\
+#        -Isource/Category/Application/acu/Monitors/HotHighPotMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/LITTMonitor\
+#        -Isource/Category/Application/acu/Monitors/McuGetDataMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/AirlockDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/HeaterCalcificationDetectionModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/OWIVoltageRegulatedOutputModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor\
+#        -Isource/Category/Application/acu/Monitors/ModelMonitors/PluggingDetectionMonitor/CodeGeneration\
+#        -Isource/Category/Application/acu/Monitors/MoisturePreventionMonitor\
+#        -Isource/Category/Application/acu/Monitors/OverfillMonitor\
+#        -Isource/Category/Application/acu/Monitors/OWIMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/PORTimeMonitor\
+#        -Isource/Category/Application/acu/Monitors/PumpFlushRequestMonitor\
+#        -Isource/Category/Application/acu/Monitors/RinseAidMonitor\
+#        -Isource/Category/Application/acu/Monitors/SaltSensingMonitor\
+#        -Isource/Category/Application/acu/Monitors/StabilityControlLoopMonitor\
+#        -Isource/Category/Application/acu/Monitors/StandbyManager\
+#        -Isource/Category/Application/acu/Monitors/SupervisorExtMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/ThermistorFaultMonitor/ThermistorShortedMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacCurrentMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacShortedDrainFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/TriacVoltageMonitor\
+#        -Isource/Category/Application/acu/Monitors/VoltageRangeMonitor\
+#        -Isource/Category/Application/acu/Monitors/VSDrainMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiMonitor\
+#        -Isource/Category/Application/acu/Monitors/VwiZoneCompensationMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLeakageToNeutralMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterLineRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterNeutralRelayOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenAndLineRelayClosedMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashHeaterFaultMonitor/HeaterOpenMonitor\
+#        -Isource/Category/Application/acu/Monitors/WashMotorFaultMonitor\
+#        -Isource/Category/Application/acu/Monitors/ZeroCrossMonitor\
+#        -Isource/Category/Application/acu/Processes/AlternateCtrl\
+#        -Isource/Category/Application/acu/Processes/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/ClassAFill\
+#        -Isource/Category/Application/acu/Processes/Fill/Fill\
+#        -Isource/Category/Application/acu/Processes/Fill/TankDrain\
+#        -Isource/Category/Application/acu/Processes/Fill/TankFill\
+#        -Isource/Category/Application/acu/Processes/Heat\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/OWICalibrationModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/PartialDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel\
+#        -Isource/Category/Application/acu/Processes/ModelProcesses/SensedDrainModel/CodeGeneration\
+#        -Isource/Category/Application/acu/Processes/OWI\
+#        -Isource/Category/Application/acu/Processes/OWI_VRO\
+#        -Isource/Category/Application/acu/Processes/OWIOneShot\
+#        -Isource/Category/Application/acu/Processes/PumpControl\
+#        -Isource/Category/Application/acu/Processes/Regenerate\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/RinseAid\
+#        -Isource/Category/Application/acu/Processes/RinseAidDispense/TridgeDetergent\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPull\
+#        -Isource/Category/Application/acu/Tasks/DoorOpeningSystemPush\
+#        -Isource/Category/Application/acu/Tasks/HeaterShadowing\
+#        -Isource/Category/Application/acu/Tasks/MoisturePrevention\
+#        -Isource/Category/Application/acu/Tasks/OWIContinousReading\
+#        -Isource/Category/Application/acu/Tasks/OwiVroContinuousReading\
+#        -Isource/Category/Application/acu/Tasks/Sanitization\
+#        -Isource/Category/Application/acu/Tasks/StabilityControl\
+#        -Isource/Category/Application/acu/Tasks/TimeElapse\
+#        -Isource/Category/Application/acu/VWI\
+#        -Isource/Category/Application/all/ActivePower\
+#        -Isource/Category/Application/all/API007App\
+#        -Isource/Category/Application/all/Config\
+#        -Isource/Category/Common/acu/CommonDish/DishAuxVar\
+#        -Isource/Category/Common/acu/CommonDish/PumpCommand\
+#        -Isource/Category/Common/acu/CommonDish/StatisticsDish\
+#        -Isource/Category/Common/all/BoardDebugging\
+#        -Isource/Category/Common/all/Config\
+#        -Isource/Category/Common/all/MasterCommander\
+#        -Isource/Category/Common/all/MasterCommander/Source\
+#        -Isource/Category/Common/all/MasterCommander/Source/HAL\
+#        -Isource/Category/Common/all/SharedUtils\
+#        -Isource/Category/Hbl/acu/ACULoadHandler/AlternateLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACUGIHandler/WaterCounterGI\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/HeaterLoad\
+#        -Isource/Category/Hbl/acuexpacu/ACULoadHandler/TriacMci\
+#        -Isource/Category/Hbl/all/Config\ -Isource/Category/Hbl/all/Mci\
+#        -Isource/Category/Hbl/all/Mci/MciZeroCross\
+#        -Isource/Category/Hbl/all/Mci/Slfac\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Macroblocks\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/GlitchFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/IIRFilter\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/MathCalc\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/PeakDetector\
+#        -Isource/Category/Hbl/all/Mci/Slfac/Microblocks/Pi\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimeCapture\
+#        -Isource/Category/Hbl/all/MCUDrivers/TimerInterruptExt\
+#        -Isource/Micros/STM32G0x/Driver/Atod\
+#        -Isource/Micros/STM32G0x/Driver/DataFlash\
+#        -Isource/Micros/STM32G0x/Driver/Dma\
+#        -Isource/Micros/STM32G0x/Driver/Dtoa\
+#        -Isource/Micros/STM32G0x/Driver/ExtInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Flash\
+#        -Isource/Micros/STM32G0x/Driver/Gpio\
+#        -Isource/Micros/STM32G0x/Driver/I2c\
+#        -Isource/Micros/STM32G0x/Driver/IntMgr\
+#        -Isource/Micros/STM32G0x/Driver/Micro\
+#        -Isource/Micros/STM32G0x/Driver/MicroExt\
+#        -Isource/Micros/STM32G0x/Driver/Rtc\
+#        -Isource/Micros/STM32G0x/Driver/RTCDriver\
+#        -Isource/Micros/STM32G0x/Driver/Spi\
+#        -Isource/Micros/STM32G0x/Driver/Timeout\
+#        -Isource/Micros/STM32G0x/Driver/Timer\
+#        -Isource/Micros/STM32G0x/Driver/TimerInterrupt\
+#        -Isource/Micros/STM32G0x/Driver/Uart\
+#        -Isource/ProjectSpecific/Application/acu/Config\
+#        -Isource/ProjectSpecific/Application/acu/LowPower\
+#        -Isource/ProjectSpecific/Application/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Application/all/Config\
+#        -Isource/ProjectSpecific/Application/all/MCUDebug\
+#        -Isource/ProjectSpecific/Application/all/ProductInfo\
+#        -Isource/ProjectSpecific/Common/acu/Config\
+#        -Isource/ProjectSpecific/Common/all/Config\
+#        -Isource/ProjectSpecific/Common/all/Debug\
+#        -Isource/ProjectSpecific/Common/all/SRConfig\
+#        -Isource/ProjectSpecific/Driver/STM32G0x\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/Config\
+#        -Isource/ProjectSpecific/Hbl/acuexpacu/SRConfig\
+#        -Isource/ProjectSpecific/Hbl/all/Config\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MasterCommander\
+#        -Isource/ProjectSpecific/Hbl/all/Config/Mci/MCUDrivers\
+#        -Isource/ProjectSpecific/Hbl/all/SRConfig\
+#        -Isource/XCategory/Application/acu/API221MotionCtrl\
+#        -Isource/XCategory/Application/acu/Calibration\
+#        -Isource/XCategory/Application/acu/Condition\
+#        -Isource/XCategory/Application/acu/Estimator\
+#        -Isource/XCategory/Application/acu/Interpreter\
+#        -Isource/XCategory/Application/acu/Processes/ActivateTask\
+#        -Isource/XCategory/Application/acu/Processes/JumpIf\
+#        -Isource/XCategory/Application/acu/Processes/LoadsControl\
+#        -Isource/XCategory/Application/acu/Processes/Maintain\
+#        -Isource/XCategory/Application/acu/Processes/SetVariable\
+#        -Isource/XCategory/Application/acu/RegulationAccept\
+#        -Isource/XCategory/Application/acu/Selector\
+#        -Isource/XCategory/Application/acu/SubCycle\
+#        -Isource/XCategory/Application/acu/Supervisor\
+#        -Isource/XCategory/Application/acu/TestMgr\
+#        -Isource/XCategory/Application/acuexpacu/ApplianceMgr\
+#        -Isource/XCategory/Application/acuhmi/CommunicationMonitor\
+#        -Isource/XCategory/Application/acuhmi/Modifier\
+#        -Isource/XCategory/Application/acuhmi/Regulations\
+#        -Isource/XCategory/Application/acuhmi/Status\
+#        -Isource/XCategory/Application/all/API007Data\
+#        -Isource/XCategory/Application/all/API011AppCtr\
+#        -Isource/XCategory/Application/all/API012Exp\
+#        -Isource/XCategory/Application/all/API013RemoteFunction\
+#        -Isource/XCategory/Application/all/API018Diagnostic\
+#        -Isource/XCategory/Application/all/API220MotorControl\
+#        -Isource/XCategory/Application/all/API220MotorControl/Api\
+#        -Isource/XCategory/Application/all/Mode\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API003Disc\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API004Debug/SW05SoftwareTest\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API005LowLevel\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API009System\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API010PollVar\
+#        -Isource/XCategory/Application/all/Reveal_Basic/API019ProductInfo\
+#        -Isource/XCategory/Application/all/SFUpdater\
+#        -Isource/XCategory/Application/all/SRAPI020Safety\
+#        -Isource/XCategory/Application/all/StatusLed\
+#        -Isource/XCategory/Common/acu/BrownOut\
+#        -Isource/XCategory/Common/acu/Fault\
+#        -Isource/XCategory/Common/acu/Statistics\
+#        -Isource/XCategory/Common/all/Common/Callback\
+#        -Isource/XCategory/Common/all/Common/Convert\
+#        -Isource/XCategory/Common/all/Common/Crc16\
+#        -Isource/XCategory/Common/all/Common/Crc32\
+#        -Isource/XCategory/Common/all/Common/Crc8\
+#        -Isource/XCategory/Common/all/Common/Equation\
+#        -Isource/XCategory/Common/all/Common/Filter\
+#        -Isource/XCategory/Common/all/Common/FITMgr\
+#        -Isource/XCategory/Common/all/Common/I2cMgr\
+#        -Isource/XCategory/Common/all/Common/IAPEmul\
+#        -Isource/XCategory/Common/all/Common/Log\
+#        -Isource/XCategory/Common/all/Common/Millis\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/Config\
+#        -Isource/XCategory/Common/all/Common/SeggerRTT/SEGGER_RTT/RTT\
+#        -Isource/XCategory/Common/all/Common/SettingFile\
+#        -Isource/XCategory/Common/all/Common/SFVersionCheck\
+#        -Isource/XCategory/Common/all/Common/SystemConfig\
+#        -Isource/XCategory/Common/all/Common/SystemTimers\
+#        -Isource/XCategory/Common/all/Common/Utilities\
+#        -Isource/XCategory/Common/all/Common/Variable\
+#        -Isource/XCategory/Common/all/SRCommon/SRClockMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRData\
+#        -Isource/XCategory/Common/all/SRCommon/SRException\
+#        -Isource/XCategory/Common/all/SRCommon/SRIsrMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRPowerMgr\
+#        -Isource/XCategory/Common/all/SRCommon/SRSignature\
+#        -Isource/XCategory/Common/all/SRCommon/SRSystemConfig\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskMonitor\
+#        -Isource/XCategory/Common/all/SRCommon/SRTaskSequence\
+#        -Isource/XCategory/Common/all/SRCommon/SRTimerReference\
+#        -Isource/XCategory/Common/all/SRCommon/SRUnusedPinsConfig\
+#        -Isource/XCategory/Common/all/SRMain\
+#        -Isource/XCategory/Common/all/SRMain/BackgroundThreads\
+#        -Isource/XCategory/Common/all/SRMain/OsServices\
+#        -Isource/XCategory/Common/all/SRMain/StackAnalysis\
+#        -Isource/XCategory/Common/all/SRMain/TimingAnalysis\
+#        -Isource/XCategory/Driver/APIs/Atod\
+#        -Isource/XCategory/Driver/APIs/Comparator\
+#        -Isource/XCategory/Driver/APIs/DataFlash\
+#        -Isource/XCategory/Driver/APIs/Dma\
+#        -Isource/XCategory/Driver/APIs/Dtc\
+#        -Isource/XCategory/Driver/APIs/Dtoa\
+#        -Isource/XCategory/Driver/APIs/EmbOS\
+#        -Isource/XCategory/Driver/APIs/ExtInterrupt\
+#        -Isource/XCategory/Driver/APIs/Flash\
+#        -Isource/XCategory/Driver/APIs/Gpio\
+#        -Isource/XCategory/Driver/APIs/I2c\
+#        -Isource/XCategory/Driver/APIs/IntMgr\
+#        -Isource/XCategory/Driver/APIs/Micro\
+#        -Isource/XCategory/Driver/APIs/MicroExt\
+#        -Isource/XCategory/Driver/APIs/Rtc\
+#        -Isource/XCategory/Driver/APIs/RTCDriver\
+#        -Isource/XCategory/Driver/APIs/Spi\
+#        -Isource/XCategory/Driver/APIs/Timeout\
+#        -Isource/XCategory/Driver/APIs/Timer\
+#        -Isource/XCategory/Driver/APIs/TimerInterrupt\
+#        -Isource/XCategory/Driver/APIs/Touch\
+#        -Isource/XCategory/Driver/APIs/Uart\
+#        -Isource/XCategory/Hbl/acu/FdmCounter\
+#        -Isource/XCategory/Hbl/acu/FdmTimer\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ConvertGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DirectGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/DoorSwitchGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUGIHandler/ProbeLpsGI\
+#        -Isource/XCategory/Hbl/acuexpacu/ACULoadHandler/DCFanLoad\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/AnalogOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/DoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExpansionPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ExternalMotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/FSMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MagnetronPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MotorPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiDriverPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/MultiSequencePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/NonfunctionalPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmHiResPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/PwmPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRChargePumpPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputMultiPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDigitalOutputPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockEMPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRDoorLockWaxPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SRUMRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/SteadyPwmProfilePilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/StepperPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/TriacSwitchPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCRelayPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/ACUPilotHandler/ZCTriacPilot\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/CrossLoads\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SetLoadQueue\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/SRProductMgr\
+#        -Isource/XCategory/Hbl/acuexpacu/HblAcu/ZeroCross\
+#        -Isource/XCategory/Hbl/all/Hbl\
+#        -Isource/XCategory/Hbl/all/Hbl/DefaultPin\
+#        -Isource/XCategory/Hbl/all/Hbl/HblCommon\
+#        -Isource/XCategory/Hbl/all/Hbl/VirtualPin\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AbsoluteHumidityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelBaseline\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/AccelDiscover\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/FXLS8974/SelfTestFXLS8974\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AccelerometerLLI/LISxDH\
+#        -Isource/XCategory/Hbl/all/LLIHandler/AnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ConductivityLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/DigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/EncoderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/ExpansionLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/FeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CInfraredLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/I2CRHTSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/InputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/MultiInputLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/NonfunctionalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/PulseCounterLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRAnalogLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRDigitalLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRI2CPressureSensorLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRICTachometerLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRInputCaptureLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/SRTriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchKeyLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchSliderLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TouchWheelLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/TriacFeedbackLLI\
+#        -Isource/XCategory/Hbl/all/LLIHandler/VirtualDigitalLLI\
+#        -Isource/XCategory/Service/all/NVData\
+#        -Isource/XCategory/Service/all/Reveal\
+#        -Isource/XCategory/Service/all/Win\) -l
+#        listings\PilotRelayStuckOpenMonitor.lst -o
+#        obj\PilotRelayStuckOpenMonitor.obj
+#        source/Category/Application/acu/Monitors/PilotRelayFaultMonitor/PilotRelayStuckOpenMonitor/PilotRelayStuckOpenMonitor.c
+#    Locale       =  English_United States.1252
+#    List file    =  listings\PilotRelayStuckOpenMonitor.lst
+#    Object file  =  obj\PilotRelayStuckOpenMonitor.obj
+#
+###############################################################################
+
+C:\Data\Nucleus_Dev\Vostok_ACU_A\source\Category\Application\acu\Monitors\PilotRelayFaultMonitor\PilotRelayStuckOpenMonitor\PilotRelayStuckOpenMonitor.c
+      1          /**
+      2           *  @file       
+      3           *
+      4           *  @brief      Basic description of file contents
+      5           *
+      6           *  @details    Detailed description of the file contents
+      7           *
+      8           *
+      9             @startuml{PilotRelayStuckOpenMonitor State Machine.jpg}
+     10                  title Pilot Relay Stuck Open Monitor State Machine
+     11          
+     12                   [*] --> INITIALIZE
+     13          
+     14                  INITIALIZE : entry / InitializeModule()
+     15                  INITIALIZE --> NO_FAILURE  : evStartMonitor
+     16                  INITIALIZE --> [*]         : evSettingDataMissing
+     17          
+     18                  NO_FAILURE : entry / ResetOpenFailure()
+     19                  NO_FAILURE : do /\t CheckForOpenFailure()
+     20                  NO_FAILURE --> FAILURE_DETECTED  : evOpenFailureDetected
+     21          
+     22                  FAILURE_DETECTED : entry /\t SetOpenFailure()
+     23                  FAILURE_DETECTED : do /\t CheckOpenFailureRemoval()
+     24                  FAILURE_DETECTED --> NO_FAILURE  : evNoOpenFailurePresent
+     25                  FAILURE_DETECTED --> FAULT       : evOpenFailureDebounceCompleted
+     26          
+     27          		FAULT : exit /\t SetStabilizationTime()
+     28          		FAULT : do /\t MonitorOpenFaultState()
+     29          		FAULT --> NO_FAILURE : evOpenFailureReset
+     30          
+     31              @enduml
+     32          
+     33           *  @copyright  Copyright 2017-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+     34           */
+     35          //---------------------------------------------------------------------------------------------------------------------
+     36          //---------------------------------------------------------------------------------------------------------------------
+     37          
+     38          
+     39          //-------------------------------------- Include Files ----------------------------------------------------------------
+     40          // -- This Module --
+     41          #include "SystemConfig.h"
+     42          #include "PilotRelayStuckOpenMonitor.h"
+     43          #include "PilotRelayFaultMonitor.h"
+     44          
+     45          // -- Other Modules --
+     46          #include "Fault.h"
+     47          #include "HblDefs.h"
+     48          #include "Supervisor.h"
+     49          
+     50          
+     51          //=====================================================================================================================
+     52          //=== StateEngineCrank (v2.8) Auto-Generated Definitions for Pilot Relay Stuck Open Monitor State Machine
+     53          //=====================================================================================================================
+     54          // !! StateEngineCrank cannot update this code if you change the header !!
+     55          
+     56          
+     57          //! Unique names used to identify states of the Pilot Relay Stuck Open Monitor state machine.
+     58          typedef enum PILOT_RELAY_STUCK_OPEN_MONITOR_STATE_ENUM
+     59          {
+     60              STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_NONE             = 0,
+     61          
+     62              STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_INITIALIZE       = 1, //!< (initial_state)
+     63              STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_NO_FAILURE       = 2,
+     64              STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_FAILURE_DETECTED = 3,
+     65              STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_FAULT            = 4,
+     66          
+     67              STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_END              = 5
+     68          } PILOT_RELAY_STUCK_OPEN_MONITOR_STATE_TYPE;
+     69          
+     70          //! The state variable for the Pilot Relay Stuck Open Monitor state machine.
+     71          //! State machines with a history pseudostate may write to this variable during initialization.
+     72          //! Other state machines must only write to this variable through auto-generated functions.
+
+   \                                 In section .bss, align 1
+     73          static PILOT_RELAY_STUCK_OPEN_MONITOR_STATE_TYPE Pilot_Relay_Stuck_Open_Monitor_State;
+   \                     Pilot_Relay_Stuck_Open_Monitor_State:
+   \   00000000                      DS8 1
+     74          
+     75          // -- Private Function Prototypes used by the state machine for customization functions --
+     76          static void CheckForOpenFailure(void);
+     77          static void CheckOpenFailureRemoval(void);
+     78          static void InitializeModule(void);
+     79          static void MonitorOpenFaultState(void);
+     80          static void ResetOpenFailure(void);
+     81          static void SetOpenFailure(void);
+     82          static void SetStabilizationTime(void);
+     83          
+     84          // -- Private Function Prototypes used by the state machine for standard state machine functions --
+     85          static void EventNoOpenFailurePresent(void);
+     86          static void EventOpenFailureDebounceCompleted(void);
+     87          static void EventOpenFailureDetected(void);
+     88          static void EventOpenFailureReset(void);
+     89          static void EventSettingDataMissing(void);
+     90          static void EventStartMonitor(void);
+     91          static void PilotRelayStuckOpenMonitorExecute(void);
+     92          static void PilotRelayStuckOpenMonitorInitialize(void);
+     93          
+     94          // !! StateEngineCrank cannot update this code if you change the footer !!
+     95          // End of StateEngineCrank Auto-Generated Code.
+     96          
+     97          
+     98          
+     99          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+    100          
+    101          
+    102          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+    103          
+    104          
+    105          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    106          
+    107          
+    108          //=====================================================================================================================
+    109          //-------------------------------------- Public Functions -------------------------------------------------------------
+    110          //=====================================================================================================================
+    111          
+    112          //----------------------------------------------------------------------------
+    113          /**
+    114           *  @brief
+    115           *  @details
+    116           *
+    117           */
+
+   \                                 In section .text, align 2, keep-with-next
+    118          void PilotRelayStuckOpenMonitor__Initialize(void)
+    119          {
+   \                     PilotRelayStuckOpenMonitor__Initialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    120          	PilotRelayStuckOpenMonitorInitialize();
+   \   00000002   0x.... 0x....      BL       PilotRelayStuckOpenMonitorInitialize
+    121          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    122          
+    123          
+    124          //----------------------------------------------------------------------------
+    125          /**
+    126           *  @brief
+    127           *  @details
+    128           *
+    129           */
+
+   \                                 In section .text, align 2, keep-with-next
+    130          void PilotRelayStuckOpenMonitor__Execution(void)
+    131          {
+   \                     PilotRelayStuckOpenMonitor__Execution: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    132          	PilotRelayStuckOpenMonitorExecute();
+   \   00000002   0x.... 0x....      BL       PilotRelayStuckOpenMonitorExecute
+    133          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    134          
+    135          
+    136          //----------------------------------------------------------------------------
+    137          /**
+    138           *  @brief
+    139           *  @details
+    140           *
+    141           */
+
+   \                                 In section .text, align 2, keep-with-next
+    142          void PilotRelayStuckOpenMonitor__CycleStarted(void)
+    143          {
+   \                     PilotRelayStuckOpenMonitor__CycleStarted: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    144          	EventOpenFailureReset();
+   \   00000002   0x.... 0x....      BL       EventOpenFailureReset
+    145          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    146          
+    147          //=====================================================================================================================
+    148          //-------------------------------------- Private Functions ------------------------------------------------------------
+    149          //=====================================================================================================================
+    150          
+    151          
+    152          //=====================================================================================================================
+    153          //  --- Private State Machine Customization Functions -----------------------------------------------------------------
+    154          //=====================================================================================================================
+    155          
+    156          
+    157          //---------------------------------------------------------------------------------------------------------------------
+    158          /**
+    159           *
+    160           */
+
+   \                                 In section .text, align 2, keep-with-next
+    161          static void CheckForOpenFailure(void)
+    162          {
+   \                     CheckForOpenFailure: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    163          	if ((Supervisor__IsTestCycleActive() == FALSE) &&
+    164          		(PilotRelayFaultMonitor__GetStabilizationCounter() == (uint8)0) &&
+    165          		(PilotRelayFaultMonitor__GetConsistency() == COMBINE_NIBBLES(HBL_CONSISTENCY_TABLE_ON, HBL_CONSISTENCY_OPEN_CIRCUIT)))
+   \   00000002   0x.... 0x....      BL       Supervisor__IsTestCycleActive
+   \   00000006   0x2800             CMP      R0,#+0
+   \   00000008   0xD109             BNE      ??CheckForOpenFailure_0
+   \   0000000A   0x.... 0x....      BL       PilotRelayFaultMonitor__GetStabilizationCounter
+   \   0000000E   0x2800             CMP      R0,#+0
+   \   00000010   0xD105             BNE      ??CheckForOpenFailure_0
+   \   00000012   0x.... 0x....      BL       PilotRelayFaultMonitor__GetConsistency
+   \   00000016   0x2814             CMP      R0,#+20
+   \   00000018   0xD101             BNE      ??CheckForOpenFailure_0
+    166          	{
+    167          		EventOpenFailureDetected();
+   \   0000001A   0x.... 0x....      BL       EventOpenFailureDetected
+    168          	}
+    169          
+    170          }
+   \                     ??CheckForOpenFailure_0: (+1)
+   \   0000001E   0xBD01             POP      {R0,PC}          ;; return
+    171          
+    172          
+    173          //---------------------------------------------------------------------------------------------------------------------
+    174          /**
+    175           *
+    176           */
+
+   \                                 In section .text, align 2, keep-with-next
+    177          static void CheckOpenFailureRemoval(void)
+    178          {
+   \                     CheckOpenFailureRemoval: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    179          	if ((uint8)Fault__IsInFaultState(FAULT_ID_PILOT_RELAY_STUCK_OPEN) == (uint8)TRUE)
+   \   00000002   0x2022             MOVS     R0,#+34
+   \   00000004   0x.... 0x....      BL       Fault__IsInFaultState
+   \   00000008   0x2801             CMP      R0,#+1
+   \   0000000A   0xD102             BNE      ??CheckOpenFailureRemoval_0
+    180          	{
+    181          		EventOpenFailureDebounceCompleted();
+   \   0000000C   0x.... 0x....      BL       EventOpenFailureDebounceCompleted
+   \   00000010   0xBD01             POP      {R0,PC}
+    182          	}
+    183          	else
+    184          	{
+    185          		if ((Fault__IsObserverActive(FAULT_ID_PILOT_RELAY_STUCK_OPEN) == FALSE) ||
+    186          			((uint8)Supervisor__IsTestCycleActive() == (uint8)TRUE) ||
+    187          			(PilotRelayFaultMonitor__GetConsistency() != COMBINE_NIBBLES(HBL_CONSISTENCY_TABLE_ON, HBL_CONSISTENCY_OPEN_CIRCUIT)))
+   \                     ??CheckOpenFailureRemoval_0: (+1)
+   \   00000012   0x2022             MOVS     R0,#+34
+   \   00000014   0x.... 0x....      BL       Fault__IsObserverActive
+   \   00000018   0x2800             CMP      R0,#+0
+   \   0000001A   0xD007             BEQ      ??CheckOpenFailureRemoval_1
+   \   0000001C   0x.... 0x....      BL       Supervisor__IsTestCycleActive
+   \   00000020   0x2801             CMP      R0,#+1
+   \   00000022   0xD003             BEQ      ??CheckOpenFailureRemoval_1
+   \   00000024   0x.... 0x....      BL       PilotRelayFaultMonitor__GetConsistency
+   \   00000028   0x2814             CMP      R0,#+20
+   \   0000002A   0xD001             BEQ      ??CheckOpenFailureRemoval_2
+    188          		{
+    189          			EventNoOpenFailurePresent();
+   \                     ??CheckOpenFailureRemoval_1: (+1)
+   \   0000002C   0x.... 0x....      BL       EventNoOpenFailurePresent
+    190          		}
+    191          	}
+    192          }
+   \                     ??CheckOpenFailureRemoval_2: (+1)
+   \   00000030   0xBD01             POP      {R0,PC}          ;; return
+    193          
+    194          
+    195          //---------------------------------------------------------------------------------------------------------------------
+    196          /**
+    197           *
+    198           */
+
+   \                                 In section .text, align 2, keep-with-next
+    199          static void SetOpenFailure(void)
+    200          {
+   \                     SetOpenFailure: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    201          	Fault__ConditionDetected(FAULT_ID_PILOT_RELAY_STUCK_OPEN);
+   \   00000002   0x2022             MOVS     R0,#+34
+   \   00000004   0x.... 0x....      BL       Fault__ConditionDetected
+    202          }
+   \   00000008   0xBD01             POP      {R0,PC}          ;; return
+    203          
+    204          
+    205          //---------------------------------------------------------------------------------------------------------------------
+    206          /**
+    207           *
+    208           */
+
+   \                                 In section .text, align 2, keep-with-next
+    209          static void ResetOpenFailure(void)
+    210          {
+   \                     ResetOpenFailure: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    211          	Fault__ConditionRemoved(FAULT_ID_PILOT_RELAY_STUCK_OPEN);
+   \   00000002   0x2022             MOVS     R0,#+34
+   \   00000004   0x.... 0x....      BL       Fault__ConditionRemoved
+    212          }
+   \   00000008   0xBD01             POP      {R0,PC}          ;; return
+    213          
+    214          
+    215          //---------------------------------------------------------------------------------------------------------------------
+    216          /**
+    217           *
+    218           */
+
+   \                                 In section .text, align 2, keep-with-next
+    219          static void MonitorOpenFaultState(void)
+    220          {
+   \                     MonitorOpenFaultState: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    221          	if (Fault__IsInFaultState(FAULT_ID_PILOT_RELAY_STUCK_OPEN) == FALSE)
+   \   00000002   0x2022             MOVS     R0,#+34
+   \   00000004   0x.... 0x....      BL       Fault__IsInFaultState
+   \   00000008   0x2800             CMP      R0,#+0
+   \   0000000A   0xD101             BNE      ??MonitorOpenFaultState_0
+    222          	{
+    223          		EventOpenFailureReset();
+   \   0000000C   0x.... 0x....      BL       EventOpenFailureReset
+    224          	}
+    225          }
+   \                     ??MonitorOpenFaultState_0: (+1)
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+    226          
+    227          
+    228          //---------------------------------------------------------------------------------------------------------------------
+    229          /**
+    230           *
+    231           */
+
+   \                                 In section .text, align 2, keep-with-next
+    232          static void SetStabilizationTime(void)
+    233          {
+   \                     SetStabilizationTime: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    234          	PilotRelayFaultMonitor__RestartStabilizationCounter();
+   \   00000002   0x.... 0x....      BL       PilotRelayFaultMonitor__RestartStabilizationCounter
+    235          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+    236          
+    237          
+    238          
+    239          //---------------------------------------------------------------------------------------------------------------------
+    240          /**
+    241           *
+    242           */
+
+   \                                 In section .text, align 2, keep-with-next
+    243          static void InitializeModule(void)
+    244          {
+   \                     InitializeModule: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    245          	if (Fault__GetParameters(FAULT_ID_PILOT_RELAY_STUCK_OPEN) != NULL)
+   \   00000002   0x2022             MOVS     R0,#+34
+   \   00000004   0x.... 0x....      BL       Fault__GetParameters
+   \   00000008   0x2800             CMP      R0,#+0
+   \   0000000A   0xD002             BEQ      ??InitializeModule_0
+    246          	{
+    247          		EventStartMonitor();
+   \   0000000C   0x.... 0x....      BL       EventStartMonitor
+   \   00000010   0xBD01             POP      {R0,PC}
+    248          	}
+    249          	else
+    250          	{
+    251          		EventSettingDataMissing();
+   \                     ??InitializeModule_0: (+1)
+   \   00000012   0x.... 0x....      BL       EventSettingDataMissing
+    252          	}
+    253          }
+   \   00000016   0xBD01             POP      {R0,PC}          ;; return
+    254          
+    255          
+    256          //=====================================================================================================================
+    257          //=== StateEngineCrank (v2.8) Auto-Generated Functions for Pilot Relay Stuck Open Monitor State Machine
+    258          //=====================================================================================================================
+    259          // !! StateEngineCrank cannot update this code if you change the header !!
+    260          
+    261          
+    262          //---------------------------------------------------------------------------------------------------------------------
+    263          /**
+    264           * Process the No Open Failure Present Event for the Pilot Relay Stuck Open Monitor state machine.
+    265           *
+    266           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    267           *
+    268           * This function was auto-generated and must not be edited manually.
+    269           * Change the UML used to generate this function and regenerate the source code.
+    270           */
+
+   \                                 In section .text, align 2, keep-with-next
+    271          static void EventNoOpenFailurePresent(void)
+    272          {
+    273              switch (Pilot_Relay_Stuck_Open_Monitor_State)
+   \                     EventNoOpenFailurePresent: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2903             CMP      R1,#+3
+   \   00000006   0xD000             BEQ      ??EventNoOpenFailurePresent_0
+   \   00000008   0x4770             BX       LR
+    274              {
+    275                  case STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_FAILURE_DETECTED:
+    276                      Pilot_Relay_Stuck_Open_Monitor_State = STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_NO_FAILURE;
+   \                     ??EventNoOpenFailurePresent_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2102             MOVS     R1,#+2
+   \   0000000E   0x7001             STRB     R1,[R0, #+0]
+    277                      ResetOpenFailure();                     // Entry Function.
+   \   00000010   0x.... 0x....      BL       ResetOpenFailure
+    278                      break;
+    279          
+    280                  default:
+    281                      // Event is ignored for all other values of Pilot_Relay_Stuck_Open_Monitor_State.
+    282                      break;
+    283              }
+    284          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+    285          
+    286          
+    287          //---------------------------------------------------------------------------------------------------------------------
+    288          /**
+    289           * Process the Open Failure Debounce Completed Event for the Pilot Relay Stuck Open Monitor state machine.
+    290           *
+    291           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    292           *
+    293           * This function was auto-generated and must not be edited manually.
+    294           * Change the UML used to generate this function and regenerate the source code.
+    295           */
+
+   \                                 In section .text, align 2, keep-with-next
+    296          static void EventOpenFailureDebounceCompleted(void)
+    297          {
+    298              switch (Pilot_Relay_Stuck_Open_Monitor_State)
+   \                     EventOpenFailureDebounceCompleted: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2903             CMP      R1,#+3
+   \   00000006   0xD101             BNE      ??EventOpenFailureDebounceCompleted_0
+    299              {
+    300                  case STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_FAILURE_DETECTED:
+    301                      Pilot_Relay_Stuck_Open_Monitor_State = STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_FAULT;
+   \   00000008   0x2104             MOVS     R1,#+4
+   \   0000000A   0x7001             STRB     R1,[R0, #+0]
+    302                      break;
+    303          
+    304                  default:
+    305                      // Event is ignored for all other values of Pilot_Relay_Stuck_Open_Monitor_State.
+    306                      break;
+    307              }
+    308          }
+   \                     ??EventOpenFailureDebounceCompleted_0: (+1)
+   \   0000000C   0x4770             BX       LR               ;; return
+    309          
+    310          
+    311          //---------------------------------------------------------------------------------------------------------------------
+    312          /**
+    313           * Process the Open Failure Detected Event for the Pilot Relay Stuck Open Monitor state machine.
+    314           *
+    315           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    316           *
+    317           * This function was auto-generated and must not be edited manually.
+    318           * Change the UML used to generate this function and regenerate the source code.
+    319           */
+
+   \                                 In section .text, align 2, keep-with-next
+    320          static void EventOpenFailureDetected(void)
+    321          {
+    322              switch (Pilot_Relay_Stuck_Open_Monitor_State)
+   \                     EventOpenFailureDetected: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2902             CMP      R1,#+2
+   \   00000006   0xD000             BEQ      ??EventOpenFailureDetected_0
+   \   00000008   0x4770             BX       LR
+    323              {
+    324                  case STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_NO_FAILURE:
+    325                      Pilot_Relay_Stuck_Open_Monitor_State = STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_FAILURE_DETECTED;
+   \                     ??EventOpenFailureDetected_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2103             MOVS     R1,#+3
+   \   0000000E   0x7001             STRB     R1,[R0, #+0]
+    326                      SetOpenFailure();                       // Entry Function.
+   \   00000010   0x.... 0x....      BL       SetOpenFailure
+    327                      break;
+    328          
+    329                  default:
+    330                      // Event is ignored for all other values of Pilot_Relay_Stuck_Open_Monitor_State.
+    331                      break;
+    332              }
+    333          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+    334          
+    335          
+    336          //---------------------------------------------------------------------------------------------------------------------
+    337          /**
+    338           * Process the Open Failure Reset Event for the Pilot Relay Stuck Open Monitor state machine.
+    339           *
+    340           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    341           *
+    342           * This function was auto-generated and must not be edited manually.
+    343           * Change the UML used to generate this function and regenerate the source code.
+    344           */
+
+   \                                 In section .text, align 2, keep-with-next
+    345          static void EventOpenFailureReset(void)
+    346          {
+   \                     EventOpenFailureReset: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    347              switch (Pilot_Relay_Stuck_Open_Monitor_State)
+   \   00000002   0x....             LDR      R4,??DataTable7
+   \   00000004   0x7820             LDRB     R0,[R4, #+0]
+   \   00000006   0x2804             CMP      R0,#+4
+   \   00000008   0xD105             BNE      ??EventOpenFailureReset_0
+    348              {
+    349                  case STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_FAULT:
+    350                      SetStabilizationTime();                 // Exit function.
+   \   0000000A   0x.... 0x....      BL       SetStabilizationTime
+    351                      Pilot_Relay_Stuck_Open_Monitor_State = STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_NO_FAILURE;
+   \   0000000E   0x2002             MOVS     R0,#+2
+   \   00000010   0x7020             STRB     R0,[R4, #+0]
+    352                      ResetOpenFailure();                     // Entry Function.
+   \   00000012   0x.... 0x....      BL       ResetOpenFailure
+    353                      break;
+    354          
+    355                  default:
+    356                      // Event is ignored for all other values of Pilot_Relay_Stuck_Open_Monitor_State.
+    357                      break;
+    358              }
+    359          }
+   \                     ??EventOpenFailureReset_0: (+1)
+   \   00000016   0xBD10             POP      {R4,PC}          ;; return
+    360          
+    361          
+    362          //---------------------------------------------------------------------------------------------------------------------
+    363          /**
+    364           * Process the Setting Data Missing Event for the Pilot Relay Stuck Open Monitor state machine.
+    365           *
+    366           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    367           *
+    368           * This function was auto-generated and must not be edited manually.
+    369           * Change the UML used to generate this function and regenerate the source code.
+    370           */
+
+   \                                 In section .text, align 2, keep-with-next
+    371          static void EventSettingDataMissing(void)
+    372          {
+    373              switch (Pilot_Relay_Stuck_Open_Monitor_State)
+   \                     EventSettingDataMissing: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2901             CMP      R1,#+1
+   \   00000006   0xD101             BNE      ??EventSettingDataMissing_0
+    374              {
+    375                  case STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_INITIALIZE:
+    376                      Pilot_Relay_Stuck_Open_Monitor_State = STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_NONE; // Terminate Pilot Relay Stuck Open Monitor state machine execution.
+   \   00000008   0x2100             MOVS     R1,#+0
+   \   0000000A   0x7001             STRB     R1,[R0, #+0]
+    377                      break;
+    378          
+    379                  default:
+    380                      // Event is ignored for all other values of Pilot_Relay_Stuck_Open_Monitor_State.
+    381                      break;
+    382              }
+    383          }
+   \                     ??EventSettingDataMissing_0: (+1)
+   \   0000000C   0x4770             BX       LR               ;; return
+    384          
+    385          
+    386          //---------------------------------------------------------------------------------------------------------------------
+    387          /**
+    388           * Process the Start Monitor Event for the Pilot Relay Stuck Open Monitor state machine.
+    389           *
+    390           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    391           *
+    392           * This function was auto-generated and must not be edited manually.
+    393           * Change the UML used to generate this function and regenerate the source code.
+    394           */
+
+   \                                 In section .text, align 2, keep-with-next
+    395          static void EventStartMonitor(void)
+    396          {
+    397              switch (Pilot_Relay_Stuck_Open_Monitor_State)
+   \                     EventStartMonitor: (+1)
+   \   00000000   0x....             LDR      R0,??DataTable7
+   \   00000002   0x7801             LDRB     R1,[R0, #+0]
+   \   00000004   0x2901             CMP      R1,#+1
+   \   00000006   0xD000             BEQ      ??EventStartMonitor_0
+   \   00000008   0x4770             BX       LR
+    398              {
+    399                  case STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_INITIALIZE:
+    400                      Pilot_Relay_Stuck_Open_Monitor_State = STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_NO_FAILURE;
+   \                     ??EventStartMonitor_0: (+1)
+   \   0000000A   0xB580             PUSH     {R7,LR}
+   \   0000000C   0x2102             MOVS     R1,#+2
+   \   0000000E   0x7001             STRB     R1,[R0, #+0]
+    401                      ResetOpenFailure();                     // Entry Function.
+   \   00000010   0x.... 0x....      BL       ResetOpenFailure
+    402                      break;
+    403          
+    404                  default:
+    405                      // Event is ignored for all other values of Pilot_Relay_Stuck_Open_Monitor_State.
+    406                      break;
+    407              }
+    408          }
+   \   00000014   0xBD01             POP      {R0,PC}          ;; return
+    409          
+    410          
+    411          //---------------------------------------------------------------------------------------------------------------------
+    412          /**
+    413           * The main execution function for the Pilot Relay Stuck Open Monitor state machine.
+    414           * This function should be called periodically while the state machine is running.
+    415           *
+    416           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    417           *
+    418           * This function was auto-generated and must not be edited manually.
+    419           * Change the UML used to generate this function and regenerate the source code.
+    420           */
+
+   \                                 In section .text, align 2, keep-with-next
+    421          static void PilotRelayStuckOpenMonitorExecute(void)
+    422          {
+   \                     PilotRelayStuckOpenMonitorExecute: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    423              switch(Pilot_Relay_Stuck_Open_Monitor_State)
+   \   00000002   0x....             LDR      R0,??DataTable7
+   \   00000004   0x7800             LDRB     R0,[R0, #+0]
+   \   00000006   0x2802             CMP      R0,#+2
+   \   00000008   0xD004             BEQ      ??PilotRelayStuckOpenMonitorExecute_0
+   \   0000000A   0xD30B             BCC      ??PilotRelayStuckOpenMonitorExecute_1
+   \   0000000C   0x2804             CMP      R0,#+4
+   \   0000000E   0xD007             BEQ      ??PilotRelayStuckOpenMonitorExecute_2
+   \   00000010   0xD303             BCC      ??PilotRelayStuckOpenMonitorExecute_3
+   \   00000012   0xBD01             POP      {R0,PC}
+    424              {
+    425                  case STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_NO_FAILURE:
+    426                      CheckForOpenFailure();                  // Do function.
+   \                     ??PilotRelayStuckOpenMonitorExecute_0: (+1)
+   \   00000014   0x.... 0x....      BL       CheckForOpenFailure
+    427                      break;
+   \   00000018   0xBD01             POP      {R0,PC}
+    428          
+    429                  case STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_FAILURE_DETECTED:
+    430                      CheckOpenFailureRemoval();              // Do function.
+   \                     ??PilotRelayStuckOpenMonitorExecute_3: (+1)
+   \   0000001A   0x.... 0x....      BL       CheckOpenFailureRemoval
+    431                      break;
+   \   0000001E   0xBD01             POP      {R0,PC}
+    432          
+    433                  case STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_FAULT:
+    434                      MonitorOpenFaultState();                // Do function.
+   \                     ??PilotRelayStuckOpenMonitorExecute_2: (+1)
+   \   00000020   0x.... 0x....      BL       MonitorOpenFaultState
+    435                      break;
+    436          
+    437                  default:
+    438                      // There is nothing to do for all other values of Pilot_Relay_Stuck_Open_Monitor_State.
+    439                      break;
+    440              }
+    441          }
+   \                     ??PilotRelayStuckOpenMonitorExecute_1: (+1)
+   \   00000024   0xBD01             POP      {R0,PC}          ;; return
+    442          
+    443          
+    444          //---------------------------------------------------------------------------------------------------------------------
+    445          /**
+    446           * The initialization function for the Pilot Relay Stuck Open Monitor state machine.
+    447           * This function resets the state machine to the initial state and executes the initial state's
+    448           * entry function.
+    449           *
+    450           *              >>> DO NOT MODIFY THIS FUNCTION <<<
+    451           *
+    452           * This function was auto-generated and must not be edited manually.
+    453           * Change the UML used to generate this function and regenerate the source code.
+    454           */
+
+   \                                 In section .text, align 2, keep-with-next
+    455          static void PilotRelayStuckOpenMonitorInitialize(void)
+    456          {
+   \                     PilotRelayStuckOpenMonitorInitialize: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    457              Pilot_Relay_Stuck_Open_Monitor_State = STATE_PILOT_RELAY_STUCK_OPEN_MONITOR_INITIALIZE;
+   \   00000002   0x2001             MOVS     R0,#+1
+   \   00000004   0x....             LDR      R1,??DataTable7
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+    458              InitializeModule();                             // Entry Function.
+   \   00000008   0x.... 0x....      BL       InitializeModule
+    459          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \   00000000   0x........         DC32     Pilot_Relay_Stuck_Open_Monitor_State
+    460          
+    461          
+    462          // !! StateEngineCrank cannot update this code if you change the footer !!
+    463          // End of StateEngineCrank Auto-Generated Code.
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   CheckForOpenFailure
+         8   -> EventOpenFailureDetected
+         8   -> PilotRelayFaultMonitor__GetConsistency
+         8   -> PilotRelayFaultMonitor__GetStabilizationCounter
+         8   -> Supervisor__IsTestCycleActive
+       8   CheckOpenFailureRemoval
+         8   -> EventNoOpenFailurePresent
+         8   -> EventOpenFailureDebounceCompleted
+         8   -> Fault__IsInFaultState
+         8   -> Fault__IsObserverActive
+         8   -> PilotRelayFaultMonitor__GetConsistency
+         8   -> Supervisor__IsTestCycleActive
+       8   EventNoOpenFailurePresent
+         8   -> ResetOpenFailure
+       0   EventOpenFailureDebounceCompleted
+       8   EventOpenFailureDetected
+         8   -> SetOpenFailure
+       8   EventOpenFailureReset
+         8   -> ResetOpenFailure
+         8   -> SetStabilizationTime
+       0   EventSettingDataMissing
+       8   EventStartMonitor
+         8   -> ResetOpenFailure
+       8   InitializeModule
+         8   -> EventSettingDataMissing
+         8   -> EventStartMonitor
+         8   -> Fault__GetParameters
+       8   MonitorOpenFaultState
+         8   -> EventOpenFailureReset
+         8   -> Fault__IsInFaultState
+       8   PilotRelayStuckOpenMonitorExecute
+         8   -> CheckForOpenFailure
+         8   -> CheckOpenFailureRemoval
+         8   -> MonitorOpenFaultState
+       8   PilotRelayStuckOpenMonitorInitialize
+         8   -> InitializeModule
+       8   PilotRelayStuckOpenMonitor__CycleStarted
+         8   -> EventOpenFailureReset
+       8   PilotRelayStuckOpenMonitor__Execution
+         8   -> PilotRelayStuckOpenMonitorExecute
+       8   PilotRelayStuckOpenMonitor__Initialize
+         8   -> PilotRelayStuckOpenMonitorInitialize
+       8   ResetOpenFailure
+         8   -> Fault__ConditionRemoved
+       8   SetOpenFailure
+         8   -> Fault__ConditionDetected
+       8   SetStabilizationTime
+         8   -> PilotRelayFaultMonitor__RestartStabilizationCounter
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable7
+      32  CheckForOpenFailure
+      50  CheckOpenFailureRemoval
+      22  EventNoOpenFailurePresent
+      14  EventOpenFailureDebounceCompleted
+      22  EventOpenFailureDetected
+      24  EventOpenFailureReset
+      14  EventSettingDataMissing
+      22  EventStartMonitor
+      24  InitializeModule
+      18  MonitorOpenFaultState
+      38  PilotRelayStuckOpenMonitorExecute
+      14  PilotRelayStuckOpenMonitorInitialize
+       8  PilotRelayStuckOpenMonitor__CycleStarted
+       8  PilotRelayStuckOpenMonitor__Execution
+       8  PilotRelayStuckOpenMonitor__Initialize
+       1  Pilot_Relay_Stuck_Open_Monitor_State
+      10  ResetOpenFailure
+      10  SetOpenFailure
+       8  SetStabilizationTime
+
+ 
+   1 byte  in section .bss
+ 350 bytes in section .text
+ 
+ 350 bytes of CODE memory
+   1 byte  of DATA memory
+
+Errors: none
+Warnings: none
